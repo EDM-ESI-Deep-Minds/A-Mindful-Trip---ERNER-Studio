@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 5b473425b235f484c80b82a6363edd7b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4862922062786934118
+    second: Roxy_chibi-export_0
+  - first:
+      213: -7318755503391679971
+    second: Roxy_chibi-export_1
+  - first:
+      213: -3689860693188110948
+    second: Roxy_chibi-export_2
+  - first:
+      213: -4518814929645634755
+    second: Roxy_chibi-export_3
+  - first:
+      213: 4396043768455482105
+    second: Roxy_chibi-export_4
+  - first:
+      213: -4560177664279745732
+    second: Roxy_chibi-export_5
+  - first:
+      213: -7157204030457513209
+    second: Roxy_chibi-export_6
+  - first:
+      213: -7665283665099041154
+    second: Roxy_chibi-export_7
+  - first:
+      213: -5059535080195894600
+    second: Roxy_chibi-export_8
+  - first:
+      213: 2733186669071064638
+    second: Roxy_chibi-export_9
+  - first:
+      213: 4717868554957695561
+    second: Roxy_chibi-export_10
+  - first:
+      213: 2293521393904292837
+    second: Roxy_chibi-export_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Roxy_chibi-export_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 139
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9acc25162e638cb0800000000000000
+      internalID: -4862922062786934118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roxy_chibi-export_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 139
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1a576665ae8e6a90800000000000000
+      internalID: -7318755503391679971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roxy_chibi-export_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 119
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9598dfcf3bfaccc0800000000000000
+      internalID: -3689860693188110948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roxy_chibi-export_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 139
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b7db063c1f941c0800000000000000
+      internalID: -4518814929645634755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roxy_chibi-export_4
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 119
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9facbd32482e10d30800000000000000
+      internalID: 4396043768455482105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roxy_chibi-export_5
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 99
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b6fef339ef6b0c0800000000000000
+      internalID: -4560177664279745732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roxy_chibi-export_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 119
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70bf593dad08cac90800000000000000
+      internalID: -7157204030457513209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roxy_chibi-export_7
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 99
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e76da277e117f9590800000000000000
+      internalID: -7665283665099041154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roxy_chibi-export_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 79
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2db40b6abe8c9b0800000000000000
+      internalID: -5059535080195894600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roxy_chibi-export_9
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 99
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e50d26bca3ee520800000000000000
+      internalID: 2733186669071064638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roxy_chibi-export_10
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 79
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a2d33547c397140800000000000000
+      internalID: 4717868554957695561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roxy_chibi-export_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 79
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e39c606e8934df10800000000000000
+      internalID: 2293521393904292837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Roxy_chibi-export_0: -4862922062786934118
+      Roxy_chibi-export_1: -7318755503391679971
+      Roxy_chibi-export_10: 4717868554957695561
+      Roxy_chibi-export_11: 2293521393904292837
+      Roxy_chibi-export_2: -3689860693188110948
+      Roxy_chibi-export_3: -4518814929645634755
+      Roxy_chibi-export_4: 4396043768455482105
+      Roxy_chibi-export_5: -4560177664279745732
+      Roxy_chibi-export_6: -7157204030457513209
+      Roxy_chibi-export_7: -7665283665099041154
+      Roxy_chibi-export_8: -5059535080195894600
+      Roxy_chibi-export_9: 2733186669071064638
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

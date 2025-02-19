@@ -1,0 +1,4 @@
+repository "A Mindful Trip/A Mindful Trip@11270569161218@cloud"
+  path "/"
+    br "/main"
+    co "/main"
