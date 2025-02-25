@@ -109,7 +109,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -147,7 +147,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -747,7 +747,32 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TileSet_3_0: -4610927011810852713
+      TileSet_3_1: -2467971091618262217
+      TileSet_3_10: -5209065189761512450
+      TileSet_3_11: -6027377231404913506
+      TileSet_3_12: -1024926852047508945
+      TileSet_3_13: -9072690281293167467
+      TileSet_3_14: -1971108955336828156
+      TileSet_3_15: 6339364041554064816
+      TileSet_3_16: 4224831303480392890
+      TileSet_3_17: 7398873597329657656
+      TileSet_3_18: 6813255266483990805
+      TileSet_3_19: -4149591670192848810
+      TileSet_3_2: -6222373741206091823
+      TileSet_3_20: 154787060959648675
+      TileSet_3_21: 7409547851109401820
+      TileSet_3_22: -5037647466628322405
+      TileSet_3_23: 7719885289072462266
+      TileSet_3_24: 7835644270536744410
+      TileSet_3_3: -3738287267758836545
+      TileSet_3_4: 6044110443092995721
+      TileSet_3_5: -3415297725359622939
+      TileSet_3_6: -5365770372592850736
+      TileSet_3_7: 54857348588289281
+      TileSet_3_8: -7191948039930666132
+      TileSet_3_9: 7048559945993906600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -193,7 +193,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -231,7 +231,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1447,7 +1447,60 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Outdoor_Decor_0: -4110107585056528678
+      Outdoor_Decor_1: -2152203908458985735
+      Outdoor_Decor_10: -6778388492611481185
+      Outdoor_Decor_11: -3489418837707851633
+      Outdoor_Decor_12: 7743039088511038417
+      Outdoor_Decor_13: 8008305660101039817
+      Outdoor_Decor_14: -2549552085947831546
+      Outdoor_Decor_15: 5456151626136842449
+      Outdoor_Decor_16: -2324848453205973696
+      Outdoor_Decor_17: -2804302243689828491
+      Outdoor_Decor_18: -2223706334475324460
+      Outdoor_Decor_19: -6255631475642044285
+      Outdoor_Decor_2: -8276738253362364394
+      Outdoor_Decor_20: -8462922901225914755
+      Outdoor_Decor_21: 2189217509279342823
+      Outdoor_Decor_22: -1119850678352195319
+      Outdoor_Decor_23: -6108664574041720613
+      Outdoor_Decor_24: 8501823742233314540
+      Outdoor_Decor_25: -2516095474073394566
+      Outdoor_Decor_26: 4980711939928424364
+      Outdoor_Decor_27: 4572932537614283086
+      Outdoor_Decor_28: -3689517776613996550
+      Outdoor_Decor_29: 5154605549098889765
+      Outdoor_Decor_3: -6542149625469354571
+      Outdoor_Decor_30: -6112486435344901938
+      Outdoor_Decor_31: -1315485588123183702
+      Outdoor_Decor_32: -3842937183608659756
+      Outdoor_Decor_33: -6237885745401151495
+      Outdoor_Decor_34: -1285029612931192906
+      Outdoor_Decor_35: 5537686377606718196
+      Outdoor_Decor_36: -1425992147905759976
+      Outdoor_Decor_37: -7059548647382557888
+      Outdoor_Decor_38: -7361823285920340708
+      Outdoor_Decor_39: -8567758469030079540
+      Outdoor_Decor_4: 1795409568198501716
+      Outdoor_Decor_40: 3947702632957720784
+      Outdoor_Decor_41: 367491142365225500
+      Outdoor_Decor_42: 4191911669992101977
+      Outdoor_Decor_43: -6089986243633025978
+      Outdoor_Decor_44: 4816107416849620893
+      Outdoor_Decor_45: -2261017331541906675
+      Outdoor_Decor_46: 6200384419042470749
+      Outdoor_Decor_47: 345055709786270193
+      Outdoor_Decor_48: -3833071365614912659
+      Outdoor_Decor_49: 6698924516791512132
+      Outdoor_Decor_5: -6473185695060397169
+      Outdoor_Decor_50: 687969956758323005
+      Outdoor_Decor_51: -1652554889952393417
+      Outdoor_Decor_52: -5895602053614401174
+      Outdoor_Decor_6: -7587346220961749619
+      Outdoor_Decor_7: 8200436184897833633
+      Outdoor_Decor_8: -8297651297849895665
+      Outdoor_Decor_9: -2246930130072566269
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

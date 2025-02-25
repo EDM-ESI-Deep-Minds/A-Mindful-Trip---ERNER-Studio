@@ -118,7 +118,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -156,7 +156,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -822,7 +822,35 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      desert_objects_0: 5931366590717825993
+      desert_objects_1: 7081311953491729648
+      desert_objects_10: 7537862827182339777
+      desert_objects_11: 5913745576177950179
+      desert_objects_12: -3235117712741431765
+      desert_objects_13: -2802909021936649751
+      desert_objects_14: 8919815497586203404
+      desert_objects_15: 8278958233228667660
+      desert_objects_16: -6748804793783293828
+      desert_objects_17: -1612310347051965775
+      desert_objects_18: -7293755258685118947
+      desert_objects_19: 3256348615771221049
+      desert_objects_2: 2747440410333873215
+      desert_objects_20: 5704864501150401064
+      desert_objects_21: 2043228125578125214
+      desert_objects_22: 5613966597166373627
+      desert_objects_23: -2887420186508208276
+      desert_objects_24: 2553909223224711756
+      desert_objects_25: 8363119472660109065
+      desert_objects_26: -3164176217709496767
+      desert_objects_27: -5958546510413783637
+      desert_objects_3: 6162359864546456044
+      desert_objects_4: -1285982294457903139
+      desert_objects_5: -6215138806779779544
+      desert_objects_6: 7937749059643294832
+      desert_objects_7: -1485536035915522000
+      desert_objects_8: -2726986005257897094
+      desert_objects_9: -7379841637118810486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

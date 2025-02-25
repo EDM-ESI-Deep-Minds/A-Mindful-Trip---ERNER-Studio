@@ -190,7 +190,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -228,7 +228,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1422,7 +1422,59 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tilemap_0: -7708920532220806285
+      Tilemap_1: 4564998844612868550
+      Tilemap_10: -9081831216945995436
+      Tilemap_11: 223438275047683532
+      Tilemap_12: -6019871652338619649
+      Tilemap_13: 8370124977983469142
+      Tilemap_14: 9108534716330185296
+      Tilemap_15: -5241760623638581233
+      Tilemap_16: -4071626748009554214
+      Tilemap_17: 5780841043688988522
+      Tilemap_18: -4059573561680193898
+      Tilemap_19: 1891231212010660227
+      Tilemap_2: -4247985510503474263
+      Tilemap_20: -5705126628185277251
+      Tilemap_21: 7930762206783342680
+      Tilemap_22: -7431013412097488531
+      Tilemap_23: 2032762600551911618
+      Tilemap_24: -2646651901884672449
+      Tilemap_25: 6284401283013561674
+      Tilemap_26: 3081259622961926731
+      Tilemap_27: 2047397491309481512
+      Tilemap_28: -2037720300607281095
+      Tilemap_29: -766416283324280668
+      Tilemap_3: 6623730380747189143
+      Tilemap_30: 6729673844453239430
+      Tilemap_31: -4893055551153389107
+      Tilemap_32: 1207436434733676485
+      Tilemap_33: -6940293328096504433
+      Tilemap_34: -2728932131879339631
+      Tilemap_35: -8082405458070816376
+      Tilemap_36: -8276140089702118719
+      Tilemap_37: 8129276003047779963
+      Tilemap_38: -22804317248558295
+      Tilemap_39: -296017328593241320
+      Tilemap_4: 57347999071926559
+      Tilemap_40: 7861300733336976468
+      Tilemap_41: 620092424869196206
+      Tilemap_42: -509249360570722802
+      Tilemap_43: 7148239301965277931
+      Tilemap_44: 4048463033099131646
+      Tilemap_45: 7142315096718967971
+      Tilemap_46: -1111066810694349934
+      Tilemap_47: -8636055853053499979
+      Tilemap_48: 817193682956349475
+      Tilemap_49: 1546897266561787356
+      Tilemap_5: -9127936476011297880
+      Tilemap_50: -1633257064846851257
+      Tilemap_51: 1671066458757243634
+      Tilemap_6: 3775355368486569077
+      Tilemap_7: 6908732097058694728
+      Tilemap_8: -1706084216362820205
+      Tilemap_9: -762470507989373169
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
