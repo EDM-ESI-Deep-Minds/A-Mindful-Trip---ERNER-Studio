@@ -46,27 +46,27 @@ public class PlayerBoardMovement : MonoBehaviour
             currentTileIndex++;
         }
 
-        animator.Play("Idle_" + GetDirectionFromTile());
+        animator.Play("idle_" + GetDirectionFromTile());
 
         isMoving = false;
     }
 
     private void SetAnimation(Vector3 direction)
     {
-        if (direction.x > 0) animator.Play("Walk_Right");
-        else if (direction.x < 0) animator.Play("Walk_Left");
-        else if (direction.y > 0) animator.Play("Walk_Up");
-        else if (direction.y < 0) animator.Play("Walk_Down");
+        if (direction.x > 0) animator.Play("move_right");
+        else if (direction.x < 0) animator.Play("move_left");
+        else if (direction.y > 0) animator.Play("move_up");
+        else if (direction.y < 0) animator.Play("move_down");
     }
 
     private string GetDirectionFromTile()
     {
-        if (currentTileIndex == 0) return "Down";
+        if (currentTileIndex == 0) return "down";
         Vector3 direction = (pathTiles[currentTileIndex].position - pathTiles[currentTileIndex - 1].position).normalized;
 
-        if (direction.x > 0) return "Right";
-        if (direction.x < 0) return "Left";
-        if (direction.y > 0) return "Up";
-        return "Down";
+        if (direction.x > 0) return "right";
+        if (direction.x < 0) return "left";
+        if (direction.y > 0) return "up";
+        return "rown";
     }
 }
