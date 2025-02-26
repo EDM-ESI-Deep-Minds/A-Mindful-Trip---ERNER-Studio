@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerBoardMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 1f;
     public Transform[] pathTiles;
     private int currentTileIndex = 0;
     private bool isMoving = false;
