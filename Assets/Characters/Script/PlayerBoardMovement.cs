@@ -67,6 +67,6 @@ public class PlayerBoardMovement : MonoBehaviour
         if (direction.x > 0) return "right";
         if (direction.x < 0) return "left";
         if (direction.y > 0) return "up";
-        return "rown";
+        return "right";
     }
 }
