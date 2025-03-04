@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 382406942}
   - component: {fileID: 382406941}
   m_Layer: 0
-  m_Name: boardtiles
+  m_Name: BoardTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 498554039}
   - component: {fileID: 498554038}
   m_Layer: 0
-  m_Name: top
+  m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
