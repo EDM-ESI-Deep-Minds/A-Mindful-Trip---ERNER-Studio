@@ -2003,10 +2003,10 @@ RectTransform:
   - {fileID: 36251716}
   m_Father: {fileID: 1680204240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 30}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 62.0025, y: -15}
+  m_SizeDelta: {x: 124.005, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &630463387
 MonoBehaviour:
@@ -3600,10 +3600,10 @@ RectTransform:
   - {fileID: 901177251}
   m_Father: {fileID: 1680204240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 30}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 212.0025, y: -15}
+  m_SizeDelta: {x: 175.995, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1003718952
 MonoBehaviour:
@@ -3697,6 +3697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1011092922}
   - component: {fileID: 1011092923}
+  - component: {fileID: 1011092924}
   m_Layer: 5
   m_Name: Room
   m_TagString: Untagged
@@ -3738,6 +3739,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c271f807778469449942ff71c78616f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1011092924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011092921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01094cdc1f72e4a699434323af0b6d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hostButton: {fileID: 1611088649}
 --- !u!1 &1012721909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4302,7 +4316,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1149534117
 GameObject:
   m_ObjectHideFlags: 0
@@ -5373,7 +5387,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &1508373954
 GameObject:
   m_ObjectHideFlags: 0
@@ -5956,7 +5970,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1680204240
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6079,7 +6093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1748401008
 RectTransform:
   m_ObjectHideFlags: 0

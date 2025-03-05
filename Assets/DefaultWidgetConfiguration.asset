@@ -20,4 +20,4 @@ MonoBehaviour:
   Port: 0
   NetworkHandler: {fileID: 0}
   MaxPlayers: 4
-  EnableVoiceChat: 1
+  EnableVoiceChat: 0
