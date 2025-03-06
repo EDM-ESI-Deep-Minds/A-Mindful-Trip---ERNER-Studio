@@ -16,7 +16,7 @@ public class PlayerFreeMovement : NetworkBehaviour
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     private Vector2 lastMovementDirection = Vector2.right;
 
-    // NetworkVariable pour synchroniser l'entrée de mouvement
+    // NetworkVariable to synchronize movement inputs
     private NetworkVariable<Vector2> networkMovementInput = new NetworkVariable<Vector2>();
 
     void Awake()
@@ -29,7 +29,7 @@ public class PlayerFreeMovement : NetworkBehaviour
     {
         if (IsOwner)
         {
-            // S'abonner au changement de la variable réseau
+            // Follow network variable changes
             networkMovementInput.OnValueChanged += OnMovementInputChanged;
         }
     }
@@ -41,22 +41,22 @@ public class PlayerFreeMovement : NetworkBehaviour
 
     private void Update()
     {
-        // Uniquement pour le propriétaire
+        // Only for owner
         if (!IsOwner) return;
 
-        // Gérer l'entrée locale
+        // Managing local inputs
         HandleInput();
     }
 
     /* private void HandleInput()
      {
-         // Récupérer l'entrée de mouvement
+         // Getting the movement input
          Vector2 input = new Vector2(
              Input.GetAxisRaw("Horizontal"),
              Input.GetAxisRaw("Vertical")
          ).normalized;
 
-         // Mettre à jour la variable réseau
+         // Updating the network variable
          if (input != Vector2.zero)
          {
              UpdateMovementInputServerRpc(input);
@@ -65,29 +65,29 @@ public class PlayerFreeMovement : NetworkBehaviour
     */
     private void HandleInput()
     {
-        // Récupérer l'entrée de mouvement
+        // Getting the movement input
         Vector2 input = new Vector2(
             Input.GetAxisRaw("Horizontal"),
             Input.GetAxisRaw("Vertical")
         ).normalized;
 
-        // Mettre à jour la variable réseau même si le joueur arrête de bouger
+        // Updating the network variable (even if player is not moving)
         UpdateMovementInputServerRpc(input);
     }
 
     [ServerRpc]
     private void UpdateMovementInputServerRpc(Vector2 input)
     {
-        // Synchroniser l'entrée sur tous les clients
+        // Synchronizing the input for all clients
         networkMovementInput.Value = input;
     }
 
     private void FixedUpdate()
     {
-        // Uniquement pour le propriétaire
+        // Only for owner
         if (!IsOwner) return;
 
-        // Utiliser l'entrée synchronisée
+        // Using synchronized input
         Vector2 currentInput = networkMovementInput.Value;
 
         if (currentInput != Vector2.zero)

@@ -3,18 +3,18 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class spawn_mang : NetworkBehaviour
+public class SpawnManager : NetworkBehaviour
 {
     [SerializeField]
     public GameObject playerPrefab;
-    int[,] les_position = new int[4, 2]  
+    int[,] positions = new int[4, 2]  
 {
     {0, -2},
     {-1, 0},
     {0, 3},
     {2, 5},
 };
-    int index_position=-1;
+    int positionIndex=-1;
 
 
 
@@ -51,15 +51,15 @@ public class spawn_mang : NetworkBehaviour
     }
     private Vector2 GetSpawnPosition()
     {
-        index_position++;
-        return new Vector2(les_position[index_position,0], les_position[index_position, 0]);
+        positionIndex++;
+        return new Vector2(positions[positionIndex,0], positions[positionIndex, 0]);
       
     }
 
 
     public void OnButtonPress()
     {
-        if (IsHost) // Seul l'host peut changer la scène
+        if (IsHost) // Only the host can change the scenes
         {
             ChangeSceneServerRpc();
         }
