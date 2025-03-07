@@ -15,7 +15,9 @@ public class spawn_mang : NetworkBehaviour
     {2, 5},
 };
     int index_position=-1;
-
+    public static GameObject[] AllPlayer = new GameObject[4];
+    public static int IndexTabAllPlayer = 0;
+    public static bool SpawanDonne=false;
 
 
     public void OnStartButtonPressed()
@@ -45,9 +47,12 @@ public class spawn_mang : NetworkBehaviour
 
             GameObject playerInstance = Instantiate(playerPrefab, GetSpawnPosition(), Quaternion.identity);
             playerInstance.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
+            AllPlayer[IndexTabAllPlayer] = playerInstance;
+            IndexTabAllPlayer++;
 
 
         }
+        SpawanDonne= true;
     }
     private Vector2 GetSpawnPosition()
     {
