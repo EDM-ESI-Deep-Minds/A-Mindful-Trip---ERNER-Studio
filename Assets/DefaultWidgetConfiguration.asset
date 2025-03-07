@@ -19,5 +19,5 @@ MonoBehaviour:
   PublishIpAddress: 127.0.0.1
   Port: 0
   NetworkHandler: {fileID: 0}
-  MaxPlayers: 4
+  MaxPlayers: 2
   EnableVoiceChat: 0

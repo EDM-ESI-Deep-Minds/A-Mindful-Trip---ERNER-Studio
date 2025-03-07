@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class GameMode : MonoBehaviour
 {
@@ -7,7 +8,9 @@ public class GameMode : MonoBehaviour
     public Toggle players_4;
 
     public static GameMode Instance; 
-    private string gameMode = "2_players"; 
+    private string gameMode = "2_players";
+
+    public UnityEvent setMaxPlayers;
 
     void Awake()
     {
@@ -29,12 +32,15 @@ public class GameMode : MonoBehaviour
 
         players_2.onValueChanged.AddListener((isOn) => { if (isOn) SetGameMode("2_players"); });
         players_4.onValueChanged.AddListener((isOn) => { if (isOn) SetGameMode("4_players"); });
+
+        Debug.Log(GetMaxPlayers());
     }
 
     void SetGameMode(string mode)
     {
         gameMode = mode;
         Debug.Log(GetMaxPlayers());
+        setMaxPlayers?.Invoke();
     }
 
     public int GetMaxPlayers()
