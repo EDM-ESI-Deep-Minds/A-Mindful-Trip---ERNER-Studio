@@ -1,61 +1,112 @@
-using System.Runtime.CompilerServices;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SpawnManager : NetworkBehaviour
 {
+    // Singleton pattern
+    public static SpawnManager Instance { get; private set; }
+
     [SerializeField]
-    public GameObject playerPrefab;
-    int[,] positions = new int[4, 2]  
-{
-    {0, -2},
-    {-1, 0},
-    {0, 3},
-    {2, 5},
-};
-    int positionIndex=-1;
+    public GameObject[] playerPrefabs;  // Array to hold multiple player prefabs
 
+    // Network variable to track which clients have spawned
+    private NetworkList<ulong> spawnedPlayerIds;
 
+    float[,] positions = new float[4, 2]
+    {
+        {-0.6f, 0.05f},
+        {0.5f, 2.7f},
+        {1.4f, 3.35f},
+        {2.75f, 5},
+    };
+    int positionIndex = -1;
+
+    private void Awake()
+    {
+        // Singleton setup
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        
+        // Initialize NetworkList
+        spawnedPlayerIds = new NetworkList<ulong>();
+    }
+
+    public override void OnNetworkSpawn()
+    {
+        base.OnNetworkSpawn();
+        
+        // Make sure we're persisting across scene loads
+        if (IsServer)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     public void OnStartButtonPressed()
     {
+        if (!IsSpawnManagerReady()) return;  // Ensure SpawnManager is ready
 
         if (IsServer)
         {
-            SpawnAllPlayers();
+            SpawnPlayers();
         }
         else
         {
-            SpawnAllPlayersServerRpc();
+            RequestSpawnServerRpc(NetworkManager.Singleton.LocalClientId);
         }
     }
 
-    [ServerRpc(RequireOwnership = false)]
-    private void SpawnAllPlayersServerRpc()
+    private bool IsSpawnManagerReady()
     {
-        SpawnAllPlayers();
+        return NetworkManager.Singleton != null && NetworkManager.Singleton.IsListening;
     }
 
-    private void SpawnAllPlayers()
+    [ServerRpc(RequireOwnership = false)]
+    private void RequestSpawnServerRpc(ulong clientId)
+    {
+        // Only spawn if this client hasn't spawned yet
+        if (!spawnedPlayerIds.Contains(clientId))
+        {
+            SpawnPlayerForClient(clientId);
+        }
+    }
+
+    private void SpawnPlayers()
     {
         foreach (var client in NetworkManager.Singleton.ConnectedClients)
         {
             ulong clientId = client.Key;
-
-            GameObject playerInstance = Instantiate(playerPrefab, GetSpawnPosition(), Quaternion.identity);
-            playerInstance.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
-
-
+            
+            // Skip if we've already spawned a player for this client
+            if (spawnedPlayerIds.Contains(clientId))
+                continue;
+                
+            SpawnPlayerForClient(clientId);
         }
     }
-    private Vector2 GetSpawnPosition()
+
+    private void SpawnPlayerForClient(ulong clientId)
     {
-        positionIndex++;
-        return new Vector2(positions[positionIndex,0], positions[positionIndex, 0]);
-      
+        // Select a prefab (randomly)
+        GameObject selectedPrefab = playerPrefabs[Random.Range(0, playerPrefabs.Length)];
+        
+        GameObject playerInstance = Instantiate(selectedPrefab, GetSpawnPosition(), Quaternion.identity);
+        playerInstance.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
+        
+        // Track that we've spawned for this client
+        spawnedPlayerIds.Add(clientId);
     }
 
+    private Vector2 GetSpawnPosition()
+    {
+        positionIndex = (positionIndex + 1) % positions.GetLength(0); // Loop through positions
+        return new Vector2(positions[positionIndex, 0], positions[positionIndex, 1]);
+    }
 
     public void OnButtonPress()
     {
@@ -68,10 +119,6 @@ public class SpawnManager : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void ChangeSceneServerRpc()
     {
-        // NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         NetworkManager.SceneManager.LoadScene("CountrySide", LoadSceneMode.Single);
-
     }
-
 }
-

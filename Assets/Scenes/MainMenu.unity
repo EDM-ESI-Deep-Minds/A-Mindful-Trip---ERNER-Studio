@@ -5680,7 +5680,6 @@ GameObject:
   - component: {fileID: 1786476500}
   - component: {fileID: 1786476501}
   - component: {fileID: 1786476499}
-  - component: {fileID: 1786476502}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -5701,7 +5700,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  playerPrefab: {fileID: 8909638463307033645, guid: d0f3e241ff3a59e499df61bffbb10a77, type: 3}
+  playerPrefabs:
+  - {fileID: 8909638463307033645, guid: d0f3e241ff3a59e499df61bffbb10a77, type: 3}
+  - {fileID: 311031283111266869, guid: c672a3f95b72ef54fb2a2e177f4d68ef, type: 3}
 --- !u!4 &1786476500
 Transform:
   m_ObjectHideFlags: 0
@@ -5742,18 +5743,6 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &1786476502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786476498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec626a3840446284597071b7b559bc26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1846674755
 GameObject:
   m_ObjectHideFlags: 0
