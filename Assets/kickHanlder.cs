@@ -32,17 +32,15 @@ public class KickHandler : MonoBehaviour
 
     private void OnClientDisconnected(ulong clientId)
     {
-        Debug.Log($"Client {clientId} disconnected. Local Client ID: {NetworkManager.Singleton.LocalClientId}");
-
-        if (connectedClients.Contains(clientId))
-        {
-            connectedClients.Remove(clientId);
-        }
-
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {
+            GameObject spawnManager = GameObject.Find("SpawnManager");
+            if (spawnManager != null)
+            {
+                Destroy(spawnManager);
+            }
             Debug.Log("Client was kicked. Moving to menu...");
-             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
