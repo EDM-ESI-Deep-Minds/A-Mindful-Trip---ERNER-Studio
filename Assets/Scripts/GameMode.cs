@@ -34,6 +34,7 @@ public class GameMode : MonoBehaviour
         players_4.onValueChanged.AddListener((isOn) => { if (isOn) SetGameMode("4_players"); });
 
         Debug.Log(GetMaxPlayers());
+        setMaxPlayers?.Invoke();
     }
 
     void SetGameMode(string mode)
