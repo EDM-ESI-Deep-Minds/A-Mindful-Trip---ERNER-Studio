@@ -4,11 +4,11 @@ using System;
 public class InputEntry
 {
     public string playerName;
-    public int points;
+    public int Elo;
 
-    public InputEntry(string name, int points)
+    public InputEntry(string name, int Elo)
     {
         playerName = name;
-        this.points = points;
+        this.Elo = Elo;
     }
 }

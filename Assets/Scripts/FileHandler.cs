@@ -6,79 +6,87 @@ using UnityEngine;
 
 public static class FileHandler
 {
-    private static string customDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MyGameData");
-
     public static void SaveToJSON<T>(List<T> toSave, string filename)
     {
-        Debug.Log(GetPath(filename));
+        string path = GetPath(filename);
+        Debug.Log("Saving to: " + path);
         string content = JsonHelper.ToJson<T>(toSave.ToArray());
-        WriteFile(GetPath(filename), content);
+        WriteFile(path, content);
+    
     }
 
     public static void SaveToJSON<T>(T toSave, string filename)
     {
+        string path = GetPath(filename);
+        Debug.Log("Saving to: " + path);
         string content = JsonUtility.ToJson(toSave);
-        WriteFile(GetPath(filename), content);
+        WriteFile(path, content);
     }
 
     public static List<T> ReadListFromJSON<T>(string filename)
     {
         string content = ReadFile(GetPath(filename));
-
         if (string.IsNullOrEmpty(content) || content == "{}")
         {
             return new List<T>();
         }
-
         List<T> res = JsonHelper.FromJson<T>(content).ToList();
-
         return res;
     }
 
     public static T ReadFromJSON<T>(string filename)
     {
-        string content = ReadFile(GetPath(filename));
-
+        string content = ReadFile(GetPath(filename)); // Ensure GetPath is used
         if (string.IsNullOrEmpty(content) || content == "{}")
         {
             return default(T);
         }
-
-        T res = JsonUtility.FromJson<T>(content);
-
-        return res;
+        return JsonUtility.FromJson<T>(content);
     }
 
-    private static string GetPath(string filename)
+
+    public static string GetPath(string filename)
     {
-        return Path.Combine(customDirectory, filename);
+        return Application.persistentDataPath + "/" + filename;
     }
+
 
     private static void WriteFile(string path, string content)
     {
-        // Ensure the directory exists
-        string directory = Path.GetDirectoryName(path);
-        if (!Directory.Exists(directory))
+        try
         {
-            Directory.CreateDirectory(directory);
+            using (FileStream fileStream = new FileStream(path, FileMode.Create))
+            using (StreamWriter writer = new StreamWriter(fileStream))
+            {
+                writer.Write(content);
+            }
         }
-
-        using (FileStream fileStream = new FileStream(path, FileMode.Create))
-        using (StreamWriter writer = new StreamWriter(fileStream))
+        catch (Exception e)
         {
-            writer.Write(content);
+            Debug.LogError($"Error writing to file {path}: {e.Message}");
         }
     }
 
     private static string ReadFile(string path)
     {
-        if (File.Exists(path))
+        try
         {
-            using (StreamReader reader = new StreamReader(path))
+            if (File.Exists(path))
             {
-                string content = reader.ReadToEnd();
-                return content;
+                using (StreamReader reader = new StreamReader(path))
+                {
+                    string content = reader.ReadToEnd();
+                    return content;
+                }
             }
+            else
+            {
+                Debug.LogWarning($"File not found: {path}");
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Error reading file {path}: {e.Message}");
         }
         return "";
     }

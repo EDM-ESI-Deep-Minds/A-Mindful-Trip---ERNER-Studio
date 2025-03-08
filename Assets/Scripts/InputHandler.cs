@@ -8,7 +8,7 @@ public class InputHandler : MonoBehaviour
     [SerializeField] string filename;
 
     List<InputEntry> entries = new List<InputEntry>();
-
+      
     private void Start()
     {
         entries = FileHandler.ReadListFromJSON<InputEntry>(filename);
@@ -16,9 +16,10 @@ public class InputHandler : MonoBehaviour
 
     public void AddNameToList()
     {
-        entries.Add(new InputEntry(nameInput.text, Random.Range(0, 100)));
+        entries.Add(new InputEntry(nameInput.text, 200));
         nameInput.text = "";
 
         FileHandler.SaveToJSON<InputEntry>(entries, filename);
+      //  Debug.Log()
     }
 }
