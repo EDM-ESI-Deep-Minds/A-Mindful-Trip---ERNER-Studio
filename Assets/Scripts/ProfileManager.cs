@@ -35,44 +35,43 @@ public class ProfileManager : MonoBehaviour
 
     private void CheckForExistingProfile()
     {
-        Debug.Log("testttttt");
-        Debug.Log(File.ReadAllText(profileFilePath)); 
+        //Debug.Log("testttttt");
+        //Debug.Log(File.ReadAllText(profileFilePath)); 
       
-        try
+        // Check if file exists before attempting to read
+        if (File.Exists(profileFilePath))
         {
-            // Check if file exists before attempting to read
-            if (File.Exists(profileFilePath))
-            {
-               // List<PlayerProfile> profiles = FileHandler.ReadListFromJSON<PlayerProfile>("playerProfiles.json");
+            // List<PlayerProfile> profiles = FileHandler.ReadListFromJSON<PlayerProfile>("playerProfiles.json");
 
         
 
-                currentProfile = FileHandler.ReadFromJSON<PlayerProfile>(profileFileName);
+            currentProfile = FileHandler.ReadFromJSON<PlayerProfile>(profileFileName);
 
-                Debug.Log("+===================");
-                Debug.Log("Current Profile: " + currentProfile);
-                Debug.Log("+===================");
-
-
-                if (currentProfile != null && !string.IsNullOrEmpty(currentProfile.playerName))
-                {
-                    Debug.Log("Existing profile found: " + currentProfile.playerName);
-
-                    // Show continue UI
-                    continuePanel.SetActive(true);
-
-                    return; // Exit function to prevent showing profile creation UI
-                }
-
+            //Debug.Log("+===================");
+            //Debug.Log("Current Profile: " + currentProfile);
+            //Debug.Log("+===================");
+            //Debug.Log("here it is " + currentProfile.playerName);
+            if (currentProfile != null)
+            {
+                Debug.Log(currentProfile);
+                Debug.Log(currentProfile.playerName);
             }
 
+
+            if (currentProfile != null && !string.IsNullOrEmpty(currentProfile.playerName))
+            {
+                Debug.Log("Existing profile found: " + currentProfile.playerName);
+
+                // Show continue UI
+                continuePanel.SetActive(true);
+
+                return; // Exit function to prevent showing profile creation UI
+            }
+
+        } else
+        {
             // No profile found, show profile creation UI
             Debug.Log("No existing profile founded");
-            profileCreationPanel.SetActive(true);
-        }
-        catch (System.Exception e)
-        {
-            Debug.LogWarning("Error checking profile: " + e.Message);
             profileCreationPanel.SetActive(true);
         }
     }
