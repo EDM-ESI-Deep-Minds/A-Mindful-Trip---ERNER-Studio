@@ -36,12 +36,22 @@ public static class FileHandler
 
     public static T ReadFromJSON<T>(string filename)
     {
-        string content = ReadFile(GetPath(filename)); // Ensure GetPath is used
+        string content = ReadFile(GetPath(filename));
+
         if (string.IsNullOrEmpty(content) || content == "{}")
         {
             return default(T);
         }
-        return JsonUtility.FromJson<T>(content);
+
+        // If the JSON contains multiple items inside "Items", extract the first one
+        T[] items = JsonHelper.FromJson<T>(content);
+
+        if (items != null && items.Length > 0)
+        {
+            return items[0]; // Return the first profile
+        }
+
+        return default(T);
     }
 
 
