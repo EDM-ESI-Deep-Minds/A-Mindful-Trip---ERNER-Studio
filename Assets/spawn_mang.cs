@@ -17,7 +17,7 @@ public class spawn_mang : NetworkBehaviour
     int index_position=-1;
     public static GameObject[] AllPlayer = new GameObject[4];
     public static int IndexTabAllPlayer = 0;
-    public static bool SpawanDonne=false;
+    public static bool SpawanDone=false;
 
 
     public void OnStartButtonPressed()
@@ -52,7 +52,7 @@ public class spawn_mang : NetworkBehaviour
 
 
         }
-        SpawanDonne= true;
+        SpawanDone= true;
     }
     private Vector2 GetSpawnPosition()
     {

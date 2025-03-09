@@ -78678,6 +78678,8 @@ GameObject:
   - component: {fileID: 372754468}
   - component: {fileID: 372754469}
   - component: {fileID: 372754470}
+  - component: {fileID: 372754471}
+  - component: {fileID: 372754472}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -78871,6 +78873,47 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &372754471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372754463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 165224207
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
+--- !u!114 &372754472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372754463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191d52ce9a0d69c43ae7897d8770fe31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  Cam: {fileID: 641888877}
+  Inisilisde: 0
+  IndexPlayer: 0
 --- !u!1001 &641888874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78929,27 +78972,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7915099463754792613, guid: 2f7a7e8d15c881047bed13da842abe80, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 641888876}
+      addedObject: {fileID: 641888878}
   m_SourcePrefab: {fileID: 100100000, guid: 2f7a7e8d15c881047bed13da842abe80, type: 3}
 --- !u!1 &641888875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7915099463754792613, guid: 2f7a7e8d15c881047bed13da842abe80, type: 3}
   m_PrefabInstance: {fileID: 641888874}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &641888876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641888875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf1f2a828f7d9c4d8b1c7513c9cb416, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  Cam: {fileID: 641888877}
 --- !u!114 &641888877 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3966482205258075870, guid: 2f7a7e8d15c881047bed13da842abe80, type: 3}
@@ -78961,6 +78990,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &641888878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641888875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 3381536519
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
 --- !u!1 &658520048
 GameObject:
   m_ObjectHideFlags: 0
