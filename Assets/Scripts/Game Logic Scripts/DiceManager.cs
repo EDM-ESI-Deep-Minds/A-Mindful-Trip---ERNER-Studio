@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class DiceManager : MonoBehaviour
 {
@@ -8,9 +9,13 @@ public class DiceManager : MonoBehaviour
     public Sprite[] dice1Sprites; // Array for black dice sprites (1-6)
     public Sprite[] dice2Sprites; // Array for white dice sprites (1-6)
 
+    public PlayerBoardMovement player;
+
     private Animator dice1Animator;
     private Animator dice2Animator;
 
+
+    public event System.Action<int, int> OnDiceRolled;
     void Start()
     {
         // Get Animator components from each dice object
@@ -57,7 +62,25 @@ public class DiceManager : MonoBehaviour
         // Set final dice faces from their respective sprite arrays
         if (dice1Sprites.Length > dice1Value) dice1Renderer.sprite = dice1Sprites[dice1Value]; // Black dice
         if (dice2Sprites.Length > dice2Value) dice2Renderer.sprite = dice2Sprites[dice2Value]; // White dice
+        // Trigger event to send values to another script
+        OnDiceRolled?.Invoke(dice1Value, dice2Value);
+
 
         Debug.Log("Rolled Dice Values: " + (dice1Value + 1) + " & " + (dice2Value + 1));
+
+        int totalSteps = dice1Value + dice2Value;
+
+
+        if (player != null)
+        {
+            player.gameObject.SetActive(true); 
+            player.MovePlayer(totalSteps);
+        }
+        else
+        {
+            Debug.LogError("Player reference is missing in DiceManager!");
+        }
+
+
     }
 }
