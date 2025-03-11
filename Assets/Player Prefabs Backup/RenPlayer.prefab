@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: -5562665735434036782}
   m_Layer: 0
   m_Name: RenPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,8 +82,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1726350853
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -5632911889425392080, guid: 061cef2b2f53d084b8164db9176f3532, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   TransitionStateInfoList: []
-  m_Animator: {fileID: 0}
+  m_Animator: {fileID: 3933834879124631451}
 --- !u!114 &-5562665735434036782
 MonoBehaviour:
   m_ObjectHideFlags: 0
