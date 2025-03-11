@@ -3,19 +3,21 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SpawnManager : NetworkBehaviour
+public class spawn_mang : NetworkBehaviour
 {
     [SerializeField]
     public GameObject playerPrefab;
-    int[,] positions = new int[4, 2]  
+    int[,] les_position = new int[4, 2]  
 {
     {0, -2},
     {-1, 0},
     {0, 3},
     {2, 5},
 };
-    int positionIndex=-1;
-
+    int index_position=-1;
+    public static GameObject[] AllPlayer = new GameObject[4];
+    public static int IndexTabAllPlayer = 0;
+    public static bool SpawanDone=false;
 
 
     public void OnStartButtonPressed()
@@ -45,21 +47,24 @@ public class SpawnManager : NetworkBehaviour
 
             GameObject playerInstance = Instantiate(playerPrefab, GetSpawnPosition(), Quaternion.identity);
             playerInstance.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
+            AllPlayer[IndexTabAllPlayer] = playerInstance;
+            IndexTabAllPlayer++;
 
 
         }
+        SpawanDone= true;
     }
     private Vector2 GetSpawnPosition()
     {
-        positionIndex++;
-        return new Vector2(positions[positionIndex,0], positions[positionIndex, 0]);
+        index_position++;
+        return new Vector2(les_position[index_position,0], les_position[index_position, 0]);
       
     }
 
 
     public void OnButtonPress()
     {
-        if (IsHost) // Only the host can change the scenes
+        if (IsHost) // Seul l'host peut changer la scène
         {
             ChangeSceneServerRpc();
         }
