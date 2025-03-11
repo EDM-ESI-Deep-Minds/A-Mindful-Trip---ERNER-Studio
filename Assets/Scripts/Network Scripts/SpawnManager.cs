@@ -7,10 +7,10 @@ public class spawn_mang : NetworkBehaviour
 {
     [SerializeField]
     public GameObject playerPrefab;
-    int[,] les_position = new int[4, 2]  
+    float[,] les_position = new float[4, 2]  
 {
     {0, -2},
-    {-1, 0},
+    {1.5f, 0.5f},
     {0, 3},
     {2, 5},
 };
@@ -64,7 +64,7 @@ public class spawn_mang : NetworkBehaviour
 
     public void OnButtonPress()
     {
-        if (IsHost) // Seul l'host peut changer la scène
+        if (IsHost) // Seul l'host peut changer la sc?ne
         {
             ChangeSceneServerRpc();
         }
