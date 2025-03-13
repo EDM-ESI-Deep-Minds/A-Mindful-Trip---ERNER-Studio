@@ -105314,7 +105314,7 @@ GameObject:
   - component: {fileID: 587998474}
   m_Layer: 0
   m_Name: DiceManager
-  m_TagString: Untagged
+  m_TagString: DiceManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105331,6 +105331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a742cbd5ada0f14f90cdf54bd375b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   dice1Renderer: {fileID: 1038611045}
   dice2Renderer: {fileID: 1854511840}
   dice1Sprites:
@@ -105347,7 +105348,6 @@ MonoBehaviour:
   - {fileID: -1825076009, guid: 15c8772ff98cf0e4c9f13877ac430b80, type: 3}
   - {fileID: 468262968, guid: 15c8772ff98cf0e4c9f13877ac430b80, type: 3}
   - {fileID: 1677055200, guid: 15c8772ff98cf0e4c9f13877ac430b80, type: 3}
-  player: {fileID: -1453599144488223099, guid: aeafc48c71534ce44a2b0f3df78179f0, type: 3}
 --- !u!4 &587998475
 Transform:
   m_ObjectHideFlags: 0
@@ -120114,6 +120114,7 @@ GameObject:
   - component: {fileID: 1038611046}
   - component: {fileID: 1038611045}
   - component: {fileID: 1038611047}
+  - component: {fileID: 1038611048}
   m_Layer: 0
   m_Name: Dice1
   m_TagString: Untagged
@@ -120213,6 +120214,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1038611048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038611044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  TransitionStateInfoList: []
+  m_Animator: {fileID: 1038611047}
 --- !u!1 &1043448719
 GameObject:
   m_ObjectHideFlags: 0
@@ -121082,6 +121098,7 @@ GameObject:
   - component: {fileID: 1854511841}
   - component: {fileID: 1854511840}
   - component: {fileID: 1854511842}
+  - component: {fileID: 1854511843}
   m_Layer: 0
   m_Name: Dice2
   m_TagString: Untagged
@@ -121181,6 +121198,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1854511843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854511839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  TransitionStateInfoList: []
+  m_Animator: {fileID: 1854511842}
 --- !u!1 &1870030015
 GameObject:
   m_ObjectHideFlags: 0

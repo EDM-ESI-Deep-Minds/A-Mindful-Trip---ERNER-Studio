@@ -1,17 +1,56 @@
 using System.Collections;
 using UnityEngine;
+using Unity.Netcode;
 
-public class PlayerBoardMovement : MonoBehaviour
+public class PlayerBoardMovement : NetworkBehaviour
 {
-    public float moveSpeed = 1f;
+
+    private DiceManager diceManager;
+    [SerializeField] private float moveSpeed = 1f;
+
     //public Transform[] pathTiles;
     //private int currentTileIndex = 0;
+    private Rigidbody2D rb;
     private bool isMoving = false;
     private Animator animator;
 
-    void Start()
+
+    void Awake()
     {
-        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    public override void OnNetworkSpawn()
+    {
+        if (IsOwner) // Ensure only the owner finds and subscribes
+        {
+            StartCoroutine(FindDiceManager()); // Try finding DiceManager
+        }
+    }
+
+    private IEnumerator FindDiceManager()
+    {
+        while (diceManager == null)
+        {
+            diceManager = FindFirstObjectByType<DiceManager>(); // Try to find it
+
+            if (diceManager == null)
+            {
+                Debug.LogWarning("DiceManager not found, retrying...");
+                yield return new WaitForSeconds(0.5f); // Wait and retry
+            }
+        }
+
+        Debug.Log("DiceManager found!");
+        diceManager.OnDiceRolled += OnDiceRolled;
+    }
+
+    private void OnDiceRolled(int dice1, int dice2)
+    {
+        if (!IsOwner) return; // Ensure only the owner moves
+
+        int totalSteps = dice1 + dice2;
+        MovePlayer(totalSteps);
     }
 
     public void MovePlayer(int steps)
@@ -22,9 +61,27 @@ public class PlayerBoardMovement : MonoBehaviour
         }
     }
 
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+
+        if (diceManager != null)
+        {
+            // Subscribe to the dice roll event
+            diceManager.OnDiceRolled += OnDiceRolled;
+        }
+        else
+        {
+            Debug.LogError("DiceManager not found in the scene!");
+        }
+
+    }
+
     private IEnumerator MoveAlongPath(int steps)
     {
         isMoving = true;
+        animator.Play("move_right");
 
         //for (int i = 0; i < steps; i++)
         //{
@@ -45,22 +102,24 @@ public class PlayerBoardMovement : MonoBehaviour
         //    transform.position = targetPos;
         //    currentTileIndex++;
         //}
+        steps = steps * 3 ;
 
         for (int i = 0; i < steps; i++)
         {
-            Vector3 targetPos = transform.position + new Vector3(1f, 0, 0); // Move right by 1 unit
+            Vector2 targetPos = rb.position + new Vector2(.16f, 0); // Move right by 1 unit
 
-            while (Vector3.Distance(transform.position, targetPos) > 0.1f)
+            while (Vector2.Distance(rb.position, targetPos) > 0.016f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+                rb.MovePosition(Vector2.MoveTowards(rb.position, targetPos, moveSpeed * Time.deltaTime));
                 yield return null;
             }
-            transform.position = targetPos; // Snap to exact position
+
+            rb.position = targetPos; // Snap to exact position
         }
 
-        isMoving = false;
 
-        //animator.Play("idle_" + GetDirectionFromTile());
+        isMoving = false;
+        animator.Play("idle_right");
     }
 
     //private void SetAnimation(Vector3 direction)
@@ -81,4 +140,12 @@ public class PlayerBoardMovement : MonoBehaviour
     //    if (direction.y > 0) return "up";
     //    return "right";
     //}
+
+    void OnDestroy()
+    {
+        if (diceManager != null)
+        {
+            diceManager.OnDiceRolled -= OnDiceRolled; // Unsubscribe to prevent memory leaks
+        }
+    }
 }

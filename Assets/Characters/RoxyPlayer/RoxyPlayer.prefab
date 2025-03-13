@@ -16,8 +16,6 @@ GameObject:
   - component: {fileID: 3688896082473630040}
   - component: {fileID: 3709344817760991574}
   - component: {fileID: 2172550429760439977}
-  - component: {fileID: -297203631360805367}
-  - component: {fileID: -1453599144488223099}
   m_Layer: 0
   m_Name: RoxyPlayer
   m_TagString: Untagged
@@ -274,29 +272,3 @@ MonoBehaviour:
     PacketDelayMS: 0
     PacketJitterMS: 0
     PacketDropRate: 0
---- !u!114 &-297203631360805367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7052263779886571676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fed58af68773304386f4ce286c4e094, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diceManager: {fileID: 0}
---- !u!114 &-1453599144488223099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7052263779886571676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56f9b71ea15c0aa43b7408be664134b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1

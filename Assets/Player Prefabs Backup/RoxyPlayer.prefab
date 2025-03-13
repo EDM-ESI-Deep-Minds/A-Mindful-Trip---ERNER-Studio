@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4408972896424719166}
   - component: {fileID: 7364084665823728864}
   - component: {fileID: 4885582820122878254}
+  - component: {fileID: 4587048625500264335}
   m_Layer: 0
   m_Name: RoxyPlayer
   m_TagString: Player
@@ -343,3 +344,17 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 0
   AutoSetKinematicOnDespawn: 0
+--- !u!114 &4587048625500264335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909638463307033645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f9b71ea15c0aa43b7408be664134b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  moveSpeed: 1

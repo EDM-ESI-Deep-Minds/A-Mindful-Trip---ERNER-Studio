@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4022887335956522209}
   - component: {fileID: 51443267548442127}
   - component: {fileID: -2615238571223791146}
+  - component: {fileID: -6271491829627463914}
   m_Layer: 0
   m_Name: RenPlayer
   m_TagString: Untagged
@@ -302,3 +303,16 @@ MonoBehaviour:
     PacketDelayMS: 0
     PacketJitterMS: 0
     PacketDropRate: 0
+--- !u!114 &-6271491829627463914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311031283111266869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f9b71ea15c0aa43b7408be664134b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
