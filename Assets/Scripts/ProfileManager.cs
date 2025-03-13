@@ -17,11 +17,14 @@ public class ProfileManager : MonoBehaviour
     private PlayerProfile currentProfile;
     private string profileFileName = "PlayerProfile.json";
     private string profileFilePath;
-    
+
+    //bool
+    private bool isCreatingNewProfile = false;
+
+
     private void Awake()
     {
-        // Set the path before anything else
-        // Set the path before anything else
+
         // Set the path before anything else
         profileFilePath = FileHandler.GetPath(profileFileName);
 
@@ -35,7 +38,7 @@ public class ProfileManager : MonoBehaviour
 
     private void CheckForExistingProfile()
     {
-        //Debug.Log("testttttt");
+
         //Debug.Log(File.ReadAllText(profileFilePath)); 
       
         // Check if file exists before attempting to read
@@ -47,8 +50,7 @@ public class ProfileManager : MonoBehaviour
 
             currentProfile = FileHandler.ReadFromJSON<PlayerProfile>(profileFileName);
 
-            //Debug.Log("+===================");
-            //Debug.Log("Current Profile: " + currentProfile);
+   
             //Debug.Log("+===================");
             //Debug.Log("here it is " + currentProfile.playerName);
             if (currentProfile != null)
@@ -63,8 +65,13 @@ public class ProfileManager : MonoBehaviour
                 Debug.Log("Existing profile found: " + currentProfile.playerName);
 
                 // Show continue UI
-                continuePanel.SetActive(true);
-
+                //continuePanel.SetActive(true);
+                if (!isCreatingNewProfile)
+                {
+                    //continuePanel.SetActive(true);
+                    profileCreationPanel.SetActive(false);
+                    return;
+                }
                 return; // Exit function to prevent showing profile creation UI
             }
 
