@@ -38,6 +38,9 @@ TextureImporter:
   - first:
       213: 3191812583274066098
     second: DansShop_11
+  - first:
+      213: 8453124508631206337
+    second: DansShop_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -150,11 +153,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11
-        y: 47
+        y: 81
         width: 58
-        height: 90
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -172,11 +175,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 96
+        y: 102
         width: 48
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -194,11 +197,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 96
+        y: 102
         width: 16
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -216,11 +219,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 129
-        y: 55
+        y: 61
         width: 30
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,11 +241,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 96
+        y: 102
         width: 16
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -259,12 +262,12 @@ TextureImporter:
       name: DansShop_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 48
+        x: 17
+        y: 54
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -282,11 +285,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 64
+        y: 70
         width: 48
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -304,11 +307,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 111
-        y: 47
+        y: 53
         width: 18
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -325,12 +328,12 @@ TextureImporter:
       name: DansShop_8
       rect:
         serializedVersion: 2
-        x: 64
-        y: 48
+        x: 48
+        y: 54
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -348,11 +351,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 79
-        y: 31
-        width: 50
+        y: 37
+        width: 33
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -370,11 +373,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 16
+        y: 22
         width: 30
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -392,11 +395,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 33
-        y: 1
+        y: 7
         width: 46
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -409,11 +412,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: DansShop_12
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 2
+        width: 49
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c98c1b34f78f4570800000000000000
+      internalID: 8453124508631206337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e34e369ad6835c48b4d18533bc69949
     internalID: 0
     vertices: []
     indices: 
@@ -427,6 +452,7 @@ TextureImporter:
       DansShop_1: 3909165867260679295
       DansShop_10: 8579543309952325717
       DansShop_11: 3191812583274066098
+      DansShop_12: 8453124508631206337
       DansShop_2: -9197541501374304233
       DansShop_3: -6324099549117371300
       DansShop_4: 5312511436807736273
