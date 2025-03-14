@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using Unity.Netcode;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -43,4 +43,4 @@ public class KickHandler : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
-}
+}*/
