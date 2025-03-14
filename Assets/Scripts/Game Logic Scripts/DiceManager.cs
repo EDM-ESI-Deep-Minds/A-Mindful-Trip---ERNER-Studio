@@ -57,7 +57,7 @@ public class DiceManager : NetworkBehaviour
         int dice1Value = UnityEngine.Random.Range(0, 6); // 1 to 6
         int dice2Value = UnityEngine.Random.Range(0, 6); // 1 to 6
 
-        // Stop animation and set final dice values
+        // Stop animation and then set final dice values
         StopAnimationClientRpc();
         SetFinalDiceValuesClientRpc(dice1Value, dice2Value);
     }
@@ -83,17 +83,13 @@ public class DiceManager : NetworkBehaviour
     {
         Debug.Log($"[CLIENT] Setting Dice Values: {dice1Value + 1} & {dice2Value + 1}");
 
-   
-
         if (dice1Sprites.Length > dice1Value) dice1Renderer.sprite = dice1Sprites[dice1Value];
         if (dice2Sprites.Length > dice2Value) dice2Renderer.sprite = dice2Sprites[dice2Value];
 
         Debug.Log($"[CLIENT] Final Sprites Set Instantly: Dice1 = {dice1Value + 1}, Dice2 = {dice2Value + 1}");
-
         
         if (dice1Animator != null) dice1Animator.enabled = false;
         if (dice2Animator != null) dice2Animator.enabled = false;
-
         
         OnDiceRolled?.Invoke(dice1Value + 1, dice2Value + 1);
     }
