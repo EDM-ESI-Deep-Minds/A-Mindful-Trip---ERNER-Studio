@@ -70,18 +70,19 @@ public class BoardManager : MonoBehaviour
         new Vector3Int(0, 3, 0), new Vector3Int(0, -3, 0),
         new Vector3Int(2, 0, 0), new Vector3Int(-2, 0, 0),
         new Vector3Int(0, 2, 0), new Vector3Int(0, -2, 0),
+        new Vector3Int(2, 2, 0),new Vector3Int(-2, -2, 0),
+        new Vector3Int(2, -2, 0),new Vector3Int(1, 1, 0),
+        new Vector3Int(-1, 1, 0),new Vector3Int(1, -1, 0),
+        new Vector3Int(-1, -1, 0),new Vector3Int(-2, 2, 0),
+        new Vector3Int(4, 0, 0),new Vector3Int(-4, 0, 0),
+
+        // the symetrics  new Vector3Int(1, 2, 0), new Vector3Int(-1, 2, 0) , new Vector3Int(1, -2, 0)
+        
+        };
+        Vector3Int[] asymmetricCases = new Vector3Int[]
+        {
         new Vector3Int(2, 1, 0), new Vector3Int(2, -1, 0),
-        new Vector3Int(-2, 1, 0), new Vector3Int(-2, -1, 0),
-        new Vector3Int(1, 2, 0), new Vector3Int(-1, 2, 0),
-        new Vector3Int(1, -2, 0), new Vector3Int(-1, -2, 0),
-        new Vector3Int(2, 2, 0), new Vector3Int(-2, -2, 0),
-        new Vector3Int(2, -2, 0), new Vector3Int(-2, 2, 0),
-        new Vector3Int(1, 1, 0), new Vector3Int(-1, 1, 0),
-        new Vector3Int(1, -1, 0), new Vector3Int(-1, -1, 0), // Adding 1 and 2 (missing cases)
-        new Vector3Int(1, 2, 0), new Vector3Int(-1, 2, 0), // Same but re-checking for moves
-        new Vector3Int(1, -2, 0), new Vector3Int(-1, -2, 0),
-        new Vector3Int(4, 0, 0), new Vector3Int(-4, 0, 0),
-        new Vector3Int(0, 4, 0), new Vector3Int(0, -4, 0)
+        new Vector3Int(-2, 1, 0),new Vector3Int(-1, -2, 0),
         };
 
         foreach (Vector3Int offset in neighborOffsets)
@@ -119,6 +120,28 @@ public class BoardManager : MonoBehaviour
             }
         }
 
+        // Process asymmetric cases
+        foreach (Vector3Int offset in asymmetricCases)
+        {
+            Vector3Int neighborPos = tilePos + offset;
+
+            if (pathTiles.ContainsKey(neighborPos))
+            {
+                validMoves.Add(offset);
+            }
+            else
+            {
+                // Swap x and y and check again
+                Vector3Int swappedOffset = new Vector3Int(offset.y, offset.x, 0);
+                Vector3Int swappedNeighborPos = tilePos + swappedOffset;
+
+                if (pathTiles.ContainsKey(swappedNeighborPos))
+                {
+                    validMoves.Add(swappedOffset);
+                }
+            }
+        }
+
         return validMoves.ToArray();
     }
 
@@ -127,8 +150,16 @@ public class BoardManager : MonoBehaviour
         foreach (var tilePos in pathTiles.Keys)
         {
             Vector3Int[] validMoves = GetValidMoves(tilePos); // Get possible moves for this tile
+            int moveCount = validMoves.Length; // Store the initial count
 
-            if (validMoves.Length > 2 && !HasOneUnitNeighbor(tilePos)) // More than 2 means it's an intersection
+            // Check if the offset (-4,0,0) exists, if yes, subtract 1 from move count
+            if (validMoves.Contains(new Vector3Int(-4, 0, 0)))
+            {
+                moveCount--;
+            }
+
+            // More than 2 means it's an intersection
+            if (moveCount > 2 && !HasOneUnitNeighbor(tilePos))
             {
                 pathTiles[tilePos].isIntersection = true;
             }

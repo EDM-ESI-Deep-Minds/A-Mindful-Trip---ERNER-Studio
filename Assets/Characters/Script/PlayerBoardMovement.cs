@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.Netcode;
 using UnityEngine.Tilemaps;
 using static UnityEngine.RuleTile.TilingRuleOutput;
+using UnityEngine.UI;
 
 public class PlayerBoardMovement : NetworkBehaviour
 {
@@ -18,6 +19,14 @@ public class PlayerBoardMovement : NetworkBehaviour
     public Tilemap boardTilemap;
     private Vector3Int currentGridPosition;
     private Vector3 lastDirection = Vector3.right;
+    private char currentDirection = 'x';
+    public Button rightArrow;
+    public Button leftArrow;
+    public Button upArrow;
+    public Button downArrow;
+    private bool isChoosingDirection = false;
+    private string selectedDirection = "";
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,6 +57,22 @@ public class PlayerBoardMovement : NetworkBehaviour
         Vector3 worldPosition = transform.position;
         Vector3Int gridPosition = BoardManager.GetGridPositionFromWorld(worldPosition);
         currentTilePos = gridPosition;
+        DetermineDefaultDirection();
+
+        rightArrow = GameObject.Find("RightArrow").GetComponent<Button>();
+        leftArrow = GameObject.Find("LeftArrow").GetComponent<Button>();
+        upArrow = GameObject.Find("UpArrow").GetComponent<Button>();
+        downArrow = GameObject.Find("DownArrow").GetComponent<Button>();
+
+
+
+        // Assign button listeners dynamically
+        rightArrow.onClick.AddListener(() => SetChosenDirection("right"));
+        leftArrow.onClick.AddListener(() => SetChosenDirection("left"));
+        upArrow.onClick.AddListener(() => SetChosenDirection("up"));
+        downArrow.onClick.AddListener(() => SetChosenDirection("down"));
+
+        HideArrows();
 
     }
 
@@ -90,12 +115,24 @@ public class PlayerBoardMovement : NetworkBehaviour
         {
             Debug.LogError("DiceManager not found in the scene!");
         }
-
-      
-
-
     }
 
+    private void HideArrows()
+    {
+        rightArrow.gameObject.SetActive(false);
+        leftArrow.gameObject.SetActive(false);
+        upArrow.gameObject.SetActive(false);
+        downArrow.gameObject.SetActive(false);
+    }
+
+    private void ShowArrows()
+    {
+        isChoosingDirection = true; // Stop movement
+        rightArrow.gameObject.SetActive(true);
+        leftArrow.gameObject.SetActive(true);
+        upArrow.gameObject.SetActive(true);
+        downArrow.gameObject.SetActive(true);
+    }
 
     private void OnDiceRolled(int dice1, int dice2)
     {
@@ -113,10 +150,33 @@ public class PlayerBoardMovement : NetworkBehaviour
         }
     }
 
+    private void DetermineDefaultDirection()
+    {
+        Vector3Int[] validMoves = boardManager.pathTiles[currentTilePos].possibleMoves;
+
+        if (validMoves.Length == 0)
+        {
+            currentDirection = 'x'; 
+            return;
+        }
+
+        Vector3Int offset = validMoves[0]; 
+
+        if (Mathf.Abs(offset.x) == 3 && offset.y == 0)
+        {
+            currentDirection = 'x'; 
+        }
+        else if (offset.x != 0 && offset.y != 0)
+        {
+          
+              currentDirection = 'y'; 
+         
+        }
+    }
+
     private IEnumerator MoveAlongPath(int steps)
     {
         isMoving = true;
-        
 
         for (int i = 0; i < steps; i++)
         {
@@ -125,26 +185,102 @@ public class PlayerBoardMovement : NetworkBehaviour
                 Debug.Log("Invalid current tile position: " + currentTilePos);
                 break;
             }
+
             PathTile currentTile = boardManager.pathTiles[currentTilePos];
+
             if (currentTile.possibleMoves.Length == 0)
             {
                 Debug.Log("No valid moves from current tile: " + currentTilePos);  // Debug: No valid moves
                 break;
             }
 
-            // Find the valid move with a greater or equal X (or Y) compared to current position
-            Vector3Int nextTilePos = Vector3Int.zero;
-            foreach (Vector3Int move in currentTile.possibleMoves)
+            if (boardManager.pathTiles[currentTilePos].isIntersection)
             {
-                Vector3Int potentialNextPos = currentTilePos + move;
+                ShowArrowsBasedOnMoves();
+                selectedDirection = ""; 
+                isChoosingDirection = true;
+                yield return new WaitUntil(() => !isChoosingDirection);
+            }
+            Vector3Int nextTilePos = Vector3Int.zero;
+            if (boardManager.pathTiles[currentTilePos].isIntersection)
+            {
 
-                if (boardManager.pathTiles.ContainsKey(potentialNextPos))
+                foreach (Vector3Int move in currentTile.possibleMoves)
                 {
-                    // Prioritize moves with greater or equal X (or Y)
-                    if (nextTilePos == Vector3Int.zero ||
-                        (move.x >= 0 && potentialNextPos.x >= nextTilePos.x))
+                    Vector3Int potentialNextPos = currentTilePos + move;
+
+                    if (boardManager.pathTiles.ContainsKey(potentialNextPos))
                     {
-                        nextTilePos = potentialNextPos;
+                        Vector3Int moveOffset = potentialNextPos - currentTilePos;
+
+                        if (currentDirection == 'x')
+                        {
+                            if (selectedDirection == "right" &&
+                                (moveOffset == new Vector3Int(3, 0, 0) || moveOffset == new Vector3Int(4, 0, 0) || moveOffset == new Vector3Int(2, 0, 0)
+                                ))
+                            {
+                                nextTilePos = potentialNextPos;
+                                break;
+                            }
+
+                            if (selectedDirection == "up" &&
+                                (moveOffset == new Vector3Int(1, 2, 0) ||
+                                 moveOffset == new Vector3Int(2, 2, 0) ))
+                            {
+                                nextTilePos = potentialNextPos;
+                                break;
+                            }
+
+                            if (selectedDirection == "down" &&
+                                (moveOffset == new Vector3Int(1, -2, 0)  ||
+                                 moveOffset == new Vector3Int(2, -2, 0) ))
+                            {
+                                nextTilePos = potentialNextPos;
+                                break;
+                            }
+                        }
+                        else if (currentDirection == 'y')
+                        {
+                            if (selectedDirection == "up" &&
+                                (moveOffset == new Vector3Int(0, 3, 0) || moveOffset == new Vector3Int(0, 4, 0) || moveOffset == new Vector3Int(0, 2, 0)))
+                            {
+                                nextTilePos = potentialNextPos;
+                                break;
+                            }
+
+                            if (selectedDirection == "down" &&
+                                (moveOffset == new Vector3Int(0, -3, 0) || moveOffset == new Vector3Int(0, -4, 0) || moveOffset == new Vector3Int(0, -2, 0)))
+                            {
+                                nextTilePos = potentialNextPos;
+                                break;
+                            }
+
+                            if (selectedDirection == "right" &&
+                                (moveOffset == new Vector3Int(2, 1, 0) || moveOffset == new Vector3Int(1, 1, 0) ||
+                                 moveOffset == new Vector3Int(2, -1, 0) || moveOffset == new Vector3Int(1, -1, 0)))
+                            {
+                                nextTilePos = potentialNextPos;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                // Find the valid move with a greater or equal X (or Y) compared to current position
+                foreach (Vector3Int move in currentTile.possibleMoves)
+                {
+                    Vector3Int potentialNextPos = currentTilePos + move;
+                    // Determine next tile based on chosen direction and allowed offsets
+                    if (boardManager.pathTiles.ContainsKey(potentialNextPos))
+                    {
+                        // Prioritize moves with greater or equal X (or Y)
+                        if (nextTilePos == Vector3Int.zero ||
+                            (move.x >= 0 && potentialNextPos.x >= nextTilePos.x))
+                        {
+                            nextTilePos = potentialNextPos;
+                        }
                     }
                 }
             }
@@ -156,41 +292,67 @@ public class PlayerBoardMovement : NetworkBehaviour
                 break;
             }
 
-           
             Vector3Int offset = nextTilePos - currentTilePos;
-
-           
             Vector3 direction = offset;
+
             SetAnimation(direction);
 
-            Vector3 targetPos = GetWorldPosition(nextTilePos); 
+            Vector3 targetPos = GetWorldPosition(nextTilePos);
 
-            
-            if (offset.x != 0)
+            // Move based on the current direction
+            if (currentDirection == 'x')
             {
-                SetAnimation(new Vector3(offset.x, 0, 0));
-                Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
-                while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
+                // Move along X first
+                if (offset.x != 0)
                 {
-                    rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
-                    yield return null;
+                    SetAnimation(new Vector3(offset.x, 0, 0));
+                    Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
+                    while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
+                    {
+                        rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
+                        yield return null;
+                    }
                 }
-
+                // If Y component exists, move along Y and switch direction
+                if (offset.y != 0)
+                {
+                    SetAnimation(new Vector3(0, offset.y, 0));
+                    Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
+                    while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
+                    {
+                        rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
+                        yield return null;
+                    }
+                    currentDirection = 'y'; // Switch to Y direction
+                }
             }
-
-            // Then, move along the Y axis
-            if (offset.y != 0)
+            else if (currentDirection == 'y')
             {
-                SetAnimation(new Vector3(0, offset.y, 0));
-                Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y,0);
-                while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
+                // Move along Y first
+                if (offset.y != 0)
                 {
-                    rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
-                    yield return null;
+                    SetAnimation(new Vector3(0, offset.y, 0));
+                    Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
+                    while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
+                    {
+                        rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
+                        yield return null;
+                    }
                 }
-                yield return new WaitForSeconds(0.2f);
+                // If X component exists, move along X and switch direction
+                if (offset.x != 0)
+                {
+                    SetAnimation(new Vector3(offset.x, 0, 0));
+                    Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
+                    while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
+                    {
+                        rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
+                        yield return null;
+                    }
+                    currentDirection = 'x'; // Switch to X direction
+                }
             }
-
+            yield return new WaitForSeconds(0.2f);
             rb.position = targetPos;
             currentTilePos = nextTilePos; 
 
@@ -202,6 +364,71 @@ public class PlayerBoardMovement : NetworkBehaviour
         SetIdleAnimation();
     }
 
+    private void SetChosenDirection(string direction)
+    {
+        selectedDirection = direction;
+        Debug.Log($"here is the selected direction by the user{selectedDirection}");
+        isChoosingDirection = false; 
+        HideArrows(); 
+    }
+
+    void ShowArrowsBasedOnMoves()
+    {
+        HideArrows(); 
+
+        foreach (Vector3Int move in boardManager.pathTiles[currentTilePos].possibleMoves)
+        {
+            Vector3Int offset = move;
+            if (currentDirection == 'x')
+            {
+                if (offset == new Vector3Int(3, 0, 0) || offset == new Vector3Int(4, 0, 0) ||
+                    offset == new Vector3Int(2, 0, 0))
+                {
+                    rightArrow.gameObject.SetActive(true);
+                }
+                 
+
+                if (offset == new Vector3Int(1, 2, 0) ||
+                    offset == new Vector3Int(2, 2, 0) )
+                {
+                    upArrow.gameObject.SetActive(true);
+                }
+                    
+
+                if (offset == new Vector3Int(1, -2, 0)  ||
+                    offset == new Vector3Int(2, -2, 0) )
+                {
+                    downArrow.gameObject.SetActive(true);
+                }
+                    
+            }
+            else if (currentDirection == 'y')
+            {
+                if (offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(0, 4, 0) ||
+                    offset == new Vector3Int(0, 2, 0))
+                {
+                    upArrow.gameObject.SetActive(true);
+                }
+                    
+
+                if (offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(0, -4, 0) ||
+                    offset == new Vector3Int(0, -2, 0))
+                {
+                    downArrow.gameObject.SetActive(true);
+                }  
+
+                if (offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) ||
+                    offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(1, -1, 0))
+                {
+                    rightArrow.gameObject.SetActive(true);
+                }
+
+            
+            }
+        }
+
+        isChoosingDirection = true; // Stop movement until the player selects a direction
+    }
 
     private void SetAnimation(Vector3 direction)
     {
