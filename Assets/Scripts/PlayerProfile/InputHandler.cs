@@ -14,12 +14,25 @@ public class InputHandler : MonoBehaviour
         entries = FileHandler.ReadListFromJSON<InputEntry>(filename);
     }
 
+    [System.Obsolete]
     public void AddNameToList()
     {
-        entries.Add(new InputEntry(nameInput.text, 200));
-        nameInput.text = "";
+        entries.Add(new InputEntry(nameInput.text, 50));
 
         FileHandler.SaveToJSON<InputEntry>(entries, filename);
-      //  Debug.Log()
+
+        ProfileManager profileManager = FindObjectOfType<ProfileManager>();
+
+        if (profileManager != null)
+        {
+            ProfileManager.PlayerProfile newProfile = new ProfileManager.PlayerProfile { playerName = nameInput.text, Elo = 50 };
+            profileManager.SelectProfile(newProfile);
+        }
+        else
+        {
+            Debug.LogError("ProfileManager not found in the scene!");
+        }
+
+        nameInput.text = "";
     }
 }

@@ -97,7 +97,7 @@ public class ProfileManager : MonoBehaviour
         }
     }
 
-    private void SelectProfile(PlayerProfile profile)
+    public void SelectProfile(PlayerProfile profile)
     {
         SelectedProfile = profile;
         Debug.Log($"Selected profile: {profile.playerName} with Elo {profile.Elo}");
