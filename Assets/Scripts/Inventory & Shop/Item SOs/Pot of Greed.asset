@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f751a0bfcc33e4c8bfa09a510a9e73, type: 3}
+  m_Name: Pot of Greed
+  m_EditorClassIdentifier: 
+  itemName: Pot of Greed
+  itemDescription: An ancient urn, said to contain the fortune of those who once
+    sought boundless wealth. Using it may bring prosperity... or test your luck in
+    unexpected ways.
+  itemEffect: 20% Credit Boost OR Extra Turn.
+  itemIcon: {fileID: -8284753998373124497, guid: 571edd20c2418ed4cb60ce565a69bed3, type: 3}
+  isGold: 0
+  currentHealth: 0
+  maxHealth: 0
+  itemBaseCost: 0
+  oneTimeUse: 0

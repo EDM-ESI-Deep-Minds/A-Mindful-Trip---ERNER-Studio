@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f751a0bfcc33e4c8bfa09a510a9e73, type: 3}
+  m_Name: La Tourte
+  m_EditorClassIdentifier: 
+  itemName: La Tourte
+  itemDescription: A perfectly baked pie, golden and crisp, filled with a secret
+    recipe passed down through the ages. Consuming it grants a fleeting moment of
+    absolute safety, shielding the mind from doubt and misfortune.
+  itemEffect: Protects from any negative consequences during a question (One-Time
+    Use).
+  itemIcon: {fileID: 1581793324165834534, guid: 6b4ac126e90894d4889fb006d82e3c9d, type: 3}
+  isGold: 0
+  currentHealth: 0
+  maxHealth: 0
+  itemBaseCost: 0
+  oneTimeUse: 0

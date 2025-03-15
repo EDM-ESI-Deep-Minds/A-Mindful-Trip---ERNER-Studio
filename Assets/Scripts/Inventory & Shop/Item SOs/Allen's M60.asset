@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f751a0bfcc33e4c8bfa09a510a9e73, type: 3}
+  m_Name: Allen's M60
+  m_EditorClassIdentifier: 
+  itemName: Allen's M60
+  itemDescription: "A once-mighty firearm, now rusted beyond use. Its mere presence
+    evokes the echo of distant battles and the memory of a relentless warrior\u2019s
+    laughter. A weapon of legends, reduced to rust."
+  itemEffect: Rusted and unusable, just a collectible.
+  itemIcon: {fileID: 3350983547434158929, guid: a676967673953164185f38ba11325934, type: 3}
+  isGold: 0
+  currentHealth: 0
+  maxHealth: 0
+  itemBaseCost: 0
+  oneTimeUse: 0
