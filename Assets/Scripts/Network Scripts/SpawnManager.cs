@@ -74,7 +74,7 @@ public class spawn_mang : NetworkBehaviour
     private void ChangeSceneServerRpc()
     {
         // NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        NetworkManager.SceneManager.LoadScene("CountrySide", LoadSceneMode.Single);
+        NetworkManager.SceneManager.LoadScene("Hub&Dans", LoadSceneMode.Single);
 
     }
 
