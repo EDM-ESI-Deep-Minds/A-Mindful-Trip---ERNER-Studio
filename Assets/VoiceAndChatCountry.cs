@@ -1,28 +1,36 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 public class VoiceAndChatCountry : MonoBehaviour
 {
+    public GameObject ChatW;
     [SerializeField]
     Canvas CanvasChat;
+    [SerializeField]
+    public Button Mute;
+    [SerializeField]
+    public Button UnMute;
+    bool test = true;
     private void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("elle marche azzouza");
+
         if (scene.name == "CountrySide")
         {
-            GameObject ChatW = FindInDontDestroyOnLoad("Text Chat");
+            ChatW = FindInDontDestroyOnLoad("Text Chat");
             ChatW.transform.SetParent(CanvasChat.transform, false);
+
         }
 
     }
     GameObject FindInDontDestroyOnLoad(string objectName)
     {
         // GameObject[] allObjects = FindObjectsOfType<GameObject>(); 
-        GameObject[] allObjects = Object.FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+        GameObject[] allObjects = GameObject.FindObjectsByType<GameObject>(FindObjectsSortMode.None);
 
 
         foreach (GameObject obj in allObjects)
@@ -30,11 +38,49 @@ public class VoiceAndChatCountry : MonoBehaviour
             if (obj.name == objectName)
             {
                 return obj;
-               
+
             }
         }
 
         return null;
     }
+
+
+    //s'est fonction s'ont pour vous. vouz pouverez les appler quand vous voulez
+    public void MutePlayer()
+    {
+        Mute.onClick.Invoke();
+    }
+    public void UnMutePlayer()
+    {
+        UnMute.onClick.Invoke();
+    }
+    public void ShowChat()
+    {
+        ChatW.SetActive(true);
+    }
+    public void HideChat()
+    {
+        ChatW.SetActive(false);
+    }
+
+      public void tetef()
+    {
+        if (test)
+        {
+            HideChat();
+            MutePlayer();
+            test = false;
+        }
+        else
+        {
+            ShowChat();
+            UnMutePlayer();
+            test= true; 
+
+        }
+
+
+    }
 }
-   
+

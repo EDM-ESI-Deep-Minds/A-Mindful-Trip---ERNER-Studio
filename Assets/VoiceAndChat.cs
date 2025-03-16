@@ -9,6 +9,8 @@ public class VoiceAndChat : MonoBehaviour
     public Button Mute;
     [SerializeField]
     public Button UnMute;
+    [SerializeField]
+    public GameObject chat;
    
     public void MutePlayer()
     {
@@ -18,6 +20,15 @@ public class VoiceAndChat : MonoBehaviour
     {
        UnMute.onClick.Invoke();
     }
+    public void ShowChat()
+    {
+        chat.SetActive(true);
+    }
+    public void HideChat() 
+    { 
+        chat.SetActive(false);
+    }
+
 
  
 }

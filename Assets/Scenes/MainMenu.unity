@@ -7597,17 +7597,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384917811}
   m_CullTransparentMesh: 1
---- !u!114 &1451747040 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7856306519162266284, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
-  m_PrefabInstance: {fileID: 665606427}
+--- !u!1 &1440248689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1440248691}
+  - component: {fileID: 1440248690}
+  m_Layer: 0
+  m_Name: VoiceAndChatMainMunu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1440248690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440248689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Script: {fileID: 11500000, guid: 9582c302b10292741b496fe5458d5d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mute: {fileID: 1786970042}
+  UnMute: {fileID: 80220463}
+--- !u!4 &1440248691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440248689}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 513.1121, y: 403.32977, z: -0.3327321}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1460124814
 GameObject:
   m_ObjectHideFlags: 0
@@ -9214,11 +9249,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1451747040}
-        m_TargetAssemblyTypeName: UnityEngine.UI.HorizontalOrVerticalLayoutGroup,
-          UnityEngine.UI
-        m_MethodName: set_childControlHeight
-        m_Mode: 6
+      - m_Target: {fileID: 295740885}
+        m_TargetAssemblyTypeName: Unity.Multiplayer.Widgets.SelectInputAudioDevice,
+          Unity.Multiplayer.Widgets.Vivox
+        m_MethodName: MutePlayer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10558,71 +10593,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138898506}
   m_CullTransparentMesh: 1
---- !u!1001 &7998133584329628241
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4562024367758642861, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: m_Name
-      value: VoiceAndChat
-      objectReference: {fileID: 0}
-    - target: {fileID: 8297485449512182946, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: Mute
-      value: 
-      objectReference: {fileID: 1786970042}
-    - target: {fileID: 8297485449512182946, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: UnMute
-      value: 
-      objectReference: {fileID: 80220463}
-    - target: {fileID: 9090419411607433613, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 766.55835
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090419411607433613, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 284.1774
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090419411607433613, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5.1537094
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090419411607433613, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090419411607433613, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090419411607433613, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090419411607433613, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090419411607433613, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090419411607433613, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090419411607433613, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -10635,4 +10605,4 @@ SceneRoots:
   - {fileID: 217165469}
   - {fileID: 1279331422}
   - {fileID: 591491597}
-  - {fileID: 7998133584329628241}
+  - {fileID: 1440248691}
