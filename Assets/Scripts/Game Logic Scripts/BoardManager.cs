@@ -13,6 +13,7 @@ public class BoardManager : MonoBehaviour
     public static List<Vector3> storedStartPositions = new List<Vector3>();
     public static List<Vector3> storedEndPositions = new List<Vector3>();
 
+
     void Start()
     {
         InitializeBoard();
@@ -82,7 +83,7 @@ public class BoardManager : MonoBehaviour
         Vector3Int[] asymmetricCases = new Vector3Int[]
         {
         new Vector3Int(2, 1, 0), new Vector3Int(2, -1, 0),
-        new Vector3Int(-2, 1, 0),new Vector3Int(-1, -2, 0),
+        new Vector3Int(1, -2, 0),new Vector3Int(-1, -2, 0),
         };
 
         foreach (Vector3Int offset in neighborOffsets)
