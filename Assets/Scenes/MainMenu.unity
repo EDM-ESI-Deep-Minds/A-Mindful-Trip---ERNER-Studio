@@ -7597,6 +7597,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384917811}
   m_CullTransparentMesh: 1
+--- !u!114 &1451747040 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7856306519162266284, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
+  m_PrefabInstance: {fileID: 665606427}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1460124814
 GameObject:
   m_ObjectHideFlags: 0
@@ -7786,7 +7797,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -9079,6 +9090,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   playerPrefab: {fileID: 8909638463307033645, guid: d0f3e241ff3a59e499df61bffbb10a77, type: 3}
+  TextChatW: {fileID: 820895564}
+  Room: {fileID: 1011092921}
 --- !u!4 &1786476500
 Transform:
   m_ObjectHideFlags: 0
@@ -9202,11 +9215,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 295740885}
-        m_TargetAssemblyTypeName: Unity.Multiplayer.Widgets.SelectInputAudioDevice,
-          Unity.Multiplayer.Widgets.Vivox
-        m_MethodName: MutePlayer
-        m_Mode: 1
+      - m_Target: {fileID: 1451747040}
+        m_TargetAssemblyTypeName: UnityEngine.UI.HorizontalOrVerticalLayoutGroup,
+          UnityEngine.UI
+        m_MethodName: set_childControlHeight
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
