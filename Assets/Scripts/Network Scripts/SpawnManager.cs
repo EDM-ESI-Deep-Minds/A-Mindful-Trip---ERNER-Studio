@@ -76,13 +76,18 @@ public class spawn_mang : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void ChangeSceneServerRpc()    
     {
-
-        TextChatW.transform.SetParent(null);
-        DontDestroyOnLoad(TextChatW);
-        // NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        ApplyDontDestroyOnLoadClientRpc();
+      //  TextChatW.transform.SetParent(null);
+      //  DontDestroyOnLoad(TextChatW);
+      // NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         NetworkManager.SceneManager.LoadScene("CountrySide", LoadSceneMode.Single);
 
     }
-
+    [ClientRpc]
+    private void ApplyDontDestroyOnLoadClientRpc()
+    {
+        TextChatW.transform.SetParent(null);
+        DontDestroyOnLoad(TextChatW);
+    }
 }
 

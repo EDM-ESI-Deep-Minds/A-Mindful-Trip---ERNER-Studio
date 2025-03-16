@@ -105286,7 +105286,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.9075
+  orthographic size: 0.72997606
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -121215,6 +121215,10 @@ PrefabInstance:
       propertyPath: UnMute
       value: 
       objectReference: {fileID: 958280032}
+    - target: {fileID: 8297485449512182946, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
+      propertyPath: CanvasChat
+      value: 
+      objectReference: {fileID: 1810493211}
     - target: {fileID: 9090419411607433613, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 766.55835
@@ -121258,8 +121262,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4562024367758642861, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1549574665}
   m_SourcePrefab: {fileID: 100100000, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
+--- !u!1 &1549574664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4562024367758642861, guid: e686bcc45855fbd4f80e2992bc894ce3, type: 3}
+  m_PrefabInstance: {fileID: 1549574663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1549574665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549574664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2bba888b3b08e43819204f721d3619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanvasChat: {fileID: 1810493211}
 --- !u!1001 &1577374257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -121343,15 +121368,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1439077858027433880, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y

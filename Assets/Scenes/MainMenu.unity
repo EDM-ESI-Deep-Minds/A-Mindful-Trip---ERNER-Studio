@@ -3993,7 +3993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 77, y: -31}
+  m_AnchoredPosition: {x: -212, y: -93}
   m_SizeDelta: {x: 176.5514, y: 281.688}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820895566
@@ -9091,7 +9091,6 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   playerPrefab: {fileID: 8909638463307033645, guid: d0f3e241ff3a59e499df61bffbb10a77, type: 3}
   TextChatW: {fileID: 820895564}
-  Room: {fileID: 1011092921}
 --- !u!4 &1786476500
 Transform:
   m_ObjectHideFlags: 0

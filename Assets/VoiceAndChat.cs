@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class VoiceAndChat : MonoBehaviour
@@ -8,6 +9,7 @@ public class VoiceAndChat : MonoBehaviour
     public Button Mute;
     [SerializeField]
     public Button UnMute;
+   
     public void MutePlayer()
     {
         Mute.onClick.Invoke();
@@ -17,5 +19,5 @@ public class VoiceAndChat : MonoBehaviour
        UnMute.onClick.Invoke();
     }
 
-
+ 
 }
