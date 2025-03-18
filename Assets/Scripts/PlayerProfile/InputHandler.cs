@@ -17,7 +17,8 @@ public class InputHandler : MonoBehaviour
     [System.Obsolete]
     public void AddNameToList()
     {
-        entries.Add(new InputEntry(nameInput.text, 50));
+
+        entries.Add(new InputEntry(nameInput.text, 50,1));
 
         FileHandler.SaveToJSON<InputEntry>(entries, filename);
 
@@ -25,7 +26,7 @@ public class InputHandler : MonoBehaviour
 
         if (profileManager != null)
         {
-            ProfileManager.PlayerProfile newProfile = new ProfileManager.PlayerProfile { playerName = nameInput.text, Elo = 50 };
+            ProfileManager.PlayerProfile newProfile = new ProfileManager.PlayerProfile { playerName = nameInput.text, Elo = 50 ,character = 1};
             profileManager.SelectProfile(newProfile);
         }
         else

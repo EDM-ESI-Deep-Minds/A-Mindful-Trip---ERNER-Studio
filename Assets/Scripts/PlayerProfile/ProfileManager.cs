@@ -114,5 +114,6 @@ public class ProfileManager : MonoBehaviour
     {
         public string playerName;
         public int Elo;
+        public int character;
     }
 }
