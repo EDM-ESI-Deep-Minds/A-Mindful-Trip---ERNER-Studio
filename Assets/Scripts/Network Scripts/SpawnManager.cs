@@ -7,6 +7,9 @@ public class spawn_mang : NetworkBehaviour
 {
     [SerializeField]
     public GameObject playerPrefab;
+    [SerializeField]
+    public GameObject TextChatW;
+    
     float[,] les_position = new float[4, 2]  
 {
     {0, -2},
@@ -71,12 +74,20 @@ public class spawn_mang : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void ChangeSceneServerRpc()
+    private void ChangeSceneServerRpc()    
     {
-        // NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        NetworkManager.SceneManager.LoadScene("Hub&Dans", LoadSceneMode.Single);
+        ApplyDontDestroyOnLoadClientRpc();
+      //  TextChatW.transform.SetParent(null);
+      //  DontDestroyOnLoad(TextChatW);
+      // NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        NetworkManager.SceneManager.LoadScene("CountrySide", LoadSceneMode.Single);
 
     }
-
+    [ClientRpc]
+    private void ApplyDontDestroyOnLoadClientRpc()
+    {
+        TextChatW.transform.SetParent(null);
+        DontDestroyOnLoad(TextChatW);
+    }
 }
 
