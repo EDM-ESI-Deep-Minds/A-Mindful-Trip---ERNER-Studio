@@ -7608,7 +7608,7 @@ GameObject:
   - component: {fileID: 1440248691}
   - component: {fileID: 1440248690}
   m_Layer: 0
-  m_Name: VoiceAndChatMainMunu
+  m_Name: VoiceAndChatMainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7628,6 +7628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mute: {fileID: 1786970042}
   UnMute: {fileID: 80220463}
+  chat: {fileID: 820895564}
 --- !u!4 &1440248691
 Transform:
   m_ObjectHideFlags: 0

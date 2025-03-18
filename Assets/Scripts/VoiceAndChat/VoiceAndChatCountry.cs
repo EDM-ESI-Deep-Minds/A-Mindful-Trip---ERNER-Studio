@@ -64,23 +64,6 @@ public class VoiceAndChatCountry : MonoBehaviour
         ChatW.SetActive(false);
     }
 
-      public void tetef()
-    {
-        if (test)
-        {
-            HideChat();
-            MutePlayer();
-            test = false;
-        }
-        else
-        {
-            ShowChat();
-            UnMutePlayer();
-            test= true; 
-
-        }
-
-
-    }
+  
 }
 
