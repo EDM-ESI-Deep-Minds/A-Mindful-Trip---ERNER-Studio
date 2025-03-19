@@ -1,12 +1,16 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
-   public void NextScene()
+    [System.Obsolete]
+    public void NextScene()
     {
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            RoomUIManager roomUIManager = FindObjectOfType<RoomUIManager>();
+            SelectedCharacters.Instance.SetSelectedCharacters(roomUIManager.GetSelectedCharacters());
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }    
 }

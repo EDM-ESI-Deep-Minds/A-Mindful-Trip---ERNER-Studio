@@ -11,7 +11,7 @@ public class ProfileManager : MonoBehaviour
 
     private string profileFileName = "PlayerProfile.json";
     private string profileFilePath;
-    private List<PlayerProfile> profiles;
+    public List<PlayerProfile> profiles;
 
     public static PlayerProfile SelectedProfile;
 
@@ -104,6 +104,7 @@ public class ProfileManager : MonoBehaviour
 
         PlayerPrefs.SetString("PlayerName", profile.playerName);
         PlayerPrefs.SetInt("Elo", profile.Elo);
+        PlayerPrefs.SetInt("Character", profile.character);
         PlayerPrefs.Save();
 
         SceneManager.LoadScene("MainMenu");

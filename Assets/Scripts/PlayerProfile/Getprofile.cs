@@ -24,4 +24,9 @@ public class GetProfile : MonoBehaviour
             profileText.text = "No profile selected!";
         }
     }
+
+    private void OnDestroy()
+    {
+        profileText.text = "";
+    }
 }
