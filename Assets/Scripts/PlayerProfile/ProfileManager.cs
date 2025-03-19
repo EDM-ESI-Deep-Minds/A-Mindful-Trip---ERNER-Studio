@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
+using UnityEngine.Profiling;
+using Unity.Services.Authentication;
 
 public class ProfileManager : MonoBehaviour
 {
@@ -109,6 +111,29 @@ public class ProfileManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+
+    public void UpdateProfile(PlayerProfile updatedProfile)
+    {
+        // Find and update the profile in the list
+        for (int i = 0; i < profiles.Count; i++)
+        {
+            if (profiles[i].playerName == updatedProfile.playerName)
+            {
+                profiles[i] = updatedProfile;
+                Debug.Log($"Updated profile: {updatedProfile.playerName}");
+                break;
+            }
+        }
+        SaveProfiles();
+    }
+
+    private void SaveProfiles()
+    {
+        FileHandler.WriteListToJSON(profileFileName, profiles);
+        Debug.Log("Profiles saved to file.");
+    }
+
+  
     [System.Serializable]
     public class PlayerProfile
     {
@@ -117,3 +142,5 @@ public class ProfileManager : MonoBehaviour
         public int character;
     }
 }
+
+
