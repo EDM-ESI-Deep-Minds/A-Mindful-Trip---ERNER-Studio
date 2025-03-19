@@ -76,6 +76,9 @@ public class BoardManager : MonoBehaviour
         new Vector3Int(-1, 1, 0),new Vector3Int(1, -1, 0),
         new Vector3Int(-1, -1, 0),new Vector3Int(-2, 2, 0),
         new Vector3Int(4, 0, 0),new Vector3Int(-4, 0, 0),
+        new Vector3Int(0, -1, 0),new Vector3Int(0, 1, 0),
+        new Vector3Int(1, 0, 0),new Vector3Int(-1, 0, 0),
+
 
         // the symetrics  new Vector3Int(1, 2, 0), new Vector3Int(-1, 2, 0) , new Vector3Int(1, -2, 0)
         

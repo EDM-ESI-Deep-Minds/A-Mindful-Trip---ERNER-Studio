@@ -5,6 +5,7 @@ using Unity.Netcode;
 using UnityEngine.Tilemaps;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class PlayerBoardMovement : NetworkBehaviour
 {
@@ -27,6 +28,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     public Button downArrow;
     private bool isChoosingDirection = false;
     private string selectedDirection = "";
+    private bool isCrossingBridge = false;
 
     void Awake()
     {
@@ -190,6 +192,8 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         for (int i = 0; i < steps; i++)
         {
+            
+
             if (!boardManager.pathTiles.ContainsKey(currentTilePos))
             {
                 Debug.Log("Invalid current tile position: " + currentTilePos);
@@ -249,7 +253,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
                             if (selectedDirection == "up" &&
                                 (moveOffset == new Vector3Int(1, 2, 0) || moveOffset == new Vector3Int(0, 3, 0) || moveOffset == new Vector3Int(2, 2, 0) ||
-                                 moveOffset == new Vector3Int(2, 1, 0) || moveOffset == new Vector3Int(1, 1, 0) ||
+                                 moveOffset == new Vector3Int(2, 1, 0) || moveOffset == new Vector3Int(1, 1, 0) || moveOffset == new Vector3Int(0, 2, 0) ||
                                  moveOffset == new Vector3Int(-1, 2, 0) || moveOffset == new Vector3Int(-2, 2, 0)))
                             {
                                 nextTilePos = potentialNextPos;
@@ -257,7 +261,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                             }
 
                             if (selectedDirection == "down" &&
-                                (moveOffset == new Vector3Int(1, -2, 0) || moveOffset == new Vector3Int(0, -3, 0) || 
+                                (moveOffset == new Vector3Int(1, -2, 0) || moveOffset == new Vector3Int(0, -3, 0) || moveOffset == new Vector3Int(0, -1, 0) ||
                                  moveOffset == new Vector3Int(2, -2, 0) || moveOffset == new Vector3Int(2, -1, 0) || moveOffset == new Vector3Int(1, -1, 0) ||
                                  moveOffset == new Vector3Int(-1, -2, 0) || moveOffset == new Vector3Int(-2, -2, 0)))
                             {
@@ -449,7 +453,15 @@ public class PlayerBoardMovement : NetworkBehaviour
             }
             rb.position = targetPos;
             previousTilePos = currentTilePos;
-            currentTilePos = nextTilePos; 
+            currentTilePos = nextTilePos;
+            bool triggered = false;
+            // Check if this tile has a trigger event
+            yield return StartCoroutine(CheckForTileTrigger(result => triggered = result));
+
+            if (triggered)
+            {
+                i++;
+            }
         }
 
         isMoving = false;
@@ -514,13 +526,14 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // Up movement cases
                 if (offset == new Vector3Int(1, 2, 0) || offset == new Vector3Int(2, 2, 0) 
                    || offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) ||
+                   offset == new Vector3Int(0, 2, 0) ||
                     offset == new Vector3Int(-1, 2, 0) || offset == new Vector3Int(-2, 2, 0))
                 {
                     upArrow.gameObject.SetActive(true);
                 }
 
                 // Down movement cases
-                if (offset == new Vector3Int(1, -2, 0) || offset == new Vector3Int(2, -2, 0) || 
+                if (offset == new Vector3Int(1, -2, 0) || offset == new Vector3Int(2, -2, 0) || offset == new Vector3Int(0, -2, 0) ||
                     offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(1, -1, 0) ||
                     offset == new Vector3Int(-1, -2, 0) || offset == new Vector3Int(-2, -2, 0))
                 {
@@ -614,6 +627,75 @@ public class PlayerBoardMovement : NetworkBehaviour
         return new Vector3(gridPos.x * 0.16f, gridPos.y * 0.16f, 0); // Convert to world space
     }
 
+    private IEnumerator CheckForTileTrigger(System.Action<bool> callback)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(rb.position, 0.1f);
+        bool triggered = false;
+        foreach (Collider2D collider in colliders)
+        {
+            BridgeTrigger bridge = collider.GetComponent<BridgeTrigger>();
+            if (bridge != null && !isCrossingBridge)
+            {
+                isMoving = false; // Pause movement
+                triggered = true;
+
+                Vector3Int bridgeOffset = new Vector3Int((int)bridge.moveOffset.x, (int)bridge.moveOffset.y, 0);
+                Vector3Int targetTilePos = currentTilePos + bridgeOffset;
+                Vector3 worldTargetPos = GetWorldPosition(targetTilePos);
+
+                yield return StartCoroutine(MovePlayerAcrossBridge(targetTilePos, worldTargetPos)); // Wait for trigger effect
+
+                isMoving = true; // Resume movement
+                yield break; // Exit after handling trigger
+            }
+        }
+
+        callback(triggered); // No trigger, continue movement immediately
+    }
+
+
+    private IEnumerator MovePlayerAcrossBridge(Vector3Int targetTilePos, Vector3 worldTargetPos)
+    {
+        isCrossingBridge = true; // Lock movement to prevent multiple triggers
+
+        Vector3Int offset = targetTilePos - currentTilePos;
+
+        // Move along Y first
+        if (offset.y != 0)
+        {
+            SetIdleAnimation(2);
+            SetAnimation(new Vector3(0, offset.y, 0));
+            Vector3 targetYPos = new Vector3(rb.position.x, worldTargetPos.y, 0);
+
+            while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
+            {
+                rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
+                yield return null;
+            }
+
+            // Determine if moving up or down
+            currentDirection =  "x";
+        }
+
+        // Move along X after Y
+        if (offset.x != 0)
+        {
+            SetIdleAnimation(1);
+            SetAnimation(new Vector3(offset.x, 0, 0));
+            Vector3 targetXPos = new Vector3(worldTargetPos.x, rb.position.y, 0);
+
+            while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
+            {
+                rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
+                yield return null;
+            }
+        }
+
+        // Update tile position after crossing
+        currentTilePos = targetTilePos;
+
+        isCrossingBridge = false; // Unlock movement
+    }
 
     void OnDestroy()
     {
