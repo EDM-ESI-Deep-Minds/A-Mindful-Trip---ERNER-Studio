@@ -19,7 +19,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     private Vector3Int previousTilePos;
     public Tilemap boardTilemap;
     private Vector3Int currentGridPosition;
-    private Vector3 lastDirection = Vector3.right;
+    //private Vector3 lastDirection = Vector3.right;
     private string currentDirection = "x";
     public Button rightArrow;
     public Button leftArrow;
@@ -184,6 +184,10 @@ public class PlayerBoardMovement : NetworkBehaviour
     {
         isMoving = true;
 
+        Debug.Log($"here is the current tile position {currentTilePos}");
+
+        Debug.Log($"here is the previous tile position {previousTilePos}");
+
         for (int i = 0; i < steps; i++)
         {
             if (!boardManager.pathTiles.ContainsKey(currentTilePos))
@@ -287,6 +291,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                                 if (selectedDirection == "left" &&
                                (moveOffset == new Vector3Int(-2, 1, 0) || moveOffset == new Vector3Int(-1, 1, 0) ||
                                 moveOffset == new Vector3Int(-2, -1, 0) || moveOffset == new Vector3Int(-1, -1, 0) ||
+                                moveOffset == new Vector3Int(2, -1, 0) ||
                                 moveOffset == new Vector3Int(-2, 0, 0) || moveOffset == new Vector3Int(-1, 0, 0)))
                                 {
                                     nextTilePos = potentialNextPos;
@@ -304,7 +309,8 @@ public class PlayerBoardMovement : NetworkBehaviour
                                 }
 
                                 if (selectedDirection == "right" &&
-                                (moveOffset == new Vector3Int(2, 1, 0) || moveOffset == new Vector3Int(1, 1, 0) ||
+                                (moveOffset == new Vector3Int(2, 1, 0) || moveOffset == new Vector3Int(2, -2, 0) || 
+                                moveOffset == new Vector3Int(1, 1, 0) ||
                                  moveOffset == new Vector3Int(2, -1, 0) || moveOffset == new Vector3Int(1, -1, 0) ||
                                  moveOffset == new Vector3Int(2, 0, 0) || moveOffset == new Vector3Int(1, 0, 0)))
                                 {
@@ -314,6 +320,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
                                 if (selectedDirection == "left" &&
                                (moveOffset == new Vector3Int(-2, 1, 0) || moveOffset == new Vector3Int(-1, 1, 0) ||
+                               moveOffset == new Vector3Int(-1, -2, 0) ||
                                 moveOffset == new Vector3Int(-2, -1, 0) || moveOffset == new Vector3Int(-1, -1, 0) ||
                                 moveOffset == new Vector3Int(-2, 0, 0) || moveOffset == new Vector3Int(-1, 0, 0)))
                                 {
@@ -321,9 +328,6 @@ public class PlayerBoardMovement : NetworkBehaviour
                                     break;
                                 }
                             }
-                            
-
-                           
                         }
                     }
                 }
@@ -375,9 +379,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             }
 
             Vector3Int offset = nextTilePos - currentTilePos;
-            Vector3 direction = offset;
 
-            SetAnimation(direction);
             Vector3 targetPos = GetWorldPosition(nextTilePos);
 
             // Move based on the current direction
@@ -386,6 +388,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // Move along X first
                 if (offset.x != 0)
                 {
+                    SetIdleAnimation(1);
                     SetAnimation(new Vector3(offset.x, 0, 0));
                     Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
                     while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
@@ -394,10 +397,10 @@ public class PlayerBoardMovement : NetworkBehaviour
                         yield return null;
                     }
                 }
-
                 // If Y component exists, move along Y and determine y-up or y-down
                 if (offset.y != 0)
                 {
+                    SetIdleAnimation(2);
                     SetAnimation(new Vector3(0, offset.y, 0));
                     Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
                     while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
@@ -405,7 +408,6 @@ public class PlayerBoardMovement : NetworkBehaviour
                         rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
                         yield return null;
                     }
-
                     // Determine if moving up or down
                     currentDirection = (offset.y > 0) ? "y-up" : "y-down";
                 }
@@ -415,6 +417,14 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // Move along Y first
                 if (offset.y != 0)
                 {
+                    if(offset.y > 0)
+                    {
+                        SetIdleAnimation(2);
+                    }
+                    else
+                    {
+                        SetIdleAnimation(3);
+                    }
                     SetAnimation(new Vector3(0, offset.y, 0));
                     Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
                     while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
@@ -423,10 +433,10 @@ public class PlayerBoardMovement : NetworkBehaviour
                         yield return null;
                     }
                 }
-
                 // If X component exists, move along X and switch direction
                 if (offset.x != 0)
                 {
+                    SetIdleAnimation(1);
                     SetAnimation(new Vector3(offset.x, 0, 0));
                     Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
                     while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
@@ -434,7 +444,6 @@ public class PlayerBoardMovement : NetworkBehaviour
                         rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
                         yield return null;
                     }
-
                     currentDirection = "x"; // Reset to 'x' when moving horizontally
                 }
             }
@@ -445,7 +454,6 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         isMoving = false;
         yield return new WaitForSeconds(0.1f);
-        SetIdleAnimation();
     }
 
     // method to check for valid intersection, ie the number of offsets that has x greater than 0 is greater than 2
@@ -459,7 +467,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             // get the possible move
             Vector3Int potentialNextPos = currentTilePos + move;
             Debug.Log($"here is the move {move}");
-            if (move.x >= 0 && tile.isIntersection && potentialNextPos!=previousTilePos ) // Count moves where x is greater or equal to zero, incase the intersection is on y
+            if (tile.isIntersection && potentialNextPos!=previousTilePos ) // Count moves where x is greater or equal to zero, incase the intersection is on y
             {
                 forwardMoveCount++;
             }
@@ -481,7 +489,6 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         Debug.Log($"here is the current player direction {currentDirection}");
 
-        Debug.Log($"here is the current tile position {currentTilePos}");
 
         foreach (Vector3Int move in boardManager.pathTiles[currentTilePos].possibleMoves)
         {
@@ -537,7 +544,8 @@ public class PlayerBoardMovement : NetworkBehaviour
                 }
 
                 // Right movement cases
-                if (offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) || 
+                if (offset == new Vector3Int(2, -2, 0) ||  
+                    offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) || 
                     offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(1, -1, 0) ||
                     offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) ||
                     offset == new Vector3Int(3, 0, 0))
@@ -548,6 +556,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // Left movement cases
                 if (offset == new Vector3Int(-2, 1, 0) || offset == new Vector3Int(-1, 1, 0) || 
                     offset == new Vector3Int(-2, -1, 0) || offset == new Vector3Int(-1, -1, 0) ||
+                    offset == new Vector3Int(-1, -2, 0) ||
                     offset == new Vector3Int(-2, 0, 0) || offset == new Vector3Int(-1, 0, 0))
                 {
                     leftArrow.gameObject.SetActive(true);
@@ -563,34 +572,41 @@ public class PlayerBoardMovement : NetworkBehaviour
         if (direction.x > 0)
         {
             animator.Play("move_right");
-            lastDirection = Vector3.right;
+            Debug.Log("changed to move right");
         }
         else if (direction.x < 0)
         {
             animator.Play("move_left");
-            lastDirection = Vector3.left;
+            Debug.Log("changed to move left");
         }
         else if (direction.y > 0)
         {
             animator.Play("move_up");
-            lastDirection = Vector3.up;
+            Debug.Log("changed to move up");
         }
         else if (direction.y < 0)
         {
             animator.Play("move_down");
-            lastDirection = Vector3.down;
+            Debug.Log("changed to move down");
         }
     }
-    private void SetIdleAnimation()
+    private void SetIdleAnimation(int i)
     {
-        if (lastDirection == Vector3.right)
-            animator.Play("idle_right");
-        else if (lastDirection == Vector3.left)
-            animator.Play("idle_left");
-        else if (lastDirection == Vector3.up)
-            animator.Play("idle_up");
-        else if (lastDirection == Vector3.down)
-            animator.Play("idle_down");
+        switch (i)
+        {
+            case 0:
+                animator.Play("idle_right");
+                Debug.Log("changed to idle right");
+                break;
+            case 1:
+                animator.Play("idle_up");
+                Debug.Log("changed to idle up");
+                break;
+            case 2:
+                animator.Play("idle_down");
+                Debug.Log("changed to idle down");
+                break;
+        }
     }
 
     private Vector3 GetWorldPosition(Vector3Int gridPos)
