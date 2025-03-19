@@ -15,12 +15,18 @@ public static class FileHandler
     
     }
 
+
     public static void SaveToJSON<T>(T toSave, string filename)
     {
         string path = GetPath(filename);
         Debug.Log("Saving to: " + path);
         string content = JsonUtility.ToJson(toSave);
         WriteFile(path, content);
+    }
+
+    public static void WriteListToJSON<T>(string filename, List<T> dataList)
+    {
+        SaveToJSON(dataList, filename);
     }
 
     public static List<T> ReadListFromJSON<T>(string filename)
