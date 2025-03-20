@@ -7550,7 +7550,7 @@ MonoBehaviour:
   characterSprites:
   - {fileID: 4634897325612943540, guid: a9ba0739c32973542b71c15b14759294, type: 3}
   - {fileID: 21300000, guid: 7e6dc70c0a8b0284d8d915ba5da5f86e, type: 3}
-  - {fileID: 4634897325612943540, guid: 7e35b7b055fdc40019ac49f647cb065c, type: 3}
+  - {fileID: 4634897325612943540, guid: a9ba0739c32973542b71c15b14759294, type: 3}
   - {fileID: -7869020356144143537, guid: bf7a5bc171bf9754c9a4bd05c0f78890, type: 3}
 --- !u!114 &1676824508
 MonoBehaviour:
