@@ -18,8 +18,5 @@ MonoBehaviour:
     unexpected ways.
   itemEffect: 20% Credit Boost OR Extra Turn.
   itemIcon: {fileID: -8284753998373124497, guid: 571edd20c2418ed4cb60ce565a69bed3, type: 3}
-  isGold: 0
-  currentHealth: 0
-  maxHealth: 0
-  itemBaseCost: 0
-  oneTimeUse: 0
+  iconScale: {x: 0.7, y: 0.9}
+  isCoin: 0

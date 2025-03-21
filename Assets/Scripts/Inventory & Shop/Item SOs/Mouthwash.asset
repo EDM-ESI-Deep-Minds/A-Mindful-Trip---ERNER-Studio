@@ -19,8 +19,5 @@ MonoBehaviour:
   itemEffect: "Does absolutely nothing\u2026but hey, desperate times call for creative
     solutions!"
   itemIcon: {fileID: 8223813467779267207, guid: baa364ed6fcde884fabb00188425fc86, type: 3}
-  isGold: 0
-  currentHealth: 0
-  maxHealth: 0
-  itemBaseCost: 0
-  oneTimeUse: 0
+  iconScale: {x: 0.6, y: 1}
+  isCoin: 0

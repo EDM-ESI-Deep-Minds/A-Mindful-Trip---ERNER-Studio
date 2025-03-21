@@ -18,8 +18,5 @@ MonoBehaviour:
     once. But beware, the house always finds a way to even the odds.
   itemEffect: Allows changing a question.
   itemIcon: {fileID: 6421856297837412101, guid: 243dfb6531deb634da2a908c396eb9fa, type: 3}
-  isGold: 0
-  currentHealth: 0
-  maxHealth: 0
-  itemBaseCost: 0
-  oneTimeUse: 0
+  iconScale: {x: 0.7, y: 0.9}
+  isCoin: 0

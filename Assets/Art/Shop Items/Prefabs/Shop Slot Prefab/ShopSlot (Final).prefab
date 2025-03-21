@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 5079358630619647857}
   - component: {fileID: 1734296754100412769}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -555,9 +555,37 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -18.0006
       objectReference: {fileID: 0}
+    - target: {fileID: 4509189717993488193, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509189717993488193, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509189717993488193, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2898182516236828734}
+    - target: {fileID: 4509189717993488193, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509189717993488193, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onBuyButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509189717993488193, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShopSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509189717993488193, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4701002663940473138, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
       propertyPath: m_Name
-      value: ShopSlot
+      value: ShopSlot (Final)
       objectReference: {fileID: 0}
     - target: {fileID: 7551063662582273018, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
       propertyPath: m_Pivot.x
@@ -652,10 +680,35 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7551063662582273018, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5828339207917962194}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4701002663940473138, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2898182516236828734}
   m_SourcePrefab: {fileID: 100100000, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
 --- !u!224 &5284866649318741868 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7551063662582273018, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
   m_PrefabInstance: {fileID: 2422191488220808342}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6962577493567341988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4701002663940473138, guid: 46cc6d61a07458e4fbffe92098681969, type: 3}
+  m_PrefabInstance: {fileID: 2422191488220808342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2898182516236828734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962577493567341988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5aaab13cabef154eaa976bf49464c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSO: {fileID: 0}
+  itemNameText: {fileID: 9087262435360956929}
+  priceText: {fileID: 1734296754100412769}
+  itemImage: {fileID: 8272582209683923191}
+  shopManager: {fileID: 0}

@@ -18,8 +18,5 @@ MonoBehaviour:
     laughter. A weapon of legends, reduced to rust."
   itemEffect: Rusted and unusable, just a collectible.
   itemIcon: {fileID: 3350983547434158929, guid: a676967673953164185f38ba11325934, type: 3}
-  isGold: 0
-  currentHealth: 0
-  maxHealth: 0
-  itemBaseCost: 0
-  oneTimeUse: 0
+  iconScale: {x: 1.5, y: 0.5}
+  isCoin: 0
