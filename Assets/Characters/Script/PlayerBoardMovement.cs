@@ -481,7 +481,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             Debug.Log($"here is the move {move}");
             if (tile.isIntersection && potentialNextPos!=previousTilePos ) // Count moves where x is greater or equal to zero, incase the intersection is on y
             {
-                forwardMoveCount++;
+               forwardMoveCount++;
             }
         }
 
@@ -516,31 +516,34 @@ public class PlayerBoardMovement : NetworkBehaviour
                     rightArrow.gameObject.SetActive(true);
                 }
 
-                // Left movement cases
-                if (offset == new Vector3Int(-3, 0, 0) || offset == new Vector3Int(-4, 0, 0) ||   
-                    offset == new Vector3Int(-2, 0, 0) || offset == new Vector3Int(-1, 0, 0))
-                {
-                    leftArrow.gameObject.SetActive(true);
-                }
+                //// Left movement cases
+                //if (offset == new Vector3Int(-3, 0, 0) || offset == new Vector3Int(-4, 0, 0) ||   
+                //    offset == new Vector3Int(-2, 0, 0) || offset == new Vector3Int(-1, 0, 0))
+                //{
+                //    leftArrow.gameObject.SetActive(true);
+                //}
 
                 // Up movement cases
-                if (offset == new Vector3Int(1, 2, 0) || offset == new Vector3Int(2, 2, 0) 
-                   || offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) ||
-                   offset == new Vector3Int(0, 2, 0) ||
-                    offset == new Vector3Int(-1, 2, 0) || offset == new Vector3Int(-2, 2, 0))
+                if (offset == new Vector3Int(1, 2, 0) || offset == new Vector3Int(2, 2, 0) || 
+                    offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(2, 1, 0) || 
+                    offset == new Vector3Int(1, 1, 0) || offset == new Vector3Int(0, 2, 0) 
+                    //offset == new Vector3Int(-1, 2, 0) || offset == new Vector3Int(-2, 2, 0)
+                    )
                 {
                     upArrow.gameObject.SetActive(true);
                 }
 
                 // Down movement cases
                 if (offset == new Vector3Int(1, -2, 0) || offset == new Vector3Int(2, -2, 0) || offset == new Vector3Int(0, -2, 0) ||
-                    offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(1, -1, 0) ||
-                    offset == new Vector3Int(-1, -2, 0) || offset == new Vector3Int(-2, -2, 0))
+                    offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(1, -1, 0) 
+                     //offset == new Vector3Int(-2, -2, 0) || offset == new Vector3Int(-1, -2, 0) 
+                        )
+
                 {
                     downArrow.gameObject.SetActive(true);
                 }
             }
-            else if (currentDirection == "y-up" || currentDirection == "y-down")
+            else if (currentDirection == "y-up")
             {
                 // Up movement cases
                 if (offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(0, 4, 0) || 
@@ -549,31 +552,67 @@ public class PlayerBoardMovement : NetworkBehaviour
                     upArrow.gameObject.SetActive(true);
                 }
 
+                //// Down movement cases
+                //if (offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(0, -4, 0) || 
+                //    offset == new Vector3Int(0, -2, 0) || offset == new Vector3Int(0, -1, 0))
+                //{
+                //    downArrow.gameObject.SetActive(true);
+                //}
+
+                // Right movement cases
+                if (
+                    offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) || 
+                    offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) ||
+                    offset == new Vector3Int(3, 0, 0)
+                    //offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(1, -1, 0) || offset == new Vector3Int(2, -2, 0) ||
+                    )
+                {
+                    rightArrow.gameObject.SetActive(true);
+                }
+
+                //// Left movement cases
+                //if (offset == new Vector3Int(-2, 1, 0) || offset == new Vector3Int(-1, 1, 0) || 
+                //    offset == new Vector3Int(-2, -1, 0) || offset == new Vector3Int(-1, -1, 0) ||
+                //    offset == new Vector3Int(-1, -2, 0) ||
+                //    offset == new Vector3Int(-2, 0, 0) || offset == new Vector3Int(-1, 0, 0))
+                //{
+                //    leftArrow.gameObject.SetActive(true);
+                //}
+            }else if(currentDirection == "y-down")
+            {
+                //// Up movement cases
+                //if (offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(0, 4, 0) ||
+                //    offset == new Vector3Int(0, 2, 0) || offset == new Vector3Int(0, 1, 0))
+                //{
+                //    upArrow.gameObject.SetActive(true);
+                //}
+
                 // Down movement cases
-                if (offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(0, -4, 0) || 
+                if (offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(0, -4, 0) ||
                     offset == new Vector3Int(0, -2, 0) || offset == new Vector3Int(0, -1, 0))
                 {
                     downArrow.gameObject.SetActive(true);
                 }
 
                 // Right movement cases
-                if (offset == new Vector3Int(2, -2, 0) ||  
-                    offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) || 
+                if (offset == new Vector3Int(2, -2, 0) ||
                     offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(1, -1, 0) ||
                     offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) ||
-                    offset == new Vector3Int(3, 0, 0))
+                    offset == new Vector3Int(3, 0, 0)
+                    //offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) ||
+                    )
                 {
                     rightArrow.gameObject.SetActive(true);
                 }
 
-                // Left movement cases
-                if (offset == new Vector3Int(-2, 1, 0) || offset == new Vector3Int(-1, 1, 0) || 
-                    offset == new Vector3Int(-2, -1, 0) || offset == new Vector3Int(-1, -1, 0) ||
-                    offset == new Vector3Int(-1, -2, 0) ||
-                    offset == new Vector3Int(-2, 0, 0) || offset == new Vector3Int(-1, 0, 0))
-                {
-                    leftArrow.gameObject.SetActive(true);
-                }
+                //// Left movement cases
+                //if (offset == new Vector3Int(-2, 1, 0) || offset == new Vector3Int(-1, 1, 0) ||
+                //    offset == new Vector3Int(-2, -1, 0) || offset == new Vector3Int(-1, -1, 0) ||
+                //    offset == new Vector3Int(-1, -2, 0) ||
+                //    offset == new Vector3Int(-2, 0, 0) || offset == new Vector3Int(-1, 0, 0))
+                //{
+                //    leftArrow.gameObject.SetActive(true);
+                //}
             }
         }
 
