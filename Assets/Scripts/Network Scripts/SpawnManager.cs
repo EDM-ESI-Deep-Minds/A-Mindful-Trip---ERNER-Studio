@@ -74,12 +74,15 @@ public class spawn_mang : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
+    [System.Obsolete]
     private void ChangeSceneServerRpc()    
     {
         ApplyDontDestroyOnLoadClientRpc();
-      //  TextChatW.transform.SetParent(null);
-      //  DontDestroyOnLoad(TextChatW);
-      // NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //  TextChatW.transform.SetParent(null);
+        //  DontDestroyOnLoad(TextChatW);
+        // NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        RoomUIManager roomUIManager = FindObjectOfType<RoomUIManager>();
+        SelectedCharacters.Instance.SetSelectedCharacters(roomUIManager.GetSelectedCharacters());
         NetworkManager.SceneManager.LoadScene("CountrySide", LoadSceneMode.Single);
 
     }
