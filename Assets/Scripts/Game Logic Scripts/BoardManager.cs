@@ -12,7 +12,7 @@ public class BoardManager : MonoBehaviour
     private List<Vector3Int> pathTilePositions = new List<Vector3Int>();
     public static List<Vector3> storedStartPositions = new List<Vector3>();
     public static List<Vector3> storedEndPositions = new List<Vector3>();
-
+    private static bool hasInitialized = false;
 
     void Start()
     {
@@ -237,8 +237,6 @@ public class BoardManager : MonoBehaviour
                 Gizmos.DrawCube(worldPos, new Vector3(0.3f, 0.3f, 0.1f));
             }
         }
-
-
     }
 
     List<Vector3Int> GetStartTiles()

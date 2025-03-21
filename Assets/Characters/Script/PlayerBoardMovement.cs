@@ -12,7 +12,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     private DiceManager diceManager;
     private BoardManager boardManager;
-    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float moveSpeed = .1f;
     private Rigidbody2D rb;
     private bool isMoving = false;
     private Animator animator;
@@ -21,7 +21,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     public Tilemap boardTilemap;
     private Vector3Int currentGridPosition;
     //private Vector3 lastDirection = Vector3.right;
-    private string currentDirection = "x";
+    private string currentDirection = "";
     public Button rightArrow;
     public Button leftArrow;
     public Button upArrow;
@@ -192,8 +192,6 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         for (int i = 0; i < steps; i++)
         {
-            
-
             if (!boardManager.pathTiles.ContainsKey(currentTilePos))
             {
                 Debug.Log("Invalid current tile position: " + currentTilePos);
@@ -383,7 +381,6 @@ public class PlayerBoardMovement : NetworkBehaviour
             }
 
             Vector3Int offset = nextTilePos - currentTilePos;
-
             Vector3 targetPos = GetWorldPosition(nextTilePos);
 
             // Move based on the current direction
@@ -392,28 +389,33 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // Move along X first
                 if (offset.x != 0)
                 {
-                    SetIdleAnimation(1);
-                    SetAnimation(new Vector3(offset.x, 0, 0));
+                    int animIndex = offset.x > 0 ? 0 : 3;
+                    SetIdleAnimation(animIndex);
                     Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
                     while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
                     {
+                        SetAnimation(animIndex);
                         rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
                         yield return null;
                     }
+                    SetIdleAnimation(animIndex);
                 }
                 // If Y component exists, move along Y and determine y-up or y-down
                 if (offset.y != 0)
                 {
-                    SetIdleAnimation(2);
-                    SetAnimation(new Vector3(0, offset.y, 0));
+                    int animIndex = offset.y > 0 ? 1 : 2; // 1 for up, 2 for down
+                    SetIdleAnimation(animIndex);
+
                     Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
                     while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
                     {
+                        SetAnimation(animIndex);
                         rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
                         yield return null;
                     }
                     // Determine if moving up or down
                     currentDirection = (offset.y > 0) ? "y-up" : "y-down";
+                    SetIdleAnimation(animIndex);
                 }
             }
             else if (currentDirection == "y" || currentDirection == "y-up" || currentDirection == "y-down")
@@ -421,40 +423,47 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // Move along Y first
                 if (offset.y != 0)
                 {
-                    if(offset.y > 0)
-                    {
-                        SetIdleAnimation(2);
-                    }
-                    else
-                    {
-                        SetIdleAnimation(3);
-                    }
-                    SetAnimation(new Vector3(0, offset.y, 0));
+                    int animIndex = offset.y > 0 ? 1 : 2; // 1 for up, 2 for down
+                    SetIdleAnimation(animIndex);
+
                     Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
                     while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
                     {
+                        SetAnimation(animIndex);
                         rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
                         yield return null;
                     }
+                    SetIdleAnimation(animIndex);
                 }
                 // If X component exists, move along X and switch direction
                 if (offset.x != 0)
                 {
-                    SetIdleAnimation(1);
-                    SetAnimation(new Vector3(offset.x, 0, 0));
+                    int animIndex = offset.x > 0 ? 0 : 3; // 0 for right, 3 for left
+                    SetIdleAnimation(animIndex);
                     Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
                     while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
                     {
+                        SetAnimation(animIndex);
                         rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
                         yield return null;
                     }
                     currentDirection = "x"; // Reset to 'x' when moving horizontally
+                    SetIdleAnimation(animIndex);
                 }
+
+                
             }
+
             rb.position = targetPos;
             previousTilePos = currentTilePos;
             currentTilePos = nextTilePos;
             bool triggered = false;
+           
+
+            isMoving = false;
+            //yield return new WaitForSeconds(0.1f);
+
+
             // Check if this tile has a trigger event
             yield return StartCoroutine(CheckForTileTrigger(result => triggered = result));
 
@@ -464,6 +473,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             }
         }
 
+        SetIdleAnimation(0);
         isMoving = false;
         yield return new WaitForSeconds(0.1f);
     }
@@ -619,27 +629,22 @@ public class PlayerBoardMovement : NetworkBehaviour
         isChoosingDirection = true; // Stop movement until the player selects a direction
     }
 
-    private void SetAnimation(Vector3 direction)
+    private void SetAnimation(int i)
     {
-        if (direction.x > 0)
+        switch (i)
         {
-            animator.Play("move_right");
-            Debug.Log("changed to move right");
-        }
-        else if (direction.x < 0)
-        {
-            animator.Play("move_left");
-            Debug.Log("changed to move left");
-        }
-        else if (direction.y > 0)
-        {
-            animator.Play("move_up");
-            Debug.Log("changed to move up");
-        }
-        else if (direction.y < 0)
-        {
-            animator.Play("move_down");
-            Debug.Log("changed to move down");
+            case 0:
+                animator.Play("move_right");
+                break;
+            case 1:
+                animator.Play("move_up");
+                break;
+            case 2:
+                animator.Play("move_down");
+                break;
+            case 3:
+                animator.Play("move_left");
+                break;
         }
     }
     private void SetIdleAnimation(int i)
@@ -647,16 +652,16 @@ public class PlayerBoardMovement : NetworkBehaviour
         switch (i)
         {
             case 0:
-                animator.Play("idle_right");
-                Debug.Log("changed to idle right");
+                animator.Play("idle_rightt");
                 break;
             case 1:
                 animator.Play("idle_up");
-                Debug.Log("changed to idle up");
                 break;
             case 2:
                 animator.Play("idle_down");
-                Debug.Log("changed to idle down");
+                break;
+            case 3:
+                animator.Play("idle_left");
                 break;
         }
     }
@@ -703,7 +708,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         if (offset.y != 0)
         {
             SetIdleAnimation(2);
-            SetAnimation(new Vector3(0, offset.y, 0));
+            SetAnimation(2);
             Vector3 targetYPos = new Vector3(rb.position.x, worldTargetPos.y, 0);
 
             while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
@@ -720,7 +725,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         if (offset.x != 0)
         {
             SetIdleAnimation(1);
-            SetAnimation(new Vector3(offset.x, 0, 0));
+            SetAnimation(1);
             Vector3 targetXPos = new Vector3(worldTargetPos.x, rb.position.y, 0);
 
             while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
@@ -743,4 +748,6 @@ public class PlayerBoardMovement : NetworkBehaviour
             diceManager.OnDiceRolled -= OnDiceRolled; // Unsubscribe to prevent memory leaks
         }
     }
+
+ 
 }
