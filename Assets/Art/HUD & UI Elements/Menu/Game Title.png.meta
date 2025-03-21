@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: a29aa37133aa8314d9d18d331d23abe2
+guid: 84aa4ea2d587dbb458466347abaf4f5b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5225540622116197949
-    second: 02_0
+      213: -3807722896295604221
+    second: Game Title_0
   - first:
-      213: -4287101317676662005
-    second: 02_1
+      213: 3266842813512564705
+    second: Game Title_1
   - first:
-      213: 6574457499336702476
-    second: 02_2
-  - first:
-      213: 813639542560780024
-    second: 02_3
+      213: 1417514167923522614
+    second: Game Title_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 02_0
+      name: Game Title_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 35
-        width: 23
-        height: 27
+        x: 229
+        y: 417
+        width: 22
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c9e3638d762b77b0800000000000000
-      internalID: -5225540622116197949
+      spriteID: 300dd233330482bc0800000000000000
+      internalID: -3807722896295604221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 02_1
+      name: Game Title_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 35
-        width: 23
-        height: 27
+        x: 90
+        y: 175
+        width: 512
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0306cbc0182184c0800000000000000
-      internalID: -4287101317676662005
+      spriteID: 1ef347cfa38265d20800000000000000
+      internalID: 3266842813512564705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 02_2
+      name: Game Title_2
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 23
-        height: 27
+        x: 181
+        y: 34
+        width: 356
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,30 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0afdde334a2d3b50800000000000000
-      internalID: 6574457499336702476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02_3
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 2
-        width: 23
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8feeb856ad0aa4b00800000000000000
-      internalID: 813639542560780024
+      spriteID: 63c3a2b10a50ca310800000000000000
+      internalID: 1417514167923522614
       vertices: []
       indices: 
       edges: []
@@ -223,10 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      02_0: -5225540622116197949
-      02_1: -4287101317676662005
-      02_2: 6574457499336702476
-      02_3: 813639542560780024
+      Game Title_0: -3807722896295604221
+      Game Title_1: 3266842813512564705
+      Game Title_2: 1417514167923522614
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
