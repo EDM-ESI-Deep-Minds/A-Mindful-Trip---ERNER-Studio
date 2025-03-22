@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 8909638463307033645}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.18, y: 0.161, z: 0}
+  m_LocalPosition: {x: -0.196, y: 0.1538, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -207,17 +207,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.008719534, y: -0.008408126}
+  m_Offset: {x: 0.0044631697, y: 0.008773642}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.005}
     oldSize: {x: 0.16, y: 0.2}
     newSize: {x: 0.16, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.070243746, y: 0.07218186}
+  m_Size: {x: 0.07345783, y: 0.037818324}
   m_EdgeRadius: 0
 --- !u!114 &1326532006344174523
 MonoBehaviour:
@@ -358,3 +358,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   moveSpeed: 1
+  boardTilemap: {fileID: 0}
+  rightArrow: {fileID: 0}
+  leftArrow: {fileID: 0}
+  upArrow: {fileID: 0}
+  downArrow: {fileID: 0}

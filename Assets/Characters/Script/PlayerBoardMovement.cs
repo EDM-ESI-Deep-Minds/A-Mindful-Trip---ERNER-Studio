@@ -160,6 +160,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         if (validMoves.Length == 0)
         {
             currentDirection = "x";
+            SetIdleAnimation(0);
             return;
         }
 
@@ -168,16 +169,19 @@ public class PlayerBoardMovement : NetworkBehaviour
         if (Mathf.Abs(offset.x) == 3 && offset.y == 0)
         {
             currentDirection = "x"; // Moving strictly along X-axis
+            SetIdleAnimation(0);
         }
         else if (offset.y != 0)
         {
             if (offset.y > 0)
             {
                 currentDirection = "y-up";  // Moving upward
+                SetIdleAnimation(1);
             }
             else
             {
                 currentDirection = "y-down"; // Moving downward
+                SetIdleAnimation(2);
             }
         }
     }
@@ -707,15 +711,17 @@ public class PlayerBoardMovement : NetworkBehaviour
         // Move along Y first
         if (offset.y != 0)
         {
-            SetIdleAnimation(2);
-            SetAnimation(2);
+            int animIndex = offset.y > 0 ? 1 : 2; // 1 for up, 2 for down
+            SetIdleAnimation(animIndex);
             Vector3 targetYPos = new Vector3(rb.position.x, worldTargetPos.y, 0);
 
             while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
             {
+                SetAnimation(animIndex);
                 rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
                 yield return null;
             }
+            SetIdleAnimation(animIndex);    
 
             // Determine if moving up or down
             currentDirection =  "x";
@@ -724,15 +730,17 @@ public class PlayerBoardMovement : NetworkBehaviour
         // Move along X after Y
         if (offset.x != 0)
         {
-            SetIdleAnimation(1);
-            SetAnimation(1);
+            int animIndex = offset.x > 0 ? 0 : 3; // 0 for right, 3 for left
+            SetIdleAnimation(animIndex);
             Vector3 targetXPos = new Vector3(worldTargetPos.x, rb.position.y, 0);
 
             while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
             {
+                SetAnimation(animIndex);
                 rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
                 yield return null;
             }
+            SetIdleAnimation(animIndex);
         }
 
         // Update tile position after crossing
