@@ -1,47 +1,95 @@
+using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : NetworkBehaviour
 {
-    [SerializeField] private InventorySlot[] inventorySlots; // Reference to 3 slots (done in scene)
-    [SerializeField] private TMP_Text coinText;
-    [SerializeField] private int currentCoins = 500; // Initial coin value (example)
+    private InventorySlot[] inventorySlots;
+    private TMPro.TMP_Text coinText;
+    [SerializeField] public ItemDatabase itemDatabase;
 
-    private void Start()
+    private NetworkVariable<int> currentCoins = new NetworkVariable<int>(500);
+    private NetworkList<int> inventoryItems; // Syncs item IDs
+    [SerializeField] private GameObject inventoryCanvasPrefab; // Prefab reference
+    private GameObject playerInventoryCanvas;
+
+    private void Awake()
     {
-        UpdateCoinText();
+        inventoryItems = new NetworkList<int>();
     }
 
-    public bool CanAfford(int price)
+    public override void OnNetworkSpawn()
     {
-        return currentCoins >= price;
-    }
-
-    public bool AddItem(ItemSO itemSO)
-    {
-        // Check for available empty slot
-        foreach (InventorySlot slot in inventorySlots)
+        if (IsOwner)
         {
+            // Instantiate player's own InventoryCanvas
+            playerInventoryCanvas = Instantiate(inventoryCanvasPrefab);
+
+            // Assign Inventory Slots dynamically
+            inventorySlots = playerInventoryCanvas.GetComponentsInChildren<InventorySlot>();
+
+            // Assign Coin Text
+            coinText = playerInventoryCanvas.GetComponentInChildren<TMPro.TMP_Text>();
+
+            UpdateCoinText(currentCoins.Value);
+        }
+
+        currentCoins.OnValueChanged += (oldVal, newVal) => UpdateCoinText(newVal);
+        inventoryItems.OnListChanged += HandleInventoryUpdated;
+    }
+
+    private void HandleInventoryUpdated(NetworkListEvent<int> changeEvent)
+    {
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            InventorySlot slot = inventorySlots[i];
             if (!slot.IsOccupied())
             {
-                slot.SetItem(itemSO);
-                return true;
+                ItemSO item = itemDatabase.GetItemByID(inventoryItems[i]);
+                inventorySlots[i].SetItem(item);
             }
         }
         // Inventory full
         Debug.Log("Inventory Full!");
+    }
+
+    private void UpdateCoinText(int coins)
+    {
+        coinText.text = coins.ToString();
+    }
+
+    public bool CanAfford(int price) => currentCoins.Value >= price;
+
+    public bool TryAddItem(int itemID)
+    {
+        if (inventoryItems.Count < inventorySlots.Length)
+        {
+            inventoryItems.Add(itemID);
+            return true;
+        }
         return false;
     }
 
-    public void DeductCoins(int price)
+
+    [ClientRpc]
+    private void NotifyItemAddedClientRpc(bool added, ulong targetClientId)
     {
-        currentCoins -= price;
-        UpdateCoinText();
+        if (NetworkManager.Singleton.LocalClientId != targetClientId) return;
+
+        if (added)
+        {
+            Debug.Log("Purchase successful!");
+            // Optionally trigger UI feedback
+        }
+        else
+        {
+            Debug.Log("Purchase failed: Inventory full!");
+            // Optionally trigger UI warning
+        }
     }
 
-    private void UpdateCoinText()
+    [ServerRpc]
+    public void DeductCoinsServerRpc(int price)
     {
-        coinText.text = currentCoins.ToString();
+        currentCoins.Value -= price;
     }
 }

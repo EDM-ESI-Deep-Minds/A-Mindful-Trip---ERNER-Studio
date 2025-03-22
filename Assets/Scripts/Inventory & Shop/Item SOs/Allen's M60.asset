@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f751a0bfcc33e4c8bfa09a510a9e73, type: 3}
   m_Name: Allen's M60
   m_EditorClassIdentifier: 
+  itemID: 8
   itemName: Allen's M60
   itemDescription: "A once-mighty firearm, now rusted beyond use. Its mere presence
     evokes the echo of distant battles and the memory of a relentless warrior\u2019s

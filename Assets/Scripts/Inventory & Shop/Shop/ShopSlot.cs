@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Unity.Netcode;
 
 public class ShopSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
 {
@@ -26,7 +27,8 @@ public class ShopSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void onBuyButtonClicked()
     {
-        shopManager.TryBuyItem(itemSO, price);
+        ulong playerID = NetworkManager.Singleton.LocalClientId;
+        shopManager.TryBuyItemServerRpc(playerID, itemSO.itemID, price);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

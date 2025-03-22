@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f751a0bfcc33e4c8bfa09a510a9e73, type: 3}
   m_Name: BloodVial
   m_EditorClassIdentifier: 
+  itemID: 1
   itemName: Blood Vial
   itemDescription: A small glass vial filled with a thick, crimson liquid. Its origins
     are unclear, but it carries a strange vitality. Drinking it restores one's strength,
     though the taste is... unsettling.
   itemEffect: Restores 1 heart.
   itemIcon: {fileID: 3248535176977488815, guid: 85a2f20d82b598343a7d247323ffeab6, type: 3}
-  isGold: 0
-  currentHealth: 0
-  maxHealth: 0
-  itemBaseCost: 0
-  oneTimeUse: 0
+  iconScale: {x: 1, y: 1}
+  isCoin: 0

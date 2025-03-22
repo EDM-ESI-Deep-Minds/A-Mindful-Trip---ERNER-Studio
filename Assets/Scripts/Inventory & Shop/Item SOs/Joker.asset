@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f751a0bfcc33e4c8bfa09a510a9e73, type: 3}
   m_Name: Joker
   m_EditorClassIdentifier: 
+  itemID: 2
   itemName: Joker
   itemDescription: A mysterious playing card imbued with an unpredictable energy.
     When used, reality bends in your favor, allowing you to change fate itself, just

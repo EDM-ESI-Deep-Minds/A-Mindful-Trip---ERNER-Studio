@@ -1,18 +1,18 @@
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class ShopManager : MonoBehaviour
+public class ShopManager : NetworkBehaviour
 {
     [SerializeField] private List<ShopItems> shopItems;
     [SerializeField] private ShopSlot[] shopSlots;
-    [SerializeField] private InventoryManager inventoryManager;
 
     private void Start()
     {
-        populateShopItems();
+        PopulateShopItems();
     }
 
-    public void populateShopItems()
+    public void PopulateShopItems()
     {
         for (int i = 0; i < shopItems.Count && i < shopSlots.Length; i++)
         {
@@ -27,27 +27,33 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    public void TryBuyItem(ItemSO itemSO, int price)
+    // This method is called on the server when a player tries to buy an item
+    [ServerRpc(RequireOwnership = false)]
+    public void TryBuyItemServerRpc(ulong playerID, int itemID, int price)
     {
-        if (itemSO != null && inventoryManager.CanAfford(price))
+        NetworkObject playerObject = NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(playerID);
+        if (playerObject != null)
         {
-            bool added = inventoryManager.AddItem(itemSO);
-            if (added)
+            InventoryManager inventoryManager = playerObject.GetComponent<InventoryManager>();
+            if (inventoryManager != null && inventoryManager.CanAfford(price))
             {
-                inventoryManager.DeductCoins(price);
-                Debug.Log("Item purchased: " + itemSO.itemName);
+                bool added = inventoryManager.TryAddItem(itemID);
+                if (added)
+                {
+                    inventoryManager.DeductCoinsServerRpc(price);
+                    Debug.Log($"Player {playerID} purchased item with ID: {itemID}");
+                }
+                else
+                {
+                    Debug.Log($"Player {playerID} purchase failed: Inventory full.");
+                }
             }
             else
             {
-                Debug.Log("Purchase failed: Inventory full.");
+                Debug.Log($"Player {playerID} purchase failed: Insufficient coins.");
             }
         }
-        else
-        {
-            Debug.Log("Purchase failed: Coin amount insufficient.");
-        }
     }
-
 }
 
 [System.Serializable]

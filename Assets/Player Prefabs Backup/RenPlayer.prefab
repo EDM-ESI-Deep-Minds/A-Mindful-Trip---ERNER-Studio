@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: -6301260000402959738}
   - component: {fileID: 9120035521477231187}
   - component: {fileID: -5562665735434036782}
+  - component: {fileID: 4133302636096880667}
   m_Layer: 0
   m_Name: RenPlayer
   m_TagString: Player
@@ -343,3 +344,18 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 0
   AutoSetKinematicOnDespawn: 0
+--- !u!114 &4133302636096880667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311031283111266869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485ac06d44c52a54fa5ae859afd9838d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  itemDatabase: {fileID: 11400000, guid: 5e60fc6da62ae3147abd092414ebbeae, type: 2}
+  inventoryCanvasPrefab: {fileID: 5622932771324534629, guid: 8fb7dc980ef469e4da268add5a42d9bb, type: 3}

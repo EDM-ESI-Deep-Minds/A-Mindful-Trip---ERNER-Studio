@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f751a0bfcc33e4c8bfa09a510a9e73, type: 3}
   m_Name: Mouthwash
   m_EditorClassIdentifier: 
+  itemID: 7
   itemName: Mouthwash
   itemDescription: A relic from a forgotten civilization. The liquid inside has long
     since lost its potency, yet it remains curiously untouched by time. Perhaps it
