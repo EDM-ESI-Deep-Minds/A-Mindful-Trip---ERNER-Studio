@@ -13,10 +13,11 @@ public class PlayerController : NetworkBehaviour
     private ShopManager shopManager;
     private bool isInventoryOpen = false;
     private bool isShopOpen = false;
+    private bool isNearShopkeeper = false; // For shop access
 
     public override void OnNetworkSpawn()
     {
-        
+
         if (IsOwner)
         {
             InitializeUI();
@@ -58,14 +59,15 @@ public class PlayerController : NetworkBehaviour
 
     void Update()
     {
-        // Vérifie que seul le propriétaire peut interagir avec les touches
+        // Only owner can interact with keys
         if (!IsOwner) return;
 
         if (Input.GetKeyDown(KeyCode.I))
         {
             ToggleInventory();
         }
-        if (Input.GetKeyDown(KeyCode.K))
+        // Opening shop via key when in range
+        if (Input.GetKeyDown(KeyCode.K) && isNearShopkeeper)
         {
             ToggleShop();
         }
@@ -96,6 +98,28 @@ public class PlayerController : NetworkBehaviour
         {
             playerUIController.ShowShopUI();
             isShopOpen = true;
+        }
+    }
+    // Called by Shopkeeper when banner is clicked
+    // public void ForceOpenShop()
+    // {
+    //     if (!isShopOpen && isNearShopkeeper)
+    //     {
+    //         playerUIController.ShowShopUI();
+    //         isShopOpen = true;
+    //     }
+    // }
+
+    // Called by Shopkeeper trigger
+    public void SetNearShopkeeper(bool value)
+    {
+        isNearShopkeeper = value;
+
+        // Auto-close shop when leaving range
+        if (!value && isShopOpen)
+        {
+            playerUIController.HideShopUI();
+            isShopOpen = false;
         }
     }
 }
