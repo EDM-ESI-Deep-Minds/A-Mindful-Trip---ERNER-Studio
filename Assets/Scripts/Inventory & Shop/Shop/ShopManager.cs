@@ -5,7 +5,7 @@ public class ShopManager : MonoBehaviour
 {
     [SerializeField] private List<ShopItems> shopItems;
     [SerializeField] private ShopSlot[] shopSlots;
-    [SerializeField] private InventoryManager inventoryManager;
+    [SerializeField] public InventoryManager inventoryManager;
 
     private void Start()
     {

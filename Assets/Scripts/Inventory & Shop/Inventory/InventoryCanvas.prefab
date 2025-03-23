@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 2050606654494312768}
   - component: {fileID: 6593940722333029791}
   - component: {fileID: 3809519584974639644}
+  - component: {fileID: 6404540056100917483}
   m_Layer: 5
   m_Name: InventoryCanvas
   m_TagString: Untagged
@@ -399,6 +400,7 @@ MonoBehaviour:
   coinText: {fileID: 3371638948355345425}
   startingCoins: 500
   itemDatabase: {fileID: 11400000, guid: 5e60fc6da62ae3147abd092414ebbeae, type: 2}
+  player: {fileID: 0}
 --- !u!225 &3809519584974639644
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -411,6 +413,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &6404540056100917483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5622932771324534629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec626a3840446284597071b7b559bc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1783034375646918855
 PrefabInstance:
   m_ObjectHideFlags: 0

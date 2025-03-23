@@ -893,6 +893,7 @@ GameObject:
   - component: {fileID: 8148120121154896744}
   - component: {fileID: 2991099000375976333}
   - component: {fileID: 1410309910783791549}
+  - component: {fileID: 5884749921255409914}
   m_Layer: 5
   m_Name: ShopCanvas
   m_TagString: Untagged
@@ -1033,7 +1034,19 @@ MonoBehaviour:
   - {fileID: 1454029430069148642}
   - {fileID: 670594075009191352}
   - {fileID: 728989276683517051}
-  inventoryManager: {fileID: 0}
+  inventoryManager: {fileID: 6593940722333029791, guid: 8fb7dc980ef469e4da268add5a42d9bb, type: 3}
+--- !u!114 &5884749921255409914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8318903786705242564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec626a3840446284597071b7b559bc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8417283299886835757
 GameObject:
   m_ObjectHideFlags: 0

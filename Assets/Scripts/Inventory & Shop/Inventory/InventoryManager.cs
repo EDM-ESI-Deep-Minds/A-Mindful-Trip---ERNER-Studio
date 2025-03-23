@@ -11,6 +11,8 @@ public class InventoryManager : MonoBehaviour
     private int currentCoins;
     [SerializeField] public ItemDatabase itemDatabase;
     private List<int> inventoryItems;
+    public GameObject player;
+
 
 
     private void Awake()

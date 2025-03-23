@@ -2,36 +2,46 @@ using UnityEngine;
 
 public class PlayerUIController : MonoBehaviour
 {
-    [SerializeField] private CanvasGroup inventoryCanvasGroup;
-    [SerializeField] private CanvasGroup shopCanvasGroup;
+    [SerializeField] public CanvasGroup inventoryCanvasGroup;
+    [SerializeField] public CanvasGroup shopCanvasGroup;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
-            ToggleInventoryUI();
-        if (Input.GetKeyDown(KeyCode.K))
-            ToggleShopUI();
-    }
-
-    public void ToggleInventoryUI()
+    public void ShowInventoryUI()
     {
         if (inventoryCanvasGroup != null)
         {
-            bool isVisible = inventoryCanvasGroup.alpha == 1f;
-            inventoryCanvasGroup.alpha = isVisible ? 0f : 1f;
-            inventoryCanvasGroup.blocksRaycasts = !isVisible;
-            inventoryCanvasGroup.interactable = !isVisible;
+            inventoryCanvasGroup.alpha = 1f;
+            inventoryCanvasGroup.blocksRaycasts = true;
+            inventoryCanvasGroup.interactable = true;
         }
     }
 
-    public void ToggleShopUI()
+    public void HideInventoryUI()
+    {
+        if (inventoryCanvasGroup != null)
+        {
+            inventoryCanvasGroup.alpha = 0f;
+            inventoryCanvasGroup.blocksRaycasts = false;
+            inventoryCanvasGroup.interactable = false;
+        }
+    }
+
+    public void ShowShopUI()
     {
         if (shopCanvasGroup != null)
         {
-            bool isVisible = shopCanvasGroup.alpha == 1f;
-            shopCanvasGroup.alpha = isVisible ? 0f : 1f;
-            shopCanvasGroup.blocksRaycasts = !isVisible;
-            shopCanvasGroup.interactable = !isVisible;
+            shopCanvasGroup.alpha = 1f;
+            shopCanvasGroup.blocksRaycasts = true;
+            shopCanvasGroup.interactable = true;
+        }
+    }
+
+    public void HideShopUI()
+    {
+        if (shopCanvasGroup != null)
+        {
+            shopCanvasGroup.alpha = 0f;
+            shopCanvasGroup.blocksRaycasts = false;
+            shopCanvasGroup.interactable = false;
         }
     }
 }
