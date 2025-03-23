@@ -10,7 +10,6 @@ using System.Linq;
 
 public class PlayerBoardMovement : NetworkBehaviour
 {
-
     private DiceManager diceManager;
     private BoardManager boardManager;
     [SerializeField] private float moveSpeed = .1f;
