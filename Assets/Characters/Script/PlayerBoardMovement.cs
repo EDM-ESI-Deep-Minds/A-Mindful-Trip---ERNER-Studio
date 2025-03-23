@@ -656,7 +656,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         switch (i)
         {
             case 0:
-                animator.Play("idle_rightt");
+                animator.Play("idle_right");
                 break;
             case 1:
                 animator.Play("idle_up");

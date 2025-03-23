@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 7364084665823728864}
   - component: {fileID: 4885582820122878254}
   - component: {fileID: 4587048625500264335}
+  - component: {fileID: 7242072467800852050}
   m_Layer: 0
   m_Name: RoxyPlayer
   m_TagString: Player
@@ -210,7 +211,7 @@ BoxCollider2D:
   m_Offset: {x: 0.0044631697, y: 0.008773642}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.005}
+    pivot: {x: 0.2, y: 0.005}
     oldSize: {x: 0.16, y: 0.2}
     newSize: {x: 0.16, y: 0.2}
     adaptiveTilingThreshold: 0.5
@@ -363,3 +364,15 @@ MonoBehaviour:
   leftArrow: {fileID: 0}
   upArrow: {fileID: 0}
   downArrow: {fileID: 0}
+--- !u!114 &7242072467800852050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909638463307033645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97591aba26afb64b88b63ed3c370641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
