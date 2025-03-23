@@ -9,14 +9,15 @@ public class spawn_mang : NetworkBehaviour
     public GameObject playerPrefab;
     [SerializeField]
     public GameObject TextChatW;
+    float[,] les_position = new float[4, 2]
+ {
+      {0.88f, 2.64f},
+     {-0.56f, 0.08f},
+     {1.52f, 5.04f},
+     {2.48f, -3.28f},
+   
     
-    float[,] les_position = new float[4, 2]  
-{
-    {0, -2},
-    {1.5f, 0.5f},
-    {0, 3},
-    {2, 5},
-};
+ };
     int index_position=-1;
     public static GameObject[] AllPlayer = new GameObject[4];
     public static int IndexTabAllPlayer = 0;
@@ -25,7 +26,6 @@ public class spawn_mang : NetworkBehaviour
 
     public void OnStartButtonPressed()
     {
-
         if (IsServer)
         {
             SpawnAllPlayers();
@@ -60,7 +60,7 @@ public class spawn_mang : NetworkBehaviour
     private Vector2 GetSpawnPosition()
     {
         index_position++;
-        return new Vector2(les_position[index_position,0], les_position[index_position, 0]);
+        return new Vector2(les_position[index_position,0], les_position[index_position, 1]);
       
     }
 
