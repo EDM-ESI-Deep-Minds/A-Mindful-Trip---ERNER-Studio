@@ -9,10 +9,11 @@ public class spawn_mang : NetworkBehaviour
     public GameObject playerPrefab;
     float[,] les_position = new float[4, 2]
  {
+      {0.88f, 2.64f},
      {-0.56f, 0.08f},
      {1.52f, 5.04f},
      {2.48f, -3.28f},
-    {0.88f, 2.64f},
+   
     
  };
     int index_position=-1;

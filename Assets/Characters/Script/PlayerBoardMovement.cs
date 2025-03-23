@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using System.Linq;
 
 public class PlayerBoardMovement : NetworkBehaviour
 {
@@ -527,6 +528,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         Debug.Log($"here is the current player direction {currentDirection}");
 
+        int offset2x = 0;
 
         foreach (Vector3Int move in boardManager.pathTiles[currentTilePos].possibleMoves)
         {
@@ -536,9 +538,14 @@ public class PlayerBoardMovement : NetworkBehaviour
             {
                 // Right movement cases
                 if (offset == new Vector3Int(3, 0, 0) || offset == new Vector3Int(4, 0, 0) ||
-                    offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) ||  
-                    offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0))
+                    offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) ||   offset == new Vector3Int(1, 0, 0))
                 {
+                    if (boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(4, 0, 0)) && boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(2, 0, 0))) 
+                    {
+                        possibleMoves= 1;
+                        onlyOneMove = new Vector3Int(2, 0, 0);
+                        break;
+                    }
                     possibleMoves++;
                     onlyOneMove = offset;
                     rightArrow.gameObject.SetActive(true);
