@@ -27,8 +27,7 @@ public class ShopSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void onBuyButtonClicked()
     {
-        ulong playerID = NetworkManager.Singleton.LocalClientId;
-        shopManager.TryBuyItemServerRpc(playerID, itemSO.itemID, price);
+        shopManager.TryBuyItem(itemSO, price);    
     }
 
     public void OnPointerEnter(PointerEventData eventData)

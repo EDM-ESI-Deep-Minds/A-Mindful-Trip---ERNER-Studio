@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using Unity.Netcode;
 using UnityEngine;
 
-public class ShopManager : NetworkBehaviour
+public class ShopManager : MonoBehaviour
 {
     [SerializeField] private List<ShopItems> shopItems;
     [SerializeField] private ShopSlot[] shopSlots;
+    [SerializeField] private InventoryManager inventoryManager;
 
     private void Start()
     {
@@ -27,33 +27,40 @@ public class ShopManager : NetworkBehaviour
         }
     }
 
-    // This method is called on the server when a player tries to buy an item
-    [ServerRpc(RequireOwnership = false)]
-    public void TryBuyItemServerRpc(ulong playerID, int itemID, int price)
+    public void TryBuyItem(ItemSO itemSO, int price)
     {
-        NetworkObject playerObject = NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(playerID);
-        if (playerObject != null)
+        if (itemSO != null && inventoryManager.CanAfford(price))
         {
-            InventoryManager inventoryManager = playerObject.GetComponent<InventoryManager>();
-            if (inventoryManager != null && inventoryManager.CanAfford(price))
+            bool added = inventoryManager.AddItem(itemSO);
+            if (added)
             {
-                bool added = inventoryManager.TryAddItem(itemID);
-                if (added)
-                {
-                    inventoryManager.DeductCoinsServerRpc(price);
-                    Debug.Log($"Player {playerID} purchased item with ID: {itemID}");
-                }
-                else
-                {
-                    Debug.Log($"Player {playerID} purchase failed: Inventory full.");
-                }
+                inventoryManager.DeductCoins(price);
+                Debug.Log("Item purchased: " + itemSO.itemName);
             }
             else
             {
-                Debug.Log($"Player {playerID} purchase failed: Insufficient coins.");
+                Debug.Log("Purchase failed: Inventory full.");
             }
         }
+        else
+        {
+            Debug.Log("Purchase failed: Coin amount insufficient.");
+        }
     }
+    
+    // public void TryBuyItem(ItemSO itemSO, int price)
+    // {
+    //     if (itemSO != null && inventoryManager.CanAfford(price))
+    //     {
+    //         inventoryManager.AddItem(itemSO);
+    //         inventoryManager.DeductCoins(price);
+    //         Debug.Log("Item purchased: " + itemSO.itemName);
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("Purchase failed: Insufficient coins or inventory full.");
+    //     }
+    // }
 }
 
 [System.Serializable]
