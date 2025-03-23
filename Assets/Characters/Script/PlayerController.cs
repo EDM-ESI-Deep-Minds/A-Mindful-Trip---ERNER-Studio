@@ -1,26 +1,32 @@
 using UnityEngine;
+using Unity.Netcode;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     [Header("UI Prefabs")]
     public GameObject inventoryCanvasPrefab;
     public GameObject shopCanvasPrefab;
-
     private GameObject inventoryInstance;
     private GameObject shopInstance;
-
     private PlayerUIController playerUIController;
     private InventoryManager inventoryManager;
     private ShopManager shopManager;
-
     private bool isInventoryOpen = false;
     private bool isShopOpen = false;
 
-    void Start()
+    public override void OnNetworkSpawn()
+    {
+        
+        if (IsOwner)
+        {
+            InitializeUI();
+        }
+    }
+
+    private void InitializeUI()
     {
         // Instantiate Inventory Canvas (PARENTED to Player!)
         inventoryInstance = Instantiate(inventoryCanvasPrefab, this.transform);
-
         // Instantiate Shop Canvas (PARENTED to Player!)
         shopInstance = Instantiate(shopCanvasPrefab, this.transform);
 
@@ -52,6 +58,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // Vérifie que seul le propriétaire peut interagir avec les touches
+        if (!IsOwner) return;
+
         if (Input.GetKeyDown(KeyCode.I))
         {
             ToggleInventory();
