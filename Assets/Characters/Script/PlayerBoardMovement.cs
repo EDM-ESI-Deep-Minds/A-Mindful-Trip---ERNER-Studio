@@ -492,7 +492,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         currentTilePath = boardManager.pathTiles[currentTilePos];
         Debug.Log($"here is the current tile path type {currentTilePath.tileType}");
-
+        EventTrigger.SelectEventToTrigger(currentTilePath.tileType);
         SetIdleAnimation(0);
         isMoving = false;
         yield return new WaitForSeconds(0.1f);
