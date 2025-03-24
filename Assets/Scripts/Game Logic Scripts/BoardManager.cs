@@ -39,9 +39,44 @@ public class BoardManager : MonoBehaviour
             {
                 PathTile newTile = new PathTile(tile.name); 
                 newTile.isIntersection = false;
+                
+
+
+                // Get the sprite of the tile at this position
+                Sprite tileSprite = boardTilemap.GetSprite(pos);
+                Debug.Log($"Tile at {pos} has sprite: {(tileSprite != null ? tileSprite.name : "None")}");
+
+                if (tileSprite != null)
+                {
+                    string spriteName = tileSprite.name;
+
+                    // Classify tile type based on sprite name
+                    if (spriteName == "Board Tiles 3x3_0" || spriteName == "Board Tiles 3x3_1" ||
+                        spriteName == "Board Tiles 3x3_2" || spriteName == "Board Tiles 3x3_3" ||
+                        spriteName == "Board Tiles_2")
+                    {
+                        newTile.tileType = "Question";
+                    }
+                    else if (spriteName == "Board Tiles 3x3_4" || spriteName == "Board Tiles 3x3_5" ||
+                             spriteName == "Board Tiles 3x3_6" || spriteName == "Board Tiles 3x3_7" ||
+                             spriteName == "Board Tiles_1")
+                    {
+                        newTile.tileType = "Curse";
+                    }
+                    else if (spriteName == "Board Tiles 3x3_8" || spriteName == "Board Tiles 3x3_9" ||
+                             spriteName == "Board Tiles 3x3_10" || spriteName == "Board Tiles 3x3_11" ||
+                             spriteName == "Board Tiles_0")
+                    {
+                        newTile.tileType = "Bonus";
+                    }
+                    else if (spriteName == "Board Tiles 3x3_16" || spriteName == "Board Tiles 3x3_17" ||
+                             spriteName == "Board Tiles 3x3_18" || spriteName == "Board Tiles 3x3_19")
+                    {
+                        newTile.tileType = "Rest";
+                    }
+                }
+
                 pathTiles[pos] = newTile;
-
-
                 Vector3 worldPos = boardTilemap.GetCellCenterWorld(pos);
                 pathTilePositions.Add(pos); // Store grid position instead of world position
             }

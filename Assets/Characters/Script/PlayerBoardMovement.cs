@@ -31,6 +31,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     private bool isCrossingBridge = false;
     private int possibleMoves;
     private Vector3Int onlyOneMove;
+    private PathTile currentTilePath;
 
     void Awake()
     {
@@ -388,7 +389,6 @@ public class PlayerBoardMovement : NetworkBehaviour
             }
 
             //If no valid move found, break
-
             if (nextTilePos == Vector3Int.zero)
             {
                 Debug.Log("No valid next tile found!");
@@ -472,6 +472,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             rb.position = targetPos;
             previousTilePos = currentTilePos;
             currentTilePos = nextTilePos;
+
             bool triggered = false;
            
 
@@ -487,6 +488,10 @@ public class PlayerBoardMovement : NetworkBehaviour
                 i++;
             }
         }
+
+
+        currentTilePath = boardManager.pathTiles[currentTilePos];
+        Debug.Log($"here is the current tile path type {currentTilePath.tileType}");
 
         SetIdleAnimation(0);
         isMoving = false;
