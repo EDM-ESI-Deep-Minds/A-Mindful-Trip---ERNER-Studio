@@ -39,7 +39,7 @@ public class DiceManager : NetworkBehaviour
 
     public void RollDice()
     {
-        if (!IsServer) return;
+       // if (!IsServer) return;
         StopAllCoroutines(); // Stop any previous roll animations
         StartCoroutine(RollAnimationServer());
     }
@@ -59,7 +59,7 @@ public class DiceManager : NetworkBehaviour
 
         // Stop animation and then set final dice values
         StopAnimationClientRpc();
-        SetFinalDiceValuesClientRpc(dice1Value, dice2Value);
+        SetFinalDiceValues(dice1Value, dice2Value);
     }
 
     [ClientRpc]
@@ -78,8 +78,22 @@ public class DiceManager : NetworkBehaviour
         }
     }
 
-    [ClientRpc]
-    private void SetFinalDiceValuesClientRpc(int dice1Value, int dice2Value)
+    /*   [ClientRpc]
+       private void SetFinalDiceValuesClientRpc(int dice1Value, int dice2Value)
+       {
+           Debug.Log($"[CLIENT] Setting Dice Values: {dice1Value + 1} & {dice2Value + 1}");
+
+           if (dice1Sprites.Length > dice1Value) dice1Renderer.sprite = dice1Sprites[dice1Value];
+           if (dice2Sprites.Length > dice2Value) dice2Renderer.sprite = dice2Sprites[dice2Value];
+
+           Debug.Log($"[CLIENT] Final Sprites Set Instantly: Dice1 = {dice1Value + 1}, Dice2 = {dice2Value + 1}");
+
+           if (dice1Animator != null) dice1Animator.enabled = false;
+           if (dice2Animator != null) dice2Animator.enabled = false;
+
+           OnDiceRolled?.Invoke(dice1Value + 1, dice2Value + 1);
+       }*/
+    private void SetFinalDiceValues(int dice1Value, int dice2Value)
     {
         Debug.Log($"[CLIENT] Setting Dice Values: {dice1Value + 1} & {dice2Value + 1}");
 
@@ -87,10 +101,10 @@ public class DiceManager : NetworkBehaviour
         if (dice2Sprites.Length > dice2Value) dice2Renderer.sprite = dice2Sprites[dice2Value];
 
         Debug.Log($"[CLIENT] Final Sprites Set Instantly: Dice1 = {dice1Value + 1}, Dice2 = {dice2Value + 1}");
-        
+
         if (dice1Animator != null) dice1Animator.enabled = false;
         if (dice2Animator != null) dice2Animator.enabled = false;
-        
+
         OnDiceRolled?.Invoke(dice1Value + 1, dice2Value + 1);
     }
 

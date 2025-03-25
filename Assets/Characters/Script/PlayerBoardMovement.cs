@@ -142,7 +142,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     private void OnDiceRolled(int dice1, int dice2)
     {
-        if (!IsOwner) return;
+       // if (!IsOwner) return;
 
         int totalSteps = dice1 + dice2;
         MovePlayer(totalSteps);
@@ -359,7 +359,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
                     if (boardManager.pathTiles.ContainsKey(potentialNextPos))
                     {
-                        // Movement logic based on current direction
+                        // Movement logic based on current sdirection
                         if (currentDirection == "x")
                         {
                             // Pick the tile with the greatest x (or the same x)

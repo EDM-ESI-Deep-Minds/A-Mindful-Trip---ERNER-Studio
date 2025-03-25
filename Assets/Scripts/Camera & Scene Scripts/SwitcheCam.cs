@@ -9,6 +9,7 @@ public class SwitcheCam : NetworkBehaviour
 
     public bool Inisilisde = false;
     public int IndexPlayer = 0;
+    public static NetworkObject CurrentPlayer;
 
     // Variable réseau pour stocker le joueur à suivre
     private NetworkVariable<NetworkObjectReference> PlayerToFlow = new NetworkVariable<NetworkObjectReference>();
@@ -60,6 +61,7 @@ public class SwitcheCam : NetworkBehaviour
         if (playerReference.TryGet(out NetworkObject playerObject))
         {
             Cam.Follow = playerObject.transform;
+            CurrentPlayer = playerObject;
         }
     }
 }
