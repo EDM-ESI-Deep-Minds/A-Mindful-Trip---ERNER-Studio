@@ -22,6 +22,9 @@ GameObject:
   - component: {fileID: 4587048625500264335}
   - component: {fileID: 7242072467800852050}
   m_Layer: 0
+  - component: {fileID: -1897019255787729265}
+  - component: {fileID: 6258294862143770397}
+  m_Layer: 9
   m_Name: RoxyPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -345,7 +348,7 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 0
   AutoSetKinematicOnDespawn: 0
---- !u!114 &4587048625500264335
+--- !u!114 &-1897019255787729265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -365,6 +368,13 @@ MonoBehaviour:
   upArrow: {fileID: 0}
   downArrow: {fileID: 0}
 --- !u!114 &7242072467800852050
+  m_Script: {fileID: 11500000, guid: 3d83d6b77e0eef7448bba2cbc732998d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  inventoryCanvasPrefab: {fileID: 5622932771324534629, guid: 8fb7dc980ef469e4da268add5a42d9bb, type: 3}
+  shopCanvasPrefab: {fileID: 8318903786705242564, guid: ca172750743313142abb5be52b420f0f, type: 3}
+--- !u!114 &6258294862143770397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -373,6 +383,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8909638463307033645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e97591aba26afb64b88b63ed3c370641, type: 3}
+  m_Script: {fileID: 11500000, guid: 8acc562780850ff4ea5837b222e41f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryCanvasGroup: {fileID: 3809519584974639644, guid: 8fb7dc980ef469e4da268add5a42d9bb, type: 3}
+  shopCanvasGroup: {fileID: 2991099000375976333, guid: ca172750743313142abb5be52b420f0f, type: 3}

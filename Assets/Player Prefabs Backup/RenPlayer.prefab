@@ -19,7 +19,9 @@ GameObject:
   - component: {fileID: -6301260000402959738}
   - component: {fileID: 9120035521477231187}
   - component: {fileID: -5562665735434036782}
-  m_Layer: 0
+  - component: {fileID: 8936085029066768629}
+  - component: {fileID: 2293148715387366532}
+  m_Layer: 9
   m_Name: RenPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -343,3 +345,32 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 0
   AutoSetKinematicOnDespawn: 0
+--- !u!114 &8936085029066768629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311031283111266869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d83d6b77e0eef7448bba2cbc732998d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  inventoryCanvasPrefab: {fileID: 5622932771324534629, guid: 8fb7dc980ef469e4da268add5a42d9bb, type: 3}
+  shopCanvasPrefab: {fileID: 8318903786705242564, guid: ca172750743313142abb5be52b420f0f, type: 3}
+--- !u!114 &2293148715387366532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311031283111266869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8acc562780850ff4ea5837b222e41f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryCanvasGroup: {fileID: 3809519584974639644, guid: 8fb7dc980ef469e4da268add5a42d9bb, type: 3}
+  shopCanvasGroup: {fileID: 2991099000375976333, guid: ca172750743313142abb5be52b420f0f, type: 3}
