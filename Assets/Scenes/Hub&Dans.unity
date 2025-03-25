@@ -25030,6 +25030,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopKeeper
       objectReference: {fileID: 0}
+    - target: {fileID: 4447722135415959120, guid: 6ebdeb210b42c4b49a37fc0b657f3ad5, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447722135415959120, guid: 6ebdeb210b42c4b49a37fc0b657f3ad5, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447722135415959120, guid: 6ebdeb210b42c4b49a37fc0b657f3ad5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6946140381915369166, guid: ce170e76664b13b4882e7845b1aeca7d, type: 3}
+    - target: {fileID: 4447722135415959120, guid: 6ebdeb210b42c4b49a37fc0b657f3ad5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447722135415959120, guid: 6ebdeb210b42c4b49a37fc0b657f3ad5, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6263899845334706206, guid: 6ebdeb210b42c4b49a37fc0b657f3ad5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.724
@@ -25069,6 +25089,10 @@ PrefabInstance:
     - target: {fileID: 6263899845334706206, guid: 6ebdeb210b42c4b49a37fc0b657f3ad5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919973260260590572, guid: 6ebdeb210b42c4b49a37fc0b657f3ad5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

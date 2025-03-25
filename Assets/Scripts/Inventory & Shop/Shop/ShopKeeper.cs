@@ -12,8 +12,14 @@ public class Shopkeeper : MonoBehaviour
         if (banner != null)
         {
             banner.SetActive(true); // Active at all times
-            bannerAnimator = banner.GetComponent<Animator>();;
+            bannerAnimator = banner.GetComponent<Animator>(); ;
         }
+        // Debugging SpriteRenderer
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr == null)
+            Debug.LogError("No SpriteRenderer found on ShopKeeper!");
+        else
+            Debug.Log("ShopKeeper SpriteRenderer is active: " + sr.enabled);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
