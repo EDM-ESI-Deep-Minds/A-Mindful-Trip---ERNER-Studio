@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 903620543849291166}
   - component: {fileID: 35081652638892694}
   - component: {fileID: 280587075574804586}
+  - component: {fileID: 4427216225496659151}
+  - component: {fileID: 4321131637784802128}
   - component: {fileID: 3933834879124631451}
   - component: {fileID: 4022887335956522209}
   - component: {fileID: 51443267548442127}
@@ -152,6 +154,37 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+--- !u!114 &4427216225496659151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311031283111266869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f9b71ea15c0aa43b7408be664134b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  moveSpeed: 0.1
+  boardTilemap: {fileID: 0}
+  rightArrow: {fileID: 0}
+  leftArrow: {fileID: 0}
+  upArrow: {fileID: 0}
+  downArrow: {fileID: 0}
+--- !u!114 &4321131637784802128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311031283111266869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97591aba26afb64b88b63ed3c370641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &3933834879124631451
 Animator:
   serializedVersion: 7

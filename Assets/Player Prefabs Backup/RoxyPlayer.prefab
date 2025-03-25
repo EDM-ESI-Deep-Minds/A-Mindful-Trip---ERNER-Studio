@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8100868374447794489}
   - component: {fileID: -4728928487598966150}
   - component: {fileID: 6065197597529754391}
+  - component: {fileID: -1897019255787729265}
+  - component: {fileID: 3334115622056430644}
   - component: {fileID: 1561141138345024501}
   - component: {fileID: 6344278667390393682}
   - component: {fileID: 1326532006344174523}
@@ -19,10 +21,7 @@ GameObject:
   - component: {fileID: 4408972896424719166}
   - component: {fileID: 7364084665823728864}
   - component: {fileID: 4885582820122878254}
-  - component: {fileID: 4587048625500264335}
   - component: {fileID: 7242072467800852050}
-  m_Layer: 0
-  - component: {fileID: -1897019255787729265}
   - component: {fileID: 6258294862143770397}
   m_Layer: 9
   m_Name: RoxyPlayer
@@ -155,6 +154,37 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+--- !u!114 &-1897019255787729265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909638463307033645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f9b71ea15c0aa43b7408be664134b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  moveSpeed: 1
+  boardTilemap: {fileID: 0}
+  rightArrow: {fileID: 0}
+  leftArrow: {fileID: 0}
+  upArrow: {fileID: 0}
+  downArrow: {fileID: 0}
+--- !u!114 &3334115622056430644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909638463307033645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97591aba26afb64b88b63ed3c370641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1561141138345024501
 Animator:
   serializedVersion: 7
@@ -266,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  NetworkTransformExpanded: 1
+  NetworkTransformExpanded: 0
   AuthorityMode: 1
   TickSyncChildren: 0
   UseUnreliableDeltas: 0
@@ -348,7 +378,7 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 0
   AutoSetKinematicOnDespawn: 0
---- !u!114 &-1897019255787729265
+--- !u!114 &7242072467800852050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -357,17 +387,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8909638463307033645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56f9b71ea15c0aa43b7408be664134b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  moveSpeed: 1
-  boardTilemap: {fileID: 0}
-  rightArrow: {fileID: 0}
-  leftArrow: {fileID: 0}
-  upArrow: {fileID: 0}
-  downArrow: {fileID: 0}
---- !u!114 &7242072467800852050
   m_Script: {fileID: 11500000, guid: 3d83d6b77e0eef7448bba2cbc732998d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
