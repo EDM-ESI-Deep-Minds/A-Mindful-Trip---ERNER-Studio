@@ -13,6 +13,13 @@ public class SwitcheCam : NetworkBehaviour
 
     // Variable réseau pour stocker le joueur à suivre
     private NetworkVariable<NetworkObjectReference> PlayerToFlow = new NetworkVariable<NetworkObjectReference>();
+    private void OnEnable()
+    {
+        RolesManager.CameraSwitchTarget += ChaingeTargetServerRpc;
+    }
+
+
+
 
     void Update()
     {
@@ -32,10 +39,7 @@ public class SwitcheCam : NetworkBehaviour
             IndexPlayer++;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ChaingeTargetServerRpc();
-        }
+
     }
 
     [ServerRpc(RequireOwnership = false)]
