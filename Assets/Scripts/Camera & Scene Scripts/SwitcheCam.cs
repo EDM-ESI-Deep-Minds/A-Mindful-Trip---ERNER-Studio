@@ -55,7 +55,7 @@ public class SwitcheCam : NetworkBehaviour
         IndexPlayer++;
         if (IndexPlayer >= spawn_mang.IndexTabAllPlayer)
         {
-            IndexPlayer = 0;
+            IndexPlayer = 0;  //RolesManager.SwitchRoleServerRpc();
         }
     }
 

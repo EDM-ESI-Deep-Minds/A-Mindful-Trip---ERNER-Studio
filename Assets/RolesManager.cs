@@ -3,27 +3,35 @@ using Unity.Netcode;
 using Unity.Cinemachine;
 using System.Threading;
 using System;
-
+using UnityEngine.UI;
 
 public class RolesManager : NetworkBehaviour
 {
+    
     public static bool IsMyTurn;
-     public SwitcheCam switcheCam;
     public static event Action CameraSwitchTarget;
-
-
+    [SerializeField] public Button RollDiceButtonRef;
+    public static Button RollDiceButton;
     private void Start()
     {
         IsMyTurn = SwitcheCam.CurrentPlayer.IsOwner;
-        switcheCam = FindFirstObjectByType<SwitcheCam>();
+        RollDiceButton = RollDiceButtonRef;
+        RollDiceButton.gameObject.SetActive(IsMyTurn);
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-           
-            CameraSwitchTarget?.Invoke();
+            SwitchRole();
         }
+    }
+  
+    public static void SwitchRole()
+    {
+        CameraSwitchTarget?.Invoke();
+        IsMyTurn = SwitcheCam.CurrentPlayer.IsOwner;
+        Debug.Log("IsMyTurn: " + IsMyTurn);
+        RollDiceButton.gameObject.SetActive(IsMyTurn);
     }
 }
