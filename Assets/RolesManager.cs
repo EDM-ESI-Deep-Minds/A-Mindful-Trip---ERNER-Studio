@@ -30,8 +30,5 @@ public class RolesManager : NetworkBehaviour
     public static void SwitchRole()
     {
         CameraSwitchTarget?.Invoke();
-        IsMyTurn = SwitcheCam.CurrentPlayer.IsOwner;
-        Debug.Log("IsMyTurn: " + IsMyTurn);
-        RollDiceButton.gameObject.SetActive(IsMyTurn);
     }
 }

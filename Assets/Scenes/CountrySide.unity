@@ -105464,6 +105464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   Cam: {fileID: 993860953}
+  RollDiceButton: {fileID: 2114414920}
   Inisilisde: 0
   IndexPlayer: 0
 --- !u!1001 &461848222
