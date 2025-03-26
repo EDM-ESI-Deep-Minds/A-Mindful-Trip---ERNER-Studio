@@ -71,6 +71,7 @@ public class SwitcheCam : NetworkBehaviour
         }
         RolesManager.IsMyTurn = CurrentPlayer.IsOwner;
         Debug.Log("IsMyTurn: " + RolesManager.IsMyTurn);
+        RollDiceButton.interactable = RolesManager.IsMyTurn;
         RollDiceButton.gameObject.SetActive(RolesManager.IsMyTurn);
     }
 }
