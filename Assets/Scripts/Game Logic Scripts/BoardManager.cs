@@ -27,6 +27,18 @@ public class BoardManager : MonoBehaviour
             return;
         }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
+        // Find the Tilemap dynamically by name
+        GameObject boardObject = GameObject.Find("Board");
+        if (boardObject != null)
+        {
+            boardTilemap = boardObject.GetComponent<Tilemap>();
+        }
+        else
+        {
+            Debug.LogError("Board Tilemap not found! Make sure it exists in the scene.");
+        }
+
     }
 
     void InitializeBoard()
