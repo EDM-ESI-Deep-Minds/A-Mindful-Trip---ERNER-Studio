@@ -83,7 +83,7 @@ public class spawn_mang : NetworkBehaviour
         // NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         RoomUIManager roomUIManager = FindObjectOfType<RoomUIManager>();
         SelectedCharacters.Instance.SetSelectedCharacters(roomUIManager.GetSelectedCharacters());
-        NetworkManager.SceneManager.LoadScene("Hub&Dans", LoadSceneMode.Single);
+        NetworkManager.SceneManager.LoadScene("CountrySide", LoadSceneMode.Single);
 
     }
     [ClientRpc]

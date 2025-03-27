@@ -19,10 +19,10 @@ GameObject:
   - component: {fileID: 1326532006344174523}
   - component: {fileID: 8834990568182117976}
   - component: {fileID: 4408972896424719166}
-  - component: {fileID: 7364084665823728864}
   - component: {fileID: 4885582820122878254}
   - component: {fileID: 7242072467800852050}
   - component: {fileID: 6258294862143770397}
+  - component: {fileID: -5701420907980059832}
   m_Layer: 9
   m_Name: RoxyPlayer
   m_TagString: Player
@@ -346,21 +346,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7364084665823728864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8909638463307033645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  TransitionStateInfoList: []
-  m_Animator: {fileID: 1561141138345024501}
 --- !u!114 &4885582820122878254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,3 +392,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryCanvasGroup: {fileID: 3809519584974639644, guid: 8fb7dc980ef469e4da268add5a42d9bb, type: 3}
   shopCanvasGroup: {fileID: 2991099000375976333, guid: ca172750743313142abb5be52b420f0f, type: 3}
+--- !u!114 &-5701420907980059832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909638463307033645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4503ab1fabc147129f3909fb80906e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  TransitionStateInfoList: []
+  m_Animator: {fileID: 1561141138345024501}

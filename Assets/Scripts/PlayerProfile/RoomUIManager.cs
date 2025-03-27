@@ -34,7 +34,14 @@ public class RoomUIManager : NetworkBehaviour
     {
         if (IsClient)
         {
-            SendProfileToServerServerRpc(ProfileManager.SelectedProfile.playerName, ProfileManager.SelectedProfile.character);
+            if (ProfileManager.SelectedProfile == null)
+            {
+                SendProfileToServerServerRpc(PlayerPrefs.GetString("PlayerName"), PlayerPrefs.GetInt("Character"));
+
+            } else
+            {
+                SendProfileToServerServerRpc(ProfileManager.SelectedProfile.playerName, ProfileManager.SelectedProfile.character);
+            }
         }
 
         if (IsServer)
