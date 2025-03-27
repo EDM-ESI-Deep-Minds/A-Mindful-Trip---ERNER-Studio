@@ -19,10 +19,10 @@ GameObject:
   - component: {fileID: 51443267548442127}
   - component: {fileID: -810645417452057256}
   - component: {fileID: -6301260000402959738}
-  - component: {fileID: 9120035521477231187}
   - component: {fileID: -5562665735434036782}
   - component: {fileID: 8936085029066768629}
   - component: {fileID: 2293148715387366532}
+  - component: {fileID: 8584818097494173605}
   m_Layer: 9
   m_Name: RenPlayer
   m_TagString: Player
@@ -346,21 +346,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &9120035521477231187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311031283111266869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  TransitionStateInfoList: []
-  m_Animator: {fileID: 3933834879124631451}
 --- !u!114 &-5562665735434036782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,3 +392,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryCanvasGroup: {fileID: 3809519584974639644, guid: 8fb7dc980ef469e4da268add5a42d9bb, type: 3}
   shopCanvasGroup: {fileID: 2991099000375976333, guid: ca172750743313142abb5be52b420f0f, type: 3}
+--- !u!114 &8584818097494173605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311031283111266869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4503ab1fabc147129f3909fb80906e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  TransitionStateInfoList: []
+  m_Animator: {fileID: 3933834879124631451}

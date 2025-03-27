@@ -191,6 +191,8 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     private IEnumerator MoveAlongPath(int steps)
     {
+        if (!RolesManager.IsMyTurn) yield break;
+
         isMoving = true;
 
         Debug.Log($"here is the current tile position {currentTilePos}");
