@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine.SceneManagement;
 using UnityEngine.Profiling;
 using Unity.Services.Authentication;
+using TMPro;
 
 public class ProfileManager : MonoBehaviour
 {
@@ -64,19 +65,14 @@ public class ProfileManager : MonoBehaviour
         GameObject profileItem = Instantiate(profilePrefab, profileListParent);
 
         // Display player name and Elo
-        Text profileText = profileItem.GetComponentInChildren<Text>();
+        TextMeshProUGUI profileText = profileItem.GetComponentInChildren<TextMeshProUGUI>();
         if (profileText != null)
         {
             profileText.text = $"{profile.playerName} - Elo: {profile.Elo}";
         }
         else
         {
-            profileText = profileItem.AddComponent<Text>();
-            profileText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-            profileText.fontSize = 24;
-            profileText.color = Color.white;
-            profileText.alignment = TextAnchor.MiddleCenter;
-            profileText.text = $"{profile.playerName} - Elo: {profile.Elo}";
+            Debug.LogWarning("Profile text component not found in prefab!");
         }
 
         // Make the profile selectable
