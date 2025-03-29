@@ -32,6 +32,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     private int possibleMoves;
     private Vector3Int onlyOneMove;
     private PathTile currentTilePath;
+    private float gridSize = 16f;
 
     void Awake()
     {
@@ -121,6 +122,20 @@ public class PlayerBoardMovement : NetworkBehaviour
         {
             Debug.LogError("DiceManager not found in the scene!");
         }
+
+        // Detect the current scene and set the grid size
+        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+        if (currentScene == "City") // Replace with your actual city scene name
+        {
+            gridSize = 32f;
+        }
+        else
+        {
+            gridSize = 16f;
+        }
+
+        Debug.Log("Grid Size Set To: " + gridSize);
     }
 
     private void HideArrows()
@@ -409,7 +424,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                     int animIndex = offset.x > 0 ? 0 : 3;
                     SetIdleAnimation(animIndex);
                     Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
-                    while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
+                    while (Mathf.Abs(rb.position.x - targetXPos.x) > (gridSize * 0.001f))
                     {
                         SetAnimation(animIndex);
                         rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
@@ -424,7 +439,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                     SetIdleAnimation(animIndex);
 
                     Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
-                    while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
+                    while (Mathf.Abs(rb.position.y - targetYPos.y) > (gridSize * 0.001f))
                     {
                         SetAnimation(animIndex);
                         rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
@@ -444,7 +459,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                     SetIdleAnimation(animIndex);
 
                     Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
-                    while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
+                    while (Mathf.Abs(rb.position.y - targetYPos.y) > (gridSize * 0.001f))
                     {
                         SetAnimation(animIndex);
                         rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
@@ -458,7 +473,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                     int animIndex = offset.x > 0 ? 0 : 3; // 0 for right, 3 for left
                     SetIdleAnimation(animIndex);
                     Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
-                    while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
+                    while (Mathf.Abs(rb.position.x - targetXPos.x) > (gridSize * 0.001f))
                     {
                         SetAnimation(animIndex);
                         rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
@@ -467,8 +482,6 @@ public class PlayerBoardMovement : NetworkBehaviour
                     currentDirection = "x"; // Reset to 'x' when moving horizontally
                     SetIdleAnimation(animIndex);
                 }
-
-                
             }
 
             rb.position = targetPos;
@@ -711,7 +724,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     private Vector3 GetWorldPosition(Vector3Int gridPos)
     {
-        return new Vector3(gridPos.x * 0.16f, gridPos.y * 0.16f, 0); // Convert to world space
+        return new Vector3(gridPos.x * gridSize, gridPos.y * gridSize, 0);
     }
 
     private IEnumerator CheckForTileTrigger(System.Action<bool> callback)
