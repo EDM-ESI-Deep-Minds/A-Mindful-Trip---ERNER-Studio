@@ -38,7 +38,8 @@ public class RoomUIManager : NetworkBehaviour
             {
                 SendProfileToServerServerRpc(PlayerPrefs.GetString("PlayerName"), PlayerPrefs.GetInt("Character"));
 
-            } else
+            }
+            else
             {
                 SendProfileToServerServerRpc(ProfileManager.SelectedProfile.playerName, ProfileManager.SelectedProfile.character);
             }
@@ -110,7 +111,11 @@ public class RoomUIManager : NetworkBehaviour
         Transform slot = playerSlots[index];
         if (slot == null) return;
 
-        TextMeshProUGUI nameText = slot.Find("PlayerName")?.GetComponent<TextMeshProUGUI>();
+        // Find PlayerBanner first
+        Transform playerBanner = slot.Find("PlayerBanner");
+        if (playerBanner == null) return;
+
+        TextMeshProUGUI nameText = playerBanner.Find("PlayerName")?.GetComponent<TextMeshProUGUI>();
         Image characterImage = slot.Find("CharacterImage")?.GetComponent<Image>();
         Button changeButton = slot.Find("ChangeCharacterButton")?.GetComponent<Button>();
 
