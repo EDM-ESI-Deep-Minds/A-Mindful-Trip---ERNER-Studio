@@ -16,13 +16,39 @@ public class AudioManager : MonoBehaviour
     public AudioClip battleOST;
     public AudioClip miniGameOST;
 
-    private AudioSource audioSource;
+    [Header("Ambient SFX")]
+    public AudioClip forestAmbienceSFX;
+    public AudioClip desertAmbienceSFX;
+    public AudioClip cityAmbienceSFX;
+
+    [Header("Sound Effects (SFX)")]
+    public AudioClip buttonClickSFX;
+    public AudioClip buttonHoverSFX;
+    public AudioClip impossibleActionSFX;
+    public AudioClip countrysideWalkSFX;
+    public AudioClip desertWalkSFX;
+    public AudioClip cityWalkSFX;
+    public AudioClip correctAnswerSFX;
+    public AudioClip damageTakenSFX; // Wrong answer
+    public AudioClip soulShatterSFX; // Death (game over)
+    public AudioClip itemEffectSFX;
+    public AudioClip diceRollSFX;
+    
+    private AudioSource bgmSource;
+    private AudioSource sfxSource;
+    private AudioSource ambientSource;
     private Coroutine cityLoopCoroutine;
     private Coroutine resumeMusicCoroutine;
 
     private AudioClip currentSceneMusic;
     private bool isCityScene = false;
-    private float cityLoopStartTime = 15f; // Loop start time for city OST
+    private float cityLoopStartTime = 15f;
+
+    // Volume settings
+    private float musicVolume = 1f;
+    private float sfxVolume = 1f;
+    private bool isMusicEnabled = true;
+    private bool isSFXEnabled = true;
 
     void Awake()
     {
@@ -37,8 +63,16 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        audioSource = GetComponent<AudioSource>();
-        audioSource.loop = true;
+        // Create audio sources
+        bgmSource = gameObject.AddComponent<AudioSource>();
+        sfxSource = gameObject.AddComponent<AudioSource>();
+        ambientSource = gameObject.AddComponent<AudioSource>();
+
+        bgmSource.loop = true;
+        sfxSource.loop = false;
+        ambientSource.loop = true;
+
+        LoadAudioSettings();
     }
 
     void Start()
@@ -64,6 +98,7 @@ public class AudioManager : MonoBehaviour
     void PlayMusicForScene(string sceneName)
     {
         AudioClip newClip = null;
+        AudioClip newAmbience = null;
         isCityScene = false;
 
         switch (sceneName)
@@ -73,38 +108,54 @@ public class AudioManager : MonoBehaviour
                 break;
             case "CountrySide":
                 newClip = countrysideOST;
+                newAmbience = forestAmbienceSFX;
                 break;
             case "Desert":
                 newClip = desertOST;
+                newAmbience = desertAmbienceSFX;
                 break;
             case "City":
                 newClip = cityOST;
+                newAmbience = cityAmbienceSFX;
                 isCityScene = true;
                 break;
             case "HubDans":
                 newClip = hubDansOST;
+                newAmbience = desertAmbienceSFX;
                 break;
         }
 
-        if (newClip != null && audioSource.clip != newClip)
+        // Handle BGM
+        if (newClip != null && bgmSource.clip != newClip)
         {
             if (cityLoopCoroutine != null) StopCoroutine(cityLoopCoroutine);
             if (resumeMusicCoroutine != null) StopCoroutine(resumeMusicCoroutine);
 
-            currentSceneMusic = newClip; // Save the scene music
+            currentSceneMusic = newClip;
+            bgmSource.clip = newClip;
 
-            audioSource.clip = newClip;
-            audioSource.Play();
+            if (isMusicEnabled) bgmSource.Play();
 
             if (isCityScene)
             {
-                audioSource.loop = false;
+                bgmSource.loop = false;
                 cityLoopCoroutine = StartCoroutine(HandleCityLoop());
             }
             else
             {
-                audioSource.loop = true;
+                bgmSource.loop = true;
             }
+        }
+
+        // Handle Ambience SFX
+        if (newAmbience != null && ambientSource.clip != newAmbience)
+        {
+            ambientSource.clip = newAmbience;
+            if (isSFXEnabled) ambientSource.Play();
+        }
+        else if (newAmbience == null)
+        {
+            ambientSource.Stop();
         }
     }
 
@@ -113,19 +164,18 @@ public class AudioManager : MonoBehaviour
         while (true)
         {
             yield return null;
-            if (audioSource.time >= audioSource.clip.length - 0.1f)
+            if (bgmSource.time >= bgmSource.clip.length - 0.1f)
             {
-                audioSource.time = cityLoopStartTime;
-                audioSource.Play();
+                bgmSource.time = cityLoopStartTime;
+                bgmSource.Play();
             }
         }
     }
 
-    // Plays a temporary music clip, pausing the current scene music and resuming it after.
     public void PlayTemporaryMusic(AudioClip tempClip, bool waitForCompletion = true)
     {
-        if (tempClip == null) return;
-        if (audioSource.clip == tempClip) return; // Prevent restarting the same track
+        if (tempClip == null || !isMusicEnabled) return;
+        if (bgmSource.clip == tempClip) return;
 
         if (cityLoopCoroutine != null) StopCoroutine(cityLoopCoroutine);
         if (resumeMusicCoroutine != null) StopCoroutine(resumeMusicCoroutine);
@@ -135,38 +185,93 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator SwitchToTemporaryMusic(AudioClip tempClip, bool waitForCompletion)
     {
-        // Pause scene music and play temporary track
-        float savedTime = audioSource.time;
-        audioSource.Stop();
-        audioSource.clip = tempClip;
-        audioSource.loop = false;
-        audioSource.Play();
+        float savedTime = bgmSource.time;
+        bgmSource.Stop();
+        bgmSource.clip = tempClip;
+        bgmSource.loop = false;
+        bgmSource.Play();
 
-        // Wait for temp music to finish, if required
         if (waitForCompletion)
         {
-            yield return new WaitWhile(() => audioSource.isPlaying);
+            yield return new WaitWhile(() => bgmSource.isPlaying);
             ResumeSceneMusic(savedTime);
         }
     }
 
-    /// Resumes the paused scene music after playing temporary music.
     public void ResumeSceneMusic(float resumeTime = 0f)
     {
-        if (currentSceneMusic == null) return;
+        if (currentSceneMusic == null || !isMusicEnabled) return;
 
-        audioSource.clip = currentSceneMusic;
-        audioSource.time = resumeTime;
-        audioSource.Play();
+        bgmSource.clip = currentSceneMusic;
+        bgmSource.time = resumeTime;
+        bgmSource.Play();
 
         if (isCityScene)
         {
-            audioSource.loop = false;
+            bgmSource.loop = false;
             cityLoopCoroutine = StartCoroutine(HandleCityLoop());
         }
         else
         {
-            audioSource.loop = true;
+            bgmSource.loop = true;
         }
+    }
+
+    public void PlaySFX(AudioClip clip, float volume = 1f)
+    {
+        if (clip == null || !isSFXEnabled) return;
+        sfxSource.PlayOneShot(clip, volume * sfxVolume);
+    }
+
+    // ====== Volume and Toggle Settings ======
+    public void SetMusicVolume(float volume)
+    {
+        musicVolume = Mathf.Clamp01(volume);
+        bgmSource.volume = musicVolume;
+        PlayerPrefs.SetFloat("MusicVolume", musicVolume);
+        PlayerPrefs.Save();
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        sfxVolume = Mathf.Clamp01(volume);
+        ambientSource.volume = sfxVolume; // Ensure ambient volume follows SFX volume
+        PlayerPrefs.SetFloat("SFXVolume", sfxVolume);
+        PlayerPrefs.Save();
+    }
+
+    public void ToggleMusic(bool isEnabled)
+    {
+        isMusicEnabled = isEnabled;
+        PlayerPrefs.SetInt("MusicEnabled", isMusicEnabled ? 1 : 0);
+        PlayerPrefs.Save();
+
+        if (isMusicEnabled)
+            ResumeSceneMusic();
+        else
+            bgmSource.Stop();
+    }
+
+    public void ToggleSFX(bool isEnabled)
+    {
+        isSFXEnabled = isEnabled;
+        PlayerPrefs.SetInt("SFXEnabled", isSFXEnabled ? 1 : 0);
+        PlayerPrefs.Save();
+
+        if (isSFXEnabled)
+            ambientSource.Play();
+        else
+            ambientSource.Stop();
+    }
+
+    private void LoadAudioSettings()
+    {
+        musicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        isMusicEnabled = PlayerPrefs.GetInt("MusicEnabled", 1) == 1;
+        isSFXEnabled = PlayerPrefs.GetInt("SFXEnabled", 1) == 1;
+
+        bgmSource.volume = musicVolume;
+        ambientSource.volume = sfxVolume;
     }
 }
