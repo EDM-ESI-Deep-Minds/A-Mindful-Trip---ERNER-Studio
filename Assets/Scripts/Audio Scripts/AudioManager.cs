@@ -44,6 +44,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         PlayMusicForScene(SceneManager.GetActiveScene().name);
+        AudioListener.volume = 0f;
     }
 
     void OnEnable()

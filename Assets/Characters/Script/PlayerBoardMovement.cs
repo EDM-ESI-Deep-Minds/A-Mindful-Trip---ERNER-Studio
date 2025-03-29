@@ -7,9 +7,12 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using System.Linq;
+using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class PlayerBoardMovement : NetworkBehaviour
 {
+    private Camera cam;
     private DiceManager diceManager;
     private BoardManager boardManager;
     [SerializeField] private float moveSpeed = .1f;
@@ -72,7 +75,6 @@ public class PlayerBoardMovement : NetworkBehaviour
         downArrow = GameObject.Find("DownArrow").GetComponent<Button>();
 
 
-
         // Assign button listeners dynamically
         rightArrow.onClick.AddListener(() => SetChosenDirection("right"));
         leftArrow.onClick.AddListener(() => SetChosenDirection("left"));
@@ -80,6 +82,22 @@ public class PlayerBoardMovement : NetworkBehaviour
         downArrow.onClick.AddListener(() => SetChosenDirection("down"));
 
         HideArrows();
+
+        // Detect the current scene and set the grid size
+        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+        if (currentScene == "City") // Replace with your actual city scene name
+        {
+            gridSize = 0.32f;
+            transform.localScale = Vector3.one * 2f;
+        }
+        else
+        {
+            gridSize = 0.16f;
+        }
+
+        Debug.Log("Grid Size Set To: " + gridSize);
+
 
     }
 
@@ -123,19 +141,23 @@ public class PlayerBoardMovement : NetworkBehaviour
             Debug.LogError("DiceManager not found in the scene!");
         }
 
-        // Detect the current scene and set the grid size
-        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        cam = Camera.main;
+        AdjustCameraZoom();
 
-        if (currentScene == "City") // Replace with your actual city scene name
+    }
+
+    private void AdjustCameraZoom()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        if (sceneName == "City")
         {
-            gridSize = 32f;
+            cam.orthographicSize = 10f; // Zoom out
         }
         else
         {
-            gridSize = 16f;
+            cam.orthographicSize = 5f; // Default zoom
         }
-
-        Debug.Log("Grid Size Set To: " + gridSize);
     }
 
     private void HideArrows()
@@ -312,7 +334,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
                                     if (selectedDirection == "right" &&
                                     (moveOffset == new Vector3Int(2, 1, 0) || moveOffset == new Vector3Int(3, 0, 0) ||
-                                    moveOffset == new Vector3Int(1, 1, 0) ||
+                                    moveOffset == new Vector3Int(1, 1, 0) || moveOffset == new Vector3Int(1, 2, 0) ||
                                     moveOffset == new Vector3Int(2, -1, 0) || moveOffset == new Vector3Int(1, -1, 0) ||
                                     moveOffset == new Vector3Int(2, 0, 0) || moveOffset == new Vector3Int(1, 0, 0)))
                                     {
@@ -414,6 +436,10 @@ public class PlayerBoardMovement : NetworkBehaviour
 
             Vector3Int offset = nextTilePos - currentTilePos;
             Vector3 targetPos = GetWorldPosition(nextTilePos);
+
+            Debug.Log($"Current: {currentTilePos}, Next: {nextTilePos}, Offset: {offset}");
+
+            Debug.Log($"Target World Pos: {targetPos}");
 
             // Move based on the current direction
             if (currentDirection == "x")
@@ -621,8 +647,8 @@ public class PlayerBoardMovement : NetworkBehaviour
 
                 // Right movement cases
                 if (
-                    offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) || 
-                    offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) ||
+                    offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) || offset == new Vector3Int(1, 2, 0) ||
+                    offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) || 
                     offset == new Vector3Int(3, 0, 0)
                     //offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(1, -1, 0) || offset == new Vector3Int(2, -2, 0) ||
                     )
