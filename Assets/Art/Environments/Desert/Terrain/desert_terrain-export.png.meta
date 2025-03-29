@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1cef0e7002b5e8a47b01487657afd09d
+guid: 5030c1e8a1ad9134295a4e73aeb19b5b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3981525280557076205
-    second: Game Icon (Circle)_0
+      213: 3129274188701168338
+    second: desert_terrain-export_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Game Icon (Circle)_0
+      name: desert_terrain-export_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 129
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dee87dbc528314730800000000000000
-      internalID: 3981525280557076205
+      spriteID: 2d2f4568b4a6d6b20800000000000000
+      internalID: 3129274188701168338
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Game Icon (Circle)_0: 3981525280557076205
+      desert_terrain-export_0: 3129274188701168338
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

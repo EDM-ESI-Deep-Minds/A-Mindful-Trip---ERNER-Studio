@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hub&Dans.unity
     guid: 65d8fef934fb34b4599f6bb6ad748271
+  - enabled: 1
+    path: Assets/Scenes/City.unity
+    guid: 90528f532dafbf64f8d8fa7e0c9e63fe
+  - enabled: 1
+    path: Assets/Scenes/Desert.unity
+    guid: f918406a535549947b8a5f9d7c8773fe
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

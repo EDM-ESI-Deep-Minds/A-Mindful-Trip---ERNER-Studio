@@ -27,6 +27,18 @@ public class BoardManager : MonoBehaviour
             return;
         }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
+        // Find the Tilemap dynamically by name
+        GameObject boardObject = GameObject.Find("Board");
+        if (boardObject != null)
+        {
+            boardTilemap = boardObject.GetComponent<Tilemap>();
+        }
+        else
+        {
+            Debug.LogError("Board Tilemap not found! Make sure it exists in the scene.");
+        }
+
     }
 
     void InitializeBoard()
@@ -53,24 +65,25 @@ public class BoardManager : MonoBehaviour
                     // Classify tile type based on sprite name
                     if (spriteName == "Board Tiles 3x3_0" || spriteName == "Board Tiles 3x3_1" ||
                         spriteName == "Board Tiles 3x3_2" || spriteName == "Board Tiles 3x3_3" ||
-                        spriteName == "Board Tiles_2")
+                        spriteName == "Board Tiles_2" || spriteName == "city_board_tiles_v2_4" || spriteName == "city_board_tiles_v2_5")
                     {
                         newTile.tileType = "Question";
                     }
                     else if (spriteName == "Board Tiles 3x3_4" || spriteName == "Board Tiles 3x3_5" ||
                              spriteName == "Board Tiles 3x3_6" || spriteName == "Board Tiles 3x3_7" ||
-                             spriteName == "Board Tiles_1")
+                             spriteName == "Board Tiles_1" || spriteName == "city_board_tiles_v2_3" || spriteName == "city_board_tiles_v2_9")
                     {
                         newTile.tileType = "Curse";
                     }
                     else if (spriteName == "Board Tiles 3x3_8" || spriteName == "Board Tiles 3x3_9" ||
                              spriteName == "Board Tiles 3x3_10" || spriteName == "Board Tiles 3x3_11" ||
-                             spriteName == "Board Tiles_0")
+                             spriteName == "Board Tiles_0" || spriteName == "city_board_tiles_v2_0" || spriteName == "city_board_tiles_v2_6")
                     {
                         newTile.tileType = "Bonus";
                     }
                     else if (spriteName == "Board Tiles 3x3_16" || spriteName == "Board Tiles 3x3_17" ||
-                             spriteName == "Board Tiles 3x3_18" || spriteName == "Board Tiles 3x3_19")
+                             spriteName == "Board Tiles 3x3_18" || spriteName == "Board Tiles 3x3_19"
+                             ||  spriteName == "city_board_tiles_v2_2" || spriteName == "city_board_tiles_v2_7")
                     {
                         newTile.tileType = "Rest";
                     }
