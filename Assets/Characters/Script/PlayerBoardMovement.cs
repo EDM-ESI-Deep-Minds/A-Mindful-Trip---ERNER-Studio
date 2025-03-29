@@ -12,7 +12,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerBoardMovement : NetworkBehaviour
 {
-    private Camera cam;
     private DiceManager diceManager;
     private BoardManager boardManager;
     [SerializeField] private float moveSpeed = .1f;
@@ -139,23 +138,6 @@ public class PlayerBoardMovement : NetworkBehaviour
             Debug.LogError("DiceManager not found in the scene!");
         }
 
-        cam = Camera.main;
-        AdjustCameraZoom();
-
-    }
-
-    private void AdjustCameraZoom()
-    {
-        string sceneName = SceneManager.GetActiveScene().name;
-
-        if (sceneName == "City")
-        {
-            cam.orthographicSize = 10f; // Zoom out
-        }
-        else
-        {
-            cam.orthographicSize = 5f; // Default zoom
-        }
     }
 
     private void HideArrows()
