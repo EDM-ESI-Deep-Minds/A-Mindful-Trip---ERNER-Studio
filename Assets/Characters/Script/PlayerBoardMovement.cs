@@ -74,7 +74,6 @@ public class PlayerBoardMovement : NetworkBehaviour
         upArrow = GameObject.Find("UpArrow").GetComponent<Button>();
         downArrow = GameObject.Find("DownArrow").GetComponent<Button>();
 
-
         // Assign button listeners dynamically
         rightArrow.onClick.AddListener(() => SetChosenDirection("right"));
         leftArrow.onClick.AddListener(() => SetChosenDirection("left"));
@@ -89,7 +88,6 @@ public class PlayerBoardMovement : NetworkBehaviour
         if (currentScene == "City") // Replace with your actual city scene name
         {
             gridSize = 0.32f;
-            transform.localScale = Vector3.one * 2f;
         }
         else
         {
