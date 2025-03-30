@@ -1,0 +1,1017 @@
+fileFormatVersion: 2
+guid: 3e941a9d9eb1e75478b280e9241f65f3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5348844424020310832
+    second: desert_assets_v2_0
+  - first:
+      213: -4745255010041488465
+    second: desert_assets_v2_1
+  - first:
+      213: -353146493328310181
+    second: desert_assets_v2_2
+  - first:
+      213: 4920102841893313261
+    second: desert_assets_v2_3
+  - first:
+      213: -7535892674466206936
+    second: desert_assets_v2_4
+  - first:
+      213: 8227982052774965699
+    second: desert_assets_v2_5
+  - first:
+      213: -5218557763328572393
+    second: desert_assets_v2_6
+  - first:
+      213: 46466704518820302
+    second: desert_assets_v2_7
+  - first:
+      213: -3999869443015335842
+    second: desert_assets_v2_8
+  - first:
+      213: -8683855070499926461
+    second: desert_assets_v2_9
+  - first:
+      213: -8539413521406503336
+    second: desert_assets_v2_10
+  - first:
+      213: 1460052194601393918
+    second: desert_assets_v2_11
+  - first:
+      213: -7905550793551775453
+    second: desert_assets_v2_12
+  - first:
+      213: -3957274242974089028
+    second: desert_assets_v2_13
+  - first:
+      213: -4758004628718088745
+    second: desert_assets_v2_14
+  - first:
+      213: -7592246178150176581
+    second: desert_assets_v2_15
+  - first:
+      213: 7938616913560718992
+    second: desert_assets_v2_16
+  - first:
+      213: -5232542830541338482
+    second: desert_assets_v2_17
+  - first:
+      213: 3751834585411790939
+    second: desert_assets_v2_18
+  - first:
+      213: 1691994893761369583
+    second: desert_assets_v2_19
+  - first:
+      213: 648959607178444586
+    second: desert_assets_v2_20
+  - first:
+      213: -7765072055700397825
+    second: desert_assets_v2_21
+  - first:
+      213: 7773918071699074885
+    second: desert_assets_v2_22
+  - first:
+      213: 5964834906962980858
+    second: desert_assets_v2_23
+  - first:
+      213: 6441412727350367015
+    second: desert_assets_v2_24
+  - first:
+      213: -6873931445318440372
+    second: desert_assets_v2_25
+  - first:
+      213: 8206815054175461570
+    second: desert_assets_v2_26
+  - first:
+      213: -7421177067505065174
+    second: desert_assets_v2_27
+  - first:
+      213: -7244361335197585481
+    second: desert_assets_v2_28
+  - first:
+      213: -428831245469809133
+    second: desert_assets_v2_29
+  - first:
+      213: -1162585668326426314
+    second: desert_assets_v2_30
+  - first:
+      213: -8878206421863805054
+    second: desert_assets_v2_31
+  - first:
+      213: 4493423715326447172
+    second: desert_assets_v2_32
+  - first:
+      213: -2245876378403369781
+    second: desert_assets_v2_33
+  - first:
+      213: -2314232738342810881
+    second: desert_assets_v2_34
+  - first:
+      213: -1425388122747839916
+    second: desert_assets_v2_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: desert_assets_v2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 387
+        width: 129
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4c073f55615c5b0800000000000000
+      internalID: -5348844424020310832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 479
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab95d5b5b7752eb0800000000000000
+      internalID: -4745255010041488465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_2
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 479
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50cd77a22f591bf0800000000000000
+      internalID: -353146493328310181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 467
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dead0758777b74440800000000000000
+      internalID: 4920102841893313261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_4
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 467
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b29f81a812b6790800000000000000
+      internalID: -7535892674466206936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_5
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 467
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1f0f1551aaf2270800000000000000
+      internalID: 8227982052774965699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 468
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71481f40d55f397b0800000000000000
+      internalID: -5218557763328572393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_7
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 464
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec13ab8b83515a000800000000000000
+      internalID: 46466704518820302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_8
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 465
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50a12d0feb9d78c0800000000000000
+      internalID: -3999869443015335842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_9
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 465
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e80e982dfbc7780800000000000000
+      internalID: -8683855070499926461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_10
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 467
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856d56265a8ed7980800000000000000
+      internalID: -8539413521406503336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_11
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 451
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efedebc3cb5234410800000000000000
+      internalID: 1460052194601393918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_12
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 451
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329f98c4077d94290800000000000000
+      internalID: -7905550793551775453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_13
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 443
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb00ab4ea00f419c0800000000000000
+      internalID: -3957274242974089028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_14
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 443
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd0899cffb28fdb0800000000000000
+      internalID: -4758004628718088745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_15
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 431
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8aa00935ce2a690800000000000000
+      internalID: -7592246178150176581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_16
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 431
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ec1b4b502ab2e60800000000000000
+      internalID: 7938616913560718992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_17
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 427
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e880191d4064267b0800000000000000
+      internalID: -5232542830541338482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_18
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 427
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58ae776da1311430800000000000000
+      internalID: 3751834585411790939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_19
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 417
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe5db6c246c2b7710800000000000000
+      internalID: 1691994893761369583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_20
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 417
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2fb27b0351910900800000000000000
+      internalID: 648959607178444586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_21
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 412
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff06aa04b1cec3490800000000000000
+      internalID: -7765072055700397825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_22
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 412
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54fec985c4182eb60800000000000000
+      internalID: 7773918071699074885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_23
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 403
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affe06daeb957c250800000000000000
+      internalID: 5964834906962980858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_24
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 403
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72316695fbe746950800000000000000
+      internalID: 6441412727350367015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_25
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 254
+        width: 82
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a286725c3ea90a0800000000000000
+      internalID: -6873931445318440372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_26
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 201
+        width: 50
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c0e4796fc674e170800000000000000
+      internalID: 8206815054175461570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_27
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 308
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23e514b6cea20990800000000000000
+      internalID: -7421177067505065174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_28
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 308
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf29f67fbbd67b90800000000000000
+      internalID: -7244361335197585481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_29
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 296
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3160f29114c7c0af0800000000000000
+      internalID: -428831245469809133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_30
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 174
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 639717a8e7aaddfe0800000000000000
+      internalID: -1162585668326426314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_31
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 242
+        width: 20
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f473e4c464ac480800000000000000
+      internalID: -8878206421863805054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_32
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 189
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e4959df09db5e30800000000000000
+      internalID: 4493423715326447172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_33
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 161
+        width: 18
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc83df355b05d0e0800000000000000
+      internalID: -2245876378403369781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_34
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 174
+        width: 10
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffa4f77f59132efd0800000000000000
+      internalID: -2314232738342810881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v2_35
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 161
+        width: 11
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45add8ced01083ce0800000000000000
+      internalID: -1425388122747839916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
