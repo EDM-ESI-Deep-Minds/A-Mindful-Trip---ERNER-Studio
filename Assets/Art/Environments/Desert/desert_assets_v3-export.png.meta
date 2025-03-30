@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: -7386908979355515705
     second: desert_assets_v3-export_0
+  - first:
+      213: -4951036173469669095
+    second: desert_assets_v3-export_1
+  - first:
+      213: 2769202729368863872
+    second: desert_assets_v3-export_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -121,6 +127,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: desert_assets_v3-export_1
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 275
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9192b3af4d26a4bb0800000000000000
+      internalID: -4951036173469669095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert_assets_v3-export_2
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 275
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084c213e53f2e6620800000000000000
+      internalID: 2769202729368863872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -134,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      desert_assets_v3-export_0: -7386908979355515705
+      desert_assets_v3-export_1: -4951036173469669095
+      desert_assets_v3-export_2: 2769202729368863872
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
