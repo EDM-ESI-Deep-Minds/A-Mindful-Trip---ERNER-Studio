@@ -142,7 +142,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -1009,7 +1009,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      desert_assets_v2-export_0: 6626315803121870490
+      desert_assets_v2-export_1: 5435969017681350101
+      desert_assets_v2-export_10: 5897035944354764084
+      desert_assets_v2-export_11: 1564559904518109615
+      desert_assets_v2-export_12: 2304468679434877275
+      desert_assets_v2-export_13: -8222044306469727037
+      desert_assets_v2-export_14: 11543189097536338
+      desert_assets_v2-export_15: 7248958902953808579
+      desert_assets_v2-export_16: -5024986134736728971
+      desert_assets_v2-export_17: -3989736069048824297
+      desert_assets_v2-export_18: 7187573621197563078
+      desert_assets_v2-export_19: 6684345537493532439
+      desert_assets_v2-export_2: -5578337999168119388
+      desert_assets_v2-export_20: 8606233082759018414
+      desert_assets_v2-export_21: -2634455681111712034
+      desert_assets_v2-export_22: 3424588757468865157
+      desert_assets_v2-export_23: 391446880387011170
+      desert_assets_v2-export_24: -3079027295919918565
+      desert_assets_v2-export_25: 5620175790825487104
+      desert_assets_v2-export_26: 3108870223430621256
+      desert_assets_v2-export_27: -3992355962577296492
+      desert_assets_v2-export_28: 778720486626441235
+      desert_assets_v2-export_29: -1441048580373752149
+      desert_assets_v2-export_3: 1386108628526443294
+      desert_assets_v2-export_30: -1171781271275138971
+      desert_assets_v2-export_31: 1293481092310309533
+      desert_assets_v2-export_32: 780417396208370289
+      desert_assets_v2-export_33: -3313591500904490893
+      desert_assets_v2-export_34: -6151836404065784118
+      desert_assets_v2-export_35: 861967527949745214
+      desert_assets_v2-export_4: -2973865805079791543
+      desert_assets_v2-export_5: -8576801742514806876
+      desert_assets_v2-export_6: -1101284387108793093
+      desert_assets_v2-export_7: -724358171335199502
+      desert_assets_v2-export_8: -8969707613178844620
+      desert_assets_v2-export_9: 2816458428895176124
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
