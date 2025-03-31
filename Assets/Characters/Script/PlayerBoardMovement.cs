@@ -346,7 +346,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
                                     if (selectedDirection == "right" &&
                                     (moveOffset == new Vector3Int(2, 1, 0) || moveOffset == new Vector3Int(2, -2, 0) ||
-                                    moveOffset == new Vector3Int(1, 1, 0) ||
+                                    moveOffset == new Vector3Int(1, 1, 0) || moveOffset == new Vector3Int(3, 0, 0) ||
                                      moveOffset == new Vector3Int(2, -1, 0) || moveOffset == new Vector3Int(1, -1, 0) ||
                                      moveOffset == new Vector3Int(2, 0, 0) || moveOffset == new Vector3Int(1, 0, 0)))
                                     {
