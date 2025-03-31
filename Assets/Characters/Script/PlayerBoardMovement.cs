@@ -294,6 +294,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                                 if (selectedDirection == "down" &&
                                     (moveOffset == new Vector3Int(1, -2, 0) || moveOffset == new Vector3Int(0, -3, 0) || moveOffset == new Vector3Int(0, -1, 0) ||
                                      moveOffset == new Vector3Int(2, -2, 0) || moveOffset == new Vector3Int(2, -1, 0) || moveOffset == new Vector3Int(1, -1, 0) ||
+                                     moveOffset == new Vector3Int(0, -2, 0) ||
                                      moveOffset == new Vector3Int(-1, -2, 0) || moveOffset == new Vector3Int(-2, -2, 0)))
                                 {
                                     nextTilePos = potentialNextPos;
