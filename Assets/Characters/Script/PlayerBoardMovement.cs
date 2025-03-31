@@ -497,7 +497,6 @@ public class PlayerBoardMovement : NetworkBehaviour
             }
         }
 
-
         playerPath.Add(currentTilePos);
         currentTilePath = boardManager.pathTiles[currentTilePos];
         Debug.Log($"here is the current tile path type {currentTilePath.tileType}");
@@ -510,7 +509,9 @@ public class PlayerBoardMovement : NetworkBehaviour
     //  now lets add a function that takes the number of steps that moves the player backward
     IEnumerator MoveBackward(int steps)
     {
-     
+
+        if (!RolesManager.IsMyTurn) yield break;
+
         if (playerPath.Count < 1) yield break; 
 
         for (int i = 0; i < steps; i++)
@@ -522,16 +523,17 @@ public class PlayerBoardMovement : NetworkBehaviour
             playerPath.RemoveAt(playerPath.Count - 1);
 
             Vector3 targetPos = GetWorldPosition(lastTilePos);
-            Vector3Int offset = previousTilePos - lastTilePos; // Reverse offset
-
+            Vector3Int offset = currentTilePos - lastTilePos; // Reverse offset
+            // log the offset 
             // Move based on the current direction
             if (currentDirection == "x")
             {
                 // Move along X first
                 if (offset.x != 0)
                 {
-                    int animIndex = offset.x > 0 ? 0 : 3;
+                    int animIndex = offset.x > 0 ? 3 :  0;
                     SetIdleAnimation(animIndex);
+                    yield return new WaitForSeconds(0.05f);
                     Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
                     while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
                     {
@@ -544,9 +546,9 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // If Y component exists, move along Y and determine y-up or y-down
                 if (offset.y != 0)
                 {
-                    int animIndex = offset.y > 0 ? 1 : 2; // 1 for up, 2 for down
+                    int animIndex = offset.y > 0 ? 2 : 1 ; // 1 for up, 2 for down
                     SetIdleAnimation(animIndex);
-
+                    yield return new WaitForSeconds(0.05f);
                     Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
                     while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
                     {
@@ -564,9 +566,9 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // Move along Y first
                 if (offset.y != 0)
                 {
-                    int animIndex = offset.y > 0 ? 1 : 2; // 1 for up, 2 for down
+                    int animIndex = offset.y > 0 ? 2 : 1; // 1 for up, 2 for down
                     SetIdleAnimation(animIndex);
-
+                    yield return new WaitForSeconds(0.05f);
                     Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
                     while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
                     {
@@ -579,8 +581,9 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // If X component exists, move along X and switch direction
                 if (offset.x != 0)
                 {
-                    int animIndex = offset.x > 0 ? 0 : 3; // 0 for right, 3 for left
+                    int animIndex = offset.x > 0 ? 3 : 0; // 0 for right, 3 for left
                     SetIdleAnimation(animIndex);
+                    yield return new WaitForSeconds(0.05f);
                     Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
                     while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
                     {
@@ -597,9 +600,26 @@ public class PlayerBoardMovement : NetworkBehaviour
             previousTilePos = lastTilePos;
             currentTilePos = lastTilePos;
         }
+
+        UpdateFace();
     }
 
-
+    // this function to update the sprite of the player depending on the current direction
+    private void UpdateFace()
+    {
+        if (currentDirection == "x")
+        {
+            SetIdleAnimation(0); // Left or Right
+        }
+        else if (currentDirection == "y-up")
+        {
+            SetIdleAnimation(1); // Up
+        }
+        else if (currentDirection == "y-down")
+        {
+            SetIdleAnimation(2); // Down
+        }
+    }
 
     // method to check for valid intersection, ie the number of offsets that has x greater than 0 is greater than 2
     private bool HasMultipleForwardMoves(Vector3Int tilePos)
