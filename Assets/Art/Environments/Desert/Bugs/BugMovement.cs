@@ -3,7 +3,7 @@ using UnityEngine;
 public class BugMovement : MonoBehaviour
 {
     private float speed = 0.5f; // Speed of movement
-    private float destroyX = -1f; // X position where the bug disappears (adjusted)
+    private float destroyX = -2f; // X position where the bug disappears (adjusted)
 
     private Vector3 startPosition;
 

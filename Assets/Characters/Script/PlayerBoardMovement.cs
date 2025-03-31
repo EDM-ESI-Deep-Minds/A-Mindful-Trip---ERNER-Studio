@@ -316,6 +316,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                                     (moveOffset == new Vector3Int(2, 1, 0) || moveOffset == new Vector3Int(3, 0, 0) ||
                                     moveOffset == new Vector3Int(1, 1, 0) || moveOffset == new Vector3Int(1, 2, 0) ||
                                     moveOffset == new Vector3Int(2, -1, 0) || moveOffset == new Vector3Int(1, -1, 0) ||
+                                    moveOffset  == new Vector3Int(2, 2, 0) ||
                                     moveOffset == new Vector3Int(2, 0, 0) || moveOffset == new Vector3Int(1, 0, 0)))
                                     {
                                         nextTilePos = potentialNextPos;
@@ -628,7 +629,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // Right movement cases
                 if (
                     offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) || offset == new Vector3Int(1, 2, 0) ||
-                    offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) || 
+                    offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) || offset == new Vector3Int(2, 2, 0) ||
                     offset == new Vector3Int(3, 0, 0)
                     //offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(1, -1, 0) || offset == new Vector3Int(2, -2, 0) ||
                     )
