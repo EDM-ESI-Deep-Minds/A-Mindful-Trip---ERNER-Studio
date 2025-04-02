@@ -12,6 +12,8 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] public ItemDatabase itemDatabase;
     private List<int> inventoryItems;
     public GameObject player;
+    private bool islocked;
+    //don't forget to unlock the inventory when being in the hub
 
 
 
@@ -90,6 +92,37 @@ public class InventoryManager : MonoBehaviour
     {
         currentCoins -= price;
         UpdateCoinText();
+    }
+
+    public void lockInventory()
+    {
+        islocked = true;
+        foreach (InventorySlot slot in inventorySlots)
+        {
+            Transform lockIcon = slot.transform.Find("Locked"); 
+
+            if (lockIcon != null)
+            {
+                lockIcon.gameObject.SetActive(true);
+            } else
+            {
+                Debug.Log("not found");
+            }
+        }
+    }
+
+    public void unlockInventory()
+    {
+        islocked = false;
+        foreach (InventorySlot slot in inventorySlots)
+        {
+            Transform lockIcon = slot.transform.Find("Locked");
+
+            if (lockIcon != null)
+            {
+                lockIcon.gameObject.SetActive(false);
+            }
+        }
     }
 
 }

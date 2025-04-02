@@ -9,23 +9,33 @@ public static class EventTrigger
         {
             case "Rest":
                 Debug.Log("Rest event triggered.");
+                //to-do : remove later
+                CurseTileEvent.handleCurse();
                 break;
 
             case "Bonus":
                 Debug.Log("Bonus event triggered.");
+                //to-do : remove later
+                CurseTileEvent.handleCurse();
                 break;
 
             case "Curse":
-                CuresTileEvent.handleCurse();
+                CurseTileEvent.handleCurse();
                 break;
 
             case "Question":
                 Debug.Log("Question event triggered.");
+                //to-do : remove later
+                CurseTileEvent.handleCurse();
                 break;
 
             default:
                 Debug.LogWarning($"Unknown tile type: {TileType}");
+                //to-do : remove later
+                CurseTileEvent.handleCurse();
                 break;
         }
+
+        CurseTileEvent.updateTimers();
     }
 }
