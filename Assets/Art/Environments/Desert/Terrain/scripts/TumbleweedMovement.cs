@@ -3,7 +3,7 @@ using UnityEngine;
 public class TumbleweedMovement : MonoBehaviour
 {
     private float moveSpeed = 0.7f;  // Speed of movement
-    private float rotationSpeed = 100f; // Rotation speed
+    private float rotationSpeed = 150f; // Rotation speed
     private float bobAmplitude = 0.02f;  // How much it moves up and down
     private float bobFrequency = 2f;  // Speed of the bobbing motion
 
