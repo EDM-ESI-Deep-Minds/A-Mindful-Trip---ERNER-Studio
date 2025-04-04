@@ -59,6 +59,29 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
+    public bool removeItem(int slot)
+    {
+        if (inventorySlots[slot].IsOccupied())
+        {
+            inventorySlots[slot].ClearSlot();
+            return true;
+        } else
+        {
+            bool found = false;
+            for(int i=0; i<3 ; i++)
+            {
+                if (slot == i) continue;
+                if (inventorySlots[i].IsOccupied())
+                {
+                    inventorySlots[i].ClearSlot();
+                    found = true;
+                    break;
+                }
+            }
+            return found;
+        }
+    }
+
     // public void AddItem(ItemSO itemSO)
     // {
     //     if (inventoryItems.Count < inventorySlots.Length)
@@ -92,6 +115,11 @@ public class InventoryManager : MonoBehaviour
     {
         currentCoins -= price;
         UpdateCoinText();
+    }
+
+    public int getCredit()
+    {
+        return int.Parse(coinText.text);
     }
 
     public void lockInventory()

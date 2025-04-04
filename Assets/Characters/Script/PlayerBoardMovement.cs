@@ -507,7 +507,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     }
 
     //  now lets add a function that takes the number of steps that moves the player backward
-    IEnumerator MoveBackward(int steps)
+    public IEnumerator MoveBackward(int steps)
     {
 
         if (!RolesManager.IsMyTurn) yield break;
