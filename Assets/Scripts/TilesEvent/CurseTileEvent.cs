@@ -65,7 +65,8 @@ public class CurseTileEvent
 
     private static void removeHeart()
     {
-
+        InventoryManager inventory = Object.FindFirstObjectByType<InventoryManager>();
+        inventory.removeHeart();
     }
 
     private static void reposition()
