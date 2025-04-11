@@ -26,10 +26,10 @@ public class spawn_mang : NetworkBehaviour
 
     float[,] desert_map_positions = new float[4, 2]
    {
-    { -0.56f, -5.04f },
+    { -1.68f, -1.84f },
+    { -1.20f, -4.72f },
     { -0.56f, -3.12f },
-    { -0.56f, -1.68f },
-    { -0.56f,  0.08f }
+    { -0.56f, 0.24f }
    };
 
     int index_position=-1;
@@ -74,7 +74,7 @@ public class spawn_mang : NetworkBehaviour
     private Vector2 GetSpawnPosition()
     {
         index_position++;
-        return new Vector2(city_map_positions[index_position,0], city_map_positions[index_position, 1]);
+        return new Vector2(desert_map_positions[index_position,0], desert_map_positions[index_position, 1]);
       
     }
 
@@ -97,7 +97,7 @@ public class spawn_mang : NetworkBehaviour
         // NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         RoomUIManager roomUIManager = FindObjectOfType<RoomUIManager>();
         SelectedCharacters.Instance.SetSelectedCharacters(roomUIManager.GetSelectedCharacters());
-        NetworkManager.SceneManager.LoadScene("City", LoadSceneMode.Single);
+        NetworkManager.SceneManager.LoadScene("Desert", LoadSceneMode.Single);
 
     }
     [ClientRpc]
