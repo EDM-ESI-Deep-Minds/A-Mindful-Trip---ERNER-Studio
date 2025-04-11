@@ -4,27 +4,30 @@ using System.Collections.Generic;
 
 public class QuestionLoader : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
-        LoadQuestion();
+        EventTrigger.OnQuestionTile += LoadQuestion;
     }
 
     void LoadQuestion()
     {
-        // Charge le fichier JSON depuis Resources
-        TextAsset jsonFile = Resources.Load<TextAsset>("QuestionBank/category_9_easy_qcm");
+        int category = 9;
+        string difficulty = "easy";
+        string questionType = "qcm";
+
+        string fileName = $"QuestionBank/category_{category}_{difficulty}_{questionType}";
+
+        TextAsset jsonFile = Resources.Load<TextAsset>(fileName);
 
         if (jsonFile != null)
         {
-            // Désérialisation du JSON en QuestionFile
             QuestionFile questionFile = JsonUtility.FromJson<QuestionFile>(jsonFile.text);
 
             if (questionFile != null && questionFile.question.Length > 0)
             {
-                // Exemple : afficher la première question
-                Question q = questionFile.question[0];
-                Debug.Log("Question: " + q.question);
-                Debug.Log("Réponse correcte: " + q.correct_answer);
+                Question question = questionFile.question[0];
+                Debug.Log("Question: " + question.question);
+                Debug.Log("Réponse correcte: " + question.correct_answer);
             }
             else
             {
@@ -36,5 +39,4 @@ public class QuestionLoader : MonoBehaviour
             Debug.LogError("Fichier JSON non trouvé !");
         }
     }
-    
 }
