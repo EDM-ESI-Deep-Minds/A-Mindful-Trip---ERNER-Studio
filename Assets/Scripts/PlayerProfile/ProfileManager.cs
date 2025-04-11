@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
-using UnityEngine.Profiling;
-using Unity.Services.Authentication;
 using TMPro;
 
 public class ProfileManager : MonoBehaviour
@@ -102,7 +100,6 @@ public class ProfileManager : MonoBehaviour
         }
     }
 
-
     private void CreateEmptyProfileUI()
     {
         GameObject emptyMessage = new GameObject("EmptyMessage");
@@ -131,7 +128,6 @@ public class ProfileManager : MonoBehaviour
 
         SceneManager.LoadScene("MainMenu");
     }
-
 
     public void UpdateProfile(PlayerProfile updatedProfile)
     {
@@ -174,7 +170,13 @@ public class ProfileManager : MonoBehaviour
         Debug.Log($"Deleted profile: {profile.playerName}");
     }
 
-
+    public void SaveSelectedProfile()
+    {
+        if (SelectedProfile != null)
+        {
+            UpdateProfile(SelectedProfile);
+        }
+    }
 
     [System.Serializable]
     public class PlayerProfile
@@ -182,7 +184,23 @@ public class ProfileManager : MonoBehaviour
         public string playerName;
         public int Elo;
         public int character;
+        public CategoryElo[] categories; // Changed to array
+    }
+
+    [System.Serializable]
+    public class CategoryElo
+    {
+        public string categoryName;
+        public int categoryElo;
+        public int questionsAnswered;
+        public int correctAnswers;
+
+        public CategoryElo(string categoryName, int categoryElo, int questionsAnswered, int correctAnswers)
+        {
+            this.categoryName = categoryName;
+            this.categoryElo = categoryElo;
+            this.questionsAnswered = questionsAnswered;
+            this.correctAnswers = correctAnswers;
+        }
     }
 }
-
-
