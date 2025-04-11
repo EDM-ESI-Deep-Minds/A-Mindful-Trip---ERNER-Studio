@@ -56,7 +56,7 @@ public class BoardManager : MonoBehaviour
 
                 // Get the sprite of the tile at this position
                 Sprite tileSprite = boardTilemap.GetSprite(pos);
-                Debug.Log($"Tile at {pos} has sprite: {(tileSprite != null ? tileSprite.name : "None")}");
+             //   Debug.Log($"Tile at {pos} has sprite: {(tileSprite != null ? tileSprite.name : "None")}");
 
                 if (tileSprite != null)
                 {
@@ -102,7 +102,7 @@ public class BoardManager : MonoBehaviour
             tileEntry.Value.possibleMoves = GetValidMoves(pos);
         }
 
-        Debug.Log($"Total Path Tiles Initialized: {pathTiles.Count}");
+       // Debug.Log($"Total Path Tiles Initialized: {pathTiles.Count}");
         GetStartTiles();
         FindIntersections();
         GetEndTiles();
@@ -348,10 +348,10 @@ public class BoardManager : MonoBehaviour
         foreach (var tile in startTiles)
         {
             Vector3 worldPos = boardTilemap.GetCellCenterWorld(tile);
-            Debug.Log($"Start Tile at Grid Pos: {tile}, World Pos: {worldPos}");
+           // Debug.Log($"Start Tile at Grid Pos: {tile}, World Pos: {worldPos}");
         }
 
-        Debug.Log($"Final Start Tiles Count: {startTiles.Count}");
+      //  Debug.Log($"Final Start Tiles Count: {startTiles.Count}");
         return startTiles;
     }
 
@@ -417,10 +417,10 @@ public class BoardManager : MonoBehaviour
         foreach (var tile in endTiles)
         {
             Vector3 worldPos = boardTilemap.GetCellCenterWorld(tile);
-            Debug.Log($"End Tile at Grid Pos: {tile}, World Pos: {worldPos}");
+           // Debug.Log($"End Tile at Grid Pos: {tile}, World Pos: {worldPos}");
         }
 
-        Debug.Log($"Final End Tiles Count: {endTiles.Count}");
+       // Debug.Log($"Final End Tiles Count: {endTiles.Count}");
         return endTiles;
     }
 
@@ -429,7 +429,7 @@ public class BoardManager : MonoBehaviour
     {
         if (Instance == null || Instance.boardTilemap == null)
         {
-            Debug.LogError("BoardManager or Board Tilemap is not assigned!");
+           // Debug.LogError("BoardManager or Board Tilemap is not assigned!");
             return Vector3.zero;
         }
 
@@ -441,7 +441,7 @@ public class BoardManager : MonoBehaviour
     {
         if (Instance == null || Instance.boardTilemap == null)
         {
-            Debug.LogError("BoardManager or Board Tilemap is not assigned!");
+          //  Debug.LogError("BoardManager or Board Tilemap is not assigned!");
             return Vector3Int.zero;  // Return zero if something is wrong
         }
 
