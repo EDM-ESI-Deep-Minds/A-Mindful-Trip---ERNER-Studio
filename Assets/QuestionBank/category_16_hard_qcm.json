@@ -1,0 +1,280 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "What is the most challenging monster in the Dungeons &amp; Dragons 5th Edition Monster Manual?",
+            "correct_answer": "Tarrasque",
+            "incorrect_answers": [
+                "Beholder",
+                "Displacer Beast",
+                "Lich"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "In Magic: The Gathering, what was a tribute card to Jamie Wakefield&#039;s late wife Marilyn, who loved horses?",
+            "correct_answer": "Timbermare",
+            "incorrect_answers": [
+                "Loyal Pegasus",
+                "Vryn Wingmare",
+                "Sungrace Pegasus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "What was the development code name for the &quot;Weatherlight&quot; expansion for &quot;Magic: The Gathering&quot;, released in 1997?",
+            "correct_answer": "Mocha Latte",
+            "incorrect_answers": [
+                "Decaf",
+                "Frappuccino",
+                "Macchiato"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "How many rooms are there, not including the hallways and the set of stairs, in the board game &quot;Clue&quot;?",
+            "correct_answer": "9",
+            "incorrect_answers": [
+                "1",
+                "6",
+                "10"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "On a standard Monopoly board, how much do you have to pay for Tennessee Ave?",
+            "correct_answer": "$180",
+            "incorrect_answers": [
+                "$200",
+                "$160",
+                "$220"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "The board game &quot;Monopoly&quot; is a variation of what board game?",
+            "correct_answer": "The Landlord&#039;s Game",
+            "incorrect_answers": [
+                "Territorial Dispute",
+                "Property Feud",
+                "The Monopolist&#039;s Game"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "What was the development code name for the &quot;Urza&#039;s Destiny&quot; expansion for &quot;Magic: The Gathering&quot;, released in 1999?",
+            "correct_answer": "Chimichanga",
+            "incorrect_answers": [
+                "Burrito",
+                "Taquito",
+                "Enchilada"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "In Magic: The Gathering, which of the following was the first publicly released foil card?",
+            "correct_answer": "Lightning Dragon",
+            "incorrect_answers": [
+                "Revenant",
+                "Beast of Burden",
+                "Dirtcowl Wurm"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "Some of the &quot;Fallen Empires&quot; cards from &quot;Magic: The Gathering&quot; were misprinted on the backs of which other card game?",
+            "correct_answer": "Wyvern",
+            "incorrect_answers": [
+                "Pokemon",
+                "Dominion",
+                "Yu-Gi-Oh"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "What is the sum of all the tiles in a standard box of Scrabble?",
+            "correct_answer": "187",
+            "incorrect_answers": [
+                "207",
+                "197",
+                "177"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "The board game &quot;Ra&quot; was designed by which designer? ",
+            "correct_answer": "Reiner Knizia",
+            "incorrect_answers": [
+                "Bruno Cathala",
+                "Uwe Rosenburg",
+                "Allison Kline"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "What Magic: The Gathering card&#039;s flavor text is just &#039;Ribbit.&#039;?",
+            "correct_answer": "Turn to Frog",
+            "incorrect_answers": [
+                "Spore Frog",
+                "Bloated Toad",
+                "Frogmite"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "Which board game was first released on February 6th, 1935?",
+            "correct_answer": "Monopoly",
+            "incorrect_answers": [
+                "Risk",
+                "Clue",
+                "Candy Land"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "Which card is on the cover of the Beta rulebook of &quot;Magic: The Gathering&quot;?",
+            "correct_answer": "Bog Wraith",
+            "incorrect_answers": [
+                "Island",
+                "Rock Hydra",
+                "Elvish Archers"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "Which ability from the &quot;Magic: The Gathering&quot; Scars of Mirrodin expansion involves having at least three artifacts in play?",
+            "correct_answer": "Metalcraft",
+            "incorrect_answers": [
+                "Affinity",
+                "Imprint",
+                "Living Weapon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "Which of these cards from &quot;Magic: The Gathering&quot; has a flavor text that begins with &quot;Oi oi oi&quot;?",
+            "correct_answer": "Uthden Troll",
+            "incorrect_answers": [
+                "Lotleth Troll",
+                "Albino Troll",
+                "Harvester Troll"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "In standard Monopoly, what&#039;s the rent if you land on Park Place with no houses?",
+            "correct_answer": "$35",
+            "incorrect_answers": [
+                "$30",
+                "$50",
+                "$45"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "In Magic: The Gathering, what card&#039;s flavor text is &quot;Catch!&quot;?",
+            "correct_answer": "Lava Axe",
+            "incorrect_answers": [
+                "Stone-Throwing Devils",
+                "Ember Shot",
+                "Throwing Knife"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "When Magic: The Gathering was first solicited, which of the following was it originally titled?",
+            "correct_answer": "Mana Clash",
+            "incorrect_answers": [
+                "Magic",
+                "Magic Clash",
+                "Mana Duels"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "What do you declare in Rīchi Mahjong when you&#039;ve drawn your winning tile?",
+            "correct_answer": "Tsumo",
+            "incorrect_answers": [
+                "Ron",
+                "Rīchi",
+                "Kan"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "What is the world&#039;s oldest board game?",
+            "correct_answer": "Senet",
+            "incorrect_answers": [
+                "Chess",
+                "Checkers",
+                "Go"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "Which character class in Dungeons and Dragons 5th edition gains it&#039;s powers from making a pact with a being of higher power?",
+            "correct_answer": "Warlock",
+            "incorrect_answers": [
+                "Wizard",
+                "Sorceror",
+                "Cleric"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "The Dice Tower network of board game podcasts and videos is run by which individual?",
+            "correct_answer": "Tom Vasel",
+            "incorrect_answers": [
+                "Jason LeVine",
+                "Borth Sampson",
+                "Uncle Pennybags"
+            ]
+        }
+    ]
+}

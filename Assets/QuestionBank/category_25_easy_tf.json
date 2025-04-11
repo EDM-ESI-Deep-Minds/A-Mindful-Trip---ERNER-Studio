@@ -1,0 +1,24 @@
+{
+    "question": [
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Art",
+            "question": "Leonardo da Vinci was not the creator of the Mona Lisa.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "easy",
+            "category": "Art",
+            "question": "Leonardo da Vinci&#039;s Mona Lisa does not have eyebrows.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Who is the director of the 1991 film &quot;Silence of the Lambs&quot;?",
+            "correct_answer": "Jonathan Demme",
+            "incorrect_answers": [
+                "Stanley Kubrick",
+                "Frank Darabont",
+                "Michael Bay"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "In the Friday The 13th series, what is Jason&#039;s mother&#039;s first name?",
+            "correct_answer": "Pamela",
+            "incorrect_answers": [
+                "Mary",
+                "Christine",
+                "Angeline"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which movie of film director Stanley Kubrick is known to be an adaptation of a Stephen King novel?",
+            "correct_answer": "The Shining",
+            "incorrect_answers": [
+                "2001: A Space Odyssey",
+                " Dr. Strangelove ",
+                "Eyes Wide Shut"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What is the make and model of the tour vehicles in &quot;Jurassic Park&quot; (1993)?",
+            "correct_answer": "1992 Ford Explorer XLT",
+            "incorrect_answers": [
+                "1992 Toyota Land Cruiser",
+                "1992 Jeep Wrangler YJ Sahar",
+                "Mercedes M-Class"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What year did the James Cameron film &quot;Titanic&quot; come out in theaters?",
+            "correct_answer": "1997",
+            "incorrect_answers": [
+                "1996",
+                "1998",
+                "1999"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which town is the setting for the Disney movie The Love Bug (1968)?",
+            "correct_answer": "San Francisco",
+            "incorrect_answers": [
+                "Los Angeles",
+                "Sacramento",
+                "San Jose"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Who voiced Metalbeard in &quot;The Lego Movie&quot;?",
+            "correct_answer": "Nick Offerman",
+            "incorrect_answers": [
+                "Liam Neeson",
+                "Morgan Freeman",
+                "Will Arnet"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which actor plays the role of the main antagonist in the 2011 movie &quot;Tower Heist?&quot;",
+            "correct_answer": "Alan Alda",
+            "incorrect_answers": [
+                "Eddie Murphy",
+                "Alec Baldwin",
+                "Kevin Nealon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "In the 2014 film &quot;Birdman&quot;, what is the primary instrument in the score?",
+            "correct_answer": "Drums",
+            "incorrect_answers": [
+                "Saxophone",
+                "Violin",
+                "Actual Live Birds Singing"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "This trope refers to minor characters that are killed off to show how a monster works.",
+            "correct_answer": "Red Shirt",
+            "incorrect_answers": [
+                "Minions",
+                "Expendables",
+                "Cannon Fodder"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which one of these films are shot entirely in one-take?",
+            "correct_answer": "Russian Ark",
+            "incorrect_answers": [
+                "Good Will Hunting",
+                "Birdman",
+                "Schindler&#039;s List"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What is the name of the Artificial Intelligence system in the 1983 film, &quot;WarGames&quot;?",
+            "correct_answer": "War Operation Plan Response",
+            "incorrect_answers": [
+                "Self Evolving Thought Helix",
+                "Master Control Program",
+                "West Campus Analog Computer"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "In the 1979 British film &quot;Quadrophenia&quot; what is the name of the main protagonist?",
+            "correct_answer": "Jimmy Cooper",
+            "incorrect_answers": [
+                "Pete Townshend",
+                "Franc Roddam",
+                "Archie Bunker"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Brendan Fraser starred in the following movies, except which one?",
+            "correct_answer": "Titanic",
+            "incorrect_answers": [
+                "Monkeybone",
+                "Encino Man",
+                "Mrs. Winterbourne"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which of the following actors does not play a role in the movie &quot;The Usual Suspects?&quot;",
+            "correct_answer": "Steve Buscemi",
+            "incorrect_answers": [
+                "Kevin Spacey",
+                "Benicio Del Toro",
+                "Gabriel Byrne"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What type of cheese, loved by Wallace and Gromit, had it&#039;s sale prices rise after their successful short films?",
+            "correct_answer": "Wensleydale",
+            "incorrect_answers": [
+                "Cheddar",
+                "Moon Cheese",
+                "Edam"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What is the name of the foley artist who designed the famous sounds of Star Wars, including Chewbacca&#039;s roar and R2-D2&#039;s beeps and whistles?",
+            "correct_answer": "Ben Burtt",
+            "incorrect_answers": [
+                "Ken Burns",
+                "Ralph McQuarrie",
+                "Miranda Keyes"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which musical artist had a prominent role in the 2017 film &quot;Kingsman: The Golden Circle&quot;?",
+            "correct_answer": "Elton John",
+            "incorrect_answers": [
+                "Lady Gaga",
+                "Rihanna",
+                "Justin Bieber"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "The killer in the 1981 film &#039;My Bloody Valentine&#039; wears what sort of outfit?",
+            "correct_answer": "Mining gear",
+            "incorrect_answers": [
+                "Clown costume",
+                "Santa suit",
+                "Police uniform"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What is Lilo&#039;s last name from Lilo and Stitch?",
+            "correct_answer": "Pelekai",
+            "incorrect_answers": [
+                "Anoaʻi",
+                "Kealoha",
+                "Kuʻulei"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Who performed the opening theme song for the James Bond 007 movie &quot;Goldfinger&quot;?",
+            "correct_answer": "Shirley Basey",
+            "incorrect_answers": [
+                "Tom Jones",
+                "John Barry",
+                "Sheena Easton"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What was the name of the protagonist in the movie Commando (1985)?",
+            "correct_answer": "John Matrix",
+            "incorrect_answers": [
+                "Ben Richards",
+                "Douglas Quaid",
+                "Harry Tasker"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "In the Mad Max franchise, what type of car is the Pursuit Special driven by Max?",
+            "correct_answer": "Ford Falcon",
+            "incorrect_answers": [
+                "Holden Monaro",
+                "Chrysler Valiant Charger",
+                "Pontiac Firebird"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Before getting the shotgun, what did the titular hobo in &#039;Hobo with a Shotgun&#039; want to purchase?",
+            "correct_answer": "a lawnmower",
+            "incorrect_answers": [
+                "a revolver",
+                "a guitar",
+                "a suit"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What is the name of the villian in the 2015 Russian-American Sci-Fi Movie &quot;Hardcore Henry&quot;?",
+            "correct_answer": "Akan",
+            "incorrect_answers": [
+                "Estelle",
+                "Jimmy",
+                "Henry"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which actor played the main character in the 1990 film &quot;Edward Scissorhands&quot;?",
+            "correct_answer": "Johnny Depp",
+            "incorrect_answers": [
+                " Clint Eastwood",
+                "Leonardo DiCaprio",
+                "Ben Stiller"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which of the following films was NOT directed by Quentin Tarantino?",
+            "correct_answer": "From Dusk till Dawn",
+            "incorrect_answers": [
+                "Jackie Brown",
+                "Pulp Fiction",
+                "Reservoir Dogs"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which former Star Trek actor directed Three Men and a Baby (1987)?",
+            "correct_answer": "Leonard Nimoy",
+            "incorrect_answers": [
+                "William Shatner",
+                "George Takei",
+                "James Doohan"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Who plays the Nemesis in the Resident Evil movies?",
+            "correct_answer": "Matthew Taylor",
+            "incorrect_answers": [
+                "Jason Dip",
+                "Eric Mabius",
+                "Jimmy Matts"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "In which 1973 film does Yul Brynner play a robotic cowboy who malfunctions and goes on a killing spree?",
+            "correct_answer": "Westworld",
+            "incorrect_answers": [
+                "Runaway",
+                "Android",
+                "The Terminators"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "In the 1999 movie Fight Club, which of these is not a rule of the &quot;fight club&quot;?",
+            "correct_answer": "Always wear a shirt",
+            "incorrect_answers": [
+                "You do not talk about FIGHT CLUB",
+                "Only two guys to a fight",
+                "Fights will go on as long as they have to"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "In the film &quot;Requiem for a Dream&quot;, what drug does Jared Leto&#039;s character get addicted to?",
+            "correct_answer": "Heroin",
+            "incorrect_answers": [
+                "Cocaine",
+                "Marijuana",
+                "Oxycodone"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Who played Batman in the 1997 film &quot;Batman and Robin&quot;?",
+            "correct_answer": "George Clooney",
+            "incorrect_answers": [
+                "Michael Keaton",
+                "Val Kilmer",
+                "Christian Bale"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Ed Koch, the Mayor of New York in 1984, played himself in which Muppets movie?",
+            "correct_answer": "The Muppets Take Manhattan",
+            "incorrect_answers": [
+                "The Great Muppet Caper",
+                "The Muppet Christmas Carol",
+                "The Muppet Movie"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which animated film did Steven Lisberger direct in 1980 before going on to direct Tron?",
+            "correct_answer": "Animalympics",
+            "incorrect_answers": [
+                "The Fox and the Hound",
+                "The Black Cauldron",
+                "The Great Mouse Detecive"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "In The Lord of the Rings: The Fellowship of the Ring, which one of the following characters from the book was left out of the film?",
+            "correct_answer": "Tom Bombadil",
+            "incorrect_answers": [
+                "Strider",
+                "Barliman Butterbur",
+                "Celeborn"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which of these Disney classics was released in 1970?",
+            "correct_answer": "The Aristocats",
+            "incorrect_answers": [
+                "One Hundred and One Dalmatians",
+                "The Fox and the Hound",
+                "The Little Mermaid"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Mark Wahlberg played the titular character of which 2008 video-game adaptation?",
+            "correct_answer": "Max Payne",
+            "incorrect_answers": [
+                "Alan Wake",
+                "Hitman",
+                "God Of War"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which stand-up comedian voiced the talking parrot &quot;Iago&quot; in Disney&#039;s 1992 adaptation of Aladdin?",
+            "correct_answer": "Gilbert Gottfried",
+            "incorrect_answers": [
+                "Robin Williams",
+                "Pauly Shore",
+                "Jonathan Freeman"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Actress Susan Sarandon caught pneumonia during filming of which movie?",
+            "correct_answer": "The Rocky Horror Picture Show",
+            "incorrect_answers": [
+                "Thelma and Louise",
+                "Dead Man Walking",
+                "Enchanted"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "In the 1979 British film &quot;Quadrophenia&quot; what is the name of the seaside city the mods are visiting?",
+            "correct_answer": "Brighton",
+            "incorrect_answers": [
+                "Eastbourne",
+                "Mousehole",
+                "Bridlington"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What was another suggested name for, the 1985 film, Back to the Future?",
+            "correct_answer": "Spaceman From Pluto",
+            "incorrect_answers": [
+                "Hill Valley Time Travelers",
+                "The Time Travelers",
+                "The Lucky Man"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What Queen song plays during the final fight scene of the film &quot;Hardcore Henry&quot;?",
+            "correct_answer": "Don&#039;t Stop Me Now",
+            "incorrect_answers": [
+                "Brighton Rock",
+                "Another Bites the Dust",
+                "We Will Rock You"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What mutated animals act as monsters in the movie &#039;Night of the Lepus&#039;?",
+            "correct_answer": "Rabbits",
+            "incorrect_answers": [
+                "Dogs",
+                "Rats",
+                "Bats"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "About how much money did it cost for Tommy Wiseau to make his masterpiece &quot;The Room&quot; (2003)?",
+            "correct_answer": "$6 Million",
+            "incorrect_answers": [
+                "$20,000",
+                "$1 Million",
+                "$10 Million"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What city did the monster attack in the film, &quot;Cloverfield&quot;?",
+            "correct_answer": "New York, New York",
+            "incorrect_answers": [
+                "Las Vegas, Nevada",
+                "Chicago, Illinois",
+                "Orlando, Florida"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "What is the name of the queen&#039;s pet in A Bug&#039;s Life?",
+            "correct_answer": "Aphie",
+            "incorrect_answers": [
+                "Flik",
+                "Hopper",
+                "Dot"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "In Star Wars, what&#039;s the name of the new Government created after the defeat of the Galactic Empire?",
+            "correct_answer": "The New Republic",
+            "incorrect_answers": [
+                "The Rebel Alliance",
+                "The Crimson Dawn",
+                "The First Order"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Who directed the movie &quot;Alien&quot;?",
+            "correct_answer": "Ridley Scott",
+            "incorrect_answers": [
+                "Christopher Nolan",
+                "Michael Bay",
+                "James Cameron"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Film",
+            "question": "Which 1958 movie starred Kirk Douglas and Tony Curtis as half-brothers Einar and Eric?",
+            "correct_answer": "The Vikings ",
+            "incorrect_answers": [
+                "The Long Ships",
+                "Prince Valiant",
+                "Spartacus"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,172 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "What shape does sin(x) or cos(x) make on a graph?",
+            "correct_answer": "Waves",
+            "incorrect_answers": [
+                "A Parabola",
+                "A Straight Line",
+                "Zig-Zags"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "How many books are in Euclid&#039;s Elements of Geometry?",
+            "correct_answer": "13",
+            "incorrect_answers": [
+                "8",
+                "10",
+                "17"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "To the nearest whole number, how many radians are in a whole circle?",
+            "correct_answer": "6",
+            "incorrect_answers": [
+                "3",
+                "4",
+                "5"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "How many zeros are there in a googol?",
+            "correct_answer": "100",
+            "incorrect_answers": [
+                "10",
+                "1,000",
+                "1,000,000"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "What are the first 6 digits of the number &quot;Pi&quot;?",
+            "correct_answer": "3.14159",
+            "incorrect_answers": [
+                "3.14169",
+                "3.12423",
+                "3.25812"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "What type of function is x&sup2;+2x+1?",
+            "correct_answer": "Quadratic",
+            "incorrect_answers": [
+                "Rational",
+                "Linear",
+                "Exponential"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "Which mathematician refused the Fields Medal?",
+            "correct_answer": "Grigori Perelman",
+            "incorrect_answers": [
+                "Andrew Wiles",
+                "Terence Tao",
+                "Edward Witten"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "Which of the following dice is not a platonic solid?",
+            "correct_answer": "10-sided die",
+            "incorrect_answers": [
+                "12-sided die",
+                "20-sided die",
+                "8-sided die"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "What is the first Mersenne prime exponent over 1000?",
+            "correct_answer": "1279",
+            "incorrect_answers": [
+                "2203",
+                "1009",
+                "1069"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "What is the area of a circle with a diameter of 20 inches if &pi;= 3.1415?",
+            "correct_answer": "314.15 Inches",
+            "incorrect_answers": [
+                "380.1215 Inches",
+                "3141.5 Inches",
+                "1256.6 Inches"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "What is the alphanumeric representation of the imaginary number?",
+            "correct_answer": "i",
+            "incorrect_answers": [
+                "e",
+                "n",
+                "x"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "What Greek letter is used to signify summation?",
+            "correct_answer": "Sigma",
+            "incorrect_answers": [
+                "Delta",
+                "Alpha",
+                "Omega"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "What is the Roman numeral for 500?",
+            "correct_answer": "D",
+            "incorrect_answers": [
+                "L",
+                "C",
+                "X"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Mathematics",
+            "question": "In the hexadecimal system, what number comes after 9?",
+            "correct_answer": "The Letter A",
+            "incorrect_answers": [
+                "10",
+                "The Number 0",
+                "16"
+            ]
+        }
+    ]
+}

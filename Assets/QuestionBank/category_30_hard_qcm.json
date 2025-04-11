@@ -1,0 +1,64 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Gadgets",
+            "question": "Who built the first laser?",
+            "correct_answer": "Theodore Harold Maiman",
+            "incorrect_answers": [
+                "Nikola Tesla",
+                "Jack Kilby",
+                "Edith Clarke"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Gadgets",
+            "question": "Which of the following cellular device companies is NOT headquartered in Asia?",
+            "correct_answer": "Nokia",
+            "incorrect_answers": [
+                "LG Electronics",
+                "Samsung",
+                "HTC"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Gadgets",
+            "question": "Which of the following is the standard THX subwoofer crossover frequency?",
+            "correct_answer": "80 Hz",
+            "incorrect_answers": [
+                "70 Hz",
+                "90 Hz",
+                "100 Hz"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Gadgets",
+            "question": "Which round does a WW2 M1 Garand fire?",
+            "correct_answer": ".30-06",
+            "incorrect_answers": [
+                ".308",
+                "7.62",
+                "7.62x51mm"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Gadgets",
+            "question": "Which of the following is used to measure blood pressure?",
+            "correct_answer": "Sphygmomanometer",
+            "incorrect_answers": [
+                "Barometer",
+                "Ruler",
+                "Haemoerythrometer"
+            ]
+        }
+    ]
+}

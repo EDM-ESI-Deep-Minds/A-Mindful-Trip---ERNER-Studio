@@ -1,0 +1,208 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "What scientific family does the Aardwolf belong to?",
+            "correct_answer": "Hyaenidae",
+            "incorrect_answers": [
+                "Canidae",
+                "Felidae",
+                "Eupleridae"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "What is the Gray Wolf&#039;s scientific name?",
+            "correct_answer": "Canis Lupus",
+            "incorrect_answers": [
+                "Canis Aureus",
+                "Canis Latrans",
+                "Canis Lupus Lycaon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "What scientific suborder does the family Hyaenidae belong to?",
+            "correct_answer": "Feliformia",
+            "incorrect_answers": [
+                "Haplorhini",
+                "Caniformia",
+                "Ciconiiformes"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "Which of the following is another name for the &quot;Poecilotheria Metallica Tarantula&quot;?",
+            "correct_answer": "Gooty",
+            "incorrect_answers": [
+                "Hopper",
+                "Silver Stripe",
+                "Woebegone"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "Which of these is a colony of polyps and not a jellyfish?",
+            "correct_answer": "Portuguese Man-of-War",
+            "incorrect_answers": [
+                "Sea Wasp",
+                "Irukandji",
+                "Sea Nettle"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "Which species is a &quot;mountain chicken&quot;?",
+            "correct_answer": "Frog",
+            "incorrect_answers": [
+                "Chicken",
+                "Horse",
+                "Fly"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "What is the scientific name of the Budgerigar?",
+            "correct_answer": "Melopsittacus undulatus",
+            "incorrect_answers": [
+                "Nymphicus hollandicus",
+                "Pyrrhura molinae",
+                "Ara macao"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "What is the name of the copper-rich protein that creates the blue blood in the Antarctic octopus?",
+            "correct_answer": "Hemocyanin",
+            "incorrect_answers": [
+                "Cytochrome",
+                "Iron",
+                "Methionine"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "What is the collective noun for vultures?",
+            "correct_answer": "Wake",
+            "incorrect_answers": [
+                "Ambush",
+                "Building",
+                "Gaze"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "What type of creature is a Bonobo?",
+            "correct_answer": "Ape",
+            "incorrect_answers": [
+                "Lion",
+                "Parrot",
+                "Wildcat"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "What is the scientific name of the cheetah?",
+            "correct_answer": "Acinonyx jubatus",
+            "incorrect_answers": [
+                "Panthera onca",
+                "Lynx rufus",
+                "Felis catus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "What was the name of the Ethiopian Wolf before they knew it was related to wolves?",
+            "correct_answer": "Simien Jackel",
+            "incorrect_answers": [
+                "Ethiopian Coyote",
+                "Amharic Fox",
+                "Canis Simiensis"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "Unlike on most salamanders, this part of a newt is flat?",
+            "correct_answer": "Tail",
+            "incorrect_answers": [
+                "Head",
+                "Teeth",
+                "Feet"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "How many known living species of hyenas are there?",
+            "correct_answer": "4",
+            "incorrect_answers": [
+                "8",
+                "2",
+                "6"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "To which biological phylum do all mammals, birds and reptiles belong?",
+            "correct_answer": "Chordata",
+            "incorrect_answers": [
+                "Echinodermata",
+                "Annelida",
+                "Placazoa"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "What bird is born with claws on its wing digits?",
+            "correct_answer": "Hoatzin",
+            "incorrect_answers": [
+                "Cormorant",
+                "Cassowary",
+                "Secretary bird"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Animals",
+            "question": "Which of these animals is NOT a lizard?",
+            "correct_answer": "Tuatara",
+            "incorrect_answers": [
+                "Komodo Dragon",
+                "Gila Monster",
+                "Green Iguana"
+            ]
+        }
+    ]
+}

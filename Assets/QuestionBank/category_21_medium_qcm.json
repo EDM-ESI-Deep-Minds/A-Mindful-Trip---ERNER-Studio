@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "What national team won the 2016 edition of UEFA European Championship?",
+            "correct_answer": "Portugal",
+            "incorrect_answers": [
+                "France",
+                "Germany",
+                "England"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which of these countries&#039; national teams qualified for the 2018 FIFA World Cup in Russia?",
+            "correct_answer": "Tunisia",
+            "incorrect_answers": [
+                "United States of America",
+                "Italy",
+                "Netherlands"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which soccer team won the Copa Am&eacute;rica Centenario 2016?",
+            "correct_answer": "Chile",
+            "incorrect_answers": [
+                "Argentina",
+                "Brazil",
+                "Colombia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "With which team did Michael Schumacher make his Formula One debut at the 1991 Belgian Grand Prix?",
+            "correct_answer": "Jordan",
+            "incorrect_answers": [
+                "Benetton",
+                "Ferrari",
+                "Mercedes"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which country is hosting the 2022 FIFA World Cup?",
+            "correct_answer": "Qatar",
+            "incorrect_answers": [
+                "Uganda",
+                "Vietnam",
+                "Bolivia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Josh Mansour is part of what NRL team?",
+            "correct_answer": "Penrith Panthers",
+            "incorrect_answers": [
+                "Melbourne Storm",
+                "Sydney Roosters",
+                "North Queensland Cowboys"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "How many premier league trophies did Sir Alex Ferguson win during his time at Manchester United?",
+            "correct_answer": "13",
+            "incorrect_answers": [
+                "11",
+                "20",
+                "22"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "In 2016, who won the Formula 1 World Constructor&#039;s Championship for the third time in a row?",
+            "correct_answer": "Mercedes-AMG Petronas",
+            "incorrect_answers": [
+                "Scuderia Ferrari",
+                "McLaren Honda",
+                "Red Bull Racing Renault"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which portuguese island is soccer player Cristiano Ronaldo from?",
+            "correct_answer": "Madeira",
+            "incorrect_answers": [
+                "Terceira",
+                "Santa Maria",
+                "Porto Santo"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "What year was hockey legend Wayne Gretzky born?",
+            "correct_answer": "1961",
+            "incorrect_answers": [
+                "1965",
+                "1959",
+                "1963"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Who was the British professional wrestler Shirley Crabtree better known as?",
+            "correct_answer": "Big Daddy",
+            "incorrect_answers": [
+                "Giant Haystacks",
+                "Kendo Nagasaki",
+                "Masambula"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Who won the 2015 College Football Playoff (CFP) National Championship? ",
+            "correct_answer": "Ohio State Buckeyes",
+            "incorrect_answers": [
+                "Alabama Crimson Tide",
+                "Clemson Tigers",
+                "Wisconsin Badgers"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which team was the 2015-2016 NBA Champions?",
+            "correct_answer": "Cleveland Cavaliers",
+            "incorrect_answers": [
+                "Golden State Warriors",
+                "Toronto Raptors",
+                "Oklahoma City Thunders"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "The song &quot;Three Lions&quot; by the Lightning Seeds was made for which major football event in 1996?",
+            "correct_answer": "European Championships",
+            "incorrect_answers": [
+                "World Cup",
+                "Champions League",
+                "Confederations Cup"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "How many French Open&#039;s did Bj&ouml;rn Borg win?",
+            "correct_answer": "6",
+            "incorrect_answers": [
+                "4",
+                "9",
+                "2"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which basketball team has attended the most NBA grand finals?",
+            "correct_answer": "Los Angeles Lakers",
+            "incorrect_answers": [
+                "Boston Celtics",
+                "Philadelphia 76ers",
+                "Golden State Warriors"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which of the following pitchers was named National League Rookie of the Year for the 2013 season?",
+            "correct_answer": "Jose Fernandez",
+            "incorrect_answers": [
+                "Jacob deGrom",
+                "Shelby Miller",
+                "Matt Harvey"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which of the following Grand Slam tennis tournaments occurs LAST?",
+            "correct_answer": "US Open",
+            "incorrect_answers": [
+                "French Open",
+                "Wimbledon",
+                "Australian Open"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which German sportswear company&#039;s logo is the &#039;Formstripe&#039;?",
+            "correct_answer": "Puma",
+            "incorrect_answers": [
+                "Nike",
+                "Adidas",
+                "Reebok"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "At which bridge does the annual Oxford and Cambridge boat race start?",
+            "correct_answer": "Putney",
+            "incorrect_answers": [
+                "Hammersmith",
+                "Vauxhall ",
+                "Battersea"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which car manufacturer won the 2016 24 Hours of Le Mans?",
+            "correct_answer": "Porsche",
+            "incorrect_answers": [
+                "Toyota",
+                "Audi",
+                "Ferrari"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "What cricketing term denotes a batsman being dismissed with a score of zero?",
+            "correct_answer": "Duck",
+            "incorrect_answers": [
+                "Bye",
+                "Beamer",
+                "Carry"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "What is Tiger Woods&#039; all-time best career golf-score?",
+            "correct_answer": "61",
+            "incorrect_answers": [
+                "65",
+                "63",
+                "67"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "What is the nickname of Northampton town&#039;s rugby union club?",
+            "correct_answer": "Saints",
+            "incorrect_answers": [
+                "Harlequins",
+                "Saracens",
+                "Wasps"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "A stimpmeter measures the speed of a ball over what surface?",
+            "correct_answer": "Golf Putting Green",
+            "incorrect_answers": [
+                " Football Pitch",
+                "Cricket Outfield",
+                "Pinball Table"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "What is the highest belt you can get in Taekwondo?",
+            "correct_answer": "Black",
+            "incorrect_answers": [
+                "White",
+                "Red",
+                "Green"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which soccer team won the Copa Am&eacute;rica 2015 Championship ?",
+            "correct_answer": "Chile",
+            "incorrect_answers": [
+                "Argentina",
+                "Brazil",
+                "Paraguay"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "What is the oldest team in the NFL?",
+            "correct_answer": "Arizona Cardinals",
+            "incorrect_answers": [
+                "Chicago Bears",
+                "Green Bay Packers",
+                "New York Giants"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which professional wrestler fell from the rafters to his death during a live Pay-Per-View event in 1999?",
+            "correct_answer": "Owen Hart",
+            "incorrect_answers": [
+                "Chris Benoit",
+                "Lex Luger",
+                "Al Snow"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "What is the name of the AHL affiliate of the Toronto Maple Leafs?",
+            "correct_answer": "Toronto Marlies",
+            "incorrect_answers": [
+                "Toronto Rock",
+                "Toronto Argonauts",
+                "Toronto Wolfpack"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which car manufacturer won the 2017 24 Hours of Le Mans?",
+            "correct_answer": "Porsche",
+            "incorrect_answers": [
+                "Toyota",
+                "Audi",
+                "Chevrolet"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which of the following player scored a hat-trick during their Manchester United debut?",
+            "correct_answer": "Wayne Rooney",
+            "incorrect_answers": [
+                "Cristiano Ronaldo",
+                "Robin Van Persie",
+                "David Beckham"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which country did Kabaddi, a contact sport involving tackling, originate from?",
+            "correct_answer": "India",
+            "incorrect_answers": [
+                "Australia",
+                "Turkey",
+                "Cambodia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Who won the 2018 Monaco Grand Prix?",
+            "correct_answer": "Daniel Ricciardo",
+            "incorrect_answers": [
+                "Sebastian Vettel",
+                "Kimi Raikkonen",
+                "Lewis Hamilton"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Who was the topscorer for England national football team?",
+            "correct_answer": "Wayne Rooney",
+            "incorrect_answers": [
+                "David Beckham",
+                "Steven Gerrard",
+                "Michael Owen"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "What country hosted the 2014 Winter Olympics?",
+            "correct_answer": "Russia",
+            "incorrect_answers": [
+                "Canada",
+                "United States",
+                "Germany"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "What is the exact length of one non-curved part in Lane 1 of an Olympic Track?",
+            "correct_answer": "84.39m",
+            "incorrect_answers": [
+                "100m",
+                "100yd",
+                "109.36yd"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which NBA player has the most games played over the course of their career?",
+            "correct_answer": "Robert Parish",
+            "incorrect_answers": [
+                "Kareem Abdul-Jabbar",
+                "Kevin Garnett",
+                "Kobe Bryant"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which Formula 1 driver switched teams in the middle of the 2017 season?",
+            "correct_answer": "Carlos Sainz Jr.",
+            "incorrect_answers": [
+                "Daniil Kvyat",
+                "Jolyon Palmer",
+                "Rio Haryanto"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which nation hosted the FIFA World Cup in 2006?",
+            "correct_answer": "Germany",
+            "incorrect_answers": [
+                "United Kingdom",
+                "Brazil",
+                "South Africa"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "The F1 season of 1994 is remembered for what tragic event?",
+            "correct_answer": "Death of Ayrton Senna (San Marino)",
+            "incorrect_answers": [
+                "The Showdown (Australia)",
+                "Verstappen on Fire (Germany)",
+                "Schumacher&#039;s Ban (Britain)"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "What was Sir Donald Bradman&#039;s batting average in test matches?",
+            "correct_answer": "99.94",
+            "incorrect_answers": [
+                "100",
+                "69.51",
+                "44.78"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Who was the top scorer of the 2014 FIFA World Cup?",
+            "correct_answer": "James Rodr&iacute;guez",
+            "incorrect_answers": [
+                "Thomas M&uuml;ller",
+                "Lionel Messi",
+                "Neymar"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which team was the 2014-2015 NBA Champions?",
+            "correct_answer": "Golden State Warriors",
+            "incorrect_answers": [
+                "Cleveland Cavaliers",
+                "Houston Rockets",
+                "Atlanta Hawks"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "In what sport does Fanny Chmelar compete for Germany?",
+            "correct_answer": "Skiing",
+            "incorrect_answers": [
+                "Swimming",
+                "Showjumping",
+                "Gymnastics"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Who is Manchester United&#039;s top premier league goal scorer?",
+            "correct_answer": "Wayne Rooney",
+            "incorrect_answers": [
+                "Sir Bobby Charlton",
+                "Ryan Giggs",
+                "David Beckham"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which Formula One driver was nicknamed &#039;The Professor&#039;?",
+            "correct_answer": "Alain Prost",
+            "incorrect_answers": [
+                "Ayrton Senna",
+                "Niki Lauda",
+                "Emerson Fittipaldi"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "In a game of snooker, what colour ball is worth 3 points?",
+            "correct_answer": "Green",
+            "incorrect_answers": [
+                "Yellow",
+                "Brown",
+                "Blue"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Which NBA player won Most Valuable Player for the 1999-2000 season?",
+            "correct_answer": "Shaquille O&#039;Neal",
+            "incorrect_answers": [
+                "Allen Iverson",
+                "Kobe Bryant",
+                "Paul Pierce"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "How many scoring zones are there on a conventional dart board?",
+            "correct_answer": "82",
+            "incorrect_answers": [
+                "62",
+                "42",
+                "102"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "What was the name of the teenage witch played by Melisa Joan Hart who lives with her witch aunts Hilda and Zelda?",
+            "correct_answer": "Sabrina",
+            "incorrect_answers": [
+                "Hermione",
+                "Dorothy",
+                "Dahlia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In which state of America was the Fresh Prince of Bel-Air born and raised in?",
+            "correct_answer": "Pennsylvania",
+            "incorrect_answers": [
+                "Florida",
+                "California",
+                "New Jersey"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "What country is Cory in the House set in?",
+            "correct_answer": "The United States of America",
+            "incorrect_answers": [
+                "Canada",
+                "Venezuala",
+                "England"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In season one of the Netflix political drama &quot;House of Cards&quot;, what government position does Frank Underwood hold?",
+            "correct_answer": "House Majority Whip",
+            "incorrect_answers": [
+                "Attorney General",
+                "President",
+                "Chief of Staff"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "What NBC sitcom once saw two of its characters try to pitch NBC on a sitcom about nothing?",
+            "correct_answer": "Seinfeld",
+            "incorrect_answers": [
+                "Frasier",
+                "Becker",
+                "Friends"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Who won Big Brother 2014 UK?",
+            "correct_answer": "Helen Wood",
+            "incorrect_answers": [
+                "Christopher Hall",
+                "Pauline Bennett",
+                "Pavandeep &quot;Pav&quot; Paul"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Who played Agent Fox Mulder in the TV sci-fi drama &quot;The X-Files&quot;?",
+            "correct_answer": "David Duchovny",
+            "incorrect_answers": [
+                "Gillian Anderson",
+                "Robert Patrick",
+                "Mitch Pileggi"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "What Nickelodeon game show featured a house on the set that the contestants would ransack to find hidden objects?",
+            "correct_answer": "Finders Keepers",
+            "incorrect_answers": [
+                "Double Dare",
+                "Nickelodeon Guts",
+                "Nick Arcade"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "On the NBC show Community, whose catch-phrase was &quot;Pop! Pop!&quot;?",
+            "correct_answer": "Magnitude",
+            "incorrect_answers": [
+                "Star Burns",
+                "Leonard",
+                "Senoir Chang"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In Star Trek: The Next Generation, what is the name of Data&#039;s cat?",
+            "correct_answer": "Spot",
+            "incorrect_answers": [
+                "Mittens",
+                "Tom",
+                "Kitty"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Which actor portrays &quot;Walter White&quot; in the series &quot;Breaking Bad&quot;?",
+            "correct_answer": " Bryan Cranston",
+            "incorrect_answers": [
+                "Andrew Lincoln",
+                "Aaron Paul",
+                "RJ Mitte"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "When did the TV show Rick and Morty first air on Adult Swim?",
+            "correct_answer": "2013",
+            "incorrect_answers": [
+                "2014",
+                "2016",
+                "2015"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In Two and a Half Men, what is Alan Harper&#039;s son&#039;s name?",
+            "correct_answer": "Jake",
+            "incorrect_answers": [
+                "John",
+                "Jeremy",
+                "James"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "What is the real name of the famous spanish humorist, El Risitas?",
+            "correct_answer": "Juan Joya Borga",
+            "incorrect_answers": [
+                "Gabriel Garcia Marquez",
+                "Jesus Quintero",
+                "Ernesto Guevara"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In the show &quot;Tengen Toppa Gurren Lagann&quot; what is the name of the character who force everyone to live underground?",
+            "correct_answer": "Lordgenome",
+            "incorrect_answers": [
+                "Kingloname",
+                "Lord Genome",
+                "King Loname"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "What TV show is about a grandfather dragging his grandson around on adventures?",
+            "correct_answer": "Rick &amp; Morty",
+            "incorrect_answers": [
+                "Family Guy",
+                "South Park",
+                "American Dad"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In AMC&#039;s TV Series &quot;The Walking Dead&quot; what are &quot;Zombies&quot; referred to as?",
+            "correct_answer": "Walkers",
+            "incorrect_answers": [
+                "Creepers",
+                "Maggots",
+                "Hell Pigs"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In the cartoon &#039;SpongeBob SquarePants&#039;, what did the acronym E.V.I.L stand for?",
+            "correct_answer": "Every Villain Is Lemons",
+            "incorrect_answers": [
+                "Every Villain Is Lemonade",
+                "Every Villain Is Limes",
+                "Each Villain Is Lemonade"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Which of the following awards do Matt Stone and Trey Parker NOT have?",
+            "correct_answer": "Oscar",
+            "incorrect_answers": [
+                "Emmy",
+                "Tony",
+                "Grammy"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "What is the name of the main character in &quot;The Flash&quot; TV series?",
+            "correct_answer": "Barry Allen",
+            "incorrect_answers": [
+                "Oliver Queen",
+                "Bart Allen",
+                "Bruce Wayne"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Which company has exclusive rights to air episodes of the &quot;The Grand Tour&quot;?",
+            "correct_answer": "Amazon",
+            "incorrect_answers": [
+                "Netflix",
+                "BBC",
+                "CCTV"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "The HBO series &quot;Game of Thrones&quot; is based on which series of books?",
+            "correct_answer": "A Song of Ice and Fire",
+            "incorrect_answers": [
+                "The Wheel of Time",
+                "Harry Potter",
+                "The Notebook"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "How many seasons did the Sci-Fi television show &quot;Stargate Universe&quot; have?",
+            "correct_answer": "2",
+            "incorrect_answers": [
+                "10",
+                "5",
+                "3"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "What was the name of the the first episode of Doctor Who to air in 1963?",
+            "correct_answer": "An Unearthly Child",
+            "incorrect_answers": [
+                "The Daleks",
+                "The Aztecs",
+                "The Edge of Destruction"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In the TV show &quot;Mad Men&quot;, what was Donald Draper&#039;s birthname?",
+            "correct_answer": "Richard &quot;Dick&quot; Whitman",
+            "incorrect_answers": [
+                "Donald Draper",
+                "John Ashbury",
+                "Michael &quot;Mikey&quot; Wilhelm"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "What is the name of the planet that the Doctor from television series &quot;Doctor Who&quot; comes from?",
+            "correct_answer": "Gallifrey",
+            "incorrect_answers": [
+                "Sontar",
+                "Skaro",
+                "Mondas"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "What is the name of Chris&#039;s brother in &quot;Everybody Hates Chris&quot;?",
+            "correct_answer": "Drew",
+            "incorrect_answers": [
+                "Jerome",
+                "Greg",
+                "Joe"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In &quot;Rick And Morty&quot;, who shot &quot;Mr. Poopybutthole&quot; in the episode &quot;Total Rickall&quot;?",
+            "correct_answer": "Beth",
+            "incorrect_answers": [
+                "Rick",
+                "Jerry",
+                "Morty"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In Game of Thrones, what is Littlefinger&#039;s real name?",
+            "correct_answer": "Petyr Baelish",
+            "incorrect_answers": [
+                "Podrick Payne",
+                "Lancel Lannister",
+                "Torrhen Karstark"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Which Star Trek race advances itself through assimilation?",
+            "correct_answer": "Borg",
+            "incorrect_answers": [
+                "Vulcan",
+                "Betazoid",
+                "Klingon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In the original Star Trek TV series, what was Captain James T. Kirk&#039;s middle name?",
+            "correct_answer": "Tiberius",
+            "incorrect_answers": [
+                "Trevor",
+                "Travis",
+                "Tyrone"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "How many seasons did the Sci-Fi television show &quot;Stargate Atlantis&quot; have?",
+            "correct_answer": "5",
+            "incorrect_answers": [
+                "10",
+                "2",
+                "7"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Grant Gustin plays which superhero on the CW show of the same name?",
+            "correct_answer": "The Flash",
+            "incorrect_answers": [
+                "The Arrow",
+                "Black Canary",
+                "Daredevil"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "On the show &quot;Rick and Morty&quot;, in episode &quot;Total Rickall&quot;, who was a parasite?",
+            "correct_answer": "Pencilvester",
+            "incorrect_answers": [
+                "Beth Smith",
+                "Summer Smith",
+                "Mr. Poopy Butthole"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Guy&#039;s Grocery Games is hosted by which presenter?",
+            "correct_answer": "Guy Fieri",
+            "incorrect_answers": [
+                "Guy Martin",
+                "Guy Ritchie",
+                "Ainsley Harriott"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Which of these Disney shows is classified as an anime?",
+            "correct_answer": "Stitch!",
+            "incorrect_answers": [
+                "Cory in the House",
+                "The Emperor&#039;s New School",
+                "Hannah Montana"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In the television show Breaking Bad, what is the street name of Walter and Jesse&#039;s notorious product?",
+            "correct_answer": "Blue Sky",
+            "incorrect_answers": [
+                "Baby Blue",
+                "Rock Candy",
+                "Pure Glass"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In the TV show &quot;Cheers&quot;, Sam Malone was a former relief pitcher for which baseball team?",
+            "correct_answer": "Boston Red Sox",
+            "incorrect_answers": [
+                "New York Mets",
+                "Baltimore Orioles",
+                "Milwaukee Brewers"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "What was the name of the police officer in the cartoon &quot;Top Cat&quot;?",
+            "correct_answer": "Dibble",
+            "incorrect_answers": [
+                "Barbrady",
+                "Mahoney",
+                "Murphy"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In Supernatural, what&#039;s is Sam&#039;s brothers name?",
+            "correct_answer": "Dean",
+            "incorrect_answers": [
+                "Dave",
+                "Steve",
+                "Mike"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In the show Stranger Things, what is Eleven&#039;s favorite breakfast food?",
+            "correct_answer": "Eggo Waffles",
+            "incorrect_answers": [
+                "Toast",
+                "Captain Crunch",
+                "Bacon and Eggs"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Who is the star of the AMC series Breaking Bad?",
+            "correct_answer": "Walter White",
+            "incorrect_answers": [
+                "Saul Goodman",
+                "Jesse Pinkman",
+                "Skyler White"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "When Donkey Kong died in the &quot;Donkey Kong Country&quot; episode &quot;It&#039;s a Wonderful Life&quot;, who was his guardian angel?",
+            "correct_answer": "Eddie the Mean Old Yeti",
+            "incorrect_answers": [
+                "Kiddy Kong",
+                "Diddy Kong",
+                "King K. Rool"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In the Star Trek universe, what color is Vulcan blood?",
+            "correct_answer": "Green",
+            "incorrect_answers": [
+                "Blue",
+                "Red",
+                "Purple"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Which of these characters in &quot;Stranger Things&quot; has the power of Telekinesis?",
+            "correct_answer": "Eleven",
+            "incorrect_answers": [
+                "Mike",
+                "Lucas",
+                "Karen"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "How many seasons did &quot;Stargate SG-1&quot; have?",
+            "correct_answer": "10",
+            "incorrect_answers": [
+                "3",
+                "7",
+                "12"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "In the show &quot;Futurama&quot; what is Fry&#039;s full name?",
+            "correct_answer": "Philip J. Fry",
+            "incorrect_answers": [
+                "Fry J. Philip",
+                "Fry Rodr&iacute;guez",
+                "Fry Philip"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Who is the main character in the show &quot;Burn Notice&quot;?",
+            "correct_answer": "Michael Westen",
+            "incorrect_answers": [
+                "Sam Axe",
+                "Fiona Glenanne",
+                "Madeline Westen"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "The &quot;Psycho&quot; series of videos on YouTube was created by which of the following?",
+            "correct_answer": "RiDGiD STUDiOS",
+            "incorrect_answers": [
+                "Dan Bell",
+                "Billy Familia",
+                "VeganGainz"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Television",
+            "question": "Which show is known for the songs &quot;You are a Pirate&quot;, &quot;Cooking by the Book&quot; and &quot;We Are Number One&quot;?",
+            "correct_answer": "LazyTown",
+            "incorrect_answers": [
+                "Sofia the First",
+                "DuckTales",
+                "Tom and Jerry"
+            ]
+        }
+    ]
+}

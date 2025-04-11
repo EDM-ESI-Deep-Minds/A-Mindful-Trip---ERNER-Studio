@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What was the nickname given to the Hughes H-4 Hercules, a heavy transport flying boat which achieved flight in 1947?",
+            "correct_answer": "Spruce Goose",
+            "incorrect_answers": [
+                "Noah&#039;s Ark",
+                "Fat Man",
+                "Trojan Horse"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which American-owned brewery led the country in sales by volume in 2015?",
+            "correct_answer": "D. G. Yuengling and Son, Inc",
+            "incorrect_answers": [
+                "Anheuser Busch",
+                "Boston Beer Company",
+                "Miller Coors"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which of the following is the IATA code for Manchester Airport?",
+            "correct_answer": "MAN",
+            "incorrect_answers": [
+                "EGLL",
+                "LHR",
+                "EGCC"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which of these colours is NOT featured in the logo for Google?",
+            "correct_answer": "Pink",
+            "incorrect_answers": [
+                "Yellow",
+                "Blue",
+                "Green"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What geometric shape is generally used for stop signs?",
+            "correct_answer": "Octagon",
+            "incorrect_answers": [
+                "Hexagon",
+                "Circle",
+                "Triangle"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What style of beer will typically have a higher than average hop content?",
+            "correct_answer": "India Pale Ale",
+            "incorrect_answers": [
+                "Stout",
+                "Extra Special Bitter",
+                "Scotch Ale"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What company developed the vocaloid Hatsune Miku?",
+            "correct_answer": "Crypton Future Media",
+            "incorrect_answers": [
+                "Sega",
+                "Sony",
+                "Yamaha Corporation"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Who is depicted on the US hundred dollar bill?",
+            "correct_answer": "Benjamin Franklin",
+            "incorrect_answers": [
+                "George Washington",
+                "Abraham Lincoln",
+                "Thomas Jefferson"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What does the &#039;S&#039; stand for in the abbreviation SIM, as in SIM card? ",
+            "correct_answer": "Subscriber",
+            "incorrect_answers": [
+                "Single",
+                "Secure",
+                "Solid"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "In the video-game franchise Kingdom Hearts, the main protagonist, carries a weapon with what shape?",
+            "correct_answer": "Key",
+            "incorrect_answers": [
+                "Sword",
+                "Pen",
+                "Cellphone"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What is the closest planet to our solar system&#039;s sun?",
+            "correct_answer": "Mercury",
+            "incorrect_answers": [
+                "Mars",
+                "Jupiter",
+                "Earth"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which language is most widely spoken in Switzerland?",
+            "correct_answer": "German",
+            "incorrect_answers": [
+                "French",
+                "Italian",
+                "Swiss"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What kind of aircraft was developed by Igor Sikorsky in the United States in 1942?",
+            "correct_answer": "Helicopter",
+            "incorrect_answers": [
+                "Stealth Blimp",
+                "Jet",
+                "Space Capsule"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which restaurant&#039;s mascot is a clown?",
+            "correct_answer": "McDonald&#039;s",
+            "incorrect_answers": [
+                "Whataburger",
+                "Burger King",
+                "Sonic"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which best selling toy of 1983 caused hysteria, resulting in riots breaking out in stores?",
+            "correct_answer": "Cabbage Patch Kids",
+            "incorrect_answers": [
+                "Transformers",
+                "Care Bears",
+                "Rubik&rsquo;s Cube"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which sign of the zodiac is represented by the Crab?",
+            "correct_answer": "Cancer",
+            "incorrect_answers": [
+                "Libra",
+                "Virgo",
+                "Sagittarius"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Five dollars is worth how many nickels?",
+            "correct_answer": "100",
+            "incorrect_answers": [
+                "50",
+                "25",
+                "69"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What is the Spanish word for &quot;donkey&quot;?",
+            "correct_answer": "Burro",
+            "incorrect_answers": [
+                "Caballo",
+                "Toro",
+                "Perro"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which one of the following rhythm games was made by Harmonix?",
+            "correct_answer": "Rock Band",
+            "incorrect_answers": [
+                "Meat Beat Mania",
+                "Guitar Hero Live",
+                "Dance Dance Revolution"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What machine element is located in the center of fidget spinners?",
+            "correct_answer": "Bearings",
+            "incorrect_answers": [
+                "Axles",
+                "Gears",
+                "Belts"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What alcoholic drink is made from molasses?",
+            "correct_answer": "Rum",
+            "incorrect_answers": [
+                "Gin",
+                "Vodka",
+                "Whisky"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Waluigi&#039;s first appearance was in what game?",
+            "correct_answer": "Mario Tennis 64 (N64)",
+            "incorrect_answers": [
+                "Wario Land: Super Mario Land 3",
+                "Mario Party (N64)",
+                "Super Smash Bros. Ultimate"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which of the following blood component forms a plug at the site of injuries?",
+            "correct_answer": "Platelets",
+            "incorrect_answers": [
+                "Red blood cells",
+                "White blood cells",
+                "Blood plasma"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Foie gras is a French delicacy typically made from what part of a duck or goose?",
+            "correct_answer": "Liver",
+            "incorrect_answers": [
+                "Heart",
+                "Stomach",
+                "Intestines"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "The &ldquo;fairy&rdquo; type made it&rsquo;s debut in which generation of the Pokemon core series games?",
+            "correct_answer": "6th",
+            "incorrect_answers": [
+                "2nd",
+                "7th",
+                "4th"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "When someone is cowardly, they are said to have what color belly?",
+            "correct_answer": "Yellow",
+            "incorrect_answers": [
+                "Green",
+                "Red",
+                "Blue"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What organ of the body produces bile?",
+            "correct_answer": "Liver",
+            "incorrect_answers": [
+                "Gallbladder",
+                "Pancreas",
+                "Stomach"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What is the official language of Brazil?",
+            "correct_answer": "Portuguese",
+            "incorrect_answers": [
+                "Brazilian",
+                "Spanish",
+                "English"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What does a funambulist walk on?",
+            "correct_answer": "A Tight Rope",
+            "incorrect_answers": [
+                "Broken Glass",
+                "Balls",
+                "The Moon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What type of animal was Harambe, who was shot after a child fell into it&#039;s enclosure at the Cincinnati Zoo?",
+            "correct_answer": "Gorilla",
+            "incorrect_answers": [
+                "Tiger",
+                "Panda",
+                "Crocodile"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Who is the youngest person to receive a Nobel Prize?",
+            "correct_answer": "Malala Yousafzai",
+            "incorrect_answers": [
+                "Lawrence Bragg",
+                "Werner Heisenberg",
+                "Yasser Arafat"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "The buried remains of which English explorer of Australia were found in London  in January 2019? ",
+            "correct_answer": "Matthew Flinders",
+            "incorrect_answers": [
+                "William Bourke",
+                "Abel Tasman",
+                "Dirk Hartog"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which company did Valve cooperate with in the creation of the Vive?",
+            "correct_answer": "HTC",
+            "incorrect_answers": [
+                "Oculus",
+                "Google",
+                "Razer"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What word represents the letter &#039;T&#039; in the NATO phonetic alphabet?",
+            "correct_answer": "Tango",
+            "incorrect_answers": [
+                "Target",
+                "Taxi",
+                "Turkey"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What element has the chemical symbol Kr?",
+            "correct_answer": "Krypton",
+            "incorrect_answers": [
+                "Kerosine",
+                "Kineticium",
+                "Curium"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What do the letters of the fast food chain KFC stand for?",
+            "correct_answer": "Kentucky Fried Chicken",
+            "incorrect_answers": [
+                "Kentucky Fresh Cheese",
+                "Kibbled Freaky Cow",
+                "Kiwi Food Cut"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What airline was the owner of the plane that crashed off the coast of Nova Scotia in 1998?",
+            "correct_answer": "Swiss Air",
+            "incorrect_answers": [
+                "Air France",
+                "British Airways",
+                "TWA"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Who is the author of Jurassic Park?",
+            "correct_answer": "Michael Crichton",
+            "incorrect_answers": [
+                "Peter Benchley",
+                "Chuck Paluhniuk",
+                "Irvine Welsh"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "How many furlongs are there in a mile?",
+            "correct_answer": "Eight",
+            "incorrect_answers": [
+                "Two",
+                "Four",
+                "Six"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which of the following is not an Ivy League University?",
+            "correct_answer": "Stanford",
+            "incorrect_answers": [
+                "University of Pennsylvania",
+                "Harvard",
+                "Princeton"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "According to Sherlock Holmes, &quot;If you eliminate the impossible, whatever remains, however improbable, must be the...&quot;",
+            "correct_answer": "Truth",
+            "incorrect_answers": [
+                "Answer",
+                "Cause",
+                "Source"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which canal connects the Mediterranean Sea with the Red Sea?",
+            "correct_answer": "Suez Canal",
+            "incorrect_answers": [
+                "Panama Canal",
+                "Sinai Canal",
+                "Qaraqum Canal"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What is the French word for &quot;fish&quot;?",
+            "correct_answer": "poisson",
+            "incorrect_answers": [
+                "fiche",
+                "escargot",
+                "mer"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "In which fast food chain can you order a Jamocha Shake?",
+            "correct_answer": "Arby&#039;s",
+            "incorrect_answers": [
+                "McDonald&#039;s",
+                "Burger King",
+                "Wendy&#039;s"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What is the shape of the toy invented by Hungarian professor Ernő Rubik?",
+            "correct_answer": "Cube",
+            "incorrect_answers": [
+                "Sphere",
+                "Cylinder",
+                "Pyramid"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What is the profession of Elon Musk&#039;s mom, Maye Musk?",
+            "correct_answer": "Model",
+            "incorrect_answers": [
+                "Professor",
+                "Biologist",
+                "Musician"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which of the following card games revolves around numbers and basic math?",
+            "correct_answer": "Uno",
+            "incorrect_answers": [
+                "Go Fish",
+                "Twister",
+                "Munchkin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What nuts are used in the production of marzipan?",
+            "correct_answer": "Almonds",
+            "incorrect_answers": [
+                "Peanuts",
+                "Walnuts",
+                "Pistachios"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What zodiac sign is represented by a pair of scales?",
+            "correct_answer": "Libra",
+            "incorrect_answers": [
+                "Aries",
+                "Capricorn",
+                "Sagittarius"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "Which sign of the zodiac comes between Virgo and Scorpio?",
+            "correct_answer": "Libra",
+            "incorrect_answers": [
+                "Gemini",
+                "Taurus",
+                "Capricorn"
+            ]
+        }
+    ]
+}

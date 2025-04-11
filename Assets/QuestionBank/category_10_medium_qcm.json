@@ -1,0 +1,532 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "How many books are in the Chronicles of Narnia series?",
+            "correct_answer": "7",
+            "incorrect_answers": [
+                "6",
+                "8",
+                "5"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "What is the fourth book of the Old Testament?",
+            "correct_answer": "Numbers",
+            "incorrect_answers": [
+                "Genesis",
+                "Exodus",
+                "Leviticus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Who wrote the &quot;A Song of Ice And Fire&quot; fantasy novel series?",
+            "correct_answer": "George R. R. Martin",
+            "incorrect_answers": [
+                "George Lucas",
+                "George Orwell",
+                "George Eliot"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In &quot;The Lord of the Rings,&quot; who is the owner of Asfaloth, the horse which brings Frodo to Rivendell?",
+            "correct_answer": "Glorfindel",
+            "incorrect_answers": [
+                "Arwen",
+                "Aragorn",
+                "Haldir"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Who is the author of the series &quot;Malazan Book of the Fallen&quot;?",
+            "correct_answer": "Steven Erikson",
+            "incorrect_answers": [
+                "Ian Cameron Esslemont",
+                "George R. R. Martin",
+                "J. R. R. Tolkien"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In the year 1818, novelist Mary Shelly is credited with writing a fiction novel and creating this infamous character.",
+            "correct_answer": "Frankenstein&#039;s monster",
+            "incorrect_answers": [
+                "Dracula",
+                "The Thing",
+                "The Invisible Man"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Which of the following authors was not born in England? ",
+            "correct_answer": "Arthur Conan Doyle",
+            "incorrect_answers": [
+                "Graham Greene",
+                "H G Wells",
+                "Arthur C Clarke"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "What position does Harry Potter play in Quidditch?",
+            "correct_answer": "Seeker",
+            "incorrect_answers": [
+                "Beater",
+                "Chaser",
+                "Keeper"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In The Lies of Locke Lamora, what title is Locke known by in the criminal world?",
+            "correct_answer": "The Thorn of Camorr",
+            "incorrect_answers": [
+                "The Rose of the Marrows",
+                "The Thorn of Emberlain",
+                "The Thorn of the Marrows"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In Michael Crichton&#039;s novel &quot;Jurassic Park&quot;, John Hammond meets his demise at the claws of which dinosaur?",
+            "correct_answer": "Procompsognathus",
+            "incorrect_answers": [
+                "Dilophosaurus",
+                "Tyrannosaurus Rex",
+                "Velociraptor"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "By what name was the author Eric Blair better known?",
+            "correct_answer": "George Orwell",
+            "incorrect_answers": [
+                "Aldous Huxley",
+                "Ernest Hemingway",
+                "Ray Bradbury"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In the &quot;Harry Potter&quot; novels, what must a Hogwarts student do to enter the Ravenclaw Common Room?",
+            "correct_answer": "Answer a riddle",
+            "incorrect_answers": [
+                "Rhythmically tap barrels with a wand",
+                "Speak a password",
+                "Knock in sequence"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Which American author was also a budding travel writer and wrote of his adventures with his dog Charley?",
+            "correct_answer": "John Steinbeck",
+            "incorrect_answers": [
+                "F. Scott Fitzgerald",
+                "Ernest Hemingway",
+                "William Faulkner"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "By what nickname is Jack Dawkins known in the Charles Dickens novel, &#039;Oliver Twist&#039;?",
+            "correct_answer": "The Artful Dodger",
+            "incorrect_answers": [
+                "Fagin",
+                "Bull&rsquo;s-eye",
+                "Mr. Fang"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "What book series published by Jim Butcher follows a wizard in modern day Chicago?",
+            "correct_answer": "The Dresden Files",
+            "incorrect_answers": [
+                "A Hat in Time",
+                "The Cinder Spires",
+                "My Life as a Teenage Wizard"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "The book &quot;Fahrenheit 451&quot; was written by whom?",
+            "correct_answer": "Ray Bradbury",
+            "incorrect_answers": [
+                "R. L. Stine",
+                "Wolfgang Amadeus Mozart",
+                "Stephen King"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In &quot;Little Women&quot;, which of the March sisters married Laurie?",
+            "correct_answer": "Amy",
+            "incorrect_answers": [
+                "Beth",
+                "Jo",
+                "Meg"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In Alice in Wonderland, what is the name of Alice&#039;s kitten?",
+            "correct_answer": "Dinah",
+            "incorrect_answers": [
+                "Oscar",
+                "Heath",
+                "Smokey"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "J.K. Rowling completed &quot;Harry Potter and the Deathly Hallows&quot; in which hotel in Edinburgh, Scotland?",
+            "correct_answer": "The Balmoral",
+            "incorrect_answers": [
+                "The Dunstane Hotel",
+                "Hotel Novotel",
+                "Sheraton Grand Hotel &amp; Spa"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Which Russian author wrote the epic novel War and Peace?",
+            "correct_answer": "Leo Tolstoy",
+            "incorrect_answers": [
+                "Fyodor Dostoyevsky",
+                "Alexander Pushkin",
+                "Vladimir Nabokov"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "What was the name of the Mysterious Island, in Jules Verne&#039;s &quot;The Mysterious Island&quot;?",
+            "correct_answer": "Lincoln Island",
+            "incorrect_answers": [
+                "Vulcania Island",
+                "Prometheus Island",
+                "Neptune Island"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Which of the following was the author of &quot;Username Evie&quot;?",
+            "correct_answer": "Joe Sugg",
+            "incorrect_answers": [
+                "Zoe Sugg",
+                "Joe Weller",
+                "Alfie Deyes"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "The title of Adolf Hitler&#039;s autobiography &quot;Mein Kampf&quot; is what when translated to English?",
+            "correct_answer": "My Struggle",
+            "incorrect_answers": [
+                "My Hatred",
+                "My Sadness",
+                "My Desire"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Which novel by John Grisham was conceived on a road trip to Florida while thinking about stolen books with his wife?",
+            "correct_answer": "Camino Island",
+            "incorrect_answers": [
+                "Rogue Lawyer",
+                "Gray Mountain",
+                "The Litigators"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Who is the protagonist of the book: &quot;The Catcher in the Rye&quot; by J.D. Salinger",
+            "correct_answer": "Holden Caulfield",
+            "incorrect_answers": [
+                "Holden David",
+                "Jerome Caulfield",
+                "Jerome David"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In the novel &quot;Lord of the Rings&quot;, how many rings of power were given to the race of man?",
+            "correct_answer": "9",
+            "incorrect_answers": [
+                "5",
+                "11",
+                "13"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In Romance of the Three Kingdoms, who was not a member of the Peach Garden Oath?",
+            "correct_answer": "Zhao Yun",
+            "incorrect_answers": [
+                "Liu Bei",
+                "Guan Yu",
+                "Zhang Fei"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In the &quot;The Hobbit&quot;, who kills Smaug?",
+            "correct_answer": "Bard",
+            "incorrect_answers": [
+                "Bilbo Baggins",
+                "Gandalf the Grey",
+                "Frodo"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "The novel &quot;Of Mice And Men&quot; was written by what author? ",
+            "correct_answer": "John Steinbeck ",
+            "incorrect_answers": [
+                "George Orwell",
+                "Mark Twain ",
+                "Harper Lee"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Which of these books was NOT written by the Czech author Karel Čapek?",
+            "correct_answer": "Journey to the Center of the Earth",
+            "incorrect_answers": [
+                "The War with the Newts",
+                "R.U.R. (Rossum&#039;s Universal Robots)",
+                "Dashenka, or the Life of a Puppy"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "The book &quot;The Little Prince&quot; was written by...",
+            "correct_answer": "Antoine de Saint-Exup&eacute;ry",
+            "incorrect_answers": [
+                "Miguel de Cervantes Saavedra",
+                "Jane Austen",
+                "F. Scott Fitzgerald"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "What is the make and model of the tour vehicles in &quot;Jurassic Park&quot; (1990)?",
+            "correct_answer": "1989 Toyota Land Cruiser",
+            "incorrect_answers": [
+                "1989 Jeep Wrangler YJ Sahar",
+                "1989 Ford Explorer XLT",
+                "Mercedes M-Class"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Which of the following is not a work authored by Fyodor Dostoevsky?",
+            "correct_answer": "Anna Karenina",
+            "incorrect_answers": [
+                "Notes from the Underground",
+                "Crime and Punishment",
+                "The Brothers Karamazov"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "What was the last message of the Dolphins in &quot;The Hitchhiker&#039;s Guide to the Galaxy&quot;?",
+            "correct_answer": "&quot;So long, and thanks for all the fish.&quot;",
+            "incorrect_answers": [
+                "&quot;The answer is 42.&quot;",
+                "&quot;Land of the brave.&quot;",
+                "&quot;Goodbye cruel world!&quot;"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Who wrote the 1967 horror novel &quot;Rosemary&#039;s Baby&quot;?",
+            "correct_answer": "Ira Levin",
+            "incorrect_answers": [
+                "Stephen King",
+                "Robert Bloch",
+                "Mary Shelley"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "What is the name of the gang that Ponyboy is a part of in the book, The Outsiders?",
+            "correct_answer": "The Greasers",
+            "incorrect_answers": [
+                "The Outsiders",
+                "The Mafia",
+                "The Socs"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Who wrote the children&#039;s story &quot;The Little Match Girl&quot;?",
+            "correct_answer": "Hans Christian Andersen",
+            "incorrect_answers": [
+                "Charles Dickens",
+                "Lewis Carroll",
+                "Oscar Wilde"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In the Lord of the Rings, who is the father of the dwarf Gimli?",
+            "correct_answer": "Gloin",
+            "incorrect_answers": [
+                "Thorin Oakenshield",
+                "Bombur",
+                "Dwalin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "According to The Hitchhiker&#039;s Guide to the Galaxy book, the answer to life, the universe and everything else is...",
+            "correct_answer": "42",
+            "incorrect_answers": [
+                "Loving everyone around you",
+                "Chocolate",
+                "Death"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "What was the pen name of novelist, Mary Ann Evans?",
+            "correct_answer": "George Eliot",
+            "incorrect_answers": [
+                "George Orwell",
+                "George Bernard Shaw",
+                "George Saunders"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "In Terry Pratchett&#039;s Discworld novel &#039;Wyrd Sisters&#039;, which of these are not one of the three main witches?",
+            "correct_answer": "Winny Hathersham",
+            "incorrect_answers": [
+                "Granny Weatherwax",
+                "Nanny Ogg",
+                "Magrat Garlick"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Mary Shelley is the author of what classic horror story?",
+            "correct_answer": "Frankenstein",
+            "incorrect_answers": [
+                "Dracula",
+                "Strange Case of Dr Jekyll and Mr Hyde",
+                "The Legend of Sleepy Hollow"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "What is the name of Eragon&#039;s dragon in &quot;Eragon&quot;?",
+            "correct_answer": "Saphira",
+            "incorrect_answers": [
+                "Glaedr",
+                "Thorn",
+                "Arya"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Books",
+            "question": "Which of these book series is by James Patterson?",
+            "correct_answer": "Maximum Ride",
+            "incorrect_answers": [
+                "Harry Potter",
+                "The Legend of Xanth",
+                "The Bartemaeus Trilogy"
+            ]
+        }
+    ]
+}

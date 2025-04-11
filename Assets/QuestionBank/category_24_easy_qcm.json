@@ -1,0 +1,100 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Politics",
+            "question": "How many people are in the U.S. House of Representatives?",
+            "correct_answer": "435",
+            "incorrect_answers": [
+                "260",
+                "415",
+                "50"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Politics",
+            "question": "Which of the following Pacific Islander countries is ruled by a constitutional monarchy?",
+            "correct_answer": "Tonga",
+            "incorrect_answers": [
+                "Palau",
+                "Fiji",
+                "Kiribati"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Politics",
+            "question": "Former United States President Bill Clinton famously played which instrument?",
+            "correct_answer": "Saxophone",
+            "incorrect_answers": [
+                "Baritone horn",
+                "Piano",
+                "Violin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Politics",
+            "question": "Which former US president was nicknamed &quot;Teddy&quot; after he refused to shoot a defenseless black bear?",
+            "correct_answer": "Theodore Roosevelt",
+            "incorrect_answers": [
+                "Woodrow Wilson",
+                "James F. Fielder",
+                "Andrew Jackson"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Politics",
+            "question": "Whose 2016 presidential campaign slogan was &quot;Make America Great Again&quot;?",
+            "correct_answer": "Donald Trump",
+            "incorrect_answers": [
+                "Ted Cruz",
+                "Marco Rubio",
+                "Bernie Sanders"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Politics",
+            "question": "According to the United States Constitution, how old must a person be to be elected President of the United States?",
+            "correct_answer": "35",
+            "incorrect_answers": [
+                "30",
+                "40",
+                "45"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Politics",
+            "question": "Who was the 45th President of the United States?",
+            "correct_answer": "Donald Trump",
+            "incorrect_answers": [
+                "Barack Obama",
+                "Bill Clinton",
+                "George Bush"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Politics",
+            "question": "The largest consumer market in 2015 was...",
+            "correct_answer": "The United States of America",
+            "incorrect_answers": [
+                "Germany",
+                "Japan",
+                "United Kingdom"
+            ]
+        }
+    ]
+}

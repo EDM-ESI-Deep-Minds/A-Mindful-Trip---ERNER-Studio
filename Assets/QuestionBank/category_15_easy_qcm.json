@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which of the following is NOT one of the main characters in Grand Theft Auto V&rsquo;s story mode?",
+            "correct_answer": "Tommy Vercetti",
+            "incorrect_answers": [
+                "Michael de Santa",
+                "Franklin Clinton",
+                "Trevor Phillips"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "What video game sparked controversy because of its hidden &quot;Hot Coffee&quot; minigame?",
+            "correct_answer": "Grand Theft Auto: San Andreas",
+            "incorrect_answers": [
+                "Grand Theft Auto: Vice City",
+                "Hitman: Blood Money",
+                "Cooking Mama"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which of these is a type of monster found in Minecraft?",
+            "correct_answer": "Skeleton",
+            "incorrect_answers": [
+                "Werewolf",
+                "Vampire",
+                "Minotaur"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In Need for Speed: Most Wanted (2005), what was the name of the main antagonist?",
+            "correct_answer": "Clarence &quot;Razor&quot; Callahan",
+            "incorrect_answers": [
+                "Hector &quot;Ming&quot; Domingo",
+                "Toru &quot;Bull&quot; Sato",
+                "Karl &quot;Baron&quot; Smit"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Who is the last boss in Night In The Woods&#039; Demontower minigame?",
+            "correct_answer": "The Blood Thief",
+            "incorrect_answers": [
+                "Mega Hairball ",
+                "King Skellie ",
+                "Krampus "
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which franchise was NOT featured in the 2015 video game &quot;Lego Dimensions&quot;?",
+            "correct_answer": "Breaking Bad",
+            "incorrect_answers": [
+                "Portal",
+                "Doctor Who",
+                "Back to the Future"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In Divinity: Original Sin II, what is the name of the skeletal origin character?",
+            "correct_answer": "Fane",
+            "incorrect_answers": [
+                "Lohse",
+                "The Red Prince",
+                "There are no skeletal origin characters"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "What is the boss round featured in the &quot;Call Of Duty: Zombies&quot; map &quot;Five&quot;?",
+            "correct_answer": "The Pentagon Thief",
+            "incorrect_answers": [
+                "Hellhounds",
+                "Jumping Jacks",
+                "Napalm Zombie"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which of these is NOT a main playable character in &quot;Grand Theft Auto V&quot;?",
+            "correct_answer": "Lamar",
+            "incorrect_answers": [
+                "Trevor",
+                "Michael",
+                "Franklin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In Five Nights at Freddy&#039;s 1, how can you make Golden Freddy disappear?",
+            "correct_answer": "Enable cameras",
+            "incorrect_answers": [
+                "Turn on the light",
+                "Shut the door",
+                "Do nothing"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which company is the one responsible for creating the strategy videogame Stellaris?",
+            "correct_answer": "Paradox Development Studio",
+            "incorrect_answers": [
+                "Overkill Software",
+                "Tripwire Interactive LLC",
+                "Ensemble Studios"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "What is Pikachu&#039;s National Pok&eacute;Dex Number?",
+            "correct_answer": "#025",
+            "incorrect_answers": [
+                "#001",
+                "#031",
+                "#109"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which Nintendo 64 game did NOT have Luigi in it?",
+            "correct_answer": "Super Mario 64",
+            "incorrect_answers": [
+                "Mario Party 2",
+                "Paper Mario",
+                "Super Smash Bros."
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Who stars in Brutal Legend?",
+            "correct_answer": "Jack Black",
+            "incorrect_answers": [
+                "Kanye West",
+                "Lemmy",
+                "Ozzy Osbourne"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In what year was &quot;Metal Gear Solid&quot; released in North America?",
+            "correct_answer": "1998",
+            "incorrect_answers": [
+                "1987",
+                "2001",
+                "2004"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Who is the leader of Team Mystic in Pok&eacute;mon Go?",
+            "correct_answer": "Blanche",
+            "incorrect_answers": [
+                "Candela",
+                "Spark",
+                "Willow"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which of the following Pokemon Types was present in the original games, Red and Blue?",
+            "correct_answer": "Ice",
+            "incorrect_answers": [
+                "Steel",
+                "Dark",
+                "Fairy"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "What is the hardest possible difficulty in &quot;Deus Ex: Mankind Divided&quot;?",
+            "correct_answer": "I Never Asked For This",
+            "incorrect_answers": [
+                "Nightmare",
+                "Extreme",
+                "Guru"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "What year was the game &quot;Overwatch&quot; revealed?",
+            "correct_answer": "2014",
+            "incorrect_answers": [
+                "2015",
+                "2011",
+                "2008"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "The Touhou Project series of games is often associated with which genre?",
+            "correct_answer": "Shoot &#039;em up",
+            "incorrect_answers": [
+                "Strategy",
+                "FPS",
+                "Casual"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In Dota 2, Wraith King was previously known as...",
+            "correct_answer": "Skeleton King",
+            "incorrect_answers": [
+                "Reaper King",
+                "Skull King",
+                "Hell King"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In The Elder Scrolls: Oblivion, the horse that goes by the name Shadowmere is given by what guild?",
+            "correct_answer": "Dark Brotherhood",
+            "incorrect_answers": [
+                "Thieves",
+                "Fighters",
+                "Mages"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In what year was Hearthstone released?",
+            "correct_answer": "2014",
+            "incorrect_answers": [
+                "2011",
+                "2013",
+                "2012"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In which mall does &quot;Dead Rising&quot; take place?",
+            "correct_answer": "Willamette Parkview Mall",
+            "incorrect_answers": [
+                "Liberty Mall",
+                "Twin Pines Mall",
+                "Central Square Shopping Center"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "What is the name of the 4-armed Chaos Witch from the 2016 video game &quot;Battleborn&quot;?",
+            "correct_answer": "Orendi",
+            "incorrect_answers": [
+                "Orendoo",
+                "Oranda",
+                "Randy"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In the first game of the Sly Cooper franchise, what family heirloom did Sly Cooper want to steal back?",
+            "correct_answer": "Thievius Raccoonus",
+            "incorrect_answers": [
+                "Raccoon Training 101",
+                "The Art of Sneak",
+                "Raccoonus Teachus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which Animal Crossing game was for the Nintendo Wii?",
+            "correct_answer": "Animal Crossing: City Folk",
+            "incorrect_answers": [
+                "Animal Crossing: New Leaf",
+                "Animal Crossing: Wild World",
+                "Animal Crossing: Population Growing!"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which of the following was NOT a playable character in the game Kingdom Hearts: Birth by Sleep?",
+            "correct_answer": "Ignis",
+            "incorrect_answers": [
+                "Ventus",
+                "Terra",
+                "Aqua"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Who is the main character of the game Half-Life: Opposing Force?",
+            "correct_answer": "Adrian Shephard",
+            "incorrect_answers": [
+                "Gordon Freeman",
+                "Alyx Vance",
+                "Barney Calhoun"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "The acronym DOTA stands for",
+            "correct_answer": "Defense of the Ancients",
+            "incorrect_answers": [
+                "Defense of the Artifacts",
+                "Defense of the Antiques",
+                "Defense of the Animated"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which franchise does the creature &quot;Slowpoke&quot; originate from?",
+            "correct_answer": "Pokemon",
+            "incorrect_answers": [
+                "Dragon Ball",
+                "Sonic The Hedgehog",
+                "Yugioh"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which eSports team came first place in The International Dota 2 Championship 2016?",
+            "correct_answer": "Wings Gaming",
+            "incorrect_answers": [
+                "Digital Chaos",
+                "Evil Geniuses",
+                "Fnatic"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Blinky, Pinky, Inky and Clyde are characters from which classic video game?",
+            "correct_answer": "Pac-Man",
+            "incorrect_answers": [
+                "Gauntlet",
+                "Space Invaders",
+                "Street Fighter"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Who is the creator of the Super Smash Bros. Series?",
+            "correct_answer": "Masahiro Sakurai",
+            "incorrect_answers": [
+                "Reggie Fils-Aim&eacute;",
+                "Bill Trinen",
+                "Hideo Kojima"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In the video game &quot;Team Fortress 2&quot;, which class is able to double jump?",
+            "correct_answer": "Scout",
+            "incorrect_answers": [
+                "Spy",
+                "Engineer",
+                "Pyro"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "What is the protagonist&#039;s title given by the demons in DOOM (2016)?",
+            "correct_answer": "Doom Slayer",
+            "incorrect_answers": [
+                "Doom Guy",
+                "Doom Marine",
+                "Doom Reaper"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which game did NOT get financed via Crowdfunding?",
+            "correct_answer": "Enter the Gungeon",
+            "incorrect_answers": [
+                "Town of Salem",
+                "Undertale",
+                "Tower Unite"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Who is the founder of Team Fortress 2&#039;s fictional company &quot;Mann Co&quot;?",
+            "correct_answer": "Zepheniah Mann",
+            "incorrect_answers": [
+                "Cave Johnson",
+                "Wallace Breem",
+                "Saxton Hale"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "What is the name of the talking cat in Persona 5?",
+            "correct_answer": "Morgana",
+            "incorrect_answers": [
+                "Teddie",
+                "Marie",
+                "Ryuji"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "What is the default alias that Princess Garnet goes by in Final Fantasy IX?",
+            "correct_answer": "Dagger",
+            "incorrect_answers": [
+                "Dirk",
+                "Garnet",
+                "Quina"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Who is able to grab the survivors with his tongue in Left 4 Dead?",
+            "correct_answer": "Smoker",
+            "incorrect_answers": [
+                "Jockey",
+                "Hunter",
+                "Boomer"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "What video game engine does the videogame Quake 2 run in?",
+            "correct_answer": "iD Tech 2",
+            "incorrect_answers": [
+                "iD Tech 3",
+                "iD Tech 1",
+                "Unreal Engine"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which character was introduced to the Super Smash Bros franchise in Super Smash Bros Melee?",
+            "correct_answer": "Sheik",
+            "incorrect_answers": [
+                "Samus",
+                "Lucas",
+                "Mega Man"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Who is the main protagonist of Dead Space?",
+            "correct_answer": "Isaac Clarke",
+            "incorrect_answers": [
+                "Commander Shepard",
+                "Gordon Freeman",
+                "Master Chief"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In the original Mega Man series, who is Mega Man&#039;s arch nemesis?",
+            "correct_answer": "Dr. Wily",
+            "incorrect_answers": [
+                "Dr. Light",
+                "Dr. Bad",
+                "Mr. Z"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In the video game franchise &quot;Halo&quot;, what is the UNSC&#039;s main opposing faction called?",
+            "correct_answer": "The Covenant",
+            "incorrect_answers": [
+                "The Reckoning",
+                "The Peoples",
+                "The Slaughterers"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In the video game, Half-life, what event started the Half-life universe as we know today?",
+            "correct_answer": "The Resonance Cascade",
+            "incorrect_answers": [
+                "World War 3",
+                "The Xen Attack",
+                "The Black Mesa Nuke"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Which &quot;Fallout: New Vegas&quot; quest is NOT named after a real-life song?",
+            "correct_answer": "They Went That-a-Way",
+            "incorrect_answers": [
+                "Come Fly With Me",
+                "Ain&#039;t That a Kick in the Head",
+                "Ring-a-Ding Ding"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "Who is the creator of Touhou project?",
+            "correct_answer": "Zun",
+            "incorrect_answers": [
+                "Jun",
+                "Twilight Frontier",
+                "Tasofro"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "The starting pistol of the Terrorist team in a competitive match of Counter Strike: Global Offensive is what?",
+            "correct_answer": "Glock-18",
+            "incorrect_answers": [
+                "Tec-9",
+                "Desert Eagle",
+                "Dual Berretas"
+            ]
+        }
+    ]
+}

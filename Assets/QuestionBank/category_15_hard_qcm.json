@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "The Bracken from Lethal Company is also known as:",
+            "correct_answer": "The Flower Man",
+            "incorrect_answers": [
+                "The Phantom",
+                "The Shadow Demon",
+                "Larry"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In the Mario Kart series, which game introduced the &quot;Shield Drifting&quot; mechanic?",
+            "correct_answer": "Mario Kart Arcade GP DX",
+            "incorrect_answers": [
+                "Mario Kart: Double Dash",
+                "Mario Kart Super Circuit",
+                "Mario Kart DS"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "According to Toby Fox, what was the method to creating the initial tune for Megalovania?",
+            "correct_answer": "Singing into a Microphone",
+            "incorrect_answers": [
+                "Playing a Piano",
+                "Using a Composer Software",
+                "Listened to birds at the park"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What was the nickname of the original model for Half-Life&#039;s protagonist Gordon Freeman?",
+            "correct_answer": "Ivan the Space Biker",
+            "incorrect_answers": [
+                "Gordon the Space Biker",
+                "Ivan the Alien Biker",
+                "Gordon the Alien Biker"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What programming language does the Source Engine use?",
+            "correct_answer": "C++ ",
+            "incorrect_answers": [
+                "Python",
+                "Java",
+                "Lua"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What is the fastest speed possible in Trackmania&sup2;: Stadium?",
+            "correct_answer": "1000  km/h",
+            "incorrect_answers": [
+                "500 km/h",
+                "320 km/h",
+                "100 km/h"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Given that all party members are maxed, who is the fastest party member in Super Mario RPG: Legend of The Seven Stars?",
+            "correct_answer": "Geno",
+            "incorrect_answers": [
+                "Mario",
+                "Bowser",
+                "Peach"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "When was the first Call of Duty title released?",
+            "correct_answer": "October 29, 2003",
+            "incorrect_answers": [
+                "December 1, 2003",
+                "November 14, 2002",
+                "July 18, 2004"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In &quot;Starbound&quot;, what is the max HP of the monster &quot;Punchy&quot;?",
+            "correct_answer": "50,000 HP",
+            "incorrect_answers": [
+                "9,000,000 HP",
+                "100 HP",
+                "150,000 HP"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "GoldenEye 007 on the Nintendo 64 was planned to allow you to play as all previous Bond actors, with the exception of who?",
+            "correct_answer": "George Lazenby",
+            "incorrect_answers": [
+                "Roger Moore",
+                "Sean Connery",
+                "Timothy Dalton"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "The Internet Meme &quot;All your base are belong to us&quot; is based on the poorly translated English Version of which Video Game?",
+            "correct_answer": "Zero Wing",
+            "incorrect_answers": [
+                "F-Zero",
+                "Wing Commander",
+                "Star Wars: X-Wing"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What Pok&eacute;mon&#039;s Base Stat Total does not change when it evolves?",
+            "correct_answer": "Scyther",
+            "incorrect_answers": [
+                "Pikachu",
+                "Sneasel",
+                "Larvesta"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Which character from the Mega Man series made a small cameo on Volt Catfish&#039;s introduction scene in CD versions of Mega Man X3?",
+            "correct_answer": "Auto",
+            "incorrect_answers": [
+                "Eddie",
+                "Tango",
+                "Rush"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In the game Danganronpa: Happy Trigger Havoc, the character Aoi Asahina&#039;s ultimate ability is what?",
+            "correct_answer": "Ultimate Swimmer",
+            "incorrect_answers": [
+                "Ultimate Detective",
+                "Ultimate Gambler",
+                "Ultimate Dancer"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In World of Warcraft, which raid instance features a chess event?",
+            "correct_answer": "Karazhan",
+            "incorrect_answers": [
+                "Zul&#039;Aman",
+                "Blackwing Lair",
+                "Temple of Ahn&#039;Qiraj"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What is the name of the virus that infected New York in Tom Clancy&#039;s The Division?",
+            "correct_answer": "Dollar Flu",
+            "incorrect_answers": [
+                "Ebola",
+                "Red Poison",
+                "Smallpox"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Counting the Blood and Wine DLC, how many Hero Cards are there in total in The Witcher 3?",
+            "correct_answer": "25",
+            "incorrect_answers": [
+                "30",
+                "20",
+                "15"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What animal is on Link&#039;s pajamas in The Legend of Zelda: The Wind Waker?",
+            "correct_answer": "Crawfish",
+            "incorrect_answers": [
+                "Lobster",
+                "Salmon",
+                "Swordfish"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In &quot;Halo&quot;, what is the name of the planet which Installation 04 orbits?",
+            "correct_answer": "Threshold",
+            "incorrect_answers": [
+                "Substance",
+                "Sanghelios",
+                "Te"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Who is the victim mentioned in the second KG-8 incident, in Ace attorney Investigations, Case 4?",
+            "correct_answer": "Deid Mann",
+            "incorrect_answers": [
+                "Frank Sahwit",
+                "Shey De Killer",
+                "Raymond Shields"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In Super Smash Bros. for Nintendo 3DS and Nintendo Wii U, who was the sixth fighter to be added to the game post-launch?",
+            "correct_answer": "Corrin",
+            "incorrect_answers": [
+                "Cloud",
+                "Bayonnetta",
+                "Ryu"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Which of the following games in the The Legend of Zelda franchise was released in Japan before North America?",
+            "correct_answer": "The Legend of Zelda: The Minish Cap",
+            "incorrect_answers": [
+                "The Legend of Zelda: Twilight Princess",
+                "The Legend of Zelda: Spirit Tracks",
+                "The Legend of Zelda: Four Swords"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What device allows Tracer to manipulate her own time in the game &quot;Overwatch&quot;?",
+            "correct_answer": "Chronal Accelerator",
+            "incorrect_answers": [
+                "B.L.I.N.K",
+                "Spacial Displacement Manipulator",
+                "TMD (Time Manipulation Device)"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Before Super Smash Bros. contained Nintendo characters, what was it known as internally?",
+            "correct_answer": "Dragon King: The Fighting Game",
+            "incorrect_answers": [
+                "Contest of Champions",
+                "Smash and Pummel",
+                "Fighter of the Ages: Conquest"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Which one of these characters appeared in Marvel vs Capcom: Infinite? ",
+            "correct_answer": "Firebrand",
+            "incorrect_answers": [
+                "Wolverine",
+                "Dr. Doom",
+                "Jill Valentine"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In Monster Hunter Generations, which of these hunter arts are exclusive to the Longsword?",
+            "correct_answer": "Unhinged Spirit",
+            "incorrect_answers": [
+                "Shoryugeki",
+                "Provoke",
+                "Demon Riot"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What was the code name given to Sonic the Hedgehog 4 during its development?",
+            "correct_answer": "Project Needlemouse",
+            "incorrect_answers": [
+                "Project Bluespike",
+                "Project Roboegg",
+                "Project Darksphere"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Which Kingdom Hearts game featured the cast of &quot;The World Ends With You&quot;?",
+            "correct_answer": "Dream Drop Distance",
+            "incorrect_answers": [
+                "Birth By Sleep",
+                "365/2 Days",
+                "Re:Chain of Memories"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What vault in the video game &quot;Fallout 3&quot; is the home of multiple clones named Gary?",
+            "correct_answer": "Vault 108",
+            "incorrect_answers": [
+                "Vault 101",
+                "Vault 87",
+                "Vault 21"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What military rank is the protagonist &quot;Nomad&quot; in &quot;Crysis&quot;?",
+            "correct_answer": "First Lieutenant",
+            "incorrect_answers": [
+                "Captain",
+                "First Sargent ",
+                "Staff Sargent"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Which of these characters in &quot;Undertale&quot; can the player NOT go on a date with?",
+            "correct_answer": "Toriel",
+            "incorrect_answers": [
+                "Papyrus",
+                "Undyne",
+                "Alphys"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In the original DOOM (1993) which of the following is NOT a cheat code?",
+            "correct_answer": "IDCLIP",
+            "incorrect_answers": [
+                "IDFA",
+                "IDDQD",
+                "IDSPISPOPD"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In the video game &quot;Metal Gear Solid&quot;, what did Revolver Ocelot consider the greatest handgun ever made?",
+            "correct_answer": "Colt Single Action Army",
+            "incorrect_answers": [
+                "Colt Python",
+                "Colt M1892",
+                "Colt 1851 Navy Revolver"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In Super Mario RPG: Legend of The Seven Stars, what is Geno&#039;s real name?",
+            "correct_answer": "♡♪!?",
+            "incorrect_answers": [
+                "Geno",
+                "Exor",
+                "Smithy"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "&quot;Exile&quot; and &quot;Revelations&quot; were the third and fourth installments of which PC game series?",
+            "correct_answer": "Myst",
+            "incorrect_answers": [
+                "Shivers",
+                "Doom",
+                "Tropico"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In &quot;Pok&eacute;mon Sun and Moon&quot;, Team Skull took over which town?",
+            "correct_answer": "Po Town",
+            "incorrect_answers": [
+                "Heahea City",
+                "Tapu Village",
+                "Iki Town"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Which of the following commercial vehicles from Grand Theft Auto IV did NOT reappear in Grand Theft Auto V?",
+            "correct_answer": "Steed",
+            "incorrect_answers": [
+                "Mule",
+                "Benson",
+                "Pony"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In &quot;Team Fortress 2&quot;, how much health does a scout have when overhealed?",
+            "correct_answer": "185",
+            "incorrect_answers": [
+                "215",
+                "195",
+                "225"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In &quot;Sonic the Hedgehog 2&quot; for the Sega Genesis, what do you input in the sound test screen to access the secret level select?",
+            "correct_answer": "The Lead Programmer&#039;s birthday",
+            "incorrect_answers": [
+                "The first release date of &quot;Sonic the Hedgehog&quot;",
+                "The date Sonic Team was founded",
+                "The first release date of &quot;Sonic the Hedgehog 2&quot;"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Which of these Pok&eacute;mon cannot learn Surf?",
+            "correct_answer": "Arbok",
+            "incorrect_answers": [
+                "Linoone",
+                "Tauros",
+                "Nidoking"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Which retro video game was released first?",
+            "correct_answer": "Space Invaders",
+            "incorrect_answers": [
+                "Galaga",
+                "Pac-Man",
+                "Asteroids"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In the game Enter the Gungeon, which one of these is not a playable character?",
+            "correct_answer": "The Wizard",
+            "incorrect_answers": [
+                "The Bullet",
+                "The Robot",
+                "The Cultist"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What was the world&#039;s first video game?",
+            "correct_answer": "Tennis for Two",
+            "incorrect_answers": [
+                "Spacewar!",
+                "Pong",
+                "Space Travel"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In the SHMUP series, &quot;Gradius&quot;, what is the name of the antagonist faction you fight against?",
+            "correct_answer": "Bacterion",
+            "incorrect_answers": [
+                "Bydo",
+                "Belsar",
+                "ORN Empire"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Which game in the &quot;Monster Hunter&quot; series introduced the monster &quot;Gobul&quot;?",
+            "correct_answer": "Monster Hunter Tri",
+            "incorrect_answers": [
+                "Monster Hunter Freedom Unite",
+                "Monster Hunter Frontier",
+                "Monster Hunter Generations"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "The voice actor for which Portal 2 character was not a TV or film actor prior to the game?",
+            "correct_answer": "GLaDOS",
+            "incorrect_answers": [
+                "Cave Johnson",
+                "Wheatley",
+                "Atlas / P-Body"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "Which car did not appear in the 2002 Lego Game: Drome Racers?",
+            "correct_answer": "Wasp",
+            "incorrect_answers": [
+                "Raptor",
+                "Hornet",
+                "Behemoth"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "What Touhou Project character&#039;s first ever appearance was as a midboss in the eighth game, Imperishable Night?",
+            "correct_answer": "Tewi Inaba",
+            "incorrect_answers": [
+                "Mystia Lorelei",
+                "Kaguya Houraisan",
+                "Rumia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "How many people can you recruit in the game Suikoden in a single playthrough?",
+            "correct_answer": "107",
+            "incorrect_answers": [
+                "108",
+                "93",
+                "96"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Video Games",
+            "question": "In the &quot;PAYDAY&quot; series, what is the real name of the character known as &quot;Dallas&quot;?",
+            "correct_answer": "Nathan Steele",
+            "incorrect_answers": [
+                "Nate Siemens",
+                "Nick Stamos",
+                "Nolan Stuhlinger"
+            ]
+        }
+    ]
+}

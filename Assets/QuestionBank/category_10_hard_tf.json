@@ -1,0 +1,24 @@
+{
+    "question": [
+        {
+            "type": "boolean",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "Harry Potter was born on July 31st, 1980.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In Harry Potter and the Deathly Hallows, Hermione destroyed the fourth Horcrux by stabbing it with the Sword of Gryffindor.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        }
+    ]
+}

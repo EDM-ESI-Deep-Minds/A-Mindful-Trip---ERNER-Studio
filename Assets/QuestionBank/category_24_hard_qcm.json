@@ -1,0 +1,136 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "In June 2017, Saudi Arabia and Egypt broke off ties with which country over its supposed support for terrorism?",
+            "correct_answer": "Qatar",
+            "incorrect_answers": [
+                "Bahrain",
+                "United States of America",
+                "Russia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "What is the name of Niccol&ograve; Machiavelli&#039;s work that argued effective leaders needed to crush their opponents at all costs?",
+            "correct_answer": "The Prince",
+            "incorrect_answers": [
+                "The Rape of Lucrece",
+                "Will to Power",
+                "Love&#039;s Labours Lost"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "What is centralism?",
+            "correct_answer": " Concentration of power and authority in a central organization.",
+            "incorrect_answers": [
+                "Conforming to one single common political agenda.",
+                "Remaining politically neutral.",
+                "The grey area in the spectrum of political left and right."
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "Which Native American tribe/nation requires at least one half blood quantum (equivalent to one parent) to be eligible for membership?",
+            "correct_answer": "Yomba Shoshone Tribe",
+            "incorrect_answers": [
+                "Standing Rock Sioux Tribe",
+                "Kiowa Tribe of Oklahoma",
+                "Pawnee Nation of Oklahoma"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "Which of the following United States Presidents served the shortest term in office?",
+            "correct_answer": "William Henry Harrison",
+            "incorrect_answers": [
+                "Zachary Taylor",
+                "James A. Garfield",
+                "Warren G. Harding"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "Which of the following United States senators is known for performing a 24-hour long filibuster?",
+            "correct_answer": "Strom Thurmond",
+            "incorrect_answers": [
+                "Roy Blunt",
+                "John Barrasso",
+                "Chuck Schumer"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "Who was the longest-serving senator in US history, serving from 1959 to 2010?",
+            "correct_answer": "Robert Byrd",
+            "incorrect_answers": [
+                "Daniel Inouye",
+                "Strom Thurmond",
+                "Joe Biden"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "&quot;Yes, America Can!&quot; was this United States politician&#039;s de facto campaign slogan in 2004.",
+            "correct_answer": "George W. Bush",
+            "incorrect_answers": [
+                "John Kerry",
+                "Barack Obama",
+                "Al Gore"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "What year did the effort to deploy the Common Core State Standards (CCSS) in the US begin?",
+            "correct_answer": "2009",
+            "incorrect_answers": [
+                "2012",
+                "2006",
+                "1997"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "Who is the only US president to serve two non-consecutive terms in office?",
+            "correct_answer": "Grover Cleveland",
+            "incorrect_answers": [
+                "James K. Polk",
+                "Franklin D. Roosevelt",
+                "Thomas Jefferson"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "Which of these was an official candidate in the 2017 British General Election?",
+            "correct_answer": "Lord Buckethead",
+            "incorrect_answers": [
+                "James Francis",
+                "Robert Wimbledon",
+                "Sir Crumpetsby"
+            ]
+        }
+    ]
+}

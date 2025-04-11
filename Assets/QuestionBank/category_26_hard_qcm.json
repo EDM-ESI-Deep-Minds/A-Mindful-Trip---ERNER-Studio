@@ -1,0 +1,64 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Celebrities",
+            "question": "The eccentric natural philosopher Tycho Brahe kept what as a pet?",
+            "correct_answer": "Moose",
+            "incorrect_answers": [
+                "Dog",
+                "Bear",
+                "Goat"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Celebrities",
+            "question": "Who was Donald Trump&#039;s first wife?",
+            "correct_answer": "Ivana Zeln&iacute;čkov&aacute;",
+            "incorrect_answers": [
+                "Melania Knauss",
+                "Marla Maples",
+                "Nancy Davis"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Celebrities",
+            "question": "Billy Herrington is from which US state?",
+            "correct_answer": "New York",
+            "incorrect_answers": [
+                "Arizona",
+                "California",
+                "Georgia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Celebrities",
+            "question": "Which school in Surrey, England did Steve Backshall attend?",
+            "correct_answer": "Collingwood College",
+            "incorrect_answers": [
+                "Tomlinscote School",
+                "Kings International College",
+                "Lyndhurst School"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Celebrities",
+            "question": "What was the religion of famous singer &quot;Freddie Mercury&quot;?",
+            "correct_answer": "Zoroastrianism",
+            "incorrect_answers": [
+                "Paganism",
+                "Ashurism",
+                "Judaism"
+            ]
+        }
+    ]
+}

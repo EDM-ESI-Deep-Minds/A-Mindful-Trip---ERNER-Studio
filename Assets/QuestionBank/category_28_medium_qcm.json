@@ -1,0 +1,280 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which of the following countries has officially banned the civilian use of dash cams in cars?",
+            "correct_answer": "Austria",
+            "incorrect_answers": [
+                "United States",
+                "Czechia",
+                "South Korea"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which of the following vehicles featured a full glass roof at base model?",
+            "correct_answer": "Renault Avantime",
+            "incorrect_answers": [
+                "Chevy Volt",
+                "Mercedes-Benz A-Class",
+                "Honda Odyssey"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Complete the following analogy: Audi is to Volkswagen as Infiniti is to ?",
+            "correct_answer": "Nissan",
+            "incorrect_answers": [
+                "Honda",
+                "Hyundai",
+                "Subaru"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Enzo Ferrari was originally an auto racer for what manufacturer before founding his own car company?",
+            "correct_answer": "Alfa Romeo",
+            "incorrect_answers": [
+                "Auto Union",
+                "Mercedes Benz",
+                "Bentley"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which of these car models are produced by Lamborghini?",
+            "correct_answer": "Aventador",
+            "incorrect_answers": [
+                "Huayra",
+                "918",
+                "Chiron"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which of these cars is NOT considered one of the 5 Modern Supercars by Ferrari?",
+            "correct_answer": "Testarossa",
+            "incorrect_answers": [
+                "Enzo Ferrari",
+                "F40",
+                "288 GTO"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which of the following is NOT a Russian car manufacturer?",
+            "correct_answer": "BYD",
+            "incorrect_answers": [
+                "Silant",
+                "Dragon",
+                "GAZ"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "What do the 4 Rings in Audi&#039;s Logo represent?",
+            "correct_answer": "Previously independent automobile manufacturers",
+            "incorrect_answers": [
+                "States in which Audi makes the most sales",
+                "Main cities vital to Audi",
+                "Countries in which Audi makes the most sales"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which animal features on the logo for Abarth, the motorsport division of Fiat?",
+            "correct_answer": "Scorpion",
+            "incorrect_answers": [
+                "Snake",
+                "Bull",
+                "Horse"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "What country is the Hussarya supercar, made by the car manufacturer &quot;Arrinera&quot;, assembled in?",
+            "correct_answer": "Poland",
+            "incorrect_answers": [
+                "China",
+                "Sweden",
+                "Italy"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which of the following passenger jets is the longest?",
+            "correct_answer": "Boeing 747-8",
+            "incorrect_answers": [
+                "Airbus A350-1000",
+                "Airbus A330-200",
+                "Boeing 787-10"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which car brand does NOT belong to General Motors?",
+            "correct_answer": "Ford",
+            "incorrect_answers": [
+                "Buick",
+                "Cadillac",
+                "Chevrolet"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which one of the following is not made by Ford?",
+            "correct_answer": "Camry",
+            "incorrect_answers": [
+                "Fusion",
+                "Model A",
+                "F-150"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "When was Cadillac founded?",
+            "correct_answer": "1902",
+            "incorrect_answers": [
+                "1964",
+                "1898",
+                "1985"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "The British Rail Class 700, Class 707 and the Class 717 are part of what train family?",
+            "correct_answer": "Desiro City",
+            "incorrect_answers": [
+                "Networker",
+                "Aventra",
+                "Electrostar"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "When was Tesla founded?",
+            "correct_answer": "2003",
+            "incorrect_answers": [
+                "2008",
+                "2005",
+                "2007"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which supercar company is from Sweden?",
+            "correct_answer": "Koenigsegg",
+            "incorrect_answers": [
+                "Bugatti",
+                "Lamborghini",
+                "McLaren"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which car manufacturer created the &quot;Aventador&quot;?",
+            "correct_answer": "Lamborghini",
+            "incorrect_answers": [
+                "Ferrari",
+                "Pagani",
+                "Bugatti"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which Japanese company is the world&#039;s largest manufacturer of motorcycles?",
+            "correct_answer": "Honda",
+            "incorrect_answers": [
+                "Yamaha",
+                "Suzuki",
+                "Kawasaki"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which one is NOT the function of engine oil in car engines?",
+            "correct_answer": "Combustion",
+            "incorrect_answers": [
+                "Lubrication",
+                "Cooling",
+                "Reduce corrosion"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "What nickname was given to Air Canada Flight 143 after it ran out of fuel and glided to safety in 1983?",
+            "correct_answer": "Gimli Glider",
+            "incorrect_answers": [
+                "Gimli Microlight",
+                "Gimli Chaser",
+                "Gimli Superb"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "Which country has the international vehicle registration letter &#039;A&#039;?",
+            "correct_answer": "Austria",
+            "incorrect_answers": [
+                "Afghanistan",
+                "Australia",
+                "Armenia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Vehicles",
+            "question": "What part of an automobile engine uses lobes to open and close intake and exhaust valves, and allows an air/fuel mixture into the engine?",
+            "correct_answer": "Camshaft",
+            "incorrect_answers": [
+                "Piston",
+                "Drive shaft",
+                "Crankshaft"
+            ]
+        }
+    ]
+}

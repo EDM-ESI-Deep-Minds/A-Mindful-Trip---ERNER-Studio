@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Before the American colonies switched to the Gregorian calendar in 1752, on what date did their new year start?",
+            "correct_answer": "March 25th",
+            "incorrect_answers": [
+                "June 1st",
+                "September 25th",
+                "December 1st"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Which one of these rulers did not belong to the Habsburg dynasty?",
+            "correct_answer": "Philip V",
+            "incorrect_answers": [
+                "Charles V",
+                "Philip II",
+                "Francis Joseph"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Which King of England was faced with the Peasants&#039; Revolt in 1381?",
+            "correct_answer": "Richard II",
+            "incorrect_answers": [
+                "Edward III",
+                "Edward II",
+                "Henry IV"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "When was the &quot;Siege of Leningrad&quot; lifted during World War II?",
+            "correct_answer": "January 1944",
+            "incorrect_answers": [
+                "September 1943",
+                "November 1943",
+                "March 1944"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "When did the French Revolution begin?",
+            "correct_answer": "May 05 1789",
+            "incorrect_answers": [
+                "April 12 1789",
+                "April 05 1789",
+                "May 06 1799"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Pianist Fr&eacute;d&eacute;ric Chopin was a composer of which musical era?",
+            "correct_answer": "Romantic",
+            "incorrect_answers": [
+                "Classic",
+                "Baroque",
+                "Renaissance"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What did the first vending machines in the early 1880&#039;s dispense?",
+            "correct_answer": "Post cards",
+            "incorrect_answers": [
+                "Alcohol",
+                "Cigarettes",
+                "Sodas "
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Toussaint Louverture led a successful slave revolt in which country?",
+            "correct_answer": "Haiti",
+            "incorrect_answers": [
+                "France",
+                "Cuba",
+                "United States"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Which of the following physicists did NOT work on the Manhattan project?",
+            "correct_answer": "Murray Gell-Mann",
+            "incorrect_answers": [
+                "Richard Feynman",
+                "J. Robert Oppenheimer",
+                "John Von-Neumann"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What age was King Henry V when he died?",
+            "correct_answer": "35",
+            "incorrect_answers": [
+                "62",
+                "87",
+                "73"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Which is the hull NO. of the Fletcher class destroyer Fletcher?",
+            "correct_answer": "DD-445",
+            "incorrect_answers": [
+                "DD-992",
+                "DD-444",
+                "DD-446"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Who is the creator of the soft drink, Dr. Pepper?",
+            "correct_answer": "Charles Alderton",
+            "incorrect_answers": [
+                "James Wellington",
+                "Johnson Hinsin",
+                "Boris Heviltik"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "The ontological argument for the proof of God&#039;s existence is first attributed to whom?",
+            "correct_answer": "Anselm of Canterbury",
+            "incorrect_answers": [
+                "Ren&eacute; Descartes",
+                "Immanuel Kant",
+                "Aristotle"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What year was Canada founded in?",
+            "correct_answer": "1867",
+            "incorrect_answers": [
+                "1798",
+                "1859",
+                "1668"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What was the name of the German offensive operation in October 1941 to take Moscow before winter?",
+            "correct_answer": "Operation Typhoon",
+            "incorrect_answers": [
+                "Operation Sunflower",
+                "Operation Barbarossa",
+                "Case Blue"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "During the Wars of the Roses (1455 - 1487) which Englishman was dubbed &quot;the Kingmaker&quot;?",
+            "correct_answer": "Richard Neville",
+            "incorrect_answers": [
+                "Richard III",
+                "Henry V",
+                "Thomas Warwick"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What was the aim of the &quot;Umbrella Revolution&quot; in Hong Kong in 2014?",
+            "correct_answer": "Genuine universal suffrage",
+            "incorrect_answers": [
+                "Gaining Independence",
+                "Go back under British Rule",
+                "Lower taxes"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "With which Greek philosopher would you associate the phrase, &quot;I know that I know nothing&quot;?",
+            "correct_answer": "Socrates",
+            "incorrect_answers": [
+                "Aristotle",
+                "Plato",
+                "Pythagoras"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "How many women joined the United States Armed Services during World War II?",
+            "correct_answer": "350,000",
+            "incorrect_answers": [
+                "225,000",
+                "100,000",
+                "500,000"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What micro-state is considered to have the oldest constitution still in effect?",
+            "correct_answer": "San Marino",
+            "incorrect_answers": [
+                "Andorra",
+                "Monaco",
+                "Saint Kitts and Nevis"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Which day did World War I begin?",
+            "correct_answer": "July 28",
+            "incorrect_answers": [
+                "January 28",
+                "June 28",
+                "April 28"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Which of these positions did the astronomer and physicist Isaac Newton not hold?",
+            "correct_answer": "Surveyor to the City of London",
+            "incorrect_answers": [
+                "Professor of Mathematics",
+                "Warden of the Royal Mint",
+                "Member of Parliament"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Who was the first man to travel into outer space twice?",
+            "correct_answer": "Gus Grissom",
+            "incorrect_answers": [
+                "Vladimir Komarov",
+                "Charles Conrad",
+                "Yuri Gagarin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "List the following Iranic empires in chronological order:",
+            "correct_answer": "Median, Achaemenid, Parthian, Sassanid",
+            "incorrect_answers": [
+                "Median, Achaemenid, Sassanid, Parthian",
+                "Achaemenid, Median, Parthian, Sassanid",
+                "Achaemenid, Median, Sassanid, Parthian"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "How many sonatas did Ludwig van Beethoven write?",
+            "correct_answer": "32",
+            "incorrect_answers": [
+                "50",
+                "31",
+                "21"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Which U.S. president was said to have been too honest to lie to his father about chopping down a cherry tree?",
+            "correct_answer": "George Washington",
+            "incorrect_answers": [
+                "Abraham Lincoln",
+                "Thomas Jefferson",
+                "James Monroe"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Which of these theoretical phycisists first predicted the existence of antimatter?",
+            "correct_answer": "Paul Dirac",
+            "incorrect_answers": [
+                "Niels Bohr",
+                "Albert Einstein",
+                "Werner Heisenberg"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "When did Lithuania declare independence from the Soviet Union?",
+            "correct_answer": "March 11th, 1990",
+            "incorrect_answers": [
+                "December 25th, 1991",
+                "December 5th, 1991",
+                "April 20th, 1989"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What was the name of the spy ring that helped the United States win the Revolutionary War?",
+            "correct_answer": "Culper Ring",
+            "incorrect_answers": [
+                "New York Spy Ring",
+                "Washington&#039;s Spies",
+                "Unnamed"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "When was the city of Rome, Italy founded?",
+            "correct_answer": "753 BCE",
+            "incorrect_answers": [
+                "902 BCE",
+                "524 BCE",
+                "697 BCE"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "In 1547 who became the 1st Tsar of Russia",
+            "correct_answer": "Ivan the Terrible",
+            "incorrect_answers": [
+                "Alexis of Russia",
+                "Mikhail Romanov",
+                "Peter the Great"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "When did Canada leave the confederation to become their own nation?",
+            "correct_answer": "July 1st, 1867",
+            "incorrect_answers": [
+                "July 1st, 1763",
+                "July 1st, 1832",
+                "July 1st, 1902"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Which country did the Eureka Rebellion, an 1856 battle against colonial rule, take place in?",
+            "correct_answer": "Australia",
+            "incorrect_answers": [
+                "India",
+                "Canada",
+                "Brazil"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What was Napoleon Bonaparte&#039;s name before he changed it?",
+            "correct_answer": "Napoleone di Buonaparte",
+            "incorrect_answers": [
+                "Naapolion van Bonijpaart",
+                "Napole&atilde;o do Boaparte",
+                "Napoleona de Buenoparte"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What was the last colony the UK ceded marking the end of the British Empire?",
+            "correct_answer": "Hong Kong",
+            "incorrect_answers": [
+                "India",
+                "Australia",
+                "Ireland"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What year was the United States Declaration of Independence signed?",
+            "correct_answer": "1776",
+            "incorrect_answers": [
+                "1775",
+                "1774",
+                "1777"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "From 1940 to 1942, what was the capital-in-exile of Free France ?",
+            "correct_answer": "Brazzaville",
+            "incorrect_answers": [
+                "Algiers",
+                "Paris",
+                "Tunis"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Which of the following was not one of Joseph Stalin&#039;s ten blows during World War II?",
+            "correct_answer": "Vistula-Oder Offensive",
+            "incorrect_answers": [
+                "Crimean Offensive",
+                "Leningrad-Novgorod Offensive",
+                "Operation Bagration"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Who assassinated President James A. Garfield?",
+            "correct_answer": "Charles Guiteau",
+            "incorrect_answers": [
+                "Sirhan Sirhan",
+                "Leon Czolgosz",
+                "John Wilkes Booth"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "In the year 1900, what were the most popular first names given to boy and girl babies born in the United States?",
+            "correct_answer": "John and Mary",
+            "incorrect_answers": [
+                "Joseph and Catherine",
+                "William and Elizabeth",
+                "George and Anne"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Which naval battle was considered the turning point of the Pacific Ocean Theater during World War 2?",
+            "correct_answer": "Battle of Midway",
+            "incorrect_answers": [
+                "Attack on Truk Island",
+                "Attack on Pearl Harbor",
+                "Battle of the Coral Sea"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "In the Seven Wonders of the World, which wonder is the only that has survived to this day?",
+            "correct_answer": "Great Pyramid of Giza",
+            "incorrect_answers": [
+                "Colossus of Rhodes",
+                "Lighthouse of Alexandria",
+                "Statue of Zeus at Olympia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What was found in 1946 by two young shepards near a cave?",
+            "correct_answer": "Dead Sea Scrolls",
+            "incorrect_answers": [
+                "The Blackbeard Chest",
+                "Sheep",
+                "The First Oaxaca Cave Sleeper"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "What is the name of the Boeing B-29 that dropped the &#039;Little Boy&#039; atomic bomb on Hiroshima?",
+            "correct_answer": "Enola Gay",
+            "incorrect_answers": [
+                "Necessary Evil",
+                "The Great Artiste",
+                "Full House"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "During the Roman Triumvirate of 42 BCE, what region of the Roman Republic was given to Lepidus?",
+            "correct_answer": "Hispania ",
+            "incorrect_answers": [
+                "Italia",
+                "Gallia",
+                "Asia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "The coat of arms of the King of Spain contains the arms from the monarchs of Castille, Leon, Aragon and which other former Iberian kingdom?",
+            "correct_answer": "Navarre",
+            "incorrect_answers": [
+                "Galicia",
+                "Granada",
+                "Catalonia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "Who was the last emperor of Mexico?",
+            "correct_answer": "Ferdinand Maximilian",
+            "incorrect_answers": [
+                "Andr&eacute;s Manuel L&oacute;pez Obrador",
+                "Napoleon III",
+                "Agust&iacute;n de Iturbide"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "The pantheon in Rome was used to worship what god?",
+            "correct_answer": "Any god they wanted",
+            "incorrect_answers": [
+                "Athena",
+                "Zeus",
+                "Both Athena and Zeus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "During World War I, which nation&#039;s monarchs were blood related?",
+            "correct_answer": "England, Germany, Russia",
+            "incorrect_answers": [
+                "France, Russia, Germany",
+                "Serbia, Russia, Croatia",
+                "Germany, Spain, Austria"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "History",
+            "question": "After the 1516 Battle of Marj Dabiq, the Ottoman Empire took control of Jerusalem from which sultanate?",
+            "correct_answer": "Mamluk",
+            "incorrect_answers": [
+                "Ayyubid",
+                "Ummayyad",
+                "Seljuq"
+            ]
+        }
+    ]
+}
