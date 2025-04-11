@@ -26,7 +26,7 @@ public static class EloCalculator
                 else
                 {
                     int penalty = (difficultyLevel == 1) ? 25 : 10;
-                    category.categoryElo -= penalty;
+                    category.categoryElo = Mathf.Max(0, category.categoryElo - penalty);
                     Debug.Log($"❌ Incorrect. Lost {penalty} Elo in {categoryName}");
                 }
 
