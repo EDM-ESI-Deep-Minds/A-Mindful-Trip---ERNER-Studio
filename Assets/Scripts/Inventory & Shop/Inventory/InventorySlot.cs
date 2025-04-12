@@ -32,10 +32,10 @@ public class InventorySlot : MonoBehaviour
         {
             Debug.Log("Slot clicked: empty.");
             // Overriding the normal click sound
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlaySFX(AudioManager.instance.impossibleActionSFX);
-            }
+            // if (AudioManager.instance != null)
+            // {
+            //     AudioManager.instance.PlaySFX(AudioManager.instance.impossibleActionSFX);
+            // }
         }
         else
         {
