@@ -169,7 +169,7 @@ public class AudioManager : MonoBehaviour
 
     void PlayMusicForScene(string sceneName)
     {
-        Debug.Log($"PlayMusicForScene called for {sceneName}. Music Enabled: {isMusicEnabled}");
+        // Debug.Log($"PlayMusicForScene called for {sceneName}. Music Enabled: {isMusicEnabled}");
 
         // Early return if music is disabled
         if (!isMusicEnabled)
@@ -367,14 +367,14 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip clip, float volume = 1f)
     {
         if (clip == null || !isSFXEnabled) return;
-        Debug.Log($"Playing SFX with volume: {sfxVolume * volume}");
+        // Debug.Log($"Playing SFX with volume: {sfxVolume * volume}");
         sfxSource.PlayOneShot(clip, volume * sfxVolume);
     }
 
     // ====== Volume and Toggle Settings ======
     public void SetMusicVolume(float volume)
     {
-        Debug.Log($"Music volume set to: {volume}");
+        // Debug.Log($"Music volume set to: {volume}");
 
         musicVolume = Mathf.Clamp01(volume);
 
@@ -390,7 +390,7 @@ public class AudioManager : MonoBehaviour
 
     public void SetSFXVolume(float volume)
     {
-        Debug.Log($"SFX volume set to: {volume}");
+        // Debug.Log($"SFX volume set to: {volume}");
 
         sfxVolume = Mathf.Clamp01(volume);
 
@@ -411,7 +411,7 @@ public class AudioManager : MonoBehaviour
 
     public void ToggleMusic(bool isEnabled)
     {
-        Debug.Log($"Music toggled to: {isEnabled}");
+        // Debug.Log($"Music toggled to: {isEnabled}");
 
         isMusicEnabled = isEnabled;
         PlayerPrefs.SetInt("MusicEnabled", isMusicEnabled ? 1 : 0);
@@ -449,7 +449,7 @@ public class AudioManager : MonoBehaviour
 
     public void ToggleSFX(bool isEnabled)
     {
-        Debug.Log($"SFX toggled to: {isEnabled}");
+        // Debug.Log($"SFX toggled to: {isEnabled}");
 
         isSFXEnabled = isEnabled;
         PlayerPrefs.SetInt("SFXEnabled", isSFXEnabled ? 1 : 0);
@@ -466,10 +466,10 @@ public class AudioManager : MonoBehaviour
             }
 
             // Play a test sound to confirm SFX is working
-            if (buttonClickSFX != null)
-            {
-                PlaySFX(buttonClickSFX, 1f);
-            }
+            // if (buttonClickSFX != null)
+            // {
+            //     PlaySFX(buttonClickSFX, 1f);
+            // }
         }
         else
         {

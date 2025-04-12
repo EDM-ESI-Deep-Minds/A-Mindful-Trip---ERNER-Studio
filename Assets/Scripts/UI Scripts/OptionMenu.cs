@@ -12,10 +12,10 @@ public class OptionsMenu : MonoBehaviour
     {
         if (AudioManager.instance == null)
         {
-            Debug.LogError("AudioManager instance not found!");
+            // Debug.LogError("AudioManager instance not found!");
             return;
         }
-        Debug.Log("OptionsMenu: AudioManager instance found");
+        // Debug.Log("OptionsMenu: AudioManager instance found");
 
         // Temporarily removing listeners to avoid triggering the callbacks
         musicSlider.onValueChanged.RemoveListener(OnMusicVolumeChange);
@@ -44,8 +44,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void OnMusicVolumeChange(float value)
     {
-        Debug.Log($"🔹 OnMusicVolumeChange() called with: {value}");
-        Debug.Log($"🔹 Current Slider Value: {musicSlider.value}");
+        // Debug.Log($"🔹 OnMusicVolumeChange() called with: {value}");
+        // Debug.Log($"🔹 Current Slider Value: {musicSlider.value}");
 
 
         PlayerPrefs.SetFloat("MusicVolume", value);  // Saving the new value
@@ -56,8 +56,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void OnSFXVolumeChange(float value)
     {
-        Debug.Log($"🔹 OnSFXVolumeChange() called with: {value}");
-        Debug.Log($"🔹 Current SFX Slider Value: {sfxSlider.value}");
+        // Debug.Log($"🔹 OnSFXVolumeChange() called with: {value}");
+        // Debug.Log($"🔹 Current SFX Slider Value: {sfxSlider.value}");
         PlayerPrefs.SetFloat("SFXVolume", value);
         PlayerPrefs.Save();
         AudioManager.instance.SetSFXVolume(value);
@@ -66,8 +66,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void OnToggleMusic(bool enabled)
     {
-        Debug.Log($"🔹 OnToggleMusic() called with: {enabled}");
-        Debug.Log($"🔹 Current Music Toggle State: {musicToggle.isOn}");
+        // Debug.Log($"🔹 OnToggleMusic() called with: {enabled}");
+        // Debug.Log($"🔹 Current Music Toggle State: {musicToggle.isOn}");
 
         PlayerPrefs.SetInt("MusicEnabled", enabled ? 1 : 0);
         PlayerPrefs.Save();
@@ -76,8 +76,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void OnToggleSFX(bool enabled)
     {
-        Debug.Log($"🔹 OnToggleSFX() called with: {enabled}");
-        Debug.Log($"🔹 Current SFX Toggle State: {sfxToggle.isOn}");
+        // Debug.Log($"🔹 OnToggleSFX() called with: {enabled}");
+        // Debug.Log($"🔹 Current SFX Toggle State: {sfxToggle.isOn}");
 
         PlayerPrefs.SetInt("SFXEnabled", enabled ? 1 : 0);
         PlayerPrefs.Save();
