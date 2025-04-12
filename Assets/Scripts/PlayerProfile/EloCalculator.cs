@@ -1,8 +1,9 @@
+using System.Linq;
 using UnityEngine;
 
 public static class EloCalculator
 {
-    private const int BaseElo = 100;
+    private const int BaseElo = 50;
 
     // Difficulty: 1 = Easy, 2 = Medium, 3 = Hard
     public static void UpdateCategoryElo(ProfileManager.PlayerProfile profile, string categoryName, bool correct, int difficultyLevel)
@@ -18,23 +19,23 @@ public static class EloCalculator
 
                 if (correct)
                 {
-                    int gain = Mathf.RoundToInt(BaseElo * D) + CB;
+                    int gain = Mathf.RoundToInt(BaseElo * D) *(1 + CB);
                     category.correctAnswers++;
                     category.categoryElo += gain;
-                    Debug.Log($"✅ Correct! Gained {gain} Elo in {categoryName}");
+                    Debug.Log($" Correct! Gained {gain} Elo in {categoryName}");
                 }
                 else
                 {
-                    int penalty = (difficultyLevel == 1) ? 25 : 10;
+                    int penalty = Mathf.RoundToInt(BaseElo * D) * (1 + CB);
                     category.categoryElo = Mathf.Max(0, category.categoryElo - penalty);
-                    Debug.Log($"❌ Incorrect. Lost {penalty} Elo in {categoryName}");
+                    Debug.Log($" Incorrect. Lost {penalty} Elo in {categoryName}");
                 }
 
                 break;
             }
         }
 
-        CalculateGeneralElo(profile);
+        CalculateGeneralElo(profile,D);
         ProfileManager profileManager = Object.FindObjectOfType<ProfileManager>();
         if (profileManager != null)
         {
@@ -55,39 +56,51 @@ public static class EloCalculator
 
     private static int CalculateCategoryBonus(ProfileManager.PlayerProfile profile, string categoryName)
     {
-        int minAnswers = int.MaxValue;
-        foreach (var category in profile.categories)
-        {
-            if (category.questionsAnswered < minAnswers)
-                minAnswers = category.questionsAnswered;
-        }
+        // Find the category being evaluated
+        var targetCategory = profile.categories.FirstOrDefault(c => c.categoryName == categoryName);
+        if (targetCategory == null)
+            return 0;
 
-        foreach (var category in profile.categories)
-        {
-            if (category.categoryName == categoryName && category.questionsAnswered == minAnswers)
-            {
-                return 5; // Add bonus for weakest (least practiced) category
-            }
-        }
+        // Calculate RareCorrectRatio
+        int incorrectAnswers = targetCategory.questionsAnswered - targetCategory.correctAnswers;
+        int totalQuestions = targetCategory.questionsAnswered;
+        float rareCorrectRatio = (float)incorrectAnswers / (totalQuestions + 1);
 
-        return 0; // No bonus
+        // Calculate and return the Category Bonus
+        float categoryBonus = rareCorrectRatio * 0.5f;
+
+        // Convert to integer (assuming we need to return an integer value)
+        return (int)Mathf.Round(categoryBonus);
     }
 
-    public static void CalculateGeneralElo(ProfileManager.PlayerProfile profile)
+    public static void CalculateGeneralElo(ProfileManager.PlayerProfile profile,float difficultyLevel)
     {
-        int totalQuestions = 0;
-        int weightedEloSum = 0;
+        float weightedEloSum = 0;
+        float weightedQuestionsSum = 0;
 
         foreach (var category in profile.categories)
         {
-            totalQuestions += category.questionsAnswered;
-            weightedEloSum += category.categoryElo * category.questionsAnswered;
+            // Get difficulty coefficient for this category
+            float difficultyCoefficient = difficultyLevel;
+
+            // Calculate numerator: CategoryElo × QuestionsAnswered × D
+            weightedEloSum += category.categoryElo * category.questionsAnswered * difficultyCoefficient;
+
+            // Calculate denominator: QuestionsAnswered × D
+            weightedQuestionsSum += category.questionsAnswered * difficultyCoefficient;
         }
 
-        if (totalQuestions > 0)
+        // Avoid division by zero
+        if (weightedQuestionsSum > 0)
         {
-            profile.Elo = weightedEloSum / totalQuestions;
-            Debug.Log($"📊 General Elo updated: {profile.Elo}");
+            profile.Elo = (int)Mathf.Round(weightedEloSum / weightedQuestionsSum); 
+            Debug.Log($"General Elo updated: {profile.Elo}");
+        }
+        else
+        {
+            profile.Elo = 0; // Default Elo when no questions answered
+            Debug.Log("General Elo not updated: No questions answered");
         }
     }
+
 }

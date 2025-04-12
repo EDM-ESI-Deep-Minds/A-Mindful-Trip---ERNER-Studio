@@ -17,16 +17,15 @@ public class InputHandler : MonoBehaviour
     [System.Obsolete]
     public void AddNameToList()
     {
-        // Define default categories
-        CategoryElo[] defaultCategories = new CategoryElo[]
+        // Create default categories from 9 to 32
+        List<CategoryElo> defaultCategories = new List<CategoryElo>();
+        for (int i = 9; i <= 32; i++)
         {
-            new CategoryElo("Math", 50, 0, 0),
-            new CategoryElo("Science", 50, 0, 0),
-            new CategoryElo("History", 50, 0, 0)
-        };
+            defaultCategories.Add(new CategoryElo(i.ToString(), 50, 0, 0));
+        }
 
-        // Create a new InputEntry with default categories
-        entries.Add(new InputEntry(nameInput.text, 50, 1, defaultCategories));
+        // Create a new InputEntry with the default categories
+        entries.Add(new InputEntry(nameInput.text, 50, 1, defaultCategories.ToArray()));
 
         FileHandler.SaveToJSON(entries, filename);
 
@@ -34,17 +33,19 @@ public class InputHandler : MonoBehaviour
 
         if (profileManager != null)
         {
+            // Convert categories to ProfileManager.CategoryElo[]
+            List<ProfileManager.CategoryElo> pmCategories = new List<ProfileManager.CategoryElo>();
+            for (int i = 9; i <= 32; i++)
+            {
+                pmCategories.Add(new ProfileManager.CategoryElo(i.ToString(), 50, 0, 0));
+            }
+
             ProfileManager.PlayerProfile newProfile = new ProfileManager.PlayerProfile
             {
                 playerName = nameInput.text,
                 Elo = 50,
                 character = 1,
-                categories = new ProfileManager.CategoryElo[]
-                {
-                    new ProfileManager.CategoryElo("Math", 50, 0, 0),
-                    new ProfileManager.CategoryElo("Science", 50, 0, 0),
-                    new ProfileManager.CategoryElo("History", 50, 0, 0)
-                }
+                categories = pmCategories.ToArray()
             };
             profileManager.SelectProfile(newProfile);
         }
