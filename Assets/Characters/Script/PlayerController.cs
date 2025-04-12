@@ -93,11 +93,23 @@ public class PlayerController : NetworkBehaviour
         {
             playerUIController.HideShopUI();
             isShopOpen = false;
+
+            // Resume the scene music after leaving shop
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.ResumeSceneMusic();
+            }
         }
         else
         {
             playerUIController.ShowShopUI();
             isShopOpen = true;
+
+            // Playing temporary shop music
+            if (AudioManager.instance != null && AudioManager.instance.dansShopOST != null)
+            {
+                AudioManager.instance.PlayTemporaryMusic(AudioManager.instance.dansShopOST, waitForCompletion: false);
+            }
         }
     }
     // Called by Shopkeeper when banner is clicked

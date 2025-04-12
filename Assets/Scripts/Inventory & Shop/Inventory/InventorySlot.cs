@@ -25,4 +25,23 @@ public class InventorySlot : MonoBehaviour
         storedItem = null;
         itemImage.enabled = false;
     }
+
+    public void OnSlotClick()
+    {
+        if (!IsOccupied())
+        {
+            Debug.Log("Slot clicked: empty.");
+            // Overriding the normal click sound
+            // if (AudioManager.instance != null)
+            // {
+            //     AudioManager.instance.PlaySFX(AudioManager.instance.impossibleActionSFX);
+            // }
+        }
+        else
+        {
+            // Slot has an item, continuinh normal interaction
+            Debug.Log("Slot clicked: has item.");
+            // Item logic to be added
+        }
+    }
 }

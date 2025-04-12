@@ -24,6 +24,8 @@ public class ShopSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         this.price = price;
         priceText.text = price.ToString();
     }
+    
+    public int GetPrice() => price;
 
     public void onBuyButtonClicked()
     {

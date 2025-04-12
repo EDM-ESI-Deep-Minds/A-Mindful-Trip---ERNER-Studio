@@ -61,6 +61,12 @@ public class DiceManager : NetworkBehaviour
             dice2Animator.enabled = true;
             dice2Animator.SetTrigger("Roll");
         }
+
+        // Playing dice roll SFX
+        if (AudioManager.instance != null && AudioManager.instance.diceRollSFX != null)
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.diceRollSFX);
+        }
     }
 
     [ClientRpc]

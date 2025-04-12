@@ -92,4 +92,13 @@ public class InventoryManager : MonoBehaviour
         UpdateCoinText();
     }
 
+    public bool HasSpace()
+    {
+        foreach (InventorySlot slot in inventorySlots)
+        {
+            if (!slot.IsOccupied()) return true;
+        }
+        return false;
+    }
+
 }

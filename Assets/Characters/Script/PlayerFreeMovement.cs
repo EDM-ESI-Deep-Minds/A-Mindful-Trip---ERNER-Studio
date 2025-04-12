@@ -15,6 +15,8 @@ public class PlayerFreeMovement : NetworkBehaviour
     private Animator animator;
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     private Vector2 lastMovementDirection = Vector2.right;
+    private bool isWalking = false;
+
 
     // NetworkVariable to synchronize movement inputs
     private NetworkVariable<Vector2> networkMovementInput = new NetworkVariable<Vector2>();
@@ -113,12 +115,25 @@ public class PlayerFreeMovement : NetworkBehaviour
             if (success)
             {
                 UpdateAnimation(currentInput);
+                // Starting walking loop once
+                if (!isWalking)
+                {
+                    isWalking = true;
+                    AudioManager.instance?.StartWalkingLoop();
+                }
             }
         }
         else
         {
             // If there's no input, play the idle animation
             SetIdleAnimation();
+
+            // Stopping walk sound when idle
+            if (isWalking)
+            {
+                isWalking = false;
+                AudioManager.instance?.StopWalkingLoop();
+            }
         }
     }
 
