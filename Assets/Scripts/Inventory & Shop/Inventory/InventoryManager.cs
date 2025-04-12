@@ -15,8 +15,6 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private Image[] lockIcon;
     private bool islocked;
     //don't forget to unlock the inventory when being in the hub
-    [SerializeField] private TMP_Text heartText;
-    private int currentHearts;
 
 
 
@@ -24,14 +22,12 @@ public class InventoryManager : MonoBehaviour
     {
         inventoryItems = new List<int>();
         currentCoins = startingCoins;
-        currentHearts = GameMode.Instance.GetMaxPlayers() == 2 ? 4 : 3;
     }
 
     private void Start()
     {
         Debug.Log($"InventoryManager Start(): currentCoins = {currentCoins}");
         UpdateCoinText();
-        UpdateHeartText();
     }
 
     private void UpdateCoinText()
@@ -41,13 +37,6 @@ public class InventoryManager : MonoBehaviour
         // Update coin text with current coin value
         coinText.text = currentCoins.ToString();
         coinText.ForceMeshUpdate(); // Ensures TMP refresh
-    }
-
-    private void UpdateHeartText()
-    {
-        heartText.text = "";
-        heartText.text = currentHearts.ToString();
-        heartText.ForceMeshUpdate();
     }
 
     public bool CanAfford(int price)
@@ -127,26 +116,6 @@ public class InventoryManager : MonoBehaviour
     {
         currentCoins -= price;
         UpdateCoinText();
-    }
-
-    public void removeHeart()
-    {
-        currentHearts--;
-        UpdateHeartText();
-
-        //TO-DO make sure to verify the currentHearts to see if the players lost
-    }
-
-    public void addHeart()
-    {
-        currentHearts++;
-        UpdateHeartText();
-    }
-
-    public int getHearts()
-    {
-        //to check for loss externally if needed
-        return currentHearts;
     }
 
     public int getCredit()

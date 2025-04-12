@@ -173,6 +173,7 @@ MonoBehaviour:
   leftArrow: {fileID: 0}
   upArrow: {fileID: 0}
   downArrow: {fileID: 0}
+  backWardButton: {fileID: 0}
 --- !u!114 &4321131637784802128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +379,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   inventoryCanvasPrefab: {fileID: 5622932771324534629, guid: 8fb7dc980ef469e4da268add5a42d9bb, type: 3}
   shopCanvasPrefab: {fileID: 8318903786705242564, guid: ca172750743313142abb5be52b420f0f, type: 3}
+  heartUIPrefab: {fileID: 6716154536446412633, guid: b7d263c7020d540fe952e049f0a0d10b, type: 3}
 --- !u!114 &2293148715387366532
 MonoBehaviour:
   m_ObjectHideFlags: 0

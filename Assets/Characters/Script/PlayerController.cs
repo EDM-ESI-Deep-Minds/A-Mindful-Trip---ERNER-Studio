@@ -15,6 +15,11 @@ public class PlayerController : NetworkBehaviour
     private bool isShopOpen = false;
     private bool isNearShopkeeper = false; // For shop access
 
+
+    [Header("Heart UI")]
+    public GameObject heartUIPrefab;
+    private GameObject heartUIInstance;
+
     public override void OnNetworkSpawn()
     {
 
@@ -30,6 +35,8 @@ public class PlayerController : NetworkBehaviour
         inventoryInstance = Instantiate(inventoryCanvasPrefab, this.transform);
         // Instantiate Shop Canvas (PARENTED to Player!)
         shopInstance = Instantiate(shopCanvasPrefab, this.transform);
+
+        heartUIInstance = Instantiate(heartUIPrefab, this.transform);
 
         // Get managers from instantiated canvases
         inventoryManager = inventoryInstance.GetComponent<InventoryManager>();
