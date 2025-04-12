@@ -11,38 +11,39 @@ public class CurseTileEvent
     public static void handleCurse()
     {
         int curseId = GetRandomCurse();
-        switch (curseId)
-        {
-            case 1:
-                Debug.Log("🩸 Health Penalty: Player loses one heart.");
-                removeHeart();
-                break;
+        removeHeart();
+        //switch (curseId)
+        //{
+        //    case 1:
+        //        Debug.Log("🩸 Health Penalty: Player loses one heart.");
+        //        removeHeart();
+        //        break;
 
-            case 2:
-                Debug.Log("🌀 Reposition: Player loses progress.");
-                reposition();
-                break;
+        //    case 2:
+        //        Debug.Log("🌀 Reposition: Player loses progress.");
+        //        reposition();
+        //        break;
 
-            case 3:
-                Debug.Log("🎒 Remove Item: An item is removed from inventory.");
-                removeItem();
-                break;
+        //    case 3:
+        //        Debug.Log("🎒 Remove Item: An item is removed from inventory.");
+        //        removeItem();
+        //        break;
 
-            case 4:
-                Debug.Log("💰 Remove Credit: Player loses currency/points.");
-                removeCredit();
-                break;
+        //    case 4:
+        //        Debug.Log("💰 Remove Credit: Player loses currency/points.");
+        //        removeCredit();
+        //        break;
 
-            case 5:
-                Debug.Log("🔇 Mute: Player is muted and can't communicate.");
-                mutePlayer();
-                break;
+        //    case 5:
+        //        Debug.Log("🔇 Mute: Player is muted and can't communicate.");
+        //        mutePlayer();
+        //        break;
 
-            case 6:
-                Debug.Log("📦 Lock Inventory: Inventory is unusable for a duration.");
-                lockInventory();
-                break;
-        }
+        //    case 6:
+        //        Debug.Log("📦 Lock Inventory: Inventory is unusable for a duration.");
+        //        lockInventory();
+        //        break;
+        //}
     }
 
     private static int GetRandomCurse()
@@ -65,8 +66,8 @@ public class CurseTileEvent
 
     private static void removeHeart()
     {
-        InventoryManager inventory = Object.FindFirstObjectByType<InventoryManager>();
-        inventory.removeHeart();
+        HeartUIManager heartUI = Object.FindFirstObjectByType<HeartUIManager>();
+        heartUI.removeHeart();
     }
 
     private static void reposition()
