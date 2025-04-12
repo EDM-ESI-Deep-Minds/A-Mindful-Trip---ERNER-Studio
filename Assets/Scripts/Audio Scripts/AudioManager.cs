@@ -37,6 +37,8 @@ public class AudioManager : MonoBehaviour
     private AudioSource bgmSource;
     private AudioSource sfxSource;
     private AudioSource ambientSource;
+    private AudioSource walkSource;
+
     private Coroutine cityLoopCoroutine;
     private Coroutine resumeMusicCoroutine;
 
@@ -67,10 +69,13 @@ public class AudioManager : MonoBehaviour
         bgmSource = gameObject.AddComponent<AudioSource>();
         sfxSource = gameObject.AddComponent<AudioSource>();
         ambientSource = gameObject.AddComponent<AudioSource>();
+        walkSource = gameObject.AddComponent<AudioSource>();
 
         bgmSource.loop = true;
         sfxSource.loop = false;
         ambientSource.loop = true;
+        walkSource.loop = true;
+        walkSource.playOnAwake = false;
 
         LoadAudioSettings();
     }
@@ -371,26 +376,68 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(clip, volume * sfxVolume);
     }
 
-    public void PlayWalkSFXForScene()
+    // public void PlayWalkSFXForScene()
+    // {
+    //     if (!isSFXEnabled) return;
+
+    //     string scene = SceneManager.GetActiveScene().name;
+
+    //     switch (scene)
+    //     {
+    //         case "CountrySide":
+    //         case "Hub&Dans":
+    //             PlaySFX(countrysideWalkSFX);
+    //             break;
+    //         case "Desert":
+    //             PlaySFX(desertWalkSFX);
+    //             break;
+    //         case "City":
+    //             PlaySFX(cityWalkSFX);
+    //             break;
+    //     }
+    // }
+
+    public void StartWalkingLoop()
     {
         if (!isSFXEnabled) return;
 
+        AudioClip walkClip = null;
         string scene = SceneManager.GetActiveScene().name;
 
         switch (scene)
         {
             case "CountrySide":
             case "Hub&Dans":
-                PlaySFX(countrysideWalkSFX);
+                walkClip = countrysideWalkSFX;
                 break;
             case "Desert":
-                PlaySFX(desertWalkSFX);
+                walkClip = desertWalkSFX;
                 break;
             case "City":
-                PlaySFX(cityWalkSFX);
+                walkClip = cityWalkSFX;
                 break;
         }
+
+        if (walkClip != null && walkSource.clip != walkClip)
+        {
+            walkSource.clip = walkClip;
+        }
+
+        if (!walkSource.isPlaying)
+        {
+            walkSource.volume = sfxVolume;
+            walkSource.Play();
+        }
     }
+
+    public void StopWalkingLoop()
+    {
+        if (walkSource.isPlaying)
+        {
+            walkSource.Stop();
+        }
+    }
+
 
 
     // ====== Volume and Toggle Settings ======

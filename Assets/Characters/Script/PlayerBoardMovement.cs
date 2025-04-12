@@ -32,6 +32,8 @@ public class PlayerBoardMovement : NetworkBehaviour
     private int possibleMoves;
     private Vector3Int onlyOneMove;
     private PathTile currentTilePath;
+    private bool isWalkSoundPlaying = false;
+
 
     void Awake()
     {
@@ -40,9 +42,9 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        if (IsOwner) 
+        if (IsOwner)
         {
-            StartCoroutine(FindDiceManager()); 
+            StartCoroutine(FindDiceManager());
             StartCoroutine(FindBoardManager());
         }
     }
@@ -51,12 +53,12 @@ public class PlayerBoardMovement : NetworkBehaviour
     {
         while (boardManager == null)
         {
-            boardManager = FindFirstObjectByType<BoardManager>(); 
+            boardManager = FindFirstObjectByType<BoardManager>();
 
             if (boardManager == null)
             {
                 Debug.LogWarning("BoardManager not found, retrying...");
-                yield return new WaitForSeconds(0.5f); 
+                yield return new WaitForSeconds(0.5f);
             }
         }
 
@@ -96,7 +98,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         diceManager.OnDiceRolled += OnDiceRolled;
     }
 
-  
+
 
     void Start()
     {
@@ -142,7 +144,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     private void OnDiceRolled(int dice1, int dice2)
     {
-       // if (!IsOwner) return;
+        // if (!IsOwner) return;
 
         int totalSteps = dice1 + dice2;
         MovePlayer(totalSteps);
@@ -189,11 +191,31 @@ public class PlayerBoardMovement : NetworkBehaviour
         }
     }
 
+    private void StartWalkSFX()
+    {
+        if (!isWalkSoundPlaying)
+        {
+            isWalkSoundPlaying = true;
+            AudioManager.instance?.StartWalkingLoop();
+        }
+    }
+
+    private void StopWalkSFX()
+    {
+        if (isWalkSoundPlaying)
+        {
+            isWalkSoundPlaying = false;
+            AudioManager.instance?.StopWalkingLoop();
+        }
+    }
+
+
     private IEnumerator MoveAlongPath(int steps)
     {
         if (!RolesManager.IsMyTurn) yield break;
 
         isMoving = true;
+        StartWalkSFX();
 
         Debug.Log($"here is the current tile position {currentTilePos}");
 
@@ -229,7 +251,9 @@ public class PlayerBoardMovement : NetworkBehaviour
                 {
                     selectedDirection = "";
                     isChoosingDirection = true;
+                    StopWalkSFX();
                     yield return new WaitUntil(() => !isChoosingDirection);
+                    StartWalkSFX();
 
                     // Now determine the next tile based on the selected direction
                     foreach (Vector3Int move in currentTile.possibleMoves)
@@ -350,7 +374,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                         }
                     }
                 }
-                
+
             }
             else
             {
@@ -468,20 +492,18 @@ public class PlayerBoardMovement : NetworkBehaviour
                     SetIdleAnimation(animIndex);
                 }
 
-                
+
             }
 
             rb.position = targetPos;
-            AudioManager.instance?.PlayWalkSFXForScene();
             previousTilePos = currentTilePos;
             currentTilePos = nextTilePos;
 
             bool triggered = false;
-           
 
             isMoving = false;
-            //yield return new WaitForSeconds(0.1f);
 
+            //yield return new WaitForSeconds(0.1f);
 
             // Check if this tile has a trigger event
             yield return StartCoroutine(CheckForTileTrigger(result => triggered = result));
@@ -498,6 +520,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         EventTrigger.SelectEventToTrigger(currentTilePath.tileType);
         SetIdleAnimation(0);
         isMoving = false;
+        StopWalkSFX();
         yield return new WaitForSeconds(0.1f);
     }
 
@@ -512,9 +535,9 @@ public class PlayerBoardMovement : NetworkBehaviour
             // get the possible move
             Vector3Int potentialNextPos = currentTilePos + move;
             Debug.Log($"here is the move {move}");
-            if (tile.isIntersection && potentialNextPos!=previousTilePos ) // Count moves where x is greater or equal to zero, incase the intersection is on y
+            if (tile.isIntersection && potentialNextPos != previousTilePos) // Count moves where x is greater or equal to zero, incase the intersection is on y
             {
-               forwardMoveCount++;
+                forwardMoveCount++;
             }
         }
 
@@ -524,8 +547,8 @@ public class PlayerBoardMovement : NetworkBehaviour
     {
         selectedDirection = direction;
         Debug.Log($"here is the selected direction by the user{selectedDirection}");
-        isChoosingDirection = false; 
-        HideArrows(); 
+        isChoosingDirection = false;
+        HideArrows();
     }
 
     void ShowArrowsBasedOnMoves()
@@ -545,11 +568,11 @@ public class PlayerBoardMovement : NetworkBehaviour
             {
                 // Right movement cases
                 if (offset == new Vector3Int(3, 0, 0) || offset == new Vector3Int(4, 0, 0) ||
-                    offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) ||   offset == new Vector3Int(1, 0, 0))
+                    offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) || offset == new Vector3Int(1, 0, 0))
                 {
-                    if (boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(4, 0, 0)) && boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(2, 0, 0))) 
+                    if (boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(4, 0, 0)) && boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(2, 0, 0)))
                     {
-                        possibleMoves= 1;
+                        possibleMoves = 1;
                         onlyOneMove = new Vector3Int(2, 0, 0);
                         break;
                     }
@@ -566,9 +589,9 @@ public class PlayerBoardMovement : NetworkBehaviour
                 //}
 
                 // Up movement cases
-                if (offset == new Vector3Int(1, 2, 0) || offset == new Vector3Int(2, 2, 0) || 
-                    offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(2, 1, 0) || 
-                    offset == new Vector3Int(1, 1, 0) || offset == new Vector3Int(0, 2, 0) 
+                if (offset == new Vector3Int(1, 2, 0) || offset == new Vector3Int(2, 2, 0) ||
+                    offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(2, 1, 0) ||
+                    offset == new Vector3Int(1, 1, 0) || offset == new Vector3Int(0, 2, 0)
                     //offset == new Vector3Int(-1, 2, 0) || offset == new Vector3Int(-2, 2, 0)
                     )
                 {
@@ -579,8 +602,8 @@ public class PlayerBoardMovement : NetworkBehaviour
 
                 // Down movement cases
                 if (offset == new Vector3Int(1, -2, 0) || offset == new Vector3Int(2, -2, 0) || offset == new Vector3Int(0, -2, 0) ||
-                    offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(1, -1, 0) 
-                     //offset == new Vector3Int(-2, -2, 0) || offset == new Vector3Int(-1, -2, 0) 
+                    offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(1, -1, 0)
+                        //offset == new Vector3Int(-2, -2, 0) || offset == new Vector3Int(-1, -2, 0) 
                         )
 
                 {
@@ -592,10 +615,10 @@ public class PlayerBoardMovement : NetworkBehaviour
             else if (currentDirection == "y-up")
             {
                 // Up movement cases
-                if (offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(0, 4, 0) || 
+                if (offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(0, 4, 0) ||
                     offset == new Vector3Int(0, 2, 0) || offset == new Vector3Int(0, 1, 0))
                 {
-                    possibleMoves++; 
+                    possibleMoves++;
                     onlyOneMove = offset;
                     upArrow.gameObject.SetActive(true);
                 }
@@ -609,7 +632,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
                 // Right movement cases
                 if (
-                    offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) || 
+                    offset == new Vector3Int(2, 1, 0) || offset == new Vector3Int(1, 1, 0) ||
                     offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) ||
                     offset == new Vector3Int(3, 0, 0)
                     //offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(1, -1, 0) || offset == new Vector3Int(2, -2, 0) ||
@@ -628,7 +651,8 @@ public class PlayerBoardMovement : NetworkBehaviour
                 //{
                 //    leftArrow.gameObject.SetActive(true);
                 //}
-            }else if(currentDirection == "y-down")
+            }
+            else if (currentDirection == "y-down")
             {
                 //// Up movement cases
                 //if (offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(0, 4, 0) ||
@@ -761,10 +785,10 @@ public class PlayerBoardMovement : NetworkBehaviour
                 rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
                 yield return null;
             }
-            SetIdleAnimation(animIndex);    
+            SetIdleAnimation(animIndex);
 
             // Determine if moving up or down
-            currentDirection =  "x";
+            currentDirection = "x";
         }
 
         // Move along X after Y
@@ -797,5 +821,5 @@ public class PlayerBoardMovement : NetworkBehaviour
         }
     }
 
- 
+
 }
