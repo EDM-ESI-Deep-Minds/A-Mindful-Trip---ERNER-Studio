@@ -5,18 +5,16 @@ public static class EventTrigger
 {
     public static void SelectEventToTrigger(string TileType)
     {
+        CurseTileEvent.updateTimers();
+
         switch (TileType)
         {
             case "Rest":
                 Debug.Log("Rest event triggered.");
-                //to-do : remove later
-                CurseTileEvent.handleCurse();
                 break;
 
             case "Bonus":
                 Debug.Log("Bonus event triggered.");
-                //to-do : remove later
-                CurseTileEvent.handleCurse();
                 break;
 
             case "Curse":
@@ -25,17 +23,11 @@ public static class EventTrigger
 
             case "Question":
                 Debug.Log("Question event triggered.");
-                //to-do : remove later
-                CurseTileEvent.handleCurse();
                 break;
 
             default:
                 Debug.LogWarning($"Unknown tile type: {TileType}");
-                //to-do : remove later
-                CurseTileEvent.handleCurse();
                 break;
         }
-
-        CurseTileEvent.updateTimers();
     }
 }
