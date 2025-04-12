@@ -1456,14 +1456,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1872780645349508297}
   m_SourcePrefab: {fileID: 100100000, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
 --- !u!114 &2621697677616039015 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2898182516236828734, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
   m_PrefabInstance: {fileID: 890109093078762585}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 7852666786309210621}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5aaab13cabef154eaa976bf49464c5d, type: 3}
@@ -1474,6 +1477,45 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5284866649318741868, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
   m_PrefabInstance: {fileID: 890109093078762585}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7852666786309210621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+  m_PrefabInstance: {fileID: 890109093078762585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1872780645349508297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7852666786309210621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7694a4fa163843044b1b4e11c85d9715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuOST: {fileID: 0}
+  countrysideOST: {fileID: 0}
+  desertOST: {fileID: 0}
+  cityOST: {fileID: 0}
+  hubDansOST: {fileID: 0}
+  dansShopOST: {fileID: 0}
+  battleOST: {fileID: 0}
+  miniGameOST: {fileID: 0}
+  forestAmbienceSFX: {fileID: 0}
+  desertAmbienceSFX: {fileID: 0}
+  cityAmbienceSFX: {fileID: 0}
+  buttonClickSFX: {fileID: 0}
+  buttonHoverSFX: {fileID: 0}
+  impossibleActionSFX: {fileID: 0}
+  countrysideWalkSFX: {fileID: 0}
+  desertWalkSFX: {fileID: 0}
+  cityWalkSFX: {fileID: 0}
+  correctAnswerSFX: {fileID: 0}
+  damageTakenSFX: {fileID: 0}
+  soulShatterSFX: {fileID: 0}
+  itemEffectSFX: {fileID: 0}
+  diceRollSFX: {fileID: 0}
 --- !u!1001 &2211981182755685655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1593,14 +1635,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 6738306166631876743}
   m_SourcePrefab: {fileID: 100100000, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
 --- !u!114 &3930200525970801961 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2898182516236828734, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
   m_PrefabInstance: {fileID: 2211981182755685655}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 9084466875386446003}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5aaab13cabef154eaa976bf49464c5d, type: 3}
@@ -1611,6 +1656,45 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5284866649318741868, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
   m_PrefabInstance: {fileID: 2211981182755685655}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9084466875386446003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+  m_PrefabInstance: {fileID: 2211981182755685655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6738306166631876743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084466875386446003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7694a4fa163843044b1b4e11c85d9715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuOST: {fileID: 0}
+  countrysideOST: {fileID: 0}
+  desertOST: {fileID: 0}
+  cityOST: {fileID: 0}
+  hubDansOST: {fileID: 0}
+  dansShopOST: {fileID: 0}
+  battleOST: {fileID: 0}
+  miniGameOST: {fileID: 0}
+  forestAmbienceSFX: {fileID: 0}
+  desertAmbienceSFX: {fileID: 0}
+  cityAmbienceSFX: {fileID: 0}
+  buttonClickSFX: {fileID: 0}
+  buttonHoverSFX: {fileID: 0}
+  impossibleActionSFX: {fileID: 0}
+  countrysideWalkSFX: {fileID: 0}
+  desertWalkSFX: {fileID: 0}
+  cityWalkSFX: {fileID: 0}
+  correctAnswerSFX: {fileID: 0}
+  damageTakenSFX: {fileID: 0}
+  soulShatterSFX: {fileID: 0}
+  itemEffectSFX: {fileID: 0}
+  diceRollSFX: {fileID: 0}
 --- !u!1001 &2411119489655295366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1738,19 +1822,61 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 7033021241553284173}
   m_SourcePrefab: {fileID: 100100000, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
 --- !u!114 &670594075009191352 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2898182516236828734, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
   m_PrefabInstance: {fileID: 2411119489655295366}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4743995964415199266}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5aaab13cabef154eaa976bf49464c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4743995964415199266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+  m_PrefabInstance: {fileID: 2411119489655295366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7033021241553284173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743995964415199266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7694a4fa163843044b1b4e11c85d9715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuOST: {fileID: 0}
+  countrysideOST: {fileID: 0}
+  desertOST: {fileID: 0}
+  cityOST: {fileID: 0}
+  hubDansOST: {fileID: 0}
+  dansShopOST: {fileID: 0}
+  battleOST: {fileID: 0}
+  miniGameOST: {fileID: 0}
+  forestAmbienceSFX: {fileID: 0}
+  desertAmbienceSFX: {fileID: 0}
+  cityAmbienceSFX: {fileID: 0}
+  buttonClickSFX: {fileID: 0}
+  buttonHoverSFX: {fileID: 0}
+  impossibleActionSFX: {fileID: 0}
+  countrysideWalkSFX: {fileID: 0}
+  desertWalkSFX: {fileID: 0}
+  cityWalkSFX: {fileID: 0}
+  correctAnswerSFX: {fileID: 0}
+  damageTakenSFX: {fileID: 0}
+  soulShatterSFX: {fileID: 0}
+  itemEffectSFX: {fileID: 0}
+  diceRollSFX: {fileID: 0}
 --- !u!224 &7503448127498558186 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5284866649318741868, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
@@ -1891,19 +2017,61 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 2805934705161705254}
   m_SourcePrefab: {fileID: 100100000, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
 --- !u!114 &728989276683517051 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2898182516236828734, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
   m_PrefabInstance: {fileID: 2460524805473008709}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4793379290541947361}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5aaab13cabef154eaa976bf49464c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4793379290541947361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+  m_PrefabInstance: {fileID: 2460524805473008709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2805934705161705254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793379290541947361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7694a4fa163843044b1b4e11c85d9715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuOST: {fileID: 0}
+  countrysideOST: {fileID: 0}
+  desertOST: {fileID: 0}
+  cityOST: {fileID: 0}
+  hubDansOST: {fileID: 0}
+  dansShopOST: {fileID: 0}
+  battleOST: {fileID: 0}
+  miniGameOST: {fileID: 0}
+  forestAmbienceSFX: {fileID: 0}
+  desertAmbienceSFX: {fileID: 0}
+  cityAmbienceSFX: {fileID: 0}
+  buttonClickSFX: {fileID: 0}
+  buttonHoverSFX: {fileID: 0}
+  impossibleActionSFX: {fileID: 0}
+  countrysideWalkSFX: {fileID: 0}
+  desertWalkSFX: {fileID: 0}
+  cityWalkSFX: {fileID: 0}
+  correctAnswerSFX: {fileID: 0}
+  damageTakenSFX: {fileID: 0}
+  soulShatterSFX: {fileID: 0}
+  itemEffectSFX: {fileID: 0}
+  diceRollSFX: {fileID: 0}
 --- !u!224 &7742273188099435305 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5284866649318741868, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
@@ -2044,19 +2212,61 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 7223392788496616960}
   m_SourcePrefab: {fileID: 100100000, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
 --- !u!114 &1454029430069148642 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2898182516236828734, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
   m_PrefabInstance: {fileID: 4329553210411285468}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6680424721999298168}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5aaab13cabef154eaa976bf49464c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6680424721999298168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+  m_PrefabInstance: {fileID: 4329553210411285468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7223392788496616960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680424721999298168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7694a4fa163843044b1b4e11c85d9715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuOST: {fileID: 0}
+  countrysideOST: {fileID: 0}
+  desertOST: {fileID: 0}
+  cityOST: {fileID: 0}
+  hubDansOST: {fileID: 0}
+  dansShopOST: {fileID: 0}
+  battleOST: {fileID: 0}
+  miniGameOST: {fileID: 0}
+  forestAmbienceSFX: {fileID: 0}
+  desertAmbienceSFX: {fileID: 0}
+  cityAmbienceSFX: {fileID: 0}
+  buttonClickSFX: {fileID: 0}
+  buttonHoverSFX: {fileID: 0}
+  impossibleActionSFX: {fileID: 0}
+  countrysideWalkSFX: {fileID: 0}
+  desertWalkSFX: {fileID: 0}
+  cityWalkSFX: {fileID: 0}
+  correctAnswerSFX: {fileID: 0}
+  damageTakenSFX: {fileID: 0}
+  soulShatterSFX: {fileID: 0}
+  itemEffectSFX: {fileID: 0}
+  diceRollSFX: {fileID: 0}
 --- !u!224 &8449376887272418480 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5284866649318741868, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
@@ -2298,19 +2508,61 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1482903918763903218}
   m_SourcePrefab: {fileID: 100100000, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
 --- !u!224 &2287751527367400183 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5284866649318741868, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
   m_PrefabInstance: {fileID: 6262299069971205531}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3911425223560431679 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+  m_PrefabInstance: {fileID: 6262299069971205531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1482903918763903218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3911425223560431679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7694a4fa163843044b1b4e11c85d9715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuOST: {fileID: 0}
+  countrysideOST: {fileID: 0}
+  desertOST: {fileID: 0}
+  cityOST: {fileID: 0}
+  hubDansOST: {fileID: 0}
+  dansShopOST: {fileID: 0}
+  battleOST: {fileID: 0}
+  miniGameOST: {fileID: 0}
+  forestAmbienceSFX: {fileID: 0}
+  desertAmbienceSFX: {fileID: 0}
+  cityAmbienceSFX: {fileID: 0}
+  buttonClickSFX: {fileID: 0}
+  buttonHoverSFX: {fileID: 0}
+  impossibleActionSFX: {fileID: 0}
+  countrysideWalkSFX: {fileID: 0}
+  desertWalkSFX: {fileID: 0}
+  cityWalkSFX: {fileID: 0}
+  correctAnswerSFX: {fileID: 0}
+  damageTakenSFX: {fileID: 0}
+  soulShatterSFX: {fileID: 0}
+  itemEffectSFX: {fileID: 0}
+  diceRollSFX: {fileID: 0}
 --- !u!114 &9137889919500275109 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2898182516236828734, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
   m_PrefabInstance: {fileID: 6262299069971205531}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3911425223560431679}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5aaab13cabef154eaa976bf49464c5d, type: 3}
@@ -2443,8 +2695,50 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 5515449083956453195}
   m_SourcePrefab: {fileID: 100100000, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+--- !u!1 &1801104295895957044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+  m_PrefabInstance: {fileID: 8673587119487777680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5515449083956453195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801104295895957044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7694a4fa163843044b1b4e11c85d9715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuOST: {fileID: 0}
+  countrysideOST: {fileID: 0}
+  desertOST: {fileID: 0}
+  cityOST: {fileID: 0}
+  hubDansOST: {fileID: 0}
+  dansShopOST: {fileID: 0}
+  battleOST: {fileID: 0}
+  miniGameOST: {fileID: 0}
+  forestAmbienceSFX: {fileID: 0}
+  desertAmbienceSFX: {fileID: 0}
+  cityAmbienceSFX: {fileID: 0}
+  buttonClickSFX: {fileID: 0}
+  buttonHoverSFX: {fileID: 0}
+  impossibleActionSFX: {fileID: 0}
+  countrysideWalkSFX: {fileID: 0}
+  desertWalkSFX: {fileID: 0}
+  cityWalkSFX: {fileID: 0}
+  correctAnswerSFX: {fileID: 0}
+  damageTakenSFX: {fileID: 0}
+  soulShatterSFX: {fileID: 0}
+  itemEffectSFX: {fileID: 0}
+  diceRollSFX: {fileID: 0}
 --- !u!224 &3533456195271208188 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5284866649318741868, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
@@ -2455,7 +2749,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2898182516236828734, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
   m_PrefabInstance: {fileID: 8673587119487777680}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1801104295895957044}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5aaab13cabef154eaa976bf49464c5d, type: 3}
@@ -2568,8 +2862,50 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 5419761041129962633}
   m_SourcePrefab: {fileID: 100100000, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+--- !u!1 &2054820355855277495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6962577493567341988, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
+  m_PrefabInstance: {fileID: 8945340100725233683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5419761041129962633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054820355855277495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7694a4fa163843044b1b4e11c85d9715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuOST: {fileID: 0}
+  countrysideOST: {fileID: 0}
+  desertOST: {fileID: 0}
+  cityOST: {fileID: 0}
+  hubDansOST: {fileID: 0}
+  dansShopOST: {fileID: 0}
+  battleOST: {fileID: 0}
+  miniGameOST: {fileID: 0}
+  forestAmbienceSFX: {fileID: 0}
+  desertAmbienceSFX: {fileID: 0}
+  cityAmbienceSFX: {fileID: 0}
+  buttonClickSFX: {fileID: 0}
+  buttonHoverSFX: {fileID: 0}
+  impossibleActionSFX: {fileID: 0}
+  countrysideWalkSFX: {fileID: 0}
+  desertWalkSFX: {fileID: 0}
+  cityWalkSFX: {fileID: 0}
+  correctAnswerSFX: {fileID: 0}
+  damageTakenSFX: {fileID: 0}
+  soulShatterSFX: {fileID: 0}
+  itemEffectSFX: {fileID: 0}
+  diceRollSFX: {fileID: 0}
 --- !u!224 &3851603915774300031 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5284866649318741868, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
@@ -2580,7 +2916,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2898182516236828734, guid: 674b160460a917b41850b0fd7b1f46ca, type: 3}
   m_PrefabInstance: {fileID: 8945340100725233683}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2054820355855277495}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5aaab13cabef154eaa976bf49464c5d, type: 3}

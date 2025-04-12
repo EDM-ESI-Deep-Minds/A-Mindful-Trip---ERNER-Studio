@@ -472,6 +472,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             }
 
             rb.position = targetPos;
+            AudioManager.instance?.PlayWalkSFXForScene();
             previousTilePos = currentTilePos;
             currentTilePos = nextTilePos;
 

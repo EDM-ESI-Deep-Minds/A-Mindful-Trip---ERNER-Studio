@@ -113,6 +113,7 @@ public class PlayerFreeMovement : NetworkBehaviour
             if (success)
             {
                 UpdateAnimation(currentInput);
+                AudioManager.instance?.PlayWalkSFXForScene();
             }
         }
         else

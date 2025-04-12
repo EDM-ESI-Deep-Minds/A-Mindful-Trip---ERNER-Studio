@@ -371,6 +371,28 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(clip, volume * sfxVolume);
     }
 
+    public void PlayWalkSFXForScene()
+    {
+        if (!isSFXEnabled) return;
+
+        string scene = SceneManager.GetActiveScene().name;
+
+        switch (scene)
+        {
+            case "CountrySide":
+            case "Hub&Dans":
+                PlaySFX(countrysideWalkSFX);
+                break;
+            case "Desert":
+                PlaySFX(desertWalkSFX);
+                break;
+            case "City":
+                PlaySFX(cityWalkSFX);
+                break;
+        }
+    }
+
+
     // ====== Volume and Toggle Settings ======
     public void SetMusicVolume(float volume)
     {

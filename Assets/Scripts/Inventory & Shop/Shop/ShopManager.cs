@@ -40,11 +40,13 @@ public class ShopManager : MonoBehaviour
             else
             {
                 Debug.Log("Purchase failed: Inventory full.");
+                AudioManager.instance?.PlaySFX(AudioManager.instance.impossibleActionSFX);
             }
         }
         else
         {
             Debug.Log("Purchase failed: Coin amount insufficient.");
+            AudioManager.instance?.PlaySFX(AudioManager.instance.impossibleActionSFX);
         }
     }
     
