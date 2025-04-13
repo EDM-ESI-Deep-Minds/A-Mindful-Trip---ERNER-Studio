@@ -14,6 +14,7 @@ public static class EventTrigger
                 break;
 
             case "Bonus":
+                BonusTile.handleBonus();
                 Debug.Log("Bonus event triggered.");
                 break;
 

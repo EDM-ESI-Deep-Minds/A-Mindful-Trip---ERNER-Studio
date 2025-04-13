@@ -13,7 +13,7 @@ public class BonusTile
         {
             case 1:
                 Debug.Log("🩸 Health Bonus: Player gets one heart.");
-                //AddHeart();
+                AddHeart();
                 break;
 
             case 2:
@@ -54,11 +54,35 @@ public class BonusTile
             return 5; // Bonus in next reward (10%)
     }
 
+    public static void AddHeart()
+    {
+        HeartUIManager heartUI = Object.FindFirstObjectByType<HeartUIManager>();
+        heartUI.addHeart();
+    }
+
     private static void AddItem()
     {
         InventoryManager inventory = Object.FindFirstObjectByType<InventoryManager>();
-        int itemindex = Random.Range(0,9);
-        itemSO = itemDatabase.GetItemByID(itemindex);
+        float rand = Random.Range(0f, 100f);
+        int choice = 0;
+        if (rand < 20f)
+            choice = 1;  // bloodvial
+        else if (rand < 32f)
+            choice = 2; // Jocker
+        else if (rand < 44f)
+            choice = 3; // la tourte
+        else if (rand < 60f)
+            choice = 4; // pizza 3D
+        else if (rand < 72f)
+            choice = 5; // st.Trina's
+        else if (rand < 88f)
+            choice = 6; // Pot of Greed
+        else if (rand < 95f)
+            choice = 7; // Mouthwasher
+        else
+            choice = 8; // Allen's M60
+
+        itemSO = itemDatabase.GetItemByID(choice);
         bool added = inventory.AddItem(itemSO);
         if (!added)
         {
