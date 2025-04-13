@@ -4,21 +4,20 @@ using UnityEngine.SceneManagement;
 
 public class BonusTile
 {
-    
-
     public static void handleBonus()
     {
         int bonusId = GetRandomBonus();
+
         switch (bonusId)
         {
             case 1:
                 Debug.Log("🩸 Health Bonus: Player gets one heart.");
-                AddItem();
+                AddHeart();
                 break;
 
             case 2:
                 Debug.Log("💰 Add Credit: Player gets bonus credit between 25 to 100.");
-                AddItem();
+                AddCredit();
                 break;
 
             case 3:
@@ -28,12 +27,12 @@ public class BonusTile
 
             case 4:
                 Debug.Log("💰 Add rare Credit: Player gets rare credit between 100 to 150.");
-                AddItem();
+                AddRareCredit();
                 break;
 
             case 5:
                 Debug.Log("30% Bonus in next reward: Player gets bonus in the its next reward.");
-                AddItem();
+                BonusInNextReward();
                 break;
         }
     }
@@ -84,8 +83,8 @@ public class BonusTile
             choice = 8; // Allen's M60
         Debug.Log(choice);
 
-
-        ItemSO itemSO = ScriptableObject.CreateInstance<ItemDatabase>().GetItemByID(choice);
+        
+        ItemSO itemSO = inventory.itemDatabase.GetItemByID(choice);
         bool added = inventory.AddItem(itemSO);
         if (!added)
         {

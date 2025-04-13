@@ -42,34 +42,37 @@ public class HeartUIManager : MonoBehaviour
 
     public void addHeart()
     {
-        hearts++;
         if (emptyHearts > 0)
         {
-            Transform heart = heartContainer.GetChild(hearts - 1);
-            Image heartImage = heart.GetComponent<Image>();
-            heartImage.sprite = fullHeart;
+            // Remove the last empty heart
+            Transform heartToRemove = heartContainer.GetChild(hearts);
+            Destroy(heartToRemove.gameObject);
+            heartImages.RemoveAt(hearts); // keep the list accurate
             emptyHearts--;
-
-            Animator animator = heart.GetComponent<Animator>();
-            if (animator != null)
-            {
-                animator.SetTrigger("PopIn");
-            }
         }
-        else
+
+        hearts++;
+
+        GameObject heartGO = new GameObject("Heart" + heartImages.Count);
+        heartGO.transform.SetParent(heartContainer, false);
+
+        Image heartImage = heartGO.AddComponent<Image>();
+        heartImage.sprite = fullHeart;
+
+        Animator animator = heartGO.AddComponent<Animator>();
+        animator.runtimeAnimatorController = heartAnimator;
+
+        if (heartContainer.childCount > 1)
         {
-            GameObject heartGO = new GameObject("Heart" + heartImages.Count);
-            heartGO.transform.SetParent(heartContainer, false);
+            // Get the first heart's animation time to sync
+            Animator referenceAnimator = heartContainer.GetChild(0).GetComponent<Animator>();
+            AnimatorStateInfo stateInfo = referenceAnimator.GetCurrentAnimatorStateInfo(0);
+            float normalizedTime = stateInfo.normalizedTime % 1f;
 
-            Image heartImage = heartGO.AddComponent<Image>();
-            heartImage.sprite = fullHeart;
-
-            Animator animator = heartGO.AddComponent<Animator>();
-            animator.runtimeAnimatorController = heartAnimator;
-            animator.SetTrigger("PopIn");
-
-            heartImages.Add(heartImage);
+            animator.Play(stateInfo.shortNameHash, 0, normalizedTime);
         }
+
+        heartImages.Add(heartImage);
     }
 
 

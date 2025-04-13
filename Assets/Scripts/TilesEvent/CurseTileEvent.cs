@@ -11,6 +11,7 @@ public class CurseTileEvent
     public static void handleCurse()
     {
         int curseId = GetRandomCurse();
+
         switch (curseId)
         {
             case 1:

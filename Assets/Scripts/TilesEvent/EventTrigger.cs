@@ -10,7 +10,6 @@ public static class EventTrigger
         switch (TileType)
         {
             case "Rest":
-                BonusTile.handleBonus();
                 Debug.Log("Rest event triggered.");
                 break;
 
@@ -21,10 +20,10 @@ public static class EventTrigger
 
             case "Curse":
                 CurseTileEvent.handleCurse();
+                Debug.Log("Curse event triggered.");
                 break;
 
             case "Question":
-                BonusTile.handleBonus();
                 Debug.Log("Question event triggered.");
                 break;
 
