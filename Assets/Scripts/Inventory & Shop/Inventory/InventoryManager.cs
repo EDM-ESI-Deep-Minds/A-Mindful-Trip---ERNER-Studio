@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] public ItemDatabase itemDatabase;
     private List<int> inventoryItems;
     public GameObject player;
+    private int PercentageBonus = 0;
+    [SerializeField] private Image[] lockIcon;
+    private bool islocked;
+    //don't forget to unlock the inventory when being in the hub
 
 
 
@@ -34,6 +39,8 @@ public class InventoryManager : MonoBehaviour
         // Update coin text with current coin value
         coinText.text = currentCoins.ToString();
         coinText.ForceMeshUpdate(); // Ensures TMP refresh
+        PercentageBonus = 0;
+
     }
 
     public bool CanAfford(int price)
@@ -55,6 +62,29 @@ public class InventoryManager : MonoBehaviour
         // Inventory full
         Debug.Log("Inventory Full!");
         return false;
+    }
+
+    public bool removeItem(int slot)
+    {
+        if (inventorySlots[slot].IsOccupied())
+        {
+            inventorySlots[slot].ClearSlot();
+            return true;
+        } else
+        {
+            bool found = false;
+            for(int i=0; i<3 ; i++)
+            {
+                if (slot == i) continue;
+                if (inventorySlots[i].IsOccupied())
+                {
+                    inventorySlots[i].ClearSlot();
+                    found = true;
+                    break;
+                }
+            }
+            return found;
+        }
     }
 
     // public void AddItem(ItemSO itemSO)
@@ -99,6 +129,42 @@ public class InventoryManager : MonoBehaviour
             if (!slot.IsOccupied()) return true;
         }
         return false;
+    }
+    
+    public void AddCoins(int amount)
+    {
+        currentCoins = currentCoins+(amount*PercentageBonus/100)+amount;
+        UpdateCoinText();
+    }
+
+    public void setPercentageBonus(int Percentage)
+    {
+        PercentageBonus = Percentage;
+    }
+    
+    public int getCredit()
+    {
+        return int.Parse(coinText.text);
+    }
+
+    public void lockInventory()
+    {
+        islocked = true;
+        foreach (Image icon in lockIcon)
+        {
+
+              icon.gameObject.SetActive(true);
+        }
+    }
+
+    public void unlockInventory()
+    {
+        islocked = false;
+        foreach (Image icon in lockIcon)
+        {
+
+            icon.gameObject.SetActive(false);
+        }
     }
 
 }
