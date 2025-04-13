@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "How many normal endings are there in Cry Of Fear&#039;s campaign mode?",
+            "correct_answer": "4",
+            "incorrect_answers": [
+                "5",
+                "3",
+                "6"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which weapon that was cut from the game &quot;Half Life 2&quot; was going to replace the crowbar?",
+            "correct_answer": "Ice Axe",
+            "incorrect_answers": [
+                "Fire Axe",
+                "Wrench",
+                "Hunting Knife"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "How many permanent companions are there in the base game version of Fallout: New Vegas?",
+            "correct_answer": "8",
+            "incorrect_answers": [
+                "7",
+                "9",
+                "6"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In the video game series &quot;Disgaea&quot;, what word does the character Prinny have to include in all sentences they speak?",
+            "correct_answer": "&quot;Dood&quot;",
+            "incorrect_answers": [
+                "&quot;Master&quot;",
+                "&quot;Plip&quot;",
+                "&quot;Boom&quot;"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Who is the protagonist of the videogame &quot;Dead Rising 2&quot;?",
+            "correct_answer": "Chuck Greene",
+            "incorrect_answers": [
+                "Nick Ramos",
+                "Frank West",
+                "Katie Greene"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Without enchantments, which pickaxe in minecraft mines blocks the quickest.",
+            "correct_answer": "Golden ",
+            "incorrect_answers": [
+                "Diamond",
+                "Iron",
+                "Obsidian"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "What was the original release date of Grand Theft Auto V?",
+            "correct_answer": "September 17, 2013",
+            "incorrect_answers": [
+                "August 17, 2013",
+                "April 14, 2015",
+                "November 18, 2014"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Ellen McLain, the voice of GLaDOS in the Portal game series, is married to the voice actor for which Team Fortress 2 character?",
+            "correct_answer": "Sniper",
+            "incorrect_answers": [
+                "Heavy",
+                "Soldier",
+                "Scout"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "What is the name of the final boss in Turok: Dinosaur Hunter?",
+            "correct_answer": "The Campaigner",
+            "incorrect_answers": [
+                "The Primagen",
+                "Oblivion",
+                "Lord Tyrannus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "What is the name the location-based augmented reality game developed by Niantic before Pok&eacute;mon GO?",
+            "correct_answer": "Ingress",
+            "incorrect_answers": [
+                "Aggress",
+                "Regress",
+                "Digress"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "The original mascot of the popular Nintendo game, &quot;Splatoon&quot; was going to be...",
+            "correct_answer": "Mario",
+            "incorrect_answers": [
+                "Inklings",
+                "Octolings",
+                "Zelda"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Who is the villain company in &quot;Stardew Valley&quot;?",
+            "correct_answer": "Joja Co ",
+            "incorrect_answers": [
+                "Ronin",
+                "Empire",
+                "Robotnik Industry&#039;s "
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "What CS:GO case contains the Butterfly Knife?",
+            "correct_answer": "Breakout Case",
+            "incorrect_answers": [
+                "Shadow Case",
+                "Vanguard Case",
+                "Esports 2014 Case"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which of these is NOT a playable character race in the video game &quot;Starbound&quot;?",
+            "correct_answer": "Fenerox",
+            "incorrect_answers": [
+                "Floran",
+                "Novakid",
+                "Hylotl"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which of these is NOT the name of a team leader in Pok&eacute;mon GO?",
+            "correct_answer": "Leif",
+            "incorrect_answers": [
+                "Blanche",
+                "Spark",
+                "Candela"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which of the following is NOT an official game in Nintendo&#039;s Super Smash Bros. series?",
+            "correct_answer": "Super Smash Bros. Crusade",
+            "incorrect_answers": [
+                "Super Smash Bros. Melee",
+                "Super Smash Bros. Brawl",
+                "Super Smash Bros. for Nintendo 3DS and Wii U"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "What snowy mob was added in Minecraft 1.10?",
+            "correct_answer": "Polar bears",
+            "incorrect_answers": [
+                "Eskimos",
+                "Penguins",
+                "Walking TNT"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In the game &quot;Red Dead Redemption&quot;, what is the name of John Marston&#039;s dog?",
+            "correct_answer": "Rufus",
+            "incorrect_answers": [
+                "Rutus",
+                "Finn",
+                "Apollo"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which &quot;Perk-A-Cola&quot; in &quot;Call Of Duty: Zombies&quot; was &quot;reworked&quot; in &quot;Call of Duty: Black Ops II&quot;?",
+            "correct_answer": "Double Tap Root Beer",
+            "incorrect_answers": [
+                "Who&#039;s Who",
+                "Juggernog",
+                "Mule Kick"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "The walls of the Goldenrod City Gym in &quot;Pok&eacute;mon Gold and Silver&quot; are arranged in the shape of which Pok&eacute;mon?",
+            "correct_answer": "Clefairy",
+            "incorrect_answers": [
+                "Bulbasaur",
+                "Pikachu",
+                "Pidgey"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "What was the character Kirby originally going to be named?",
+            "correct_answer": "Popopo",
+            "incorrect_answers": [
+                "Dedede",
+                "Waddle Dee",
+                "Prince Puff"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In Portal, what color is the Morality Core?",
+            "correct_answer": "Purple",
+            "incorrect_answers": [
+                "Red",
+                "Yellow",
+                "Blue"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Who created the pump &quot;F.L.U.D.D.&quot; Mario uses in Super Mario Sunshine?",
+            "correct_answer": "Elvin Gadd",
+            "incorrect_answers": [
+                "Robert Fludd",
+                "Nirona",
+                "Crygor"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In the game Paper Mario for the Nintendo 64 the first partner you meet is a Goomba, what is its name?",
+            "correct_answer": "Goombario",
+            "incorrect_answers": [
+                "Goombella",
+                "Goombarry",
+                "Goomby"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which of the following games in the Anno series introduced the &quot;Eco Balance&quot; gameplay mechanic?",
+            "correct_answer": "Anno 2070",
+            "incorrect_answers": [
+                "Anno 1404",
+                "Anno 2205",
+                " Anno 1701"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In Grand Theft Auto: V, what wanted level does the player receive if they enter Zancudo Army Base north of Los Santos?",
+            "correct_answer": "4",
+            "incorrect_answers": [
+                "3",
+                "5",
+                "1"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "On which planet does the game Freedom Planet (2014) take place?",
+            "correct_answer": "Avalice",
+            "incorrect_answers": [
+                "Freedom",
+                "Galaxytrail",
+                "Shang Mu"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which pop singer was brought in by SEGA to produce the music for &quot;Sonic the Hedgehog 3&quot;?",
+            "correct_answer": "Michael Jackson ",
+            "incorrect_answers": [
+                "Prince",
+                "George Michael",
+                "Vanilla Ice "
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In what year were achivements added to Steam?",
+            "correct_answer": "2007",
+            "incorrect_answers": [
+                "2008",
+                "2009",
+                "2006"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "What type of genre is the controversial 2015 game &quot;Hatred&quot;?",
+            "correct_answer": "Shoot &#039;Em Up",
+            "incorrect_answers": [
+                "Point &amp; Click",
+                "MMORPG",
+                "Simulation"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In &quot;PUBATTLEGROUNDS&quot; what is the name of the Military Base island?",
+            "correct_answer": "Sosnovka",
+            "incorrect_answers": [
+                "Novorepnoye",
+                "Mylta",
+                "Yasnaya"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Who was Tetris created by?",
+            "correct_answer": "Alexey Pajitnov",
+            "incorrect_answers": [
+                "Toru Iwatani",
+                "Allan Alcorn",
+                "William Higinbotham"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Who created Agent 47 in the game series &quot;Hitman&quot;?",
+            "correct_answer": "Dr. Otto Wolfgang Ort-Meyer",
+            "incorrect_answers": [
+                "Professor Hertz Amadeus Schneider",
+                "Dr. Josef Mengele",
+                "Professor Otto Rothwinkler"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which survivor in Left 4 Dead sacrificed themself to save the other survivors?",
+            "correct_answer": "Bill",
+            "incorrect_answers": [
+                "Louis",
+                "Francis",
+                "Zoey"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Who is the main character in most of the games of the YS series?",
+            "correct_answer": "Adol Christin ",
+            "incorrect_answers": [
+                "Character doesn&#039;t have a name",
+                "Estelle Bright",
+                "Roger Wilco"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "What was the first Call of Duty game to include the Zombies gamemode?",
+            "correct_answer": "Call of Duty: World at War",
+            "incorrect_answers": [
+                "Call of Duty: Black Ops",
+                "Call of Duty: Modern Warfare 2",
+                "Call of Duty: Black Ops III"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which operation in &quot;Tom Clancy&#039;s Rainbow Six Siege&quot; introduced the &quot;Skyscraper&quot; map?",
+            "correct_answer": "Red Crow",
+            "incorrect_answers": [
+                "Velvet Shell",
+                "Skull Rain",
+                "Dust Line"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which of the following is not a playable race in the MMORPG Guild Wars 2? ",
+            "correct_answer": "Tengu",
+            "incorrect_answers": [
+                "Sylvari",
+                "Charr",
+                "Asura "
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Who was the main antagonist of Max Payne 3 (2012)?",
+            "correct_answer": "Victor Branco",
+            "incorrect_answers": [
+                "&Aacute;lvaro Neves",
+                "Armando Becker",
+                "Milo Rego"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which of the following characters were considered for inclusion in Super Smash Bros. Melee?",
+            "correct_answer": "Lucas",
+            "incorrect_answers": [
+                "Mega Man",
+                "Meta Knight",
+                "Diddy Kong"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "What name does the little headcrab in &quot;Half Life 2&quot; have?",
+            "correct_answer": "Lamarr",
+            "incorrect_answers": [
+                "Jumperr",
+                "Drett",
+                "Jerry"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "What is the name of the prison in &quot;Half Life 2&quot;?",
+            "correct_answer": "Nova Prospekt",
+            "incorrect_answers": [
+                "Great Prospekt",
+                "New Prospect",
+                "Lesser Prospekt"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In Monster Hunter Generations, which of the following monsters are a part of the &quot;Fated Four&quot;?",
+            "correct_answer": "Astalos",
+            "incorrect_answers": [
+                "Gore Magala",
+                "Malfestio",
+                "Arzuros"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "How many Star Spirits do you rescue in the Nintendo 64 video game &quot;Paper Mario&quot;?",
+            "correct_answer": "7",
+            "incorrect_answers": [
+                "5",
+                "10",
+                "12"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "What element does the Zinogre use in Monster Hunter?",
+            "correct_answer": "Thunder",
+            "incorrect_answers": [
+                "Ice",
+                "Fire",
+                "Water"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In &quot;The Legend of Zelda: Ocarina of Time,&quot; what is the maximum amount of rupees that Link can carry?",
+            "correct_answer": "500",
+            "incorrect_answers": [
+                "999",
+                "1000",
+                "5000"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In Cook, Serve, Delicious!, which food is NOT included in the game?",
+            "correct_answer": "Pie",
+            "incorrect_answers": [
+                "Shish Kabob",
+                "Hamburger",
+                "Lasagna"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "Which of the following Terran units from the RTS game Starcraft was first introduced in the expansion Brood War?",
+            "correct_answer": "Medic",
+            "incorrect_answers": [
+                "Wraith",
+                "Science Vessel",
+                "SCV"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In the Half-Life universe, the Black Mesa Research Facility is located in which US state?",
+            "correct_answer": "New Mexico",
+            "incorrect_answers": [
+                "Nevada",
+                "Arizona",
+                "Wyoming"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Video Games",
+            "question": "In Overwatch, what is L&uacute;cio&#039;s full name?",
+            "correct_answer": "L&uacute;cio Correia Dos Santos",
+            "incorrect_answers": [
+                "L&uacute;cio Luiz L&oacute;s Guilherme",
+                "L&uacute;cio Jo&atilde;o Lucas",
+                "L&uacute;cio Chupar Prima"
+            ]
+        }
+    ]
+}

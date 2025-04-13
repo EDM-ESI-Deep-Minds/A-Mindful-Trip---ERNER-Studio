@@ -1,0 +1,316 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "What is Ron Weasley&#039;s middle name?",
+            "correct_answer": "Bilius",
+            "incorrect_answers": [
+                "Arthur",
+                "John",
+                "Dominic"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "Which author and poet famously wrote the line, &quot;The female of the species is more deadly than the male&quot;?",
+            "correct_answer": "Rudyard Kipling",
+            "incorrect_answers": [
+                "Edgar Allan Poe",
+                "William Shakespeare",
+                "William Wordsworth"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "The novel &quot;Jane Eyre&quot; was written by what author? ",
+            "correct_answer": "Charlotte Bront&euml;",
+            "incorrect_answers": [
+                "Emily Bront&euml;",
+                "Jane Austen",
+                "Louisa May Alcott"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "Which author co-wrote &quot;The Communist Manifesto&quot; alongside Karl Marx?",
+            "correct_answer": "Friedrich Engels",
+            "incorrect_answers": [
+                "Robert Owen",
+                "Alexander Kerensky",
+                "Paul Lafargue"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In which classic novel by Mark Twain did a beggar and Prince of Wales switch clothes, and learn about social class inequality?",
+            "correct_answer": "The Prince and the Pauper",
+            "incorrect_answers": [
+                "Hamlet",
+                "Wealthy Boy and the Schmuck",
+                "A Modern Twain Story"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In the &quot;Harry Potter&quot; series, what is Headmaster Dumbledore&#039;s full name?",
+            "correct_answer": "Albus Percival Wulfric Brian Dumbledore",
+            "incorrect_answers": [
+                "Albus Valum Jetta Mobius Dumbledore",
+                "Albus James Lunae Otto Dumbledore",
+                "Albus Valencium Horatio Kul Dumbledore"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In the book &quot;The Martian&quot;, how long was Mark Watney trapped on Mars (in Sols)?",
+            "correct_answer": "549 Days",
+            "incorrect_answers": [
+                "765 Days",
+                "401 Days",
+                "324 Days"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In The Lies Of Locke Lamora, what does &quot;Lamora&quot; mean in Throne Therin?",
+            "correct_answer": "Shadow",
+            "incorrect_answers": [
+                "Thievery",
+                "Justice",
+                "Chaos"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In the Magic: The Gathering universe, the Fallen Empires expansion takes place on which continent?",
+            "correct_answer": "Sarpadia",
+            "incorrect_answers": [
+                "Otaria",
+                "Terisiare",
+                "Shiv"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "What is the name of the town in which Lily and James Potter are buried?",
+            "correct_answer": "Godric&#039;s Hollow",
+            "incorrect_answers": [
+                "Hogsmeade",
+                "Ottery St. Catchpole",
+                "Little Hangleton"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "Which of the following is NOT a work done by Shakespeare?",
+            "correct_answer": "Trial of Temperance",
+            "incorrect_answers": [
+                "Measure For Measure",
+                "Titus Andronicus",
+                "Cymbeline"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In the book series &quot;Odd Thomas&quot;, Danny Jessup has what genetic disease? ",
+            "correct_answer": " Osteogenesis Imperfecta",
+            "incorrect_answers": [
+                "Spinocerebellar ataxia",
+                "Adrenoleukodystrophy",
+                "Cystic Fibrosis"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In the Magic: The Gathering universe,  the Antiquities, Ice Age, and Alliances expansions take place on which continent?",
+            "correct_answer": "Terisiare",
+            "incorrect_answers": [
+                "Aerona",
+                "Shiv",
+                "Jamuraa"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "Abel Magwitch is a character from which Charles Dickens novel?",
+            "correct_answer": "Great Expectations",
+            "incorrect_answers": [
+                "The Pickwick Papers",
+                "Nicholas Nickleby",
+                "Oliver Twist"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "Which fictional English county was the setting for Thomas Hardy&#039;s novels?",
+            "correct_answer": "Wessex",
+            "incorrect_answers": [
+                "Barsetshire",
+                "Fulchester",
+                "Ambridge"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In the Beatrix Potter books, what type of animal is Tommy Brock?",
+            "correct_answer": "Badger",
+            "incorrect_answers": [
+                "Fox",
+                "Frog",
+                "Rabbit"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In the Magic: The Gathering universe, which plane does the Homelands expansion take place in?",
+            "correct_answer": "Ulgrotha",
+            "incorrect_answers": [
+                "Bant",
+                "Llanowar",
+                "Tazeem"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "Who wrote the novel &quot;Moby-Dick&quot;?",
+            "correct_answer": "Herman Melville",
+            "incorrect_answers": [
+                "William Golding",
+                "William Shakespeare",
+                "J. R. R. Tolkien"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "What is Hermione Granger&#039;s middle name?",
+            "correct_answer": "Jean",
+            "incorrect_answers": [
+                "Jane",
+                "Emma",
+                "Jo"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "Which of these does Charlie NOT read in The Perks of Being a Wallflower?",
+            "correct_answer": "The Grapes of Wrath",
+            "incorrect_answers": [
+                "Hamlet",
+                "The Great Gatsby",
+                "Peter Pan"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In the Harry Potter universe, who does Draco Malfoy end up marrying?",
+            "correct_answer": "Astoria Greengrass",
+            "incorrect_answers": [
+                "Pansy Parkinson",
+                "Millicent Bulstrode",
+                "Hermione Granger"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "According to Bram Stoker&#039;s novel, in which British coastal town did Dracula come ashore?",
+            "correct_answer": "Whitby",
+            "incorrect_answers": [
+                "Scarborough",
+                "Brighton",
+                "Portsmouth"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In which classic novel is there a character named Homer Simpson?",
+            "correct_answer": "The Day of the Locust",
+            "incorrect_answers": [
+                "Catch-22",
+                "Of Mice and Men",
+                "A Separate Peace"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "Where does the book &quot;The Silence of the Lambs&quot; get its title from?",
+            "correct_answer": "The main character&#039;s trauma in childhood",
+            "incorrect_answers": [
+                "The relation it has with killing the innocents",
+                "The villain&#039;s favourite meal",
+                "The voice of innocent people being shut by the powerful"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In Margaret Atwood&#039;s &quot;The Handmaid&#039;s Tale&quot;, what is Offred&#039;s real name is implied to be?",
+            "correct_answer": "June",
+            "incorrect_answers": [
+                "August",
+                "April",
+                "May"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Books",
+            "question": "In the Harry Potter universe, what is Cornelius Fudge&#039;s middle name?",
+            "correct_answer": "Oswald",
+            "incorrect_answers": [
+                "James",
+                "Harold",
+                "Christopher"
+            ]
+        }
+    ]
+}

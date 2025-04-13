@@ -1,0 +1,172 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "The French mathematician &Eacute;variste Galois is primarily known for his work in which?",
+            "correct_answer": "Galois Theory",
+            "incorrect_answers": [
+                "Galois&#039; Continued Fractions",
+                "Galois&#039; Method for PDE&#039;s ",
+                "Abelian Integration"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "What is the fourth digit of &pi;?",
+            "correct_answer": "1",
+            "incorrect_answers": [
+                "2",
+                "3",
+                "4"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "How many Millibars (mbar) to 1 Inch of Mercury (inHg)",
+            "correct_answer": "33.9",
+            "incorrect_answers": [
+                "30.0",
+                "27.4",
+                "10.6"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "Which of the following famous mathematicians died in a duel at the age of 20?",
+            "correct_answer": "Galois",
+            "incorrect_answers": [
+                "Abel",
+                "Euler",
+                "Gauss"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "The decimal number 31 in hexadecimal would be what?",
+            "correct_answer": "1F",
+            "incorrect_answers": [
+                "3D",
+                "2E",
+                "1B"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "Which of these numbers is closest to the total number of possible states for an army standard Enigma Machine?",
+            "correct_answer": "1.58 x 10^20",
+            "incorrect_answers": [
+                "1.58 x 10^22",
+                "1.58 x  10^18",
+                "1.58 x 10^24"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "Which of the following mathematicians made major contributions to game theory?",
+            "correct_answer": "John Von Neumann",
+            "incorrect_answers": [
+                "Carl Friedrich Gauss",
+                "Leonhard Euler",
+                "Stefan Banach"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "The notion of a &quot;set that contains all sets which do not contain themselves&quot; is a paradoxical idea attributed to which English philosopher?",
+            "correct_answer": "Bertrand Russel",
+            "incorrect_answers": [
+                "Francis Bacon",
+                "John Locke",
+                "Alfred North Whitehead"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "Integration is the reverse of what mathematical operation?",
+            "correct_answer": "Derivation",
+            "incorrect_answers": [
+                "Division",
+                "Standard Deviation",
+                "Multiplication"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "How many zeptometres are inside one femtometre?",
+            "correct_answer": "1,000,000",
+            "incorrect_answers": [
+                "10",
+                "1,000,000,000",
+                "1000"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "What is the derivative of Acceleration with respect to time?",
+            "correct_answer": "Jerk",
+            "incorrect_answers": [
+                "Shift",
+                "Bump",
+                "Slide"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "What is the approximate value of mathematical constant e?",
+            "correct_answer": "2.72",
+            "incorrect_answers": [
+                "3.14",
+                "1.62",
+                "1.41"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "What is the smallest number that can be expressed as the sum of two positive cubes in two different ways?",
+            "correct_answer": "1729",
+            "incorrect_answers": [
+                "91",
+                "561",
+                "4104"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science: Mathematics",
+            "question": "What is the plane curve proposed by Descartes to challenge Fermat&#039;s extremum-finding techniques called?",
+            "correct_answer": "Folium of Descartes",
+            "incorrect_answers": [
+                "Elliptic Paraboloid of Descartes",
+                "Cartesian Coordinates",
+                "Descarte&#039;s Helicoid"
+            ]
+        }
+    ]
+}

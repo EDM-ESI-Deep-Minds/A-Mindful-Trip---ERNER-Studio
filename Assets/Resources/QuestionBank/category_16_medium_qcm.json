@@ -1,0 +1,172 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "The board game, Nightmare was released in what year?",
+            "correct_answer": "1991",
+            "incorrect_answers": [
+                "1992",
+                "1989",
+                "1995"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "At the start of a standard game of the Monopoly, if you throw a double six, which square would you land on?",
+            "correct_answer": "Electric Company",
+            "incorrect_answers": [
+                "Water Works",
+                "Chance",
+                "Community Chest"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "Which of the following characters is not in the board game Clue?",
+            "correct_answer": "Mister Indigo",
+            "incorrect_answers": [
+                "Colonel Mustard",
+                "Reverend Green",
+                "Miss Scarlet"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "What happens when you roll 3 doubles in a row in Monopoly?",
+            "correct_answer": "Go to jail",
+            "incorrect_answers": [
+                "Get paid $200",
+                "Pay $200",
+                "Move to Free Parking"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "What special item did the creators of Cards Against Humanity ship for their Black Friday pack?",
+            "correct_answer": "Bull Feces",
+            "incorrect_answers": [
+                "A Card Expansion",
+                "A Racist Toy",
+                "Cat Urine"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "In what year was the card game Magic: the Gathering first introduced?",
+            "correct_answer": "1993",
+            "incorrect_answers": [
+                "1987",
+                "1998",
+                "2003"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "In the Board Game, Settlers of Catan, a die roll of what number causes the Robber to attack? ",
+            "correct_answer": "7",
+            "incorrect_answers": [
+                "3",
+                "10",
+                "1"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "Which of the following is not a color of mana in Magic: The Gathering?",
+            "correct_answer": "Yellow",
+            "incorrect_answers": [
+                "White",
+                "Green",
+                "Blue"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "In &quot;Magic: The Gathering&quot;, what instant card has the highest converted mana cost?",
+            "correct_answer": "Blinkmoth Infusion",
+            "incorrect_answers": [
+                "Vitalizing Wind",
+                " Chant of Vitu-Ghazi",
+                "Assert Authority"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "In Yu-Gi-Oh, how does a player perform an Xyz Summon?",
+            "correct_answer": "Overlay at least 2 Monsters of the Same Level",
+            "incorrect_answers": [
+                "Activate a Spell and Send Monsters to the Graveyard",
+                "Add the Monsters&#039; Levels Together to Match the Xyz Monster",
+                "Banish A Number of Monsters From Your Hand And Deck"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "Which of the following tabletop games is the oldest?",
+            "correct_answer": "Go",
+            "incorrect_answers": [
+                "Chess",
+                "Mahjong",
+                "Shogi"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "Who is the main character in the VHS tape included in the board game Nightmare?",
+            "correct_answer": "The Gatekeeper",
+            "incorrect_answers": [
+                "The Kryptkeeper",
+                "The Monster",
+                "The Nightmare"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "Europa Universalis is a strategy video game based on which French board game?",
+            "correct_answer": "Europa Universalis",
+            "incorrect_answers": [
+                "Europe and the Universe",
+                "Europa!",
+                "Power in Europe"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Board Games",
+            "question": "How many points is the Z tile worth in Scrabble?",
+            "correct_answer": "10",
+            "incorrect_answers": [
+                "8",
+                "5",
+                "6"
+            ]
+        }
+    ]
+}

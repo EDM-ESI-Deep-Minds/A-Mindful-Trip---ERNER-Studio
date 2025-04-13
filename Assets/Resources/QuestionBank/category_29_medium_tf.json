@@ -1,0 +1,24 @@
+{
+    "question": [
+        {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Comics",
+            "question": "The X-Men&#039;s Storm and Nightcrawler were originally planned to be characters in DC Comics&#039; Legion of Super-Heroes.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "type": "boolean",
+            "difficulty": "medium",
+            "category": "Entertainment: Comics",
+            "question": "In the webcomic Homestuck, the first character introduced is Dave Strider.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        }
+    ]
+}

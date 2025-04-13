@@ -1,0 +1,100 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Gadgets",
+            "question": "Which company designed the &quot;Betamax&quot; video cassette format?",
+            "correct_answer": "Sony",
+            "incorrect_answers": [
+                "Panasonic",
+                "LG",
+                "Fujitsu"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Gadgets",
+            "question": "Who patented a steam engine that produced continuous rotary motion?",
+            "correct_answer": "James Watt",
+            "incorrect_answers": [
+                "Nikola Tesla",
+                "Albert Einstein",
+                "Alessandro Volta"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Gadgets",
+            "question": "What is the most significant side venture the popular firearms company, Remington, has pursued?",
+            "correct_answer": "Typewriters",
+            "incorrect_answers": [
+                "Blenders",
+                "Ceiling Fans",
+                "Door Knobs"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Gadgets",
+            "question": "In what year was the Oculus Rift revealed to the public through a Kickstarter campaign?",
+            "correct_answer": "2012",
+            "incorrect_answers": [
+                "2010",
+                "2011",
+                "2013"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Gadgets",
+            "question": "Out of all of the NASA Space Shuttles, which 2 have been destroyed in disasters?",
+            "correct_answer": "Challenger and Columbia",
+            "incorrect_answers": [
+                "Enterprise and Atlantis",
+                "Discovery and Endeavour",
+                "None of the Above"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Gadgets",
+            "question": "What are the base station trackers used for the HTC Vive called?",
+            "correct_answer": "Lighthouse",
+            "incorrect_answers": [
+                "Motion",
+                "Constellation ",
+                "Trackers"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Gadgets",
+            "question": "Which company developed the Hololens?",
+            "correct_answer": "Microsoft",
+            "incorrect_answers": [
+                "HTC",
+                "Oculus",
+                "Tobii"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Gadgets",
+            "question": "Mobile hardware and software company &quot;Blackberry Limited&quot; was founded in which country?",
+            "correct_answer": "Canada",
+            "incorrect_answers": [
+                "Norway",
+                "United States of America",
+                "United Kingdom"
+            ]
+        }
+    ]
+}

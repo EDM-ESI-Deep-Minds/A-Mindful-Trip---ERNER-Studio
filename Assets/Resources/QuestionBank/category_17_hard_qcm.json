@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What genetic disease is caused by having an extra Y chromosome (XYY)?",
+            "correct_answer": "Jacob&#039;s Syndrome",
+            "incorrect_answers": [
+                "Klinefelter&#039;s Syndrome",
+                "Turner&#039;s Syndrome",
+                "Down Syndrome"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What is the molecular formula of Ozone?",
+            "correct_answer": "O3",
+            "incorrect_answers": [
+                "C6H2O6",
+                "N2O",
+                "SO4"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What is the scientific name of the knee cap?",
+            "correct_answer": "Patella",
+            "incorrect_answers": [
+                "Femur",
+                "Foramen Magnum",
+                "Scapula"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Folic acid is the synthetic form of which vitamin?",
+            "correct_answer": "Vitamin B",
+            "incorrect_answers": [
+                "Vitamin A",
+                "Vitamin C",
+                "Vitamin D"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "The word &quot;science&quot; stems from the word &quot;scire&quot; meaning what?",
+            "correct_answer": "To know",
+            "incorrect_answers": [
+                "To measure",
+                "To live",
+                "To count"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which moon is the only satellite in our solar system to possess a dense atmosphere?",
+            "correct_answer": "Titan",
+            "incorrect_answers": [
+                "Europa",
+                "Miranda",
+                "Callisto"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What is the unit of electrical inductance?",
+            "correct_answer": "Henry",
+            "incorrect_answers": [
+                "Weber",
+                "Coulomb",
+                "Mho"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What does the scientific name of the Cambrian-Period sea creature Anomalocaris mean?",
+            "correct_answer": "Abnormal Shrimp",
+            "incorrect_answers": [
+                "Deformed Fish",
+                "Strange Crab",
+                "Anomalous Clam"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which of these is a stop codon in DNA?",
+            "correct_answer": "TAA",
+            "incorrect_answers": [
+                "ACT",
+                "ACA",
+                "GTA"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "How many legs is it biologically impossible for a centipede to have?",
+            "correct_answer": "100",
+            "incorrect_answers": [
+                "26",
+                "50",
+                "74"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which of the following elements is typically used in the doping of the semiconductor silicon?",
+            "correct_answer": "Boron",
+            "incorrect_answers": [
+                "Oxygen",
+                "Carbon",
+                "Iron"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "The Western Lowland Gorilla is scientifically know as?",
+            "correct_answer": "Gorilla Gorilla Gorilla",
+            "incorrect_answers": [
+                "Gorilla Gorilla Diehli",
+                "Gorilla Beringei Graueri",
+                "Gorilla Beringei Beringei"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "On the Beaufort Scale of wind force, what wind name is given to number 8?",
+            "correct_answer": "Gale",
+            "incorrect_answers": [
+                "Storm",
+                "Hurricane",
+                "Breeze"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "The &#039;Islets of Langerhans&#039; is found in which human organ?",
+            "correct_answer": "Pancreas",
+            "incorrect_answers": [
+                "Kidney",
+                "Liver",
+                "Brain"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which of the following is a major muscle of the back?",
+            "correct_answer": "Trapezius",
+            "incorrect_answers": [
+                "Trapezium",
+                "Trapezoid",
+                "Triquetrum"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Autosomal-dominant Compelling Helio-Ophthalmic Outburst syndrome is the need to do what when seeing the Sun?",
+            "correct_answer": "Sneeze",
+            "incorrect_answers": [
+                "Cough",
+                "Yawn",
+                "Hiccup"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What physics principle relates the net electric flux out of a closed surface to the charge enclosed by that surface?",
+            "correct_answer": "Gauss&#039;s Law",
+            "incorrect_answers": [
+                "Faraday&#039;s Law",
+                "Ampere&#039;s Law",
+                "Biot-Savart Law"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "If you planted the seeds of Quercus robur what would grow?",
+            "correct_answer": "Trees",
+            "incorrect_answers": [
+                "Flowers",
+                "Vegtables",
+                "Grains"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What is isobutylphenylpropanoic acid more commonly known as?",
+            "correct_answer": "Ibuprofen",
+            "incorrect_answers": [
+                "Morphine",
+                "Ketamine",
+                "Aspirin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What is the scientific name of the red fox?",
+            "correct_answer": "Vulpes Vulpes",
+            "incorrect_answers": [
+                "Vulpes Redus",
+                "Red Fox",
+                "Vulpes Vulpie"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "In the Scoville scale, what is the hottest chemical?",
+            "correct_answer": "Resiniferatoxin",
+            "incorrect_answers": [
+                "Capsaicin",
+                "Dihydrocapsaicin",
+                "Tinyatoxin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which of the following is NOT a word used to describe an earthquake?",
+            "correct_answer": "Drop-slide",
+            "incorrect_answers": [
+                "Foreshock",
+                "Strike-slip",
+                "Temblor"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What is the most potent toxin known?",
+            "correct_answer": "Botulinum toxin",
+            "incorrect_answers": [
+                "Ricin",
+                "Cyanide",
+                "Asbestos"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which horizon in a soil profile consists of bedrock?",
+            "correct_answer": "R",
+            "incorrect_answers": [
+                "O",
+                "B",
+                "D"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which of the following is considered classical conditioning?",
+            "correct_answer": "Pavlov&#039;s dog experiments",
+            "incorrect_answers": [
+                "Skinner box experiment",
+                "Schr&ouml;dinger&#039;s cat experiment",
+                "Harlow&rsquo;s monkey experiments"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What causes the sound of a heartbeat?",
+            "correct_answer": "Closure of the heart valves",
+            "incorrect_answers": [
+                "Contraction of the heart chambers",
+                "Blood exiting the heart",
+                "Relaxation of the heart chambers"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "How long is a light-year?",
+            "correct_answer": "9.461 Trillion Kilometres",
+            "incorrect_answers": [
+                "1 AU",
+                "105.40 Earth-years",
+                "501.2 Million Miles"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "How many objects are equivalent to one mole?",
+            "correct_answer": "6.022 x 10^23",
+            "incorrect_answers": [
+                "6.002 x 10^22",
+                "6.022 x 10^22",
+                "6.002 x 10^23"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which scientific unit is named after an Italian nobleman?",
+            "correct_answer": "Volt",
+            "incorrect_answers": [
+                "Pascal",
+                "Ohm",
+                "Hertz"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which of the following are cells of the adaptive immune system?",
+            "correct_answer": "Cytotoxic T cells",
+            "incorrect_answers": [
+                "Dendritic cells",
+                "Natural killer cells",
+                "White blood cells"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What is the molecular formula of Glucose?",
+            "correct_answer": "C6H12O6",
+            "incorrect_answers": [
+                "C2H4O2",
+                "K+",
+                "CH4"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which of the following is the term for &quot;surgical complications resulting from surgical sponges left inside the patient&#039;s body?",
+            "correct_answer": "Gossypiboma",
+            "incorrect_answers": [
+                "Gongoozler",
+                "Jentacular",
+                "Meupareunia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "&quot;The Big Bang Theory&quot; was first theorized by a priest of what religious ideology?",
+            "correct_answer": "Catholic",
+            "incorrect_answers": [
+                "Christian",
+                "Jewish",
+                "Islamic"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "How much radiation does a banana emit?",
+            "correct_answer": "0.1 Microsievert",
+            "incorrect_answers": [
+                "0.3 Microsievert",
+                "0.5 Microsievert",
+                "0.7 Microsievert"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What does the term &quot;isolation&quot; refer to in microbiology?",
+            "correct_answer": "The separation of a strain from a natural, mixed population of living microbes",
+            "incorrect_answers": [
+                "A lack of nutrition in microenviroments",
+                "The nitrogen level in soil",
+                "Testing effects of certain microorganisms in an isolated enviroments, such as caves"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which is the chemical name of H2O?",
+            "correct_answer": "Dihydrogen Monoxide",
+            "incorrect_answers": [
+                "Ammonium chloride",
+                "Anhydrous Sodium Carbonate",
+                "Manganese dioxide"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which of these animals belongs in class Chondrichthyes?",
+            "correct_answer": "Great white shark",
+            "incorrect_answers": [
+                "Octopus",
+                "Killer whale",
+                "Catfish"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which is not a type of neuron?",
+            "correct_answer": "Perceptual Neuron",
+            "incorrect_answers": [
+                "Sensory Neuron",
+                "Motor Neuron",
+                "Interneuron"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which of the following is NOT a real element?",
+            "correct_answer": "Vitrainium",
+            "incorrect_answers": [
+                "Praseodymium",
+                "Hassium",
+                "Lutetium"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which of these chemical compounds is NOT found in gastric acid?",
+            "correct_answer": "Sulfuric acid",
+            "incorrect_answers": [
+                "Hydrochloric acid",
+                "Potassium chloride",
+                "Sodium chloride"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "The core of the Sun can reach which temperature?",
+            "correct_answer": "27&deg; Million F (15&deg; Million C)",
+            "incorrect_answers": [
+                "938,000&deg; F (521093.3&deg; C)",
+                "8&deg; Billion F (&deg;4.4 Billion C)",
+                "Absolute Zero (Both F and C)"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Which of the following plastic is commonly used for window frames, gutters and drain pipes?",
+            "correct_answer": "Polyvinylchloride (PVC) ",
+            "incorrect_answers": [
+                "Polyethylene (PE)",
+                "Polypropylene (PP)",
+                "Polystyrene (PS)"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "An organic compound is considered an alcohol if it has what functional group?",
+            "correct_answer": "Hydroxyl",
+            "incorrect_answers": [
+                "Carbonyl",
+                "Alkyl",
+                "Aldehyde"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Where is the Gluteus Maximus muscle located?",
+            "correct_answer": "Butt",
+            "incorrect_answers": [
+                "Arm",
+                "Head",
+                "Torso"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What was the first organic compound to be synthesized from inorganic compounds?",
+            "correct_answer": "Urea",
+            "incorrect_answers": [
+                "Propane",
+                "Ethanol",
+                "Formaldehyde"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "How many protons are in an oxygen atom?",
+            "correct_answer": "Eight",
+            "incorrect_answers": [
+                "Four",
+                "Two",
+                "Six"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Coulrophobia is the irrational fear of what?",
+            "correct_answer": "Clowns",
+            "incorrect_answers": [
+                "Cemeteries",
+                "Needles",
+                "Tunnels"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "What is the same in Celsius and Fahrenheit?",
+            "correct_answer": "-40",
+            "incorrect_answers": [
+                "32",
+                "-39",
+                "-42"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "In physics, conservation of energy and conservation of momentum are both consequences of which of the following?",
+            "correct_answer": "Noether&#039;s Theorem",
+            "incorrect_answers": [
+                "Bell&#039;s Theorem",
+                "Wick&#039;s Theorem",
+                "Carnot&#039;s Theorem"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Science &amp; Nature",
+            "question": "Botanically speaking, which of these fruits is NOT a berry?",
+            "correct_answer": "Strawberry",
+            "incorrect_answers": [
+                "Blueberry",
+                "Banana",
+                "Concord Grape"
+            ]
+        }
+    ]
+}

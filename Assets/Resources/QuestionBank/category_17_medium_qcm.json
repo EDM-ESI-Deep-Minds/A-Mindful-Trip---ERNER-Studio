@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "The moons, Miranda, Ariel, Umbriel, Titania and Oberon orbit which planet?",
+            "correct_answer": "Uranus",
+            "incorrect_answers": [
+                "Jupiter",
+                "Venus",
+                "Neptune"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Which part of the body does glaucoma affect?",
+            "correct_answer": "Eyes",
+            "incorrect_answers": [
+                "Throat",
+                "Stomach",
+                "Blood"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What is the colour of unoxidized blood?",
+            "correct_answer": "Red",
+            "incorrect_answers": [
+                "Blue",
+                "Purple",
+                "Green"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "In Psychology, which need appears highest in the &quot;Maslow&#039;s hierarchy of needs&quot; pyramid?",
+            "correct_answer": "Esteem",
+            "incorrect_answers": [
+                "Love",
+                "Safety",
+                "Physiological"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "On the periodic table of elements, what is the symbol for Tin?",
+            "correct_answer": "Sn",
+            "incorrect_answers": [
+                "Ti",
+                "Ni",
+                "Na"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What is Hypernatremia?",
+            "correct_answer": "Increase in blood sodium",
+            "incorrect_answers": [
+                "Decrease in blood potassium",
+                "Increase in blood glucose",
+                "Decrease in blood iron"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What term is best associated with Sigmund Freud?",
+            "correct_answer": "Psychoanalysis",
+            "incorrect_answers": [
+                "Cognitive-Behavioral Therapy",
+                "Theory of Gravity",
+                "Dialectical Behavior Therapy"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What is the unit of electrical capacitance?",
+            "correct_answer": "Farad",
+            "incorrect_answers": [
+                "Gauss",
+                "Henry",
+                "Watt"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "The Axiom of Preventive Medicine states that people with ___ risk for a disease should be screened and we should treat ___ of those people.",
+            "correct_answer": "low, all",
+            "incorrect_answers": [
+                "low, some",
+                "high, all",
+                "high, some"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "The &quot;Tibia&quot; is found in which part of the body?",
+            "correct_answer": "Leg",
+            "incorrect_answers": [
+                "Arm",
+                "Hand",
+                "Head"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Which of these choices is not one of the phases of mitosis?",
+            "correct_answer": "Diplophase",
+            "incorrect_answers": [
+                "Metaphase",
+                "Anaphase",
+                "Telophase"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "To the nearest minute, how long does it take for light to travel from the Sun to the Earth?",
+            "correct_answer": "8 Minutes",
+            "incorrect_answers": [
+                "6 Minutes",
+                "2 Minutes",
+                "12 Minutes"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Which of these two plates are best know for forming earthquakes and tsunami&#039;s? ",
+            "correct_answer": "Convergent Plate Boundaries/Oceanic Crust",
+            "incorrect_answers": [
+                "Divergent Plate Boundaries/Convergent/Oceanic Crust",
+                "Transform Plate Boundaries/Divergent Plate Boundaries",
+                "Oceanic &amp; Continental Crust/Transform Plate Boundaries"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "In human biology, a circadium rhythm relates to a period of roughly how many hours?",
+            "correct_answer": "24",
+            "incorrect_answers": [
+                "8",
+                "16",
+                "32"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What is an alternative name for multiple personality disorder?",
+            "correct_answer": "Dissociative identity disorder",
+            "incorrect_answers": [
+                "Body integrity identity disorder",
+                "Identity crisis",
+                "Schizophrenia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What is the molecular formula of the active component of chili peppers(Capsaicin)?",
+            "correct_answer": "C18H27NO3",
+            "incorrect_answers": [
+                "C21H23NO3",
+                "C6H4Cl2",
+                "C13H25NO4"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Au on the Periodic Table refers to which element?",
+            "correct_answer": "Gold",
+            "incorrect_answers": [
+                "Silver",
+                "Oxygen",
+                "Nickel"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Which element has the atomic number of 7?",
+            "correct_answer": "Nitrogen",
+            "incorrect_answers": [
+                "Oxygen",
+                "Hydrogen",
+                "Neon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Which of these is a type of stretch/deep tendon reflex?",
+            "correct_answer": "Ankle jerk reflex",
+            "incorrect_answers": [
+                "Gag reflex",
+                "Pupillary light reflex",
+                "Scratch reflex"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "After which Danish city is the 72th element on the periodic table named?",
+            "correct_answer": "Copenhagen",
+            "incorrect_answers": [
+                "Odense",
+                "Herning",
+                "Skagen"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "A positron is an antiparticle of a what?",
+            "correct_answer": "Electron",
+            "incorrect_answers": [
+                "Neutron",
+                "Proton",
+                "Photon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Which planet did the &quot;Viking 1&quot; spacecraft send surface images of, starting in 1976?",
+            "correct_answer": "Mars",
+            "incorrect_answers": [
+                "Saturn",
+                "Jupiter",
+                "Venus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Which one of these scientists conducted the Gold Foil Experiment which concluded that atoms are mostly made of empty space?",
+            "correct_answer": "Ernest Rutherford",
+            "incorrect_answers": [
+                "Joseph John Thomson",
+                "Archimedes",
+                "Niels Henrik David Bohr"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What polymer is used to make CDs, safety goggles and riot shields?",
+            "correct_answer": "Polycarbonate",
+            "incorrect_answers": [
+                "Rubber",
+                "Nylon",
+                "Bakelite"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "In Chemistry, how many isomers does Butanol (C4H9OH) have?",
+            "correct_answer": "4",
+            "incorrect_answers": [
+                "3",
+                "5",
+                "6"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "All the following metal elements are liquids at or near room temperature EXCEPT:",
+            "correct_answer": "Beryllium",
+            "incorrect_answers": [
+                "Gallium",
+                "Caesium",
+                "Mercury"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "When the Falcon Heavy was launched on it&#039;s test flight, what was the only part of the operation that failed?",
+            "correct_answer": "Center Core Landing",
+            "incorrect_answers": [
+                "Side Booster Landing",
+                "Deployment of Starman",
+                "Ignition and Liftoff"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Approximately how long is a year on Uranus?",
+            "correct_answer": "84 Earth years",
+            "incorrect_answers": [
+                "47 Earth years",
+                "62 Earth years",
+                "109 Earth years"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Which of the following is NOT a passive electrical component?",
+            "correct_answer": "Transistor",
+            "incorrect_answers": [
+                "Resistor",
+                "Capacitor",
+                "Inductor"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Which of these is NOT a part of the structure of a typical neuron?",
+            "correct_answer": "Islets of Langerhans",
+            "incorrect_answers": [
+                "Node of Ranvier",
+                "Schwann cell",
+                "Myelin sheath"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What is the scientific term for &#039;taste&#039;?",
+            "correct_answer": "Gustatory Perception",
+            "incorrect_answers": [
+                "Olfaction",
+                "Somatosensation",
+                "Auditory Perception"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "When was the first mammal successfully cloned?",
+            "correct_answer": "1996",
+            "incorrect_answers": [
+                "2009",
+                "1999",
+                "1985"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "The human right lung has how many lobes?",
+            "correct_answer": "3",
+            "incorrect_answers": [
+                "4",
+                "2",
+                "1"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What does the yellow diamond on the NFPA 704 fire diamond represent?",
+            "correct_answer": "Reactivity",
+            "incorrect_answers": [
+                "Health",
+                "Flammability",
+                "Radioactivity"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "How many officially recognized dwarf planets in the solar system are named after Polynesian deities?",
+            "correct_answer": "2",
+            "incorrect_answers": [
+                "0",
+                "1",
+                "5"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Which of these stars is the largest?",
+            "correct_answer": "UY Scuti",
+            "incorrect_answers": [
+                "VY Canis Majoris",
+                "Betelgeuse",
+                "RW Cephei"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "At what temperature does water boil?",
+            "correct_answer": "212&deg;F",
+            "incorrect_answers": [
+                "200&deg;F",
+                "181&deg;F",
+                "178&deg;F"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What mineral has the lowest number on the Mohs scale?",
+            "correct_answer": "Talc",
+            "incorrect_answers": [
+                "Quartz",
+                "Diamond",
+                "Gypsum"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What stage of development do the majority of eukaryotic cells remain in for most of their life?",
+            "correct_answer": "Interphase",
+            "incorrect_answers": [
+                "Prophase",
+                "Stasis",
+                "Telophase"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "About how old is Earth?",
+            "correct_answer": "4.5 Billion Years",
+            "incorrect_answers": [
+                "3.5 Billion Years",
+                "2.5 Billion Years",
+                "5.5 Billion Years"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "The medical condition osteoporosis affects which part of the body?",
+            "correct_answer": "Bones",
+            "incorrect_answers": [
+                "Skin",
+                "Brain",
+                "Heart"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What is the atomic number of Uranium ",
+            "correct_answer": "92",
+            "incorrect_answers": [
+                "235",
+                "17",
+                "167"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What is radiation measured in?",
+            "correct_answer": "Gray ",
+            "incorrect_answers": [
+                "Watt",
+                "Decibel",
+                "Kelvin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Deuterium is an isotope of which element?",
+            "correct_answer": "Hydrogen",
+            "incorrect_answers": [
+                "Nitrogen",
+                "Helium",
+                "Neon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "How old is the universe?",
+            "correct_answer": "13.8 Billion Years",
+            "incorrect_answers": [
+                "4.5 Billion Years",
+                "7.9 Billion Years",
+                "16.2 Billion Years"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "An organism described as &quot;heliotropic&quot; has a tendancy to move towards which of these things?",
+            "correct_answer": "Light",
+            "incorrect_answers": [
+                "Water",
+                "Trees",
+                "Pollen"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Deionized water is water with which of the following removed?",
+            "correct_answer": "Iron",
+            "incorrect_answers": [
+                "Oxygen",
+                "Hydrogen",
+                "Uncharged atoms"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What was the first living creature in space?",
+            "correct_answer": "Fruit Flies ",
+            "incorrect_answers": [
+                "Monkey",
+                "Dog",
+                "Mouse"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "What is the atomic number of the element Strontium?",
+            "correct_answer": "38",
+            "incorrect_answers": [
+                "73",
+                "47",
+                "11"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science &amp; Nature",
+            "question": "Which of the following men does not have a chemical element named after him?",
+            "correct_answer": "Sir Isaac Newton",
+            "incorrect_answers": [
+                "Albert Einstein",
+                "Niels Bohr",
+                "Enrico Fermi"
+            ]
+        }
+    ]
+}

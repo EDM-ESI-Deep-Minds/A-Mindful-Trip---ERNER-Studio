@@ -1,0 +1,172 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "The Nike apparel and footwear brand takes it&#039;s name from the Greek goddess of what?",
+            "correct_answer": "Victory",
+            "incorrect_answers": [
+                "Courage",
+                "Strength",
+                "Honor"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "Who in Greek mythology, who led the Argonauts in search of the Golden Fleece?",
+            "correct_answer": "Jason",
+            "incorrect_answers": [
+                "Castor",
+                "Daedalus",
+                "Odysseus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "The ancient Roman god of war was commonly known as which of the following?",
+            "correct_answer": "Mars",
+            "incorrect_answers": [
+                "Jupiter",
+                "Juno",
+                "Ares"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "The greek god Poseidon was the god of what?",
+            "correct_answer": "The Sea",
+            "incorrect_answers": [
+                "War",
+                "Sun",
+                "Fire"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "Which of the following is not true about the life of Tiresias?",
+            "correct_answer": "Sailed with the Argonauts to find the golden fleece",
+            "incorrect_answers": [
+                "Athena turned him into a woman, and then years later back into a man",
+                "Hera blinded him after he agreed with Zeus in an argument",
+                "Revealed to Oedipus that Oedipus had married his own mother"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "Who was the only god from Greece who did not get a name change in Rome?",
+            "correct_answer": "Apollo",
+            "incorrect_answers": [
+                "Demeter",
+                "Zeus",
+                "Athena"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "What mythology did the god &quot;Apollo&quot; come from?",
+            "correct_answer": "Greek and Roman",
+            "incorrect_answers": [
+                "Roman and Spanish",
+                "Greek and Chinese",
+                "Greek, Roman and Norse"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "Which Greek &amp; Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
+            "correct_answer": "Apollo",
+            "incorrect_answers": [
+                "Aphrodite",
+                "Artemis",
+                "Athena"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "What mytological creatures have women&#039;s faces and vultures&#039; bodies?",
+            "correct_answer": "Harpies",
+            "incorrect_answers": [
+                "Mermaids",
+                "Nymph",
+                "Lilith"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "In Greek mythology, who is the god of wine?",
+            "correct_answer": "Dionysus",
+            "incorrect_answers": [
+                "Hephaestus",
+                "Demeter",
+                "Apollo"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "In most traditions, who was the wife of Zeus?",
+            "correct_answer": "Hera",
+            "incorrect_answers": [
+                "Aphrodite",
+                "Athena",
+                "Hestia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "Which of these mythological creatures is said to be half-man and half-horse?",
+            "correct_answer": "Centaur",
+            "incorrect_answers": [
+                "Minotaur",
+                "Pegasus",
+                "Gorgon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "Who was the King of Gods in Ancient Greek mythology?",
+            "correct_answer": "Zeus",
+            "incorrect_answers": [
+                "Apollo",
+                "Hermes",
+                "Poseidon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Mythology",
+            "question": "This Greek goddess&#039;s name was chosen for the dwarf planet responsible for discord on Pluto&#039;s classification amongst astronomers.",
+            "correct_answer": "Eris",
+            "incorrect_answers": [
+                "Charon",
+                "Ceres",
+                "Dysnomia"
+            ]
+        }
+    ]
+}

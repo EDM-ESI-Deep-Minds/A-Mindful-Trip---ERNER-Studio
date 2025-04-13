@@ -1,0 +1,100 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "Which actor has NOT portrayed Billy Flynn in the musical &quot;Chicago&quot;?",
+            "correct_answer": "Christopher Walken",
+            "incorrect_answers": [
+                "David Hasselhoff",
+                "Jerry Springer",
+                "Patrick Swayze"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "In Macbeth, the eyes of what animals were used in the Witches&#039; cauldron?",
+            "correct_answer": "Newts",
+            "incorrect_answers": [
+                "Humans",
+                "Sharks",
+                "Squids"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "Which of these plays was famously first performed posthumously after the playwright committed suicide?",
+            "correct_answer": "4.48 Psychosis",
+            "incorrect_answers": [
+                "Hamilton",
+                "Much Ado About Nothing",
+                "The Birthday Party"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "What is the name of Broadway&#039;s first &quot;long-run&quot; musical?",
+            "correct_answer": "The Elves",
+            "incorrect_answers": [
+                "Wicked",
+                "Hamilton",
+                "The Book of Mormon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "After England, more Shakespeare plays are set in this present day country than in any other.",
+            "correct_answer": "Italy",
+            "incorrect_answers": [
+                "United States",
+                "Greece",
+                "France"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "Which Shakespeare play features the stage direction &quot;Enter a messenger, with two heads and a hand&quot;?",
+            "correct_answer": "Titus Andronicus",
+            "incorrect_answers": [
+                "Othello",
+                "Macbeth",
+                "King Lear"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "In Les Mis&eacute;rables, who is Prison Code 24601?",
+            "correct_answer": "Jean Valjean",
+            "incorrect_answers": [
+                "Marius Pontmercy",
+                "Javert",
+                "Jean Claude Van Damme"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "Who wrote the lyrics for Leonard Bernstein&#039;s 1957 Brodway musical West Side Story?",
+            "correct_answer": "Stephen Sondheim",
+            "incorrect_answers": [
+                "Himself",
+                "Oscar Hammerstein",
+                "Richard Rodgers"
+            ]
+        }
+    ]
+}

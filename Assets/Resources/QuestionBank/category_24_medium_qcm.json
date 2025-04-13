@@ -1,0 +1,280 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Who was elected leader of the UK Labour Party in September 2015?",
+            "correct_answer": "Jeremy Corbyn",
+            "incorrect_answers": [
+                "Ed Miliband",
+                "David Cameron",
+                "Theresa May"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Who became Prime Minister of the United Kingdom in July 2016?",
+            "correct_answer": "Theresa May",
+            "incorrect_answers": [
+                "Boris Johnson",
+                "David Cameron",
+                "Tony Blair"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Which of these is NOT one of Donald Trump&#039;s children?",
+            "correct_answer": "Julius",
+            "incorrect_answers": [
+                "Donald Jr.",
+                "Ivanka",
+                "Eric"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "What is former United States President Bill Clinton&#039;s full name?",
+            "correct_answer": "William Jefferson Clinton",
+            "incorrect_answers": [
+                "William Roosevelt Clinton",
+                "William Truman Clinton",
+                "William Lincoln Clinton"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "What are the first names of the first father and son pair that were both Prime Ministers of Canada?",
+            "correct_answer": "Justin and Pierre",
+            "incorrect_answers": [
+                "John and Louis",
+                "Brian and Justin",
+                "Brian and Pierre"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Who was the 40th President of the USA?",
+            "correct_answer": "Ronald Reagan",
+            "incorrect_answers": [
+                "Jimmy Carter",
+                "Bill Clinton",
+                "Richard Nixon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Due to the Nagoya Resolution, China agreed to allow Taiwan to compete separately in international sporting events under what name?",
+            "correct_answer": "Chinese Taipei",
+            "incorrect_answers": [
+                "Chinese Taiwan",
+                "Republic of Taiwan",
+                "Republic of Taipei "
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Before 2016, in which other year did Donald Trump run for President?",
+            "correct_answer": "2000",
+            "incorrect_answers": [
+                "2012",
+                "1988",
+                "2008"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "The 2014 movie &quot;The Raid 2: Berandal&quot; was mainly filmed in which Asian country?",
+            "correct_answer": "Indonesia",
+            "incorrect_answers": [
+                "Thailand",
+                "Brunei",
+                "Malaysia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Which of the following Argentinian presidents was elected in 2015?",
+            "correct_answer": "Mauricio Macri",
+            "incorrect_answers": [
+                "Cristina Fernandez de Kirchner",
+                "Nestor Kirchner",
+                "Juan Domingo Peron"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Who succeeded Joseph Stalin as General Secretary of the Communist Party of the Soviet Union?",
+            "correct_answer": "Nikita Khrushchev",
+            "incorrect_answers": [
+                "Leonid Brezhnev",
+                "Mikhail Gorbachev",
+                "Boris Yeltsin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "In United States history, how many vice presidents did Franklin D. Roosevelt have during his time in office as president?",
+            "correct_answer": "3",
+            "incorrect_answers": [
+                "1",
+                "2",
+                "0"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "The Watergate Scandal occured in what year?",
+            "correct_answer": "1972",
+            "incorrect_answers": [
+                "1973",
+                "1974",
+                "1971"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Which U.S. president is said to have had the longest beard?",
+            "correct_answer": "Rutherford B. Hayes",
+            "incorrect_answers": [
+                "Zachary Taylor",
+                "John Quincy Adams",
+                "James A. Garfield"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "What country saw a world record 315 million voters turn out for elections on May 20, 1991?",
+            "correct_answer": "India",
+            "incorrect_answers": [
+                "United States of America",
+                "Soviet Union",
+                "Poland"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Who was the British Prime Minister at the outbreak of the Second World War?",
+            "correct_answer": "Neville Chamberlain",
+            "incorrect_answers": [
+                "Clement Attlee",
+                "Winston Churchill",
+                "Stanley Baldwin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Which president erased the national debt of the United States?",
+            "correct_answer": "Andrew Jackson",
+            "incorrect_answers": [
+                "Ronald Reagan",
+                "John F. Kennedy",
+                "Franklin Roosevelt"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Between 1973 to 1990, what country was ruled by dictator Augusto Pinochet?",
+            "correct_answer": "Chile",
+            "incorrect_answers": [
+                "Ethiopia",
+                "Indonesia",
+                "Nicaragua"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "What was the personal nickname of the 40th Governor of the US State Louisiana, Huey Long?",
+            "correct_answer": "The Kingfish",
+            "incorrect_answers": [
+                "The Champ",
+                "The Hoot Owl",
+                "The Oracle"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Which former US president used &quot;Let&#039;s Make America Great Again&quot; as his campaign slogan before Donald Trump&#039;s campaign?",
+            "correct_answer": "Ronald Reagan",
+            "incorrect_answers": [
+                "Jimmy Carter",
+                "Gerald Ford",
+                "Richard Nixon"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Who was the only president to not be in office in Washington D.C?",
+            "correct_answer": "George Washington",
+            "incorrect_answers": [
+                "Abraham Lincoln",
+                "Richard Nixon",
+                "Thomas Jefferson"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "What year did Gerald Ford Become President?",
+            "correct_answer": "1974",
+            "incorrect_answers": [
+                "1977",
+                "1973",
+                "1969"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Politics",
+            "question": "Before 2011, &quot;True Capitalist Radio&quot; was known by a different name. What was that name?",
+            "correct_answer": "True Conservative Radio",
+            "incorrect_answers": [
+                "True Republican Radio",
+                "Texan Capitalist Radio",
+                "United Capitalists"
+            ]
+        }
+    ]
+}

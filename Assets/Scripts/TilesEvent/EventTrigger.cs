@@ -3,6 +3,7 @@ using UnityEngine;
 
 public static class EventTrigger
 {
+    public static event Action OnQuestionTile;
     public static void SelectEventToTrigger(string TileType)
     {
         switch (TileType)
@@ -20,7 +21,7 @@ public static class EventTrigger
                 break;
 
             case "Question":
-                
+                OnQuestionTile?.Invoke();
                 break;
 
             default:

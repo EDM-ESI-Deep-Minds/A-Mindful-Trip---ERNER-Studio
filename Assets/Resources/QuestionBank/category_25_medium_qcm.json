@@ -1,0 +1,100 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Art",
+            "question": "What nationality was the surrealist painter Salvador Dali?",
+            "correct_answer": "Spanish",
+            "incorrect_answers": [
+                "Italian",
+                "French",
+                "Portuguese"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Art",
+            "question": "Which time signature is commonly known as &ldquo;Cut Time?&rdquo;",
+            "correct_answer": "2/2",
+            "incorrect_answers": [
+                "4/4",
+                "6/8",
+                "3/4"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Art",
+            "question": "Which artist painted &ldquo;The Treachery of Images,&rdquo; a painting of a pipe with the description &quot;this is not a pipe&quot;?",
+            "correct_answer": "Magritte",
+            "incorrect_answers": [
+                "Matisse",
+                "Modigliani",
+                "Munch "
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Art",
+            "question": "Who designed the Chupa Chups logo?",
+            "correct_answer": "Salvador Dali",
+            "incorrect_answers": [
+                "Pablo Picasso",
+                "Andy Warhol",
+                "Vincent van Gogh"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Art",
+            "question": "Which of these are the name of a famous marker brand?",
+            "correct_answer": "Copic",
+            "incorrect_answers": [
+                "Dopix",
+                "Cofix",
+                "Marx"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Art",
+            "question": "Which artist&#039;s style was to use small different colored dots to create a picture?",
+            "correct_answer": "Georges Seurat",
+            "incorrect_answers": [
+                "Paul C&eacute;zanne",
+                "Vincent Van Gogh",
+                "Henri Rousseau"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Art",
+            "question": "Which one of these paintings is not by Caspar David Friedrich?",
+            "correct_answer": "The Black Sea",
+            "incorrect_answers": [
+                "The Sea of Ice",
+                "Wanderer above the Sea of Fog",
+                "The Monk by the Sea"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Art",
+            "question": "Who painted the epic mural Guernica?",
+            "correct_answer": "Pablo Picasso",
+            "incorrect_answers": [
+                "Francisco Goya",
+                "Leonardo da Vinci",
+                "Henri Matisse"
+            ]
+        }
+    ]
+}

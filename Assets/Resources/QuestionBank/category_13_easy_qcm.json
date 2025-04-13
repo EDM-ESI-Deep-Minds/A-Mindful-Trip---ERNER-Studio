@@ -1,0 +1,64 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "What is Jean ValJean&#039;s first prisoner number?",
+            "correct_answer": "24601",
+            "incorrect_answers": [
+                "9430",
+                "1729",
+                "32769"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "Who wrote the play &#039;Angels in America&#039;?",
+            "correct_answer": "Tony Kusher",
+            "incorrect_answers": [
+                "Tom Stoppard",
+                "Matthew Lopez",
+                "Anthony Neilson"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "How many plays is Shakespeare generally considered to have written?",
+            "correct_answer": "37",
+            "incorrect_answers": [
+                "18",
+                "54",
+                "25"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "&quot;Doctor Who&quot; star David Tennant performed in a rendition of which Shakespearean play?",
+            "correct_answer": "Hamlet",
+            "incorrect_answers": [
+                "The Tempest",
+                "Othello",
+                "The Taming of the Shrew"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Musicals &amp; Theatres",
+            "question": "Who wrote the award winning musical &quot;In The Heights&quot;?",
+            "correct_answer": "Lin-Manuel Miranda",
+            "incorrect_answers": [
+                "Steven Sondheim",
+                "Francis Scott Key",
+                "John Phillips Sousa"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,136 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Celebrities",
+            "question": "Gwyneth Paltrow has a daughter named...?",
+            "correct_answer": "Apple",
+            "incorrect_answers": [
+                "Lily",
+                "French",
+                "Dakota"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Celebrities",
+            "question": "Which actress married Michael Douglas in 2000?",
+            "correct_answer": "Catherine Zeta-Jones",
+            "incorrect_answers": [
+                "Ruth Jones",
+                "Pam Ferris",
+                "Sara Sugarman"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Celebrities",
+            "question": "By which name is Ramon Estevez better known as?",
+            "correct_answer": "Martin Sheen",
+            "incorrect_answers": [
+                "Charlie Sheen",
+                "Ramon Sheen",
+                "Emilio Estevez"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Celebrities",
+            "question": "What does film maker Dan Bell typically focus his films on?",
+            "correct_answer": "Abandoned Buildings and Dead Malls",
+            "incorrect_answers": [
+                "Historic Landmarks",
+                "Action Films",
+                "Documentaries "
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Celebrities",
+            "question": "Named after a character he played in a 1969 film, what is the name of the ski resort in Utah that Robert Redford bought in 1968?",
+            "correct_answer": "Sundance",
+            "incorrect_answers": [
+                "Woodward",
+                "Turner",
+                "Booker"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Celebrities",
+            "question": "Neil Hamburger is played by which comedian?",
+            "correct_answer": "Gregg Turkington",
+            "incorrect_answers": [
+                "Nathan Fielder",
+                "Tim Heidecker",
+                "Todd Glass"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Celebrities",
+            "question": "Which celebrity announced his presidency in 2015?",
+            "correct_answer": "Kanye West",
+            "incorrect_answers": [
+                "Donald Trump",
+                "Leonardo DiCaprio",
+                "Miley Cyrus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Celebrities",
+            "question": "By what name is Carlos Estevez better known? ",
+            "correct_answer": "Charlie Sheen",
+            "incorrect_answers": [
+                "Ricky Martin",
+                "Bruno Mars",
+                "Joaquin Phoenix"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Celebrities",
+            "question": "What was the cause of Marilyn Monroes suicide?",
+            "correct_answer": "Drug Overdose",
+            "incorrect_answers": [
+                "Knife Attack",
+                "House Fire",
+                "Gunshot"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Celebrities",
+            "question": "Aubrey Graham is better known as",
+            "correct_answer": "Drake",
+            "incorrect_answers": [
+                "Travis Scott",
+                "Lil Wayne",
+                "2 Chainz"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Celebrities",
+            "question": "What was James Coburn&#039;s last film role before his death?",
+            "correct_answer": "American Gun",
+            "incorrect_answers": [
+                "Monsters Inc",
+                "Texas Rangers",
+                "Snow Dogs"
+            ]
+        }
+    ]
+}

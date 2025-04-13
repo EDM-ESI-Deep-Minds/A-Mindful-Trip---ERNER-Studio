@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "What was the unofficial name for Germany between 1919 and 1933?",
+            "correct_answer": "Weimar Republic",
+            "incorrect_answers": [
+                "German Democratic Republic",
+                "Federal Republic of Germany",
+                "Oesterreich "
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "The United States Army Air Corps became the United States Air Force on what date?",
+            "correct_answer": "September 18, 1947",
+            "incorrect_answers": [
+                "December 14, 1946",
+                "October 27, 1945",
+                "November 08, 1944"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "What year did Skoal, a smokeless Tobacco company, release their first line of Pouches, known as &quot;Skoal Bandits&quot;?",
+            "correct_answer": "1983",
+            "incorrect_answers": [
+                "1934",
+                "1984",
+                "1822"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "In the War of the Pacific (1879 - 1883), Bolivia lost its access to the Pacific Ocean after being defeated by which South American country?",
+            "correct_answer": "Chile",
+            "incorrect_answers": [
+                "Peru",
+                "Brazil",
+                "Argentina"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "In what year did the Berlin Wall fall?",
+            "correct_answer": "1989",
+            "incorrect_answers": [
+                "1987",
+                "1991",
+                "1993"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "When did Norway get its constitution?",
+            "correct_answer": "1814",
+            "incorrect_answers": [
+                "1932",
+                "1905",
+                "1854"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Which dictator killed the most people?",
+            "correct_answer": "Mao Zedong",
+            "incorrect_answers": [
+                "Joseph Stalin",
+                "Adolf Hitler",
+                "Kim Il Sung"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "When was the United States National Security Agency established?",
+            "correct_answer": "November 4, 1952",
+            "incorrect_answers": [
+                "July 26, 1908",
+                " July 1, 1973",
+                " November 25, 2002"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "During which American Civil War campaign did Union troops dig a tunnel beneath Confederate troops to detonate explosives underneath them?",
+            "correct_answer": "Siege of Petersburg",
+            "incorrect_answers": [
+                "Siege of Vicksburg",
+                "Antietam Campaign",
+                "Gettysburg Campagin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "According to scholarly estimates, what percentage of the world population at the time died due to Tamerlane&#039;s conquests?",
+            "correct_answer": "5%",
+            "incorrect_answers": [
+                "1%",
+                "3%",
+                "&lt;1%"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "In what year did Texas secede from Mexico?",
+            "correct_answer": "1836",
+            "incorrect_answers": [
+                "1838",
+                "1845",
+                "1844"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Who is believed to have been the first European to &#039;discover&#039; the land of New Zealand?",
+            "correct_answer": "Abel Tasman",
+            "incorrect_answers": [
+                "Christopher Columbus",
+                "Jeanne Bar&eacute;",
+                "John Cabot "
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "What is the bloodiest event in United States history, in terms of casualties?",
+            "correct_answer": "Battle of Antietam",
+            "incorrect_answers": [
+                "Pearl Harbor",
+                "September 11th",
+                "D-Day"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "During what war did the &quot;Cuban Missile Crisis&quot; occur?",
+            "correct_answer": "Cold War",
+            "incorrect_answers": [
+                "World War I",
+                "World War II",
+                "Revolutionary War"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "In 1845, a series of wars named after which indigenous people began in New Zealand?",
+            "correct_answer": "Māori",
+            "incorrect_answers": [
+                "Papuans",
+                "Aborigines",
+                "Polynesians"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Which of these countries was NOT a part of the Soviet Union?",
+            "correct_answer": "Afghanistan",
+            "incorrect_answers": [
+                "Turkmenistan",
+                "Kazakhstan",
+                "Uzbekistan"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "The minigun was designed in 1960 by which manufacturer.",
+            "correct_answer": "General Electric",
+            "incorrect_answers": [
+                "Colt Firearms",
+                "Heckler &amp; Koch",
+                "Sig Sauer"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Which of the following countries was the first to send an object into space?",
+            "correct_answer": "Germany",
+            "incorrect_answers": [
+                "USA",
+                "Russia",
+                "China"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "When did Vesuvius destroy the city of Pompeii? ",
+            "correct_answer": "79 AD",
+            "incorrect_answers": [
+                "62 AD",
+                "31 BC",
+                "54 BC"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "In World War I, what was the name of the alliance of Germany, Austria-Hungary, the Ottoman Empire, and Bulgaria?",
+            "correct_answer": "The Central Powers",
+            "incorrect_answers": [
+                "The Axis Powers",
+                "The Federation of Empires",
+                "Authoritarian Alliance"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "What was the name of the planned invasion of Japan towards the end of World War II?",
+            "correct_answer": "Operation Downfall",
+            "incorrect_answers": [
+                "Operation Boarding Party",
+                "Operation Ironclad",
+                "Operation Aflame"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Who was the only US President to be elected four times?",
+            "correct_answer": "Franklin Roosevelt",
+            "incorrect_answers": [
+                "Theodore Roosevelt",
+                "George Washington",
+                "Abraham Lincoln"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "What was the total length of the Titanic?",
+            "correct_answer": "882 ft | 268.8 m",
+            "incorrect_answers": [
+                "759 ft | 231.3 m",
+                "1042 ft | 317.6 m",
+                "825 ft | 251.5 m"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Which U.S. President was famously &#039;attacked&#039; by a swimming rabbit?",
+            "correct_answer": "Jimmy Carter",
+            "incorrect_answers": [
+                "Ronald Reagan",
+                "Lydon B. Johnson",
+                "Gerald Ford"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": " What Russian automatic gas-operated assault rifle was developed in the Soviet Union in 1947, and is still popularly used today?",
+            "correct_answer": "AK-47",
+            "incorrect_answers": [
+                "RPK",
+                "M16",
+                "MG 42"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "What happened on June 6, 1944?",
+            "correct_answer": "D-Day",
+            "incorrect_answers": [
+                "Atomic bombings of Hiroshima and Nagasaki",
+                "Attack on Pearl Harbor",
+                "The Liberation of Paris"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Joseph Smith was the founder of what religion?",
+            "correct_answer": "Mormonism",
+            "incorrect_answers": [
+                "Buddhism",
+                "Christianity",
+                "Hinduism"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Against which country did the Dutch Republic fight the Eighty Years&#039; War?",
+            "correct_answer": "Spain",
+            "incorrect_answers": [
+                "France",
+                "England",
+                "Portugal"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "In what year did Neil Armstrong and Buzz Aldrin land on the moon?",
+            "correct_answer": "1969",
+            "incorrect_answers": [
+                "1965",
+                "1966",
+                "1973"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "When did O, Canada officially become the national anthem?",
+            "correct_answer": "1980",
+            "incorrect_answers": [
+                "1950",
+                "1920",
+                "1880"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "In what year was the video game company Electronic Arts founded?",
+            "correct_answer": "1982",
+            "incorrect_answers": [
+                "1999",
+                "1981",
+                "2005"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "In what prison was Adolf Hitler held in 1924?",
+            "correct_answer": "Landsberg Prison",
+            "incorrect_answers": [
+                "Spandau Prison",
+                "Ebrach Abbey",
+                "Hohenasperg"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "On what day did Germany invade Poland?",
+            "correct_answer": "September 1, 1939",
+            "incorrect_answers": [
+                "December 7, 1941",
+                "June 22, 1941",
+                "July 7, 1937"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "What was the bloodiest single-day battle during the American Civil War?",
+            "correct_answer": "The Battle of Antietam",
+            "incorrect_answers": [
+                "The Siege of Vicksburg",
+                "The Battle of Gettysburg",
+                "The Battles of Chancellorsville"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "One of the deadliest pandemics, the &quot;Spanish Flu&quot;, killed off what percentage of the human world population at the time?",
+            "correct_answer": "3 to 6 percent",
+            "incorrect_answers": [
+                "6 to 10 percent",
+                "1 to 3 percent",
+                "less than 1 percent"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "All of the following are names of the Seven Warring States EXCEPT:",
+            "correct_answer": "Zhai (翟)",
+            "incorrect_answers": [
+                "Zhao (趙)",
+                "Qin (秦)",
+                "Qi (齊)"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "John Moses Browning, the designer of the M1918 BAR (Browning Automatic Rifle) was a part of which religion?",
+            "correct_answer": "Mormon",
+            "incorrect_answers": [
+                "Catholic",
+                "Jewish",
+                "Atheist"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "The Korean War started in what year?",
+            "correct_answer": "1950",
+            "incorrect_answers": [
+                "1945",
+                "1960",
+                "1912"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Which Nation did NOT have a Colony in modern-day North America?",
+            "correct_answer": "Portugal",
+            "incorrect_answers": [
+                "Spain",
+                "Sweden",
+                "Netherlands"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "In which year was Constantinople conquered by the Turks?",
+            "correct_answer": "1453",
+            "incorrect_answers": [
+                "1435",
+                "1454",
+                "1440"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "What nationality was sultan Saladin?",
+            "correct_answer": "Kurdish",
+            "incorrect_answers": [
+                "Arab",
+                "Egyptian",
+                "Syrian"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "The Spitfire L.F. Mk IX had what engine?",
+            "correct_answer": "Merlin 66",
+            "incorrect_answers": [
+                "Griffon 65",
+                "Merlin 50",
+                "Merlin X"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "What date was the first flight of the P-40 Warhawk?",
+            "correct_answer": "October 14 1938",
+            "incorrect_answers": [
+                "August 21 1939",
+                "January 12 1940",
+                "June 1 1939"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "Who was the leader of Sweden in the Great Northern War?",
+            "correct_answer": "Charles XII",
+            "incorrect_answers": [
+                "Per Albin Hansson",
+                "Peter the Great",
+                "Gustavus Adolphus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "America&#039;s Strategic Defense System during the Cold War was nicknamed after this famous movie.",
+            "correct_answer": "Star Wars",
+            "incorrect_answers": [
+                "Jaws",
+                "Blade Runner",
+                "Alien"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "In what year was the famous 45 foot tall Hollywood sign first erected?",
+            "correct_answer": "1923",
+            "incorrect_answers": [
+                "1903",
+                "1913",
+                "1933"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "When did Jamaica receive its independence from England? ",
+            "correct_answer": "1962",
+            "incorrect_answers": [
+                "1492",
+                "1963",
+                "1987"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "What were the first states to break away from Yugoslavia?",
+            "correct_answer": "Slovenia, Croatia",
+            "incorrect_answers": [
+                "Macedonia, Montenegro",
+                "Slovenia, Macedonia",
+                "Montenegro, Slovenia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "When did the British hand-over sovereignty of Hong Kong back to China?",
+            "correct_answer": "1997",
+            "incorrect_answers": [
+                "1999",
+                "1841",
+                "1900"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "On which day did construction start on &quot;The Pentagon&quot;, the headquarters for the United States Department of Defense?",
+            "correct_answer": "September 11, 1941",
+            "incorrect_answers": [
+                "June 15, 1947",
+                "January 15, 1943",
+                "September 2, 1962"
+            ]
+        }
+    ]
+}

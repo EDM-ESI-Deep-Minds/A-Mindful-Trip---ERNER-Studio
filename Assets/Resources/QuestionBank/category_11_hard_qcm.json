@@ -1,0 +1,496 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In 2012, which movie won every category in the 32nd &quot;Golden Raspberry Awards&quot;?",
+            "correct_answer": "Jack and Jill",
+            "incorrect_answers": [
+                "The Girl with the Dragon Tattoo",
+                "Thor",
+                "The King&#039;s Speech"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What did the first moving picture depict?",
+            "correct_answer": "A galloping horse",
+            "incorrect_answers": [
+                "A woman in a dress",
+                "A man walking",
+                "A crackling fire"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What was the first movie to ever use a Wilhelm Scream?",
+            "correct_answer": "Distant Drums",
+            "incorrect_answers": [
+                "Treasure of the Sierra Madre",
+                "The Charge at Feather River",
+                "Indiana Jones"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What was the name of the planet in &quot;Aliens&quot;?",
+            "correct_answer": "LV-426",
+            "incorrect_answers": [
+                "Weyland Yutani Corporation Base",
+                "FR-838",
+                "DI-621"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In what Disney movie can you spot the character &quot;Pac-Man&quot; in if you look closely enough in some scenes?",
+            "correct_answer": "Tron",
+            "incorrect_answers": [
+                "Big Hero 6",
+                "Fantasia",
+                "Monsters, Inc."
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In the 1976 film &#039;Taxi Driver&#039;, how many guns did Travis buy from the salesman?",
+            "correct_answer": "4",
+            "incorrect_answers": [
+                "2",
+                "6",
+                "1"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What is the species of the &quot;Predator&quot; in the 1987 movie &quot;Predator&quot;?",
+            "correct_answer": "Yautja",
+            "incorrect_answers": [
+                "Xenomorph",
+                "Praetorian",
+                "Phocrex"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In the Friday The 13th series, what year did Jason drown in?",
+            "correct_answer": "1957",
+            "incorrect_answers": [
+                "1955",
+                "1953",
+                "1959"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What was the name of the actor who played Leatherface in the 1974 horror film, The Texas Chainsaw Massacre?",
+            "correct_answer": "Gunnar Hansen",
+            "incorrect_answers": [
+                "Edwin Neal",
+                "John Dugan",
+                "Joe Bill Hogan"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In the film &quot;Harry Potter and the Order of The Phoenix&quot;, why was Harry Potter&#039;s scream, after Sirius Black died, muted?",
+            "correct_answer": "Too Agonizing",
+            "incorrect_answers": [
+                "Too Loud",
+                "Too Harsh",
+                "Too Violent"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In the 1964 film &quot;Zulu&quot;, what song does the British Army company sing before the final battle?",
+            "correct_answer": "Men of Harlech",
+            "incorrect_answers": [
+                "Scotland the Brave",
+                "Colonel Bogey March",
+                "The British Grenadiers"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In what year does Jurassic World open in the &quot;Jurassic Park&quot; universe?",
+            "correct_answer": "2005",
+            "incorrect_answers": [
+                "2007",
+                "2015",
+                "2020"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What did Alfred Hitchcock use as blood in the film &quot;Psycho&quot;? ",
+            "correct_answer": "Chocolate syrup",
+            "incorrect_answers": [
+                "Ketchup",
+                "Red food coloring",
+                "Maple syrup"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What was the wifi password given to Stephen Strange in Doctor Strange?",
+            "correct_answer": "Shambala",
+            "incorrect_answers": [
+                "Peace",
+                "Ancient",
+                "Chakra"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "Which singer is portrayed by Bruce Campbell in the 2002 film &#039;Bubba Ho-Tep&#039;?",
+            "correct_answer": "Elvis Presley",
+            "incorrect_answers": [
+                "Johnny Cash",
+                "Hank Williams, Sr.",
+                "Buddy Holly"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In the film &quot;Interstellar&quot;, how long did they spend on Miller&#039;s planet?",
+            "correct_answer": "23 years, 4 months, and 8 days",
+            "incorrect_answers": [
+                "15 years, 2 months, and 15 days",
+                "10 months and 6 days",
+                "26 years, 4 months, and 10 days"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "Which boxer was famous for striking the gong in the introduction to J. Arthur Rank films?",
+            "correct_answer": "Bombardier Billy Wells",
+            "incorrect_answers": [
+                "Freddie Mills",
+                "Terry Spinks",
+                "Don Cockell"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In Big Hero 6, what were Baymax&#039;s motions modeled after?",
+            "correct_answer": "Baby penguins",
+            "incorrect_answers": [
+                "Baby monkeys",
+                "Baby ostriches",
+                "Baby bears"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What is the name of the assassin in the first &quot;Hellboy&quot; movie?",
+            "correct_answer": "Karl Ruprecht Kroenen",
+            "incorrect_answers": [
+                "Klaus Werner von Krupt",
+                "Grigori Efimovich Rasputin",
+                "Ilsa Haupstein"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "Which 1994 film did Roger Ebert famously despise, saying &quot;I hated hated hated hated hated this movie&quot;.",
+            "correct_answer": "North",
+            "incorrect_answers": [
+                "3 Ninjas Kick Back",
+                "The Santa Clause",
+                "Richie Rich"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In what year was the first Indian movie submitted for an Oscar?",
+            "correct_answer": "1957",
+            "incorrect_answers": [
+                "1962",
+                "1938",
+                "1954"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In the movie &quot;Scream&quot; who is Ghost Face?",
+            "correct_answer": "Billy Loomis and Stu Macher",
+            "incorrect_answers": [
+                "Dewey Riley",
+                "Sidney Prescott",
+                "Archie Prescott and Philip Marv"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In order to cut costs, what were most of the extras of Mad Max (1979) paid with?",
+            "correct_answer": "Beer",
+            "incorrect_answers": [
+                "Fast food",
+                "Food stamps",
+                "They weren&#039;t paid"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "Which actress portrayed Dr. Grace Augustine in the James Cameron movie &quot;Avatar&quot;?",
+            "correct_answer": "Sigourney Weaver",
+            "incorrect_answers": [
+                "Jessica Chastain",
+                "Melissa Beckett",
+                "Alyssa Monroe "
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "According to &quot;Star Wars&quot; lore, which planet does Obi-Wan Kenobi come from?",
+            "correct_answer": "Stewjon",
+            "incorrect_answers": [
+                "Alderaan",
+                "Tatooine",
+                "Naboo"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What three movies, in order from release date, make up the &quot;Dollars Trilogy&quot;?",
+            "correct_answer": "&quot;A Fistful of Dollars&quot;, &quot;For a Few Dollars More&quot;, &quot;The Good, the Bad, and the Ugly&quot;",
+            "incorrect_answers": [
+                "&quot;The Good, the Bad, and the Ugly&quot;, &quot;For A Few Dollars More&quot;, &quot;A Fistful of Dollars&quot;",
+                "&quot;For a Few Dollars More&quot;, &quot;The Good, the Bad, and the Ugly&quot;, &quot;A Fistful of Dollars&quot;",
+                "&quot;For a Few Dollars More&quot;, &quot;A Fistful of Dollars&quot;, &quot;The Good, the Bad, and the Ugly&quot;"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "Which sci-fi cult films plot concerns aliens attempting to prevent humans from creating a doomsday weapon?",
+            "correct_answer": "Plan 9 from Outer Space",
+            "incorrect_answers": [
+                "The Man from Planet X",
+                "It Came from Outer Space",
+                "The Day The Earth Stood Still"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "Before &quot;Jurassic Park III&quot; was finalized and the Spinosaurus was chosen, which dinosaur was going to be the star?",
+            "correct_answer": "Baryonyx",
+            "incorrect_answers": [
+                "Tyrannosaurus Rex",
+                "Velociraptor",
+                "Suchomimus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In the &quot;Jurassic Park&quot; universe, when did &quot;Jurassic Park: San Diego&quot; begin construction?",
+            "correct_answer": "1985",
+            "incorrect_answers": [
+                "1988",
+                "1986",
+                "1993"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What was Humphrey Bogart&#039;s middle name?",
+            "correct_answer": "DeForest",
+            "incorrect_answers": [
+                "DeWinter",
+                "Steven",
+                "Bryce"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What is the name of the supercomputer located in the control room in &quot;Jurassic Park&quot; (1993)?",
+            "correct_answer": "Thinking Machines CM-5",
+            "incorrect_answers": [
+                "Cray X-MP",
+                "Cray XK7",
+                "IBM Blue Gene/Q"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "Which was the first of Alfred Hitchcock&#039;s movies to be filmed in colour?",
+            "correct_answer": "Rope",
+            "incorrect_answers": [
+                "Psycho",
+                "Vertigo",
+                "Rebecca"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "Which movie did NOT feature the late actor John Candy?",
+            "correct_answer": "Ghostbusters",
+            "incorrect_answers": [
+                "Little Shop Of Horrors",
+                "Home Alone",
+                "Planes Trains and Automobiles"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "How old was Laurence Fishburne when Francis Ford Coppola cast him in Apocalypse Now (1979)? ",
+            "correct_answer": "14",
+            "incorrect_answers": [
+                "16",
+                "18",
+                "20"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In the 1974 Christmas flick &quot;The Year Without a Santa Claus,&quot; what are the names of the two elves who help Mrs. Claus save Christmas?",
+            "correct_answer": "Jingle &amp; Jangle",
+            "incorrect_answers": [
+                "Buddy &amp; Bobby",
+                "Holly &amp; Jolly",
+                "Snowflake &amp; Icicle"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In what year did Clint Eastwood star as Inspector Harry Callahan in the film &quot;Dirty Harry&quot;?",
+            "correct_answer": "1971",
+            "incorrect_answers": [
+                "1975",
+                "1983",
+                "1969"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "Which actors made up the trio in &quot;The Good, the Bad, and the Ugly&quot;? ",
+            "correct_answer": "Clint Eastwood, Eli Wallach, and Lee Van Cleef",
+            "incorrect_answers": [
+                "Sergio Leone, Ennio Morricone, and Tonino Delli Colli",
+                "Yul Brynner, Steve McQueen, and Charles Bronson",
+                "Aldo Giuffr&egrave;, Mario Brega, and Luigi Pistilli"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In &quot;Star Trek Nemesis&quot;, why was Praetor Shinzon created?",
+            "correct_answer": "To replace Picard as a Romulan Agent",
+            "incorrect_answers": [
+                "To destroy the Enterprise",
+                "To become Picard&#039;s friend ",
+                "To steal the Enterprise"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "The film Mad Max: Fury Road features the Dies Irae  from which composer&#039;s requiem?",
+            "correct_answer": "Verdi",
+            "incorrect_answers": [
+                "Mozart",
+                "Berlioz",
+                "Brahms"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "In the &quot;Jurassic Park&quot; universe, what was the first dinosaur cloned by InGen in 1986?",
+            "correct_answer": "Velociraptor",
+            "incorrect_answers": [
+                "Triceratops",
+                "Troodon",
+                "Brachiosaurus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "Who Voices the Devil on Devil&#039;s Flight in Final Destination 3?",
+            "correct_answer": "Tony Todd",
+            "incorrect_answers": [
+                "Wendy Christensen",
+                "Ian McKinley",
+                "Kevin Fischer"
+            ]
+        }
+    ]
+}

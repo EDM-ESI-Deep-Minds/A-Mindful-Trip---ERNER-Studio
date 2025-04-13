@@ -1,0 +1,172 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "The Kākāpō is a large, flightless, nocturnal parrot native to which country?",
+            "correct_answer": "New Zealand",
+            "incorrect_answers": [
+                "South Africa",
+                "Australia",
+                "Madagascar"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "What is the fastest  land animal?",
+            "correct_answer": "Cheetah",
+            "incorrect_answers": [
+                "Lion",
+                "Thomson&rsquo;s Gazelle",
+                "Pronghorn Antelope"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "What colour is the female blackbird?",
+            "correct_answer": "Brown",
+            "incorrect_answers": [
+                "Black",
+                "White",
+                "Yellow"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "What do you call a baby bat?",
+            "correct_answer": "Pup",
+            "incorrect_answers": [
+                "Cub",
+                "Chick",
+                "Kid"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "What is the collective noun for a group of crows?",
+            "correct_answer": "Murder",
+            "incorrect_answers": [
+                "Pack",
+                "Gaggle",
+                "Herd"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "Hippocampus is the Latin name for which marine creature?",
+            "correct_answer": "Seahorse",
+            "incorrect_answers": [
+                "Dolphin",
+                "Whale",
+                "Octopus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "What is the scientific name for modern day humans?",
+            "correct_answer": "Homo Sapiens",
+            "incorrect_answers": [
+                "Homo Ergaster",
+                "Homo Erectus",
+                "Homo Neanderthalensis"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "What is the name of a rabbit&#039;s abode?",
+            "correct_answer": "Burrow",
+            "incorrect_answers": [
+                "Nest",
+                "Den",
+                "Dray"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "Which class of animals are newts members of?",
+            "correct_answer": "Amphibian",
+            "incorrect_answers": [
+                "Fish",
+                "Reptiles",
+                "Mammals"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "How many legs do butterflies have?",
+            "correct_answer": "6",
+            "incorrect_answers": [
+                "2",
+                "4",
+                "0"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "What is Grumpy Cat&#039;s real name?",
+            "correct_answer": "Tardar Sauce",
+            "incorrect_answers": [
+                "Sauce",
+                "Minnie",
+                "Broccoli"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "Snakes and lizards are known to flick their tongue, this behavior is to?",
+            "correct_answer": "Capture scent particles",
+            "incorrect_answers": [
+                "Taste the sweet air",
+                "Threaten other species",
+                "Attract female mates"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "By definition, where does an abyssopelagic animal live?",
+            "correct_answer": "At the bottom of the ocean",
+            "incorrect_answers": [
+                "In the desert",
+                "On top of a mountain",
+                "Inside a tree"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Animals",
+            "question": "How many teeth does an adult rabbit have?",
+            "correct_answer": "28",
+            "incorrect_answers": [
+                "30",
+                "26",
+                "24"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,604 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What are the three starter Pokemon available in Pokemon Black and White?",
+            "correct_answer": "Snivy, Tepig, Oshawott",
+            "incorrect_answers": [
+                "Snivy, Fennekin, Froakie",
+                "Chespin, Tepig, Froakie",
+                "Chespin, Fennekin, Oshawott"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What is the name of the very first video uploaded to YouTube?",
+            "correct_answer": "Me at the zoo",
+            "incorrect_answers": [
+                "tribute",
+                "carrie rides a truck",
+                "Her new puppy from great grandpa vern."
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "According to the BBPA, what is the most common pub name in the UK?",
+            "correct_answer": "Red Lion",
+            "incorrect_answers": [
+                "Royal Oak",
+                "White Hart",
+                "King&#039;s Head"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "The Fields Medal, one of the most sought after awards in mathematics, is awarded every how many years?",
+            "correct_answer": "4",
+            "incorrect_answers": [
+                "3",
+                "5",
+                "6"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What fast food chain has the most locations globally? ",
+            "correct_answer": "Subway",
+            "incorrect_answers": [
+                "Starbucks",
+                "McDonalds",
+                "KFC"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "In the Morse code, which letter is indicated by 3 dots? ",
+            "correct_answer": "S",
+            "incorrect_answers": [
+                "O",
+                "A",
+                "C"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Linus Pauling, one of the only winners of multiple Nobel Prizes, earned his Nobel Prizes in Chemistry and what?",
+            "correct_answer": "Peace",
+            "incorrect_answers": [
+                "Physics",
+                "Economics",
+                "Physiology/Medicine"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Who is the founder of &quot;The Lego Group&quot;?",
+            "correct_answer": "Ole Kirk Christiansen",
+            "incorrect_answers": [
+                " Jens Niels Christiansen",
+                "Kirstine Christiansen",
+                " Gerhardt Kirk Christiansen"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Frank Lloyd Wright was the architect behind what famous building?",
+            "correct_answer": "The Guggenheim",
+            "incorrect_answers": [
+                "Villa Savoye",
+                "Sydney Opera House",
+                "The Space Needle"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Rolex is a company that specializes in what type of product?",
+            "correct_answer": "Watches",
+            "incorrect_answers": [
+                "Cars",
+                "Computers",
+                "Sports equipment"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What is the last letter of the Greek alphabet?",
+            "correct_answer": "Omega",
+            "incorrect_answers": [
+                "Mu",
+                "Epsilon",
+                "Kappa"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Which of these words means &quot;idle spectator&quot;?",
+            "correct_answer": "Gongoozler",
+            "incorrect_answers": [
+                "Gossypiboma",
+                "Jentacular",
+                "Meupareunia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What was the soft drink Pepsi originally introduced as?",
+            "correct_answer": "Brad&#039;s Drink",
+            "incorrect_answers": [
+                "Pepsin Pop",
+                "Carolina Cola",
+                "Pepsin Syrup"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "The Mexican Beer &quot;Corona&quot; is what type of beer?",
+            "correct_answer": "Pale Lager",
+            "incorrect_answers": [
+                "India Pale Ale",
+                "Pilfsner",
+                "Baltic Porter"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "After how many years would you celebrate your crystal anniversary?",
+            "correct_answer": "15",
+            "incorrect_answers": [
+                "20",
+                "10",
+                "25"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "The phrase &quot;accident waiting to happen&quot; is an example of what type of figure of speech?",
+            "correct_answer": "Idiom",
+            "incorrect_answers": [
+                "Simile",
+                "Metaphor",
+                "Analogy"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "When was Nintendo founded?",
+            "correct_answer": "September 23rd, 1889",
+            "incorrect_answers": [
+                "October 19th, 1891",
+                "March 4th, 1887",
+                "December 27th, 1894"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What is the world&#039;s most expensive spice by weight?",
+            "correct_answer": "Saffron",
+            "incorrect_answers": [
+                "Cinnamon",
+                "Cardamom",
+                "Vanilla"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What does a milliner make and sell?",
+            "correct_answer": "Hats",
+            "incorrect_answers": [
+                "Shoes",
+                "Belts",
+                "Shirts"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "In a standard set of playing cards, which is the only king without a moustache?",
+            "correct_answer": "Hearts",
+            "incorrect_answers": [
+                "Spades",
+                "Diamonds",
+                "Clubs"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Which American manufactured submachine gun was informally known by the American soldiers that used it as &quot;Grease Gun&quot;?",
+            "correct_answer": "M3",
+            "incorrect_answers": [
+                "Colt 9mm",
+                "Thompson",
+                "MAC-10"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Which essential condiment is also known as Japanese horseradish?",
+            "correct_answer": "Wasabi ",
+            "incorrect_answers": [
+                "Mentsuyu",
+                "Karashi",
+                "Ponzu"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What year was Apple Inc. founded?",
+            "correct_answer": "1976",
+            "incorrect_answers": [
+                "1978",
+                "1980",
+                "1974"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Which country drives on the left side of the road?",
+            "correct_answer": "Japan",
+            "incorrect_answers": [
+                "Germany",
+                "Russia",
+                "China"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What direction does the Statue of Liberty face?",
+            "correct_answer": "Southeast",
+            "incorrect_answers": [
+                "Southwest",
+                "Northwest",
+                "Northeast"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What is the name given to Indian food cooked over charcoal in a clay oven?",
+            "correct_answer": "Tandoori",
+            "incorrect_answers": [
+                "Biryani",
+                "Pani puri",
+                "Tiki masala"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What is the German word for &quot;spoon&quot;?",
+            "correct_answer": "L&ouml;ffel",
+            "incorrect_answers": [
+                "Gabel",
+                "Messer",
+                "Essst&auml;bchen"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Bob and Mike Bryan were well known brothers in which sport?",
+            "correct_answer": "Tennis",
+            "incorrect_answers": [
+                "Basketball",
+                "Football",
+                "Baseball"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "When was Hubba Bubba first introduced?",
+            "correct_answer": "1979",
+            "incorrect_answers": [
+                "1984",
+                "1972",
+                "1980"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "In what year was McDonald&#039;s founded?",
+            "correct_answer": "1955",
+            "incorrect_answers": [
+                "1964",
+                "1951",
+                "1947"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Where did the pineapple plant originate?",
+            "correct_answer": "South America",
+            "incorrect_answers": [
+                "Hawaii",
+                "Europe",
+                "Asia"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What was the destination of the missing flight MH370?",
+            "correct_answer": "Beijing",
+            "incorrect_answers": [
+                "Kuala Lumpur",
+                "Singapore",
+                "Tokyo"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What did the Spanish autonomous community of Catalonia ban in 2010, that took effect in 2012?",
+            "correct_answer": "Bullfighting",
+            "incorrect_answers": [
+                "Fiestas",
+                "Flamenco",
+                "Mariachi"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Which of the following carbonated soft drinks were introduced first?",
+            "correct_answer": "Dr. Pepper",
+            "incorrect_answers": [
+                "Coca-Cola",
+                "Sprite",
+                "Mountain Dew"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Which of these is the name of a Japanese system of alternative medicine, literally meaning &quot;finger pressure&quot;?",
+            "correct_answer": "Shiatsu",
+            "incorrect_answers": [
+                "Ukiyo",
+                "Majime",
+                "Ikigai"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "When was the Declaration of Independence approved by the Second Continental Congress?",
+            "correct_answer": "July 4, 1776",
+            "incorrect_answers": [
+                "May 4, 1776",
+                "June 4, 1776",
+                "July 2, 1776"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Which language is NOT Indo-European?",
+            "correct_answer": "Hungarian",
+            "incorrect_answers": [
+                "Russian",
+                "Greek",
+                "Latvian"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Which logical fallacy means to attack the character of your opponent rather than their arguments?",
+            "correct_answer": "Ad hominem",
+            "incorrect_answers": [
+                "Post hoc ergo propter hoc",
+                "Tu quoque",
+                "Argumentum ad populum"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "The term &quot;scientist&quot; was coined in which year?",
+            "correct_answer": "1833",
+            "incorrect_answers": [
+                "1933",
+                "1942",
+                "1796"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Which river flows through the Scottish city of Glasgow?",
+            "correct_answer": "Clyde",
+            "incorrect_answers": [
+                "Tay",
+                "Dee",
+                "Tweed"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Directly between the Washington Monument and the Reflecting Pool is a memorial to which war?",
+            "correct_answer": "World War II",
+            "incorrect_answers": [
+                "Vietnam War",
+                "American Civil War",
+                "American Revolutionary War"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "A statue of Charles Darwin sits in what London museum?",
+            "correct_answer": "Natural History Museum",
+            "incorrect_answers": [
+                "Tate",
+                "British Museum",
+                "Science Museum"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Computer manufacturer Compaq was acquired for $25 billion dollars in 2002 by which company?",
+            "correct_answer": "Hewlett-Packard",
+            "incorrect_answers": [
+                "Toshiba",
+                "Asus",
+                "Dell"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "The architect known as Le Corbusier was an important figure in what style of architecture?",
+            "correct_answer": "Modernism",
+            "incorrect_answers": [
+                "Neoclassical",
+                "Baroque",
+                "Gothic Revival"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Which Italian automobile manufacturer gained majority control of U.S. automobile manufacturer Chrysler in 2011?",
+            "correct_answer": "Fiat",
+            "incorrect_answers": [
+                "Maserati",
+                "Alfa Romeo",
+                "Ferrari"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "Amsterdam Centraal station is twinned with what station?",
+            "correct_answer": "London Liverpool Street",
+            "incorrect_answers": [
+                "Frankfurt (Main) Hauptbahnhof",
+                "Paris Gare du Nord",
+                "Brussels Midi"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What is the romanized Japanese word for &quot;university&quot;?",
+            "correct_answer": "Daigaku",
+            "incorrect_answers": [
+                "Toshokan",
+                "Jimusho",
+                "Shokudou"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What is a &quot;dakimakura&quot;?",
+            "correct_answer": "A body pillow",
+            "incorrect_answers": [
+                "A Chinese meal, essentially composed of fish",
+                "A yoga posture",
+                "A word used to describe two people who truly love each other"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What name represents the letter &quot;M&quot; in the NATO phonetic alphabet?",
+            "correct_answer": "Mike",
+            "incorrect_answers": [
+                "Matthew",
+                "Mark",
+                "Max"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "General Knowledge",
+            "question": "What does the &quot;G&quot; mean in &quot;G-Man&quot;?",
+            "correct_answer": "Government",
+            "incorrect_answers": [
+                "Going",
+                "Ghost",
+                "Geronimo"
+            ]
+        }
+    ]
+}

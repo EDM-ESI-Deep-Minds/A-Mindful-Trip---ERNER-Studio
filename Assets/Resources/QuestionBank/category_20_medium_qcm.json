@@ -1,0 +1,280 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "What is the name of the Greek god of peaceful deaths?",
+            "correct_answer": "Thanatos",
+            "incorrect_answers": [
+                "Tartarus",
+                "Hades",
+                "Moros"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "Who is the God Loki&#039;s son? ",
+            "correct_answer": "Fenrir ",
+            "incorrect_answers": [
+                "Odin",
+                "Hel",
+                "Sigyn"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "The Norse god Odin has two pet crows named &quot;Huginn&quot; and &quot;Muninn&quot;.  What do their names mean?",
+            "correct_answer": "Thought &amp; Memory",
+            "incorrect_answers": [
+                "Power &amp; Peace",
+                "War &amp; Learning",
+                "Sleeping &amp; Waking"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "Which greek god/goddess tossed a golden apple with the words &quot;for the fairest&quot; into the middle of the feast of the gods?",
+            "correct_answer": "Eris",
+            "incorrect_answers": [
+                "Hades",
+                "Ares",
+                "Artemis"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "According to the Egyptian Myth of Osiris, who murdered Osiris?",
+            "correct_answer": "Set",
+            "incorrect_answers": [
+                "Horus",
+                "Ra",
+                "Anhur"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "This Greek mythological figure is the god/goddess of battle strategy (among other things).",
+            "correct_answer": "Athena",
+            "incorrect_answers": [
+                "Ares",
+                "Artemis",
+                "Apollo"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "Which of the following is not one of the Greek Fates?",
+            "correct_answer": "Narcissus",
+            "incorrect_answers": [
+                "Clotho",
+                "Atropos",
+                "Lachesis"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "Neptune&#039;s greek name was...",
+            "correct_answer": "Poseidon",
+            "incorrect_answers": [
+                "Ares",
+                "Zeus",
+                "Apollo"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "Which of the following Mesopotamian mythological figures was NOT a deity?",
+            "correct_answer": "Enkidu",
+            "incorrect_answers": [
+                "Enki",
+                "Enlil",
+                "Enkimdu"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "Which of these Roman gods doesn&#039;t have a counterpart in Greek mythology?",
+            "correct_answer": "Janus",
+            "incorrect_answers": [
+                "Vulcan",
+                "Juno",
+                "Mars"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "Hera is god of...",
+            "correct_answer": "Marriage",
+            "incorrect_answers": [
+                "Agriculture",
+                "Sea",
+                "War"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "What is the name of the first human being in Norse mythology?",
+            "correct_answer": "Ask",
+            "incorrect_answers": [
+                "Asmund",
+                "Ake",
+                "Asger"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "The Hippogriff, not to be confused with the Griffon, is a magical creature with the front half of an eagle, and the back half of what?",
+            "correct_answer": "A Horse",
+            "incorrect_answers": [
+                "A Dragon",
+                "A Tiger",
+                "A Lion"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "The Maori hold that which island nation was founded by Kupe, who discovered it under a long white cloud?",
+            "correct_answer": "New Zealand",
+            "incorrect_answers": [
+                "Vanuatu",
+                "Fiji",
+                "Hawaii"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "A minotaur is half human half what?",
+            "correct_answer": "Bull",
+            "incorrect_answers": [
+                "Cow",
+                "Horse",
+                "Eagle"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "In African mythology, Anansi is a trickster and storyteller who takes the shape of which animal?",
+            "correct_answer": "Spider",
+            "incorrect_answers": [
+                "Wild dog",
+                "Monkey",
+                "Crocodile"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "In Greek Mythology, who killed Achilles?",
+            "correct_answer": "Paris",
+            "incorrect_answers": [
+                "Hector",
+                "Helen",
+                "Pericles"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "What is the name of the Greek god of blacksmiths?",
+            "correct_answer": "Hephaestus",
+            "incorrect_answers": [
+                "Dyntos",
+                "Vulcan",
+                "Artagatus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "What animal did Queen Pasipahe sleep with before she gave birth to the Minotaur in Greek Mythology?",
+            "correct_answer": "Bull",
+            "incorrect_answers": [
+                "Pig",
+                "Ox",
+                "Horse"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "Who is the god of war in Polynesian mythology?",
+            "correct_answer": "&#039;Oro",
+            "incorrect_answers": [
+                "Hina",
+                "Kohara",
+                "Māui"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "Who was the Roman god of fire?",
+            "correct_answer": "Vulcan",
+            "incorrect_answers": [
+                "Apollo",
+                "Jupiter",
+                "Mercury"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "In Greek mythology, Persephone must return to the underworld because she had eaten what kind of seeds?",
+            "correct_answer": "Pomegranate",
+            "incorrect_answers": [
+                "Sunflower",
+                "Orange",
+                "Fig"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Mythology",
+            "question": "According to Japanese folklore, what is the favorite food of the Kappa.",
+            "correct_answer": "Cucumbers",
+            "incorrect_answers": [
+                "Kabocha",
+                "Nasu",
+                "Soba"
+            ]
+        }
+    ]
+}

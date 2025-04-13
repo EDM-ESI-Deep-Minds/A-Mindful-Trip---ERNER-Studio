@@ -1,0 +1,172 @@
+{
+    "question": [
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "On a standard Monopoly board, which square is diagonally opposite &#039;Go&#039;? ",
+            "correct_answer": "Free Parking",
+            "incorrect_answers": [
+                "Go to Jail",
+                "Jail",
+                "The Electric Company"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "Which one of these is not a real game in the Dungeons &amp; Dragons series?",
+            "correct_answer": "Extreme Dungeons &amp; Dragons",
+            "incorrect_answers": [
+                "Advanced Dungeons &amp; Dragons",
+                "Dungeons &amp; Dragons 3.5th edition",
+                "Advanced Dungeons &amp; Dragons 2nd edition"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "The board game Monopoly takes its street names from which real American city?",
+            "correct_answer": "Atlantic City, New Jersey",
+            "incorrect_answers": [
+                "Las Vegas, Nevada",
+                "Duluth, Minnesota",
+                "Charleston, South Carolina"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "How many pieces are there on the board at the start of a game of chess?",
+            "correct_answer": "32",
+            "incorrect_answers": [
+                "16",
+                "20",
+                "36"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "When was the board game Twister, released to the public?",
+            "correct_answer": "April 1966",
+            "incorrect_answers": [
+                "September 1965",
+                "January 1969",
+                "February 1966"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "How many spaces are there on a standard Monopoly board?",
+            "correct_answer": "40",
+            "incorrect_answers": [
+                "28",
+                "55",
+                "36"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "In which year was the pen and paper RPG &quot;Deadlands&quot; released?",
+            "correct_answer": "1996",
+            "incorrect_answers": [
+                "2003",
+                "1999",
+                "1993"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "In Dungeons and Dragons (5th edition), what stat do you normally add onto your initiative die roll?",
+            "correct_answer": "Dexterity",
+            "incorrect_answers": [
+                "Speed",
+                "Strength",
+                "Wisdom"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "How many dots are on a single die?",
+            "correct_answer": "21",
+            "incorrect_answers": [
+                "24",
+                "15",
+                "18"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "How many dice are used in the game of Yahtzee?",
+            "correct_answer": "Five",
+            "incorrect_answers": [
+                "Four",
+                "Six",
+                "Eight"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "Which of these games includes the phrase &quot;Do not pass Go, do not collect $200&quot;?",
+            "correct_answer": "Monopoly",
+            "incorrect_answers": [
+                "Pay Day",
+                "Cluedo",
+                "Coppit"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "In a standard game of Monopoly, what colour are the two cheapest properties?",
+            "correct_answer": "Brown",
+            "incorrect_answers": [
+                "Green",
+                "Yellow",
+                "Blue"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "What is the maximum level you can have in a single class in Dungeons and Dragons (5e)?",
+            "correct_answer": "20",
+            "incorrect_answers": [
+                "30",
+                "15",
+                "25"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Board Games",
+            "question": "Carcassonne is based on which French town?",
+            "correct_answer": "Carcassonne",
+            "incorrect_answers": [
+                "Paris",
+                "Marseille",
+                "Clermont-Ferrand"
+            ]
+        }
+    ]
+}
