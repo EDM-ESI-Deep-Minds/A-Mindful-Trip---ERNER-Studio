@@ -11,12 +11,7 @@ public class GetProfile : MonoBehaviour
         {
             string playerName = ProfileManager.SelectedProfile.playerName;
             int playerElo = ProfileManager.SelectedProfile.Elo;
-            profileText.text = $"Player: {playerName}\nElo: {playerElo}\nCategories:\n";
-
-            foreach (var category in ProfileManager.SelectedProfile.categories)
-            {
-                profileText.text += $"{category.categoryName}: Elo {category.categoryElo}, Questions Answered {category.questionsAnswered}, Correct Answers {category.correctAnswers}\n";
-            }
+            profileText.text = $"Player: {playerName}\nElo: {playerElo}";
         }
         else if (PlayerPrefs.HasKey("PlayerName"))
         {
