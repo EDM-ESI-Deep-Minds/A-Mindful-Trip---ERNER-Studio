@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Dynamic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BonusTile
 {
-    private static ItemSO itemSO;
-    private static ItemDatabase itemDatabase;
+    
 
     public static void handleBonus()
     {
@@ -13,12 +13,12 @@ public class BonusTile
         {
             case 1:
                 Debug.Log("🩸 Health Bonus: Player gets one heart.");
-                AddHeart();
+                AddItem();
                 break;
 
             case 2:
                 Debug.Log("💰 Add Credit: Player gets bonus credit between 25 to 100.");
-                AddCredit();
+                AddItem();
                 break;
 
             case 3:
@@ -28,12 +28,12 @@ public class BonusTile
 
             case 4:
                 Debug.Log("💰 Add rare Credit: Player gets rare credit between 100 to 150.");
-                AddRareCredit();
+                AddItem();
                 break;
 
             case 5:
                 Debug.Log("30% Bonus in next reward: Player gets bonus in the its next reward.");
-                BonusInNextReward();
+                AddItem();
                 break;
         }
     }
@@ -62,7 +62,8 @@ public class BonusTile
 
     private static void AddItem()
     {
-        InventoryManager inventory = Object.FindFirstObjectByType<InventoryManager>();
+       
+    InventoryManager inventory = Object.FindFirstObjectByType<InventoryManager>();
         float rand = Random.Range(0f, 100f);
         int choice = 0;
         if (rand < 20f)
@@ -81,8 +82,10 @@ public class BonusTile
             choice = 7; // Mouthwasher
         else
             choice = 8; // Allen's M60
+        Debug.Log(choice);
 
-        itemSO = itemDatabase.GetItemByID(choice);
+
+        ItemSO itemSO = ScriptableObject.CreateInstance<ItemDatabase>().GetItemByID(choice);
         bool added = inventory.AddItem(itemSO);
         if (!added)
         {

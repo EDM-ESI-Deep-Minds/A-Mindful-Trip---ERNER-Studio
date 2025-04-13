@@ -124,7 +124,7 @@ public class InventoryManager : MonoBehaviour
 
     public void AddCoins(int amount)
     {
-        currentCoins = currentCoins+(currentCoins*PercentageBonus/100);
+        currentCoins = currentCoins+(amount*PercentageBonus/100)+amount;
         UpdateCoinText();
     }
 

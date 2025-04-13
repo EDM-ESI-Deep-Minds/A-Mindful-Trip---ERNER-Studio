@@ -74,7 +74,7 @@ public class spawn_mang : NetworkBehaviour
     private Vector2 GetSpawnPosition()
     {
         index_position++;
-        return new Vector2(desert_map_positions[index_position,0], desert_map_positions[index_position, 1]);
+        return new Vector2(les_position[index_position,0], les_position[index_position, 1]);
       
     }
 
@@ -97,7 +97,7 @@ public class spawn_mang : NetworkBehaviour
         // NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         RoomUIManager roomUIManager = FindObjectOfType<RoomUIManager>();
         SelectedCharacters.Instance.SetSelectedCharacters(roomUIManager.GetSelectedCharacters());
-        NetworkManager.SceneManager.LoadScene("Desert", LoadSceneMode.Single);
+        NetworkManager.SceneManager.LoadScene("CountrySide", LoadSceneMode.Single);
 
     }
     [ClientRpc]
