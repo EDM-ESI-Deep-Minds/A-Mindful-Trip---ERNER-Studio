@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] public ItemDatabase itemDatabase;
     private List<int> inventoryItems;
     public GameObject player;
+    private int PercentageBonus = 0;
 
 
 
@@ -34,6 +36,8 @@ public class InventoryManager : MonoBehaviour
         // Update coin text with current coin value
         coinText.text = currentCoins.ToString();
         coinText.ForceMeshUpdate(); // Ensures TMP refresh
+        PercentageBonus = 0;
+
     }
 
     public bool CanAfford(int price)
@@ -90,6 +94,22 @@ public class InventoryManager : MonoBehaviour
     {
         currentCoins -= price;
         UpdateCoinText();
+    }
+
+    public void AddCoins(int amount)
+    {
+        currentCoins = currentCoins+(currentCoins*PercentageBonus/100);
+        UpdateCoinText();
+    }
+
+    public int getCredit()
+    {
+        return currentCoins;
+    }
+
+    public void setPercentageBonus(int Percentage)
+    {
+        PercentageBonus = Percentage;
     }
 
 }
