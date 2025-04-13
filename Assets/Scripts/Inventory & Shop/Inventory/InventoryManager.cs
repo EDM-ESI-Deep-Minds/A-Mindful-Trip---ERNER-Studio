@@ -14,6 +14,9 @@ public class InventoryManager : MonoBehaviour
     private List<int> inventoryItems;
     public GameObject player;
     private int PercentageBonus = 0;
+    [SerializeField] private Image[] lockIcon;
+    private bool islocked;
+    //don't forget to unlock the inventory when being in the hub
 
 
 
@@ -61,6 +64,29 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
+    public bool removeItem(int slot)
+    {
+        if (inventorySlots[slot].IsOccupied())
+        {
+            inventorySlots[slot].ClearSlot();
+            return true;
+        } else
+        {
+            bool found = false;
+            for(int i=0; i<3 ; i++)
+            {
+                if (slot == i) continue;
+                if (inventorySlots[i].IsOccupied())
+                {
+                    inventorySlots[i].ClearSlot();
+                    found = true;
+                    break;
+                }
+            }
+            return found;
+        }
+    }
+
     // public void AddItem(ItemSO itemSO)
     // {
     //     if (inventoryItems.Count < inventorySlots.Length)
@@ -102,14 +128,34 @@ public class InventoryManager : MonoBehaviour
         UpdateCoinText();
     }
 
-    public int getCredit()
-    {
-        return currentCoins;
-    }
-
     public void setPercentageBonus(int Percentage)
     {
         PercentageBonus = Percentage;
+    }
+    
+    public int getCredit()
+    {
+        return int.Parse(coinText.text);
+    }
+
+    public void lockInventory()
+    {
+        islocked = true;
+        foreach (Image icon in lockIcon)
+        {
+
+              icon.gameObject.SetActive(true);
+        }
+    }
+
+    public void unlockInventory()
+    {
+        islocked = false;
+        foreach (Image icon in lockIcon)
+        {
+
+            icon.gameObject.SetActive(false);
+        }
     }
 
 }

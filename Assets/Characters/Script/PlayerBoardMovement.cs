@@ -28,6 +28,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     public Button leftArrow;
     public Button upArrow;
     public Button downArrow;
+    public Button backWardButton;
     private bool isChoosingDirection = false;
     private string selectedDirection = "";
     private bool isCrossingBridge = false;
@@ -35,6 +36,8 @@ public class PlayerBoardMovement : NetworkBehaviour
     private Vector3Int onlyOneMove;
     private PathTile currentTilePath;
     private float gridSize = 16f;
+    // lets add the player path, which is an array of the player movements on the road
+    private List<Vector3Int> playerPath = new List<Vector3Int>();
 
     void Awake()
     {
@@ -73,11 +76,15 @@ public class PlayerBoardMovement : NetworkBehaviour
         upArrow = GameObject.Find("UpArrow").GetComponent<Button>();
         downArrow = GameObject.Find("DownArrow").GetComponent<Button>();
 
+        backWardButton = GameObject.Find("backWardButton").GetComponent<Button>();
+
         // Assign button listeners dynamically
         rightArrow.onClick.AddListener(() => SetChosenDirection("right"));
         leftArrow.onClick.AddListener(() => SetChosenDirection("left"));
         upArrow.onClick.AddListener(() => SetChosenDirection("up"));
         downArrow.onClick.AddListener(() => SetChosenDirection("down"));
+
+        backWardButton.onClick.AddListener(() => StartCoroutine(MoveBackward(5)));
 
         HideArrows();
 
@@ -216,6 +223,8 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         Debug.Log($"here is the previous tile position {previousTilePos}");
 
+        // add the current tile position to the player path 
+      
         for (int i = 0; i < steps; i++)
         {
             if (!boardManager.pathTiles.ContainsKey(currentTilePos))
@@ -494,6 +503,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
             rb.position = targetPos;
             previousTilePos = currentTilePos;
+            playerPath.Add(currentTilePos);
             currentTilePos = nextTilePos;
 
             bool triggered = false;
@@ -512,13 +522,128 @@ public class PlayerBoardMovement : NetworkBehaviour
             }
         }
 
-
+        playerPath.Add(currentTilePos);
         currentTilePath = boardManager.pathTiles[currentTilePos];
         Debug.Log($"here is the current tile path type {currentTilePath.tileType}");
         EventTrigger.SelectEventToTrigger(currentTilePath.tileType);
         SetIdleAnimation(0);
         isMoving = false;
         yield return new WaitForSeconds(0.1f);
+    }
+
+    //  now lets add a function that takes the number of steps that moves the player backward
+    public IEnumerator MoveBackward(int steps)
+    {
+
+        if (!RolesManager.IsMyTurn) yield break;
+
+        if (playerPath.Count < 1) yield break; 
+
+        for (int i = 0; i < steps; i++)
+        {
+            if (playerPath.Count < 2) break; 
+
+            // Get the last position and remove it from the path
+            Vector3Int lastTilePos = playerPath[playerPath.Count - 2]; 
+            playerPath.RemoveAt(playerPath.Count - 1);
+
+            Vector3 targetPos = GetWorldPosition(lastTilePos);
+            Vector3Int offset = currentTilePos - lastTilePos; // Reverse offset
+            // log the offset 
+            // Move based on the current direction
+            if (currentDirection == "x")
+            {
+                // Move along X first
+                if (offset.x != 0)
+                {
+                    int animIndex = offset.x > 0 ? 3 :  0;
+                    SetIdleAnimation(animIndex);
+                    yield return new WaitForSeconds(0.05f);
+                    Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
+                    while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
+                    {
+                        SetAnimation(animIndex);
+                        rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
+                        yield return null;
+                    }
+                    SetIdleAnimation(animIndex);
+                }
+                // If Y component exists, move along Y and determine y-up or y-down
+                if (offset.y != 0)
+                {
+                    int animIndex = offset.y > 0 ? 2 : 1 ; // 1 for up, 2 for down
+                    SetIdleAnimation(animIndex);
+                    yield return new WaitForSeconds(0.05f);
+                    Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
+                    while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
+                    {
+                        SetAnimation(animIndex);
+                        rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
+                        yield return null;
+                    }
+                    // Determine if moving up or down
+                    currentDirection = (offset.y > 0) ? "y-up" : "y-down";
+                    SetIdleAnimation(animIndex);
+                }
+            }
+            else if (currentDirection == "y" || currentDirection == "y-up" || currentDirection == "y-down")
+            {
+                // Move along Y first
+                if (offset.y != 0)
+                {
+                    int animIndex = offset.y > 0 ? 2 : 1; // 1 for up, 2 for down
+                    SetIdleAnimation(animIndex);
+                    yield return new WaitForSeconds(0.05f);
+                    Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
+                    while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
+                    {
+                        SetAnimation(animIndex);
+                        rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
+                        yield return null;
+                    }
+                    SetIdleAnimation(animIndex);
+                }
+                // If X component exists, move along X and switch direction
+                if (offset.x != 0)
+                {
+                    int animIndex = offset.x > 0 ? 3 : 0; // 0 for right, 3 for left
+                    SetIdleAnimation(animIndex);
+                    yield return new WaitForSeconds(0.05f);
+                    Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
+                    while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
+                    {
+                        SetAnimation(animIndex);
+                        rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
+                        yield return null;
+                    }
+                    currentDirection = "x"; // Reset to 'x' when moving horizontally
+                    SetIdleAnimation(animIndex);
+                }
+            }
+           
+            rb.position = targetPos;
+            previousTilePos = lastTilePos;
+            currentTilePos = lastTilePos;
+        }
+
+        UpdateFace();
+    }
+
+    // this function to update the sprite of the player depending on the current direction
+    private void UpdateFace()
+    {
+        if (currentDirection == "x")
+        {
+            SetIdleAnimation(0); // Left or Right
+        }
+        else if (currentDirection == "y-up")
+        {
+            SetIdleAnimation(1); // Up
+        }
+        else if (currentDirection == "y-down")
+        {
+            SetIdleAnimation(2); // Down
+        }
     }
 
     // method to check for valid intersection, ie the number of offsets that has x greater than 0 is greater than 2
