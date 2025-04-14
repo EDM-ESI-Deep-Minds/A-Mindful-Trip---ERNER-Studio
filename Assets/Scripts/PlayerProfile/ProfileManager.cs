@@ -12,7 +12,7 @@ public class ProfileManager : MonoBehaviour
 
     private string profileFileName = "PlayerProfile.json";
     private string profileFilePath;
-    private List<PlayerProfile> profiles;
+    public List<PlayerProfile> profiles;
 
     public static PlayerProfile SelectedProfile;
 
