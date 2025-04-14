@@ -15,6 +15,7 @@ public class ProfileManager : MonoBehaviour
     public List<PlayerProfile> profiles;
 
     public static PlayerProfile SelectedProfile;
+    [SerializeField] private TextMeshProUGUI emptyProfileText;
 
     [System.Obsolete]
     private void Awake()
@@ -102,19 +103,8 @@ public class ProfileManager : MonoBehaviour
 
     private void CreateEmptyProfileUI()
     {
-        GameObject emptyMessage = new GameObject("EmptyMessage");
-        emptyMessage.transform.SetParent(profileListParent);
-
-        Text messageText = emptyMessage.AddComponent<Text>();
-        messageText.text = "You don't have any profiles\nPlease create one.";
-        messageText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-        messageText.fontSize = 24;
-        messageText.color = Color.white;
-        messageText.alignment = TextAnchor.MiddleCenter;
-
-        RectTransform rectTransform = emptyMessage.GetComponent<RectTransform>();
-        rectTransform.sizeDelta = new Vector2(400, 100);
-        rectTransform.anchoredPosition = Vector2.zero;
+        emptyProfileText.gameObject.SetActive(true);
+        emptyProfileText.text = "You don't have any profiles\nPlease create one.";
     }
 
     public void SelectProfile(PlayerProfile profile)
