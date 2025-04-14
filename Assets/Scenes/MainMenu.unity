@@ -7354,7 +7354,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 851255861}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -8972,23 +8972,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In a single, dazzling moment, four lifelong friends are unexpectedly torn
-    from their familiar world by a burst of divine light. When they awaken, they
-    find themselves scattered across a mysterious realm known as Luminaria, a world
-    that mirrors their own in splendor yet stands empty of human life, preserved
-    in a state of timeless wonder.\r\n\r\nAs each friend stumbles through the ethereal
-    landscapes, they are greeted by Cellica, a radiant fairy and self-proclaimed
-    guardian of Luminaria. With a gentle luminescence and otherworldly grace, Cellica
-    explains that her unique ability to project her spirit across the realm allows
-    her to communicate with each of them, guiding their progress and sharing vital
-    insights.\r\n\r\nCellica reveals that their arrival was no accident but a rare
-    divine discrepancy, an anomaly in the fabric of fate itself. The only way to
-    return to their lost world is to prove their worth through collaboration. Together,
-    they must journey across Luminaria\u2019s varied terrains to reach the legendary
-    divine beam, a beacon of pure light that holds the power to transport them back
-    home.\r\n\r\nThus begins their quest: a test of unity, resilience, and ingenuity,
-    where only by working as one can they restore the balance of destiny and reclaim
-    their world."
+  m_text: "In a single, dazzling moment, one individual is unexpectedly torn from
+    their familiar world by a burst of divine light. But something is wrong, their
+    very soul has fractured, splintering into four sentient parts, each embodying
+    a distinct facet of their being. These fragments awaken in a vast, ethereal realm
+    known as Luminaria, a world mirroring their own in beauty, yet eerily devoid
+    of human life, frozen in a timeless state.\r\n\r\nSeparated across the mysterious
+    landscapes, each fragment struggles with its own nature, one defined by logic,
+    another by passion, one by doubt, and another by hope. A radiant fairy named
+    Cellica appears before them. The self-proclaimed guardian of Luminaria, she explains
+    that their arrival was no mere accident, but a divine anomaly, a disruption in
+    fate itself.\r\n\r\nCellica reveals the truth: to return to the original world,
+    they must mend what was broken. The soul can only be restored if all its parts
+    work together, overcoming their differences and proving their unity through collaboration.
+    If even one fragment is lost, the vessel in the original world will remain incomplete,
+    forever tormented by an irreparable void.\r\n\r\nWith a gentle luminescence and
+    otherworldly grace, Cellica explains that her unique ability to project her spirit
+    across the realm allows her to communicate with each of them, guiding their progress
+    and sharing vital insights.\r\n\r\nThus begins their journey, a trial of resilience,
+    self-reconciliation, and trust. Across Luminaria\u2019s varied landscapes, they
+    must navigate challenges, confront their own weaknesses, and work as one to reach
+    the legendary divine beam, the only force capable of fusing them back into a
+    complete being.\r\n\r\nThis is no ordinary adventure, it is a battle within.
+    A struggle to heal, to unify, and to become whole again."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f70db2b0b3f55af4ba64959eb1c1cb48, type: 2}
   m_sharedMaterial: {fileID: 921224888093705746, guid: f70db2b0b3f55af4ba64959eb1c1cb48, type: 2}
@@ -9015,8 +9021,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
