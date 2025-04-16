@@ -121654,6 +121654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1000167836}
+  - component: {fileID: 1000167837}
   m_Layer: 5
   m_Name: ProgressBar
   m_TagString: Untagged
@@ -121686,6 +121687,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 432}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1000167837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000167835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28c4eb34202f4691ad8a211da30cd18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barBackground: {fileID: 492483399}
+  barFill: {fileID: 492483400}
+  playerIcons:
+  - {fileID: 110338859}
+  - {fileID: 427681228}
+  - {fileID: 1882460376}
+  - {fileID: 114022983}
+  playerProgress:
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1001 &1034062566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122838,15 +122863,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1439077858027433880, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
