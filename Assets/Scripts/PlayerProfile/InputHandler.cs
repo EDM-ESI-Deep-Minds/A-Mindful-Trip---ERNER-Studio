@@ -30,6 +30,12 @@ public class InputHandler : MonoBehaviour
             return;
         }
 
+        if (profileManager.profiles.Count >= 4)
+        {
+            errorLog.text = "you have reached the 4 profiles limit";
+            return;
+        }
+
         string newName = nameInput.text.Trim();
 
         if (string.IsNullOrEmpty(newName))

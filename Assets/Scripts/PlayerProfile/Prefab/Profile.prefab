@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2499630496520429276}
   - component: {fileID: 6348833389190696770}
   - component: {fileID: 2148040023026839585}
+  - component: {fileID: 3737532614755589851}
   m_Layer: 5
   m_Name: Profile
   m_TagString: Untagged
@@ -103,6 +104,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3737532614755589851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168749637972255801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70857b8b88e7274eaec12de6acbb17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3264968465424367400
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +264,7 @@ GameObject:
   - component: {fileID: 2711654278739875814}
   - component: {fileID: 8205158928048095057}
   - component: {fileID: 6286510218067778778}
+  - component: {fileID: 5542565138209435386}
   m_Layer: 5
   m_Name: DeleteButton
   m_TagString: Untagged
@@ -360,6 +374,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5542565138209435386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457463991702123645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70857b8b88e7274eaec12de6acbb17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7905065658443661637
 GameObject:
   m_ObjectHideFlags: 0
