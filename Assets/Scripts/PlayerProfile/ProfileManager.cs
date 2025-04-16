@@ -16,6 +16,7 @@ public class ProfileManager : MonoBehaviour
 
     public static PlayerProfile SelectedProfile;
     [SerializeField] private TextMeshProUGUI emptyProfileText;
+    [SerializeField] private Button createButton;
 
     [System.Obsolete]
     private void Awake()
@@ -29,6 +30,10 @@ public class ProfileManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         profileFilePath = FileHandler.GetPath(profileFileName);
         LoadProfiles();
+        if (profiles.Count >= 4)
+        {
+            createButton.gameObject.SetActive(false);
+        }
     }
 
     private void LoadProfiles()
@@ -158,6 +163,11 @@ public class ProfileManager : MonoBehaviour
         }
 
         Debug.Log($"Deleted profile: {profile.playerName}");
+
+        if(profiles.Count < 4)
+        {
+            createButton.gameObject.SetActive(true);
+        }
     }
 
     public void SaveSelectedProfile()

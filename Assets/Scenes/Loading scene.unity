@@ -1083,6 +1083,7 @@ MonoBehaviour:
   profileListParent: {fileID: 1676048041}
   profiles: []
   emptyProfileText: {fileID: 233791841}
+  createButton: {fileID: 1217747910}
 --- !u!1 &849106667
 GameObject:
   m_ObjectHideFlags: 0
