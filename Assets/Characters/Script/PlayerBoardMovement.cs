@@ -44,6 +44,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        DontDestroyOnLoad(gameObject);
     }
 
     public override void OnNetworkSpawn()
