@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System;
 
 public class HeartUIManager : MonoBehaviour
 {
@@ -17,12 +18,13 @@ public class HeartUIManager : MonoBehaviour
     private int hearts;
     private int emptyHearts = 0;
     private List<Image> heartImages = new List<Image>(); // Tracks all heart UI images
-    private int maxhearts = GameMode.Instance.GetMaxPlayers() == 2 ? 5 : 6;
+    private int maxhearts = GameMode.Instance.GetMaxPlayers() == 2 ? 1 : 6;
 
     public void Awake()
     {
         hearts = maxhearts;
         InitializeHearts();
+        removeHeart();
     }
 
     private void InitializeHearts()
@@ -88,21 +90,32 @@ public class HeartUIManager : MonoBehaviour
 
     public void removeHeart()
     {
-        if (hearts <= 0) return;
-
-        hearts--;
-        emptyHearts++;
-
-        Transform heart = heartContainer.GetChild(hearts);
-        Animator animator = heart.GetComponent<Animator>();
-        if (animator != null)
+        if (hearts > 0)
         {
-            animator.SetTrigger("PopOut");
+
+            hearts--;
+            //Debug.Log("Hearts lefttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt: " + hearts);
+            emptyHearts++;
+
+            Transform heart = heartContainer.GetChild(hearts);
+            Animator animator = heart.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetTrigger("PopOut");
+            }
+          
+            StartCoroutine(SetHeartEmptyAfterAnimation(heart.GetComponent<Image>(), 0.3f));
         }
+        if (hearts == 0)
+        {
+            Debug.Log("No more hearts to removeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+            if (GameOverManager.Instance != null) {  // instance est toujours null ?? 
+            Debug.Log("GAMEOVER");
+            GameOverManager.Instance.TriggerGameOverScene();
 
-        StartCoroutine(SetHeartEmptyAfterAnimation(heart.GetComponent<Image>(), 0.3f));
-
-        // TODO : lossing logic
+        }
+        }
+        
     }
 
     private System.Collections.IEnumerator SetHeartEmptyAfterAnimation(Image heartImage, float delay)
