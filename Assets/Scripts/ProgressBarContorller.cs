@@ -13,6 +13,19 @@ public class ProgressBarController : NetworkBehaviour
 
     private float[] playerProgress = new float[4];
 
+    private void Awake()
+    {
+        SelectedCharacters selectedCharacters = FindFirstObjectByType<SelectedCharacters>();
+        int[] characters = selectedCharacters.GetSelectedCharacters();
+        for (int i=0; i<4; i++)
+        {
+            if (!characters.Contains(i))
+            {
+                playerIcons[i].gameObject.SetActive(false);
+            }
+        }
+    }
+
     [ServerRpc(RequireOwnership = false)]
     public void RequestUpdateProgressBarServerRpc(int playerIndex, float rawProgress)
     {
