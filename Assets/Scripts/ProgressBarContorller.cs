@@ -1,33 +1,44 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Linq;
 
 public class ProgressBarController : MonoBehaviour
 {
     public RectTransform barBackground;
-    public Image barFill; 
-    public RectTransform[] playerIcons; 
+    public Image barFill;
+    public RectTransform[] playerIcons;
+    public float[] playerProgress = new float[4];
+    public GameObject[] players = new GameObject[4];
+    private float totalDistance = 1f;
 
-    [Range(0f, 1f)] public float[] playerProgress = new float[4];
 
-    void Update()
+    public void InitializePlayerProgress(int playerIndex, float initialProgress)
     {
-        float maxProgress = Mathf.Max(playerProgress[0], playerProgress[1], playerProgress[2], playerProgress[3]);
+        playerProgress[playerIndex] = initialProgress;
 
-        barFill.fillAmount = maxProgress;
-
-        float barWidth = barBackground.rect.width;
-
-        for (int i = 0; i < playerIcons.Length; i++)
+        if (initialProgress > totalDistance)
         {
-            Vector2 anchoredPos = playerIcons[i].anchoredPosition;
-            anchoredPos.x = (barWidth * playerProgress[i]) - (barWidth / 2f);
-            playerIcons[i].anchoredPosition = anchoredPos;
+            totalDistance = initialProgress;
+            Debug.Log($"Updated totalDistance to: {totalDistance}");
         }
 
+        Debug.Log($"Player {playerIndex} initialized with progress {initialProgress}");
     }
 
-    public void SetPlayerProgress(int playerIndex, float progress)
+    public void UpdateProgressBar(int playerIndex, float rawProgress)
     {
-        playerProgress[playerIndex] = Mathf.Clamp01(progress);
+        float normalized = 1f - Mathf.Clamp01(rawProgress / totalDistance);
+        playerProgress[playerIndex] = normalized;
+
+        barFill.fillAmount = playerProgress.Max();
+
+        float barWidth = barBackground.rect.width;
+        Vector2 anchoredPos = playerIcons[playerIndex].anchoredPosition;
+        anchoredPos.x = Mathf.Lerp(-barWidth / 2f, barWidth / 2f, playerProgress[playerIndex]);
+        playerIcons[playerIndex].anchoredPosition = anchoredPos;
+        Debug.DrawLine(barBackground.position + Vector3.left * (barWidth / 2f), barBackground.position + Vector3.right * (barWidth / 2f), Color.green, 5f);
+
     }
+
 }
