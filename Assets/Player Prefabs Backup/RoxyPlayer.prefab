@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 7242072467800852050}
   - component: {fileID: 6258294862143770397}
   - component: {fileID: -5701420907980059832}
+  - component: {fileID: 1243393869176139322}
   m_Layer: 9
   m_Name: RoxyPlayer
   m_TagString: Player
@@ -409,3 +410,16 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   TransitionStateInfoList: []
   m_Animator: {fileID: 1561141138345024501}
+--- !u!114 &1243393869176139322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909638463307033645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6d7e280b4d8294c97247cbba4de9b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints: []
