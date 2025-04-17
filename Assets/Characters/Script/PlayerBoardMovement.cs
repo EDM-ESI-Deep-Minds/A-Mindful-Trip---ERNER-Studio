@@ -157,8 +157,8 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         playerProgress = Mathf.Abs(rb.position.x - endPosition.x);
         // intialize the progress
-        progressBarController.InitializePlayerProgress(playerSprite, playerProgress);
-        progressBarController.UpdateProgressBar(playerSprite, playerProgress);
+        progressBarController.InitializePlayerProgressServerRpc(playerSprite, playerProgress);
+        progressBarController.RequestUpdateProgressBarServerRpc(playerSprite, playerProgress);
     }
 
     private IEnumerator FindDiceManager()
@@ -595,7 +595,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             // update the player progress, which represent the distance from the player current position to the end position on the x axis
             playerProgress = Mathf.Abs(rb.position.x - endPosition.x);
 
-            progressBarController.UpdateProgressBar(playerSprite,playerProgress);
+            progressBarController.RequestUpdateProgressBarServerRpc(playerSprite,playerProgress);
 
             //debug
             Debug.Log($"end Tile Position: {endPosition}");
