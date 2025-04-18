@@ -27,14 +27,13 @@ public class GameOverManager : NetworkBehaviour
         {
             Debug.Log("GameOverManager spawned on server.");
         }
-     
     }
 
     public void TriggerGameOverScene()
     {
         if (IsServer)
         {
-            LoadGameOverSceneForAllClients();
+            StartCoroutine(DelayBeforeGameOverScene());
         }
         else
         {
@@ -42,17 +41,22 @@ public class GameOverManager : NetworkBehaviour
         }
     }
 
-    // Clients call this to ask the server to switch the scene
     [ServerRpc(RequireOwnership = false)]
     private void TriggerGameOverServerRpc(ServerRpcParams rpcParams = default)
     {
+        StartCoroutine(DelayBeforeGameOverScene());
+    }
+
+    private IEnumerator DelayBeforeGameOverScene()
+    {
+        Debug.Log("[Server] Waiting 2 seconds before switching to GameOver scene...");
+        yield return new WaitForSeconds(2f);
         LoadGameOverSceneForAllClients();
     }
 
-    // Server switches scene for all players
     private void LoadGameOverSceneForAllClients()
     {
         Debug.Log("[Server] Loading GameOver scene for all players...");
-        NetworkManager.Singleton.SceneManager.LoadScene("GameOver", UnityEngine.SceneManagement.LoadSceneMode.Single);
+        NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 }

@@ -113,10 +113,10 @@ public class HeartUIManager : MonoBehaviour
            
            
             Debug.Log("No more hearts to removeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
-             if (GameOverManager.Instance != null) {  // instance est toujours null ?? 
+             if (GameOverManager.Instance != null) { 
             Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
-                NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
-
+                //NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+                GameOverManager.Instance.TriggerGameOverScene(); //  delay
 
             }
         }
