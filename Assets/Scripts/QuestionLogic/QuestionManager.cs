@@ -130,6 +130,15 @@ public class QuestionManager : NetworkBehaviour
 
         if (RolesManager.IsMyTurn)
         {
+            if (!isCorrect)
+            {
+                HeartUIManager heartUI = FindObjectOfType<HeartUIManager>();
+                if (heartUI != null)
+                {
+                    heartUI.removeHeart();
+                }
+            }
+            
             ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;
             EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
 
