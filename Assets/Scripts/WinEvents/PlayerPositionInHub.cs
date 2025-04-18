@@ -17,10 +17,11 @@ public class PlayerPositionInHub : NetworkBehaviour
 
     private void OnSceneLoadComplete(ulong clientId, string sceneName, LoadSceneMode loadSceneMode)
     {
-        // if (!(SceneManager.GetActiveScene().name == "Hub&Dans")) return;
+        // if (!(SceneManager.GetActiveScene().name == "Hub&Dans")) return;    
         if (sceneName != "Hub&Dans") return;
         if (!IsOwner) return;
         transform.position = new Vector2(-1f, -0.75f);
+        transform.localScale = new Vector3(3.75f, 3.75f, 3.75f);
 
     }
 }

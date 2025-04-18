@@ -25,13 +25,13 @@ public static class EventTrigger
                 Debug.Log("Curse event triggered.");
                 break;
 
-            case "":
-                OnQuestionTile?.Invoke();
-                Debug.Log("Question event triggered.");
-                break;
             case "Question":
-                Debug.Log("Question event 22222 triggered.");
+                // OnQuestionTile?.Invoke();
+                //Debug.Log("Question event triggered.");
                 OnMapWin?.Invoke();
+                break;
+            case "End":
+                OnMapWin?.Invoke();//borgr
                 break;
 
             default:
