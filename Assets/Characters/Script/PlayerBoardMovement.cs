@@ -138,19 +138,19 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         int playerIndex = 0;
 
-        if (spriteName.Contains("Roxy_chibi"))
+        if (spriteName.Contains("Roxy"))
         {
             playerSprite = 0;
         }
-        else if (spriteName.Contains("Ren_chibi"))
+        else if (spriteName.Contains("Ren"))
         {
             playerSprite = 1;
         }
-        else if (spriteName.Contains("Tarus_chibi"))
+        else if (spriteName.Contains("Tarus"))
         {
             playerSprite = 2;
         }
-        else if (spriteName.Contains("Mar_chibi"))
+        else if (spriteName.Contains("Mar"))
         {
             playerSprite = 3;
         }
@@ -717,7 +717,11 @@ public class PlayerBoardMovement : NetworkBehaviour
                     SetIdleAnimation(animIndex);
                 }
             }
-           
+
+            playerProgress = Mathf.Abs(rb.position.x - endPosition.x);
+
+            progressBarController.RequestUpdateProgressBarServerRpc(playerSprite, playerProgress);
+
             rb.position = targetPos;
             previousTilePos = lastTilePos;
             currentTilePos = lastTilePos;

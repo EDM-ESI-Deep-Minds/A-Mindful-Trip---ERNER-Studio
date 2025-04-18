@@ -167,13 +167,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  moveSpeed: 0.1
+  moveSpeed: 1
   boardTilemap: {fileID: 0}
   rightArrow: {fileID: 0}
   leftArrow: {fileID: 0}
   upArrow: {fileID: 0}
   downArrow: {fileID: 0}
   backWardButton: {fileID: 0}
+  playerProgress: 0
+  endPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &4321131637784802128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +247,7 @@ BoxCollider2D:
   m_Offset: {x: 0.014645994, y: -0.015673772}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.2, y: 0.005}
     oldSize: {x: 0.15, y: 0.2}
     newSize: {x: 0.15, y: 0.2}
     adaptiveTilingThreshold: 0.5

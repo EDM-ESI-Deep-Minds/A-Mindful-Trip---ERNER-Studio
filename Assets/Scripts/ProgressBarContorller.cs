@@ -10,19 +10,26 @@ public class ProgressBarController : NetworkBehaviour
     public RectTransform[] playerIcons;
     public GameObject[] players = new GameObject[4];
     private float totalDistance = 1f;
-
     private float[] playerProgress = new float[4];
 
-    private void Awake()
+    public override void OnNetworkSpawn()
     {
-        SelectedCharacters selectedCharacters = FindFirstObjectByType<SelectedCharacters>();
-        int[] characters = selectedCharacters.GetSelectedCharacters();
-        for (int i=0; i<4; i++)
+        if (!IsServer) return;
+
+        int[] characters = SelectedCharacters.Instance.GetSelectedCharacters();
+        SyncCharacterIconsClientRpc(characters);
+    }
+
+    [ClientRpc]
+    private void SyncCharacterIconsClientRpc(int[] activeCharacterIndexes)
+    {
+        for (int i = 0; i < playerIcons.Length; i++)
         {
-            if (!characters.Contains(i))
-            {
-                playerIcons[i].gameObject.SetActive(false);
-            }
+            bool shouldBeActive = activeCharacterIndexes.Contains(i);
+            playerIcons[i].gameObject.SetActive(shouldBeActive);
+
+            
+            Debug.Log($"[Client {NetworkManager.Singleton.LocalClientId}] Icon {i} active: {shouldBeActive}");
         }
     }
 

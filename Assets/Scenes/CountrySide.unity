@@ -291,7 +291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &114022983
 RectTransform:
   m_ObjectHideFlags: 0
@@ -105924,7 +105924,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.9
+  orthographic size: 0.72997606
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -121700,6 +121700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28c4eb34202f4691ad8a211da30cd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   barBackground: {fileID: 492483399}
   barFill: {fileID: 492483400}
   playerIcons:
@@ -121707,11 +121708,6 @@ MonoBehaviour:
   - {fileID: 427681228}
   - {fileID: 1882460376}
   - {fileID: 114022983}
-  playerProgress:
-  - 0
-  - 0
-  - 0
-  - 0
   players:
   - {fileID: 0}
   - {fileID: 0}
@@ -122894,15 +122890,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1439077858027433880, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
@@ -126216,7 +126212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4945728845802315395, guid: bf7a5bc171bf9754c9a4bd05c0f78890, type: 3}
+  m_Sprite: {fileID: -4872138574780054854, guid: a7e44e188a4ad714b85d58dd9e969dbb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
