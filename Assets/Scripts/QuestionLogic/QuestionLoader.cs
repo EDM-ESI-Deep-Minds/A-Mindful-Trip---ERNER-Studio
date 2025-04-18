@@ -12,13 +12,19 @@ public class QuestionLoader : MonoBehaviour
 
     void LoadQuestion()
     {
-        int category = 9;
-        string difficulty = "easy";
-        string questionType = "qcm";
+        int category = GetRandomCategory();
+        string difficulty = DifficultySelector.GetQuestionDifficulty(ProfileManager.SelectedProfile.Elo);
+        string questionType = GetRandomQuestionType();
 
         string fileName = $"QuestionBank/category_{category}_{difficulty}_{questionType}";
 
         TextAsset jsonFile = Resources.Load<TextAsset>(fileName);
+        if (jsonFile == null)
+        {
+            questionType = "qcm";
+            fileName = $"QuestionBank/category_{category}_{difficulty}_{questionType}";
+            jsonFile = Resources.Load<TextAsset>(fileName);
+        }
 
         if (jsonFile != null)
         {
@@ -30,10 +36,7 @@ public class QuestionLoader : MonoBehaviour
             Debug.Log("Possible Answers : " + string.Join(", ", GetAnswers(question)));
             Debug.Log("Correct Answer: " + question.correct_answer);
         }
-        else
-        {
-            questionType = "qcm";
-        }
+      
     }
 
     public string[] GetAnswers(Question question)
@@ -43,5 +46,15 @@ public class QuestionLoader : MonoBehaviour
         allAnswers.AddRange(question.incorrect_answers);
         allAnswers = allAnswers.OrderBy(x => Random.value).ToList();
         return allAnswers.ToArray();
+    }
+    public string GetRandomQuestionType()
+    {
+        string[] types = { "qcm", "tf" };
+        int index = Random.Range(0, types.Length); 
+        return types[index];
+    }
+    int GetRandomCategory()
+    {
+        return UnityEngine.Random.Range(9, 33); 
     }
 }
