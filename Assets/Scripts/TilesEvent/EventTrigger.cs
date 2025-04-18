@@ -26,9 +26,7 @@ public static class EventTrigger
                 break;
 
             case "Question":
-                // OnQuestionTile?.Invoke();
-                //Debug.Log("Question event triggered.");
-                OnMapWin?.Invoke();
+                 OnQuestionTile?.Invoke();
                 break;
             case "End":
                 OnMapWin?.Invoke();//borgr
