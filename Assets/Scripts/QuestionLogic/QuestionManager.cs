@@ -142,7 +142,7 @@ public class QuestionManager : NetworkBehaviour
 
     private void HideGameplayUI(bool hide)
     {
-        string[] elementNames = { "RollDiceButton", "DownArrow", "UpArrow", "LeftArrow", "RightArrow", "backWardButton" };
+        string[] elementNames = { "RollDiceButton", "DownArrow", "UpArrow", "LeftArrow", "RightArrow", "backWardButton", "Dice1", "Dice2" };
 
         foreach (var name in elementNames)
         {
