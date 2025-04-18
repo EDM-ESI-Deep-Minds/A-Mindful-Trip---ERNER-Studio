@@ -7,6 +7,7 @@ public class spawn_mang : NetworkBehaviour
 {
     [SerializeField]
     public GameObject playerPrefab;
+    public GameObject[] playerPrefabs = new GameObject[4];
     [SerializeField]
     public GameObject TextChatW;
     float[,] les_position = new float[4, 2]
@@ -58,19 +59,24 @@ public class spawn_mang : NetworkBehaviour
 
     private void SpawnAllPlayers()
     {
+        RoomUIManager roomUiManager= FindFirstObjectByType<RoomUIManager>();
+        int[] selectedCharacters = roomUiManager.GetSelectedCharacters();
+
         foreach (var client in NetworkManager.Singleton.ConnectedClients)
         {
             ulong clientId = client.Key;
 
-            GameObject playerInstance = Instantiate(playerPrefab, GetSpawnPosition(), Quaternion.identity);
+            int characterIndex = selectedCharacters[IndexTabAllPlayer];
+            GameObject playerInstance = Instantiate(playerPrefabs[characterIndex], GetSpawnPosition(), Quaternion.identity);
+
             playerInstance.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
             AllPlayer[IndexTabAllPlayer] = playerInstance;
             IndexTabAllPlayer++;
-
-
         }
-        SpawanDone= true;
+
+        SpawanDone = true;
     }
+
     private Vector2 GetSpawnPosition()
     {
         index_position++;
