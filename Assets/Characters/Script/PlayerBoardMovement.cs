@@ -8,7 +8,6 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 using System.Linq;
 using UnityEngine.SceneManagement;
-using UnityEngine.SceneManagement;
 
 public class PlayerBoardMovement : NetworkBehaviour
 {
