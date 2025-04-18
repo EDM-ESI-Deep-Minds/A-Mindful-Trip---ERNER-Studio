@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: a7e44e188a4ad714b85d58dd9e969dbb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6410147146389765800
+    second: Tarus_chibi_0
+  - first:
+      213: 161036379173544253
+    second: Tarus_chibi_1
+  - first:
+      213: 7019389007730537308
+    second: Tarus_chibi_2
+  - first:
+      213: 3971580037109425299
+    second: Tarus_chibi_3
+  - first:
+      213: -5552682875651645757
+    second: Tarus_chibi_4
+  - first:
+      213: 3355839862029121582
+    second: Tarus_chibi_5
+  - first:
+      213: -722824018270162083
+    second: Tarus_chibi_6
+  - first:
+      213: -4872138574780054854
+    second: Tarus_chibi_7
+  - first:
+      213: -1426010898816309909
+    second: Tarus_chibi_8
+  - first:
+      213: -4069151247289570731
+    second: Tarus_chibi_9
+  - first:
+      213: -7062554121284412645
+    second: Tarus_chibi_10
+  - first:
+      213: -2875339997381350161
+    second: Tarus_chibi_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tarus_chibi_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 87
+        width: 16
+        height: 22
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aebb820eda65f850800000000000000
+      internalID: 6410147146389765800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarus_chibi_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 88
+        width: 16
+        height: 21
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31ed80dbbd1c3200800000000000000
+      internalID: 161036379173544253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarus_chibi_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 87
+        width: 17
+        height: 21
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c537f0abc11e96160800000000000000
+      internalID: 7019389007730537308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarus_chibi_3
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 63
+        width: 14
+        height: 21
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 394a0fc5003ed1730800000000000000
+      internalID: 3971580037109425299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarus_chibi_4
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 64
+        width: 15
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce936e0858e0f2b0800000000000000
+      internalID: -5552682875651645757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarus_chibi_5
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 63
+        width: 15
+        height: 21
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2877531396529e20800000000000000
+      internalID: 3355839862029121582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarus_chibi_6
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 40
+        width: 14
+        height: 21
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53f2e3926308f5f0800000000000000
+      internalID: -722824018270162083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarus_chibi_7
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 40
+        width: 14
+        height: 22
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2c1c9a7cfa26cb0800000000000000
+      internalID: -4872138574780054854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarus_chibi_8
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 40
+        width: 14
+        height: 21
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65e73294aac53ce0800000000000000
+      internalID: -1426010898816309909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarus_chibi_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 15
+        width: 16
+        height: 22
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55aa7f7ff787787c0800000000000000
+      internalID: -4069151247289570731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarus_chibi_10
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 17
+        width: 16
+        height: 21
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b1fd91274ccfd90800000000000000
+      internalID: -7062554121284412645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarus_chibi_11
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 15
+        width: 16
+        height: 22
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fecac9fa18db818d0800000000000000
+      internalID: -2875339997381350161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 40fd45d728530304abb9e43e5e3e2f46
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tarus_chibi_0: 6410147146389765800
+      Tarus_chibi_1: 161036379173544253
+      Tarus_chibi_10: -7062554121284412645
+      Tarus_chibi_11: -2875339997381350161
+      Tarus_chibi_2: 7019389007730537308
+      Tarus_chibi_3: 3971580037109425299
+      Tarus_chibi_4: -5552682875651645757
+      Tarus_chibi_5: 3355839862029121582
+      Tarus_chibi_6: -722824018270162083
+      Tarus_chibi_7: -4872138574780054854
+      Tarus_chibi_8: -1426010898816309909
+      Tarus_chibi_9: -4069151247289570731
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
