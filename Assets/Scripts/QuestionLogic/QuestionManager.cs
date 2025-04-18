@@ -39,7 +39,7 @@ public class QuestionManager : NetworkBehaviour
         string difficulty = DifficultySelector.GetQuestionDifficulty(ProfileManager.SelectedProfile.Elo);
         string questionType = QuestionLoader.Instance.GetRandomQuestionType();
 
-        SpawnQuestionClientRpc(category, difficulty, questionType, 30f);
+        SpawnQuestionClientRpc(category, difficulty, questionType, 60f);
     }
 
     // public void LocalPlayerLoadQuestion()
@@ -67,6 +67,10 @@ public class QuestionManager : NetworkBehaviour
         var ui = spawnedUI.GetComponent<QuestionUI>();
 
         ui.InitializeUI();
+
+        timerLeft = timer;
+        hasAnswered = false;
+
         StartCoroutine(HandleQuestionSequence(ui, question.question, answers, timer, RolesManager.IsMyTurn));
     }
 
@@ -77,8 +81,8 @@ public class QuestionManager : NetworkBehaviour
         yield return new WaitForSeconds(3f); // Intro duration
 
         ui.DisplayQuestion(questionText, answers, isMyTurn);
-        timerLeft = timer;
-        hasAnswered = false;
+        // timerLeft = timer;
+        // hasAnswered = false;
     }
 
     private void Update()

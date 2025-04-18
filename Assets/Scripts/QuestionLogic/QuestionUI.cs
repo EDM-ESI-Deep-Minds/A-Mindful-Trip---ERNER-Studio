@@ -59,7 +59,13 @@ public class QuestionUI : MonoBehaviour
 
     public void UpdateTimer(float timeLeft)
     {
-        timerText.text = Mathf.Ceil(timeLeft).ToString();
+        int seconds = Mathf.CeilToInt(timeLeft);
+        timerText.text = seconds.ToString("00");
+
+        if (timeLeft <= 10f)
+            timerText.color = Color.red;
+        else
+            timerText.color = Color.white;
     }
 
     public void ShowResult(bool isCorrect)
