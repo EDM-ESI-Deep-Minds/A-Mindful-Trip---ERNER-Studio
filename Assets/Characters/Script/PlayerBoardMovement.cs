@@ -9,6 +9,7 @@ using Unity.VisualScripting;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using UnityEngine.SceneManagement;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class PlayerBoardMovement : NetworkBehaviour
 {
@@ -37,13 +38,18 @@ public class PlayerBoardMovement : NetworkBehaviour
     private PathTile currentTilePath;
     private float gridSize = 16f;
     private bool isWalkSoundPlaying = false;
-
+    public float playerProgress = 0f; // Player progress on the board
+    public Vector3 endPosition;
     // lets add the player path, which is an array of the player movements on the road
     private List<Vector3Int> playerPath = new List<Vector3Int>();
+    private ProgressBarController progressBarController;
+    private SpriteRenderer spriteRenderer;
+    private int playerSprite = -1;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public override void OnNetworkSpawn()
@@ -66,8 +72,29 @@ public class PlayerBoardMovement : NetworkBehaviour
                 Debug.LogWarning("BoardManager not found, retrying...");
                 yield return new WaitForSeconds(0.5f);
             }
+            
         }
 
+        if (progressBarController == null)
+        {
+            GameObject progressBarGO = GameObject.Find("ProgressBar");
+            if (progressBarGO != null)
+            {
+                progressBarController = progressBarGO.GetComponent<ProgressBarController>();
+                if (progressBarController == null)
+                {
+                    Debug.LogWarning("ProgressBarController component not found on ProgressBar GameObject.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("ProgressBar GameObject not found.");
+            }
+        }
+
+
+        // save the first end position
+        endPosition = BoardManager.storedEndPositions[0];
         Vector3 worldPosition = transform.position;
         Vector3Int gridPosition = BoardManager.GetGridPositionFromWorld(worldPosition);
         currentTilePos = gridPosition;
@@ -104,7 +131,34 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         Debug.Log("Grid Size Set To: " + gridSize);
 
+        // display the player sprite name
+        Debug.Log("Player Sprite Name: " + spriteRenderer.sprite.name);
 
+        string spriteName = spriteRenderer.sprite.name;
+
+        int playerIndex = 0;
+
+        if (spriteName.Contains("Roxy"))
+        {
+            playerSprite = 0;
+        }
+        else if (spriteName.Contains("Ren"))
+        {
+            playerSprite = 1;
+        }
+        else if (spriteName.Contains("Tarus"))
+        {
+            playerSprite = 2;
+        }
+        else if (spriteName.Contains("Mar"))
+        {
+            playerSprite = 3;
+        }
+
+        playerProgress = Mathf.Abs(rb.position.x - endPosition.x);
+        // intialize the progress
+        progressBarController.InitializePlayerProgressServerRpc(playerSprite, playerProgress);
+        progressBarController.RequestUpdateProgressBarServerRpc(playerSprite, playerProgress);
     }
 
     private IEnumerator FindDiceManager()
@@ -185,6 +239,10 @@ public class PlayerBoardMovement : NetworkBehaviour
     private void DetermineDefaultDirection()
     {
         Vector3Int[] validMoves = boardManager.pathTiles[currentTilePos].possibleMoves;
+        // debugging the current tile  position
+        Debug.Log($"Current Tile Position: {currentTilePos}");
+        
+        
 
         if (validMoves.Length == 0)
         {
@@ -536,6 +594,19 @@ public class PlayerBoardMovement : NetworkBehaviour
 
             isMoving = false;
 
+            
+
+            // update the player progress, which represent the distance from the player current position to the end position on the x axis
+            playerProgress = Mathf.Abs(rb.position.x - endPosition.x);
+
+            progressBarController.RequestUpdateProgressBarServerRpc(playerSprite,playerProgress);
+
+            //debug
+            Debug.Log($"end Tile Position: {endPosition}");
+            Debug.Log($"Current Player Position: {rb.position.x}");
+
+            Debug.Log($"Player Progress: {playerProgress}");
+
             //yield return new WaitForSeconds(0.1f);
 
             // Check if this tile has a trigger event
@@ -646,7 +717,11 @@ public class PlayerBoardMovement : NetworkBehaviour
                     SetIdleAnimation(animIndex);
                 }
             }
-           
+
+            playerProgress = Mathf.Abs(rb.position.x - endPosition.x);
+
+            progressBarController.RequestUpdateProgressBarServerRpc(playerSprite, playerProgress);
+
             rb.position = targetPos;
             previousTilePos = lastTilePos;
             currentTilePos = lastTilePos;
