@@ -239,6 +239,10 @@ public class PlayerBoardMovement : NetworkBehaviour
     private void DetermineDefaultDirection()
     {
         Vector3Int[] validMoves = boardManager.pathTiles[currentTilePos].possibleMoves;
+        // debugging the current tile  position
+        Debug.Log($"Current Tile Position: {currentTilePos}");
+        
+        
 
         if (validMoves.Length == 0)
         {

@@ -18385,7 +18385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  playerPrefab: {fileID: 8909638463307033645, guid: d0f3e241ff3a59e499df61bffbb10a77, type: 3}
+  playerPrefab: {fileID: 5520018035931640328, guid: d35dba106314bef4bb18494cdf832d7e, type: 3}
   TextChatW: {fileID: 820895564}
 --- !u!4 &1786476500
 Transform:

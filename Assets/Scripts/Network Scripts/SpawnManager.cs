@@ -66,8 +66,6 @@ public class spawn_mang : NetworkBehaviour
             playerInstance.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
             AllPlayer[IndexTabAllPlayer] = playerInstance;
             IndexTabAllPlayer++;
-
-
         }
         SpawanDone= true;
     }
