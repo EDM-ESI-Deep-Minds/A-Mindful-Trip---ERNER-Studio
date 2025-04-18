@@ -105774,7 +105774,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.72997606
+  orthographic size: 0.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -106484,6 +106484,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70857b8b88e7274eaec12de6acbb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &617454141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617454143}
+  - component: {fileID: 617454142}
+  m_Layer: 0
+  m_Name: QuestionLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &617454142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617454141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a7dde5f03ba7d43b8144480b9997c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &617454143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617454141}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.085287, y: -7.80895, z: 0.18703344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &634288898
 GameObject:
   m_ObjectHideFlags: 0
@@ -121016,8 +121060,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 913087738}
-  - component: {fileID: 913087737}
   - component: {fileID: 913087736}
+  - component: {fileID: 913087737}
   m_Layer: 0
   m_Name: QuestionManager
   m_TagString: Untagged
@@ -121063,7 +121107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  questionUIPrefab: {fileID: 0}
+  questionUIPrefab: {fileID: 2303266405491977705, guid: db9c58cde7448c34d9d202b90627a99f, type: 3}
 --- !u!4 &913087738
 Transform:
   m_ObjectHideFlags: 0
@@ -126493,5 +126537,6 @@ SceneRoots:
   - {fileID: 152055426}
   - {fileID: 410714163}
   - {fileID: 1700783333}
+  - {fileID: 617454143}
   - {fileID: 913087738}
   - {fileID: 1748060569}
