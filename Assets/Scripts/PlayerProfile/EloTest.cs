@@ -15,15 +15,23 @@ public class FinalEloTest : MonoBehaviour
 
         if (testProfile == null)
         {
-            Debug.LogError(" Profile 'final test' not found!");
+            Debug.Log(" Profile 'final test' not found!");
             return;
         }
 
         Debug.Log($" Loaded profile: {testProfile.playerName}, General Elo: {testProfile.Elo}");
-        int difficulty = DifficultySelector.GetQuestionDifficulty(testProfile.Elo);
+        // int difficulty = DifficultySelector.GetQuestionDifficulty(testProfile.Elo);
+        string difficultyString = DifficultySelector.GetQuestionDifficulty(testProfile.Elo);
+        int difficulty = difficultyString switch
+        {
+            "easy" => 1,
+            "medium" => 2,
+            "hard" => 3,
+            _ => -1, // unexpected result
+        };
         Debug.Log($" difiicultyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy: {difficulty}");
         // Simulate Elo changes
-       // EloCalculator.UpdateCategoryElo(testProfile, "12", true, 3);     // correct medium
+        // EloCalculator.UpdateCategoryElo(testProfile, "12", true, 3);     // correct medium
         //EloCalculator.UpdateCategoryElo(testProfile, "10", false, 1); // wrong easy
         //EloCalculator.UpdateCategoryElo(testProfile, "11", true, 3);  // correct hard
 
@@ -42,7 +50,7 @@ public class FinalEloTest : MonoBehaviour
 
         //  Print updated profile summary
         Debug.Log($" Updated General Elo: {testProfile.Elo}");
-     
+
         foreach (var cat in testProfile.categories)
         {
             Debug.Log($" {cat.categoryName} → Elo: {cat.categoryElo}, Answered: {cat.questionsAnswered}, Correct: {cat.correctAnswers}");
