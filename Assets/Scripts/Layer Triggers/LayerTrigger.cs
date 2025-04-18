@@ -10,7 +10,7 @@ public class LayerTrigger : NetworkBehaviour
     {
         if (other.CompareTag("Player") && other.TryGetComponent(out NetworkObject netObj))
         {
-           if (IsOwner) // Only the owner sends the request
+           if (netObj.IsOwner) // Only the owner sends the request
             {
                 UpdateSortingOrderServerRpc(netObj.NetworkObjectId, loweredSortingOrder);
              }

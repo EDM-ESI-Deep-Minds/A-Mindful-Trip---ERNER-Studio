@@ -2,10 +2,11 @@ using Unity.Netcode;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Globalization;
 
-public class PlayerPositionInHub : MonoBehaviour
+public class PlayerPositionInHub : NetworkBehaviour
 {
-    public Transform[] spawnPoints; // Assigne-les depuis l'inspecteur
+  //  public Transform[] spawnPoints; // Assigne-les depuis l'inspecteur
 
     private void Start()
     {
@@ -16,14 +17,10 @@ public class PlayerPositionInHub : MonoBehaviour
 
     private void OnSceneLoadComplete(ulong clientId, string sceneName, LoadSceneMode loadSceneMode)
     {
-        if (!(SceneManager.GetActiveScene().name == "Hub&Dans")) return;
-        if (!NetworkManager.Singleton.IsServer) return;
+        // if (!(SceneManager.GetActiveScene().name == "Hub&Dans")) return;
+        if (sceneName != "Hub&Dans") return;
+        if (!IsOwner) return;
+        transform.position = new Vector2(-1f, -0.75f);
 
-        foreach (var player in NetworkManager.Singleton.ConnectedClientsList)
-        {
-            var playerObj = player.PlayerObject;
-
-            playerObj.transform.position = new Vector2(-1f, -0.75f);
-        }
     }
 }
