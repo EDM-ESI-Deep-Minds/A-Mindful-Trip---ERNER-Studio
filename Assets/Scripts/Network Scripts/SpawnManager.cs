@@ -11,12 +11,12 @@ public class spawn_mang : NetworkBehaviour
     [SerializeField]
     public GameObject TextChatW;
     float[,] les_position = new float[4, 2]
- {
+    {
       {0.88f, 2.64f},
      {-0.56f, 0.08f},
      {1.52f, 5.04f},
      {2.48f, -3.28f},
- };
+    };
     float[,] city_map_positions = new float[4, 2]
    {
         { -4.32f, -11.36f },
