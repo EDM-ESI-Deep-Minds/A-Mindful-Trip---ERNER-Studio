@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System;
+using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
 public class HeartUIManager : MonoBehaviour
 {
@@ -94,7 +96,7 @@ public class HeartUIManager : MonoBehaviour
         {
 
             hearts--;
-            //Debug.Log("Hearts lefttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt: " + hearts);
+           
             emptyHearts++;
 
             Transform heart = heartContainer.GetChild(hearts);
@@ -108,14 +110,17 @@ public class HeartUIManager : MonoBehaviour
         }
         if (hearts == 0)
         {
+           
+           
             Debug.Log("No more hearts to removeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
-            if (GameOverManager.Instance != null) {  // instance est toujours null ?? 
-            Debug.Log("GAMEOVER");
-            GameOverManager.Instance.TriggerGameOverScene();
+             if (GameOverManager.Instance != null) {  // instance est toujours null ?? 
+            Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+                NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
 
+
+            }
         }
-        }
-        
+
     }
 
     private System.Collections.IEnumerator SetHeartEmptyAfterAnimation(Image heartImage, float delay)

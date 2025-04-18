@@ -1,6 +1,7 @@
 using UnityEngine;
 using Unity.Netcode;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameOverManager : NetworkBehaviour
 {
@@ -11,6 +12,8 @@ public class GameOverManager : NetworkBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+            Debug.Log("GameOverManager instance createddddddddddddddddddddddddddddddddddddddddddddddddd.");
         }
         else
         {
@@ -24,6 +27,7 @@ public class GameOverManager : NetworkBehaviour
         {
             Debug.Log("GameOverManager spawned on server.");
         }
+     
     }
 
     public void TriggerGameOverScene()
