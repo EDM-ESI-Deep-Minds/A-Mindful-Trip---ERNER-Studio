@@ -20,10 +20,9 @@ public class FinalEloTest : MonoBehaviour
         }
 
         Debug.Log($" Loaded profile: {testProfile.playerName}, General Elo: {testProfile.Elo}");
-        int difficulty = DifficultySelector.GetQuestionDifficulty(testProfile.Elo);
-        Debug.Log($" difiicultyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy: {difficulty}");
+
         // Simulate Elo changes
-       // EloCalculator.UpdateCategoryElo(testProfile, "12", true, 3);     // correct medium
+        EloCalculator.UpdateCategoryElo(testProfile, "12", true, 3);     // correct medium
         //EloCalculator.UpdateCategoryElo(testProfile, "10", false, 1); // wrong easy
         //EloCalculator.UpdateCategoryElo(testProfile, "11", true, 3);  // correct hard
 
@@ -42,7 +41,6 @@ public class FinalEloTest : MonoBehaviour
 
         //  Print updated profile summary
         Debug.Log($" Updated General Elo: {testProfile.Elo}");
-     
         foreach (var cat in testProfile.categories)
         {
             Debug.Log($" {cat.categoryName} → Elo: {cat.categoryElo}, Answered: {cat.questionsAnswered}, Correct: {cat.correctAnswers}");

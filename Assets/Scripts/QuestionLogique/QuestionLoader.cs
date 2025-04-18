@@ -27,8 +27,8 @@ public class QuestionLoader : MonoBehaviour
 
             Question question = questionFile.question[randomQuestion];
             Debug.Log("Question: " + question.question);
-            Debug.Log("Possible Answers : " + string.Join(", ", GetAnswers(question)));
-            Debug.Log("Correct Answer: " + question.correct_answer);
+            Debug.Log("Réponses possibles : " + string.Join(", ", GetAnswers(question)));
+            Debug.Log("Réponse correcte: " + question.correct_answer);
         }
         else
         {
