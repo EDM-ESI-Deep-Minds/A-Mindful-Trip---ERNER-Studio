@@ -8,6 +8,8 @@ public class QuestionUI : MonoBehaviour
     [SerializeField] private TMP_Text mainText; // Acts as both dialogue and question text
     // [SerializeField] private TMP_Text questionText;
     [SerializeField] private TMP_Text timerText;
+    [SerializeField] private TMP_Text categoryText;
+    [SerializeField] private TMP_Text difficultyText;
     [SerializeField] private GameObject answerContainer;
     [SerializeField] private GameObject answerButtonPrefab;
     [SerializeField] private Transform answerButtonParent;
@@ -21,13 +23,22 @@ public class QuestionUI : MonoBehaviour
     private List<Button> spawnedButtons = new();
     private bool interactable = false;
 
-    public void InitializeUI(int spriteIndex)
+    public void InitializeUI(int spriteIndex, bool isMyTurn)
     {
         ChosenSprite.sprite = playerSprites[spriteIndex];
         mainText.text = "";
         // questionText.text = "";
         timerText.text = "";
+        categoryText.text = "";
+        difficultyText.text = "";
+        QuestionHelp.interactable = isMyTurn;
+        RequestItem.interactable = isMyTurn;
         ClearAnswerButtons();
+        // Start Question Event Music
+        if (AudioManager.instance != null && AudioManager.instance.battleOST != null)
+        {
+            AudioManager.instance.PlayTemporaryMusic(AudioManager.instance.battleOST, waitForCompletion: false);
+        }
     }
 
     public void ShowIntroDialogue(string intro)
@@ -35,9 +46,11 @@ public class QuestionUI : MonoBehaviour
         mainText.text = intro;
     }
 
-    public void DisplayQuestion(string question, string[] answers, bool isMyTurn)
+    public void DisplayQuestion(string question, string category, string difficulty, string[] answers, bool isMyTurn)
     {
         mainText.text = question;
+        categoryText.text = "Category: " + category;
+        difficultyText.text = "Difficulty: " + difficulty;
         interactable = isMyTurn;
 
         ClearAnswerButtons();
@@ -50,8 +63,6 @@ public class QuestionUI : MonoBehaviour
 
             Button btn = buttonObj.GetComponent<Button>();
             btn.interactable = isMyTurn;
-            QuestionHelp.interactable = isMyTurn;
-            RequestItem.interactable = isMyTurn;
             btn.onClick.AddListener(() => OnAnswerClicked(ans));
 
             spawnedButtons.Add(btn);

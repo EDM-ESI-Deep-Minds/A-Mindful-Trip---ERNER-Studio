@@ -6,6 +6,8 @@ using Unity.Netcode;
 public struct NetworkQuestionData : INetworkSerializable
 {
     public FixedString512Bytes questionText;
+    public FixedString128Bytes category;
+    public FixedString128Bytes difficulty;
     public FixedString128Bytes correctAnswer;
     public FixedString128Bytes answer1;
     public FixedString128Bytes answer2;
@@ -15,6 +17,8 @@ public struct NetworkQuestionData : INetworkSerializable
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
     {
         serializer.SerializeValue(ref questionText);
+        serializer.SerializeValue(ref category);
+        serializer.SerializeValue(ref difficulty);
         serializer.SerializeValue(ref correctAnswer);
         serializer.SerializeValue(ref answer1);
         serializer.SerializeValue(ref answer2);

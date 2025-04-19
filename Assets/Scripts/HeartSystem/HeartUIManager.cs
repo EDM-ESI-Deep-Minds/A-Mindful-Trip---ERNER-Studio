@@ -81,6 +81,7 @@ public class HeartUIManager : MonoBehaviour
         if (hearts <= 0) return;
 
         hearts--;
+
         emptyHearts++;
 
         Transform heart = heartContainer.GetChild(hearts);
@@ -88,6 +89,13 @@ public class HeartUIManager : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("PopOut");
+            if(hearts == 0){
+                // Death SFX
+                AudioManager.instance?.PlaySFX(AudioManager.instance.soulShatterSFX);
+            } else {
+                // Hurt SFX
+                AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
+            }
         }
 
         StartCoroutine(SetHeartEmptyAfterAnimation(heart.GetComponent<Image>(), 0.3f));

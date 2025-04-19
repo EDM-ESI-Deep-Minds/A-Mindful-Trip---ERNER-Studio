@@ -79,6 +79,8 @@ public class QuestionManager : NetworkBehaviour
         NetworkQuestionData questionData = new()
         {
             questionText = question.question,
+            category = question.category,
+            difficulty = question.difficulty,
             correctAnswer = question.correct_answer,
             answer1 = allAnswers.Length > 0 ? allAnswers[0] : "",
             answer2 = allAnswers.Length > 1 ? allAnswers[1] : "",
@@ -86,18 +88,18 @@ public class QuestionManager : NetworkBehaviour
             answer4 = allAnswers.Length > 3 ? allAnswers[3] : ""
         };
 
-        SendQuestionToServerRpc(questionData, category, 60f);
+        SendQuestionToServerRpc(questionData, category, 60f, spriteIndex);
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void SendQuestionToServerRpc(NetworkQuestionData questionData, int category, float timer, ServerRpcParams rpcParams = default)
+    private void SendQuestionToServerRpc(NetworkQuestionData questionData, int category, float timer, int spriteIndex,ServerRpcParams rpcParams = default)
     {
         currentPlayerId = rpcParams.Receive.SenderClientId;
-        BroadcastQuestionClientRpc(questionData, category, timer, currentPlayerId);
+        BroadcastQuestionClientRpc(questionData, category, timer, currentPlayerId, spriteIndex);
     }
 
     [ClientRpc]
-    private void BroadcastQuestionClientRpc(NetworkQuestionData questionData, int category, float timer, ulong answeringPlayerId)
+    private void BroadcastQuestionClientRpc(NetworkQuestionData questionData, int category, float timer, ulong answeringPlayerId, int spriteIndex)
     {
         currentCategory = category;
         correctAnswer = questionData.correctAnswer.ToString();
@@ -111,11 +113,13 @@ public class QuestionManager : NetworkBehaviour
         spawnedUI = Instantiate(questionUIPrefab, GameObject.Find("Canvas").transform);
         var ui = spawnedUI.GetComponent<QuestionUI>();
 
-        ui.InitializeUI(spriteIndex);
+        ui.InitializeUI(spriteIndex, isMyTurn);
         // StartCoroutine(HandleQuestionSequence(ui, questionData.questionText.ToString(), questionData.GetShuffledAnswers(), timer, isMyTurn));
         StartCoroutine(HandleQuestionSequence(
             ui,
             WebUtility.HtmlDecode(questionData.questionText.ToString()),
+            WebUtility.HtmlDecode(questionData.category.ToString()),
+            WebUtility.HtmlDecode(questionData.difficulty.ToString()),
             questionData.GetShuffledAnswers().Select(WebUtility.HtmlDecode).ToArray(),
             timer,
             isMyTurn
@@ -145,13 +149,13 @@ public class QuestionManager : NetworkBehaviour
     //     StartCoroutine(HandleQuestionSequence(ui, question.question, answers, timer, RolesManager.IsMyTurn));
     // }
 
-    private IEnumerator HandleQuestionSequence(QuestionUI ui, string questionText, string[] answers, float timer, bool isMyTurn)
+    private IEnumerator HandleQuestionSequence(QuestionUI ui, string questionText, string category, string difficulty, string[] answers, float timer, bool isMyTurn)
     {
         ui.ShowIntroDialogue("Ready for a challenge?");
 
         yield return new WaitForSeconds(3f); // Intro duration
 
-        ui.DisplayQuestion(questionText, answers, isMyTurn);
+        ui.DisplayQuestion(questionText, category, difficulty, answers, isMyTurn);
         // timerLeft = timer;
         // hasAnswered = false;
     }
@@ -211,6 +215,9 @@ public class QuestionManager : NetworkBehaviour
                 {
                     heartUI.removeHeart();
                 }
+            } else {
+                // Play correct answer sfx
+                
             }
 
             ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;
@@ -241,6 +248,12 @@ public class QuestionManager : NetworkBehaviour
         {
             Destroy(spawnedUI);
             spawnedUI = null;
+
+            // Resuming scene music for everyone
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.ResumeSceneMusic();
+            }
         }
 
         HideGameplayUI(false);
