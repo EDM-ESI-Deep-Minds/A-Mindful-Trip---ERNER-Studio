@@ -8,8 +8,6 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 using System.Linq;
 using UnityEngine.SceneManagement;
-using UnityEngine.SceneManagement;
-using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class PlayerBoardMovement : NetworkBehaviour
 {

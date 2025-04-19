@@ -5,35 +5,49 @@ using System.Linq;
 
 public class QuestionLoader : MonoBehaviour
 {
-    private void Start()
+    public static QuestionLoader Instance { get; private set; }
+
+    public static List<string> askedQuestions = new List<string>();
+
+    private void Awake()
     {
-        EventTrigger.OnQuestionTile += LoadQuestion;
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
     }
 
-    void LoadQuestion()
+    // private void Start()
+    // {
+    //     EventTrigger.OnQuestionTile += LoadQuestion;
+    // }
+
+    public Question LoadQuestion(int category, string difficulty, string questionType)
     {
-        int category = 9;
-        string difficulty = "easy";
-        string questionType = "qcm";
-
         string fileName = $"QuestionBank/category_{category}_{difficulty}_{questionType}";
-
         TextAsset jsonFile = Resources.Load<TextAsset>(fileName);
+
+        if (jsonFile == null && questionType != "qcm")
+        {
+            questionType = "qcm";
+            fileName = $"QuestionBank/category_{category}_{difficulty}_{questionType}";
+            jsonFile = Resources.Load<TextAsset>(fileName);
+        }
 
         if (jsonFile != null)
         {
             QuestionFile questionFile = JsonUtility.FromJson<QuestionFile>(jsonFile.text);
-            int randomQuestion = Random.Range(0, questionFile.question.Length);
+            Question question;
+            do
+            {
+               question = questionFile.question[Random.Range(0, questionFile.question.Length)];
+            } while (askedQuestions.Contains(question.question));
 
-            Question question = questionFile.question[randomQuestion];
-            Debug.Log("Question: " + question.question);
-            Debug.Log("Réponses possibles : " + string.Join(", ", GetAnswers(question)));
-            Debug.Log("Réponse correcte: " + question.correct_answer);
+            return  question;
         }
-        else
-        {
-            questionType = "qcm";
-        }
+
+        Debug.LogError("Failed to load question file.");
+        return null;
     }
 
     public string[] GetAnswers(Question question)
@@ -43,5 +57,15 @@ public class QuestionLoader : MonoBehaviour
         allAnswers.AddRange(question.incorrect_answers);
         allAnswers = allAnswers.OrderBy(x => Random.value).ToList();
         return allAnswers.ToArray();
+    }
+    public string GetRandomQuestionType()
+    {
+        string[] types = { "qcm", "tf" };
+        int index = Random.Range(0, types.Length);
+        return types[index];
+    }
+    public int GetRandomCategory()
+    {
+        return UnityEngine.Random.Range(9, 33); //TODO make it personilized with the player profile
     }
 }
