@@ -7,6 +7,8 @@ public class QuestionLoader : MonoBehaviour
 {
     public static QuestionLoader Instance { get; private set; }
 
+    public static List<string> askedQuestions;
+
     private void Awake()
     {
         if (Instance == null)
@@ -35,13 +37,18 @@ public class QuestionLoader : MonoBehaviour
         if (jsonFile != null)
         {
             QuestionFile questionFile = JsonUtility.FromJson<QuestionFile>(jsonFile.text);
-            return questionFile.question[Random.Range(0, questionFile.question.Length)];
+            Question question;
+            do
+            {
+               question = questionFile.question[Random.Range(0, questionFile.question.Length)];
+            } while (askedQuestions.Contains(question.question));
+
+            return  question;
         }
 
         Debug.LogError("Failed to load question file.");
         return null;
     }
-
 
     public string[] GetAnswers(Question question)
     {

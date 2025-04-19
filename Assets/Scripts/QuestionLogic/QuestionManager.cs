@@ -106,6 +106,8 @@ public class QuestionManager : NetworkBehaviour
         hasAnswered = false;
         timerLeft = timer;
 
+        QuestionLoader.askedQuestions.Add(questionData.questionText.ToString());
+
         bool isMyTurn = NetworkManager.Singleton.LocalClientId == answeringPlayerId;
 
         HideGameplayUI(true);
