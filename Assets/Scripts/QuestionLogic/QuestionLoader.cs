@@ -7,7 +7,7 @@ public class QuestionLoader : MonoBehaviour
 {
     public static QuestionLoader Instance { get; private set; }
 
-    public static List<string> askedQuestions;
+    public static List<string> askedQuestions = new List<string>();
 
     private void Awake()
     {
