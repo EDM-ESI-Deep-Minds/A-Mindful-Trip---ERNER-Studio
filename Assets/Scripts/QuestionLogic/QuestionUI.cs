@@ -24,7 +24,6 @@ public class QuestionUI : MonoBehaviour
     public void InitializeUI(int spriteIndex)
     {
         ChosenSprite.sprite = playerSprites[spriteIndex];
-        ChosenSprite.sprite = playerSprites[1];
         mainText.text = "";
         // questionText.text = "";
         timerText.text = "";
