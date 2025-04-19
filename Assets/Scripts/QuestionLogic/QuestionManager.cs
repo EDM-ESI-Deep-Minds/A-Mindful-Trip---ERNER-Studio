@@ -21,6 +21,7 @@ public class QuestionManager : NetworkBehaviour
     private float timerLeft;
     private int currentCategory;
     private ulong currentPlayerId;
+    private int spriteIndex;
 
 
     private void Awake()
@@ -36,6 +37,11 @@ public class QuestionManager : NetworkBehaviour
     private void OnDestroy()
     {
         EventTrigger.OnQuestionTile -= OnQuestionTileTriggered;
+    }
+
+    public void setSpriteIndex(int i)
+    {
+        spriteIndex = i;
     }
 
     // private void OnQuestionTileTriggered()
@@ -105,7 +111,7 @@ public class QuestionManager : NetworkBehaviour
         spawnedUI = Instantiate(questionUIPrefab, GameObject.Find("Canvas").transform);
         var ui = spawnedUI.GetComponent<QuestionUI>();
 
-        ui.InitializeUI();
+        ui.InitializeUI(spriteIndex);
         // StartCoroutine(HandleQuestionSequence(ui, questionData.questionText.ToString(), questionData.GetShuffledAnswers(), timer, isMyTurn));
         StartCoroutine(HandleQuestionSequence(
             ui,

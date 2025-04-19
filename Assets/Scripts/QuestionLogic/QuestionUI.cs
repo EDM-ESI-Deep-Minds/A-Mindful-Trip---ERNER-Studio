@@ -15,11 +15,16 @@ public class QuestionUI : MonoBehaviour
     [SerializeField] private Button QuestionHelp;
     [SerializeField] private Button RequestItem;
 
+    [SerializeField] private Sprite[] playerSprites;
+    [SerializeField] private Image ChosenSprite;
+
     private List<Button> spawnedButtons = new();
     private bool interactable = false;
 
-    public void InitializeUI()
+    public void InitializeUI(int spriteIndex)
     {
+        ChosenSprite.sprite = playerSprites[spriteIndex];
+        ChosenSprite.sprite = playerSprites[1];
         mainText.text = "";
         // questionText.text = "";
         timerText.text = "";

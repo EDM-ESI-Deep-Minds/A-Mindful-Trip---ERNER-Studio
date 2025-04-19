@@ -532,6 +532,12 @@ MonoBehaviour:
   answerButtonParent: {fileID: 1178936119858723758}
   QuestionHelp: {fileID: 1296447425344592000}
   RequestItem: {fileID: 1362976146012966023}
+  playerSprites:
+  - {fileID: 4634897325612943540, guid: a9ba0739c32973542b71c15b14759294, type: 3}
+  - {fileID: -4413485462423147390, guid: cd4e480563515ee4eaf8e500a4dd4f4f, type: 3}
+  - {fileID: 4634897325612943540, guid: a9ba0739c32973542b71c15b14759294, type: 3}
+  - {fileID: -4413485462423147390, guid: cd4e480563515ee4eaf8e500a4dd4f4f, type: 3}
+  ChosenSprite: {fileID: 8932764095233517851}
 --- !u!1 &3240969899895691328
 GameObject:
   m_ObjectHideFlags: 0
