@@ -12,15 +12,18 @@ public static class EventTrigger
         {
             case "Rest":
                 Debug.Log("Rest event triggered.");
+                RolesManager.SwitchRole();
                 break;
 
             case "Bonus":
                 BonusTile.handleBonus();
+                RolesManager.SwitchRole();
                 Debug.Log("Bonus event triggered.");
                 break;
 
             case "Curse":
                 CurseTileEvent.handleCurse();
+                RolesManager.SwitchRole();
                 Debug.Log("Curse event triggered.");
                 break;
 
@@ -33,7 +36,5 @@ public static class EventTrigger
                 Debug.LogWarning($"Unknown tile type: {TileType}");
                 break;
         }
-
-        RolesManager.SwitchRole();
     }
 }
