@@ -9,12 +9,7 @@ public class WinAMapEvent : NetworkBehaviour
     }
     public void WhenWin()
     {
-       
-        
-
-            RequestSceneChangeServerRpc();
-        
-        
+     RequestSceneChangeServerRpc();
     }
 
      [ServerRpc(RequireOwnership = false)]

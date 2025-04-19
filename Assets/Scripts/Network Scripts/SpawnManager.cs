@@ -16,21 +16,7 @@ public class spawn_mang : NetworkBehaviour
      {1.52f, 5.04f},
      {2.48f, -3.28f},
  };
-    float[,] city_map_positions = new float[4, 2]
-   {
-        { -4.32f, -11.36f },
-        { -4.32f, -7.52f },
-        { -4.32f, -4.00f },
-        { -4.32f, 0.80f },
-   };
-
-    float[,] desert_map_positions = new float[4, 2]
-   {
-    { -1.68f, -1.84f },
-    { -1.20f, -4.72f },
-    { -0.56f, -3.12f },
-    { -0.56f, 0.24f }
-   };
+  
 
     int index_position=-1;
     public static GameObject[] AllPlayer = new GameObject[4];
