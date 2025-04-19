@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using System.Linq;
 using System.Net;
 
@@ -174,6 +175,7 @@ public class QuestionManager : NetworkBehaviour
 
     private void AnswerTimeout()
     {
+        if (!RolesManager.IsMyTurn) return;
         hasAnswered = true;
         ResolveAnswerServerRpc(false);
     }
@@ -181,22 +183,24 @@ public class QuestionManager : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void ResolveAnswerServerRpc(bool isCorrect)
     {
-        ResolveAnswerClientRpc(isCorrect);
+        var ui = spawnedUI.GetComponent<QuestionUI>();
+        FixedString128Bytes result = new FixedString128Bytes(ui.GetResult(isCorrect));
+        ResolveAnswerClientRpc(isCorrect,result);
     }
 
     [ClientRpc]
-    private void ResolveAnswerClientRpc(bool isCorrect)
+    private void ResolveAnswerClientRpc(bool isCorrect,FixedString128Bytes result)
     {
         if (spawnedUI == null) return;
 
         var ui = spawnedUI.GetComponent<QuestionUI>();
-        ui.ShowResult(isCorrect);
+        ui.ShowResult(result.ToString());
 
         if (RolesManager.IsMyTurn)
         {
             if (!isCorrect)
             {
-                HeartUIManager heartUI = FindObjectOfType<HeartUIManager>();
+                HeartUIManager heartUI = FindFirstObjectByType<HeartUIManager>();
                 if (heartUI != null)
                 {
                     heartUI.removeHeart();
@@ -205,18 +209,8 @@ public class QuestionManager : NetworkBehaviour
 
             ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;
             EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
-
-            Invoke(nameof(SwitchTurn), 3f);
         }
         Invoke(nameof(CleanupQuestionUIClientRpc), 3f);
-    }
-
-    private void SwitchTurn()
-    {
-        // Destroy(spawnedUI);
-        // HideGameplayUI(false);
-        CleanupQuestionUIClientRpc();
-        RolesManager.SwitchRole();
     }
 
     private void HideGameplayUI(bool hide)

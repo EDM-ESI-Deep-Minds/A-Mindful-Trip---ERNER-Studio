@@ -12,6 +12,9 @@ public class QuestionUI : MonoBehaviour
     [SerializeField] private GameObject answerButtonPrefab;
     [SerializeField] private Transform answerButtonParent;
 
+    [SerializeField] private Button QuestionHelp;
+    [SerializeField] private Button RequestItem;
+
     private List<Button> spawnedButtons = new();
     private bool interactable = false;
 
@@ -43,6 +46,8 @@ public class QuestionUI : MonoBehaviour
 
             Button btn = buttonObj.GetComponent<Button>();
             btn.interactable = isMyTurn;
+            QuestionHelp.interactable = isMyTurn;
+            RequestItem.interactable = isMyTurn;
             btn.onClick.AddListener(() => OnAnswerClicked(ans));
 
             spawnedButtons.Add(btn);
@@ -68,9 +73,14 @@ public class QuestionUI : MonoBehaviour
             timerText.color = Color.white;
     }
 
-    public void ShowResult(bool isCorrect)
+    public string GetResult(bool isCorrect)
     {
-        mainText.text = isCorrect ? GetRandomSuccessDialogue() : GetRandomFailureDialogue();
+        return isCorrect ? GetRandomSuccessDialogue() : GetRandomFailureDialogue();
+    }
+
+    public void ShowResult(string text)
+    {
+        mainText.text = text;
     }
 
     private void ClearAnswerButtons()
