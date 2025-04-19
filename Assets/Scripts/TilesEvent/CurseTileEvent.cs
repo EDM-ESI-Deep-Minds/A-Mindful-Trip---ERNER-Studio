@@ -70,11 +70,16 @@ public class CurseTileEvent
         heartUI.removeHeart();
     }
 
+    [System.Obsolete]
     private static void reposition()
     {
         int tilesPenalty = baseTilePenalty + Random.Range(0, 2);
-        PlayerBoardMovement movement = Object.FindFirstObjectByType<PlayerBoardMovement>();
-        movement.StartCoroutine(movement.MoveBackward(tilesPenalty));
+        PlayerBoardMovement[] allMovements = Object.FindObjectsOfType<PlayerBoardMovement>();
+
+        foreach (PlayerBoardMovement movement in allMovements)
+        {
+            movement.StartCoroutine(movement.MoveBackward(tilesPenalty));
+        }
     }
 
     private static void removeItem()
