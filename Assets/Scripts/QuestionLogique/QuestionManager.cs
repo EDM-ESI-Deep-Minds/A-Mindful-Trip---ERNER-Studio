@@ -218,7 +218,7 @@ public class QuestionManager : NetworkBehaviour
                     heartUI.removeHeart();
                 }
             } else {
-                // Play correct answer sfx
+                //TODO Play correct answer sfx
                 
             }
 
@@ -226,11 +226,6 @@ public class QuestionManager : NetworkBehaviour
             EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
         }
         Invoke(nameof(CleanupQuestionUIClientRpc), 3f);
-
-        if (RolesManager.IsMyTurn)
-        {
-            RolesManager.SwitchRole();
-        }
     }
 
     private void HideGameplayUI(bool hide)

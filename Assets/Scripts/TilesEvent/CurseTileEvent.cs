@@ -43,6 +43,10 @@ public class CurseTileEvent
                 Debug.Log("📦 Lock Inventory: Inventory is unusable for a duration.");
                 lockInventory();
                 break;
+
+            default:
+                Debug.Log("error in curse choise");
+                break;
         }
     }
 

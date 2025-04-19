@@ -157,7 +157,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         // intialize the progress
         progressBarController.InitializePlayerProgressServerRpc(playerSprite, playerProgress);
         progressBarController.RequestUpdateProgressBarServerRpc(playerSprite, playerProgress);
-        QuestionManager.Instance.setSpriteIndex(playerIndex);
+        QuestionManager.Instance.setSpriteIndex(playerSprite);
     }
 
     private IEnumerator FindDiceManager()
