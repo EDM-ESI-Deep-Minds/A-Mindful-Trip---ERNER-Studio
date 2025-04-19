@@ -116,7 +116,7 @@ public class HeartUIManager : MonoBehaviour
              if (GameOverManager.Instance != null) { 
             Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
                 //NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
-                GameOverManager.Instance.TriggerGameOverScene(); //  delay
+                GameOverManager.Instance.TriggerGameOver(); //  delay
 
             }
         }
