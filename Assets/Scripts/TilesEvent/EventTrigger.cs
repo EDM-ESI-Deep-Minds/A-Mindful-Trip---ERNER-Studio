@@ -33,5 +33,7 @@ public static class EventTrigger
                 Debug.LogWarning($"Unknown tile type: {TileType}");
                 break;
         }
+
+        RolesManager.SwitchRole();
     }
 }

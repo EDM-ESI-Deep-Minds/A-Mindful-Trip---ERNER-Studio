@@ -21,10 +21,10 @@ public class RolesManager : NetworkBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SwitchRole();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    SwitchRole();
+        //}
     }
   
     public static void SwitchRole()
