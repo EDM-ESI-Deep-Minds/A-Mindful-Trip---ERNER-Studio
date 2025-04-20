@@ -43,6 +43,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     private ProgressBarController progressBarController;
     private SpriteRenderer spriteRenderer;
     private int playerSprite = -1;
+    private bool backWardBridge = false;
 
     void Awake()
     {
@@ -293,6 +294,9 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     private IEnumerator MoveAlongPath(int steps)
     {
+
+        backWardBridge = false;
+
         if (!RolesManager.IsMyTurn) yield break;
 
         isMoving = true;
@@ -724,6 +728,17 @@ public class PlayerBoardMovement : NetworkBehaviour
             rb.position = targetPos;
             previousTilePos = lastTilePos;
             currentTilePos = lastTilePos;
+            
+
+            bool triggered = false;
+            backWardBridge = true;
+            // Check if this tile has a trigger event
+            yield return StartCoroutine(CheckForTileTrigger(result => triggered = result));
+            // after this statement is executedd 
+            if (triggered)
+            {
+                i++;
+            }
         }
 
         UpdateFace();
@@ -974,6 +989,11 @@ public class PlayerBoardMovement : NetworkBehaviour
                 triggered = true;
 
                 Vector3Int bridgeOffset = new Vector3Int((int)bridge.moveOffset.x, (int)bridge.moveOffset.y, 0);
+                // dont execute this statement if we are in the tile that has an event with a negative offest and the player was not there due to a curse 
+                if (bridgeOffset.x < 0 && !backWardBridge)
+                {
+                    break;
+                }
                 Vector3Int targetTilePos = currentTilePos + bridgeOffset;
                 Vector3 worldTargetPos = GetWorldPosition(targetTilePos);
 
