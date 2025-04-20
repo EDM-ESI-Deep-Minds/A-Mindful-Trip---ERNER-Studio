@@ -2,18 +2,25 @@ using Unity.Netcode;
 using UnityEngine;
 
 public class NewEmptyCSharpScript : NetworkBehaviour
-{   public bool CityDone = false;
-    
+{
+    public bool CityDone = false;
+
+    void OnEnable()
+    {
+        ReadyManager.AllReady += FromHubDansToMap;
+    }
+
     public void FromHubDansToMap()
     {
         RequestSceneChangeServerRpc();
     }
+
     [ServerRpc(RequireOwnership = false)]
     void RequestSceneChangeServerRpc()
     {
-                                                                     //mzal problem f l'appel ta"ha
         if (IsServer)
-        {  if(!CityDone)
+        {
+            if (!CityDone)
             {
                 CityDone = true;
                 NetworkManager.SceneManager.LoadScene("City", UnityEngine.SceneManagement.LoadSceneMode.Single);
@@ -22,7 +29,6 @@ public class NewEmptyCSharpScript : NetworkBehaviour
             {
                 NetworkManager.SceneManager.LoadScene("Desert", UnityEngine.SceneManagement.LoadSceneMode.Single);
             }
-         
         }
     }
 }
