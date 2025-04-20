@@ -297,6 +297,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         backWardBridge = false;
 
+        Debug.Log($"heloo mar");
         if (!RolesManager.IsMyTurn) yield break;
 
         isMoving = true;
@@ -634,6 +635,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     //  now lets add a function that takes the number of steps that moves the player backward
     public IEnumerator MoveBackward(int steps)
     {
+        backWardBridge = true;
 
         if (!RolesManager.IsMyTurn) yield break;
 
@@ -731,7 +733,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             
 
             bool triggered = false;
-            backWardBridge = true;
+           
             // Check if this tile has a trigger event
             yield return StartCoroutine(CheckForTileTrigger(result => triggered = result));
             // after this statement is executedd 
@@ -742,6 +744,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         }
 
         UpdateFace();
+        backWardBridge = false;
     }
 
     // this function to update the sprite of the player depending on the current direction
@@ -992,8 +995,16 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // dont execute this statement if we are in the tile that has an event with a negative offest and the player was not there due to a curse 
                 if (bridgeOffset.x < 0 && !backWardBridge)
                 {
-                    break;
+                    isMoving = true;
+                    yield break;
                 }
+
+                if (bridgeOffset.x > 0 && backWardBridge)
+                {
+                    isMoving = true;
+                    yield break;
+                }
+
                 Vector3Int targetTilePos = currentTilePos + bridgeOffset;
                 Vector3 worldTargetPos = GetWorldPosition(targetTilePos);
 
@@ -1014,44 +1025,83 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         Vector3Int offset = targetTilePos - currentTilePos;
 
-        // Move along Y first
-        if (offset.y != 0)
+        if(offset.x > 0)
         {
-            int animIndex = offset.y > 0 ? 1 : 2; // 1 for up, 2 for down
-            SetIdleAnimation(animIndex);
-            Vector3 targetYPos = new Vector3(rb.position.x, worldTargetPos.y, 0);
-
-            while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
+            // Move along Y first
+            if (offset.y != 0)
             {
-                SetAnimation(animIndex);
-                rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
-                yield return null;
+                int animIndex = offset.y > 0 ? 1 : 2; // 1 for up, 2 for down
+                SetIdleAnimation(animIndex);
+                Vector3 targetYPos = new Vector3(rb.position.x, worldTargetPos.y, 0);
+
+                while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
+                {
+                    SetAnimation(animIndex);
+                    rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
+                    yield return null;
+                }
+                SetIdleAnimation(animIndex);
+
+                // Determine if moving up or down
+                currentDirection = "x";
             }
-            SetIdleAnimation(animIndex);
 
-            // Determine if moving up or down
-            currentDirection = "x";
+            // Move along X after Y
+            if (offset.x != 0)
+            {
+                int animIndex = offset.x > 0 ? 0 : 3; // 0 for right, 3 for left
+                SetIdleAnimation(animIndex);
+                Vector3 targetXPos = new Vector3(worldTargetPos.x, rb.position.y, 0);
+
+                while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
+                {
+                    SetAnimation(animIndex);
+                    rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
+                    yield return null;
+                }
+                SetIdleAnimation(animIndex);
+            }
         }
-
-        // Move along X after Y
-        if (offset.x != 0)
+        else
         {
-            int animIndex = offset.x > 0 ? 0 : 3; // 0 for right, 3 for left
-            SetIdleAnimation(animIndex);
-            Vector3 targetXPos = new Vector3(worldTargetPos.x, rb.position.y, 0);
-
-            while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
+            // Move along X after Y
+            if (offset.x != 0)
             {
-                SetAnimation(animIndex);
-                rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
-                yield return null;
-            }
-            SetIdleAnimation(animIndex);
-        }
+                int animIndex = offset.x > 0 ? 0 : 3; // 0 for right, 3 for left
+                SetIdleAnimation(animIndex);
+                Vector3 targetXPos = new Vector3(worldTargetPos.x, rb.position.y, 0);
 
+                while (Mathf.Abs(rb.position.x - targetXPos.x) > 0.016f)
+                {
+                    SetAnimation(animIndex);
+                    rb.MovePosition(Vector3.MoveTowards(rb.position, targetXPos, moveSpeed * Time.deltaTime));
+                    yield return null;
+                }
+                SetIdleAnimation(animIndex);
+            }
+
+            // Move along Y first
+            if (offset.y != 0)
+            {
+                int animIndex = offset.y > 0 ? 1 : 2; // 1 for up, 2 for down
+                SetIdleAnimation(animIndex);
+                Vector3 targetYPos = new Vector3(rb.position.x, worldTargetPos.y, 0);
+
+                while (Mathf.Abs(rb.position.y - targetYPos.y) > 0.016f)
+                {
+                    SetAnimation(animIndex);
+                    rb.MovePosition(Vector3.MoveTowards(rb.position, targetYPos, moveSpeed * Time.deltaTime));
+                    yield return null;
+                }
+                SetIdleAnimation(animIndex);
+
+                // Determine if moving up or down
+                currentDirection = "x";
+            }
+
+        }
         // Update tile position after crossing
         currentTilePos = targetTilePos;
-
         isCrossingBridge = false; // Unlock movement
     }
 
