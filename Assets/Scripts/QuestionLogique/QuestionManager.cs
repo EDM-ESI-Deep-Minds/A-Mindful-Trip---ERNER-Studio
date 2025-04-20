@@ -15,6 +15,14 @@ public class QuestionManager : NetworkBehaviour
     private GameObject spawnedUI;
     [SerializeField] private GameObject dice1;
     [SerializeField] private GameObject dice2;
+    [SerializeField] private GameObject rollDiceButton;
+    [SerializeField] private GameObject backWardButton;
+    // [SerializeField] private GameObject UpArrow;
+    // [SerializeField] private GameObject DownArrow;
+    // [SerializeField] private GameObject RightArrow;
+    // [SerializeField] private GameObject LeftArrow;
+    [SerializeField] private GameObject ProgressBar;  
+
 
     private string correctAnswer;
     private bool hasAnswered = false;
@@ -219,7 +227,7 @@ public class QuestionManager : NetworkBehaviour
                 }
             } else {
                 //TODO Play correct answer sfx
-                
+                AudioManager.instance?.PlaySFX(AudioManager.instance.correctAnswerSFX);
             }
 
             ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;
@@ -230,7 +238,7 @@ public class QuestionManager : NetworkBehaviour
 
     private void HideGameplayUI(bool hide)
     {
-        string[] elementNames = { "RollDiceButton", "DownArrow", "UpArrow", "LeftArrow", "RightArrow", "backWardButton", "Dice1", "Dice2" };
+        string[] elementNames = { "RollDiceButton", "DownArrow", "UpArrow", "LeftArrow", "RightArrow", "backWardButton", "Dice1", "Dice2", "ProgressBar" };
 
         foreach (var name in elementNames)
         {
@@ -238,9 +246,13 @@ public class QuestionManager : NetworkBehaviour
             if (obj != null) obj.SetActive(!hide);
         }
 
-        // Special treatment for Dice1 and Dice2
+        // Special treatment for Dice1, Dice2 and ProgressBar
+        if (rollDiceButton != null) rollDiceButton.SetActive(!hide);
+        if (backWardButton != null) backWardButton.SetActive(!hide);
         if (dice1 != null) dice1.SetActive(!hide);
         if (dice2 != null) dice2.SetActive(!hide);
+        if (ProgressBar != null) ProgressBar.SetActive(!hide);
+
     }
 
     [ClientRpc]
