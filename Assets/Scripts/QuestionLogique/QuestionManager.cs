@@ -238,7 +238,8 @@ public class QuestionManager : NetworkBehaviour
 
     private void HideGameplayUI(bool hide)
     {
-        string[] elementNames = { "RollDiceButton", "DownArrow", "UpArrow", "LeftArrow", "RightArrow", "backWardButton", "Dice1", "Dice2", "ProgressBar" };
+        // Add backWardButton to the element list if included for testing and uncomment the if statement referencing it
+        string[] elementNames = { "RollDiceButton", "DownArrow", "UpArrow", "LeftArrow", "RightArrow", "Dice1", "Dice2", "ProgressBar" };
 
         foreach (var name in elementNames)
         {
@@ -248,7 +249,7 @@ public class QuestionManager : NetworkBehaviour
 
         // Special treatment for Dice1, Dice2 and ProgressBar
         if (rollDiceButton != null) rollDiceButton.SetActive(!hide);
-        if (backWardButton != null) backWardButton.SetActive(!hide);
+        // if (backWardButton != null) backWardButton.SetActive(!hide);
         if (dice1 != null) dice1.SetActive(!hide);
         if (dice2 != null) dice2.SetActive(!hide);
         if (ProgressBar != null) ProgressBar.SetActive(!hide);
