@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 3945578975092322925}
   - component: {fileID: 8699660445082060836}
   - component: {fileID: 5026065696265456912}
+  - component: {fileID: 8546240932400846835}
   m_Layer: 5
   m_Name: Curse_BonusUI
   m_TagString: Untagged
@@ -400,8 +401,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -77.5, y: 0}
-  m_SizeDelta: {x: 155, y: 0}
+  m_AnchoredPosition: {x: -160, y: -2.5}
+  m_SizeDelta: {x: 320, y: -5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8699660445082060836
 CanvasRenderer:
@@ -441,6 +442,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8546240932400846835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6831889079595448025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214cdb791f2864be6aa3851dc78d252b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventType: {fileID: 3719063267171582435}
+  narrativeText: {fileID: 5778805377524287398}
 --- !u!1 &7378811186881124675
 GameObject:
   m_ObjectHideFlags: 0

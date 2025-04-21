@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Collections;
 
 public class CurseTileEvent
 {
@@ -8,39 +9,55 @@ public class CurseTileEvent
     private static int baseTilePenalty = 3;
     private static double creditPenalty = 0.2;
 
+    private static FixedString128Bytes effectKey;
+
+    [System.Obsolete]
     public static void handleCurse()
     {
         int curseId = GetRandomCurse();
+        BonusCurseUIManager UIManager = Object.FindFirstObjectByType<BonusCurseUIManager>();
 
         switch (curseId)
         {
             case 1:
                 Debug.Log("🩸 Health Penalty: Player loses one heart.");
+                effectKey = new FixedString128Bytes("remove_heart");
+                UIManager.GetMessageServerRpc(effectKey,true);
                 removeHeart();
                 break;
 
             case 2:
                 Debug.Log("🌀 Reposition: Player loses progress.");
+                effectKey = new FixedString128Bytes("reposition");
+                UIManager.GetMessageServerRpc(effectKey, true);
                 reposition();
                 break;
 
             case 3:
                 Debug.Log("🎒 Remove Item: An item is removed from inventory.");
+                effectKey = new FixedString128Bytes("remove_item");
+                UIManager.GetMessageServerRpc(effectKey, true);
                 removeItem();
                 break;
 
             case 4:
                 Debug.Log("💰 Remove Credit: Player loses currency/points.");
+                effectKey = new FixedString128Bytes("remove_credit");
+                UIManager.GetMessageServerRpc(effectKey, true);
                 removeCredit();
                 break;
 
             case 5:
                 Debug.Log("🔇 Mute: Player is muted and can't communicate.");
+                effectKey = new FixedString128Bytes("mute");
+                UIManager.GetMessageServerRpc(effectKey, true);
                 mutePlayer();
                 break;
 
             case 6:
                 Debug.Log("📦 Lock Inventory: Inventory is unusable for a duration.");
+                effectKey = new FixedString128Bytes("lock_inventory");
+                UIManager.GetMessageServerRpc(effectKey, true);
                 lockInventory();
                 break;
 
