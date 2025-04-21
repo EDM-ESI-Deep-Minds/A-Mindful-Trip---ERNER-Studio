@@ -3181,6 +3181,71 @@ MonoBehaviour:
   nameInput: {fileID: 1011572792}
   filename: PlayerProfile.json
   errorLog: {fileID: 2057963521}
+--- !u!1001 &8623575654806597818
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1228915187031206050, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.6409616
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228915187031206050, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.298843
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228915187031206050, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.067362845
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228915187031206050, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228915187031206050, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228915187031206050, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228915187031206050, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228915187031206050, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228915187031206050, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228915187031206050, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541195099035758000, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_Name
+      value: MarPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6244996262683262014, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6244996262683262014, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.18
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3191,3 +3256,4 @@ SceneRoots:
   - {fileID: 582379564}
   - {fileID: 2104083497}
   - {fileID: 1852330074}
+  - {fileID: 8623575654806597818}

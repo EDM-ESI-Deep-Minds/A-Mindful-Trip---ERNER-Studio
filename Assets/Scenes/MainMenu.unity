@@ -7822,7 +7822,7 @@ MonoBehaviour:
   - {fileID: 4634897325612943540, guid: a9ba0739c32973542b71c15b14759294, type: 3}
   - {fileID: -4413485462423147390, guid: cd4e480563515ee4eaf8e500a4dd4f4f, type: 3}
   - {fileID: 6968512158697612917, guid: 20aed6e702bef5140a50e3aa1407c0f8, type: 3}
-  - {fileID: -4413485462423147390, guid: cd4e480563515ee4eaf8e500a4dd4f4f, type: 3}
+  - {fileID: 2854053662719815127, guid: 4c051e08711130f408ffec79668fe5b9, type: 3}
 --- !u!1 &896104566
 GameObject:
   m_ObjectHideFlags: 0
@@ -18366,7 +18366,7 @@ MonoBehaviour:
   - {fileID: 8909638463307033645, guid: d0f3e241ff3a59e499df61bffbb10a77, type: 3}
   - {fileID: 311031283111266869, guid: c672a3f95b72ef54fb2a2e177f4d68ef, type: 3}
   - {fileID: 5520018035931640328, guid: d35dba106314bef4bb18494cdf832d7e, type: 3}
-  - {fileID: 311031283111266869, guid: c672a3f95b72ef54fb2a2e177f4d68ef, type: 3}
+  - {fileID: 2541195099035758000, guid: a82604ecf04251b41b78f5e014df3ced, type: 3}
   TextChatW: {fileID: 820895564}
 --- !u!4 &1786476500
 Transform:

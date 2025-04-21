@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 2c80f7b3bb6678c4c993b7cc6e68ccbf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5062134642812492182
+    second: mar_chibi_0
+  - first:
+      213: -325712449865966471
+    second: mar_chibi_1
+  - first:
+      213: -9133071067249955585
+    second: mar_chibi_2
+  - first:
+      213: -5064242258286246714
+    second: mar_chibi_3
+  - first:
+      213: 875998678125317982
+    second: mar_chibi_4
+  - first:
+      213: -705285325185208478
+    second: mar_chibi_5
+  - first:
+      213: -3866327769338821958
+    second: mar_chibi_6
+  - first:
+      213: 7241149046593385270
+    second: mar_chibi_7
+  - first:
+      213: -1270278402950008675
+    second: mar_chibi_8
+  - first:
+      213: 2983887923544558375
+    second: mar_chibi_9
+  - first:
+      213: -3290331828372242989
+    second: mar_chibi_10
+  - first:
+      213: 7502449899018801922
+    second: mar_chibi_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mar_chibi_0
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 135
+        width: 17
+        height: 20
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699990623a0504640800000000000000
+      internalID: 5062134642812492182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mar_chibi_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 115
+        width: 15
+        height: 20
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c11d6a046da7bf0800000000000000
+      internalID: -325712449865966471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mar_chibi_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 135
+        width: 17
+        height: 21
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc2b20e040d04180800000000000000
+      internalID: -9133071067249955585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mar_chibi_3
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 115
+        width: 15
+        height: 20
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c483526f7238b9b0800000000000000
+      internalID: -5064242258286246714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mar_chibi_4
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 135
+        width: 17
+        height: 20
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f0f51182c282c00800000000000000
+      internalID: 875998678125317982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mar_chibi_5
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 95
+        width: 16
+        height: 20
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f2a07cbb25636f0800000000000000
+      internalID: -705285325185208478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mar_chibi_6
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 115
+        width: 15
+        height: 19
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2c453e06b085ac0800000000000000
+      internalID: -3866327769338821958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mar_chibi_7
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 95
+        width: 16
+        height: 19
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6337bdf41babd7460800000000000000
+      internalID: 7241149046593385270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mar_chibi_8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 95
+        width: 16
+        height: 19
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d907052d5801f5ee0800000000000000
+      internalID: -1270278402950008675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mar_chibi_9
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 75
+        width: 15
+        height: 18
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b8374d146e86920800000000000000
+      internalID: 2983887923544558375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mar_chibi_10
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 75
+        width: 16
+        height: 19
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ddf5b092a46652d0800000000000000
+      internalID: -3290331828372242989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mar_chibi_11
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 75
+        width: 15
+        height: 18
+      alignment: 9
+      pivot: {x: 0.2, y: 0.005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2035e28fe6e0e1860800000000000000
+      internalID: 7502449899018801922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fad7c86e976945240a1dbe13959353c4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mar_chibi_0: 5062134642812492182
+      mar_chibi_1: -325712449865966471
+      mar_chibi_10: -3290331828372242989
+      mar_chibi_11: 7502449899018801922
+      mar_chibi_2: -9133071067249955585
+      mar_chibi_3: -5064242258286246714
+      mar_chibi_4: 875998678125317982
+      mar_chibi_5: -705285325185208478
+      mar_chibi_6: -3866327769338821958
+      mar_chibi_7: 7241149046593385270
+      mar_chibi_8: -1270278402950008675
+      mar_chibi_9: 2983887923544558375
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
