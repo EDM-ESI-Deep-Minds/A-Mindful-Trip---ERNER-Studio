@@ -87,6 +87,10 @@ public class BoardManager : MonoBehaviour
                     {
                         newTile.tileType = "Rest";
                     }
+                    else if (spriteName == "end_city_0" || spriteName == "end_country_0")
+                    {
+                        newTile.tileType = "End";
+                    }
                 }
 
                 pathTiles[pos] = newTile;

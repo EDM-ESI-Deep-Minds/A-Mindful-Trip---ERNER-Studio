@@ -25,6 +25,7 @@ public class PlayerFreeMovement : NetworkBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        DontDestroyOnLoad(gameObject);
     }
 
     public override void OnNetworkSpawn()

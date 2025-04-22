@@ -48,6 +48,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        DontDestroyOnLoad(gameObject);
     }
 
     public override void OnNetworkSpawn()
@@ -592,6 +593,12 @@ public class PlayerBoardMovement : NetworkBehaviour
             bool triggered = false;
 
             isMoving = false;
+            currentTilePath = boardManager.pathTiles[currentTilePos];
+            if ((currentTilePath.tileType == "End"))
+            {
+                EventTrigger.SelectEventToTrigger(currentTilePath.tileType);
+                steps = 0;
+            }
 
             
 

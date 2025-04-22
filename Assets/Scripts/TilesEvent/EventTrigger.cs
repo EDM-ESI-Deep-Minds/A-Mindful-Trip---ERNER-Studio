@@ -4,6 +4,7 @@ using UnityEngine;
 public static class EventTrigger
 {
     public static event Action OnQuestionTile;
+    public static event Action OnMapWin;   
     public static void SelectEventToTrigger(string TileType)
     {
         CurseTileEvent.updateTimers();
@@ -11,7 +12,7 @@ public static class EventTrigger
         switch (TileType)
         {
             case "Rest":
-                Debug.Log("Rest event triggered.");
+                Debug.Log("Rest event triggered."); //han w loukrin lazm ndiro haja kache afichage f sceen wla ...
                 break;
 
             case "Bonus":
@@ -25,8 +26,10 @@ public static class EventTrigger
                 break;
 
             case "Question":
-                OnQuestionTile?.Invoke();
-                Debug.Log("Question event triggered.");
+                 OnQuestionTile?.Invoke();
+                break;
+            case "End":
+                OnMapWin?.Invoke();//borgr
                 break;
 
             default:
