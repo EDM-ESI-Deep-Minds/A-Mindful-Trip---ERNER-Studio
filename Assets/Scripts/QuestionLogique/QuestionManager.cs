@@ -81,6 +81,7 @@ public class QuestionManager : NetworkBehaviour
 
         Question question = QuestionLoader.Instance.LoadQuestion(category, difficulty, questionType);
         currentCategory = category;
+        correctAnswer = question.correct_answer;
 
         string[] allAnswers = QuestionLoader.Instance.GetAnswers(question);
 
@@ -190,21 +191,21 @@ public class QuestionManager : NetworkBehaviour
         hasAnswered = true;
 
         bool isCorrect = selectedAnswer == correctAnswer;
-        ResolveAnswerServerRpc(isCorrect);
+        ResolveAnswerServerRpc(isCorrect,new FixedString128Bytes(correctAnswer));
     }
 
     private void AnswerTimeout()
     {
         if (!RolesManager.IsMyTurn) return;
         hasAnswered = true;
-        ResolveAnswerServerRpc(false);
+        ResolveAnswerServerRpc(false,new FixedString128Bytes(correctAnswer));
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void ResolveAnswerServerRpc(bool isCorrect)
+    private void ResolveAnswerServerRpc(bool isCorrect,FixedString128Bytes correctAnswer)
     {
         var ui = spawnedUI.GetComponent<QuestionUI>();
-        FixedString128Bytes result = new FixedString128Bytes(ui.GetResult(isCorrect));
+        FixedString128Bytes result = new FixedString128Bytes(ui.GetResult(isCorrect,correctAnswer.ToString()));
         ResolveAnswerClientRpc(isCorrect,result);
     }
 

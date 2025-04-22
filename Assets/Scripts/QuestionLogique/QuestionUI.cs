@@ -88,9 +88,9 @@ public class QuestionUI : MonoBehaviour
             timerText.color = Color.white;
     }
 
-    public string GetResult(bool isCorrect)
+    public string GetResult(bool isCorrect,string correctAnswer)
     {
-        return isCorrect ? GetRandomSuccessDialogue() : GetRandomFailureDialogue();
+        return isCorrect ? GetRandomSuccessDialogue(correctAnswer) : GetRandomFailureDialogue(correctAnswer);
     }
 
     public void ShowResult(string text)
@@ -107,15 +107,15 @@ public class QuestionUI : MonoBehaviour
         spawnedButtons.Clear();
     }
 
-    private string GetRandomSuccessDialogue()
+    private string GetRandomSuccessDialogue(string correctAnswer)
     {
-        string[] lines = { "Correct!", "Nice job!", "That's right!", "Well done!" };
-        return lines[Random.Range(0, lines.Length)];
+        string[] lines = { "Correct! The Right Answer was : ", "Nice job! The Right Answer was : ", "That's right! The Right Answer was : ", "Well done! The Right Answer was : " };
+        return lines[Random.Range(0, lines.Length)]+correctAnswer;
     }
 
-    private string GetRandomFailureDialogue()
+    private string GetRandomFailureDialogue(string correctAnswer)
     {
-        string[] lines = { "Wrong answer...", "Close, but no.", "Oops!", "Better luck next time!" };
-        return lines[Random.Range(0, lines.Length)];
+        string[] lines = { "Wrong answer... The Right Answer is : ", "Close, but no. The Right Answer is : ", "Oops! The Right Answer is : ", "Better luck next time! " };
+        return lines[Random.Range(0, lines.Length)]+correctAnswer;
     }
 }
