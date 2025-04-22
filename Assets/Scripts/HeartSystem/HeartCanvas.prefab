@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3533804521352411686}
   - component: {fileID: 5676528898273934506}
-  - component: {fileID: 354190595790609756}
   - component: {fileID: 6994077966444397736}
   m_Layer: 5
   m_Name: Hearts
@@ -64,31 +63,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &354190595790609756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6528678227290966334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 0
-  InScenePlacedSourceGlobalObjectIdHash: 0
-  DeferredDespawnTick: 0
-  Ownership: 1
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
-  SyncOwnerTransformWhenParented: 1
-  AllowOwnerToParent: 0
 --- !u!114 &6994077966444397736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +75,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296f650b154ef4ee19450dd662cc9edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   fullHeart: {fileID: 224046259893802700, guid: 841cb1169d9e3fa4a9b66ec28949fdba, type: 3}
   emptyHeart: {fileID: 649880706630888860, guid: 89bb4996b84b0214e8be8a35fdea36ee, type: 3}
   heartAnimator: {fileID: 9100000, guid: 32b9a05234fd641d8a1363c003dac8c7, type: 2}
