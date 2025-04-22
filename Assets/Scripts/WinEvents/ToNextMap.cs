@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class NewEmptyCSharpScript : NetworkBehaviour
 {
-    public bool CityDone = false;
+    public bool DesertDone = false;
 
     void OnEnable()
     {
@@ -20,14 +20,14 @@ public class NewEmptyCSharpScript : NetworkBehaviour
     {
         if (IsServer)
         {
-            if (!CityDone)
+            if (!DesertDone)
             {
-                CityDone = true;
-                NetworkManager.SceneManager.LoadScene("City", UnityEngine.SceneManagement.LoadSceneMode.Single);
+                DesertDone = true;
+                NetworkManager.SceneManager.LoadScene("Desert", UnityEngine.SceneManagement.LoadSceneMode.Single);
             }
             else
             {
-                NetworkManager.SceneManager.LoadScene("Desert", UnityEngine.SceneManagement.LoadSceneMode.Single);
+                NetworkManager.SceneManager.LoadScene("City", UnityEngine.SceneManagement.LoadSceneMode.Single);
             }
         }
     }

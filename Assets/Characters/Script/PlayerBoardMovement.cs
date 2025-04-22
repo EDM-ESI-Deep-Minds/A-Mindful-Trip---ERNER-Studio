@@ -536,6 +536,12 @@ public class PlayerBoardMovement : NetworkBehaviour
             bool triggered = false;
 
             isMoving = false;
+            currentTilePath = boardManager.pathTiles[currentTilePos];
+            if ((currentTilePath.tileType == "End"))
+            {
+                EventTrigger.SelectEventToTrigger(currentTilePath.tileType);
+                steps = 0;
+            }
 
             //yield return new WaitForSeconds(0.1f);
 
