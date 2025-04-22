@@ -11,14 +11,16 @@ public class GameOverManager : NetworkBehaviour
     public GameObject GameOverUI;
     public Button Button;
 
-    public string mainMenuSceneName = "MainMenu"; 
+    public string mainMenuSceneName = "MainMenu";
+
+    private CanvasGroup canvasGroup;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            Debug.Log("GameOverManager instance createddddddddddddddddddddddddddddddddddddddddddddddddd.");
+            Debug.Log("GameOverManager instance created.");
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -29,7 +31,6 @@ public class GameOverManager : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-      
         if (GameOverUI != null)
         {
             GameOverUI.SetActive(false);
@@ -70,15 +71,41 @@ public class GameOverManager : NetworkBehaviour
     [ClientRpc]
     private void ShowGameOverUIClientRpc()
     {
-        
+        StartCoroutine(SetupAndFadeInUI());
+    }
+
+    private IEnumerator SetupAndFadeInUI()
+    {
         if (GameOverUI == null)
         {
-            GameOverUI = GameObject.Find("GameOverUI"); 
+            GameOverUI = GameObject.Find("GameOverUI");
         }
 
         if (GameOverUI != null)
         {
             GameOverUI.SetActive(true);
+
+            canvasGroup = GameOverUI.GetComponent<CanvasGroup>();
+            if (canvasGroup == null)
+            {
+                canvasGroup = GameOverUI.AddComponent<CanvasGroup>();
+            }
+
+            canvasGroup.alpha = 0f;
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+
+            float duration = 1f;
+            float time = 0f;
+
+            while (time < duration)
+            {
+                canvasGroup.alpha = Mathf.Lerp(0f, 1f, time / duration);
+                time += Time.deltaTime;
+                yield return null;
+            }
+
+            canvasGroup.alpha = 1f;
         }
         else
         {
@@ -86,17 +113,14 @@ public class GameOverManager : NetworkBehaviour
         }
     }
 
-   
     public void OnMainMenuButtonClicked()
     {
         if (IsServer)
         {
-            // Load the MainMenu scene for all clients
             LoadMainMenuSceneForAllClients();
         }
         else
         {
-            // Call ServerRpc to make the server load the MainMenu scene
             TriggerLoadMainMenuServerRpc();
         }
     }
