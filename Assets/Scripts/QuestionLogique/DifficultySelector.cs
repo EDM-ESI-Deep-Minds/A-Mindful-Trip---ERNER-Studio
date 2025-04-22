@@ -16,4 +16,24 @@ public static class DifficultySelector
         else
             return "hard"; // Hard
     }
+    public static int GetLowestEloCategoryName(ProfileManager.PlayerProfile profile)
+    {
+
+
+        int lowestEloIndex = 9;
+        int lowestElo = profile.categories[9].categoryElo;
+
+        for (int i = 0; i < 24; i++)
+        {
+            if (profile.categories[i].categoryElo < lowestElo)
+            {
+                lowestElo = profile.categories[i].categoryElo;
+                lowestEloIndex = i;
+            }
+        }
+
+        //string categoryName = profile.categories[lowestEloIndex].categoryName;
+        //Debug.Log($"Lowest Elo category: {categoryName} with Elo {lowestElo}");
+        return lowestEloIndex;
+    }
 }

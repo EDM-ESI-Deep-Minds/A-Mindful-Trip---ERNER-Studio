@@ -64,8 +64,9 @@ public class QuestionLoader : MonoBehaviour
         int index = Random.Range(0, types.Length);
         return types[index];
     }
-    public int GetRandomCategory()
-    {
-        return UnityEngine.Random.Range(9, 33); //TODO make it personilized with the player profile
-    }
+    //public int GetRandomCategory()
+    //{
+    //    return UnityEngine.Random.Range(9, 33); //TODO make it personilized with the player profile
+    //}
+   
 }
