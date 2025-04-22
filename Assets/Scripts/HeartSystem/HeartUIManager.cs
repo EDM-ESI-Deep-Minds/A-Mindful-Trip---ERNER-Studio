@@ -20,13 +20,13 @@ public class HeartUIManager : MonoBehaviour
     private int hearts;
     private int emptyHearts = 0;
     private List<Image> heartImages = new List<Image>(); // Tracks all heart UI images
-    private int maxhearts = GameMode.Instance.GetMaxPlayers() == 2 ? 1 : 6;
+    private int maxhearts = GameMode.Instance.GetMaxPlayers() == 2 ? 3 : 4;
 
     public void Awake()
     {
         hearts = maxhearts;
         InitializeHearts();
-        removeHeart();
+      //  removeHeart();
     }
 
     private void InitializeHearts()
