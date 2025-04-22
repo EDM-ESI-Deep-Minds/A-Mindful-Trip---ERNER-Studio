@@ -10,6 +10,7 @@ using System.Net;
 public class QuestionManager : NetworkBehaviour
 {
     public static QuestionManager Instance;
+   
 
     [SerializeField] private GameObject questionUIPrefab;
     private GameObject spawnedUI;
@@ -74,8 +75,13 @@ public class QuestionManager : NetworkBehaviour
     private void OnQuestionTileTriggered()
     {
         // if (!IsOwner) return; // Only the player who landed on the tile proceeds
+        ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;
+       
+        
+        int category = DifficultySelector.GetLowestEloCategoryName(profile);
+       // int category = QuestionLoader.Instance.GetRandomCategory();
 
-        int category = QuestionLoader.Instance.GetRandomCategory();
+        Debug.Log($"Category: {category}");
         string difficulty = DifficultySelector.GetQuestionDifficulty(ProfileManager.SelectedProfile.Elo);
         string questionType = QuestionLoader.Instance.GetRandomQuestionType();
 
