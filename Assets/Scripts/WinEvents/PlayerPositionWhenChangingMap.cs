@@ -67,7 +67,7 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
         {
             case "City":
                 transform.position = new Vector2(city_map_positions[SpawnIndex, 0], city_map_positions[SpawnIndex, 1]);
-                SetScaleServerRpc(new Vector3(3.75f, 3.75f, 3.75f));
+                SetScaleServerRpc(new Vector3(2.4f, 2.4f, 2.4f));
                 break;
 
             case "CountrySide":

@@ -24,7 +24,7 @@ public class ReadyManager : NetworkBehaviour
     {
         readyCount++;
 
-        if (readyCount >= totalPlayers)
+        if (readyCount == totalPlayers)
         {
             AllReady?.Invoke();
         }
