@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Unity.Netcode;
 
-public class HeartUIManager : MonoBehaviour
+public class HeartUIManager : NetworkBehaviour
 {
     [Header("Heart Sprites")]
     public Sprite fullHeart;
@@ -20,11 +21,14 @@ public class HeartUIManager : MonoBehaviour
     public void Awake()
     {
         hearts = GameMode.Instance.GetMaxPlayers() == 2 ? 4 : 3;
-        InitializeHearts();
+        InitializeHeartsClientRpc(hearts);
     }
 
-    private void InitializeHearts()
+
+    [ClientRpc]
+    private void InitializeHeartsClientRpc(int hearts)
     {
+        this.hearts = hearts;
         for (int i = 0; i < hearts; i++)
         {
             GameObject heartGO = new GameObject("Heart" + i);
