@@ -19,7 +19,17 @@ public class HeartUIManager : MonoBehaviour
 
     public void Awake()
     {
-        hearts = GameMode.Instance.GetMaxPlayers() == 2 ? 4 : 3;
+        RoomUIManager roomUIManager = FindFirstObjectByType<RoomUIManager>();
+        int[] nbPlayers = roomUIManager.GetSelectedCharacters();
+        foreach(int nb in nbPlayers)
+        {
+            if (nb != -1)
+            {
+                hearts++;
+            }
+        }
+        hearts = hearts == 2 ? 4 : 3;
+
         InitializeHearts();
     }
 
