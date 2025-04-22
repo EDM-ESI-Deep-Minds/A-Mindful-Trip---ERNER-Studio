@@ -148,7 +148,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         {
             playerSprite = 2;
         }
-        else if (spriteName.Contains("Mar"))
+        else if (spriteName.Contains("mar"))
         {
             playerSprite = 3;
         }
