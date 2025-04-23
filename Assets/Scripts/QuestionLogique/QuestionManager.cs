@@ -259,9 +259,12 @@ public class QuestionManager : NetworkBehaviour
     [ClientRpc]
     private void CleanupQuestionUIClientRpc()
     {
+        
+
         if (spawnedUI != null)
         {
             Destroy(spawnedUI);
+            Debug.Log("Destroying question UI");
             spawnedUI = null;
 
             // Resuming scene music for everyone
@@ -270,8 +273,12 @@ public class QuestionManager : NetworkBehaviour
                 AudioManager.instance.ResumeSceneMusic();
             }
         }
+        else
+        {
+            Debug.Log("Question UI already destroyed or not instantiated.");
+        }
 
-        HideGameplayUI(false);
+            HideGameplayUI(false);
     }
 
 }

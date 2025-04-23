@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6416587629864099528}
   - component: {fileID: 3919983050588592573}
   - component: {fileID: 8950406069644143350}
-  - component: {fileID: 3051545135233179558}
   - component: {fileID: 3785815888201515779}
   - component: {fileID: 7048194195728194804}
   - component: {fileID: 5472035837071970812}
@@ -23,6 +22,7 @@ GameObject:
   - component: {fileID: 6849068423002362717}
   - component: {fileID: 7788176401768664065}
   - component: {fileID: 4219349826189243448}
+  - component: {fileID: 2315360260368565600}
   m_Layer: 0
   m_Name: TarusPlayer
   m_TagString: Untagged
@@ -239,28 +239,6 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
---- !u!114 &3051545135233179558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5520018035931640328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56f9b71ea15c0aa43b7408be664134b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  moveSpeed: 1
-  boardTilemap: {fileID: 0}
-  rightArrow: {fileID: 0}
-  leftArrow: {fileID: 0}
-  upArrow: {fileID: 0}
-  downArrow: {fileID: 0}
-  backWardButton: {fileID: 0}
-  playerProgress: 0
-  endPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &3785815888201515779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,3 +389,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2315360260368565600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5520018035931640328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f9b71ea15c0aa43b7408be664134b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  moveSpeed: 0.3
+  boardTilemap: {fileID: 0}
+  rightArrow: {fileID: 0}
+  leftArrow: {fileID: 0}
+  upArrow: {fileID: 0}
+  downArrow: {fileID: 0}
+  backWardButton: {fileID: 0}
+  playerProgress: 0
+  endPosition: {x: 0, y: 0, z: 0}
