@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: -7671613820280244440}
   - component: {fileID: -8691455251817923420}
   - component: {fileID: 9040609109228860198}
+  - component: {fileID: 6499771095019489997}
   m_Layer: 0
   m_Name: MarPlayer
   m_TagString: Untagged
@@ -418,3 +419,25 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   scene: 
   nextSpawnIndex: -1
+--- !u!114 &6499771095019489997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2541195099035758000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f9b71ea15c0aa43b7408be664134b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  moveSpeed: 3
+  boardTilemap: {fileID: 0}
+  rightArrow: {fileID: 0}
+  leftArrow: {fileID: 0}
+  upArrow: {fileID: 0}
+  downArrow: {fileID: 0}
+  backWardButton: {fileID: 0}
+  playerProgress: 0
+  endPosition: {x: 0, y: 0, z: 0}

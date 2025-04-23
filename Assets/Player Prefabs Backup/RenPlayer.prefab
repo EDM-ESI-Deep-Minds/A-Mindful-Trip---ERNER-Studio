@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 8584818097494173605}
   - component: {fileID: -6076012548073286028}
   - component: {fileID: 1711174075672465614}
+  - component: {fileID: 5969086487435152325}
   m_Layer: 9
   m_Name: RenPlayer
   m_TagString: Player
@@ -418,3 +419,25 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   scene: 
   nextSpawnIndex: -1
+--- !u!114 &5969086487435152325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311031283111266869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f9b71ea15c0aa43b7408be664134b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  moveSpeed: 3
+  boardTilemap: {fileID: 0}
+  rightArrow: {fileID: 0}
+  leftArrow: {fileID: 0}
+  upArrow: {fileID: 0}
+  downArrow: {fileID: 0}
+  backWardButton: {fileID: 0}
+  playerProgress: 0
+  endPosition: {x: 0, y: 0, z: 0}
