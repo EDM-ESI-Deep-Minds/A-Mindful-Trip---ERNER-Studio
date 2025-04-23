@@ -81,7 +81,6 @@ public class spawn_mang : NetworkBehaviour
     {
         index_position++;
         return new Vector2(les_position[index_position,0], les_position[index_position, 1]);
-      
     }
 
 
