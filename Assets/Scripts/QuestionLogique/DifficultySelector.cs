@@ -20,7 +20,7 @@ public static class DifficultySelector
     {
 
 
-        int lowestEloIndex = 9;
+        int lowestEloIndex = 0;
         int lowestElo = profile.categories[9].categoryElo;
 
         for (int i = 0; i < 24; i++)

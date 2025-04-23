@@ -78,7 +78,7 @@ public class QuestionManager : NetworkBehaviour
         ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;
        
         
-        int category = DifficultySelector.GetLowestEloCategoryName(profile);
+        int category = DifficultySelector.GetLowestEloCategoryName(profile) +9 ;
        // int category = QuestionLoader.Instance.GetRandomCategory();
 
         Debug.Log($"Category: {category}");
