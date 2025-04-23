@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  moveSpeed: 0.3
+  moveSpeed: 3
   boardTilemap: {fileID: 0}
   rightArrow: {fileID: 0}
   leftArrow: {fileID: 0}
