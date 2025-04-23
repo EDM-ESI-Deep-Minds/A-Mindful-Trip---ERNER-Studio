@@ -197,7 +197,7 @@ public class BonusCurseUIManager : NetworkBehaviour
 
         ui.SetText(effect.ToString(), isCurse);
 
-        StartCoroutine(DestroyAfterDelay(spawnedUI, 8.5f));
+        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f));
     }
 
     private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay)
@@ -207,6 +207,11 @@ public class BonusCurseUIManager : NetworkBehaviour
         {
             Destroy(uiObject);
         }
+    }
+
+    public void StartRepositionCoroutine(float delay)
+    {
+        StartCoroutine(CurseTileEvent.DelayReposition(delay));
     }
 
 }

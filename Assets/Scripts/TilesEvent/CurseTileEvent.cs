@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.Collections;
+using System.Collections;
 
 public class CurseTileEvent
 {
@@ -30,7 +31,7 @@ public class CurseTileEvent
                 Debug.Log("🌀 Reposition: Player loses progress.");
                 effectKey = new FixedString128Bytes("reposition");
                 UIManager.GetMessageServerRpc(effectKey, true);
-                reposition();
+                UIManager.StartRepositionCoroutine(6.5f);
                 break;
 
             case 3:
@@ -67,6 +68,12 @@ public class CurseTileEvent
         }
         // Curse SFX
         AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
+    }
+
+    public static IEnumerator DelayReposition(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        reposition();
     }
 
     private static int GetRandomCurse()
