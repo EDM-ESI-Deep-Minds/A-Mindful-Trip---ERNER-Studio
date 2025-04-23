@@ -76,7 +76,7 @@ public class BonusCurseUIManager : NetworkBehaviour
                     "Your belongings are sealed away.",
                     "No touching! The curse forbids it.",
                     "A rusty lock binds your bag shut.",
-                    "Your inventory is cursed shut — no item shall leave it now."
+                    "No item shall leave it now."
                 }
             }
         },
@@ -129,7 +129,7 @@ public class BonusCurseUIManager : NetworkBehaviour
                     "Your path glows with promise.",
                     "Patience is rewarded generously",
                     "Bonus mode activated!",
-                    "Good things come to those who wait — your next turn proves it."
+                    "Good things come to those who wait."
                 }
             }
         },
@@ -197,7 +197,7 @@ public class BonusCurseUIManager : NetworkBehaviour
 
         ui.SetText(effect.ToString(), isCurse);
 
-        StartCoroutine(DestroyAfterDelay(spawnedUI, 8.5f));
+        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f));
     }
 
     private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay)
@@ -207,6 +207,11 @@ public class BonusCurseUIManager : NetworkBehaviour
         {
             Destroy(uiObject);
         }
+    }
+
+    public void StartRepositionCoroutine(float delay)
+    {
+        StartCoroutine(CurseTileEvent.DelayReposition(delay));
     }
 
 }

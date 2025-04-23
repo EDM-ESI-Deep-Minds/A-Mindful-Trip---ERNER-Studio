@@ -1417,6 +1417,7 @@ GameObject:
   - component: {fileID: 196940789}
   - component: {fileID: 196940788}
   - component: {fileID: 196940791}
+  - component: {fileID: 196940792}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1487,7 +1488,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 196940789}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 196940792}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: Join
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &196940789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1538,6 +1551,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70857b8b88e7274eaec12de6acbb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &196940792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196940786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beed8eb00981e4c95a3d6ca75292b6d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetButton: {fileID: 2101675069}
+  radioButton1: {fileID: 0}
+  radioButton2: {fileID: 0}
 --- !u!1 &209478669
 GameObject:
   m_ObjectHideFlags: 0
@@ -9481,6 +9509,7 @@ GameObject:
   - component: {fileID: 1003718953}
   - component: {fileID: 1003718952}
   - component: {fileID: 1003718955}
+  - component: {fileID: 1003718956}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -9551,7 +9580,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1003718953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1003718956}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: Create
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1003718953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9602,6 +9643,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70857b8b88e7274eaec12de6acbb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1003718956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003718950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beed8eb00981e4c95a3d6ca75292b6d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetButton: {fileID: 727933835}
+  radioButton1: {fileID: 1460124816}
+  radioButton2: {fileID: 1128232618}
 --- !u!1 &1009419389
 GameObject:
   m_ObjectHideFlags: 0
@@ -17269,18 +17325,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   FailedToJoinSession:
     m_PersistentCalls:
       m_Calls: []
@@ -18842,6 +18886,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1366355403}
+        m_TargetAssemblyTypeName: Unity.Multiplayer.Widgets.ShowJoinCode, Unity.Multiplayer.Widgets.Session
+        m_MethodName: OnSessionJoined
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -13,7 +13,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 {
     private DiceManager diceManager;
     private BoardManager boardManager;
-    [SerializeField] private float moveSpeed = .1f;
+    [SerializeField] private float moveSpeed = 3f;
     private Rigidbody2D rb;
     private bool isMoving = false;
     private Animator animator;
