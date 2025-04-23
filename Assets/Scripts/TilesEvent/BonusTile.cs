@@ -15,35 +15,35 @@ public class BonusTile
             case 1:
                 Debug.Log("🩸 Health Bonus: Player gets one heart.");
                 effectKey = new FixedString128Bytes("add_heart");
-                UIManager.GetMessageServerRpc(effectKey, false);
+                UIManager.GetMessageServerRpc(effectKey, 1);
                 AddHeart();
                 break;
 
             case 2:
                 Debug.Log("💰 Add Credit: Player gets bonus credit between 25 to 100.");
                 effectKey = new FixedString128Bytes("credit_bonus");
-                UIManager.GetMessageServerRpc(effectKey, false);
+                UIManager.GetMessageServerRpc(effectKey, 1);
                 AddCredit();
                 break;
 
             case 3:
                 Debug.Log("🎒 Add Item: An item is Added to inventory.");
                 effectKey = new FixedString128Bytes("add_item");
-                UIManager.GetMessageServerRpc(effectKey, false);
+                UIManager.GetMessageServerRpc(effectKey, 1);
                 AddItem();
                 break;
 
             case 4:
                 Debug.Log("💰 Add rare Credit: Player gets rare credit between 100 to 150.");
                 effectKey = new FixedString128Bytes("rare_credit_bonus");
-                UIManager.GetMessageServerRpc(effectKey, false);
+                UIManager.GetMessageServerRpc(effectKey, 1);
                 AddRareCredit();
                 break;
 
             case 5:
                 Debug.Log("30% Bonus in next reward: Player gets bonus in the its next reward.");
                 effectKey = new FixedString128Bytes("next_reward_boost");
-                UIManager.GetMessageServerRpc(effectKey, false);
+                UIManager.GetMessageServerRpc(effectKey, 1);
                 BonusInNextReward();
                 break;
         }
