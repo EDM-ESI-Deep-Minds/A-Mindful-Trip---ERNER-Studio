@@ -6,7 +6,8 @@ public class PathTile
     public string tileType;
     public bool isIntersection;
     public Vector3Int[] possibleMoves; // Stores valid movement directions
-
+    public bool changeDirection = false;
+    public bool falseIntersection = false;
     public PathTile(string name)
     {
         tileType = name;

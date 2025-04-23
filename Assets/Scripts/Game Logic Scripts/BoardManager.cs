@@ -74,6 +74,10 @@ public class BoardManager : MonoBehaviour
                              spriteName == "Board Tiles_1" || spriteName == "city_board_tiles_v2_3" || spriteName == "city_board_tiles_v2_9")
                     {
                         newTile.tileType = "Curse";
+                    }else if(spriteName == "bridge_0")
+                    {
+                        newTile.tileType = "Curse";
+                        newTile.changeDirection = true;
                     }
                     else if (spriteName == "Board Tiles 3x3_8" || spriteName == "Board Tiles 3x3_9" ||
                              spriteName == "Board Tiles 3x3_10" || spriteName == "Board Tiles 3x3_11" ||
@@ -83,13 +87,17 @@ public class BoardManager : MonoBehaviour
                     }
                     else if (spriteName == "Board Tiles 3x3_16" || spriteName == "Board Tiles 3x3_17" ||
                              spriteName == "Board Tiles 3x3_18" || spriteName == "Board Tiles 3x3_19"
-                             ||  spriteName == "city_board_tiles_v2_2" || spriteName == "city_board_tiles_v2_7")
+                             || spriteName == "city_board_tiles_v2_2" || spriteName == "city_board_tiles_v2_7")
                     {
                         newTile.tileType = "Rest";
                     }
                     else if (spriteName == "end_city_0" || spriteName == "end_country_0")
                     {
                         newTile.tileType = "End";
+                    }else if (spriteName == "false_intersection_0")
+                    {
+                        newTile.tileType = "Question";
+                        newTile.falseIntersection = true;
                     }
                 }
 
@@ -130,6 +138,7 @@ public class BoardManager : MonoBehaviour
         new Vector3Int(4, 0, 0),new Vector3Int(-4, 0, 0),
         new Vector3Int(0, -1, 0),new Vector3Int(0, 1, 0),
         new Vector3Int(1, 0, 0),new Vector3Int(-1, 0, 0),
+        new Vector3Int(2, -1, 0)
 
 
         // the symetrics  new Vector3Int(1, 2, 0), new Vector3Int(-1, 2, 0) , new Vector3Int(1, -2, 0)
@@ -137,7 +146,7 @@ public class BoardManager : MonoBehaviour
         };
         Vector3Int[] asymmetricCases = new Vector3Int[]
         {
-        new Vector3Int(2, 1, 0), new Vector3Int(2, -1, 0),
+        new Vector3Int(2, 1, 0),
         new Vector3Int(1, -2, 0),new Vector3Int(-1, -2, 0),
         };
 
