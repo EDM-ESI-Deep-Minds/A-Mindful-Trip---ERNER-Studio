@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/City.unity
     guid: 90528f532dafbf64f8d8fa7e0c9e63fe
   - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: d5e90b29e3138004e9c368f72a6de681
+  - enabled: 1
     path: Assets/Scenes/Desert.unity
     guid: f918406a535549947b8a5f9d7c8773fe
   m_configObjects:

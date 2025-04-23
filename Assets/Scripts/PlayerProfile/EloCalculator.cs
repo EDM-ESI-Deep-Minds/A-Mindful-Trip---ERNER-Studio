@@ -10,6 +10,7 @@ public static class EloCalculator
     {
         float D = GetDifficultyMultiplier(difficultyLevel);
         int CB = CalculateCategoryBonus(profile, categoryName);
+        int CP = CalculateCategoryPenalty(profile, categoryName);
 
         foreach (var category in profile.categories)
         {
@@ -26,7 +27,7 @@ public static class EloCalculator
                 }
                 else
                 {
-                    int penalty = Mathf.RoundToInt(BaseElo * D) * (1 + CB);
+                    int penalty = Mathf.RoundToInt(BaseElo * D) * (1 + CP);
                     category.categoryElo = Mathf.Max(0, category.categoryElo - penalty);
                     Debug.Log($" Incorrect. Lost {penalty} Elo in {categoryName}");
                 }
@@ -69,8 +70,26 @@ public static class EloCalculator
         // Calculate and return the Category Bonus
         float categoryBonus = rareCorrectRatio * 0.5f;
 
-        // Convert to integer (assuming we need to return an integer value)
+       
         return (int)Mathf.Round(categoryBonus);
+    }
+    private static int CalculateCategoryPenalty(ProfileManager.PlayerProfile profile, string categoryName)
+    {
+        // Find the category being evaluated
+        var targetCategory = profile.categories.FirstOrDefault(c => c.categoryName == categoryName);
+        if (targetCategory == null)
+            return 0;
+
+        // Calculate RareCorrectRatio
+        int correctAnswers =  targetCategory.correctAnswers;
+        int totalQuestions = targetCategory.questionsAnswered;
+        float rareCorrectRatio = (float)correctAnswers / (totalQuestions + 1);
+
+        // Calculate and return the Category penalty
+        float categoryPenalty = rareCorrectRatio * 0.5f;
+
+
+        return (int)Mathf.Round(categoryPenalty);
     }
 
     public static void CalculateGeneralElo(ProfileManager.PlayerProfile profile,float difficultyLevel)
@@ -80,13 +99,13 @@ public static class EloCalculator
 
         foreach (var category in profile.categories)
         {
-            // Get difficulty coefficient for this category
+           
             float difficultyCoefficient = difficultyLevel;
 
-            // Calculate numerator: CategoryElo × QuestionsAnswered × D
+           
             weightedEloSum += category.categoryElo * category.questionsAnswered * difficultyCoefficient;
 
-            // Calculate denominator: QuestionsAnswered × D
+        
             weightedQuestionsSum += category.questionsAnswered * difficultyCoefficient;
         }
 
@@ -96,11 +115,7 @@ public static class EloCalculator
             profile.Elo = (int)Mathf.Round(weightedEloSum / weightedQuestionsSum); 
             Debug.Log($"General Elo updated: {profile.Elo}");
         }
-        else
-        {
-            profile.Elo = 0; // Default Elo when no questions answered
-            Debug.Log("General Elo not updated: No questions answered");
-        }
+       
     }
 
 }

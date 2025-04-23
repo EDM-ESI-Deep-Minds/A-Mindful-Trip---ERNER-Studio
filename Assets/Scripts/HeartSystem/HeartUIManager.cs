@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System;
+using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
 public class HeartUIManager : MonoBehaviour
 {
@@ -13,9 +16,11 @@ public class HeartUIManager : MonoBehaviour
 
     public Transform heartContainer;
 
+
     private int hearts;
     private int emptyHearts = 0;
     private List<Image> heartImages = new List<Image>(); // Tracks all heart UI images
+    private int maxhearts = 5;
 
     public void Awake()
     {
@@ -31,6 +36,7 @@ public class HeartUIManager : MonoBehaviour
         hearts = hearts == 2 ? 4 : 3;
 
         InitializeHearts();
+      //  removeHeart();
     }
 
     private void InitializeHearts()
@@ -52,65 +58,81 @@ public class HeartUIManager : MonoBehaviour
 
     public void addHeart()
     {
-        if (emptyHearts > 0)
+        if (hearts < maxhearts)
         {
-            // Remove the last empty heart
-            Transform heartToRemove = heartContainer.GetChild(hearts);
-            Destroy(heartToRemove.gameObject);
-            heartImages.RemoveAt(hearts); // keep the list accurate
-            emptyHearts--;
+            if (emptyHearts > 0)
+            {
+                // Remove the last empty heart
+                Transform heartToRemove = heartContainer.GetChild(hearts);
+                Destroy(heartToRemove.gameObject);
+                heartImages.RemoveAt(hearts); // keep the list accurate
+                emptyHearts--;
+            }
+
+            hearts++;
+
+            GameObject heartGO = new GameObject("Heart" + heartImages.Count);
+            heartGO.transform.SetParent(heartContainer, false);
+
+            Image heartImage = heartGO.AddComponent<Image>();
+            heartImage.sprite = fullHeart;
+
+            Animator animator = heartGO.AddComponent<Animator>();
+            animator.runtimeAnimatorController = heartAnimator;
+
+            if (heartContainer.childCount > 1)
+            {
+                // Get the first heart's animation time to sync
+                Animator referenceAnimator = heartContainer.GetChild(0).GetComponent<Animator>();
+                AnimatorStateInfo stateInfo = referenceAnimator.GetCurrentAnimatorStateInfo(0);
+                float normalizedTime = stateInfo.normalizedTime % 1f;
+
+                animator.Play(stateInfo.shortNameHash, 0, normalizedTime);
+            }
+
+            heartImages.Add(heartImage);
+           
         }
-
-        hearts++;
-
-        GameObject heartGO = new GameObject("Heart" + heartImages.Count);
-        heartGO.transform.SetParent(heartContainer, false);
-
-        Image heartImage = heartGO.AddComponent<Image>();
-        heartImage.sprite = fullHeart;
-
-        Animator animator = heartGO.AddComponent<Animator>();
-        animator.runtimeAnimatorController = heartAnimator;
-
-        if (heartContainer.childCount > 1)
+        else
         {
-            // Get the first heart's animation time to sync
-            Animator referenceAnimator = heartContainer.GetChild(0).GetComponent<Animator>();
-            AnimatorStateInfo stateInfo = referenceAnimator.GetCurrentAnimatorStateInfo(0);
-            float normalizedTime = stateInfo.normalizedTime % 1f;
-
-            animator.Play(stateInfo.shortNameHash, 0, normalizedTime);
+            Debug.Log("Max hearts reached");
+            // ui afficher un message au player "max heart reached"
         }
-
-        heartImages.Add(heartImage);
     }
-
 
     public void removeHeart()
     {
-        if (hearts <= 0) return;
-
-        hearts--;
-
-        emptyHearts++;
-
-        Transform heart = heartContainer.GetChild(hearts);
-        Animator animator = heart.GetComponent<Animator>();
-        if (animator != null)
+        if (hearts > 0)
         {
-            animator.SetTrigger("PopOut");
-            if(hearts == 0){
-                // Death SFX
-                AudioManager.instance?.PlaySFX(AudioManager.instance.soulShatterSFX);
-            } else {
-                // Hurt SFX
-                AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
+
+            hearts--;
+           
+            emptyHearts++;
+
+            Transform heart = heartContainer.GetChild(hearts);
+            Animator animator = heart.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetTrigger("PopOut");
             }
+          
+            StartCoroutine(SetHeartEmptyAfterAnimation(heart.GetComponent<Image>(), 0.3f));
+        }
+        if (hearts == 0)
+        {
+            AudioManager.instance?.PlaySFX(AudioManager.instance.soulShatterSFX);
+           
+            Debug.Log("No more hearts to removeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+             if (GameOverManager.Instance != null) { 
+            Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+                //NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+                GameOverManager.Instance.TriggerGameOver(); //  delay
+
+            }
+        }else{
+              AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
         }
 
-        StartCoroutine(SetHeartEmptyAfterAnimation(heart.GetComponent<Image>(), 0.3f));
-
-        // TODO : lossing logic
     }
 
     private System.Collections.IEnumerator SetHeartEmptyAfterAnimation(Image heartImage, float delay)
@@ -124,3 +146,5 @@ public class HeartUIManager : MonoBehaviour
         return hearts;
     }
 }
+
+
