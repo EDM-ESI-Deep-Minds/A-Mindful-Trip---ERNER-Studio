@@ -43,6 +43,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     private ProgressBarController progressBarController;
     private SpriteRenderer spriteRenderer;
     private int playerSprite = -1;
+    private bool backWardBridge = false;
 
     void Awake()
     {
@@ -295,6 +296,8 @@ public class PlayerBoardMovement : NetworkBehaviour
     private IEnumerator MoveAlongPath(int steps)
     {
         if (!RolesManager.IsMyTurn) yield break;
+
+        backWardBridge = false;
 
         isMoving = true;
         StartWalkSFX();
@@ -638,7 +641,9 @@ public class PlayerBoardMovement : NetworkBehaviour
     public IEnumerator MoveBackward(int steps)
     {
 
+        
         if (!RolesManager.IsMyTurn) yield break;
+        backWardBridge = true;
 
         if (playerPath.Count < 1) yield break; 
 
@@ -761,10 +766,22 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         foreach (Vector3Int move in tile.possibleMoves)
         {
-            // get the possible move
-            Vector3Int potentialNextPos = currentTilePos + move;
-            Debug.Log($"here is the move {move}");
-            if (tile.isIntersection && potentialNextPos != previousTilePos) // Count moves where x is greater or equal to zero, incase the intersection is on y
+            Vector3Int potentialNextPos = tilePos + move;
+
+            // Skip going back to the previous tile
+            if (!tile.isIntersection || potentialNextPos == previousTilePos)
+                continue;
+
+            // Check if the potential next tile exists and is valid
+            if (!boardManager.pathTiles.ContainsKey(potentialNextPos))
+                continue;
+
+            PathTile nextTile = boardManager.pathTiles[potentialNextPos];
+
+            // Check if any of the nextTile's possible moves has x > 0
+            bool hasForwardOption = nextTile.possibleMoves.Any(nextMove => nextMove.x > 0);
+
+            if (hasForwardOption)
             {
                 forwardMoveCount++;
             }
@@ -772,6 +789,8 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         return forwardMoveCount >= 2; // Return true if more than 2 moves have x > 0, greater or equal to 2
     }
+
+
     private void SetChosenDirection(string direction)
     {
         selectedDirection = direction;
@@ -981,6 +1000,19 @@ public class PlayerBoardMovement : NetworkBehaviour
                 triggered = true;
 
                 Vector3Int bridgeOffset = new Vector3Int((int)bridge.moveOffset.x, (int)bridge.moveOffset.y, 0);
+
+                if (bridgeOffset.x < 0 && !backWardBridge)
+                {
+                    isMoving = true;
+                    yield break;
+                }
+
+                if (bridgeOffset.x > 0 && backWardBridge)
+                {
+                    isMoving = true;
+                    yield break;
+                }
+
                 Vector3Int targetTilePos = currentTilePos + bridgeOffset;
                 Vector3 worldTargetPos = GetWorldPosition(targetTilePos);
 
