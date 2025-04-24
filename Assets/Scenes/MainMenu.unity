@@ -1564,8 +1564,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetButton: {fileID: 2101675069}
-  radioButton1: {fileID: 0}
-  radioButton2: {fileID: 0}
+  radioButton1: {fileID: 1460124816}
+  radioButton2: {fileID: 1128232618}
 --- !u!1 &209478669
 GameObject:
   m_ObjectHideFlags: 0
