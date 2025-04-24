@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Unity.Collections;
 
 public static class EventTrigger
 {
@@ -12,24 +13,36 @@ public static class EventTrigger
         switch (TileType)
         {
             case "Rest":
-                Debug.Log("Rest event triggered."); //han w loukrin lazm ndiro haja kache afichage f sceen wla ...
+
+                FixedString128Bytes effectKey = new FixedString128Bytes("rest");
+                BonusCurseUIManager UIManager = UnityEngine.Object.FindFirstObjectByType<BonusCurseUIManager>();
+                UIManager.GetMessageServerRpc(effectKey, 0);
+
+                Debug.Log("Rest event triggered.");
                 break;
 
             case "Bonus":
+
                 BonusTile.handleBonus();
+
                 Debug.Log("Bonus event triggered.");
                 break;
 
             case "Curse":
+
                 CurseTileEvent.handleCurse();
+
                 Debug.Log("Curse event triggered.");
                 break;
 
             case "Question":
-                 OnQuestionTile?.Invoke();
+
+                OnQuestionTile?.Invoke();
+
+                Debug.Log("Question event triggered.");
                 break;
             case "End":
-                OnMapWin?.Invoke();//borgr
+                OnMapWin?.Invoke();
                 break;
 
             default:

@@ -98,6 +98,10 @@ public class BoardManager : MonoBehaviour
                     {
                         newTile.tileType = "Question";
                         newTile.falseIntersection = true;
+                    }else if (spriteName == "bonus_notInter_0")
+                    {
+                        newTile.tileType = "Bonus";
+                        newTile.falseIntersection = true;
                     }
                 }
 

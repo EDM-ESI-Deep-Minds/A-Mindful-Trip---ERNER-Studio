@@ -285,7 +285,18 @@ public class QuestionManager : NetworkBehaviour
             Debug.Log("Question UI already destroyed or not instantiated.");
         }
 
-            HideGameplayUI(false);
+        HideGameplayUI(false);
+
+        if (RolesManager.IsMyTurn)
+        {
+            StartCoroutine(DelaySwitchTurn());
+        }
+    }
+
+    private IEnumerator DelaySwitchTurn()
+    {
+        yield return new WaitForSeconds(1f); 
+        RolesManager.SwitchRole(); 
     }
 
 }

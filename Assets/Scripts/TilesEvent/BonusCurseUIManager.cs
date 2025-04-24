@@ -159,9 +159,41 @@ public class BonusCurseUIManager : NetworkBehaviour
         },
     };
 
-    public string GetEffect(string effectKey, bool isCurse)
+    public Dictionary<string, EffectData> rest = new Dictionary<string, EffectData>()
     {
-        Dictionary<string, EffectData> source = isCurse ? curses : bonuses;
+        {
+            "rest",
+            new EffectData
+            {
+                 mainText = "A Moment to Rest",
+                flavorTexts = new string[]
+                {
+                    "You find a quiet spot to catch your breath.",
+                    "The world slows down... just for a bit.",
+                    "Peace and quiet embrace you here.",
+                    "No threats. No worries. Just rest.",
+                    "You feel your strength slowly returning.",
+                    "Time seems to pause as you relax.",
+                    "Your heartbeat steadies, your mind clears.",
+                    "A calm breeze whispers: 'You've earned this."
+                }
+            }
+        }
+    };
+
+    public string GetEffect(string effectKey, int type)
+    {
+        Dictionary<string, EffectData> source = null;
+        if (type == 0)
+        {
+            source = rest;
+        } else if (type == 1)
+        {
+            source = bonuses;
+        } else if (type == 2)
+        {
+            source = curses;
+        }
 
         if (!source.ContainsKey(effectKey))
         {
@@ -182,36 +214,47 @@ public class BonusCurseUIManager : NetworkBehaviour
 
 
     [ServerRpc(RequireOwnership =false)]
-    public void GetMessageServerRpc(FixedString128Bytes effectKey, bool isCurse)
+    public void GetMessageServerRpc(FixedString128Bytes effectKey, int type)
     {
-        FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), isCurse));
-        SetUICLientRpc(effect, isCurse);
+        FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), type));
+        SetUICLientRpc(effect, type);
 
     }
 
     [ClientRpc]
-    public void SetUICLientRpc(FixedString128Bytes effect,bool isCurse)
+    public void SetUICLientRpc(FixedString128Bytes effect,int type)
     {
         spawnedUI = Instantiate(MessageUIPrefab, GameObject.Find("Canvas").transform);
         var ui = spawnedUI.GetComponent<CurseBonusUI>();
 
-        ui.SetText(effect.ToString(), isCurse);
+        ui.SetText(effect.ToString(), type);
 
-        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f));
+        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f,effect.ToString()));
     }
 
-    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay)
+    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effect)
     {
         yield return new WaitForSeconds(delay);
         if (uiObject != null)
         {
             Destroy(uiObject);
         }
+
+        if (RolesManager.IsMyTurn && effect != "reposition")
+        {
+            StartCoroutine(DelaySwitchTurn());
+        }
     }
 
     public void StartRepositionCoroutine(float delay)
     {
         StartCoroutine(CurseTileEvent.DelayReposition(delay));
+    }
+
+    private IEnumerator DelaySwitchTurn()
+    {
+        yield return new WaitForSeconds(1f);
+        RolesManager.SwitchRole();
     }
 
 }
