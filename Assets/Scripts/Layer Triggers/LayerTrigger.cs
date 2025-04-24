@@ -3,48 +3,63 @@ using Unity.Netcode;
 
 public class LayerTrigger : NetworkBehaviour
 {
-    public int loweredSortingOrder = 1;  // Order inside trigger
-    public int normalSortingOrder = 2;   // Order outside trigger
+    public string loweredSortingLayer = "Foreground";  // Layer inside trigger
+    public string normalSortingLayer = "background";  
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.TryGetComponent(out NetworkObject netObj))
+        if (other.CompareTag("Player") &&
+            other.TryGetComponent(out NetworkObject netObj) &&
+            other.TryGetComponent(out PlayerBoardMovement movement))
         {
-           if (netObj.IsOwner) // Only the owner sends the request
+            if (movement.currentDirection == "x")
             {
-                UpdateSortingOrderServerRpc(netObj.NetworkObjectId, loweredSortingOrder);
-             }
+                if (netObj.IsOwner) // Only the owner sends the request
+            {
+                UpdateSortingLayerServerRpc(netObj.NetworkObjectId, loweredSortingLayer);
+            }
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.TryGetComponent(out NetworkObject netObj))
+        if (other.CompareTag("Player") &&
+             other.TryGetComponent(out NetworkObject netObj) &&
+             other.TryGetComponent(out PlayerBoardMovement movement))
         {
-            if (netObj.IsOwner) // Only the owner sends the request
+            Debug.Log("player current direction: " + movement.currentDirection);
+            if (movement.currentDirection == "x")
             {
-                UpdateSortingOrderServerRpc(netObj.NetworkObjectId, normalSortingOrder);
+                if (netObj.IsOwner) // Only the owner sends the request
+                {
+                    Debug.Log("Exiting trigger, updating sorting order to normal.");
+                    UpdateSortingLayerServerRpc(netObj.NetworkObjectId, normalSortingLayer);
+                }
             }
+            
         }
     }
 
-    [ServerRpc] // Runs on the server
-    private void UpdateSortingOrderServerRpc(ulong playerId, int newSortingOrder)
+    [ServerRpc]
+    private void UpdateSortingLayerServerRpc(ulong playerId, string newSortingLayer)
     {
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(playerId, out NetworkObject playerObject))
         {
-            UpdateSortingOrderClientRpc(playerObject.NetworkObjectId, newSortingOrder);
+            Debug.Log($"Updating sorting layer for player {playerId} to {newSortingLayer}");
+            UpdateSortingLayerClientRpc(playerObject.NetworkObjectId, newSortingLayer);
         }
     }
 
-    [ClientRpc] // Runs on all clients
-    private void UpdateSortingOrderClientRpc(ulong playerId, int newSortingOrder)
+    [ClientRpc]
+    private void UpdateSortingLayerClientRpc(ulong playerId, string newSortingLayer)
     {
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(playerId, out NetworkObject playerObject))
         {
             if (playerObject.TryGetComponent(out SpriteRenderer playerRenderer))
             {
-                playerRenderer.sortingOrder = newSortingOrder;
+                Debug.Log($"Client updating sorting layer for player {playerId} to {newSortingLayer}");
+                playerRenderer.sortingLayerName = newSortingLayer;
             }
         }
     }

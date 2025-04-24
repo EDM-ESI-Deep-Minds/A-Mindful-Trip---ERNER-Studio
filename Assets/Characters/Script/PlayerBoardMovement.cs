@@ -22,7 +22,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     public Tilemap boardTilemap;
     private Vector3Int currentGridPosition;
     //private Vector3 lastDirection = Vector3.right;
-    private string currentDirection = "";
+    public string currentDirection = "";
     public Button rightArrow;
     public Button leftArrow;
     public Button upArrow;
@@ -1055,6 +1055,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         if (offset.x > 0)
         {
             // Move along Y first
+            currentDirection = "y-down";
             if (offset.y != 0)
             {
                 int animIndex = offset.y > 0 ? 1 : 2; // 1 for up, 2 for down
@@ -1110,6 +1111,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             // Move along Y first
             if (offset.y != 0)
             {
+                currentDirection = "y-up";
                 int animIndex = offset.y > 0 ? 1 : 2; // 1 for up, 2 for down
                 SetIdleAnimation(animIndex);
                 Vector3 targetYPos = new Vector3(rb.position.x, worldTargetPos.y, 0);
