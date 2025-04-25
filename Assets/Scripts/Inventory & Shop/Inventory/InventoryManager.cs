@@ -8,7 +8,7 @@ public class InventoryManager : MonoBehaviour
 {
     [SerializeField] private InventorySlot[] inventorySlots; // Reference to 3 slots (done in scene)
     [SerializeField] private TMPro.TMP_Text coinText;
-    [SerializeField] private int startingCoins = 500; // Initial coin value (example)
+    [SerializeField] private int startingCoins = 0; // Initial coin value (example)
     private int currentCoins;
     [SerializeField] public ItemDatabase itemDatabase;
     private List<int> inventoryItems;
