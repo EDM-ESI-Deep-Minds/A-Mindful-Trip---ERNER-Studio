@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 785035089343643650}
   - component: {fileID: 2621464006282935100}
   - component: {fileID: 1916869069548796708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TarusPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}

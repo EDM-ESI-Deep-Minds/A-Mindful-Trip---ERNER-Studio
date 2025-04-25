@@ -76,6 +76,12 @@ public class GameOverManager : NetworkBehaviour
 
     private IEnumerator SetupAndFadeInUI()
     {
+        // stopping all current audio
+        if(AudioManager.instance != null)
+        {
+            AudioManager.instance.StopAllAudio();
+        }
+        
         if (GameOverUI == null)
         {
             GameOverUI = GameObject.Find("GameOverUI");

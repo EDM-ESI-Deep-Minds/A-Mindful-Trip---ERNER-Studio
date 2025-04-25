@@ -57,7 +57,7 @@ public class WinUIManager : MonoBehaviour
             yield return new WaitForSeconds(2.5f);
             yield return FadeScreen.Instance.FadeOut();
             // SceneManager.LoadScene("MainMenu");
-            winUI.SetActive(false);
+            // winUI.SetActive(false);
         }
     }
 

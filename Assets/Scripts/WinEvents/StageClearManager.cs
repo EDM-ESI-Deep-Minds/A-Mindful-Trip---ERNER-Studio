@@ -43,6 +43,11 @@ public class StageClearManager : NetworkBehaviour
     private void RequestWinFlowServerRpc()
     {
         string currentScene = SceneManager.GetActiveScene().name;
+        // stopping all current audio
+        if(AudioManager.instance != null)
+        {
+            AudioManager.instance.StopAllAudio();
+        }
 
         if (currentScene == cityMapSceneName)
         {

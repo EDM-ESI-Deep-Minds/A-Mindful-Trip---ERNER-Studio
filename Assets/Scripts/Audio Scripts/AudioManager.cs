@@ -396,6 +396,25 @@ public class AudioManager : MonoBehaviour
     //             break;
     //     }
     // }
+    public void StopAllAudio()
+    {
+        if (bgmSource.isPlaying)
+            bgmSource.Stop();
+
+        if (ambientSource.isPlaying)
+            ambientSource.Stop();
+
+        if (sfxSource.isPlaying)
+            sfxSource.Stop();
+
+        if (walkSource.isPlaying)
+            walkSource.Stop();
+
+        StopAllCoroutines();
+        cityLoopCoroutine = null;
+        resumeMusicCoroutine = null;
+    }
+
 
     public void StartWalkingLoop()
     {
