@@ -33,7 +33,12 @@ public class BoardManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Re-fetch the tilemap dynamically after scene load
-        GameObject boardObject = GameObject.Find("Board");
+        GameObject boardObject;
+        do
+        {
+            boardObject = GameObject.Find("Board");
+        } while (boardObject == null);
+
         if (boardObject != null)
         {
             boardTilemap = boardObject.GetComponent<Tilemap>();
