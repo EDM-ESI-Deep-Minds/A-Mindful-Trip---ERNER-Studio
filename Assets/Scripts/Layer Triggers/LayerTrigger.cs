@@ -17,10 +17,9 @@ public class LayerTrigger : NetworkBehaviour
             if (movement.currentDirection == "x")
             {
                 if (netObj.IsOwner) // Only the owner sends the request
-            {
-                
-                UpdateSortingLayerServerRpc(netObj.NetworkObjectId, loweredSortingLayer, loweredSortingOrder);
-            }
+                {
+                    UpdateSortingLayerServerRpc(netObj.NetworkObjectId, loweredSortingLayer, loweredSortingOrder);
+                }
             }
         }
     }
@@ -44,27 +43,26 @@ public class LayerTrigger : NetworkBehaviour
         }
     }
 
-    [ServerRpc (RequireOwnership =false)]
+    [ServerRpc(RequireOwnership = false)]
     private void UpdateSortingLayerServerRpc(ulong playerId, string newSortingLayer, int newSortingOrder)
     {
-        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(playerId, out NetworkObject playerObject))
+        ClientRpcParams rpcParams = new ClientRpcParams
         {
-            Debug.Log($"Updating sorting layer for player {playerId} to {newSortingLayer}");
-            UpdateSortingLayerClientRpc(playerObject.NetworkObjectId, newSortingLayer, newSortingOrder);
-        }
+            Send = new ClientRpcSendParams
+            {
+                TargetClientIds = new[] { playerId }
+            }
+        };
+        UpdateSortingLayerClientRpc(newSortingLayer, newSortingOrder, rpcParams);
     }
 
     [ClientRpc]
-    private void UpdateSortingLayerClientRpc(ulong playerId, string newSortingLayer, int newSortingOrder)
+    private void UpdateSortingLayerClientRpc(string newSortingLayer, int newSortingOrder, ClientRpcParams rpcParams = default)
     {
-        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(playerId, out NetworkObject playerObject))
+        if (NetworkManager.Singleton.LocalClient.PlayerObject.TryGetComponent(out SpriteRenderer playerRenderer))
         {
-            if (playerObject.TryGetComponent(out SpriteRenderer playerRenderer))
-            {
-                Debug.Log($"Client updating sorting layer for player {playerId} to {newSortingLayer}");
-                playerRenderer.sortingLayerName = newSortingLayer;
-                playerRenderer.sortingOrder = newSortingOrder;
-            }
+            playerRenderer.sortingLayerName = newSortingLayer;
+            playerRenderer.sortingOrder = newSortingOrder;
         }
     }
 }

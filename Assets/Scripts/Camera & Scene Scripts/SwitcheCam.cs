@@ -28,7 +28,6 @@ public class SwitcheCam : NetworkBehaviour
 
     private void OnDestroy()
     {
-        
         RolesManager.CameraSwitchTarget -= ChaingeTargetServerRpc;
     }
 
