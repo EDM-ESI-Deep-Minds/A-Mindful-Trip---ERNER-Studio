@@ -37,6 +37,13 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
         NetworkManager.Singleton.SceneManager.OnLoadComplete += OnSceneLoadComplete;
     }
 
+    private void OnDestroy()
+    {
+        playerScale.OnValueChanged -= OnScaleChanged;
+        NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnSceneLoadComplete;
+
+    }
+
     private void OnScaleChanged(Vector3 oldScale, Vector3 newScale)
     {
         transform.localScale = newScale;
