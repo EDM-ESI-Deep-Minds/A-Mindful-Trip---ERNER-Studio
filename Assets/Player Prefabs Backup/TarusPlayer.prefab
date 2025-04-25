@@ -432,8 +432,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  moveSpeed: 3
+  moveSpeed: 1
   boardTilemap: {fileID: 0}
+  currentDirection: 
   rightArrow: {fileID: 0}
   leftArrow: {fileID: 0}
   upArrow: {fileID: 0}
