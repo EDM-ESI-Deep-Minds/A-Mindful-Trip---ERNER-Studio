@@ -217,22 +217,22 @@ public class BonusCurseUIManager : NetworkBehaviour
     public void GetMessageServerRpc(FixedString128Bytes effectKey, int type)
     {
         FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), type));
-        SetUICLientRpc(effect, type);
+        SetUICLientRpc(effectKey,effect, type);
 
     }
 
     [ClientRpc]
-    public void SetUICLientRpc(FixedString128Bytes effect,int type)
+    public void SetUICLientRpc(FixedString128Bytes effectKey, FixedString128Bytes effect,int type)
     {
         spawnedUI = Instantiate(MessageUIPrefab, GameObject.Find("Canvas").transform);
         var ui = spawnedUI.GetComponent<CurseBonusUI>();
 
         ui.SetText(effect.ToString(), type);
 
-        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f,effect.ToString()));
+        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f,effectKey.ToString()));
     }
 
-    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effect)
+    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effectKey)
     {
         yield return new WaitForSeconds(delay);
         if (uiObject != null)
@@ -240,7 +240,7 @@ public class BonusCurseUIManager : NetworkBehaviour
             Destroy(uiObject);
         }
 
-        if (RolesManager.IsMyTurn && effect != "reposition")
+        if (RolesManager.IsMyTurn && effectKey != "reposition")
         {
             StartCoroutine(DelaySwitchTurn());
         }

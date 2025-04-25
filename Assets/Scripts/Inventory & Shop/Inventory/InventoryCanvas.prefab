@@ -398,7 +398,7 @@ MonoBehaviour:
   - {fileID: 1020211365708692557}
   - {fileID: 7282327483348304329}
   coinText: {fileID: 3371638948355345425}
-  startingCoins: 500
+  startingCoins: 0
   itemDatabase: {fileID: 11400000, guid: 5e60fc6da62ae3147abd092414ebbeae, type: 2}
   player: {fileID: 0}
   lockIcon:
