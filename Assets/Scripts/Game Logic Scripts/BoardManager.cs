@@ -106,7 +106,7 @@ public class BoardManager : MonoBehaviour
                     else if (spriteName == "end_city_0" || spriteName == "end_country_0")
                     {
                         newTile.tileType = "End";
-                    }else if (spriteName == "false_intersection_0")
+                    }else if (spriteName == "false_intersection_0" || spriteName == "falseInter_0")
                     {
                         newTile.tileType = "Question";
                         newTile.falseIntersection = true;
