@@ -513,6 +513,8 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   loweredSortingLayer: foreground
   normalSortingLayer: background
+  loweredSortingOrder: 1
+  normalSortingOrder: 2
 --- !u!114 &152055425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,6 +909,8 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   loweredSortingLayer: foreground
   normalSortingLayer: background
+  loweredSortingOrder: 1
+  normalSortingOrder: 2
 --- !u!114 &194716442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105491,6 +105495,8 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   loweredSortingLayer: foreground
   normalSortingLayer: background
+  loweredSortingOrder: 1
+  normalSortingOrder: 2
 --- !u!114 &290767927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105682,6 +105688,8 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   loweredSortingLayer: foreground
   normalSortingLayer: background
+  loweredSortingOrder: 1
+  normalSortingOrder: 2
 --- !u!4 &304849450
 Transform:
   m_ObjectHideFlags: 0
@@ -122031,6 +122039,8 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   loweredSortingLayer: foreground
   normalSortingLayer: background
+  loweredSortingOrder: 1
+  normalSortingOrder: 2
 --- !u!114 &1010757447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123628,6 +123638,8 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   loweredSortingLayer: foreground
   normalSortingLayer: background
+  loweredSortingOrder: 1
+  normalSortingOrder: 2
 --- !u!114 &1643674245
 MonoBehaviour:
   m_ObjectHideFlags: 0
