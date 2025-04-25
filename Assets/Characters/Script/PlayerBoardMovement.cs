@@ -775,6 +775,14 @@ public class PlayerBoardMovement : NetworkBehaviour
         isMoving = false;
         StopWalkSFX();
         UpdateFace();
+        BonusCurseUIManager UIManager = Object.FindFirstObjectByType<BonusCurseUIManager>();
+        UIManager.StartCoroutine(DelaySwitchTurn());
+    }
+
+    public static IEnumerator DelaySwitchTurn()
+    {
+        yield return new WaitForSeconds(1f);
+        RolesManager.SwitchRole();
     }
 
     // this function to update the sprite of the player depending on the current direction
