@@ -62,6 +62,8 @@ public class spawn_mang : NetworkBehaviour
         RoomUIManager roomUiManager= FindFirstObjectByType<RoomUIManager>();
         int[] selectedCharacters = roomUiManager.GetSelectedCharacters();
 
+        index_position = -1;
+
         foreach (var client in NetworkManager.Singleton.ConnectedClients)
         {
             ulong clientId = client.Key;

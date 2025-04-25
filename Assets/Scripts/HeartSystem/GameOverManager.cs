@@ -115,93 +115,112 @@ public class GameOverManager : NetworkBehaviour
 
     public void OnMainMenuButtonClicked()
     {
-        if (IsServer)
-        {
-            // LoadMainMenuSceneForAllClients();
-            DisconnectClientsClientRpc();
-            StartCoroutine(ShutdownAndLoadMenu());
-        }
-        else
-        {
-            // TriggerLoadMainMenuServerRpc();
-            RequestDisconnectServerRpc();
-        }
+        spawn_mang.IndexTabAllPlayer = 0;
+        spawn_mang.SpawanDone = false;
+        spawn_mang.AllPlayer = new GameObject[4];
+
+        //if (NetworkManager.Singleton != null)
+        //{
+        //    if (NetworkManager.Singleton.IsServer)
+        //    {
+        //        foreach (var netObj in NetworkManager.Singleton.SpawnManager.SpawnedObjectsList)
+        //        {
+        //            if (netObj != null)
+        //                Destroy(netObj.gameObject);
+        //        }
+        //    }
+
+        //    NetworkManager.Singleton.Shutdown();
+        //    Destroy(NetworkManager.Singleton.gameObject);
+        //}
+
+        //if (Instance == this)
+        //{
+        //    Instance = null;
+        //}
+        //Destroy(gameObject);
+
+        SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
     }
 
-    // [ServerRpc(RequireOwnership = false)]
-    // private void TriggerLoadMainMenuServerRpc(ServerRpcParams rpcParams = default)
-    // {
-    //     LoadMainMenuSceneForAllClients();
-    // }
+    //[ServerRpc(RequireOwnership = false)]
+    //private void TriggerLoadMainMenuServerRpc(ServerRpcParams rpcParams = default)
+    //{
+    //    LoadMainMenuSceneForAllClients();
+    //}
 
-    // private void LoadMainMenuSceneForAllClients()
-    // {
-    //     Debug.Log("[Server] Loading MainMenu scene for all players...");
-    //     NetworkManager.Singleton.SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
-    // }
-    [ServerRpc(RequireOwnership = false)]
-    private void RequestDisconnectServerRpc(ServerRpcParams rpcParams = default)
-    {
-        DisconnectClientsClientRpc();
-        StartCoroutine(ShutdownAndLoadMenu());
-    }
+    //private void LoadMainMenuSceneForAllClients()
+    //{
+    //    Debug.Log("[Server] Loading MainMenu scene for all players...");
+    //    NetworkManager.Singleton.SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
+    //}
 
-    [ClientRpc]
-    private void DisconnectClientsClientRpc()
-    {
-        if (!IsServer)
-        {
-            StartCoroutine(ShutdownAndLoadMenu());
-        }
-    }
 
-    // private IEnumerator ShutdownAndLoadMenu()
-    // {
-    //     Debug.Log("Shutting down network and loading main menu...");
+    //[ServerRpc(RequireOwnership = false)]
+    //private void RequestDisconnectServerRpc(ServerRpcParams rpcParams = default)
+    //{
+    //    DisconnectClientsClientRpc();
+    //    StartCoroutine(ShutdownAndLoadMenu());
+    //}
 
-    //     yield return new WaitForSeconds(0.5f); // Temporizing
+    //[ClientRpc]
+    //private void DisconnectClientsClientRpc()
+    //{
+    //    if (!IsServer)
+    //    {
+    //        StartCoroutine(ShutdownAndLoadMenu());
+    //    }
+    //}
 
-    //     NetworkManager.Singleton.Shutdown();
+    //private IEnumerator ShutdownAndLoadMenu()
+    //{
+    //    Debug.Log("Shutting down network and loading main menu...");
 
-    //     // Cleaning up singletons
-    //     if (Instance == this)
-    //     {
-    //         Instance = null;
-    //     }
+    //    yield return new WaitForSeconds(0.5f); // Temporizing
 
-    //     Destroy(gameObject);
+    //    NetworkManager.Singleton.Shutdown();
 
-    //     SceneManager.LoadScene(mainMenuSceneName);
-    // }
-    private IEnumerator ShutdownAndLoadMenu()
-    {
-        Debug.Log("Shutting down network and cleaning up...");
+    //    // Cleaning up singletons
+    //    if (Instance == this)
+    //    {
+    //        Instance = null;
+    //    }
 
-        yield return new WaitForSeconds(0.5f);
+    //    Destroy(gameObject);
 
-        if (NetworkManager.Singleton != null)
-        {
-            if (NetworkManager.Singleton.IsServer)
-            {
-                foreach (var netObj in NetworkManager.Singleton.SpawnManager.SpawnedObjectsList)
-                {
-                    if (netObj != null)
-                        Destroy(netObj.gameObject);
-                }
-            }
+    //    SceneManager.LoadScene(mainMenuSceneName);
+    //}
 
-            NetworkManager.Singleton.Shutdown();
 
-            Destroy(NetworkManager.Singleton.gameObject);
-        }
+    //private IEnumerator ShutdownAndLoadMenu()
+    //{
+    //    Debug.Log("Shutting down network and cleaning up...");
 
-        if (Instance == this)
-        {
-            Instance = null;
-        }
-        Destroy(gameObject);
+    //    yield return new WaitForSeconds(0.5f);
 
-        SceneManager.LoadScene(mainMenuSceneName);
-    }
+    //    if (NetworkManager.Singleton != null)
+    //    {
+    //        if (NetworkManager.Singleton.IsServer)
+    //        {
+    //            foreach (var netObj in NetworkManager.Singleton.SpawnManager.SpawnedObjectsList)
+    //            {
+    //                if (netObj != null)
+    //                    Destroy(netObj.gameObject);
+    //            }
+    //        }
+
+    //        NetworkManager.Singleton.Shutdown();
+
+    //        Destroy(NetworkManager.Singleton.gameObject);
+    //    }
+
+    //    if (Instance == this)
+    //    {
+    //        Instance = null;
+    //    }
+    //    Destroy(gameObject);
+
+    //    SceneManager.LoadScene(mainMenuSceneName);
+    //}
 
 }
