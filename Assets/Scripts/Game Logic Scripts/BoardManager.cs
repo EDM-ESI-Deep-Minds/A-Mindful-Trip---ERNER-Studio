@@ -77,7 +77,7 @@ public class BoardManager : MonoBehaviour
                     // Classify tile type based on sprite name
                     if (spriteName == "Board Tiles 3x3_0" || spriteName == "Board Tiles 3x3_1" ||
                         spriteName == "Board Tiles 3x3_2" || spriteName == "Board Tiles 3x3_3" ||
-                        spriteName == "Board Tiles_2" || spriteName == "city_board_tiles_v2_4" || spriteName == "city_board_tiles_v2_5")
+                        spriteName == "Board Tiles_2" || spriteName == "city_board_tiles_v2_4" || spriteName == "city_board_tiles_v2_5" || spriteName == "city_board_tiles_v2_37" || spriteName == "city_board_tiles_37")
                     {
                         newTile.tileType = "Question";
                     }

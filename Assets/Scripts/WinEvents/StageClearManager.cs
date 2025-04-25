@@ -7,7 +7,7 @@ public class StageClearManager : NetworkBehaviour
 {
     public static StageClearManager Instance;
 
-    public string cityMapSceneName = "CityMap";
+    public string cityMapSceneName = "City";
     public string mainMenuSceneName = "MainMenu";
     public string hubSceneName = "Hub&Dans";
 
