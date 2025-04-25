@@ -5,21 +5,36 @@ public class WinAMapEvent : NetworkBehaviour
 {
     private void Start()
     {
+        // Subscribe to the event
         EventTrigger.OnMapWin += WhenWin;
-    }                                                       // balk tnse desert 
+    }
+
+    private void OnDestroy()
+    {
+        // IMPORTANT: Unsubscribe when this object is destroyed
+        EventTrigger.OnMapWin -= WhenWin;
+    }
+
     public void WhenWin()
     {
-     RequestSceneChangeServerRpc();
-    }                                  
+        // Add a check to ensure the NetworkObject is still valid
+        if (IsSpawned && NetworkObject != null && NetworkObject.IsSpawned)
+        {
+            RequestSceneChangeServerRpc();
+        }
+        else
+        {
+            Debug.LogWarning("WinAMapEvent triggered but NetworkObject is no longer valid");
+        }
+    }
 
-     [ServerRpc(RequireOwnership = false)]
+    [ServerRpc(RequireOwnership = false)]
     void RequestSceneChangeServerRpc()
     {
-        
         if (IsServer)
         {
-            NetworkManager.SceneManager.LoadScene("Hub&Dans", UnityEngine.SceneManagement.LoadSceneMode.Single);
-            //iffffffffff def de desert   final win
+            Debug.Log("Moving from the map to the hub");
+            NetworkManager.Singleton.SceneManager.LoadScene("Hub&Dans", UnityEngine.SceneManagement.LoadSceneMode.Single);
         }
     }
 }

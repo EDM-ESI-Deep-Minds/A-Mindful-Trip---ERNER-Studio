@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class BoardManager : MonoBehaviour
@@ -14,31 +15,37 @@ public class BoardManager : MonoBehaviour
     public static List<Vector3> storedEndPositions = new List<Vector3>();
     private static bool hasInitialized = false;
 
-    void Start()
-    {
-        InitializeBoard();
-    }
-
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject); // Prevent multiple instances
-            return;
-        }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-        // Find the Tilemap dynamically by name
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void Start()
+    {
+        InitializeBoard(); // Optional, depends on your needs
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Re-fetch the tilemap dynamically after scene load
         GameObject boardObject = GameObject.Find("Board");
         if (boardObject != null)
         {
             boardTilemap = boardObject.GetComponent<Tilemap>();
+            Debug.Log($"Tilemap found in scene: {scene.name}");
         }
         else
         {
-            Debug.LogError("Board Tilemap not found! Make sure it exists in the scene.");
+            boardTilemap = null;
+            Debug.LogWarning($"No Board Tilemap found in scene: {scene.name}");
         }
 
+        InitializeBoard(); // Re-initialize for the new board
     }
 
     void InitializeBoard()
@@ -458,7 +465,7 @@ public class BoardManager : MonoBehaviour
     {
         if (Instance == null || Instance.boardTilemap == null)
         {
-          //  Debug.LogError("BoardManager or Board Tilemap is not assigned!");
+            Debug.LogError("BoardManager or Board Tilemap is not assigned!");
             return Vector3Int.zero;  // Return zero if something is wrong
         }
 

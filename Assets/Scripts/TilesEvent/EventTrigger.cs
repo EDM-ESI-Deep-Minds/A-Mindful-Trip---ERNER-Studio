@@ -43,6 +43,7 @@ public static class EventTrigger
                 break;
             case "End":
                 OnMapWin?.Invoke();
+                Debug.Log("invoking the end tile event"); 
                 break;
 
             default:
