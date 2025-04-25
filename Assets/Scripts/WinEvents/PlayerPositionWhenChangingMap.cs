@@ -1,8 +1,6 @@
 using Unity.Netcode;
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using System.Globalization;
 
 public class PlayerPositionWhenChangingMap : NetworkBehaviour
 {
@@ -70,25 +68,32 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     {
         if (NetworkManager.Singleton.LocalClientId != targetClientId) return;
 
+        Debug.Log($"[PlayerPosition] Applying spawn for client {targetClientId} in scene '{scene}' at index {SpawnIndex}");
+
         switch (scene)
         {
             case "City":
                 transform.position = new Vector2(city_map_positions[SpawnIndex, 0], city_map_positions[SpawnIndex, 1]);
+                Debug.Log($"[PlayerPosition] City spawn position: {transform.position}");
                 SetScaleServerRpc(new Vector3(2f, 2f, 2f));
                 break;
 
             case "CountrySide":
+                Debug.Log("[PlayerPosition] CountrySide scene selected (no position logic implemented yet)");
                 break;
 
             case "Desert":
                 transform.position = new Vector2(desert_map_positions[SpawnIndex, 0], desert_map_positions[SpawnIndex, 1]);
+                Debug.Log($"[PlayerPosition] Desert spawn position: {transform.position}");
                 break;
 
             case "Hub&Dans":
                 transform.position = new Vector2(-1f, -0.75f);
+                Debug.Log($"[PlayerPosition] Hub&Dans spawn position: {transform.position}");
                 break;
 
             default:
+                Debug.LogWarning($"[PlayerPosition] Unknown scene '{scene}', no spawn applied");
                 break;
         }
     }

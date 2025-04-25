@@ -115,7 +115,7 @@ public class QuestionUI : MonoBehaviour
 
     private string GetRandomFailureDialogue(string correctAnswer)
     {
-        string[] lines = { "Wrong answer... The Right Answer is : ", "Close, but no. The Right Answer is : ", "Oops! The Right Answer is : ", "Better luck next time! " };
+        string[] lines = { "Wrong answer... The Right Answer is : ", "Close, but no. The Right Answer is : ", "Oops! The Right Answer is : ", "Better luck next time!  The Right Answer is : " };
         return lines[Random.Range(0, lines.Length)]+correctAnswer;
     }
 }
