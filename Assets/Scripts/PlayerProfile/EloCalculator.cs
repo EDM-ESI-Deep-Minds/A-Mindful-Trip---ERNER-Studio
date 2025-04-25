@@ -3,7 +3,7 @@ using UnityEngine;
 
 public static class EloCalculator
 {
-    private const int BaseElo = 50;
+    private const int BaseElo = 200;
 
     // Difficulty: 1 = Easy, 2 = Medium, 3 = Hard
     public static void UpdateCategoryElo(ProfileManager.PlayerProfile profile, string categoryName, bool correct, int difficultyLevel)

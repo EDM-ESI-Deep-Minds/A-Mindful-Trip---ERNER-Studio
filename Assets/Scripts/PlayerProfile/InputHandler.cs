@@ -58,11 +58,11 @@ public class InputHandler : MonoBehaviour
         List<CategoryElo> defaultCategories = new List<CategoryElo>();
         for (int i = 9; i <= 32; i++)
         {
-            defaultCategories.Add(new CategoryElo(i.ToString(), 50, 0, 0));
+            defaultCategories.Add(new CategoryElo(i.ToString(), 200, 0, 0));
         }
 
         // Create a new InputEntry with the default categories
-        entries.Add(new InputEntry(nameInput.text, 50, 1, defaultCategories.ToArray()));
+        entries.Add(new InputEntry(nameInput.text, 200, 1, defaultCategories.ToArray()));
 
         FileHandler.SaveToJSON(entries, filename);
 
@@ -74,13 +74,13 @@ public class InputHandler : MonoBehaviour
             List<ProfileManager.CategoryElo> pmCategories = new List<ProfileManager.CategoryElo>();
             for (int i = 9; i <= 32; i++)
             {
-                pmCategories.Add(new ProfileManager.CategoryElo(i.ToString(), 50, 0, 0));
+                pmCategories.Add(new ProfileManager.CategoryElo(i.ToString(), 200, 0, 0));
             }
 
             ProfileManager.PlayerProfile newProfile = new ProfileManager.PlayerProfile
             {
                 playerName = nameInput.text,
-                Elo = 50,
+                Elo = 200,
                 character = 1,
                 categories = pmCategories.ToArray()
             };
