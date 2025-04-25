@@ -1,7 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class NewEmptyCSharpScript : NetworkBehaviour
+public class ToNextMap : NetworkBehaviour
 {
     private static bool DesertDone = false;
 
