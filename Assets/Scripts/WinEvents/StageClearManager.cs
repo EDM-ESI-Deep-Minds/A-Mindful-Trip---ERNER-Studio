@@ -51,9 +51,8 @@ public class StageClearManager : NetworkBehaviour
         else
         {
             TriggerStageClearMessageClientRpc();
+            StartCoroutine(DelaySceneChange());
         }
-
-        StartCoroutine(DelaySceneChange());
     }
 
     private IEnumerator DelaySceneChange()
