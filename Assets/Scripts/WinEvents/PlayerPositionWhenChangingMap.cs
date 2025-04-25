@@ -37,7 +37,7 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
         NetworkManager.Singleton.SceneManager.OnLoadComplete += OnSceneLoadComplete;
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         playerScale.OnValueChanged -= OnScaleChanged;
         NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnSceneLoadComplete;
@@ -74,7 +74,7 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
         {
             case "City":
                 transform.position = new Vector2(city_map_positions[SpawnIndex, 0], city_map_positions[SpawnIndex, 1]);
-                SetScaleServerRpc(new Vector3(2.4f, 2.4f, 2.4f));
+                SetScaleServerRpc(new Vector3(2f, 2f, 2f));
                 break;
 
             case "CountrySide":
