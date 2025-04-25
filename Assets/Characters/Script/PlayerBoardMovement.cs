@@ -671,7 +671,9 @@ public class PlayerBoardMovement : NetworkBehaviour
         if (!RolesManager.IsMyTurn) yield break;
         backWardBridge = true;
 
-        if (playerPath.Count < 1) yield break; 
+        if (playerPath.Count < 1) yield break;
+
+        StartWalkSFX();
 
         for (int i = 0; i < steps; i++)
         {
@@ -770,7 +772,8 @@ public class PlayerBoardMovement : NetworkBehaviour
                 i++;
             }
         }
-        isMoving = false; 
+        isMoving = false;
+        StopWalkSFX();
         UpdateFace();
     }
 
@@ -1063,7 +1066,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         Vector3Int offset = targetTilePos - currentTilePos;
 
-        
+        StartWalkSFX();
 
         if (offset.x > 0)
         {
@@ -1144,7 +1147,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         // Update tile position after crossing
         currentTilePos = targetTilePos;
-
+        StopWalkSFX();
         isCrossingBridge = false; // Unlock movement
     }
 
