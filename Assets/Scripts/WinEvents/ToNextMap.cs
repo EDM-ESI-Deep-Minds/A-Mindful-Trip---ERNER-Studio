@@ -3,11 +3,23 @@ using UnityEngine;
 
 public class NewEmptyCSharpScript : NetworkBehaviour
 {
-    public bool DesertDone = false;
+    private static bool DesertDone = false;
 
     void OnEnable()
     {
         ReadyManager.AllReady += FromHubDansToMap;
+    }
+
+    void OnDisable()
+    {
+        // Unsubscribe when disabled
+        ReadyManager.AllReady -= FromHubDansToMap;
+    }
+
+    private void OnDestroy()
+    {
+        // Also unsubscribe when destroyed (safety measure)
+        ReadyManager.AllReady -= FromHubDansToMap;
     }
 
     public void FromHubDansToMap()

@@ -430,7 +430,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                                     (moveOffset == new Vector3Int(2, 1, 0) || moveOffset == new Vector3Int(3, 0, 0) ||
                                     moveOffset == new Vector3Int(1, 1, 0) || moveOffset == new Vector3Int(1, 2, 0) ||
                                     moveOffset == new Vector3Int(2, -1, 0) || moveOffset == new Vector3Int(1, -1, 0) ||
-                                    moveOffset  == new Vector3Int(2, 2, 0) ||
+                                    moveOffset  == new Vector3Int(2, 2, 0) || 
                                     moveOffset == new Vector3Int(2, 0, 0) || moveOffset == new Vector3Int(1, 0, 0)))
                                     {
                                         nextTilePos = potentialNextPos;
@@ -811,13 +811,9 @@ public class PlayerBoardMovement : NetworkBehaviour
 
             PathTile nextTile = boardManager.pathTiles[potentialNextPos];
 
-            // Check if any of the nextTile's possible moves has x > 0
-            bool hasForwardOption = nextTile.possibleMoves.Any(nextMove => nextMove.x > 0);
-
-            if (hasForwardOption)
-            {
-                forwardMoveCount++;
-            }
+            
+            forwardMoveCount++;
+            
         }
 
         return forwardMoveCount >= 2; // Return true if more than 2 moves have x > 0, greater or equal to 2
