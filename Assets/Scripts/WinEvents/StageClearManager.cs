@@ -62,7 +62,7 @@ public class StageClearManager : NetworkBehaviour
 
     private IEnumerator DelaySceneChange()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
 
         RequestSceneChangeServerRpc();
     }
