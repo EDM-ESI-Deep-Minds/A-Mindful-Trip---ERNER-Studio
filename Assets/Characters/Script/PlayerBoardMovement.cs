@@ -50,8 +50,17 @@ public class PlayerBoardMovement : NetworkBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         DontDestroyOnLoad(gameObject);
-    }
 
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (IsOwner) // Only run for the owning player
+        {
+            StartCoroutine(FindBoardManager()); // Re-link everything
+            StartCoroutine(FindDiceManager());  // Optional: if you reset DiceManager on scene load
+        }
+    }
     public override void OnNetworkSpawn()
     {
         if (IsOwner)
@@ -61,18 +70,21 @@ public class PlayerBoardMovement : NetworkBehaviour
         }
     }
 
-    private IEnumerator FindBoardManager()
-    {
+    private IEnumerator FindBoardManager(){
+        boardManager = null;
+        rightArrow = null;
+        leftArrow = null;
+        upArrow = null;
+        downArrow = null;
+        progressBarController = null;
+
         while (boardManager == null)
         {
             boardManager = FindFirstObjectByType<BoardManager>();
-
             if (boardManager == null)
             {
-                Debug.LogWarning("BoardManager not found, retrying...");
                 yield return new WaitForSeconds(0.5f);
             }
-            
         }
 
         if (progressBarController == null)
@@ -96,8 +108,10 @@ public class PlayerBoardMovement : NetworkBehaviour
         // save the first end position
         endPosition = BoardManager.storedEndPositions[0];
         Vector3 worldPosition = transform.position;
-        Vector3Int gridPosition = BoardManager.GetGridPositionFromWorld(worldPosition);
+        Debug.Log($"World Position: {worldPosition}");
+        Vector3Int gridPosition= boardManager.boardTilemap.WorldToCell(worldPosition);
         currentTilePos = gridPosition;
+        Debug.Log($"Current Tile Position: {currentTilePos}");
         DetermineDefaultDirection();
 
         rightArrow = GameObject.Find("RightArrow").GetComponent<Button>();
@@ -239,6 +253,8 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     private void DetermineDefaultDirection()
     {
+        Vector3 worldPosition = transform.position;
+        Vector3Int currentTilePos = boardManager.boardTilemap.WorldToCell(worldPosition);
         Vector3Int[] validMoves = boardManager.pathTiles[currentTilePos].possibleMoves;
         // debugging the current tile  position
         Debug.Log($"Current Tile Position: {currentTilePos}");
@@ -601,6 +617,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
             isMoving = false;
             currentTilePath = boardManager.pathTiles[currentTilePos];
+            Debug.Log($"Current Tile Path Type: {currentTilePath.tileType}");
             if ((currentTilePath.tileType == "End"))
             {
                 EventTrigger.SelectEventToTrigger(currentTilePath.tileType);
@@ -1139,8 +1156,10 @@ public class PlayerBoardMovement : NetworkBehaviour
     {
         if (diceManager != null)
         {
-            diceManager.OnDiceRolled -= OnDiceRolled; // Unsubscribe to prevent memory leaks
+            diceManager.OnDiceRolled -= OnDiceRolled; // Unsubscribe from dice event
         }
+
+        SceneManager.sceneLoaded -= OnSceneLoaded; // Unsubscribe from scene change
     }
 
 
