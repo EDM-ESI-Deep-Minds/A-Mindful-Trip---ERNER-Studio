@@ -12,7 +12,7 @@ public class AskForHelp : NetworkBehaviour
     //____________________ PART1____________________
     public void HelpMe()
     {
-        HelpMeServerRpc("say may name");
+        HelpMeServerRpc(ProfileManager.SelectedProfile.playerName);
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -27,41 +27,41 @@ public class AskForHelp : NetworkBehaviour
     {
         ClientSenderHelp = ClientSenderId;
         if (NetworkManager.Singleton.LocalClientId == ClientSenderId) { return; }
+        // han asm chkon demenda l help
         HelpHimB.gameObject.SetActive(true);
     }
 
-    //____________________ PART2____________________  h
-     public void HelpHim()
+    //____________________ PART2____________________
+    public void HelpHim()
     {
-        HelpHimServerRpc("say my name");
+        HelpHimServerRpc(ProfileManager.SelectedProfile.playerName);
     }
+
     [ServerRpc(RequireOwnership = false)]
     public void HelpHimServerRpc(string name, ServerRpcParams rpcParams = default)
     {
         ulong ClientReceiverId = rpcParams.Receive.SenderClientId;
         HelpHimClientRpc(name, ClientReceiverId);
     }
+
     [ClientRpc]
     public void HelpHimClientRpc(string name, ulong ClientReceiverId)
     {
-        //nahilhom l9afli    han lazm triglihom gar
         ClientReceiverHelp = ClientReceiverId;
+        HelpHimB.gameObject.SetActive(false);
+        if (NetworkManager.Singleton.LocalClientId != ClientReceiverHelp)
+        {
+            // hna asm li accsapta l halp    
+        }
         if (NetworkManager.Singleton.LocalClientId == ClientReceiverHelp)
         {
-            //nahili 9alb
-           // CurseTileEvent.removeHeart();
             HeartUIManager heartUI = Object.FindFirstObjectByType<HeartUIManager>();
             heartUI.removeHeart();
         }
         if (NetworkManager.Singleton.LocalClientId == ClientSenderHelp)
         {
-            //zidlo 9alb
             HeartUIManager heartUI = Object.FindFirstObjectByType<HeartUIManager>();
             heartUI.addHeart();
-        } 
+        }
     }
-
-
-
-
 }
