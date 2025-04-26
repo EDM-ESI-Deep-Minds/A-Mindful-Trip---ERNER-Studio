@@ -46,6 +46,7 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     private void OnScaleChanged(Vector3 oldScale, Vector3 newScale)
     {
         transform.localScale = newScale;
+        FaceRight(); // Ensure facing right
     }
 
     private void OnSceneLoadComplete(ulong clientId, string sceneName, LoadSceneMode loadSceneMode)
@@ -102,7 +103,7 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
                 Debug.LogWarning($"[PlayerPosition] Unknown scene '{scene}', no spawn applied");
                 break;
         }
-        FaceRight();
+        // removed call of FaceRight();
     }
 
     private void FaceRight()
