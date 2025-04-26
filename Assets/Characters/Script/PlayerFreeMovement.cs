@@ -47,13 +47,14 @@ public class PlayerFreeMovement : NetworkBehaviour
         // Only for owner
         if (!IsOwner) return;
 
-        // Managing local inputs
-        HandleInput();
-
         if (ReadyManager.allReady)
         {
             animator.Play("idle_right");
+            return;
         }
+
+        // Managing local inputs
+        HandleInput();
     }
 
     /* private void HandleInput()
