@@ -44,10 +44,7 @@ public class StageClearManager : NetworkBehaviour
     {
         string currentScene = SceneManager.GetActiveScene().name;
         // stopping all current audio
-        if(AudioManager.instance != null)
-        {
-            AudioManager.instance.StopAllAudio();
-        }
+        StopAllAudioClientRpc();
 
         if (currentScene == cityMapSceneName)
         {
@@ -90,5 +87,14 @@ public class StageClearManager : NetworkBehaviour
     private void TriggerWinMessageClientRpc()
     {
         StartCoroutine(WinUIManager.Instance.ShowWinAndReturnToMenu());
+    }
+
+    [ClientRpc]
+    private void StopAllAudioClientRpc()
+    {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.StopAllAudio();
+        }
     }
 }

@@ -82,7 +82,7 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
             case "City":
                 transform.position = new Vector2(city_map_positions[SpawnIndex, 0], city_map_positions[SpawnIndex, 1]);
                 Debug.Log($"[PlayerPosition] City spawn position: {transform.position}");
-                SetScaleServerRpc(new Vector3(2f, 2f, 2f));
+                SetScaleServerRpc(new Vector3(1.8f, 1.8f, 1.8f));
                 break;
 
             case "CountrySide":
