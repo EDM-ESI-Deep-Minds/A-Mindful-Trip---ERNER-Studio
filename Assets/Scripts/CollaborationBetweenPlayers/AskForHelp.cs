@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class AskForHelp : NetworkBehaviour
 {
     [SerializeField]
-    public Button HelpHimB;
+    public GameObject HelpHimB;
     public ulong ClientSenderHelp;
     public ulong ClientReceiverHelp;
 
@@ -28,6 +28,8 @@ public class AskForHelp : NetworkBehaviour
         ClientSenderHelp = ClientSenderId;
         if (NetworkManager.Singleton.LocalClientId == ClientSenderId) { return; }
         // han asm chkon demenda l help
+        Debug.Log("ClientSenderHelp: " + ClientSenderHelp);
+        HelpRequestUI.Instance.ShowHelpRequest(name);
         HelpHimB.gameObject.SetActive(true);
     }
 
@@ -51,7 +53,8 @@ public class AskForHelp : NetworkBehaviour
         HelpHimB.gameObject.SetActive(false);
         if (NetworkManager.Singleton.LocalClientId != ClientReceiverHelp)
         {
-            // hna asm li accsapta l halp    
+            Debug.Log("ClientReceiverHelp: " + ClientReceiverHelp);
+            HelpRequestUI.Instance.ShowHelpAccepted(name);
         }
         if (NetworkManager.Singleton.LocalClientId == ClientReceiverHelp)
         {
