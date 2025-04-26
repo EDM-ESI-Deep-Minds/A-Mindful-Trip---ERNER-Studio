@@ -259,7 +259,12 @@ public class PlayerBoardMovement : NetworkBehaviour
         // debugging the current tile  position
         Debug.Log($"Current Tile Position: {currentTilePos}");
         
-        
+        if(SceneManager.GetActiveScene().name != "CountrySide")
+        {
+            SetIdleAnimation(0);
+            currentDirection = "x";
+            return;
+        }
 
         if (validMoves.Length == 0)
         {
