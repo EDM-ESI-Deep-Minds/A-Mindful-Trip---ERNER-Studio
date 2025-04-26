@@ -33,10 +33,10 @@ public class spawn_mang : NetworkBehaviour
     { -0.56f, 0.24f }
    };
 
-    int index_position=-1;
+    int index_position = -1;
     public static GameObject[] AllPlayer = new GameObject[4];
     public static int IndexTabAllPlayer = 0;
-    public static bool SpawanDone=false;
+    public static bool SpawanDone = false;
 
 
     public void OnStartButtonPressed()
@@ -59,7 +59,7 @@ public class spawn_mang : NetworkBehaviour
 
     private void SpawnAllPlayers()
     {
-        RoomUIManager roomUiManager= FindFirstObjectByType<RoomUIManager>();
+        RoomUIManager roomUiManager = FindFirstObjectByType<RoomUIManager>();
         int[] selectedCharacters = roomUiManager.GetSelectedCharacters();
 
         index_position = -1;
@@ -70,6 +70,9 @@ public class spawn_mang : NetworkBehaviour
 
             int characterIndex = selectedCharacters[IndexTabAllPlayer];
             GameObject playerInstance = Instantiate(playerPrefabs[characterIndex], GetSpawnPosition(), Quaternion.identity);
+
+            // Forcing player to face right
+            // playerInstance.transform.localScale = new Vector3(1, 1, 1);
 
             playerInstance.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
             AllPlayer[IndexTabAllPlayer] = playerInstance;
@@ -82,7 +85,7 @@ public class spawn_mang : NetworkBehaviour
     private Vector2 GetSpawnPosition()
     {
         index_position++;
-        return new Vector2(les_position[index_position,0], les_position[index_position, 1]);
+        return new Vector2(les_position[index_position, 0], les_position[index_position, 1]);
     }
 
 
@@ -96,7 +99,7 @@ public class spawn_mang : NetworkBehaviour
 
     [ServerRpc(RequireOwnership = false)]
     [System.Obsolete]
-    private void ChangeSceneServerRpc()    
+    private void ChangeSceneServerRpc()
     {
         ApplyDontDestroyOnLoadClientRpc();
         //  TextChatW.transform.SetParent(null);

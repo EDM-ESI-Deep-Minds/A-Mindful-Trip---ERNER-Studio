@@ -21,7 +21,8 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     };
 
     public string scene;
-    public int nextSpawnIndex = -1;
+    // public int nextSpawnIndex = -1;
+    private static int globalSpawnIndex = -1;
 
     private NetworkVariable<Vector3> playerScale = new NetworkVariable<Vector3>(
         Vector3.one,
@@ -35,7 +36,7 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
         NetworkManager.Singleton.SceneManager.OnLoadComplete += OnSceneLoadComplete;
     }
 
-    private void OnDisable()
+    protected void OnDestroy()
     {
         playerScale.OnValueChanged -= OnScaleChanged;
         NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnSceneLoadComplete;
@@ -50,7 +51,9 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     private void OnSceneLoadComplete(ulong clientId, string sceneName, LoadSceneMode loadSceneMode)
     {
         if (!IsOwner) return;
-        nextSpawnIndex = -1;
+        // nextSpawnIndex = -1;
+        if (IsServer)
+            globalSpawnIndex = -1;
         scene = sceneName;
         AskForMyPositionServerRpc();
     }
@@ -59,8 +62,11 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     private void AskForMyPositionServerRpc(ServerRpcParams rpcParams = default)
     {
         ulong targetClientId = rpcParams.Receive.SenderClientId;
-        nextSpawnIndex++;
-        SendMyPositionClientRpc(nextSpawnIndex, targetClientId);
+        // nextSpawnIndex++;
+        globalSpawnIndex++;
+        int assignedSpawnIndex = globalSpawnIndex;
+        // SendMyPositionClientRpc(nextSpawnIndex, targetClientId);
+        SendMyPositionClientRpc(assignedSpawnIndex, targetClientId);
     }
 
     [ClientRpc]
@@ -96,6 +102,14 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
                 Debug.LogWarning($"[PlayerPosition] Unknown scene '{scene}', no spawn applied");
                 break;
         }
+        FaceRight();
+    }
+
+    private void FaceRight()
+    {
+        Vector3 fixedScale = transform.localScale;
+        fixedScale.x = Mathf.Abs(fixedScale.x); // Ensure facing right
+        transform.localScale = fixedScale;
     }
 
     [ServerRpc]
