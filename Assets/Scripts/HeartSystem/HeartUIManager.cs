@@ -62,10 +62,11 @@ public class HeartUIManager : MonoBehaviour
         {
             if (emptyHearts > 0)
             {
-                // Remove the last empty heart
-                Transform heartToRemove = heartContainer.GetChild(hearts);
+                int emptyIndex = heartContainer.childCount - emptyHearts;
+
+                Transform heartToRemove = heartContainer.GetChild(emptyIndex);
                 Destroy(heartToRemove.gameObject);
-                heartImages.RemoveAt(hearts); // keep the list accurate
+                heartImages.RemoveAt(emptyIndex);
                 emptyHearts--;
             }
 
@@ -73,6 +74,8 @@ public class HeartUIManager : MonoBehaviour
 
             GameObject heartGO = new GameObject("Heart" + heartImages.Count);
             heartGO.transform.SetParent(heartContainer, false);
+
+            heartGO.transform.SetSiblingIndex(heartContainer.childCount - emptyHearts - 1);
 
             Image heartImage = heartGO.AddComponent<Image>();
             heartImage.sprite = fullHeart;
@@ -82,7 +85,6 @@ public class HeartUIManager : MonoBehaviour
 
             if (heartContainer.childCount > 1)
             {
-                // Get the first heart's animation time to sync
                 Animator referenceAnimator = heartContainer.GetChild(0).GetComponent<Animator>();
                 AnimatorStateInfo stateInfo = referenceAnimator.GetCurrentAnimatorStateInfo(0);
                 float normalizedTime = stateInfo.normalizedTime % 1f;
@@ -90,13 +92,11 @@ public class HeartUIManager : MonoBehaviour
                 animator.Play(stateInfo.shortNameHash, 0, normalizedTime);
             }
 
-            heartImages.Add(heartImage);
-           
+            heartImages.Insert(heartGO.transform.GetSiblingIndex(), heartImage);
         }
         else
         {
             Debug.Log("Max hearts reached");
-            // ui afficher un message au player "max heart reached"
         }
     }
 
