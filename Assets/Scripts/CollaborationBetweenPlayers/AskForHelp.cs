@@ -30,8 +30,8 @@ public class AskForHelp : NetworkBehaviour
         HelpHimB.gameObject.SetActive(true);
     }
 
-    //____________________ PART2____________________
-    void HelpHim()
+    //____________________ PART2____________________  h
+     public void HelpHim()
     {
         HelpHimServerRpc("say my name");
     }
@@ -49,11 +49,15 @@ public class AskForHelp : NetworkBehaviour
         if (NetworkManager.Singleton.LocalClientId == ClientReceiverHelp)
         {
             //nahili 9alb
-            // les rpc zidlo galb
+           // CurseTileEvent.removeHeart();
+            HeartUIManager heartUI = Object.FindFirstObjectByType<HeartUIManager>();
+            heartUI.removeHeart();
         }
         if (NetworkManager.Singleton.LocalClientId == ClientSenderHelp)
         {
             //zidlo 9alb
+            HeartUIManager heartUI = Object.FindFirstObjectByType<HeartUIManager>();
+            heartUI.addHeart();
         } 
     }
 
