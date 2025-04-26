@@ -339,6 +339,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   inventoryCanvasPrefab: {fileID: 5622932771324534629, guid: 8fb7dc980ef469e4da268add5a42d9bb, type: 3}
   shopCanvasPrefab: {fileID: 8318903786705242564, guid: ca172750743313142abb5be52b420f0f, type: 3}
+  sceneButtonToDisable: {fileID: 0}
   heartUIPrefab: {fileID: 6716154536446412633, guid: b7d263c7020d540fe952e049f0a0d10b, type: 3}
 --- !u!114 &6849068423002362717
 MonoBehaviour:
