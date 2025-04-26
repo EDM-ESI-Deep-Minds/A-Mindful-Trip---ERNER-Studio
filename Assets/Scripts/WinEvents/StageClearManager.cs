@@ -82,6 +82,7 @@ public class StageClearManager : NetworkBehaviour
     [ClientRpc]
     private void TriggerStageClearMessageClientRpc()
     {
+        CurseTileEvent.updateTimers();
         StartCoroutine(StageClearUIManager.Instance.ShowStageClearAndTeleport());
     }
 
