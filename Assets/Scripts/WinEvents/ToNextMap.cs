@@ -41,6 +41,14 @@ public class ToNextMap : NetworkBehaviour
             {
                 NetworkManager.SceneManager.LoadScene("City", UnityEngine.SceneManagement.LoadSceneMode.Single);
             }
+            reSetReadyClientRpc();
         }
     }
+
+    [ClientRpc]
+    private void reSetReadyClientRpc()
+    {
+        ReadyManager.allReady = false;
+    }
+
 }

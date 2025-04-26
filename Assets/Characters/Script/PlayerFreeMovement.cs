@@ -49,6 +49,11 @@ public class PlayerFreeMovement : NetworkBehaviour
 
         // Managing local inputs
         HandleInput();
+
+        if (ReadyManager.allReady)
+        {
+            animator.Play("idle_right");
+        }
     }
 
     /* private void HandleInput()
