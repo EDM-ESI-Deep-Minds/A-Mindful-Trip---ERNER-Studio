@@ -618,6 +618,12 @@ public class PlayerBoardMovement : NetworkBehaviour
             isMoving = false;
             currentTilePath = boardManager.pathTiles[currentTilePos];
             Debug.Log($"Current Tile Path Type: {currentTilePath.tileType}");
+            if (currentTilePath.tileType == "curse_0")
+            {
+                currentTilePath.tileType = "Curse";
+                currentTilePath.falseIntersection = true;
+            }
+
             if ((currentTilePath.tileType == "End"))
             {
                 EventTrigger.SelectEventToTrigger(currentTilePath.tileType);

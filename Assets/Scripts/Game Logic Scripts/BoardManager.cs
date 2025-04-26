@@ -114,6 +114,10 @@ public class BoardManager : MonoBehaviour
                     {
                         newTile.tileType = "Bonus";
                         newTile.falseIntersection = true;
+                    } else if (spriteName == "curse_0")
+                    {
+                        newTile.tileType = "Curse";
+                        newTile.falseIntersection = true;
                     }
                 }
 
