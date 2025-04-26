@@ -4,7 +4,7 @@ using Unity.Netcode;
 public class LayerTrigger : NetworkBehaviour
 {
     public string loweredSortingLayer;  // Layer inside trigger
-    public string normalSortingLayer ;  
+    public string normalSortingLayer;
     public int loweredSortingOrder; // Order inside trigger
     public int normalSortingOrder; // Order outside trigger
 
@@ -17,10 +17,10 @@ public class LayerTrigger : NetworkBehaviour
             if (movement.currentDirection == "x")
             {
                 if (netObj.IsOwner) // Only the owner sends the request
-            {
-                
-                UpdateSortingLayerServerRpc(netObj.NetworkObjectId, loweredSortingLayer, loweredSortingOrder);
-            }
+                {
+
+                    UpdateSortingLayerServerRpc(netObj.NetworkObjectId, loweredSortingLayer, loweredSortingOrder);
+                }
             }
         }
     }
@@ -40,11 +40,11 @@ public class LayerTrigger : NetworkBehaviour
                     UpdateSortingLayerServerRpc(netObj.NetworkObjectId, normalSortingLayer, normalSortingOrder);
                 }
             }
-            
+
         }
     }
 
-    [ServerRpc (RequireOwnership =false)]
+    [ServerRpc(RequireOwnership = false)]
     private void UpdateSortingLayerServerRpc(ulong playerId, string newSortingLayer, int newSortingOrder)
     {
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(playerId, out NetworkObject playerObject))

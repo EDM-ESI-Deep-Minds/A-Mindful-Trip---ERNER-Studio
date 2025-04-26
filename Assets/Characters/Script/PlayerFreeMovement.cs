@@ -32,8 +32,24 @@ public class PlayerFreeMovement : NetworkBehaviour
     {
         if (IsOwner)
         {
-            // Follow network variable changes
             networkMovementInput.OnValueChanged += OnMovementInputChanged;
+        }
+
+        // Listen for all players ready event
+        ReadyManager.AllReadyClient += HandleAllPlayersReady;
+    }
+
+    private void OnDestroy()
+    {
+        // Always unsubscribe to avoid memory leaks
+        ReadyManager.AllReadyClient -= HandleAllPlayersReady;
+    }
+
+    private void HandleAllPlayersReady()
+    {
+        if (IsOwner)
+        {
+            animator.Play("idle_right");
         }
     }
 
@@ -169,6 +185,12 @@ public class PlayerFreeMovement : NetworkBehaviour
 
     private void SetIdleAnimation()
     {
+        if (ReadyManager.allReady)
+        {
+            animator.Play("idle_right");
+            return;
+        }
+
         if (lastMovementDirection.x > 0)
             animator.Play("idle_right");
         else if (lastMovementDirection.x < 0)

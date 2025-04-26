@@ -31,6 +31,7 @@ public class QuestionManager : NetworkBehaviour
     private int currentCategory;
     private ulong currentPlayerId;
     private int spriteIndex;
+    private int coinReward; 
 
 
     private void Awake()
@@ -84,6 +85,17 @@ public class QuestionManager : NetworkBehaviour
         Debug.Log($"Category: {category}");
         string difficulty = DifficultySelector.GetQuestionDifficulty(ProfileManager.SelectedProfile.Elo);
         string questionType = QuestionLoader.Instance.GetRandomQuestionType();
+
+        if (difficulty == "easy")
+        {
+            coinReward = 50;
+        } else if (difficulty == "medium")
+        {
+            coinReward = 75;
+        } else if (difficulty == "hard")
+        {
+            coinReward = 100;
+        }
 
         Question question = QuestionLoader.Instance.LoadQuestion(category, difficulty, questionType);
         currentCategory = category;
@@ -235,6 +247,8 @@ public class QuestionManager : NetworkBehaviour
             } else {
                 //TODO Play correct answer sfx
                 AudioManager.instance?.PlaySFX(AudioManager.instance.correctAnswerSFX);
+                InventoryManager inventory = FindFirstObjectByType<InventoryManager>();
+                inventory.AddCoins(coinReward);
             }
 
             ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;

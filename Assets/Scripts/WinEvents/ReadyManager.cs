@@ -9,6 +9,8 @@ public class ReadyManager : NetworkBehaviour
     private int totalPlayers;
     public Button readyButton;
     public static event Action AllReady;
+    public static event Action AllReadyClient;
+    public static Boolean allReady = false;
 
     public override void OnNetworkSpawn()
     {
@@ -26,8 +28,16 @@ public class ReadyManager : NetworkBehaviour
 
         if (readyCount == totalPlayers)
         {
+            SetReadyClientRpc();
             AllReady?.Invoke();
         }
+    }
+
+    [ClientRpc]
+    public void SetReadyClientRpc()
+    {
+        allReady = true;
+        AllReadyClient?.Invoke();
     }
 
     public void OnClickReady()

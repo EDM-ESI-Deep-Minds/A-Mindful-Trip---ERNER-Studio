@@ -11,6 +11,7 @@ public class PlayerController : NetworkBehaviour
     private PlayerUIController playerUIController;
     private InventoryManager inventoryManager;
     private ShopManager shopManager;
+    public GameObject sceneButtonToDisable;
     private bool isInventoryOpen = false;
     private bool isShopOpen = false;
     private bool isNearShopkeeper = false; // For shop access
@@ -101,11 +102,15 @@ public class PlayerController : NetworkBehaviour
             playerUIController.HideShopUI();
             isShopOpen = false;
 
-            // Resume the scene music after leaving shop
+            // Resuming the scene music after leaving shop
             if (AudioManager.instance != null)
             {
                 AudioManager.instance.ResumeSceneMusic();
             }
+
+            // Re-enabling scene button
+            if (sceneButtonToDisable != null)
+                sceneButtonToDisable.SetActive(true);
         }
         else
         {
@@ -117,6 +122,10 @@ public class PlayerController : NetworkBehaviour
             {
                 AudioManager.instance.PlayTemporaryMusic(AudioManager.instance.dansShopOST, waitForCompletion: false);
             }
+
+            // Disabling scene button
+            if (sceneButtonToDisable != null)
+                sceneButtonToDisable.SetActive(false);
         }
     }
     // Called by Shopkeeper when banner is clicked
@@ -134,7 +143,7 @@ public class PlayerController : NetworkBehaviour
     {
         isNearShopkeeper = value;
 
-        // Auto-close shop when leaving range
+        // Auto-closing shop when leaving range
         if (!value && isShopOpen)
         {
             playerUIController.HideShopUI();

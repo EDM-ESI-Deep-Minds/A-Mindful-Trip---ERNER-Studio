@@ -1,8 +1,6 @@
 using Unity.Netcode;
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using System.Globalization;
 
 public class PlayerPositionWhenChangingMap : NetworkBehaviour
 {
@@ -12,6 +10,12 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
         { -4.32f, -7.52f },
         { -4.32f, -4.00f },
         { -4.32f, 0.80f },
+
+        //end tiles for city
+        //{ 29.60f, -13.60f},
+        //{ 29.60f, -4.96f},
+        //{ 29.28f, 0.80f },
+        //{ 28.96f, -9.76f},
     };
 
     float[,] desert_map_positions = new float[4, 2]
@@ -20,10 +24,17 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
         { -1.20f, -4.72f },
         { -0.56f, -3.12f },
         { -0.56f, 0.24f }
+
+        //end tiles for desert
+        // { 10.80f, -1.84f},
+        //{ 10.48f, -6.16f},
+        //{ 10.48f, -4.88f},
+        //{ 10.48f, -3.12f},
     };
 
     public string scene;
-    public int nextSpawnIndex = -1;
+    // public int nextSpawnIndex = -1;
+    private static int globalSpawnIndex = -1;
 
     private NetworkVariable<Vector3> playerScale = new NetworkVariable<Vector3>(
         Vector3.one,
@@ -37,15 +48,25 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
         NetworkManager.Singleton.SceneManager.OnLoadComplete += OnSceneLoadComplete;
     }
 
+    protected void OnDestroy()
+    {
+        playerScale.OnValueChanged -= OnScaleChanged;
+        NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnSceneLoadComplete;
+
+    }
+
     private void OnScaleChanged(Vector3 oldScale, Vector3 newScale)
     {
         transform.localScale = newScale;
+        FaceRight(); // Ensure facing right
     }
 
     private void OnSceneLoadComplete(ulong clientId, string sceneName, LoadSceneMode loadSceneMode)
     {
         if (!IsOwner) return;
-        nextSpawnIndex = -1;
+        // nextSpawnIndex = -1;
+        if (IsServer)
+            globalSpawnIndex = -1;
         scene = sceneName;
         AskForMyPositionServerRpc();
     }
@@ -54,8 +75,11 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     private void AskForMyPositionServerRpc(ServerRpcParams rpcParams = default)
     {
         ulong targetClientId = rpcParams.Receive.SenderClientId;
-        nextSpawnIndex++;
-        SendMyPositionClientRpc(nextSpawnIndex, targetClientId);
+        // nextSpawnIndex++;
+        globalSpawnIndex++;
+        int assignedSpawnIndex = globalSpawnIndex;
+        // SendMyPositionClientRpc(nextSpawnIndex, targetClientId);
+        SendMyPositionClientRpc(assignedSpawnIndex, targetClientId);
     }
 
     [ClientRpc]
@@ -63,27 +87,42 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     {
         if (NetworkManager.Singleton.LocalClientId != targetClientId) return;
 
+        Debug.Log($"[PlayerPosition] Applying spawn for client {targetClientId} in scene '{scene}' at index {SpawnIndex}");
+
         switch (scene)
         {
             case "City":
                 transform.position = new Vector2(city_map_positions[SpawnIndex, 0], city_map_positions[SpawnIndex, 1]);
-                SetScaleServerRpc(new Vector3(2.4f, 2.4f, 2.4f));
+                Debug.Log($"[PlayerPosition] City spawn position: {transform.position}");
+                SetScaleServerRpc(new Vector3(1.8f, 1.8f, 1.8f));
                 break;
 
             case "CountrySide":
+                Debug.Log("[PlayerPosition] CountrySide scene selected (no position logic implemented yet)");
                 break;
 
             case "Desert":
                 transform.position = new Vector2(desert_map_positions[SpawnIndex, 0], desert_map_positions[SpawnIndex, 1]);
+                Debug.Log($"[PlayerPosition] Desert spawn position: {transform.position}");
                 break;
 
             case "Hub&Dans":
                 transform.position = new Vector2(-1f, -0.75f);
+                Debug.Log($"[PlayerPosition] Hub&Dans spawn position: {transform.position}");
                 break;
 
             default:
+                Debug.LogWarning($"[PlayerPosition] Unknown scene '{scene}', no spawn applied");
                 break;
         }
+        // removed call of FaceRight();
+    }
+
+    private void FaceRight()
+    {
+        Vector3 fixedScale = transform.localScale;
+        fixedScale.x = Mathf.Abs(fixedScale.x); // Ensure facing right
+        transform.localScale = fixedScale;
     }
 
     [ServerRpc]

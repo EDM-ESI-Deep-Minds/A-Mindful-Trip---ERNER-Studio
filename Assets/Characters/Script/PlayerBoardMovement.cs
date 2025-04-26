@@ -259,7 +259,12 @@ public class PlayerBoardMovement : NetworkBehaviour
         // debugging the current tile  position
         Debug.Log($"Current Tile Position: {currentTilePos}");
         
-        
+        if(SceneManager.GetActiveScene().name != "CountrySide")
+        {
+            SetIdleAnimation(0);
+            currentDirection = "x";
+            return;
+        }
 
         if (validMoves.Length == 0)
         {
@@ -618,6 +623,12 @@ public class PlayerBoardMovement : NetworkBehaviour
             isMoving = false;
             currentTilePath = boardManager.pathTiles[currentTilePos];
             Debug.Log($"Current Tile Path Type: {currentTilePath.tileType}");
+            if (currentTilePath.tileType == "curse_0")
+            {
+                currentTilePath.tileType = "Curse";
+                currentTilePath.falseIntersection = true;
+            }
+
             if ((currentTilePath.tileType == "End"))
             {
                 EventTrigger.SelectEventToTrigger(currentTilePath.tileType);
@@ -775,6 +786,14 @@ public class PlayerBoardMovement : NetworkBehaviour
         isMoving = false;
         StopWalkSFX();
         UpdateFace();
+        BonusCurseUIManager UIManager = Object.FindFirstObjectByType<BonusCurseUIManager>();
+        UIManager.StartCoroutine(DelaySwitchTurn());
+    }
+
+    public static IEnumerator DelaySwitchTurn()
+    {
+        yield return new WaitForSeconds(1f);
+        RolesManager.SwitchRole();
     }
 
     // this function to update the sprite of the player depending on the current direction

@@ -1,69 +1,88 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
+
 public class VoiceAndChatCountry : MonoBehaviour
 {
     public GameObject ChatW;
     [SerializeField]
-    Canvas CanvasChat;
+    private Canvas CanvasChat;
+
     [SerializeField]
     public Button Mute;
+
     [SerializeField]
     public Button UnMute;
-    bool test = true;
+
     private void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    [System.Obsolete]
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
         if (scene.name == "CountrySide")
         {
+            if (CanvasChat == null)
+            {
+                CanvasChat = FindObjectOfType<Canvas>();
+            }
+
             ChatW = FindInDontDestroyOnLoad("Text Chat");
-            ChatW.transform.SetParent(CanvasChat.transform, false);
 
+            if (ChatW != null && CanvasChat != null)
+            {
+                ChatW.transform.SetParent(CanvasChat.transform, false);
+            }
+            else
+            {
+                Debug.LogWarning("ChatW or CanvasChat is null in OnSceneLoaded.");
+            }
         }
-
     }
+
     GameObject FindInDontDestroyOnLoad(string objectName)
     {
-        // GameObject[] allObjects = FindObjectsOfType<GameObject>(); 
         GameObject[] allObjects = GameObject.FindObjectsByType<GameObject>(FindObjectsSortMode.None);
-
 
         foreach (GameObject obj in allObjects)
         {
             if (obj.name == objectName)
             {
                 return obj;
-
             }
         }
 
         return null;
     }
 
-
-    //s'est fonction s'ont pour vous. vouz pouverez les appler quand vous voulez
     public void MutePlayer()
     {
-        Mute.onClick.Invoke();
+        if (Mute != null)
+            Mute.onClick.Invoke();
     }
+
     public void UnMutePlayer()
     {
-        UnMute.onClick.Invoke();
+        if (UnMute != null)
+            UnMute.onClick.Invoke();
     }
+
     public void ShowChat()
     {
-        ChatW.SetActive(true);
+        if (ChatW != null)
+            ChatW.SetActive(true);
     }
+
     public void HideChat()
     {
-        ChatW.SetActive(false);
+        if (ChatW != null)
+            ChatW.SetActive(false);
     }
-
-  
 }
-

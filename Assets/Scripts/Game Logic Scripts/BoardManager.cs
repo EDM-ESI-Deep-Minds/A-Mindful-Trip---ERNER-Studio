@@ -33,7 +33,12 @@ public class BoardManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Re-fetch the tilemap dynamically after scene load
-        GameObject boardObject = GameObject.Find("Board");
+        GameObject boardObject;
+        do
+        {
+            boardObject = GameObject.Find("Board");
+        } while (boardObject == null);
+
         if (boardObject != null)
         {
             boardTilemap = boardObject.GetComponent<Tilemap>();
@@ -72,7 +77,7 @@ public class BoardManager : MonoBehaviour
                     // Classify tile type based on sprite name
                     if (spriteName == "Board Tiles 3x3_0" || spriteName == "Board Tiles 3x3_1" ||
                         spriteName == "Board Tiles 3x3_2" || spriteName == "Board Tiles 3x3_3" ||
-                        spriteName == "Board Tiles_2" || spriteName == "city_board_tiles_v2_4" || spriteName == "city_board_tiles_v2_5")
+                        spriteName == "Board Tiles_2" || spriteName == "city_board_tiles_v2_4" || spriteName == "city_board_tiles_v2_5" || spriteName == "city_board_tiles_v2_37" || spriteName == "city_board_tiles_37")
                     {
                         newTile.tileType = "Question";
                     }
@@ -101,13 +106,17 @@ public class BoardManager : MonoBehaviour
                     else if (spriteName == "end_city_0" || spriteName == "end_country_0")
                     {
                         newTile.tileType = "End";
-                    }else if (spriteName == "false_intersection_0")
+                    }else if (spriteName == "false_intersection_0" || spriteName == "falseInter_0")
                     {
                         newTile.tileType = "Question";
                         newTile.falseIntersection = true;
                     }else if (spriteName == "bonus_notInter_0")
                     {
                         newTile.tileType = "Bonus";
+                        newTile.falseIntersection = true;
+                    } else if (spriteName == "curse_0")
+                    {
+                        newTile.tileType = "Curse";
                         newTile.falseIntersection = true;
                     }
                 }

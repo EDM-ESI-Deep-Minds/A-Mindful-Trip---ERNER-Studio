@@ -1,7 +1,8 @@
+using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
-public class NewEmptyCSharpScript : NetworkBehaviour
+public class ToNextMap : NetworkBehaviour
 {
     private static bool DesertDone = false;
 
@@ -24,6 +25,12 @@ public class NewEmptyCSharpScript : NetworkBehaviour
 
     public void FromHubDansToMap()
     {
+        StartCoroutine(FadeAndRequestSceneChange());
+    }
+
+    private IEnumerator FadeAndRequestSceneChange()
+    {
+        yield return FadeScreen.Instance.FadeOut();
         RequestSceneChangeServerRpc();
     }
 
@@ -32,6 +39,9 @@ public class NewEmptyCSharpScript : NetworkBehaviour
     {
         if (IsServer)
         {
+            // Stopping all audio
+            StopAllAudioClientRpc();
+
             if (!DesertDone)
             {
                 DesertDone = true;
@@ -41,6 +51,24 @@ public class NewEmptyCSharpScript : NetworkBehaviour
             {
                 NetworkManager.SceneManager.LoadScene("City", UnityEngine.SceneManagement.LoadSceneMode.Single);
             }
+            reSetReadyClientRpc();
         }
     }
+
+    [ClientRpc]
+    private void reSetReadyClientRpc()
+    {
+        ReadyManager.allReady = false;
+    }
+
+    [ClientRpc]
+    private void StopAllAudioClientRpc()
+    {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.StopAllAudio();
+        }
+    }
+
+
 }

@@ -74,14 +74,6 @@ public class CurseTileEvent
     {
         yield return new WaitForSeconds(delay);
         reposition();
-        BonusCurseUIManager UIManager = Object.FindFirstObjectByType<BonusCurseUIManager>();
-        UIManager.StartCoroutine(DelaySwitchTurn());
-    }
-
-    public static IEnumerator DelaySwitchTurn()
-    {
-        yield return new WaitForSeconds(1f);
-        RolesManager.SwitchRole();
     }
 
     private static int GetRandomCurse()

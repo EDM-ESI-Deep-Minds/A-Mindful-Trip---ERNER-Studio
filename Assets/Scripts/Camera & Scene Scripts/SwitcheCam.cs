@@ -20,8 +20,16 @@ public class SwitcheCam : NetworkBehaviour
         RolesManager.CameraSwitchTarget += ChaingeTargetServerRpc;
     }
 
+    private void OnDisable()
+    {
+        
+        RolesManager.CameraSwitchTarget -= ChaingeTargetServerRpc;
+    }
 
-
+    private void OnDestroy()
+    {
+        RolesManager.CameraSwitchTarget -= ChaingeTargetServerRpc;
+    }
 
     void Update()
     {

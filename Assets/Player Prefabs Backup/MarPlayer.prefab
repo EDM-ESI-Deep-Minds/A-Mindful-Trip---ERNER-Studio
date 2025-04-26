@@ -25,9 +25,9 @@ GameObject:
   - component: {fileID: -8691455251817923420}
   - component: {fileID: 9040609109228860198}
   - component: {fileID: 6499771095019489997}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MarPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,6 +142,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   inventoryCanvasPrefab: {fileID: 5622932771324534629, guid: 8fb7dc980ef469e4da268add5a42d9bb, type: 3}
   shopCanvasPrefab: {fileID: 8318903786705242564, guid: ca172750743313142abb5be52b420f0f, type: 3}
+  sceneButtonToDisable: {fileID: 0}
   heartUIPrefab: {fileID: 6716154536446412633, guid: b7d263c7020d540fe952e049f0a0d10b, type: 3}
 --- !u!114 &8062630630623696518
 MonoBehaviour:
