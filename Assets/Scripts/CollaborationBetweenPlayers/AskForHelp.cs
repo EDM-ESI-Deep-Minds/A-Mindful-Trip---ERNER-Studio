@@ -1,6 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class AskForHelp : NetworkBehaviour
 {
@@ -50,7 +51,7 @@ public class AskForHelp : NetworkBehaviour
     public void HelpHimClientRpc(string name, ulong ClientReceiverId)
     {
         ClientReceiverHelp = ClientReceiverId;
-        HelpHimB.gameObject.SetActive(false);
+        
         if (NetworkManager.Singleton.LocalClientId != ClientReceiverHelp)
         {
             Debug.Log("ClientReceiverHelp: " + ClientReceiverHelp);
@@ -66,5 +67,13 @@ public class AskForHelp : NetworkBehaviour
             HeartUIManager heartUI = Object.FindFirstObjectByType<HeartUIManager>();
             heartUI.addHeart();
         }
+        StartCoroutine(AttendreEtContinuer());
+    }
+    private IEnumerator AttendreEtContinuer()
+    {
+       
+        yield return new WaitForSeconds(4f);
+        HelpHimB.gameObject.SetActive(false);
+
     }
 }
