@@ -92,7 +92,15 @@ public class HeartUIManager : MonoBehaviour
                 animator.Play(stateInfo.shortNameHash, 0, normalizedTime);
             }
 
-            heartImages.Insert(heartGO.transform.GetSiblingIndex(), heartImage);
+            int insertIndex = heartGO.transform.GetSiblingIndex();
+            if (insertIndex >= heartImages.Count)
+            {
+                heartImages.Add(heartImage);
+            }
+            else
+            {
+                heartImages.Insert(insertIndex, heartImage);
+            }
         }
         else
         {
