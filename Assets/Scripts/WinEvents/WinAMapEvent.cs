@@ -34,21 +34,12 @@ public class WinAMapEvent : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     void RequestSceneChangeServerRpc()
     {
-        if (IsServer)
-        {
-            ApplyDontDestroyTextChatClientRpc();
-            Debug.Log("Moving from the map to the hub");
+       
+         
+            Debug.LogWarning("Moving from the map to the hub");
             NetworkManager.Singleton.SceneManager.LoadScene("Hub&Dans", UnityEngine.SceneManagement.LoadSceneMode.Single);
-        }
+        
     }
-    [ClientRpc]
-    private void ApplyDontDestroyTextChatClientRpc()
-    {
-        Debug.LogWarning("111111111111");
-        TextChatW = GameObject.Find("Text Chat");
-        Debug.LogWarning("22222222");
-        TextChatW.transform.SetParent(null);
-        DontDestroyOnLoad(TextChatW);
-    }
+ 
  
 }

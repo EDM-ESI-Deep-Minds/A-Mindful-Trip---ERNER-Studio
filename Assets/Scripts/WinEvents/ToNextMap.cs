@@ -5,6 +5,7 @@ using UnityEngine;
 public class ToNextMap : NetworkBehaviour
 {
     private static bool DesertDone = false;
+    public GameObject TextChatW;
 
     void OnEnable()
     {
@@ -41,6 +42,7 @@ public class ToNextMap : NetworkBehaviour
         {
             // Stopping all audio
             StopAllAudioClientRpc();
+            ApplyDontDestroyTextChatClientRpc();
 
             if (!DesertDone)
             {
@@ -69,6 +71,13 @@ public class ToNextMap : NetworkBehaviour
         {
             AudioManager.instance.StopAllAudio();
         }
+    }
+    [ClientRpc]
+    private void ApplyDontDestroyTextChatClientRpc()
+    {
+        TextChatW = GameObject.Find("Text Chat");
+        TextChatW.transform.SetParent(null);
+        DontDestroyOnLoad(TextChatW);
     }
 
 

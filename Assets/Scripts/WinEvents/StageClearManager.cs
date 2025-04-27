@@ -10,6 +10,7 @@ public class StageClearManager : NetworkBehaviour
     public string cityMapSceneName = "City";
     public string mainMenuSceneName = "MainMenu";
     public string hubSceneName = "Hub&Dans";
+    public GameObject TextChatW;
 
     private void Awake()
     {
@@ -45,6 +46,7 @@ public class StageClearManager : NetworkBehaviour
         string currentScene = SceneManager.GetActiveScene().name;
         // stopping all current audio
         StopAllAudioClientRpc();
+        ApplyDontDestroyTextChatClientRpc();
 
         if (currentScene == cityMapSceneName)
         {
@@ -96,5 +98,12 @@ public class StageClearManager : NetworkBehaviour
         {
             AudioManager.instance.StopAllAudio();
         }
+    }
+    [ClientRpc]
+    private void ApplyDontDestroyTextChatClientRpc()
+    {
+        TextChatW = GameObject.Find("Text Chat");
+        TextChatW.transform.SetParent(null);
+        DontDestroyOnLoad(TextChatW);
     }
 }
