@@ -129,7 +129,7 @@ public class QuestionManager : NetworkBehaviour
     private void BroadcastQuestionClientRpc(NetworkQuestionData questionData, int category, float timer, ulong answeringPlayerId, int spriteIndex)
     {
         currentCategory = category;
-        correctAnswer = questionData.correctAnswer.ToString();
+        correctAnswer = WebUtility.HtmlDecode(questionData.correctAnswer.ToString());
         hasAnswered = false;
         timerLeft = timer;
 
