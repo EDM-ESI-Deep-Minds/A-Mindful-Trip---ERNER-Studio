@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ToggleVisibility : MonoBehaviour
 {
@@ -8,9 +9,12 @@ public class ToggleVisibility : MonoBehaviour
     void Start()
     {
         targetObject = FindInDontDestroyOnLoad("Text Chat");
-        //zid les if ta3 les scenn 
-        RectTransform rectTransform = targetObject.GetComponent<RectTransform>();
-        rectTransform.anchoredPosition = new Vector2(-884.9f, -510.844f);
+        //zid les if ta3 les scenn
+        if (SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            RectTransform rectTransform = targetObject.GetComponent<RectTransform>();
+            rectTransform.anchoredPosition = new Vector2(55f, 14f);
+        }
         canvasGroup = targetObject.GetComponent<CanvasGroup>(); // Getting the CanvasGroup component attached to the target object
         if (canvasGroup == null)
         {
