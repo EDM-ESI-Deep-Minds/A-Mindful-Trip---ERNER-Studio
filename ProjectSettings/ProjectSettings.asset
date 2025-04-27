@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: A Mindful Trip
+  companyName: ErnerStudio
+  productName: Luminaria
   defaultCursor: {fileID: 2800000, guid: 61046954c73807d48a67579ea36e8cd7, type: 3}
   cursorHotspot: {x: 22, y: 17}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
