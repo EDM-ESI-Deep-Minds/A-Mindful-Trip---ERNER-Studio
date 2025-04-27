@@ -1,8 +1,11 @@
 using Unity.Netcode;
 using UnityEngine;
+using System.Collections;
+using System;
 
 public class WinAMapEvent : NetworkBehaviour
 {
+    public GameObject TextChatW;
     private void Start()
     {
         // Subscribe to the event
@@ -33,8 +36,19 @@ public class WinAMapEvent : NetworkBehaviour
     {
         if (IsServer)
         {
+            ApplyDontDestroyTextChatClientRpc();
             Debug.Log("Moving from the map to the hub");
             NetworkManager.Singleton.SceneManager.LoadScene("Hub&Dans", UnityEngine.SceneManagement.LoadSceneMode.Single);
         }
     }
+    [ClientRpc]
+    private void ApplyDontDestroyTextChatClientRpc()
+    {
+        Debug.LogWarning("111111111111");
+        TextChatW = GameObject.Find("Text Chat");
+        Debug.LogWarning("22222222");
+        TextChatW.transform.SetParent(null);
+        DontDestroyOnLoad(TextChatW);
+    }
+ 
 }

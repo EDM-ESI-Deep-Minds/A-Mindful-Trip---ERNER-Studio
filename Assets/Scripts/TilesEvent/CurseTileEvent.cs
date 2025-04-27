@@ -137,21 +137,21 @@ public class CurseTileEvent
         muteTimer++;
         if (SceneManager.GetActiveScene().name == "CountrySide")
         {
-            VoiceAndChatCountry voice = Object.FindFirstObjectByType<VoiceAndChatCountry>();
+          /* // VoiceAndChatCountry voice = Object.FindFirstObjectByType<VoiceAndChatCountry>();
             if (voice != null)
             {
-                voice.MutePlayer();
+               // voice.MutePlayer();
             }
             else
             {
                 Debug.LogWarning("VoiceAndChatCountry not found in scene.");
-            }
+            }*/
         }
     }
 
     private static void unMutePlayer()
     {
-        muteTimer = 0;
+      /*  muteTimer = 0;
         if (SceneManager.GetActiveScene().name == "CountrySide")
         {
             VoiceAndChatCountry voice = GameObject.FindFirstObjectByType<VoiceAndChatCountry>();
@@ -163,7 +163,7 @@ public class CurseTileEvent
             {
                 Debug.LogWarning("VoiceAndChatCountry not found in scene.");
             }
-        }
+        }*/
     }
 
     private static void lockInventory()

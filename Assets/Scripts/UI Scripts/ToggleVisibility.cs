@@ -7,6 +7,10 @@ public class ToggleVisibility : MonoBehaviour
 
     void Start()
     {
+        targetObject = FindInDontDestroyOnLoad("Text Chat");
+        //zid les if ta3 les scenn 
+        RectTransform rectTransform = targetObject.GetComponent<RectTransform>();
+        rectTransform.anchoredPosition = new Vector2(-884.9f, -510.844f);
         canvasGroup = targetObject.GetComponent<CanvasGroup>(); // Getting the CanvasGroup component attached to the target object
         if (canvasGroup == null)
         {
@@ -26,5 +30,22 @@ public class ToggleVisibility : MonoBehaviour
         {
             canvasGroup.alpha = 0;
         }
+    }
+    GameObject FindInDontDestroyOnLoad(string objectName)
+    {
+        // GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        GameObject[] allObjects = GameObject.FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+
+
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.name == objectName)
+            {
+                return obj;
+
+            }
+        }
+
+        return null;
     }
 }
