@@ -1,8 +1,11 @@
 using Unity.Netcode;
 using UnityEngine;
+using System.Collections;
+using System;
 
 public class WinAMapEvent : NetworkBehaviour
 {
+    public GameObject TextChatW;
     private void Start()
     {
         // Subscribe to the event
@@ -31,10 +34,12 @@ public class WinAMapEvent : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     void RequestSceneChangeServerRpc()
     {
-        if (IsServer)
-        {
-            Debug.Log("Moving from the map to the hub");
+       
+         
+            Debug.LogWarning("Moving from the map to the hub");
             NetworkManager.Singleton.SceneManager.LoadScene("Hub&Dans", UnityEngine.SceneManagement.LoadSceneMode.Single);
-        }
+        
     }
+ 
+ 
 }

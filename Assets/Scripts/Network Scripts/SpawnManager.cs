@@ -18,10 +18,10 @@ public class spawn_mang : NetworkBehaviour
         {2.48f, -3.28f},
 
         //for spwaning at the end of country side
-        //{ 14.48f, -0.08f },
-        //{ 14.32f, 1.20f },
-        //{ 14.16f, 2.32f },
-        //{ 14.16f, 3.44f }
+       /* { 14.48f, -0.08f },
+        { 14.32f, 1.20f },
+        { 14.16f, 2.32f },
+        { 14.16f, 3.44f }*/
     };
     float[,] city_map_positions = new float[4, 2]
    {
