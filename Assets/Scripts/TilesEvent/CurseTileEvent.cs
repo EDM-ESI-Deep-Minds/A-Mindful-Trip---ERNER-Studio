@@ -135,35 +135,29 @@ public class CurseTileEvent
     private static void mutePlayer()
     {
         muteTimer++;
-        if (SceneManager.GetActiveScene().name == "CountrySide")
+        VoiceAndChatS voice = Object.FindFirstObjectByType<VoiceAndChatS>();
+        if (voice != null)
         {
-          /* // VoiceAndChatCountry voice = Object.FindFirstObjectByType<VoiceAndChatCountry>();
-            if (voice != null)
-            {
-               // voice.MutePlayer();
-            }
-            else
-            {
-                Debug.LogWarning("VoiceAndChatCountry not found in scene.");
-            }*/
+            voice.MutePlayer();
+        }
+        else
+        {
+            Debug.LogWarning("VoiceAndChatCountry not found in scene.");
         }
     }
 
     private static void unMutePlayer()
     {
-      /*  muteTimer = 0;
-        if (SceneManager.GetActiveScene().name == "CountrySide")
+        muteTimer = 0;
+        VoiceAndChatS voice = Object.FindFirstObjectByType<VoiceAndChatS>();
+        if (voice != null)
         {
-            VoiceAndChatCountry voice = GameObject.FindFirstObjectByType<VoiceAndChatCountry>();
-            if (voice != null)
-            {
-                voice.UnMutePlayer();
-            }
-            else
-            {
-                Debug.LogWarning("VoiceAndChatCountry not found in scene.");
-            }
-        }*/
+            voice.UnMutePlayer();
+        }
+        else
+        {
+            Debug.LogWarning("VoiceAndChatCountry not found in scene.");
+        }
     }
 
     private static void lockInventory()
