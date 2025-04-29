@@ -13,10 +13,7 @@ public class RoomUIManager : NetworkBehaviour
     private List<string> playerNames = new List<string>(new string[4]);
     private List<int> playerCharacters = new List<int>(new int[4]);
 
-    // Keeps track of which characters are taken
     private bool[] characterTaken = new bool[4];
-
-    // Ordered list of chosen characters for game spawning
     private int[] selectedCharacters = new int[4];
 
     private void Awake()
@@ -24,7 +21,7 @@ public class RoomUIManager : NetworkBehaviour
         for (int i = 0; i < 4; i++)
         {
             playerNames[i] = "";
-            playerCharacters[i] = -1;  // -1 means no character chosen
+            playerCharacters[i] = -1;
             selectedCharacters[i] = -1;
             UpdatePlayerUI(i);
         }
@@ -37,7 +34,6 @@ public class RoomUIManager : NetworkBehaviour
             if (ProfileManager.SelectedProfile == null)
             {
                 SendProfileToServerServerRpc(PlayerPrefs.GetString("PlayerName"), PlayerPrefs.GetInt("Character"));
-
             }
             else
             {
@@ -70,10 +66,17 @@ public class RoomUIManager : NetworkBehaviour
             return;
         }
 
+        int assignedCharacter = GetNextAvailableCharacter(character);
+        if (assignedCharacter == -1)
+        {
+            Debug.LogError("No available characters!");
+            return;
+        }
+
         playerNames[emptySlot] = playerName;
-        playerCharacters[emptySlot] = GetNextAvailableCharacter(character);
-        characterTaken[playerCharacters[emptySlot]] = true;
-        selectedCharacters[emptySlot] = playerCharacters[emptySlot];
+        playerCharacters[emptySlot] = assignedCharacter;
+        characterTaken[assignedCharacter] = true;
+        selectedCharacters[emptySlot] = assignedCharacter;
 
         Debug.Log($"Assigned Player {playerName} to slot {emptySlot}");
 
@@ -86,7 +89,7 @@ public class RoomUIManager : NetworkBehaviour
         playerNames = FromSerializedString(serializedNames);
         playerCharacters = characters.ToList();
         characterTaken = takenCharacters;
-        selectedCharacters = characters; // Syncing for game use
+        selectedCharacters = characters;
 
         for (int i = 0; i < 4; i++)
         {
@@ -111,7 +114,6 @@ public class RoomUIManager : NetworkBehaviour
         Transform slot = playerSlots[index];
         if (slot == null) return;
 
-        // Find PlayerBanner first
         Transform playerBanner = slot.Find("PlayerBanner");
         if (playerBanner == null) return;
 
@@ -136,9 +138,12 @@ public class RoomUIManager : NetworkBehaviour
 
         if (changeButton != null)
         {
-            changeButton.gameObject.SetActive(playerNames[index] == ProfileManager.SelectedProfile.playerName);
+            bool isLocalPlayer = playerNames[index] == ProfileManager.SelectedProfile?.playerName;
+            changeButton.gameObject.SetActive(isLocalPlayer);
             changeButton.onClick.RemoveAllListeners();
-            changeButton.onClick.AddListener(() => ChangeCharacter(index));
+
+            if (isLocalPlayer)
+                changeButton.onClick.AddListener(() => ChangeCharacter(index));
         }
     }
 
@@ -148,6 +153,12 @@ public class RoomUIManager : NetworkBehaviour
 
         int currentCharacter = playerCharacters[slotIndex];
         int newCharacter = GetNextAvailableCharacter((currentCharacter + 1) % characterSprites.Length);
+
+        if (newCharacter == -1 || newCharacter == currentCharacter)
+        {
+            Debug.Log("No other characters available to switch to.");
+            return;
+        }
 
         ChangeCharacterServerRpc(slotIndex, newCharacter);
     }
@@ -170,15 +181,13 @@ public class RoomUIManager : NetworkBehaviour
 
     private int GetNextAvailableCharacter(int startIndex)
     {
-        for (int i = startIndex; i < characterSprites.Length; i++)
+        for (int i = 0; i < characterSprites.Length; i++)
         {
-            if (!characterTaken[i]) return i;
+            int index = (startIndex + i) % characterSprites.Length;
+            if (!characterTaken[index])
+                return index;
         }
-        for (int i = 0; i < startIndex; i++)
-        {
-            if (!characterTaken[i]) return i;
-        }
-        return startIndex; // If no character is available, return the current one
+        return -1;
     }
 
     private void HandlePlayerDisconnect(ulong clientId)
