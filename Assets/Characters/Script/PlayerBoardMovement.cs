@@ -953,9 +953,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                     }
                     possibleMoves++;
                     onlyOneMove = offset;
-                     
-                  
-                   rightArrow.gameObject.SetActive(false);
+                   rightArrow.gameObject.SetActive(true);
                     
                 }
 
