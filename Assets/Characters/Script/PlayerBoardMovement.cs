@@ -406,8 +406,9 @@ public class PlayerBoardMovement : NetworkBehaviour
       
         for (int i = 0; i < steps; i++)
         {
-            if (!boardManager.pathTiles.ContainsKey(currentTilePos))
+            while (!boardManager.pathTiles.ContainsKey(currentTilePos))
             {
+                StartCoroutine(FindBoardManager());
                 Debug.Log("Invalid current tile position: " + currentTilePos);
                 break;
             }
