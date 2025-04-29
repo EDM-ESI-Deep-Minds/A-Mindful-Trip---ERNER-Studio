@@ -119,6 +119,12 @@ public class BoardManager : MonoBehaviour
                         newTile.tileType = "Curse";
                         newTile.falseIntersection = true;
                     }
+                    else if (spriteName == "cityFalse_0")
+                    {
+                        newTile.tileType = "Question";
+                        newTile.falseIntersection = true;
+                    }
+                    
                 }
 
                 pathTiles[pos] = newTile;
