@@ -1538,7 +1538,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 196940792}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Join
+        m_MethodName: JoinDisable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5002,7 +5002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439077858027433880, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.492704
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1439077858027433880, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5030,7 +5030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4506628051058476613, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4506628051058476613, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5054,7 +5054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6902808749676911080, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.472706
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6902808749676911080, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5162,7 +5162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8318568612826657843, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.0072937
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8318568612826657843, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5182,7 +5182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8338034525576090631, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.66215
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8480735618278711549, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5198,7 +5198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8480735618278711549, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.324299
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8480735618278711549, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -17419,6 +17419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680204240}
   - component: {fileID: 1680204241}
+  - component: {fileID: 1680204242}
   m_Layer: 5
   m_Name: Create Session
   m_TagString: Untagged
@@ -17504,10 +17505,49 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1680204242}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: CreateEnable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   FailedToJoinSession:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1680204242}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: CreateEnable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_EnterSessionButton: {fileID: 0}
+--- !u!114 &1680204242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680204239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beed8eb00981e4c95a3d6ca75292b6d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetButton: {fileID: 727933835}
+  radioButton1: {fileID: 1460124816}
+  radioButton2: {fileID: 1128232618}
 --- !u!1 &1680800135
 GameObject:
   m_ObjectHideFlags: 0
@@ -19000,6 +19040,7 @@ GameObject:
   - component: {fileID: 1861654986}
   - component: {fileID: 1861654988}
   - component: {fileID: 1861654987}
+  - component: {fileID: 1861654989}
   m_Layer: 5
   m_Name: Join Session By Code
   m_TagString: Untagged
@@ -19085,6 +19126,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1861654989}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: JoinEnable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   FailedToJoinSession:
     m_PersistentCalls:
       m_Calls:
@@ -19136,6 +19189,18 @@ MonoBehaviour:
           m_StringArgument: 'Error joining:  Room is full or does not exist'
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1861654989}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: JoinEnable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'Error joining:  Room is full or does not exist'
+          m_BoolArgument: 0
+        m_CallState: 2
   m_EnterSessionButton: {fileID: 0}
 --- !u!114 &1861654988
 MonoBehaviour:
@@ -19163,6 +19228,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1861654989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861654985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beed8eb00981e4c95a3d6ca75292b6d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetButton: {fileID: 2101675069}
+  radioButton1: {fileID: 1460124816}
+  radioButton2: {fileID: 1128232618}
 --- !u!1 &1865752054
 GameObject:
   m_ObjectHideFlags: 0
