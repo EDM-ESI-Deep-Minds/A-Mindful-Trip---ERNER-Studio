@@ -17,9 +17,9 @@ public class ButtonManager : MonoBehaviour
 
     public void CreateEnable()
     {
-        targetButton.interactable = false;
-        radioButton1.interactable = false;
-        radioButton2.interactable = false;
+        targetButton.interactable = true;
+        radioButton1.interactable = true;
+        radioButton2.interactable = true;
     }
 
     public void JoinDisable()
@@ -29,6 +29,6 @@ public class ButtonManager : MonoBehaviour
 
     public void JoinEnable()
     {
-        targetButton.interactable = false;
+        targetButton.interactable = true;
     }
 }
