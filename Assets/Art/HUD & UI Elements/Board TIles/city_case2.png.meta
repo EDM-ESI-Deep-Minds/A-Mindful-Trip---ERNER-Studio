@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a364e7cc1e3009246963dbacf2821602
+guid: 56d4edc065cdf534ea1ece6021f51318
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1998720709447321654
-    second: cityFalse_0
+      213: -2280108876353640518
+    second: city_case2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,10 +100,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cityFalse_0
+      name: city_case2_0
       rect:
         serializedVersion: 2
-        x: 64
+        x: 62
         y: 1
         width: 34
         height: 98
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63803d345e1ecbb10800000000000000
-      internalID: 1998720709447321654
+      spriteID: ab7e9b7be0d6b50e0800000000000000
+      internalID: -2280108876353640518
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cityFalse_0: 1998720709447321654
+      city_case2_0: -2280108876353640518
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

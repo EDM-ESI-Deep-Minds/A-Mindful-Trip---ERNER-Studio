@@ -403,8 +403,8 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         //Debug.Log($"here is the previous tile position {previousTilePos}");
 
-        
-      
+
+        steps = 20;
         for (int i = 0; i < steps; i++)
         {
             while (!boardManager.pathTiles.ContainsKey(currentTilePos))
@@ -909,7 +909,16 @@ public class PlayerBoardMovement : NetworkBehaviour
 
             PathTile nextTile = boardManager.pathTiles[potentialNextPos];
 
-            
+            if(tile.cityFalseIntersection && currentDirection == "y-down")
+            {
+                currentDirection = "x";
+                return false;
+            }
+
+            if (tile.falseIntersection)
+            {
+                return false;
+            }
             forwardMoveCount++;
             
         }
