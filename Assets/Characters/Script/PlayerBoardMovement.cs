@@ -315,7 +315,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
                     // Debugging the current tile position
                     Debug.Log($"Current Tile Position: {currentTilePos}");
-
+                    currentTilePath = boardManager.pathTiles[currentTilePos];
                     validMoves = boardManager.pathTiles[currentTilePos].possibleMoves;
                 }
                 catch (KeyNotFoundException e)
