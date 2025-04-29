@@ -123,13 +123,6 @@ public class PlayerBoardMovement : NetworkBehaviour
 
             //backWardButton = GameObject.Find("backWardButton").GetComponent<Button>();
             Debug.Log($"RightArrow: {rightArrow}, LeftArrow: {leftArrow}, UpArrow: {upArrow}, DownArrow: {downArrow}");
-
-            // Assign button listeners dynamically
-            rightArrow.onClick.AddListener(() => SetChosenDirection("right"));
-            leftArrow.onClick.AddListener(() => SetChosenDirection("left"));
-            upArrow.onClick.AddListener(() => SetChosenDirection("up"));
-            downArrow.onClick.AddListener(() => SetChosenDirection("down"));
-            yield return new WaitForSeconds(0.5f);
         }
 
         //backWardButton = GameObject.Find("backWardButton").GetComponent<Button>();
