@@ -253,9 +253,26 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     private void DetermineDefaultDirection()
     {
-        Vector3 worldPosition = transform.position;
-        Vector3Int currentTilePos = boardManager.boardTilemap.WorldToCell(worldPosition);
-        Vector3Int[] validMoves = boardManager.pathTiles[currentTilePos].possibleMoves;
+        Vector3Int[] validMoves = null;
+
+        while (validMoves == null || validMoves.Length == 0)
+        {
+            try
+            {
+                Vector3 worldPosition = transform.position;
+                Vector3Int currentTilePos = boardManager.boardTilemap.WorldToCell(worldPosition);
+
+                // Debugging the current tile position
+                Debug.Log($"Current Tile Position: {currentTilePos}");
+
+                validMoves = boardManager.pathTiles[currentTilePos].possibleMoves;
+            }
+            catch (KeyNotFoundException e)
+            {
+                Debug.LogWarning("Tile not found. Retrying...");
+                validMoves = null; // Force retry
+            }
+        }
         // debugging the current tile  position
         Debug.Log($"Current Tile Position: {currentTilePos}");
         
