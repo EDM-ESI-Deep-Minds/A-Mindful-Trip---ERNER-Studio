@@ -349,10 +349,10 @@ public class PlayerBoardMovement : NetworkBehaviour
       
         for (int i = 0; i < steps; i++)
         {
-            while(!boardManager.pathTiles.ContainsKey(currentTilePos))
+            if (!boardManager.pathTiles.ContainsKey(currentTilePos))
             {
-                StartCoroutine(FindBoardManager());
                 Debug.Log("Invalid current tile position: " + currentTilePos);
+                break;
             }
 
             PathTile currentTile = boardManager.pathTiles[currentTilePos];

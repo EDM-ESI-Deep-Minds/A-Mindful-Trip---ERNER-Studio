@@ -54,8 +54,7 @@ public class ToNextMap : NetworkBehaviour
                 DesertDone = false;
                 NetworkManager.SceneManager.LoadScene("City", UnityEngine.SceneManagement.LoadSceneMode.Single);
             }
-            // StartCoroutine(CallResetReadyAfterDelay());
-            reSetReadyClientRpc();
+            StartCoroutine(CallResetReadyAfterDelay());
         }
     }
 
