@@ -10,15 +10,29 @@ public class ShowStart : MonoBehaviour
 
     void Start()
     {
+        if (NetworkManager.Singleton == null)
+        {
+            Debug.LogError("NetworkManager not found!");
+            return;
+        }
+
         if (!NetworkManager.Singleton.IsHost)
         {
             hostButton.gameObject.SetActive(false);
             return;
         }
 
-        requiredPlayers = GameMode.Instance.GetMaxPlayers();
+        GameMode gameMode = FindObjectOfType<GameMode>();
+        if (gameMode == null)
+        {
+            Debug.LogError("GameMode not found in scene!");
+            return;
+        }
+
+        requiredPlayers = gameMode.GetMaxPlayers();
         hostButton.interactable = false;
         UpdatePlayerCount();
+
         NetworkManager.Singleton.OnClientConnectedCallback += UpdatePlayerCount;
         NetworkManager.Singleton.OnClientDisconnectCallback += UpdatePlayerCount;
     }
