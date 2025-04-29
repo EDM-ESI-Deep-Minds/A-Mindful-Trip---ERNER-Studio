@@ -1,6 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class PlayerPositionWhenChangingMap : NetworkBehaviour
 {
@@ -9,13 +10,7 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
         { -4.32f, -11.36f },
         { -4.32f, -7.52f },
         { -4.32f, -4.00f },
-        { -4.32f, 0.80f },
-
-        //end tiles for city
-        //{ 29.60f, -13.60f},
-        //{ 29.60f, -4.96f},
-        //{ 29.28f, 0.80f },
-        //{ 28.96f, -9.76f},
+        { -4.32f, 0.80f }
     };
 
     float[,] desert_map_positions = new float[4, 2]
@@ -24,17 +19,12 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
         { -1.20f, -4.72f },
         { -0.56f, -3.12f },
         { -0.56f, 0.24f }
-
-        //end tiles for desert
-        // { 10.80f, -1.84f},
-        //{ 10.48f, -6.16f},
-        //{ 10.48f, -4.88f},
-        //{ 10.48f, -3.12f},
     };
 
     public string scene;
-    // public int nextSpawnIndex = -1;
-    private static int globalSpawnIndex = -1;
+   
+    // CORRECTION: Rendu statique pour maintenir les attributions entre les scènes
+    private static Dictionary<ulong, int> clientSpawnIndices = new Dictionary<ulong, int>();
 
     private NetworkVariable<Vector3> playerScale = new NetworkVariable<Vector3>(
         Vector3.one,
@@ -52,7 +42,6 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     {
         playerScale.OnValueChanged -= OnScaleChanged;
         NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnSceneLoadComplete;
-
     }
 
     private void OnScaleChanged(Vector3 oldScale, Vector3 newScale)
@@ -64,9 +53,11 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     private void OnSceneLoadComplete(ulong clientId, string sceneName, LoadSceneMode loadSceneMode)
     {
         if (!IsOwner) return;
-        // nextSpawnIndex = -1;
-        if (IsServer)
-            globalSpawnIndex = -1;
+
+        // CORRECTION: Ne pas effacer clientSpawnIndices à chaque changement de scène
+        // if (IsServer)
+        //    clientSpawnIndices.Clear(); // Cette ligne causait le problème!
+
         scene = sceneName;
         AskForMyPositionServerRpc();
     }
@@ -75,24 +66,48 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     private void AskForMyPositionServerRpc(ServerRpcParams rpcParams = default)
     {
         ulong targetClientId = rpcParams.Receive.SenderClientId;
-        // nextSpawnIndex++;
-        globalSpawnIndex++;
-        int assignedSpawnIndex = globalSpawnIndex;
-        // SendMyPositionClientRpc(nextSpawnIndex, targetClientId);
+
+        if (!clientSpawnIndices.ContainsKey(targetClientId))
+        {
+            // Chercher le prochain indice disponible (0-3)
+            HashSet<int> usedIndices = new HashSet<int>();
+            foreach (var index in clientSpawnIndices.Values)
+            {
+                usedIndices.Add(index);
+            }
+           
+            // Trouver le premier indice libre entre 0 et 3
+            int newIndex = 0;
+            while (newIndex < 4 && usedIndices.Contains(newIndex))
+            {
+                newIndex++;
+            }
+           
+            // Si tous les indices sont pris, utiliser l'approche modulo
+            if (newIndex >= 4)
+            {
+                newIndex = clientSpawnIndices.Count % 4;
+            }
+           
+            clientSpawnIndices[targetClientId] = newIndex;
+            Debug.Log($"[PlayerPosition] Assigning client {targetClientId} to spawn index {newIndex}");
+        }
+
+        int assignedSpawnIndex = clientSpawnIndices[targetClientId];
         SendMyPositionClientRpc(assignedSpawnIndex, targetClientId);
     }
 
     [ClientRpc]
-    private void SendMyPositionClientRpc(int SpawnIndex, ulong targetClientId)
+    private void SendMyPositionClientRpc(int spawnIndex, ulong targetClientId)
     {
         if (NetworkManager.Singleton.LocalClientId != targetClientId) return;
 
-        Debug.Log($"[PlayerPosition] Applying spawn for client {targetClientId} in scene '{scene}' at index {SpawnIndex}");
+        Debug.Log($"[PlayerPosition] Applying spawn for client {targetClientId} in scene '{scene}' at index {spawnIndex}");
 
         switch (scene)
         {
             case "City":
-                transform.position = new Vector2(city_map_positions[SpawnIndex, 0], city_map_positions[SpawnIndex, 1]);
+                transform.position = new Vector2(city_map_positions[spawnIndex, 0], city_map_positions[spawnIndex, 1]);
                 Debug.Log($"[PlayerPosition] City spawn position: {transform.position}");
                 SetScaleServerRpc(new Vector3(1.8f, 1.8f, 1.8f));
                 break;
@@ -102,7 +117,7 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
                 break;
 
             case "Desert":
-                transform.position = new Vector2(desert_map_positions[SpawnIndex, 0], desert_map_positions[SpawnIndex, 1]);
+                transform.position = new Vector2(desert_map_positions[spawnIndex, 0], desert_map_positions[spawnIndex, 1]);
                 Debug.Log($"[PlayerPosition] Desert spawn position: {transform.position}");
                 break;
 
@@ -115,7 +130,6 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
                 Debug.LogWarning($"[PlayerPosition] Unknown scene '{scene}', no spawn applied");
                 break;
         }
-        // removed call of FaceRight();
     }
 
     private void FaceRight()

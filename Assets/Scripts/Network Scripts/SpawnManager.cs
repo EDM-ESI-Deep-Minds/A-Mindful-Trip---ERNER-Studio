@@ -12,16 +12,16 @@ public class spawn_mang : NetworkBehaviour
     public GameObject TextChatW;
     float[,] les_position = new float[4, 2]
     {
-         {0.88f, 2.64f},
+        {0.88f, 2.64f},
         {-0.56f, 0.08f},
         {1.52f, 5.04f},
         {2.48f, -3.28f},
 
         //for spwaning at the end of country side
-       /* { 14.48f, -0.08f },
-        { 14.32f, 1.20f },
-        { 14.16f, 2.32f },
-        { 14.16f, 3.44f }*/
+    //    { 14.48f, -0.08f },
+    //     { 14.32f, 1.20f },
+    //     { 14.16f, 2.32f },
+    //     { 14.16f, 3.44f }
     };
     float[,] city_map_positions = new float[4, 2]
    {
