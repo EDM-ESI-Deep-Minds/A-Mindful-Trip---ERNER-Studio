@@ -55,19 +55,27 @@ public class PlayerBoardMovement : NetworkBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (IsOwner) // Only run for the owning player
+        if (IsOwner)
         {
-            StartCoroutine(FindBoardManager()); // Re-link everything
-            StartCoroutine(FindDiceManager());  // Optional: if you reset DiceManager on scene load
+            StartCoroutine(SetupAfterSceneLoad());
         }
     }
+
     public override void OnNetworkSpawn()
     {
         if (IsOwner)
         {
-            StartCoroutine(FindDiceManager());
-            StartCoroutine(FindBoardManager());
+            StartCoroutine(SetupAfterSceneLoad());
         }
+    }
+
+    private IEnumerator SetupAfterSceneLoad()
+    {
+        yield return StartCoroutine(FindBoardManager());
+        yield return StartCoroutine(FindDiceManager());
+
+        // Now it’s safe to access buttons, managers, etc.
+        Debug.Log("All setup coroutines finished. Safe to proceed.");
     }
 
     private IEnumerator FindBoardManager(){
@@ -125,7 +133,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             Debug.Log($"RightArrow: {rightArrow}, LeftArrow: {leftArrow}, UpArrow: {upArrow}, DownArrow: {downArrow}");
         }
 
-        //backWardButton = GameObject.Find("backWardButton").GetComponent<Button>();
+        // backWardButton = GameObject.Find("backWardButton").GetComponent<Button>();
 
         if (rightArrow == null || leftArrow == null || downArrow == null || upArrow == null)
         {
@@ -945,7 +953,10 @@ public class PlayerBoardMovement : NetworkBehaviour
                     }
                     possibleMoves++;
                     onlyOneMove = offset;
-                    rightArrow.gameObject.SetActive(true);
+                     
+                  
+                   rightArrow.gameObject.SetActive(false);
+                    
                 }
 
                 //// Left movement cases
