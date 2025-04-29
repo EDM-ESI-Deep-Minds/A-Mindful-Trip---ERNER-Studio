@@ -22,6 +22,8 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     };
 
     public string scene;
+   
+    // CORRECTION: Rendu statique pour maintenir les attributions entre les scènes
     private static Dictionary<ulong, int> clientSpawnIndices = new Dictionary<ulong, int>();
 
     private NetworkVariable<Vector3> playerScale = new NetworkVariable<Vector3>(
@@ -52,8 +54,9 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     {
         if (!IsOwner) return;
 
-        if (IsServer)
-            clientSpawnIndices.Clear(); // Reset assignments on new scene (optional)
+        // CORRECTION: Ne pas effacer clientSpawnIndices à chaque changement de scène
+        // if (IsServer)
+        //    clientSpawnIndices.Clear(); // Cette ligne causait le problème!
 
         scene = sceneName;
         AskForMyPositionServerRpc();
@@ -66,7 +69,28 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
 
         if (!clientSpawnIndices.ContainsKey(targetClientId))
         {
-            clientSpawnIndices[targetClientId] = clientSpawnIndices.Count % 4; // Cycle 0-3
+            // Chercher le prochain indice disponible (0-3)
+            HashSet<int> usedIndices = new HashSet<int>();
+            foreach (var index in clientSpawnIndices.Values)
+            {
+                usedIndices.Add(index);
+            }
+           
+            // Trouver le premier indice libre entre 0 et 3
+            int newIndex = 0;
+            while (newIndex < 4 && usedIndices.Contains(newIndex))
+            {
+                newIndex++;
+            }
+           
+            // Si tous les indices sont pris, utiliser l'approche modulo
+            if (newIndex >= 4)
+            {
+                newIndex = clientSpawnIndices.Count % 4;
+            }
+           
+            clientSpawnIndices[targetClientId] = newIndex;
+            Debug.Log($"[PlayerPosition] Assigning client {targetClientId} to spawn index {newIndex}");
         }
 
         int assignedSpawnIndex = clientSpawnIndices[targetClientId];
