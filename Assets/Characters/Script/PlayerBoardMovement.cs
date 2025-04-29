@@ -74,7 +74,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         yield return StartCoroutine(FindBoardManager());
         yield return StartCoroutine(FindDiceManager());
 
-        // Now it’s safe to access buttons, managers, etc.
+        // Now itâ€™s safe to access buttons, managers, etc.
         Debug.Log("All setup coroutines finished. Safe to proceed.");
     }
 
@@ -404,7 +404,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         //Debug.Log($"here is the previous tile position {previousTilePos}");
 
 
-        steps = 20;
+        // steps = 20;
         for (int i = 0; i < steps; i++)
         {
             while (!boardManager.pathTiles.ContainsKey(currentTilePos))
