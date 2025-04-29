@@ -112,37 +112,22 @@ public class PlayerBoardMovement : NetworkBehaviour
         Vector3Int gridPosition= boardManager.boardTilemap.WorldToCell(worldPosition);
         currentTilePos = gridPosition;
         Debug.Log($"Current Tile Position: {currentTilePos}");
-        StartCoroutine(DetermineDefaultDirection());
+        DetermineDefaultDirection();
 
-        while (rightArrow == null || leftArrow == null || downArrow == null || upArrow == null  )
-        {
-            rightArrow = GameObject.Find("RightArrow").GetComponent<Button>();
-            leftArrow = GameObject.Find("LeftArrow").GetComponent<Button>();
-            upArrow = GameObject.Find("UpArrow").GetComponent<Button>();
-            downArrow = GameObject.Find("DownArrow").GetComponent<Button>();
+        rightArrow = GameObject.Find("RightArrow").GetComponent<Button>();
+        leftArrow = GameObject.Find("LeftArrow").GetComponent<Button>();
+        upArrow = GameObject.Find("UpArrow").GetComponent<Button>();
+        downArrow = GameObject.Find("DownArrow").GetComponent<Button>();
 
-            Debug.Log($"RightArrow: {rightArrow}, LeftArrow: {leftArrow}, UpArrow: {upArrow}, DownArrow: {downArrow}");
+         //backWardButton = GameObject.Find("backWardButton").GetComponent<Button>();
 
-            yield return new WaitForSeconds(0.5f);
-        }
+        // Assign button listeners dynamically
+        rightArrow.onClick.AddListener(() => SetChosenDirection("right"));
+        leftArrow.onClick.AddListener(() => SetChosenDirection("left"));
+        upArrow.onClick.AddListener(() => SetChosenDirection("up"));
+        downArrow.onClick.AddListener(() => SetChosenDirection("down"));
 
-
-        if (rightArrow == null || leftArrow == null || downArrow == null || upArrow == null)
-        {
-            Debug.LogError("One or more arrow buttons not found in the scene.");
-        }
-        else
-        {
-            // Assign button listeners dynamically
-            rightArrow.onClick.AddListener(() => SetChosenDirection("right"));
-            leftArrow.onClick.AddListener(() => SetChosenDirection("left"));
-            upArrow.onClick.AddListener(() => SetChosenDirection("up"));
-            downArrow.onClick.AddListener(() => SetChosenDirection("down"));
-        }
-
-        //backWardButton = GameObject.Find("backWardButton").GetComponent<Button>();
-
-        //   backWardButton.onClick.AddListener(() => StartCoroutine(MoveBackward(5)));
+      //   backWardButton.onClick.AddListener(() => StartCoroutine(MoveBackward(5)));
 
         HideArrows();
 
@@ -235,41 +220,10 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     private void HideArrows()
     {
-        if (rightArrow != null)
-        {
-            rightArrow.gameObject.SetActive(false);
-        }
-        else
-        {
-            Debug.LogWarning("RightArrow is not assigned.");
-        }
-
-        if (leftArrow != null)
-        {
-            leftArrow.gameObject.SetActive(false);
-        }
-        else
-        {
-            Debug.LogWarning("LeftArrow is not assigned.");
-        }
-
-        if (upArrow != null)
-        {
-            upArrow.gameObject.SetActive(false);
-        }
-        else
-        {
-            Debug.LogWarning("UpArrow is not assigned.");
-        }
-
-        if (downArrow != null)
-        {
-            downArrow.gameObject.SetActive(false);
-        }
-        else
-        {
-            Debug.LogWarning("DownArrow is not assigned.");
-        }
+        rightArrow.gameObject.SetActive(false);
+        leftArrow.gameObject.SetActive(false);
+        upArrow.gameObject.SetActive(false);
+        downArrow.gameObject.SetActive(false);
     }
 
     private void ShowArrows()
@@ -296,42 +250,44 @@ public class PlayerBoardMovement : NetworkBehaviour
             StartCoroutine(MoveAlongPath(steps));
         }
     }
-    private IEnumerator DetermineDefaultDirection()
+
+    private void DetermineDefaultDirection()
     {
         Vector3Int[] validMoves = null;
 
-        while (validMoves == null)
+        while (validMoves == null || validMoves.Length == 0)
         {
             try
             {
                 Vector3 worldPosition = transform.position;
                 Vector3Int currentTilePos = boardManager.boardTilemap.WorldToCell(worldPosition);
+
+                // Debugging the current tile position
                 Debug.Log($"Current Tile Position: {currentTilePos}");
 
                 validMoves = boardManager.pathTiles[currentTilePos].possibleMoves;
             }
             catch (KeyNotFoundException e)
             {
-                Debug.LogWarning("Tile not found. Retrying..." + e.Message);
+                Debug.LogWarning("Tile not found. Retrying...");
                 validMoves = null; // Force retry
             }
-
-            // Yield to avoid locking the main thread and allow retries in subsequent frames
-            yield return null;
         }
-
-        if (SceneManager.GetActiveScene().name != "CountrySide")
+        // debugging the current tile  position
+        Debug.Log($"Current Tile Position: {currentTilePos}");
+        
+        if(SceneManager.GetActiveScene().name != "CountrySide")
         {
             SetIdleAnimation(0);
             currentDirection = "x";
-            yield return null;
+            return;
         }
 
         if (validMoves.Length == 0)
         {
             currentDirection = "x";
             SetIdleAnimation(0);
-            yield return null;
+            return;
         }
 
         Vector3Int offset = validMoves[0];
