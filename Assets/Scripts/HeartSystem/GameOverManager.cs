@@ -124,6 +124,7 @@ public class GameOverManager : NetworkBehaviour
         spawn_mang.IndexTabAllPlayer = 0;
         spawn_mang.SpawanDone = false;
         spawn_mang.AllPlayer = new GameObject[4];
+        ToNextMap.DesertDone = false;
 
         //if (NetworkManager.Singleton != null)
         //{

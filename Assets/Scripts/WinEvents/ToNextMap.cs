@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ToNextMap : NetworkBehaviour
 {
-    private static bool DesertDone = false;
+    public static bool DesertDone = false;
     public GameObject TextChatW;
 
     void OnEnable()
