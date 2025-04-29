@@ -8,27 +8,15 @@ public class ButtonManager : MonoBehaviour
     public Toggle radioButton1;
     public Toggle radioButton2;
 
-    public void CreateDisable()
+    public void Create()
     {
         targetButton.interactable = false;
         radioButton1.interactable = false;
         radioButton2.interactable = false;
     }
 
-    public void CreateEnable()
-    {
-        targetButton.interactable = true;
-        radioButton1.interactable = true;
-        radioButton2.interactable = true;
-    }
-
-    public void JoinDisable()
+    public void Join()
     {
         targetButton.interactable = false;
-    }
-
-    public void JoinEnable()
-    {
-        targetButton.interactable = true;
     }
 }
