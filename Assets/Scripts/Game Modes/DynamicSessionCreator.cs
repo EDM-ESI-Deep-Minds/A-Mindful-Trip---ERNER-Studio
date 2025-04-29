@@ -13,7 +13,14 @@ public class DynamicSessionCreator : MonoBehaviour
             return;
         }
 
-        int maxPlayers = GameMode.Instance.GetMaxPlayers();
+        GameMode gameMode = FindObjectOfType<GameMode>();
+        if (gameMode == null)
+        {
+            Debug.LogError("GameMode not found in scene!");
+            return;
+        }
+
+        int maxPlayers = gameMode.GetMaxPlayers();
         widgetConfig.MaxPlayers = maxPlayers;
 
         Debug.Log("WidgetConfiguration.MaxPlayers set to: " + widgetConfig.MaxPlayers);
