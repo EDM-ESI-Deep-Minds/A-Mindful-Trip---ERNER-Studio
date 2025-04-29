@@ -54,7 +54,7 @@ public class ToNextMap : NetworkBehaviour
                 DesertDone = false;
                 NetworkManager.SceneManager.LoadScene("City", UnityEngine.SceneManagement.LoadSceneMode.Single);
             }
-            reSetReadyClientRpc();
+            StartCoroutine(CallResetReadyAfterDelay());
         }
     }
 
@@ -62,6 +62,12 @@ public class ToNextMap : NetworkBehaviour
     private void reSetReadyClientRpc()
     {
         ReadyManager.allReady = false;
+    }
+
+    private IEnumerator CallResetReadyAfterDelay()
+    {
+        yield return new WaitForSeconds(5f);
+        reSetReadyClientRpc();
     }
 
     [ClientRpc]
