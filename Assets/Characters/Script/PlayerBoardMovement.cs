@@ -914,6 +914,11 @@ public class PlayerBoardMovement : NetworkBehaviour
                 currentDirection = "x";
                 return false;
             }
+
+            if (tile.falseIntersection)
+            {
+                return false;
+            }
             forwardMoveCount++;
             
         }
