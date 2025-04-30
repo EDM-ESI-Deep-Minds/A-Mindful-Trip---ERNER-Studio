@@ -60,7 +60,7 @@ public class ItemEffectManager : MonoBehaviour
         }
 
         // Remove item from inventory if one-time use (below is for collectible logic but we'd need to store it somewhere with the profile)
-        // if (item.itemID != 8) // M60 is collectible
-        //     inventoryManager.removeItem(slotIndex);
+        if (item.itemID != 8) // M60 is collectible
+            inventoryManager.removeItem(slotIndex);
     }
 }
