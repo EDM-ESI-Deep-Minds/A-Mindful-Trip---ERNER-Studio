@@ -31,7 +31,9 @@ public class QuestionManager : NetworkBehaviour
     private int currentCategory;
     private ulong currentPlayerId;
     private int spriteIndex;
-    private int coinReward; 
+    private int coinReward;
+
+    private bool applyNegativeEffect = true;
 
 
     private void Awake()
@@ -239,20 +241,38 @@ public class QuestionManager : NetworkBehaviour
         {
             if (!isCorrect)
             {
-                HeartUIManager heartUI = FindFirstObjectByType<HeartUIManager>();
-                if (heartUI != null)
+                if (applyNegativeEffect)
                 {
-                    heartUI.removeHeart();
+                    HeartUIManager heartUI = FindFirstObjectByType<HeartUIManager>();
+                    if (heartUI != null)
+                    {
+                        heartUI.removeHeart();
+                    }
+                } else
+                {
+                    //TODO broadcast some ui
                 }
             } else {
-                //TODO Play correct answer sfx
                 AudioManager.instance?.PlaySFX(AudioManager.instance.correctAnswerSFX);
                 InventoryManager inventory = FindFirstObjectByType<InventoryManager>();
                 inventory.AddCoins(coinReward);
             }
 
             ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;
-            EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
+
+            if (isCorrect)
+            {   
+                EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
+            } else
+            {
+                if (applyNegativeEffect)
+                {
+                    EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
+                }
+                //do not touch the elo if applynegativeeffect was false
+            }
+            //set it to ture whether he used it or not or he answer correctly or not
+            applyNegativeEffect = true;
         }
         Invoke(nameof(CleanupQuestionUIClientRpc), 3f);
     }
@@ -311,6 +331,19 @@ public class QuestionManager : NetworkBehaviour
     {
         yield return new WaitForSeconds(1f); 
         RolesManager.SwitchRole(); 
+    }
+
+    public void HighlightCorrectAnswer()
+    {
+        //TODO for now it is highlighting for the person who is responding only
+        //maybe it will stay like that
+        var ui = spawnedUI.GetComponent<QuestionUI>();
+        ui.HighlightCorrectAnswer(correctAnswer);
+    }
+
+    public void ProtectFromNegativeEffects()
+    {
+        applyNegativeEffect = false;
     }
 
 }

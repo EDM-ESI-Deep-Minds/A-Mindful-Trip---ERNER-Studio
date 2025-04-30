@@ -68,15 +68,17 @@ public class PlayerController : NetworkBehaviour
         // itemEffectManager setup
         itemEffectManager = GetComponent<ItemEffectManager>();
 
-        if (itemEffectManager != null)
-        {
-            var questionManager = FindObjectOfType<QuestionManager>();
-            var rolesManager = FindObjectOfType<RolesManager>();
-            var heartManager = heartUIInstance.GetComponent<HeartUIManager>();
+        //if (itemEffectManager != null)
+        //{
+        //    Debug.Log("Local and Global refs are being fetched ...");
 
-            itemEffectManager.SetLocalRefs(heartManager, inventoryManager);
-            itemEffectManager.InitializeGlobalRefs(questionManager, rolesManager);
-        }
+        //    var questionManager = FindObjectOfType<QuestionManager>();
+        //    var rolesManager = FindObjectOfType<RolesManager>();
+        //    var heartManager = heartUIInstance.GetComponent<HeartUIManager>();
+
+        //    itemEffectManager.SetLocalRefs(heartManager, inventoryManager);
+        //    itemEffectManager.InitializeGlobalRefs(questionManager, rolesManager);
+        //}
     }
 
     void Update()

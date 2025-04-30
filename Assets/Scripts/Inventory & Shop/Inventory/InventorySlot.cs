@@ -8,10 +8,10 @@ public class InventorySlot : MonoBehaviour
     private int myIndex; // set by InventoryManager
     private ItemEffectManager itemEffectManager;
 
-    public void Initialize(int index, ItemEffectManager effectManager)
+    public void Initialize(int index)
     {
         myIndex = index;
-        itemEffectManager = effectManager;
+        itemEffectManager = FindFirstObjectByType<ItemEffectManager>();
     }
 
     public void SetItem(ItemSO item)

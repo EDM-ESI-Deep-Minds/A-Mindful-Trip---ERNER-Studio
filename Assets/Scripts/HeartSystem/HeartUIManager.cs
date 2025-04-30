@@ -153,6 +153,11 @@ public class HeartUIManager : MonoBehaviour
     {
         return hearts;
     }
+
+    public int getMaxHearts()
+    {
+        return maxhearts;
+    }
 }
 
 
