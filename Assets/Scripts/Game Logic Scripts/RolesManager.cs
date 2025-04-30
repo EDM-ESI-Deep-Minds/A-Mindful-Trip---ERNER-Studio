@@ -12,6 +12,7 @@ public class RolesManager : NetworkBehaviour
     public static event Action CameraSwitchTarget;
     [SerializeField] public Button RollDiceButtonRef;
     public static Button RollDiceButton;
+    private static bool AddTurn;
     private void Start()
     {
         IsMyTurn = SwitcheCam.CurrentPlayer.IsOwner;
@@ -26,9 +27,21 @@ public class RolesManager : NetworkBehaviour
         //    SwitchRole();
         //}
     }
-  
+
     public static void SwitchRole()
     {
-        CameraSwitchTarget?.Invoke();
+        if (!AddTurn) { 
+            CameraSwitchTarget?.Invoke();
+        }
+        else
+        {
+            AddTurn = false;
+        }
+    }
+
+    public static void GainExtraTurn()
+    {
+        AddTurn = true;
+        RollDiceButton.gameObject.SetActive(AddTurn);
     }
 }
