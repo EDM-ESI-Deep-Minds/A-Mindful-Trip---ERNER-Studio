@@ -99,6 +99,8 @@ public class ItemEffectManager : MonoBehaviour
         } else {
             removeItem();
         }
+
+        //TODO ui when max heart reached
     }
 
 

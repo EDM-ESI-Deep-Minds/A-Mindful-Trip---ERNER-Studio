@@ -38,6 +38,7 @@ public class RolesManager : NetworkBehaviour
             AddTurn = false;
             RollDiceButton.gameObject.SetActive(AddTurn);
             RollDiceButton.interactable = true;
+            Debug.Log("Extra turn triggerd");
         }
     }
 

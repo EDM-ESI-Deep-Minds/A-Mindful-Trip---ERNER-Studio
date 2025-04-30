@@ -361,8 +361,10 @@ public class QuestionManager : NetworkBehaviour
     private void BroadCastNewQuestionClientRpc()
     {
         introDialogue = "Here is your new question";
-        var ui = spawnedUI.GetComponent<QuestionUI>();
-        ui.removeOldAnswers();
+        //var ui = spawnedUI.GetComponent<QuestionUI>();
+        //ui.removeOldAnswers();
+        Destroy(spawnedUI);
+        spawnedUI = null;
 
         if (RolesManager.IsMyTurn)
         {
