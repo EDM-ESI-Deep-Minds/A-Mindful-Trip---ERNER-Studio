@@ -7,6 +7,18 @@ public class ItemEffectManager : MonoBehaviour
     public RolesManager turnManager;
     public InventoryManager inventoryManager;
 
+    public void InitializeGlobalRefs(QuestionManager q, RolesManager r)
+    {
+        questionManager = q;
+        turnManager = r;
+    }
+
+    public void SetLocalRefs(HeartUIManager heart, InventoryManager inventory)
+    {
+        heartManager = heart;
+        inventoryManager = inventory;
+    }
+
     public void UseItem(ItemSO item, int slotIndex)
     {
         switch (item.itemID)
