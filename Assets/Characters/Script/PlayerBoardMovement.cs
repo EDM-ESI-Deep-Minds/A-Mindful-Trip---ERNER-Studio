@@ -415,7 +415,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             }
 
             PathTile currentTile = boardManager.pathTiles[currentTilePos];
-
+             
 
 
             if (currentTile.possibleMoves.Length == 0)
@@ -948,23 +948,28 @@ public class PlayerBoardMovement : NetworkBehaviour
         {
             Vector3Int offset = move;
             //Debug.Log($"here is the offset {offset}");
+            PathTile currentTile = boardManager.pathTiles[currentTilePos];
+
             if (currentDirection == "x")
             {
                 // Right movement cases
-                if (offset == new Vector3Int(3, 0, 0) || offset == new Vector3Int(4, 0, 0) ||
+               
+                    if (offset == new Vector3Int(3, 0, 0) || offset == new Vector3Int(4, 0, 0) ||
                     offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) || offset == new Vector3Int(1, 0, 0))
-                {
-                    if (boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(4, 0, 0)) && boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(2, 0, 0)))
                     {
-                        possibleMoves = 1;
-                        onlyOneMove = new Vector3Int(2, 0, 0);
-                        break;
+                        if (boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(4, 0, 0)) && boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(2, 0, 0)))
+                        {
+                            possibleMoves = 1;
+                            onlyOneMove = new Vector3Int(2, 0, 0);
+                            break;
+                        }
+                        possibleMoves++;
+                        onlyOneMove = offset;
+                        rightArrow.gameObject.SetActive(true);
+
                     }
-                    possibleMoves++;
-                    onlyOneMove = offset;
-                   rightArrow.gameObject.SetActive(true);
-                    
-                }
+
+
 
                 //// Left movement cases
                 //if (offset == new Vector3Int(-3, 0, 0) || offset == new Vector3Int(-4, 0, 0) ||   
@@ -974,15 +979,18 @@ public class PlayerBoardMovement : NetworkBehaviour
                 //}
 
                 // Up movement cases
-                if (offset == new Vector3Int(1, 2, 0) || offset == new Vector3Int(2, 2, 0) ||
+                if (!currentTile.noUp)
+                {
+                    if (offset == new Vector3Int(1, 2, 0) || offset == new Vector3Int(2, 2, 0) ||
                     offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(2, 1, 0) ||
                     offset == new Vector3Int(1, 1, 0) || offset == new Vector3Int(0, 2, 0)
                     //offset == new Vector3Int(-1, 2, 0) || offset == new Vector3Int(-2, 2, 0)
                     )
-                {
-                    possibleMoves++;
-                    onlyOneMove = offset;
-                    upArrow.gameObject.SetActive(true);
+                    {
+                        possibleMoves++;
+                        onlyOneMove = offset;
+                        upArrow.gameObject.SetActive(true);
+                    }
                 }
 
                 // Down movement cases
