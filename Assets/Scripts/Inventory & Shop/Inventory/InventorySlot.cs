@@ -52,6 +52,13 @@ public class InventorySlot : MonoBehaviour
             Debug.Log("Slot clicked: has item.");
             // Item logic to be added
             itemEffectManager.UseItem(storedItem, myIndex);
+
+            //Overriding the normal click sound
+             if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFX(AudioManager.instance.itemEffectSFX);
+            }
+
         }
     }
 }
