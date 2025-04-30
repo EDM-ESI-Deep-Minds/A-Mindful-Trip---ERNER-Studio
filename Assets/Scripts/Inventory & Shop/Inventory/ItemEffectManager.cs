@@ -164,7 +164,7 @@ public class ItemEffectManager : MonoBehaviour
         }
         else
         {
-            // turnManager.GainExtraTurn();
+            RolesManager.GainExtraTurn();
             Debug.Log("Extra turn gained.");
         }
 

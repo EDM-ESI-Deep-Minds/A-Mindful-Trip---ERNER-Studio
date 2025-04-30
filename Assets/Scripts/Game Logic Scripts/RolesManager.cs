@@ -36,12 +36,13 @@ public class RolesManager : NetworkBehaviour
         else
         {
             AddTurn = false;
+            RollDiceButton.gameObject.SetActive(AddTurn);
+            RollDiceButton.interactable = true;
         }
     }
 
     public static void GainExtraTurn()
     {
         AddTurn = true;
-        RollDiceButton.gameObject.SetActive(AddTurn);
     }
 }
