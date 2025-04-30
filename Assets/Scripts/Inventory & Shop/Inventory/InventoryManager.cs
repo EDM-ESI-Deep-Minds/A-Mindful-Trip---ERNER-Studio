@@ -14,6 +14,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject player;
     private int PercentageBonus = 0;
     [SerializeField] private Image[] lockIcon;
+    [SerializeField] private ItemEffectManager itemEffectManager; // added
     private bool islocked;
     //don't forget to unlock the inventory when being in the hub
 
@@ -28,6 +29,8 @@ public class InventoryManager : MonoBehaviour
     private void Start()
     {
         Debug.Log($"InventoryManager Start(): currentCoins = {currentCoins}");
+        for (int i = 0; i < inventorySlots.Length; i++)
+            inventorySlots[i].Initialize(i, itemEffectManager); // new intialization
         UpdateCoinText();
     }
 
