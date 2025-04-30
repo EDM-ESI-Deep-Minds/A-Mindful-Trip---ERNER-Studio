@@ -106,7 +106,8 @@ public class ItemEffectManager : MonoBehaviour
 
     private void jokerCard()
     {
-        // questionManager.BroadcastMessage();
+        QuestionManager questionManager = FindFirstObjectByType<QuestionManager>();
+        questionManager.BroadcastNewQuestion();
         removeItem();
     }
 
@@ -147,7 +148,7 @@ public class ItemEffectManager : MonoBehaviour
 
     private void stTrina()
     {
-        // turnManager.SkipNextTile();
+        EventTrigger.setSkipTile();
         removeItem();
     }
 

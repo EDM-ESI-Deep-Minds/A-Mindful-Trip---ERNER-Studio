@@ -34,6 +34,7 @@ public class QuestionManager : NetworkBehaviour
     private int coinReward;
 
     private bool applyNegativeEffect = true;
+    private string introDialogue = "Ready for a challenge?";
 
 
     private void Awake()
@@ -182,7 +183,8 @@ public class QuestionManager : NetworkBehaviour
 
     private IEnumerator HandleQuestionSequence(QuestionUI ui, string questionText, string category, string difficulty, string[] answers, float timer, bool isMyTurn)
     {
-        ui.ShowIntroDialogue("Ready for a challenge?");
+        ui.ShowIntroDialogue(introDialogue);
+        introDialogue = "Ready for a challenge?";
 
         yield return new WaitForSeconds(3f); // Intro duration
 
@@ -335,8 +337,6 @@ public class QuestionManager : NetworkBehaviour
 
     public void HighlightCorrectAnswer()
     {
-        //TODO for now it is highlighting for the person who is responding only
-        //maybe it will stay like that
         var ui = spawnedUI.GetComponent<QuestionUI>();
         ui.HighlightCorrectAnswer(correctAnswer);
     }
@@ -344,6 +344,30 @@ public class QuestionManager : NetworkBehaviour
     public void ProtectFromNegativeEffects()
     {
         applyNegativeEffect = false;
+    }
+
+    public void BroadcastNewQuestion()
+    {
+        BroadCastNewQuestionServerRpc();
+    }
+
+    [ServerRpc(RequireOwnership =false)]
+    private void BroadCastNewQuestionServerRpc()
+    {
+        BroadCastNewQuestionClientRpc();
+    }
+
+    [ClientRpc]
+    private void BroadCastNewQuestionClientRpc()
+    {
+        introDialogue = "Here is your new question";
+        var ui = spawnedUI.GetComponent<QuestionUI>();
+        ui.removeOldAnswers();
+
+        if (RolesManager.IsMyTurn)
+        {
+            OnQuestionTileTriggered();
+        }
     }
 
 }

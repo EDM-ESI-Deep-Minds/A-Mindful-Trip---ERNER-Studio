@@ -147,4 +147,12 @@ public class QuestionUI : MonoBehaviour
         }
 
     }
+
+    public void removeOldAnswers()
+    {
+        foreach (Transform child in answerButtonParent)
+        {
+            Destroy(child);
+        }
+    }
 }

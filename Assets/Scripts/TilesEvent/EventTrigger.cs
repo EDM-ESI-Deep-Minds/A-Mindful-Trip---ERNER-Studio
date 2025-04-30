@@ -5,10 +5,18 @@ using Unity.Collections;
 public static class EventTrigger
 {
     public static event Action OnQuestionTile;
-    public static event Action OnMapWin;   
+    public static event Action OnMapWin;
+    public static bool skipTile;
     public static void SelectEventToTrigger(string TileType)
     {
         CurseTileEvent.updateTimers();
+
+        if (skipTile)
+        {
+            skipTile = false;
+            HandleSkipTile();
+            return;
+        }
 
         switch (TileType)
         {
@@ -50,5 +58,16 @@ public static class EventTrigger
                 Debug.LogWarning($"Unknown tile type: {TileType}");
                 break;
         }
+    }
+
+    private static void HandleSkipTile()
+    {
+        //TODO broadcast some ui
+        RolesManager.SwitchRole();
+    }
+
+    public static void setSkipTile()
+    {
+        skipTile = true;
     }
 }
