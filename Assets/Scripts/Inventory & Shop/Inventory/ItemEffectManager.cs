@@ -207,8 +207,8 @@ public class ItemEffectManager : MonoBehaviour
     private void removeItem()
     {
         // Remove item from inventory if one-time use (below is for collectible logic but we'd need to store it somewhere with the profile)
-        if (item.itemID != 8)
-        {// M60 is collectible
+        if (item.itemID != 8)// M60 is collectible
+        {
             InventoryManager inventoryManager = FindFirstObjectByType<InventoryManager>();
             inventoryManager.removeItem(slotIndex);
         }

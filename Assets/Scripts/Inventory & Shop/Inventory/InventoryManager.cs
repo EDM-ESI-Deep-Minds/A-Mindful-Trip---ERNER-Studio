@@ -24,10 +24,9 @@ public class InventoryManager : MonoBehaviour
     {
         inventoryItems = new List<int>();
         currentCoins = startingCoins;
-        AddItem(itemDatabase.GetItemByID(1));
-        AddItem(itemDatabase.GetItemByID(1));
-        AddItem(itemDatabase.GetItemByID(1));
-        AddItem(itemDatabase.GetItemByID(1));
+
+        //how to populate the inventory for testing
+        //AddItem(itemDatabase.GetItemByID(1));
 
 
     }
