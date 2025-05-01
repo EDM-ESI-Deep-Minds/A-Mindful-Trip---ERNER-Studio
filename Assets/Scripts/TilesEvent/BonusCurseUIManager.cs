@@ -181,6 +181,34 @@ public class BonusCurseUIManager : NetworkBehaviour
         }
     };
 
+    public Dictionary<string, EffectData> items = new Dictionary<string, EffectData>()
+    {
+        {
+            "stTrina",
+            new EffectData
+            {
+                 mainText = "Used St.Trina flower",
+                flavorTexts = new string[]
+                {
+                    "You shake the flower, its scent lulls Cellica to sleep.",
+                }
+            }
+        },
+
+        {
+            "potOfGreed",
+            new EffectData
+            {
+                 mainText = "Used Pot of Greed",
+                flavorTexts = new string[]
+                {
+                    "Your greed grants you an extra turn or a bonus... \nYou'll see.",
+                    "You summon Pot of Greed... an extra turn or a bonus awaits.",
+                }
+            }
+        }
+    };
+
     public string GetEffect(string effectKey, int type)
     {
         Dictionary<string, EffectData> source = null;
@@ -193,6 +221,9 @@ public class BonusCurseUIManager : NetworkBehaviour
         } else if (type == 2)
         {
             source = curses;
+        } else if (type == 3)
+        {
+            source = items;
         }
 
         if (!source.ContainsKey(effectKey))

@@ -62,7 +62,9 @@ public static class EventTrigger
 
     private static void HandleSkipTile()
     {
-        //TODO broadcast some ui
+        FixedString128Bytes effectKey = new FixedString128Bytes("stTrina");
+        BonusCurseUIManager UIManager = UnityEngine.Object.FindFirstObjectByType<BonusCurseUIManager>();
+        UIManager.GetMessageServerRpc(effectKey, 3);
         RolesManager.SwitchRole();
     }
 
