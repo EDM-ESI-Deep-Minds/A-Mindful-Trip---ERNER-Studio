@@ -133,8 +133,6 @@ public class QuestionUI : MonoBehaviour
                 if (btnText.text == correctAnswer)
                 {
 
-                    //TODO update the ui if needed
-
                     ColorBlock colors = btn.colors;
                     colors.normalColor = Color.green;
                     colors.selectedColor = Color.green;
