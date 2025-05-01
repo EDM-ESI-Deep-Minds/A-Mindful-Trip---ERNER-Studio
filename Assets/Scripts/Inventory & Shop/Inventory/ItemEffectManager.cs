@@ -158,7 +158,7 @@ public class ItemEffectManager : MonoBehaviour
 
         FixedString128Bytes effectKey = new FixedString128Bytes("potOfGreed");
         BonusCurseUIManager UIManager = FindFirstObjectByType<BonusCurseUIManager>();
-        UIManager.GetMessageServerRpc(effectKey, 3);
+        UIManager.SetUI(effectKey, 3);
 
         removeItem();
     }
@@ -167,7 +167,7 @@ public class ItemEffectManager : MonoBehaviour
     {
         FixedString128Bytes effectKey = new FixedString128Bytes("mouthWash");
         BonusCurseUIManager UIManager = FindFirstObjectByType<BonusCurseUIManager>();
-        UIManager.GetMessageServerRpc(effectKey, 3);
+        UIManager.SetUI(effectKey, 3);
 
         removeItem();
     }
@@ -176,7 +176,7 @@ public class ItemEffectManager : MonoBehaviour
     {
         FixedString128Bytes effectKey = new FixedString128Bytes("allenM60");
         BonusCurseUIManager UIManager = FindFirstObjectByType<BonusCurseUIManager>();
-        UIManager.GetMessageServerRpc(effectKey, 3);
+        UIManager.SetUI(effectKey, 3);
     }
 
     private void addHeart(HeartUIManager heartManager)

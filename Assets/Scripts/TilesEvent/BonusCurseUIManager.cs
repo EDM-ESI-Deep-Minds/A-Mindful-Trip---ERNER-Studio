@@ -284,10 +284,23 @@ public class BonusCurseUIManager : NetworkBehaviour
 
         ui.SetText(effect.ToString(), type);
 
-        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f,effectKey.ToString()));
+        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f,effectKey.ToString(),type));
     }
 
-    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effectKey)
+    public void SetUI(FixedString128Bytes effectKey, int type)
+    {
+        FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), type));
+
+        spawnedUI = Instantiate(MessageUIPrefab, GameObject.Find("Canvas").transform);
+        var ui = spawnedUI.GetComponent<CurseBonusUI>();
+
+        ui.SetText(effect.ToString(), type);
+
+        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f, effectKey.ToString(), type));
+    }
+
+
+    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effectKey,int type)
     {
         yield return new WaitForSeconds(delay);
         if (uiObject != null)
@@ -295,7 +308,7 @@ public class BonusCurseUIManager : NetworkBehaviour
             Destroy(uiObject);
         }
 
-        if (RolesManager.IsMyTurn && effectKey != "reposition" && effectKey != "potOfGreed")
+        if (RolesManager.IsMyTurn && effectKey != "reposition" && type != 3)
         {
             StartCoroutine(DelaySwitchTurn());
         }
