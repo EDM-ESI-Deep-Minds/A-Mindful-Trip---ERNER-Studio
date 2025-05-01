@@ -16,6 +16,8 @@ public class HeartUIManager : MonoBehaviour
 
     public Transform heartContainer;
 
+    public GameObject maxheartsMessage;
+
 
     private int hearts;
     private int emptyHearts = 0;
@@ -104,8 +106,16 @@ public class HeartUIManager : MonoBehaviour
         }
         else
         {
+            maxheartsMessage.SetActive(true);
+            StartCoroutine(HideMessageAfterDelay());
             Debug.Log("Max hearts reached");
         }
+    }
+
+    private System.Collections.IEnumerator HideMessageAfterDelay()
+    {
+        yield return new WaitForSeconds(3f);
+        maxheartsMessage.SetActive(false);
     }
 
     public void removeHeart()
