@@ -77,11 +77,11 @@ public class GameOverManager : NetworkBehaviour
     private IEnumerator SetupAndFadeInUI()
     {
         // stopping all current audio
-        if(AudioManager.instance != null)
+        if (AudioManager.instance != null)
         {
             AudioManager.instance.StopAllAudio();
         }
-        
+
         if (GameOverUI == null)
         {
             GameOverUI = GameObject.Find("GameOverUI");
@@ -126,6 +126,7 @@ public class GameOverManager : NetworkBehaviour
         spawn_mang.AllPlayer = new GameObject[4];
         ToNextMap.DesertDone = false;
 
+        StartCoroutine(DelayBeforeReturningToMainMenu());
         //if (NetworkManager.Singleton != null)
         //{
         //    if (NetworkManager.Singleton.IsServer)
@@ -148,6 +149,33 @@ public class GameOverManager : NetworkBehaviour
         //Destroy(gameObject);
 
         SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
+    }
+
+    private IEnumerator DelayBeforeReturningToMainMenu()
+    {
+        yield return new WaitForSeconds(0.5f); // Delay before loading Main Menu
+
+        if (GameOverUI != null)
+        {
+            GameOverUI.SetActive(false);
+
+            if (canvasGroup == null)
+                canvasGroup = GameOverUI.GetComponent<CanvasGroup>();
+
+            if (canvasGroup != null)
+            {
+                canvasGroup.alpha = 0f;
+                canvasGroup.interactable = false;
+                canvasGroup.blocksRaycasts = false;
+            }
+
+            if (Button != null)
+            {
+                Button.interactable = true;
+            }
+        }
+
+        // SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
     }
 
     //[ServerRpc(RequireOwnership = false)]

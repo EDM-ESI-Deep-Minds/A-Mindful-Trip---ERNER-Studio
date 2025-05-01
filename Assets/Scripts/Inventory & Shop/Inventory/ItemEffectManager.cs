@@ -86,8 +86,6 @@ public class ItemEffectManager : MonoBehaviour
         }
     }
 
-
-
     private void bloodVial()
     {
         HeartUIManager heartManager = FindFirstObjectByType<HeartUIManager>();
@@ -96,15 +94,14 @@ public class ItemEffectManager : MonoBehaviour
         if (hearts == heartManager.getMaxHearts())
         {
             Debug.Log("Can't use item max hearts reached");
-        } else {
+        }
+        else
+        {
             removeItem();
         }
 
         //TODO ui when max heart reached
     }
-
-
-
 
     private void jokerCard()
     {
@@ -113,9 +110,6 @@ public class ItemEffectManager : MonoBehaviour
         removeItem();
     }
 
-
-
-
     private void laTourte()
     {
         QuestionManager questionManager = FindFirstObjectByType<QuestionManager>();
@@ -123,15 +117,12 @@ public class ItemEffectManager : MonoBehaviour
         removeItem();
     }
 
-
-
-
     private void pizza3D()
     {
         if (Random.value < 0.5f)
         {
             QuestionManager questionManager = FindFirstObjectByType<QuestionManager>();
-             questionManager.HighlightCorrectAnswer();
+            questionManager.HighlightCorrectAnswer();
         }
         else
         {
@@ -143,20 +134,11 @@ public class ItemEffectManager : MonoBehaviour
 
         removeItem();
     }
-
-
-
-
-
     private void stTrina()
     {
         EventTrigger.setSkipTile();
         removeItem();
     }
-
-
-
-
     private void potOfGreed()
     {
         if (Random.value < 0.5f)
@@ -174,8 +156,6 @@ public class ItemEffectManager : MonoBehaviour
         removeItem();
     }
 
-
-
     private void mouthWash()
     {
         //TODO broadcast some ui
@@ -183,17 +163,10 @@ public class ItemEffectManager : MonoBehaviour
         removeItem();
     }
 
-
-
-
     private void allenM60()
     {
         //TODO broadcast some ui
     }
-
-
-
-
 
     private void addHeart(HeartUIManager heartManager)
     {

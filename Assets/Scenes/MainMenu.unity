@@ -17640,6 +17640,7 @@ MonoBehaviour:
   soulShatterSFX: {fileID: 8300000, guid: 1ed9b8b14cc291c479dcfdb138696c1f, type: 3}
   itemEffectSFX: {fileID: 8300000, guid: 0e414fdafe0a3314f9b881405164c6a8, type: 3}
   diceRollSFX: {fileID: 8300000, guid: c7d36cead84fadb44a69e140f243dcae, type: 3}
+  evokerSFX: {fileID: 8300000, guid: 929cfb72016e7b647b695e384750497f, type: 3}
 --- !u!4 &1680800138
 Transform:
   m_ObjectHideFlags: 0
