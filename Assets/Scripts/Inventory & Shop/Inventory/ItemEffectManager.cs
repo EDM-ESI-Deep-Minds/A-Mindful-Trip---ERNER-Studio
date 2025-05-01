@@ -29,7 +29,7 @@ public class ItemEffectManager : MonoBehaviour
         this.item = item;
         this.slotIndex = slotIndex;
 
-        if (slotIndex == 2 || slotIndex == 4)
+        if (item.itemID == 2 || item.itemID == 4)
         {
             QuestionManager questionManager = FindFirstObjectByType<QuestionManager>();
             if (!RolesManager.IsMyTurn || !questionManager.isQuestion())
@@ -38,7 +38,7 @@ public class ItemEffectManager : MonoBehaviour
             }
         }
 
-        if (slotIndex == 5 || slotIndex == 6)
+        if (item.itemID == 5 || item.itemID == 6)
         {
             if (!RolesManager.IsMyTurn)
             {
