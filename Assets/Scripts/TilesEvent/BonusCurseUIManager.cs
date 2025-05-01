@@ -308,7 +308,7 @@ public class BonusCurseUIManager : NetworkBehaviour
             Destroy(uiObject);
         }
 
-        if (RolesManager.IsMyTurn && effectKey != "reposition" && type != 3)
+        if (RolesManager.IsMyTurn && effectKey != "reposition" && effectKey != "potOfGreed" && effectKey != "mouthWash" && effectKey != "allenM60")
         {
             StartCoroutine(DelaySwitchTurn());
         }
