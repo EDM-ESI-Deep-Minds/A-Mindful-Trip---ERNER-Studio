@@ -319,11 +319,11 @@ public class QuestionManager : NetworkBehaviour
         }
 
         HideGameplayUI(false);
-        HeartUIManager heart = FindFirstObjectByType<HeartUIManager>();
-        heart.hideNoNegative();
 
         if (RolesManager.IsMyTurn)
         {
+            HeartUIManager heart = FindFirstObjectByType<HeartUIManager>();
+            heart.hideNoNegative();
             StartCoroutine(DelaySwitchTurn());
         }
     }

@@ -206,6 +206,30 @@ public class BonusCurseUIManager : NetworkBehaviour
                     "You summon Pot of Greed... an extra turn or a bonus awaits.",
                 }
             }
+        },
+
+        {
+            "mouthWash",
+            new EffectData
+            {
+                 mainText = "Used Mouth Wash",
+                flavorTexts = new string[]
+                {
+                    "Mouthwash does nothing. But hey, hope is powerful!",
+                }
+            }
+        },
+
+        {
+            "allenM60",
+            new EffectData
+            {
+                 mainText = "Used Allen M60",
+                flavorTexts = new string[]
+                {
+                    "You inspect the rusted M60. It’s completely unusable.",
+                }
+            }
         }
     };
 

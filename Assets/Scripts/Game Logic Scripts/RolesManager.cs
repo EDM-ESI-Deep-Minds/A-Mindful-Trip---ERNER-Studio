@@ -43,10 +43,6 @@ public class RolesManager : NetworkBehaviour
                 rollDiceButton = GameObject.Find("RollDiceButton");
             }
 
-            FixedString128Bytes effectKey = new FixedString128Bytes("potOfGreed");
-            BonusCurseUIManager UIManager = FindFirstObjectByType<BonusCurseUIManager>();
-            UIManager.GetMessageServerRpc(effectKey, 3);
-
             rollDiceButton.gameObject.SetActive(true);
             rollDiceButton.GetComponent<Button>().interactable = true;
             Debug.Log("Extra turn triggerd");

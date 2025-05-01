@@ -1,3 +1,4 @@
+using Unity.Collections;
 using UnityEngine;
 
 public class ItemEffectManager : MonoBehaviour
@@ -155,19 +156,27 @@ public class ItemEffectManager : MonoBehaviour
             Debug.Log("Extra turn gained.");
         }
 
+        FixedString128Bytes effectKey = new FixedString128Bytes("potOfGreed");
+        BonusCurseUIManager UIManager = FindFirstObjectByType<BonusCurseUIManager>();
+        UIManager.GetMessageServerRpc(effectKey, 3);
+
         removeItem();
     }
 
     private void mouthWash()
     {
-        //TODO broadcast some ui
+        FixedString128Bytes effectKey = new FixedString128Bytes("mouthWash");
+        BonusCurseUIManager UIManager = FindFirstObjectByType<BonusCurseUIManager>();
+        UIManager.GetMessageServerRpc(effectKey, 3);
 
         removeItem();
     }
 
     private void allenM60()
     {
-        //TODO broadcast some ui
+        FixedString128Bytes effectKey = new FixedString128Bytes("allenM60");
+        BonusCurseUIManager UIManager = FindFirstObjectByType<BonusCurseUIManager>();
+        UIManager.GetMessageServerRpc(effectKey, 3);
     }
 
     private void addHeart(HeartUIManager heartManager)
