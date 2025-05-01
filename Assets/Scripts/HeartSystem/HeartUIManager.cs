@@ -25,6 +25,8 @@ public class HeartUIManager : MonoBehaviour
     private List<Image> heartImages = new List<Image>(); // Tracks all heart UI images
     private int maxhearts = 5;
 
+    private bool applyNegativeEffect = true;
+
     public void Awake()
     {
         RoomUIManager roomUIManager = FindFirstObjectByType<RoomUIManager>();
@@ -205,11 +207,18 @@ public class HeartUIManager : MonoBehaviour
     public void showNoNegative()
     {
         noNegativeMessage.SetActive(true);
+        applyNegativeEffect = true;
     }
 
     public void hideNoNegative()
     {
         noNegativeMessage.SetActive(false);
+        applyNegativeEffect = false;
+    }
+
+    public bool getApplyNegativeEffect()
+    {
+        return applyNegativeEffect;
     }
 }
 

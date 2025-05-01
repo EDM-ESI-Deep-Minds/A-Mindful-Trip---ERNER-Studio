@@ -37,9 +37,14 @@ public static class EventTrigger
                 break;
 
             case "Curse":
-
-                CurseTileEvent.handleCurse();
-
+                HeartUIManager hearts = UnityEngine.Object.FindFirstObjectByType<HeartUIManager>();
+                if (hearts.getApplyNegativeEffect())
+                {
+                    CurseTileEvent.handleCurse();
+                } else
+                {
+                    hearts.hideNoNegative();
+                }
                 Debug.Log("Curse event triggered.");
                 break;
 

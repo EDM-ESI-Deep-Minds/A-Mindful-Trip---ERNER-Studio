@@ -111,9 +111,6 @@ public class ItemEffectManager : MonoBehaviour
 
     private void laTourte()
     {
-        QuestionManager questionManager = FindFirstObjectByType<QuestionManager>();
-        questionManager.ProtectFromNegativeEffects();
-
         HeartUIManager hearts = FindAnyObjectByType<HeartUIManager>();
         hearts.showNoNegative();
 

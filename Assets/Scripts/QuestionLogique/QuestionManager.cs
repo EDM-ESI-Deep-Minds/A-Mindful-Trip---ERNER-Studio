@@ -33,7 +33,6 @@ public class QuestionManager : NetworkBehaviour
     private int spriteIndex;
     private int coinReward;
 
-    private bool applyNegativeEffect = true;
     private string introDialogue = "Ready for a challenge?";
 
 
@@ -239,13 +238,15 @@ public class QuestionManager : NetworkBehaviour
         var ui = spawnedUI.GetComponent<QuestionUI>();
         ui.ShowResult(result.ToString());
 
+        HeartUIManager heartUI = FindFirstObjectByType<HeartUIManager>();
+
         if (RolesManager.IsMyTurn)
         {
             if (!isCorrect)
             {
-                if (applyNegativeEffect)
+                if (heartUI.getApplyNegativeEffect())
                 {
-                    HeartUIManager heartUI = FindFirstObjectByType<HeartUIManager>();
+                    
                     if (heartUI != null)
                     {
                         heartUI.removeHeart();
@@ -264,14 +265,13 @@ public class QuestionManager : NetworkBehaviour
                 EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
             } else
             {
-                if (applyNegativeEffect)
+                if (heartUI.getApplyNegativeEffect())
                 {
                     EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
                 }
                 //do not touch the elo if applynegativeeffect was false
             }
             //set it to ture whether he used it or not or he answer correctly or not
-            applyNegativeEffect = true;
         }
         Invoke(nameof(CleanupQuestionUIClientRpc), 3f);
     }
@@ -338,11 +338,6 @@ public class QuestionManager : NetworkBehaviour
     {
         var ui = spawnedUI.GetComponent<QuestionUI>();
         ui.HighlightCorrectAnswer(correctAnswer);
-    }
-
-    public void ProtectFromNegativeEffects()
-    {
-        applyNegativeEffect = false;
     }
 
     public void BroadcastNewQuestion()

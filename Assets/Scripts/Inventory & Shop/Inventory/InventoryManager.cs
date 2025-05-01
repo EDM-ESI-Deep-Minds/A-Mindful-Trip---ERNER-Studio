@@ -27,8 +27,8 @@ public class InventoryManager : MonoBehaviour
         //how to populate the inventory for testing
         //AddItem(itemDatabase.GetItemByID(1));
         AddItem(itemDatabase.GetItemByID(6));
-        AddItem(itemDatabase.GetItemByID(7));
-        AddItem(itemDatabase.GetItemByID(8));
+        AddItem(itemDatabase.GetItemByID(6));
+        AddItem(itemDatabase.GetItemByID(6));
 
 
     }
