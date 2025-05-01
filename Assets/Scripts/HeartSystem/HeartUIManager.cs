@@ -207,13 +207,13 @@ public class HeartUIManager : MonoBehaviour
     public void showNoNegative()
     {
         noNegativeMessage.SetActive(true);
-        applyNegativeEffect = true;
+        applyNegativeEffect = false;
     }
 
     public void hideNoNegative()
     {
         noNegativeMessage.SetActive(false);
-        applyNegativeEffect = false;
+        applyNegativeEffect = true;
     }
 
     public bool getApplyNegativeEffect()

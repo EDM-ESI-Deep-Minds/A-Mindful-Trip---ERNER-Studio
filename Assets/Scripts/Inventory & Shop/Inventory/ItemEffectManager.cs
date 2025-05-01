@@ -29,6 +29,23 @@ public class ItemEffectManager : MonoBehaviour
         this.item = item;
         this.slotIndex = slotIndex;
 
+        if (slotIndex == 2 || slotIndex == 4)
+        {
+            QuestionManager questionManager = FindFirstObjectByType<QuestionManager>();
+            if (!RolesManager.IsMyTurn || !questionManager.isQuestion())
+            {
+                return;
+            }
+        }
+
+        if (slotIndex == 5 || slotIndex == 6)
+        {
+            if (!RolesManager.IsMyTurn)
+            {
+                return;
+            } 
+        }
+
         switch (item.itemID)
         {
 
