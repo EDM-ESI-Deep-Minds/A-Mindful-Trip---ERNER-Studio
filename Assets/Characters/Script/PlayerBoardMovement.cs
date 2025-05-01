@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using System.Linq.Expressions;
 
 public class PlayerBoardMovement : NetworkBehaviour
 {
@@ -120,14 +121,30 @@ public class PlayerBoardMovement : NetworkBehaviour
         Vector3Int gridPosition= boardManager.boardTilemap.WorldToCell(worldPosition);
         currentTilePos = gridPosition;
         Debug.Log($"Current Tile Position: {currentTilePos}");
-        StartCoroutine(DetermineDefaultDirection());
+        
 
         while (rightArrow == null || leftArrow == null || downArrow == null || upArrow == null)
         {
-            rightArrow = GameObject.Find("RightArrow").GetComponent<Button>();
-            leftArrow = GameObject.Find("LeftArrow").GetComponent<Button>();
-            upArrow = GameObject.Find("UpArrow").GetComponent<Button>();
-            downArrow = GameObject.Find("DownArrow").GetComponent<Button>();
+            GameObject rightObj = GameObject.Find("RightArrow");
+            GameObject leftObj = GameObject.Find("LeftArrow");
+            GameObject upObj = GameObject.Find("UpArrow");
+            GameObject downObj = GameObject.Find("DownArrow");
+
+            if (rightObj != null && rightArrow == null)
+                rightArrow = rightObj.GetComponent<Button>();
+
+            if (leftObj != null && leftArrow == null)
+                leftArrow = leftObj.GetComponent<Button>();
+
+            if (upObj != null && upArrow == null)
+                upArrow = upObj.GetComponent<Button>();
+
+            if (downObj != null && downArrow == null)
+                downArrow = downObj.GetComponent<Button>();
+
+            Debug.Log($"RightArrow: {rightArrow}, LeftArrow: {leftArrow}, UpArrow: {upArrow}, DownArrow: {downArrow}");
+
+            yield return new WaitForSeconds(0.5f);
 
             //backWardButton = GameObject.Find("backWardButton").GetComponent<Button>();
             Debug.Log($"RightArrow: {rightArrow}, LeftArrow: {leftArrow}, UpArrow: {upArrow}, DownArrow: {downArrow}");
@@ -147,6 +164,8 @@ public class PlayerBoardMovement : NetworkBehaviour
             upArrow.onClick.AddListener(() => SetChosenDirection("up"));
             downArrow.onClick.AddListener(() => SetChosenDirection("down"));
         }
+
+        StartCoroutine(DetermineDefaultDirection());
 
         //   backWardButton.onClick.AddListener(() => StartCoroutine(MoveBackward(5)));
 
@@ -428,7 +447,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             currentTilePath = boardManager.pathTiles[currentTilePos];
             if (HasMultipleForwardMoves(currentTilePos) && !currentTilePath.falseIntersection )
             {
-                ShowArrowsBasedOnMoves();
+                StartCoroutine(ShowArrowsBasedOnMoves());
                 if (possibleMoves == 1)
                 {
                     nextTilePos = currentTilePos + onlyOneMove;
@@ -935,7 +954,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         HideArrows();
     }
 
-    void ShowArrowsBasedOnMoves()
+    IEnumerator ShowArrowsBasedOnMoves()
     {
         HideArrows();
         possibleMoves = 0;
@@ -965,10 +984,13 @@ public class PlayerBoardMovement : NetworkBehaviour
                         }
                         possibleMoves++;
                         onlyOneMove = offset;
-                        rightArrow.gameObject.SetActive(true);
+                        while (!TryFindArrowButtons())
+                        {
+                            yield return null; // wait one frame
+                        }
+                    rightArrow.gameObject.SetActive(true);
 
                     }
-
 
 
                 //// Left movement cases
@@ -989,6 +1011,10 @@ public class PlayerBoardMovement : NetworkBehaviour
                     {
                         possibleMoves++;
                         onlyOneMove = offset;
+                        while (!TryFindArrowButtons())
+                        {
+                            yield return null; // wait one frame
+                        }
                         upArrow.gameObject.SetActive(true);
                     }
                 }
@@ -1002,6 +1028,10 @@ public class PlayerBoardMovement : NetworkBehaviour
                 {
                     possibleMoves++;
                     onlyOneMove = offset;
+                    while (!TryFindArrowButtons())
+                    {
+                        yield return null; // wait one frame
+                    }
                     downArrow.gameObject.SetActive(true);
                 }
             }
@@ -1013,6 +1043,10 @@ public class PlayerBoardMovement : NetworkBehaviour
                 {
                     possibleMoves++;
                     onlyOneMove = offset;
+                    while (!TryFindArrowButtons())
+                    {
+                        yield return null; // wait one frame
+                    }
                     upArrow.gameObject.SetActive(true);
                 }
 
@@ -1033,6 +1067,10 @@ public class PlayerBoardMovement : NetworkBehaviour
                 {
                     possibleMoves++;
                     onlyOneMove = offset;
+                    while (!TryFindArrowButtons())
+                    {
+                        yield return null; // wait one frame
+                    }
                     rightArrow.gameObject.SetActive(true);
                 }
 
@@ -1060,6 +1098,10 @@ public class PlayerBoardMovement : NetworkBehaviour
                 {
                     possibleMoves++;
                     onlyOneMove = offset;
+                    while (!TryFindArrowButtons())
+                    {
+                        yield return null; // wait one frame
+                    }
                     downArrow.gameObject.SetActive(true);
                 }
 
@@ -1073,6 +1115,10 @@ public class PlayerBoardMovement : NetworkBehaviour
                 {
                     possibleMoves++;
                     onlyOneMove = offset;
+                    while (!TryFindArrowButtons())
+                    {
+                        yield return null; // wait one frame
+                    }
                     rightArrow.gameObject.SetActive(true);
                 }
 
@@ -1275,4 +1321,17 @@ public class PlayerBoardMovement : NetworkBehaviour
     }
 
 
+    private bool TryFindArrowButtons()
+    {
+        if (rightArrow == null)
+            rightArrow = GameObject.Find("RightArrow")?.GetComponent<Button>();
+        if (leftArrow == null)
+            leftArrow = GameObject.Find("LeftArrow")?.GetComponent<Button>();
+        if (upArrow == null)
+            upArrow = GameObject.Find("UpArrow")?.GetComponent<Button>();
+        if (downArrow == null)
+            downArrow = GameObject.Find("DownArrow")?.GetComponent<Button>();
+
+        return rightArrow != null && leftArrow != null && upArrow != null && downArrow != null;
+    }
 }
