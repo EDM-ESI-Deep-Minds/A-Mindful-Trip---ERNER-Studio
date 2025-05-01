@@ -99,8 +99,6 @@ public class ItemEffectManager : MonoBehaviour
         {
             removeItem();
         }
-
-        //TODO ui when max heart reached
     }
 
     private void jokerCard()
@@ -114,6 +112,10 @@ public class ItemEffectManager : MonoBehaviour
     {
         QuestionManager questionManager = FindFirstObjectByType<QuestionManager>();
         questionManager.ProtectFromNegativeEffects();
+
+        HeartUIManager hearts = FindAnyObjectByType<HeartUIManager>();
+        hearts.showNoNegative();
+
         removeItem();
     }
 

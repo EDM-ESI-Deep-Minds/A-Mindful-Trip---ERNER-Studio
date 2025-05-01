@@ -250,9 +250,6 @@ public class QuestionManager : NetworkBehaviour
                     {
                         heartUI.removeHeart();
                     }
-                } else
-                {
-                    //TODO broadcast some ui
                 }
             } else {
                 AudioManager.instance?.PlaySFX(AudioManager.instance.correctAnswerSFX);
@@ -322,6 +319,8 @@ public class QuestionManager : NetworkBehaviour
         }
 
         HideGameplayUI(false);
+        HeartUIManager heart = FindFirstObjectByType<HeartUIManager>();
+        heart.hideNoNegative();
 
         if (RolesManager.IsMyTurn)
         {

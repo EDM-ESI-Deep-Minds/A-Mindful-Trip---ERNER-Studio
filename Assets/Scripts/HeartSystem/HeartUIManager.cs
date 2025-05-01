@@ -17,6 +17,7 @@ public class HeartUIManager : MonoBehaviour
     public Transform heartContainer;
 
     public GameObject maxheartsMessage;
+    public GameObject noNegativeMessage;
 
 
     private int hearts;
@@ -141,8 +142,9 @@ public class HeartUIManager : MonoBehaviour
             AudioManager.instance?.PlaySFX(AudioManager.instance.soulShatterSFX);
            
             Debug.Log("No more hearts to removeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
-             if (GameOverManager.Instance != null) { 
-            Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+            if (GameOverManager.Instance != null)
+            { 
+                Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
                 //NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
                 GameOverManager.Instance.TriggerGameOver(); //  delay
 
@@ -151,6 +153,37 @@ public class HeartUIManager : MonoBehaviour
               AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
         }
 
+    }
+
+    public void removeAllHearts()
+    {
+        while (hearts>0)
+        {
+
+            hearts--;
+
+            emptyHearts++;
+
+            Transform heart = heartContainer.GetChild(hearts);
+            Animator animator = heart.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetTrigger("PopOut");
+            }
+
+            StartCoroutine(SetHeartEmptyAfterAnimation(heart.GetComponent<Image>(), 0.3f));
+        }
+
+        AudioManager.instance?.PlaySFX(AudioManager.instance.soulShatterSFX);
+
+        Debug.Log("No more hearts to removeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+        if (GameOverManager.Instance != null)
+        {
+            Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+            //NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            GameOverManager.Instance.TriggerGameOver(); //  delay
+
+        }
     }
 
     private System.Collections.IEnumerator SetHeartEmptyAfterAnimation(Image heartImage, float delay)
@@ -167,6 +200,16 @@ public class HeartUIManager : MonoBehaviour
     public int getMaxHearts()
     {
         return maxhearts;
+    }
+
+    public void showNoNegative()
+    {
+        noNegativeMessage.SetActive(true);
+    }
+
+    public void hideNoNegative()
+    {
+        noNegativeMessage.SetActive(false);
     }
 }
 

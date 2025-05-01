@@ -19,11 +19,12 @@ public class EvokerScript : MonoBehaviour, IPointerEnterHandler
         AudioManager.instance?.PlaySFX(AudioManager.instance.evokerSFX);
 
         // Removing all hearts
-        int currentHearts = heartUIManager.getHeart();
-        for (int i = 0; i < currentHearts; i++)
-        {
-            heartUIManager.removeHeart();
-        }
+        //int currentHearts = heartUIManager.getHeart();
+        //for (int i = 0; i < currentHearts; i++)
+        //{
+        //    heartUIManager.removeHeart();
+        //}
+        heartUIManager.removeAllHearts();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
