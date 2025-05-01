@@ -22,7 +22,9 @@ public class QuestionManager : NetworkBehaviour
     // [SerializeField] private GameObject DownArrow;
     // [SerializeField] private GameObject RightArrow;
     // [SerializeField] private GameObject LeftArrow;
-    [SerializeField] private GameObject ProgressBar;  
+    [SerializeField] private GameObject ProgressBar;
+
+    public Transform canvasTransform;
 
 
     private string correctAnswer;
@@ -141,7 +143,7 @@ public class QuestionManager : NetworkBehaviour
 
         HideGameplayUI(true);
 
-        spawnedUI = Instantiate(questionUIPrefab, GameObject.Find("Canvas").transform);
+        spawnedUI = Instantiate(questionUIPrefab, canvasTransform);
         var ui = spawnedUI.GetComponent<QuestionUI>();
 
         ui.InitializeUI(spriteIndex, isMyTurn);
