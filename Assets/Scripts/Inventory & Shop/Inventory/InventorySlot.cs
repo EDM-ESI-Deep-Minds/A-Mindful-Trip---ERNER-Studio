@@ -24,6 +24,11 @@ public class InventorySlot : MonoBehaviour
         itemImage.enabled = true;
     }
 
+    public ItemSO getItem()
+    {
+        return storedItem;
+    }
+
     public bool IsOccupied()
     {
         return storedItem != null;

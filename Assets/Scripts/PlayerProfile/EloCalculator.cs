@@ -4,6 +4,7 @@ using UnityEngine;
 public static class EloCalculator
 {
     private const int BaseElo = 200;
+    private const int SECRET = 200;
 
     // Difficulty: 1 = Easy, 2 = Medium, 3 = Hard
     public static void UpdateCategoryElo(ProfileManager.PlayerProfile profile, string categoryName, bool correct, int difficultyLevel)
@@ -37,6 +38,36 @@ public static class EloCalculator
         }
 
         CalculateGeneralElo(profile,D);
+        ProfileManager profileManager = Object.FindObjectOfType<ProfileManager>();
+        if (profileManager != null)
+        {
+            profileManager.SaveSelectedProfile();
+        }
+    }
+
+    public static void AddSecretELO(ProfileManager.PlayerProfile profile)
+    {
+        foreach (var category in profile.categories)
+        {
+            category.categoryElo += SECRET;
+        }
+
+        CalculateGeneralElo(profile, 1);
+        ProfileManager profileManager = Object.FindObjectOfType<ProfileManager>();
+        if (profileManager != null)
+        {
+            profileManager.SaveSelectedProfile();
+        }
+    }
+
+    public static void ConvertCoinsToELO(ProfileManager.PlayerProfile profile,int amount)
+    {
+        foreach (var category in profile.categories)
+        {
+            category.categoryElo += (amount/3);
+        }
+
+        CalculateGeneralElo(profile, 1);
         ProfileManager profileManager = Object.FindObjectOfType<ProfileManager>();
         if (profileManager != null)
         {

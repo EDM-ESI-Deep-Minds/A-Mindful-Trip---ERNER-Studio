@@ -26,9 +26,9 @@ public class InventoryManager : MonoBehaviour
 
         //how to populate the inventory for testing
         //AddItem(itemDatabase.GetItemByID(1));
-        AddItem(itemDatabase.GetItemByID(3));
-        AddItem(itemDatabase.GetItemByID(5));
         AddItem(itemDatabase.GetItemByID(6));
+        AddItem(itemDatabase.GetItemByID(7));
+        AddItem(itemDatabase.GetItemByID(8));
 
 
     }
@@ -183,6 +183,22 @@ public class InventoryManager : MonoBehaviour
     public bool getIsLocked()
     {
         return islocked;
+    }
+
+    public bool hasAllen()
+    {
+        foreach (InventorySlot slot in inventorySlots)
+        {
+            if (slot.IsOccupied())
+            {
+                if (slot.getItem().itemID == 8)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
 }
