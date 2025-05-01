@@ -37,7 +37,8 @@ public class InventorySlot : MonoBehaviour
 
     public void OnSlotClick()
     {
-        if (!IsOccupied())
+        InventoryManager inventory = FindFirstObjectByType<InventoryManager>();
+        if (!IsOccupied() || inventory.getIsLocked())
         {
             Debug.Log("Slot clicked: empty.");
             // Overriding the normal click sound

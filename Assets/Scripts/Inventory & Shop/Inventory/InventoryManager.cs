@@ -16,7 +16,6 @@ public class InventoryManager : MonoBehaviour
     private const int PERCENTAGE_LIMIT = 50;
     [SerializeField] private Image[] lockIcon;
     private bool islocked;
-    //don't forget to unlock the inventory when being in the hub
 
 
 
@@ -179,6 +178,11 @@ public class InventoryManager : MonoBehaviour
 
             icon.gameObject.SetActive(false);
         }
+    }
+
+    public bool getIsLocked()
+    {
+        return islocked;
     }
 
 }
