@@ -432,7 +432,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         //Debug.Log($"here is the previous tile position {previousTilePos}");
 
 
-         steps = 20;
+         //steps = 20;
         for (int i = 0; i < steps; i++)
         {
             while (!boardManager.pathTiles.ContainsKey(currentTilePos))
