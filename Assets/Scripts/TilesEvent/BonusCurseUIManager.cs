@@ -271,7 +271,7 @@ public class BonusCurseUIManager : NetworkBehaviour
             Destroy(uiObject);
         }
 
-        if (RolesManager.IsMyTurn && effectKey != "reposition")
+        if (RolesManager.IsMyTurn && effectKey != "reposition" && effectKey != "potOfGreed")
         {
             StartCoroutine(DelaySwitchTurn());
         }
