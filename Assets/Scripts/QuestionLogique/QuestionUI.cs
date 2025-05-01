@@ -120,4 +120,37 @@ public class QuestionUI : MonoBehaviour
         string[] lines = { "Wrong answer... The Right Answer is : ", "Close, but no. The Right Answer is : ", "Oops! The Right Answer is : ", "Better luck next time!  The Right Answer is : " };
         return WebUtility.HtmlDecode(lines[Random.Range(0, lines.Length)]+correctAnswer);
     }
+
+    public void HighlightCorrectAnswer(string correctAnswer)
+    {
+        foreach (Transform child in answerButtonParent)
+        {
+            Button btn = child.GetComponent<Button>();
+            TMP_Text btnText = btn.GetComponentInChildren<TMP_Text>();
+
+            if (btn != null && btnText != null)
+            {
+                if (btnText.text == correctAnswer)
+                {
+
+                    ColorBlock colors = btn.colors;
+                    colors.normalColor = Color.green;
+                    colors.selectedColor = Color.green;
+                    btn.colors = colors;
+
+                    btnText.fontStyle = FontStyles.Bold;
+
+                }
+            }
+        }
+
+    }
+
+    public void removeOldAnswers()
+    {
+        foreach (Transform child in answerButtonParent)
+        {
+            Destroy(child);
+        }
+    }
 }

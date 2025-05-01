@@ -29,14 +29,26 @@ public class spawn_mang : NetworkBehaviour
         { -4.32f, -7.52f },
         { -4.32f, -4.00f },
         { -4.32f, 0.80f },
+
+        //end tiles for city
+        //{ 29.60f, -13.60f},
+        //{ 29.60f, -4.96f},
+        //{ 29.28f, 0.80f },
+        //{ 28.96f, -9.76f},
    };
 
     float[,] desert_map_positions = new float[4, 2]
    {
-    { -1.68f, -1.84f },
-    { -1.20f, -4.72f },
-    { -0.56f, -3.12f },
-    { -0.56f, 0.24f }
+        { -1.68f, -1.84f },
+        { -1.20f, -4.72f },
+        { -0.56f, -3.12f },
+        { -0.56f, 0.24f }
+
+        //end tiles for desert
+        // { 10.80f, -1.84f},
+        //{ 10.48f, -6.16f},
+        //{ 10.48f, -4.88f},
+        //{ 10.48f, -3.12f},
    };
 
     int index_position = -1;

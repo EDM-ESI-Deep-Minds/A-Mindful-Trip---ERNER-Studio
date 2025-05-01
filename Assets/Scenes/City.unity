@@ -14775,7 +14775,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1001
   m_TargetDisplay: 0
 --- !u!1 &333170592
 GameObject:
@@ -15128,6 +15128,7 @@ MonoBehaviour:
   rollDiceButton: {fileID: 1553476438}
   backWardButton: {fileID: 1843489242}
   ProgressBar: {fileID: 578076166}
+  canvasTransform: {fileID: 2128605803}
 --- !u!114 &466264757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15846,7 +15847,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.72997606
+  orthographic size: 1.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -16684,7 +16685,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1001
   m_TargetDisplay: 0
 --- !u!1 &1094833460
 GameObject:
@@ -46367,7 +46368,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1001
   m_TargetDisplay: 0
 --- !u!224 &1712570942
 RectTransform:

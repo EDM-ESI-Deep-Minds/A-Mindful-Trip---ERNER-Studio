@@ -1163,7 +1163,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1001
   m_TargetDisplay: 0
 --- !u!224 &683354935
 RectTransform:
@@ -2252,7 +2252,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1001
   m_TargetDisplay: 0
 --- !u!1 &1110230917
 GameObject:
@@ -3044,7 +3044,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1001
   m_TargetDisplay: 0
 --- !u!224 &1425888663
 RectTransform:
@@ -3330,7 +3330,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1001
   m_TargetDisplay: 0
 --- !u!1 &1638498890
 GameObject:
@@ -4208,6 +4208,7 @@ MonoBehaviour:
   cityMapSceneName: City
   mainMenuSceneName: MainMenu
   hubSceneName: Hub&Dans
+  TextChatW: {fileID: 0}
 --- !u!4 &1904270467
 Transform:
   m_ObjectHideFlags: 0

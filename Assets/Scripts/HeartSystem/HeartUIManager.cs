@@ -16,11 +16,16 @@ public class HeartUIManager : MonoBehaviour
 
     public Transform heartContainer;
 
+    public GameObject maxheartsMessage;
+    public GameObject noNegativeMessage;
+
 
     private int hearts;
     private int emptyHearts = 0;
     private List<Image> heartImages = new List<Image>(); // Tracks all heart UI images
     private int maxhearts = 5;
+
+    private bool applyNegativeEffect = true;
 
     public void Awake()
     {
@@ -104,8 +109,16 @@ public class HeartUIManager : MonoBehaviour
         }
         else
         {
+            maxheartsMessage.SetActive(true);
+            StartCoroutine(HideMessageAfterDelay());
             Debug.Log("Max hearts reached");
         }
+    }
+
+    private System.Collections.IEnumerator HideMessageAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        maxheartsMessage.SetActive(false);
     }
 
     public void removeHeart()
@@ -131,8 +144,9 @@ public class HeartUIManager : MonoBehaviour
             AudioManager.instance?.PlaySFX(AudioManager.instance.soulShatterSFX);
            
             Debug.Log("No more hearts to removeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
-             if (GameOverManager.Instance != null) { 
-            Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+            if (GameOverManager.Instance != null)
+            { 
+                Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
                 //NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
                 GameOverManager.Instance.TriggerGameOver(); //  delay
 
@@ -141,6 +155,37 @@ public class HeartUIManager : MonoBehaviour
               AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
         }
 
+    }
+
+    public void removeAllHearts()
+    {
+        while (hearts>0)
+        {
+
+            hearts--;
+
+            emptyHearts++;
+
+            Transform heart = heartContainer.GetChild(hearts);
+            Animator animator = heart.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetTrigger("PopOut");
+            }
+
+            StartCoroutine(SetHeartEmptyAfterAnimation(heart.GetComponent<Image>(), 0.3f));
+        }
+
+        AudioManager.instance?.PlaySFX(AudioManager.instance.soulShatterSFX);
+
+        Debug.Log("No more hearts to removeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+        if (GameOverManager.Instance != null)
+        {
+            Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+            //NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            GameOverManager.Instance.TriggerGameOver(); //  delay
+
+        }
     }
 
     private System.Collections.IEnumerator SetHeartEmptyAfterAnimation(Image heartImage, float delay)
@@ -152,6 +197,28 @@ public class HeartUIManager : MonoBehaviour
     public int getHeart()
     {
         return hearts;
+    }
+
+    public int getMaxHearts()
+    {
+        return maxhearts;
+    }
+
+    public void showNoNegative()
+    {
+        noNegativeMessage.SetActive(true);
+        applyNegativeEffect = false;
+    }
+
+    public void hideNoNegative()
+    {
+        noNegativeMessage.SetActive(false);
+        applyNegativeEffect = true;
+    }
+
+    public bool getApplyNegativeEffect()
+    {
+        return applyNegativeEffect;
     }
 }
 

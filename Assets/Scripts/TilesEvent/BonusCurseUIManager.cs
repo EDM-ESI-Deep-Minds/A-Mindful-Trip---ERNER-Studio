@@ -181,6 +181,58 @@ public class BonusCurseUIManager : NetworkBehaviour
         }
     };
 
+    public Dictionary<string, EffectData> items = new Dictionary<string, EffectData>()
+    {
+        {
+            "stTrina",
+            new EffectData
+            {
+                 mainText = "Used St.Trina flower",
+                flavorTexts = new string[]
+                {
+                    "You shake the flower, its scent lulls Cellica to sleep.",
+                }
+            }
+        },
+
+        {
+            "potOfGreed",
+            new EffectData
+            {
+                 mainText = "Used Pot of Greed",
+                flavorTexts = new string[]
+                {
+                    "Your greed grants you an extra turn or a bonus... \nYou'll see.",
+                    "You summon Pot of Greed... an extra turn or a bonus awaits.",
+                }
+            }
+        },
+
+        {
+            "mouthWash",
+            new EffectData
+            {
+                 mainText = "Used Mouth Wash",
+                flavorTexts = new string[]
+                {
+                    "Mouthwash does nothing. But hey, hope is powerful!",
+                }
+            }
+        },
+
+        {
+            "allenM60",
+            new EffectData
+            {
+                 mainText = "Used Allen M60",
+                flavorTexts = new string[]
+                {
+                    "You inspect the rusted M60. It’s completely unusable.",
+                }
+            }
+        }
+    };
+
     public string GetEffect(string effectKey, int type)
     {
         Dictionary<string, EffectData> source = null;
@@ -193,6 +245,9 @@ public class BonusCurseUIManager : NetworkBehaviour
         } else if (type == 2)
         {
             source = curses;
+        } else if (type == 3)
+        {
+            source = items;
         }
 
         if (!source.ContainsKey(effectKey))
@@ -229,10 +284,23 @@ public class BonusCurseUIManager : NetworkBehaviour
 
         ui.SetText(effect.ToString(), type);
 
-        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f,effectKey.ToString()));
+        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f,effectKey.ToString(),type));
     }
 
-    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effectKey)
+    public void SetUI(FixedString128Bytes effectKey, int type)
+    {
+        FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), type));
+
+        spawnedUI = Instantiate(MessageUIPrefab, GameObject.Find("Canvas").transform);
+        var ui = spawnedUI.GetComponent<CurseBonusUI>();
+
+        ui.SetText(effect.ToString(), type);
+
+        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f, effectKey.ToString(), type));
+    }
+
+
+    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effectKey,int type)
     {
         yield return new WaitForSeconds(delay);
         if (uiObject != null)
@@ -240,7 +308,7 @@ public class BonusCurseUIManager : NetworkBehaviour
             Destroy(uiObject);
         }
 
-        if (RolesManager.IsMyTurn && effectKey != "reposition")
+        if (RolesManager.IsMyTurn && effectKey != "reposition" && effectKey != "potOfGreed" && effectKey != "mouthWash" && effectKey != "allenM60")
         {
             StartCoroutine(DelaySwitchTurn());
         }

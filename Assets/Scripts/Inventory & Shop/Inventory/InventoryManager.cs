@@ -13,9 +13,9 @@ public class InventoryManager : MonoBehaviour
     private List<int> inventoryItems;
     public GameObject player;
     private int PercentageBonus = 0;
+    private const int PERCENTAGE_LIMIT = 50;
     [SerializeField] private Image[] lockIcon;
     private bool islocked;
-    //don't forget to unlock the inventory when being in the hub
 
 
 
@@ -23,11 +23,17 @@ public class InventoryManager : MonoBehaviour
     {
         inventoryItems = new List<int>();
         currentCoins = startingCoins;
+
+        //how to populate the inventory for testing
+        //AddItem(itemDatabase.GetItemByID(1));
+
     }
 
     private void Start()
     {
         Debug.Log($"InventoryManager Start(): currentCoins = {currentCoins}");
+        for (int i = 0; i < inventorySlots.Length; i++)
+            inventorySlots[i].Initialize(i); // new intialization
         UpdateCoinText();
     }
 
@@ -138,7 +144,11 @@ public class InventoryManager : MonoBehaviour
 
     public void setPercentageBonus(int Percentage)
     {
-        PercentageBonus = Percentage;
+        PercentageBonus += Percentage;
+        if (PercentageBonus > PERCENTAGE_LIMIT)
+        {
+            PercentageBonus = PERCENTAGE_LIMIT;
+        }
     }
     
     public int getCredit()
@@ -164,6 +174,27 @@ public class InventoryManager : MonoBehaviour
 
             icon.gameObject.SetActive(false);
         }
+    }
+
+    public bool getIsLocked()
+    {
+        return islocked;
+    }
+
+    public bool hasAllen()
+    {
+        foreach (InventorySlot slot in inventorySlots)
+        {
+            if (slot.IsOccupied())
+            {
+                if (slot.getItem().itemID == 8)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
 }

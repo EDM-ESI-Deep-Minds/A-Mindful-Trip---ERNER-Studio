@@ -33,6 +33,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip soulShatterSFX; // Death (game over)
     public AudioClip itemEffectSFX;
     public AudioClip diceRollSFX;
+    public AudioClip evokerSFX;
 
     private AudioSource bgmSource;
     private AudioSource sfxSource;

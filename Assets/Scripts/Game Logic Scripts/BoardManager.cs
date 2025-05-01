@@ -68,7 +68,7 @@ public class BoardManager : MonoBehaviour
 
                 // Get the sprite of the tile at this position
                 Sprite tileSprite = boardTilemap.GetSprite(pos);
-             //   Debug.Log($"Tile at {pos} has sprite: {(tileSprite != null ? tileSprite.name : "None")}");
+                //   Debug.Log($"Tile at {pos} has sprite: {(tileSprite != null ? tileSprite.name : "None")}");
 
                 if (tileSprite != null)
                 {
@@ -86,7 +86,7 @@ public class BoardManager : MonoBehaviour
                              spriteName == "Board Tiles_1" || spriteName == "city_board_tiles_v2_3" || spriteName == "city_board_tiles_v2_9")
                     {
                         newTile.tileType = "Curse";
-                    }else if(spriteName == "bridge_0")
+                    } else if (spriteName == "bridge_0")
                     {
                         newTile.tileType = "Curse";
                         newTile.changeDirection = true;
@@ -106,11 +106,11 @@ public class BoardManager : MonoBehaviour
                     else if (spriteName == "end_city_0" || spriteName == "end_country_0")
                     {
                         newTile.tileType = "End";
-                    }else if (spriteName == "false_intersection_0" || spriteName == "falseInter_0")
+                    } else if (spriteName == "false_intersection_0" || spriteName == "falseInter_0")
                     {
                         newTile.tileType = "Question";
                         newTile.falseIntersection = true;
-                    }else if (spriteName == "bonus_notInter_0")
+                    } else if (spriteName == "bonus_notInter_0")
                     {
                         newTile.tileType = "Bonus";
                         newTile.falseIntersection = true;
@@ -133,6 +133,14 @@ public class BoardManager : MonoBehaviour
                     {
                         newTile.tileType = "Question";
                         newTile.cityFalseIntersection = true;
+                    } else if (spriteName == "noUpCurse_0")
+                    {
+                        newTile.noUp = true;
+                        newTile.tileType = "Curse";
+                    }else if (spriteName == "noUpQuestion_0")
+                    {
+                        newTile.noUp = true;
+                        newTile.tileType = "Question";
                     }
 
                 }

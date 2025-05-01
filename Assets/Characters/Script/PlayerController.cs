@@ -10,6 +10,7 @@ public class PlayerController : NetworkBehaviour
     private GameObject shopInstance;
     private PlayerUIController playerUIController;
     private InventoryManager inventoryManager;
+    private ItemEffectManager itemEffectManager;
     private ShopManager shopManager;
     public GameObject sceneButtonToDisable;
     private bool isInventoryOpen = false;
@@ -63,6 +64,21 @@ public class PlayerController : NetworkBehaviour
         // Show Inventory by default
         playerUIController.ShowInventoryUI();
         isInventoryOpen = true;
+
+        // itemEffectManager setup
+        itemEffectManager = GetComponent<ItemEffectManager>();
+
+        //if (itemEffectManager != null)
+        //{
+        //    Debug.Log("Local and Global refs are being fetched ...");
+
+        //    var questionManager = FindObjectOfType<QuestionManager>();
+        //    var rolesManager = FindObjectOfType<RolesManager>();
+        //    var heartManager = heartUIInstance.GetComponent<HeartUIManager>();
+
+        //    itemEffectManager.SetLocalRefs(heartManager, inventoryManager);
+        //    itemEffectManager.InitializeGlobalRefs(questionManager, rolesManager);
+        //}
     }
 
     void Update()

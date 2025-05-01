@@ -22,7 +22,9 @@ public class QuestionManager : NetworkBehaviour
     // [SerializeField] private GameObject DownArrow;
     // [SerializeField] private GameObject RightArrow;
     // [SerializeField] private GameObject LeftArrow;
-    [SerializeField] private GameObject ProgressBar;  
+    [SerializeField] private GameObject ProgressBar;
+
+    public Transform canvasTransform;
 
 
     private string correctAnswer;
@@ -31,7 +33,9 @@ public class QuestionManager : NetworkBehaviour
     private int currentCategory;
     private ulong currentPlayerId;
     private int spriteIndex;
-    private int coinReward; 
+    private int coinReward;
+
+    private string introDialogue = "Ready for a challenge?";
 
 
     private void Awake()
@@ -139,7 +143,7 @@ public class QuestionManager : NetworkBehaviour
 
         HideGameplayUI(true);
 
-        spawnedUI = Instantiate(questionUIPrefab, GameObject.Find("Canvas").transform);
+        spawnedUI = Instantiate(questionUIPrefab, canvasTransform);
         var ui = spawnedUI.GetComponent<QuestionUI>();
 
         ui.InitializeUI(spriteIndex, isMyTurn);
@@ -180,7 +184,8 @@ public class QuestionManager : NetworkBehaviour
 
     private IEnumerator HandleQuestionSequence(QuestionUI ui, string questionText, string category, string difficulty, string[] answers, float timer, bool isMyTurn)
     {
-        ui.ShowIntroDialogue("Ready for a challenge?");
+        ui.ShowIntroDialogue(introDialogue);
+        introDialogue = "Ready for a challenge?";
 
         yield return new WaitForSeconds(3f); // Intro duration
 
@@ -235,24 +240,40 @@ public class QuestionManager : NetworkBehaviour
         var ui = spawnedUI.GetComponent<QuestionUI>();
         ui.ShowResult(result.ToString());
 
+        HeartUIManager heartUI = FindFirstObjectByType<HeartUIManager>();
+
         if (RolesManager.IsMyTurn)
         {
             if (!isCorrect)
             {
-                HeartUIManager heartUI = FindFirstObjectByType<HeartUIManager>();
-                if (heartUI != null)
+                if (heartUI.getApplyNegativeEffect())
                 {
-                    heartUI.removeHeart();
+                    
+                    if (heartUI != null)
+                    {
+                        heartUI.removeHeart();
+                    }
                 }
             } else {
-                //TODO Play correct answer sfx
                 AudioManager.instance?.PlaySFX(AudioManager.instance.correctAnswerSFX);
                 InventoryManager inventory = FindFirstObjectByType<InventoryManager>();
                 inventory.AddCoins(coinReward);
             }
 
             ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;
-            EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
+
+            if (isCorrect)
+            {   
+                EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
+            } else
+            {
+                if (heartUI.getApplyNegativeEffect())
+                {
+                    EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
+                }
+                //do not touch the elo if applynegativeeffect was false
+            }
+            //set it to ture whether he used it or not or he answer correctly or not
         }
         Invoke(nameof(CleanupQuestionUIClientRpc), 3f);
     }
@@ -303,6 +324,8 @@ public class QuestionManager : NetworkBehaviour
 
         if (RolesManager.IsMyTurn)
         {
+            HeartUIManager heart = FindFirstObjectByType<HeartUIManager>();
+            heart.hideNoNegative();
             StartCoroutine(DelaySwitchTurn());
         }
     }
@@ -311,6 +334,43 @@ public class QuestionManager : NetworkBehaviour
     {
         yield return new WaitForSeconds(1f); 
         RolesManager.SwitchRole(); 
+    }
+
+    public void HighlightCorrectAnswer()
+    {
+        var ui = spawnedUI.GetComponent<QuestionUI>();
+        ui.HighlightCorrectAnswer(correctAnswer);
+    }
+
+    public void BroadcastNewQuestion()
+    {
+        BroadCastNewQuestionServerRpc();
+    }
+
+    [ServerRpc(RequireOwnership =false)]
+    private void BroadCastNewQuestionServerRpc()
+    {
+        BroadCastNewQuestionClientRpc();
+    }
+
+    [ClientRpc]
+    private void BroadCastNewQuestionClientRpc()
+    {
+        introDialogue = "Here is your new question";
+        //var ui = spawnedUI.GetComponent<QuestionUI>();
+        //ui.removeOldAnswers();
+        Destroy(spawnedUI);
+        spawnedUI = null;
+
+        if (RolesManager.IsMyTurn)
+        {
+            OnQuestionTileTriggered();
+        }
+    }
+
+    public bool isQuestion()
+    {
+        return spawnedUI != null;
     }
 
 }

@@ -88,6 +88,14 @@ public class StageClearManager : NetworkBehaviour
     [ClientRpc]
     private void TriggerWinMessageClientRpc()
     {
+        InventoryManager inventory = FindFirstObjectByType<InventoryManager>();
+        if (inventory.hasAllen())
+        {
+            EloCalculator.AddSecretELO(ProfileManager.SelectedProfile);
+        }
+
+        EloCalculator.ConvertCoinsToELO(ProfileManager.SelectedProfile,inventory.getCredit());
+
         StartCoroutine(WinUIManager.Instance.ShowWinAndReturnToMenu());
     }
 

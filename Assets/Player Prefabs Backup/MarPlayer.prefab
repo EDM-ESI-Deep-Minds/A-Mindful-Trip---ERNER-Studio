@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: -8691455251817923420}
   - component: {fileID: 9040609109228860198}
   - component: {fileID: 6499771095019489997}
+  - component: {fileID: -5013409280618845522}
   m_Layer: 9
   m_Name: MarPlayer
   m_TagString: Player
@@ -419,7 +420,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   scene: 
-  nextSpawnIndex: -1
 --- !u!114 &6499771095019489997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,3 +443,19 @@ MonoBehaviour:
   backWardButton: {fileID: 0}
   playerProgress: 0
   endPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &-5013409280618845522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2541195099035758000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a947864e9f9f7e4428cc5641e0b9870e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionManager: {fileID: 0}
+  heartManager: {fileID: 0}
+  turnManager: {fileID: 0}
+  inventoryManager: {fileID: 0}

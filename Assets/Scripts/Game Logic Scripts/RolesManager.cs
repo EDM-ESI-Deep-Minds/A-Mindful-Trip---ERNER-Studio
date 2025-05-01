@@ -4,6 +4,7 @@ using Unity.Cinemachine;
 using System.Threading;
 using System;
 using UnityEngine.UI;
+using Unity.Collections;
 
 public class RolesManager : NetworkBehaviour
 {
@@ -12,6 +13,7 @@ public class RolesManager : NetworkBehaviour
     public static event Action CameraSwitchTarget;
     [SerializeField] public Button RollDiceButtonRef;
     public static Button RollDiceButton;
+    private static bool AddTurn;
     private void Start()
     {
         IsMyTurn = SwitcheCam.CurrentPlayer.IsOwner;
@@ -26,9 +28,29 @@ public class RolesManager : NetworkBehaviour
         //    SwitchRole();
         //}
     }
-  
+
     public static void SwitchRole()
     {
-        CameraSwitchTarget?.Invoke();
+        if (!AddTurn) { 
+            CameraSwitchTarget?.Invoke();
+        }
+        else
+        {
+            AddTurn = false;
+            GameObject rollDiceButton = null;
+            while (rollDiceButton == null)
+            {
+                rollDiceButton = GameObject.Find("RollDiceButton");
+            }
+
+            rollDiceButton.gameObject.SetActive(true);
+            rollDiceButton.GetComponent<Button>().interactable = true;
+            Debug.Log("Extra turn triggerd");
+        }
+    }
+
+    public static void GainExtraTurn()
+    {
+        AddTurn = true;
     }
 }

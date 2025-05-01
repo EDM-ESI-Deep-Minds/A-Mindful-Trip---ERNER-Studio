@@ -17,6 +17,9 @@ public class CurseBonusUI : MonoBehaviour
         } else if (type == 2)
         {
             eventType.text = "Cursed!";
+        } else if (type == 3)
+        {
+            eventType.text = "Item!";
         }
         narrativeText.text = effect;
 

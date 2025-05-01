@@ -5,10 +5,18 @@ using Unity.Collections;
 public static class EventTrigger
 {
     public static event Action OnQuestionTile;
-    public static event Action OnMapWin;   
+    public static event Action OnMapWin;
+    public static bool skipTile;
     public static void SelectEventToTrigger(string TileType)
     {
         CurseTileEvent.updateTimers();
+
+        if (skipTile)
+        {
+            skipTile = false;
+            HandleSkipTile();
+            return;
+        }
 
         switch (TileType)
         {
@@ -29,9 +37,14 @@ public static class EventTrigger
                 break;
 
             case "Curse":
-
-                CurseTileEvent.handleCurse();
-
+                HeartUIManager hearts = UnityEngine.Object.FindFirstObjectByType<HeartUIManager>();
+                if (hearts.getApplyNegativeEffect())
+                {
+                    CurseTileEvent.handleCurse();
+                } else
+                {
+                    hearts.hideNoNegative();
+                }
                 Debug.Log("Curse event triggered.");
                 break;
 
@@ -50,5 +63,17 @@ public static class EventTrigger
                 Debug.LogWarning($"Unknown tile type: {TileType}");
                 break;
         }
+    }
+
+    private static void HandleSkipTile()
+    {
+        FixedString128Bytes effectKey = new FixedString128Bytes("stTrina");
+        BonusCurseUIManager UIManager = UnityEngine.Object.FindFirstObjectByType<BonusCurseUIManager>();
+        UIManager.SetUI(effectKey, 3);
+    }
+
+    public static void setSkipTile()
+    {
+        skipTile = true;
     }
 }
