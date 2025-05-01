@@ -51,13 +51,14 @@ public class PlayerBoardMovement : NetworkBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         DontDestroyOnLoad(gameObject);
-
+        TryFindArrowButtons();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (IsOwner)
         {
+            TryFindArrowButtons();
             StartCoroutine(SetupAfterSceneLoad());
         }
     }
@@ -66,6 +67,7 @@ public class PlayerBoardMovement : NetworkBehaviour
     {
         if (IsOwner)
         {
+            TryFindArrowButtons();
             StartCoroutine(SetupAfterSceneLoad());
         }
     }
@@ -260,6 +262,13 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     private void HideArrows()
     {
+
+        if (!TryFindArrowButtons())
+        {
+            Debug.LogWarning("Arrow buttons not yet found in HideArrows().");
+            return;
+        }
+
         if (rightArrow != null)
         {
             rightArrow.gameObject.SetActive(false);
@@ -423,7 +432,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         //Debug.Log($"here is the previous tile position {previousTilePos}");
 
 
-        // steps = 20;
+         steps = 20;
         for (int i = 0; i < steps; i++)
         {
             while (!boardManager.pathTiles.ContainsKey(currentTilePos))
@@ -972,25 +981,25 @@ public class PlayerBoardMovement : NetworkBehaviour
             if (currentDirection == "x")
             {
                 // Right movement cases
-               
-                    if (offset == new Vector3Int(3, 0, 0) || offset == new Vector3Int(4, 0, 0) ||
-                    offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) || offset == new Vector3Int(1, 0, 0))
+
+                if (offset == new Vector3Int(3, 0, 0) || offset == new Vector3Int(4, 0, 0) ||
+                offset == new Vector3Int(2, 0, 0) || offset == new Vector3Int(1, 0, 0) || offset == new Vector3Int(1, 0, 0))
+                {
+                    if (boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(4, 0, 0)) && boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(2, 0, 0)))
                     {
-                        if (boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(4, 0, 0)) && boardManager.pathTiles[currentTilePos].possibleMoves.Contains(new Vector3Int(2, 0, 0)))
-                        {
-                            possibleMoves = 1;
-                            onlyOneMove = new Vector3Int(2, 0, 0);
-                            break;
-                        }
-                        possibleMoves++;
-                        onlyOneMove = offset;
-                        while (!TryFindArrowButtons())
-                        {
-                            yield return null; // wait one frame
-                        }
+                        possibleMoves = 1;
+                        onlyOneMove = new Vector3Int(2, 0, 0);
+                        break;
+                    }
+                    possibleMoves++;
+                    onlyOneMove = offset;
+                    while (!TryFindArrowButtons())
+                    {
+                        yield return null; // wait one frame
+                    }
                     rightArrow.gameObject.SetActive(true);
 
-                    }
+                }
 
 
                 //// Left movement cases
@@ -1038,17 +1047,21 @@ public class PlayerBoardMovement : NetworkBehaviour
             else if (currentDirection == "y-up")
             {
                 // Up movement cases
-                if (offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(0, 4, 0) ||
-                    offset == new Vector3Int(0, 2, 0) || offset == new Vector3Int(0, 1, 0))
+                if (!currentTile.noUp)
                 {
-                    possibleMoves++;
-                    onlyOneMove = offset;
-                    while (!TryFindArrowButtons())
+                    if (offset == new Vector3Int(0, 3, 0) || offset == new Vector3Int(0, 4, 0) ||
+                    offset == new Vector3Int(0, 2, 0) || offset == new Vector3Int(0, 1, 0))
                     {
-                        yield return null; // wait one frame
+                        possibleMoves++;
+                        onlyOneMove = offset;
+                        while (!TryFindArrowButtons())
+                        {
+                            yield return null; // wait one frame
+                        }
+                        upArrow.gameObject.SetActive(true);
                     }
-                    upArrow.gameObject.SetActive(true);
                 }
+            
 
                 //// Down movement cases
                 //if (offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(0, -4, 0) || 
