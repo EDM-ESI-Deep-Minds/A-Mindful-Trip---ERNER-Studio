@@ -68,7 +68,10 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("Inventory Full!");
         return false;
     }
-
+    public bool AddItemByID(int itemid)
+    {
+       return AddItem(itemDatabase.GetItemByID(itemid));
+    }
     public bool removeItem(int slot)
     {
         if (inventorySlots[slot].IsOccupied())
