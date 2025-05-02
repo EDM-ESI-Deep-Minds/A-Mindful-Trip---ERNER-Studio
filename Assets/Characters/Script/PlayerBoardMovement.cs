@@ -430,6 +430,10 @@ public class PlayerBoardMovement : NetworkBehaviour
         //Debug.Log($"here is the current tile position {currentTilePos}");
 
         //Debug.Log($"here is the previous tile position {previousTilePos}");
+        while (!TryFindArrowButtons())
+        {
+            Debug.Log("trying to find the buttons");
+        }
 
 
          //steps = 20;
