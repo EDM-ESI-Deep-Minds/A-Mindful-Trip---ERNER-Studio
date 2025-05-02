@@ -17,8 +17,7 @@ MonoBehaviour:
   itemDescription: A relic from a forgotten civilization. The liquid inside has long
     since lost its potency, yet it remains curiously untouched by time. Perhaps it
     serves a different purpose now... or none at all.
-  itemEffect: "Does absolutely nothing\u2026but hey, desperate times call for creative
-    solutions!"
+  itemEffect: "Utterly useless\u2026but hey, desperate times call for creative solutions!"
   itemIcon: {fileID: 8223813467779267207, guid: baa364ed6fcde884fabb00188425fc86, type: 3}
   iconScale: {x: 0.6, y: 1}
   isCoin: 0
