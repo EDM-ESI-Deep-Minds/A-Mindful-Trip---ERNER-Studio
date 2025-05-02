@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ItemRequest : NetworkBehaviour
 {
-   // [SerializeField] public Button acceptToHelp;
+    public static bool isRequestingItem = false;
     public void WhenRequestItem()
     {
         RequestItemServerRpc();
@@ -19,9 +19,8 @@ public class ItemRequest : NetworkBehaviour
     public void RespondItemClientRpc(ulong senderClientId)
     {
         if (NetworkManager.Singleton.LocalClientId == senderClientId) return;
-      //  acceptToHelp.gameObject.SetActive(true);
-      Debug.LogWarning("Request Item");
-        // acceptToHelp.gameObject.SetActive(true);
+        isRequestingItem = true;
+        Debug.LogWarning("bool isRequestingItem is set to true"+isRequestingItem);
 
 
     }
