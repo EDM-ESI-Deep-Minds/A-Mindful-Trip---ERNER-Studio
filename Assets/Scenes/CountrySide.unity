@@ -108301,7 +108301,6 @@ GameObject:
   - component: {fileID: 641780705}
   - component: {fileID: 641780708}
   - component: {fileID: 641780707}
-  - component: {fileID: 641780706}
   m_Layer: 5
   m_Name: HelpRequest
   m_TagString: Untagged
@@ -108329,19 +108328,6 @@ RectTransform:
   m_AnchoredPosition: {x: -629, y: 112}
   m_SizeDelta: {x: 462, y: 203.4}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &641780706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641780704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 154901c801731ea45b96598491c10ba6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
 --- !u!114 &641780707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125932,15 +125918,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1439077858027433880, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
