@@ -20,10 +20,23 @@ public class HelpRequestUI : MonoBehaviour
       helpRequestText.gameObject.SetActive(true);
     }
 
+    /*public void ShowMaxHearts()
+    {
+        MaxHeartsText.text = "Your heart is full. The gift is denied.";
+        MaxHeartsText.gameObject.SetActive(true);
+    }
+    */
     public void ShowMaxHearts()
     {
         MaxHeartsText.text = "Your heart is full. The gift is denied.";
         MaxHeartsText.gameObject.SetActive(true);
+        StartCoroutine(HideMaxHeartsAfterDelay());
+    }
+
+    private IEnumerator HideMaxHeartsAfterDelay()
+    {
+        yield return new WaitForSeconds(4f);
+        MaxHeartsText.gameObject.SetActive(false);
     }
 
     public void HideMaxHearts()
