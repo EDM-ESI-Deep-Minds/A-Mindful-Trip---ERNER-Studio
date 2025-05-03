@@ -15207,7 +15207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358897347c2342d479aba95414a8b718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  helpRequestText: {fileID: 0}
+  helpRequestText: {fileID: 1171512855}
   chooseItemText: {fileID: 0}
   MaxHeartsText: {fileID: 601781688}
 --- !u!1 &323576253
@@ -16817,7 +16817,7 @@ GameObject:
   - component: {fileID: 781838162}
   - component: {fileID: 781838161}
   m_Layer: 5
-  m_Name: QuestionHelp
+  m_Name: AcceptRequest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47821,15 +47821,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1439077858027433880, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
