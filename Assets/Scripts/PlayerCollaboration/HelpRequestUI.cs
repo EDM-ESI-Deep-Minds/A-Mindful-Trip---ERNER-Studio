@@ -7,6 +7,7 @@ public class HelpRequestUI : MonoBehaviour
     public static HelpRequestUI Instance;
     public TMP_Text helpRequestText;
     public TMP_Text chooseItemText;
+    public TMP_Text MaxHeartsText;
 
     private void Awake()
     {
@@ -17,6 +18,17 @@ public class HelpRequestUI : MonoBehaviour
     {
        helpRequestText.text = playerName + " seeks a Heart.";
       helpRequestText.gameObject.SetActive(true);
+    }
+
+    public void ShowMaxHearts()
+    {
+        MaxHeartsText.text = "Your heart is full. The gift is denied.";
+        MaxHeartsText.gameObject.SetActive(true);
+    }
+
+    public void HideMaxHearts()
+    {
+        MaxHeartsText.gameObject.SetActive(false);
     }
 
     public void ShowChooseItemPrompt()

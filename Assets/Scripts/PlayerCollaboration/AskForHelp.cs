@@ -19,9 +19,10 @@ public class AskForHelp : NetworkBehaviour
 
             HelpMeServerRpc(ProfileManager.SelectedProfile.playerName);
         }
-        else { 
+        else {
 
             //affichilo 9olo 3nsk max hert ma t9darche demandier
+            HelpRequestUI.Instance.ShowMaxHearts();
         }
     }
 
