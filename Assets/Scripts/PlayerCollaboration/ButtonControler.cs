@@ -7,6 +7,7 @@ public class ButtonController : MonoBehaviour
     private bool currentState = false;
     private Button HelpHim;
     private ItemRequest itemRequestScript;
+    public InventoryManager inventory;
 
     void Start()
     {
@@ -14,10 +15,13 @@ public class ButtonController : MonoBehaviour
         HelpHim.interactable = false;
         itemRequestScript = GameObject.Find("ItemRequest").GetComponent<ItemRequest>();
         HelpHim.onClick.AddListener(OnButtonClick);
+        inventory = FindAnyObjectByType<InventoryManager>();
     }
 
     void Update()
-    {
+    {    
+        if(inventory.isInventoryEmpty() || inventory.getislocked()) return;
+
         if (currentState != ItemRequest.isRequestingItem)
         {
             currentState = ItemRequest.isRequestingItem;
@@ -27,6 +31,7 @@ public class ButtonController : MonoBehaviour
     private void OnButtonClick()
     {   
         itemRequestScript.AcceptGiveItem();
+        //hna ytnaha le ui
 
     }
 }
