@@ -66,10 +66,10 @@ public class ItemRequest : NetworkBehaviour
         giverId = senderClientId;
         if (NetworkManager.Singleton.LocalClientId == senderClientId)
         {
-            isHelpingAccepted = true;   
+            isHelpingAccepted = true;
             // han lazm taficher haaj t9olo lair wache tmd oumbrd ki ky3 n9olk win nahio le ui
+            HelpRequestUI.Instance.ShowChooseItemPrompt();
         }
-
     }
     public void ItemGiven()
     {
