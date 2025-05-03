@@ -7,6 +7,7 @@ public class InventorySlot : MonoBehaviour
     private ItemSO storedItem;
     private int myIndex; // set by InventoryManager
     private ItemEffectManager itemEffectManager;
+    public static int itemGivenId;
 
     public void Initialize(int index)
     {
@@ -27,6 +28,10 @@ public class InventorySlot : MonoBehaviour
     public ItemSO getItem()
     {
         return storedItem;
+    }
+    public int getID()
+    {
+        return storedItem.itemID;
     }
 
     public bool IsOccupied()
@@ -54,16 +59,26 @@ public class InventorySlot : MonoBehaviour
         }
         else
         {
-            // Slot has an item, continuinh normal interaction
-            Debug.Log("Slot clicked: has item.");
-            // Item logic to be added
-            itemEffectManager.UseItem(storedItem, myIndex);
-
-            //Overriding the normal click sound
-             if (AudioManager.instance != null)
+            if (ItemRequest.isHelpingAccepted)
             {
-                AudioManager.instance.PlaySFX(AudioManager.instance.itemEffectSFX);
+                itemGivenId = getID();
+                ClearSlot();
+                ItemRequest.isHelpingAccepted = false;
+                ItemRequest.ItemHasBeenGiven();
+                
             }
+            else { 
+              // Slot has an item, continuinh normal interaction
+              Debug.Log("Slot clicked: has item.");
+              // Item logic to be added
+              itemEffectManager.UseItem(storedItem, myIndex);
+
+              //Overriding the normal click sound
+              if (AudioManager.instance != null)
+              {
+                  AudioManager.instance.PlaySFX(AudioManager.instance.itemEffectSFX);
+              }
+             }
 
         }
     }

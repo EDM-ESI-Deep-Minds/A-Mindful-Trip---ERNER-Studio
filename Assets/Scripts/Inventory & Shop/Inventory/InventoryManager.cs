@@ -18,7 +18,6 @@ public class InventoryManager : MonoBehaviour
     private bool islocked;
 
 
-
     private void Awake()
     {
         inventoryItems = new List<int>();
@@ -69,6 +68,40 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
+    public bool isInventoryFull()
+    {
+        bool isInventoryFull = true;
+
+        foreach (InventorySlot slot in inventorySlots)
+        {
+            if (!slot.IsOccupied())
+            {
+                isInventoryFull = false;
+                break;
+            }
+        }
+
+        return isInventoryFull;
+    }
+    public bool isInventoryEmpty()
+    {
+        foreach (InventorySlot slot in inventorySlots)
+        {
+            if (slot.IsOccupied())
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public bool getislocked()
+    {
+        return islocked;
+    }
+    public bool AddItemByID(int itemid)
+    {
+       return AddItem(itemDatabase.GetItemByID(itemid));
+    }
     public bool removeItem(int slot)
     {
         if (inventorySlots[slot].IsOccupied())
