@@ -5,7 +5,7 @@ using System.Collections;
 public class HelpRequestUI : MonoBehaviour
 {
     public static HelpRequestUI Instance;
-    //public TMP_Text helpRequestText;
+    public TMP_Text helpRequestText;
     public TMP_Text chooseItemText;
 
     private void Awake()
@@ -13,11 +13,11 @@ public class HelpRequestUI : MonoBehaviour
         Instance = this;
     }
 
-    //public void ShowHelpRequest(string playerName)
-    //{
-    //    helpRequestText.text = playerName + " seeks a Heart.";
-    //    helpRequestText.gameObject.SetActive(true);
-    //}
+    public void ShowHelpRequest(string playerName)
+    {
+       helpRequestText.text = playerName + " seeks a Heart.";
+      helpRequestText.gameObject.SetActive(true);
+    }
 
     public void ShowChooseItemPrompt()
     {
@@ -46,14 +46,14 @@ public class HelpRequestUI : MonoBehaviour
     }
 
 
-    //public void ShowHelpAccepted(string helperName)
-    //{
-    //    helpRequestText.text = helperName + " has answered the call.";
-    //    helpRequestText.gameObject.SetActive(true);
-    //}
+   public void ShowHelpAccepted(string helperName)
+    {
+       helpRequestText.text = helperName + " has answered the call.";
+      helpRequestText.gameObject.SetActive(true);
+    }
 
-    //public void HideHelpRequest()
-    //{
-    //    helpRequestText.gameObject.SetActive(false);
-    //}
+    public void HideHelpRequest()
+    {
+        helpRequestText.gameObject.SetActive(false);
+    }
 }
