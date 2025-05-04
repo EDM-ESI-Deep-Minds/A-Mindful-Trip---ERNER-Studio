@@ -29,10 +29,14 @@ public class ToggleVisibility : MonoBehaviour
         if (canvasGroup.alpha == 0)
         {
             canvasGroup.alpha = 1;
+            canvasGroup.blocksRaycasts = true;
+            canvasGroup.interactable = true;
         }
         else
         {
             canvasGroup.alpha = 0;
+            canvasGroup.blocksRaycasts = false;
+            canvasGroup.interactable = false;
         }
     }
     GameObject FindInDontDestroyOnLoad(string objectName)
