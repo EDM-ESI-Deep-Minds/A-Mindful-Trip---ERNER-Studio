@@ -80,13 +80,15 @@ public class AskForHelp : NetworkBehaviour
             HeartUIManager heartUI = Object.FindFirstObjectByType<HeartUIManager>();
             heartUI.addHeart();
         }
-        StartCoroutine(AttendreEtContinuer());
-    }
-    private IEnumerator AttendreEtContinuer()
-    {
-
-        yield return new WaitForSeconds(4f);
+        // StartCoroutine(AttendreEtContinuer());
         HelpHimB.gameObject.SetActive(false);
 
     }
+    // private IEnumerator AttendreEtContinuer()
+    // {
+
+    //     yield return new WaitForSeconds(4f);
+    //     HelpHimB.gameObject.SetActive(false);
+
+    // }
 }

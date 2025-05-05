@@ -15637,6 +15637,7 @@ MonoBehaviour:
   rollDiceButton: {fileID: 1553476438}
   backWardButton: {fileID: 1843489242}
   ProgressBar: {fileID: 578076166}
+  HelpRequest: {fileID: 323576253}
   canvasTransform: {fileID: 2128605803}
 --- !u!114 &466264757
 MonoBehaviour:
@@ -47821,15 +47822,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1439077858027433880, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
