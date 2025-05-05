@@ -58,6 +58,10 @@ public class PlayerBoardMovement : NetworkBehaviour
     {
         if (IsOwner)
         {
+            rightArrow = null;
+            leftArrow = null;
+            upArrow = null;
+            downArrow = null;
             TryFindArrowButtons();
             StartCoroutine(SetupAfterSceneLoad());
         }
