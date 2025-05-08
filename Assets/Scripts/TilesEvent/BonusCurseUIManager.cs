@@ -11,6 +11,8 @@ public class BonusCurseUIManager : NetworkBehaviour
     [SerializeField] private GameObject HelpRequest;
     private GameObject spawnedUI;
 
+    public Transform canvasTransform;
+
     [System.Serializable]
     public class EffectData
     {
@@ -284,7 +286,7 @@ public class BonusCurseUIManager : NetworkBehaviour
     {
         HideHelpRequestClientRpc();
         
-        spawnedUI = Instantiate(MessageUIPrefab, GameObject.Find("Canvas").transform);
+        spawnedUI = Instantiate(MessageUIPrefab,canvasTransform);
         var ui = spawnedUI.GetComponent<CurseBonusUI>();
 
         ui.SetText(effect.ToString(), type);
@@ -300,7 +302,7 @@ public class BonusCurseUIManager : NetworkBehaviour
 
         FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), type));
 
-        spawnedUI = Instantiate(MessageUIPrefab, GameObject.Find("Canvas").transform);
+        spawnedUI = Instantiate(MessageUIPrefab, canvasTransform);
         var ui = spawnedUI.GetComponent<CurseBonusUI>();
 
         ui.SetText(effect.ToString(), type);

@@ -16526,6 +16526,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   MessageUIPrefab: {fileID: 6831889079595448025, guid: aea6b73f78c4cc14bb85d15b93907f27, type: 3}
   HelpRequest: {fileID: 323576253}
+  canvasTransform: {fileID: 975347973}
 --- !u!114 &757643954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47823,15 +47824,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 483521620017636710, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1439077858027433880, guid: aa0283566a829c141b5c8a68deb377f9, type: 3}
       propertyPath: m_AnchorMax.y
