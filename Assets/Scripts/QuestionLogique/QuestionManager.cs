@@ -401,7 +401,7 @@ public class QuestionManager : NetworkBehaviour
 
     public bool isQuestion()
     {
-        return spawnedUI != null;
+        return !hasAnswered;
     }
 
 }
