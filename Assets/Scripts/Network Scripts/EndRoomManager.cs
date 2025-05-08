@@ -9,24 +9,6 @@ public class EndRoomManager : NetworkBehaviour
     [SerializeField] private Button leaveButtonObject;
 
 
-    public void ChangeState()
-    {
-        if (NetworkManager.Singleton.IsHost)
-        {
-            EndButtonObject.SetActive(true);
-            Debug.Log("It is the host.");
-        }
-        else if (NetworkManager.Singleton.IsClient)
-        {
-            EndButtonObject.SetActive(false);
-            Debug.Log("It is a client.");
-        }
-        else
-        {
-            Debug.Log("Not a networked client or host yet.");
-        }
-    }
-
     public void OnEndRoomButtonClicked()
     {
         EndButtonObject.GetComponent<Button>().interactable = false;
