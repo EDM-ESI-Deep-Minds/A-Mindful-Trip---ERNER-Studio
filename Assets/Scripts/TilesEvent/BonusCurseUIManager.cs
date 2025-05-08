@@ -284,21 +284,37 @@ public class BonusCurseUIManager : NetworkBehaviour
     [ClientRpc]
     public void SetUICLientRpc(FixedString128Bytes effectKey, FixedString128Bytes effect, int type)
     {
-        HideHelpRequestClientRpc();
-        
+        if (HelpRequest != null)
+        {
+            HelpRequest.SetActive(false);
+        }
+
+        if (type == 1)
+        {
+            AudioManager.instance?.PlaySFX(AudioManager.instance.itemEffectSFX);
+
+        } else if (type == 2)
+        {
+            AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
+        }
+
         spawnedUI = Instantiate(MessageUIPrefab,canvasTransform);
         var ui = spawnedUI.GetComponent<CurseBonusUI>();
 
         ui.SetText(effect.ToString(), type);
 
         StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f, effectKey.ToString(), type));
-    
-        ShowHelpRequestClientRpc();
     }
 
     public void SetUI(FixedString128Bytes effectKey, int type)
     {
-        HideHelpRequestClientRpc();
+        if (HelpRequest != null)
+        {
+            HelpRequest.SetActive(false);
+        } else
+        {
+            Debug.Log("no helprequest attributed");
+        }
 
         FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), type));
 
@@ -308,8 +324,6 @@ public class BonusCurseUIManager : NetworkBehaviour
         ui.SetText(effect.ToString(), type);
 
         StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f, effectKey.ToString(), type));
-        
-        ShowHelpRequestClientRpc();
     }
 
     private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effectKey, int type)
@@ -324,6 +338,14 @@ public class BonusCurseUIManager : NetworkBehaviour
         {
             StartCoroutine(DelaySwitchTurn());
         }
+
+        if (HelpRequest != null)
+        {
+            HelpRequest.SetActive(true);
+        } else
+        {
+            Debug.Log("no helprequest attributed");
+        }
     }
 
     public void StartRepositionCoroutine(float delay)
@@ -336,43 +358,4 @@ public class BonusCurseUIManager : NetworkBehaviour
         yield return new WaitForSeconds(1f);
         RolesManager.SwitchRole();
     }
-
-    [ServerRpc(RequireOwnership = false)]
-    public void PlayBonusSFXServerRpc()
-    {
-        PlayBonusSFXClientRpc();
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    public void PlayCurseSFXServerRpc()
-    {
-        PlayCurseSFXClientRpc();
-    }
-
-    [ClientRpc]
-    private void PlayBonusSFXClientRpc()
-    {
-        AudioManager.instance?.PlaySFX(AudioManager.instance.itemEffectSFX);
-    }
-
-    [ClientRpc]
-    private void PlayCurseSFXClientRpc()
-    {
-        AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
-    }
-
-    [ClientRpc]
-    private void HideHelpRequestClientRpc()
-    {
-        if (HelpRequest != null)
-            HelpRequest.SetActive(false);
-    }
-
-    [ClientRpc]
-    private void ShowHelpRequestClientRpc()
-    {
-        if (HelpRequest != null)
-            HelpRequest.SetActive(true);
-    }
-
 }

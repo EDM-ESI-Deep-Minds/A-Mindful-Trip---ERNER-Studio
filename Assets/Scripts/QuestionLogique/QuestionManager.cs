@@ -281,7 +281,7 @@ public class QuestionManager : NetworkBehaviour
             }
             //set it to ture whether he used it or not or he answer correctly or not
         }
-        Invoke(nameof(CleanupQuestionUIClientRpc), 3f);
+        Invoke(nameof(CleanupQuestionUI), 3f);
     }
 
     // private void HideGameplayUI(bool hide)
@@ -306,11 +306,10 @@ public class QuestionManager : NetworkBehaviour
 
     private void HideGameplayUI(bool hide)
     {
-        ToggleGameplayUIClientRpc(hide);
+        ToggleGameplayUI(hide);
     }
 
-    [ClientRpc]
-    private void ToggleGameplayUIClientRpc(bool hide)
+    private void ToggleGameplayUI(bool hide)
     {
         string[] elementNames = { "RollDiceButton", "DownArrow", "UpArrow", "LeftArrow", "RightArrow", "Dice1", "Dice2", "ProgressBar", "HelpRequest" };
 
@@ -328,9 +327,7 @@ public class QuestionManager : NetworkBehaviour
         if (HelpRequest != null) HelpRequest.SetActive(!hide);
     }
 
-
-    [ClientRpc]
-    private void CleanupQuestionUIClientRpc()
+    private void CleanupQuestionUI()
     {
 
 

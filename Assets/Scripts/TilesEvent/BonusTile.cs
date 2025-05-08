@@ -47,8 +47,6 @@ public class BonusTile
                 BonusInNextReward();
                 break;
         }
-        // Bonus SFX
-        UIManager.PlayBonusSFXServerRpc();
     }
 
     private static int GetRandomBonus()
