@@ -67,7 +67,7 @@ public class CurseTileEvent
                 break;
         }
         // Curse SFX
-        AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
+        UIManager.PlayCurseSFXServerRpc();
     }
 
     public static IEnumerator DelayReposition(float delay)

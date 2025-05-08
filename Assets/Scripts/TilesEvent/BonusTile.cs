@@ -48,7 +48,7 @@ public class BonusTile
                 break;
         }
         // Bonus SFX
-        AudioManager.instance?.PlaySFX(AudioManager.instance.itemEffectSFX);
+        UIManager.PlayBonusSFXServerRpc();
     }
 
     private static int GetRandomBonus()

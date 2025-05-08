@@ -3,23 +3,6 @@ using UnityEngine;
 
 public class ItemEffectManager : MonoBehaviour
 {
-    //public QuestionManager questionManager;
-    //public HeartUIManager heartManager;
-    //public RolesManager turnManager;
-    //public InventoryManager inventoryManager;
-
-    //public void InitializeGlobalRefs(QuestionManager q, RolesManager r)
-    //{
-    //    questionManager = q;
-    //    turnManager = r;
-    //}
-
-    //public void SetLocalRefs(HeartUIManager heart, InventoryManager inventory)
-    //{
-    //    heartManager = heart;
-    //    inventoryManager = inventory;
-    //}
-
     private ItemSO item;
     private int slotIndex;
 

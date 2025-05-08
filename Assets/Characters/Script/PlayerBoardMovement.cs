@@ -85,7 +85,8 @@ public class PlayerBoardMovement : NetworkBehaviour
         Debug.Log("All setup coroutines finished. Safe to proceed.");
     }
 
-    private IEnumerator FindBoardManager(){
+    private IEnumerator FindBoardManager()
+    {
         boardManager = null;
         rightArrow = null;
         leftArrow = null;
@@ -124,10 +125,10 @@ public class PlayerBoardMovement : NetworkBehaviour
         endPosition = BoardManager.storedEndPositions[0];
         Vector3 worldPosition = transform.position;
         Debug.Log($"World Position: {worldPosition}");
-        Vector3Int gridPosition= boardManager.boardTilemap.WorldToCell(worldPosition);
+        Vector3Int gridPosition = boardManager.boardTilemap.WorldToCell(worldPosition);
         currentTilePos = gridPosition;
         Debug.Log($"Current Tile Position: {currentTilePos}");
-        
+
 
         while (rightArrow == null || leftArrow == null || downArrow == null || upArrow == null)
         {
@@ -335,32 +336,32 @@ public class PlayerBoardMovement : NetworkBehaviour
         }
     }
 
-        private IEnumerator DetermineDefaultDirection()
+    private IEnumerator DetermineDefaultDirection()
     {
         Vector3Int[] validMoves = null;
 
-            while (validMoves == null)
+        while (validMoves == null)
+        {
+            try
             {
-                try
-                {
-                    Vector3 worldPosition = transform.position;
-                    Vector3Int currentTilePos = boardManager.boardTilemap.WorldToCell(worldPosition);
+                Vector3 worldPosition = transform.position;
+                Vector3Int currentTilePos = boardManager.boardTilemap.WorldToCell(worldPosition);
 
-                    // Debugging the current tile position
-                    Debug.Log($"Current Tile Position: {currentTilePos}");
-                    currentTilePath = boardManager.pathTiles[currentTilePos];
-                    validMoves = boardManager.pathTiles[currentTilePos].possibleMoves;
-                }
-                catch (KeyNotFoundException e)
-                {
-                    Debug.LogWarning("Tile not found. Retrying...");
-                    Debug.LogWarning("Tile not found. Retrying..." + e.Message);
-                    validMoves = null; // Force retry
-                }
-
-                // Yield to avoid locking the main thread and allow retries in subsequent frames
-                yield return null;
+                // Debugging the current tile position
+                Debug.Log($"Current Tile Position: {currentTilePos}");
+                currentTilePath = boardManager.pathTiles[currentTilePos];
+                validMoves = boardManager.pathTiles[currentTilePos].possibleMoves;
             }
+            catch (KeyNotFoundException e)
+            {
+                Debug.LogWarning("Tile not found. Retrying...");
+                Debug.LogWarning("Tile not found. Retrying..." + e.Message);
+                validMoves = null; // Force retry
+            }
+
+            // Yield to avoid locking the main thread and allow retries in subsequent frames
+            yield return null;
+        }
         // debugging the current tile  position
         Debug.Log($"Current Tile Position: {currentTilePos}");
 
@@ -404,6 +405,31 @@ public class PlayerBoardMovement : NetworkBehaviour
 
     private void StartWalkSFX()
     {
+        if (IsOwner)
+            RequestPlayWalkingSFXServerRpc();
+    }
+
+    private void StopWalkSFX()
+    {
+        if (IsOwner)
+            RequestStopWalkingSFXServerRpc();
+    }
+
+    [ServerRpc]
+    private void RequestPlayWalkingSFXServerRpc(ServerRpcParams rpcParams = default)
+    {
+        PlayWalkingSFXClientRpc();
+    }
+
+    [ServerRpc]
+    private void RequestStopWalkingSFXServerRpc(ServerRpcParams rpcParams = default)
+    {
+        StopWalkingSFXClientRpc();
+    }
+
+    [ClientRpc]
+    private void PlayWalkingSFXClientRpc()
+    {
         if (!isWalkSoundPlaying)
         {
             isWalkSoundPlaying = true;
@@ -411,7 +437,8 @@ public class PlayerBoardMovement : NetworkBehaviour
         }
     }
 
-    private void StopWalkSFX()
+    [ClientRpc]
+    private void StopWalkingSFXClientRpc()
     {
         if (isWalkSoundPlaying)
         {
@@ -440,7 +467,7 @@ public class PlayerBoardMovement : NetworkBehaviour
         }
 
 
-         //steps = 20;
+        //steps = 20;
         for (int i = 0; i < steps; i++)
         {
             while (!boardManager.pathTiles.ContainsKey(currentTilePos))
@@ -451,7 +478,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             }
 
             PathTile currentTile = boardManager.pathTiles[currentTilePos];
-             
+
 
 
             if (currentTile.possibleMoves.Length == 0)
@@ -462,7 +489,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
             Vector3Int nextTilePos = Vector3Int.zero;
             currentTilePath = boardManager.pathTiles[currentTilePos];
-            if (HasMultipleForwardMoves(currentTilePos) && !currentTilePath.falseIntersection )
+            if (HasMultipleForwardMoves(currentTilePos) && !currentTilePath.falseIntersection)
             {
                 StartCoroutine(ShowArrowsBasedOnMoves());
                 if (possibleMoves == 1)
@@ -547,7 +574,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                                     (moveOffset == new Vector3Int(2, 1, 0) || moveOffset == new Vector3Int(3, 0, 0) ||
                                     moveOffset == new Vector3Int(1, 1, 0) || moveOffset == new Vector3Int(1, 2, 0) ||
                                     moveOffset == new Vector3Int(2, -1, 0) || moveOffset == new Vector3Int(1, -1, 0) ||
-                                    moveOffset  == new Vector3Int(2, 2, 0) || 
+                                    moveOffset == new Vector3Int(2, 2, 0) ||
                                     moveOffset == new Vector3Int(2, 0, 0) || moveOffset == new Vector3Int(1, 0, 0)))
                                     {
                                         nextTilePos = potentialNextPos;
@@ -755,7 +782,7 @@ public class PlayerBoardMovement : NetworkBehaviour
             // update the player progress, which represent the distance from the player current position to the end position on the x axis
             playerProgress = Mathf.Abs(rb.position.x - endPosition.x);
 
-            progressBarController.RequestUpdateProgressBarServerRpc(playerSprite,playerProgress);
+            progressBarController.RequestUpdateProgressBarServerRpc(playerSprite, playerProgress);
 
             //debug
             //Debug.Log($"end Tile Position: {endPosition}");
@@ -800,10 +827,10 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         for (int i = 0; i < steps; i++)
         {
-            if (playerPath.Count < 2) break; 
+            if (playerPath.Count < 2) break;
 
             // Get the last position and remove it from the path
-            Vector3Int lastTilePos = playerPath[playerPath.Count - 2]; 
+            Vector3Int lastTilePos = playerPath[playerPath.Count - 2];
             playerPath.RemoveAt(playerPath.Count - 1);
 
             Vector3 targetPos = GetWorldPosition(lastTilePos);
@@ -815,7 +842,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // Move along X first
                 if (offset.x != 0)
                 {
-                    int animIndex = offset.x > 0 ? 3 :  0;
+                    int animIndex = offset.x > 0 ? 3 : 0;
                     SetIdleAnimation(animIndex);
                     yield return new WaitForSeconds(0.05f);
                     Vector3 targetXPos = new Vector3(targetPos.x, rb.position.y, 0);
@@ -830,7 +857,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                 // If Y component exists, move along Y and determine y-up or y-down
                 if (offset.y != 0)
                 {
-                    int animIndex = offset.y > 0 ? 2 : 1 ; // 1 for up, 2 for down
+                    int animIndex = offset.y > 0 ? 2 : 1; // 1 for up, 2 for down
                     SetIdleAnimation(animIndex);
                     yield return new WaitForSeconds(0.05f);
                     Vector3 targetYPos = new Vector3(rb.position.x, targetPos.y, 0);
@@ -945,7 +972,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
             PathTile nextTile = boardManager.pathTiles[potentialNextPos];
 
-            if(tile.cityFalseIntersection && currentDirection == "y-down")
+            if (tile.cityFalseIntersection && currentDirection == "y-down")
             {
                 currentDirection = "x";
                 return false;
@@ -956,7 +983,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                 return false;
             }
             forwardMoveCount++;
-            
+
         }
 
         return forwardMoveCount >= 2; // Return true if more than 2 moves have x > 0, greater or equal to 2
@@ -1069,7 +1096,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                         upArrow.gameObject.SetActive(true);
                     }
                 }
-            
+
 
                 //// Down movement cases
                 //if (offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(0, -4, 0) || 

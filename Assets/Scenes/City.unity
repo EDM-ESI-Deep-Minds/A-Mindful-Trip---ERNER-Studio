@@ -16525,6 +16525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   MessageUIPrefab: {fileID: 6831889079595448025, guid: aea6b73f78c4cc14bb85d15b93907f27, type: 3}
+  HelpRequest: {fileID: 323576253}
 --- !u!114 &757643954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16631,7 +16632,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.72997606
+  orthographic size: 1.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -18414,7 +18415,7 @@ GameObject:
   - component: {fileID: 1241976182}
   - component: {fileID: 1241976181}
   m_Layer: 0
-  m_Name: HeaetRequest
+  m_Name: HeartRequest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

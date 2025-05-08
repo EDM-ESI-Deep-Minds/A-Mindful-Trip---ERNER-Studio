@@ -8,6 +8,7 @@ public class BonusCurseUIManager : NetworkBehaviour
 {
     public static BonusCurseUIManager Instance;
     [SerializeField] private GameObject MessageUIPrefab;
+    [SerializeField] private GameObject HelpRequest;
     private GameObject spawnedUI;
 
     [System.Serializable]
@@ -239,13 +240,16 @@ public class BonusCurseUIManager : NetworkBehaviour
         if (type == 0)
         {
             source = rest;
-        } else if (type == 1)
+        }
+        else if (type == 1)
         {
             source = bonuses;
-        } else if (type == 2)
+        }
+        else if (type == 2)
         {
             source = curses;
-        } else if (type == 3)
+        }
+        else if (type == 3)
         {
             source = items;
         }
@@ -268,27 +272,32 @@ public class BonusCurseUIManager : NetworkBehaviour
     }
 
 
-    [ServerRpc(RequireOwnership =false)]
+    [ServerRpc(RequireOwnership = false)]
     public void GetMessageServerRpc(FixedString128Bytes effectKey, int type)
     {
         FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), type));
-        SetUICLientRpc(effectKey,effect, type);
-
+        SetUICLientRpc(effectKey, effect, type);
     }
 
     [ClientRpc]
-    public void SetUICLientRpc(FixedString128Bytes effectKey, FixedString128Bytes effect,int type)
+    public void SetUICLientRpc(FixedString128Bytes effectKey, FixedString128Bytes effect, int type)
     {
+        HideHelpRequestClientRpc();
+        
         spawnedUI = Instantiate(MessageUIPrefab, GameObject.Find("Canvas").transform);
         var ui = spawnedUI.GetComponent<CurseBonusUI>();
 
         ui.SetText(effect.ToString(), type);
 
-        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f,effectKey.ToString(),type));
+        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f, effectKey.ToString(), type));
+    
+        ShowHelpRequestClientRpc();
     }
 
     public void SetUI(FixedString128Bytes effectKey, int type)
     {
+        HideHelpRequestClientRpc();
+
         FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), type));
 
         spawnedUI = Instantiate(MessageUIPrefab, GameObject.Find("Canvas").transform);
@@ -297,10 +306,11 @@ public class BonusCurseUIManager : NetworkBehaviour
         ui.SetText(effect.ToString(), type);
 
         StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f, effectKey.ToString(), type));
+        
+        ShowHelpRequestClientRpc();
     }
 
-
-    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effectKey,int type)
+    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effectKey, int type)
     {
         yield return new WaitForSeconds(delay);
         if (uiObject != null)
@@ -323,6 +333,44 @@ public class BonusCurseUIManager : NetworkBehaviour
     {
         yield return new WaitForSeconds(1f);
         RolesManager.SwitchRole();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void PlayBonusSFXServerRpc()
+    {
+        PlayBonusSFXClientRpc();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void PlayCurseSFXServerRpc()
+    {
+        PlayCurseSFXClientRpc();
+    }
+
+    [ClientRpc]
+    private void PlayBonusSFXClientRpc()
+    {
+        AudioManager.instance?.PlaySFX(AudioManager.instance.itemEffectSFX);
+    }
+
+    [ClientRpc]
+    private void PlayCurseSFXClientRpc()
+    {
+        AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
+    }
+
+    [ClientRpc]
+    private void HideHelpRequestClientRpc()
+    {
+        if (HelpRequest != null)
+            HelpRequest.SetActive(false);
+    }
+
+    [ClientRpc]
+    private void ShowHelpRequestClientRpc()
+    {
+        if (HelpRequest != null)
+            HelpRequest.SetActive(true);
     }
 
 }

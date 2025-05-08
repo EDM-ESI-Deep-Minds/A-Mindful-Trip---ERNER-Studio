@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ToNextMap : NetworkBehaviour
 {
@@ -10,18 +11,33 @@ public class ToNextMap : NetworkBehaviour
     void OnEnable()
     {
         ReadyManager.AllReady += FromHubDansToMap;
+
+        if (NetworkManager.Singleton != null)
+        {
+            NetworkManager.Singleton.SceneManager.OnLoadComplete += OnSceneLoaded;
+        }
     }
 
     void OnDisable()
     {
         // Unsubscribe when disabled
         ReadyManager.AllReady -= FromHubDansToMap;
+
+        if (NetworkManager.Singleton != null)
+        {
+            NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnSceneLoaded;
+        }
     }
 
     private void OnDestroy()
     {
         // Also unsubscribe when destroyed (safety measure)
         ReadyManager.AllReady -= FromHubDansToMap;
+
+        if (NetworkManager.Singleton != null)
+        {
+            NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnSceneLoaded;
+        }
     }
 
     public void FromHubDansToMap()
@@ -31,6 +47,7 @@ public class ToNextMap : NetworkBehaviour
 
     private IEnumerator FadeAndRequestSceneChange()
     {
+        GameStateManager.IsSceneChanging = true;
         yield return FadeScreen.Instance.FadeOut();
         RequestSceneChangeServerRpc();
     }
@@ -87,5 +104,12 @@ public class ToNextMap : NetworkBehaviour
         DontDestroyOnLoad(TextChatW);
     }
 
-
+    private void OnSceneLoaded(ulong clientId, string sceneName, LoadSceneMode mode)
+    {
+        if (clientId == NetworkManager.LocalClientId)
+        {
+            GameStateManager.IsSceneChanging = false;
+            Debug.Log("Scene loaded, GameStateManager.IsSceneChanging reset.");
+        }
+    }
 }
