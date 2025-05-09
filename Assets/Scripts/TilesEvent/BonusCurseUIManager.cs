@@ -341,7 +341,11 @@ public class BonusCurseUIManager : NetworkBehaviour
 
         if (HelpRequest != null)
         {
-            HelpRequest.SetActive(true);
+            QuestionManager questionManager = FindFirstObjectByType<QuestionManager>();
+            if (!questionManager.isQuestion())
+            {
+                HelpRequest.SetActive(true);
+            }
         } else
         {
             Debug.Log("no helprequest attributed");

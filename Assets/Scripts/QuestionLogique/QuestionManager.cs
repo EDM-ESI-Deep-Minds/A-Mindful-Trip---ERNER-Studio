@@ -301,6 +301,8 @@ public class QuestionManager : NetworkBehaviour
             }
         }
         help = false;
+        ItemRequest.isRequestingItem = false;
+        ItemRequest.isHelpingAccepted = false;
         Invoke(nameof(CleanupQuestionUI), 3f);
     }
 

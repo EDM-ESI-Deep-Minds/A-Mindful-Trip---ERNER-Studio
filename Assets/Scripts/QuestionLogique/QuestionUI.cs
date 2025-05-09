@@ -77,6 +77,9 @@ public class QuestionUI : MonoBehaviour
     {
         if (!interactable) return;
 
+        QuestionHelp.interactable = false;
+        RequestItem.interactable = false;
+
         QuestionManager.Instance.SubmitAnswer(answer);
         interactable = false;
     }

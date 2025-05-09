@@ -45,6 +45,13 @@ public class AskForHelp : NetworkBehaviour
         if (heartUI.getHeart() != 1 ) {
             HelpHimB.gameObject.SetActive(true);
         }
+        DelayHide();
+    }
+
+    private IEnumerator DelayHide()
+    {
+        yield return new WaitForSeconds(6f);
+        HelpHimB.gameObject.SetActive(false);
     }
 
     //____________________ PART2____________________
