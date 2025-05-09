@@ -45,7 +45,8 @@ public class AskForHelp : NetworkBehaviour
         if (heartUI.getHeart() != 1 ) {
             HelpHimB.gameObject.SetActive(true);
         }
-        DelayHide();
+
+        StartCoroutine(DelayHide());
     }
 
     private IEnumerator DelayHide()
