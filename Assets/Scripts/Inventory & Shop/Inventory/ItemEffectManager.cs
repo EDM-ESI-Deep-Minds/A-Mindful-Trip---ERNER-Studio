@@ -15,7 +15,7 @@ public class ItemEffectManager : MonoBehaviour
         if (item.itemID == 2 || item.itemID == 4)
         {
             QuestionManager questionManager = FindFirstObjectByType<QuestionManager>();
-            if (!RolesManager.IsMyTurn || !questionManager.isQuestion())
+            if (!RolesManager.IsMyTurn || !questionManager.getIsQuestion())
             {
                 return;
             }

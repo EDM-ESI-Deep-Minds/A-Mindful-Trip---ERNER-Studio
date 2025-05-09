@@ -342,7 +342,7 @@ public class BonusCurseUIManager : NetworkBehaviour
         if (HelpRequest != null)
         {
             QuestionManager questionManager = FindFirstObjectByType<QuestionManager>();
-            if (!questionManager.isQuestion())
+            if (!questionManager.getIsQuestion())
             {
                 HelpRequest.SetActive(true);
             }

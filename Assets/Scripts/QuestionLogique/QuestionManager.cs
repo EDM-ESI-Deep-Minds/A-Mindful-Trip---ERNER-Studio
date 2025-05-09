@@ -39,6 +39,7 @@ public class QuestionManager : NetworkBehaviour
     private string introDialogue = "Ready for a challenge?";
 
     private bool help = false;
+    private bool isQuestion = false;
 
 
     private void Awake()
@@ -140,6 +141,7 @@ public class QuestionManager : NetworkBehaviour
         currentCategory = category;
         correctAnswer = WebUtility.HtmlDecode(questionData.correctAnswer.ToString());
         hasAnswered = false;
+        isQuestion = true;
         help = false;
         timerLeft = timer;
 
@@ -301,6 +303,7 @@ public class QuestionManager : NetworkBehaviour
             }
         }
         help = false;
+        isQuestion = false;
         ItemRequest.isRequestingItem = false;
         ItemRequest.isHelpingAccepted = false;
         Invoke(nameof(CleanupQuestionUI), 3f);
@@ -419,9 +422,9 @@ public class QuestionManager : NetworkBehaviour
         }
     }
 
-    public bool isQuestion()
+    public bool getIsQuestion()
     {
-        return !hasAnswered;
+        return isQuestion;
     }
 
     [ServerRpc(RequireOwnership =false)]
