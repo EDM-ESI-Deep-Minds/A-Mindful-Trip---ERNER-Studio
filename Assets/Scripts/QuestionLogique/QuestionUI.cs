@@ -146,6 +146,15 @@ public class QuestionUI : MonoBehaviour
 
     }
 
+    public void OpenToAnswer()
+    {
+        foreach (Transform child in answerButtonParent)
+        {
+            Button btn = child.GetComponent<Button>();
+            btn.interactable = true;
+        }
+    }
+
     public void removeOldAnswers()
     {
         foreach (Transform child in answerButtonParent)
