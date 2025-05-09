@@ -140,6 +140,7 @@ public class QuestionManager : NetworkBehaviour
         currentCategory = category;
         correctAnswer = WebUtility.HtmlDecode(questionData.correctAnswer.ToString());
         hasAnswered = false;
+        help = false;
         timerLeft = timer;
 
         QuestionLoader.askedQuestions.Add(questionData.questionText.ToString());
@@ -403,6 +404,7 @@ public class QuestionManager : NetworkBehaviour
     [ClientRpc]
     private void BroadCastNewQuestionClientRpc()
     {
+        help = false;
         introDialogue = "Here is your new question";
         //var ui = spawnedUI.GetComponent<QuestionUI>();
         //ui.removeOldAnswers();
