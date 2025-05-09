@@ -1092,9 +1092,9 @@ MonoBehaviour:
   - itemSO: {fileID: 11400000, guid: 3900895fe15f6644eb49b230dc944176, type: 2}
     price: 250
   - itemSO: {fileID: 11400000, guid: 2ad99cc6fe52dba4c93c036832912e48, type: 2}
-    price: 175
+    price: 125
   - itemSO: {fileID: 11400000, guid: d432b2bc6da67864db044f5d34542e2b, type: 2}
-    price: 200
+    price: 150
   - itemSO: {fileID: 11400000, guid: b1f734fced2f42247bc9f8e657115a60, type: 2}
     price: 175
   - itemSO: {fileID: 11400000, guid: eb683a0e136162a4a83c7c6ab81ec311, type: 2}
