@@ -8,6 +8,7 @@ public class QuestionHelpButton : MonoBehaviour
     private void Start()
     {
         button = GetComponent<Button>();
+        button.interactable = false;
         button.onClick.AddListener(OnButtonClick);
         questionManager = FindFirstObjectByType<QuestionManager>();
     }
