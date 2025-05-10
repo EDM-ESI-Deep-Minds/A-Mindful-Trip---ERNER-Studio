@@ -64,7 +64,7 @@ public class PlayerMovementManager : MonoBehaviour
             Debug.Log("Setting free movement mode");
             SetMovementMode(true); // Enable free movement
         }
-        else if (sceneName == "Countryside" || sceneName == "City" || sceneName == "Desert" || sceneName == "MainMenu")
+        else if (sceneName == "CountrySide" || sceneName == "City" || sceneName == "Desert" || sceneName == "MainMenu")
         {
             Debug.Log("Setting board movement mode");
             SetMovementMode(false); // Enable board movement
