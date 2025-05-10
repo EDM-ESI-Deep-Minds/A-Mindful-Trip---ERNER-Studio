@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerDisconnected : NetworkBehaviour
 {
-    
+    [SerializeField] private Button leaveButtonObject;
+
     private void OnEnable()
     {
         // S'abonner à l'événement de déconnexion du client local
@@ -32,8 +33,8 @@ public class PlayerDisconnected : NetworkBehaviour
     {
         Debug.LogWarning("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
 
-        NetworkManager.Singleton.Shutdown();
-        // leaveButtonObject.onClick.Invoke();
+       // NetworkManager.Singleton.Shutdown();
+         leaveButtonObject.onClick.Invoke();
         spawn_mang.IndexTabAllPlayer = 0;
         spawn_mang.SpawanDone = false;
         spawn_mang.AllPlayer = new GameObject[4];
