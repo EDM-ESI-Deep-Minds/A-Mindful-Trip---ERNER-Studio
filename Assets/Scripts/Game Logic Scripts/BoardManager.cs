@@ -147,7 +147,12 @@ public class BoardManager : MonoBehaviour
                         newTile.noDown = true;
                         newTile.tileType = "Question";
                     }
-
+                    else if (spriteName == "QND_0")
+                    {
+                        newTile.noDown = true;
+                        newTile.tileType = "Question";
+                    }
+                    
                 }
 
                 pathTiles[pos] = newTile;

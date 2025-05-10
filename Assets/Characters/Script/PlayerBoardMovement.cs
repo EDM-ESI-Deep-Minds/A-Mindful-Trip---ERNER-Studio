@@ -760,6 +760,21 @@ public class PlayerBoardMovement : NetworkBehaviour
                 currentTilePath.falseIntersection = true;
             }
 
+            if (currentTilePath.tileType == "noDownQuestion_0")
+            {
+                currentTilePath.tileType = "Question";
+                currentTilePath.noDown = true;
+            }
+
+            if (currentTilePath.tileType == "QND_0")
+            {
+                currentTilePath.tileType = "Question";
+                currentTilePath.noDown = true;
+            }
+            
+
+
+
             if ((currentTilePath.tileType == "End"))
             {
                 EventTrigger.SelectEventToTrigger(currentTilePath.tileType);
@@ -1136,16 +1151,19 @@ public class PlayerBoardMovement : NetworkBehaviour
                 //}
 
                 // Down movement cases
-                if (offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(0, -4, 0) ||
-                    offset == new Vector3Int(0, -2, 0) || offset == new Vector3Int(0, -1, 0))
+                if (!currentTile.noDown)
                 {
-                    possibleMoves++;
-                    onlyOneMove = offset;
-                    if (downArrow == null)
+                    if (offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(0, -4, 0) ||
+                    offset == new Vector3Int(0, -2, 0) || offset == new Vector3Int(0, -1, 0))
                     {
-                        StartCoroutine(TryFindArrowButtonsCoroutine());
+                        possibleMoves++;
+                        onlyOneMove = offset;
+                        if (downArrow == null)
+                        {
+                            StartCoroutine(TryFindArrowButtonsCoroutine());
+                        }
+                        downArrow.gameObject.SetActive(true);
                     }
-                    downArrow.gameObject.SetActive(true);
                 }
 
                 // Right movement cases
