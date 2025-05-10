@@ -10,6 +10,7 @@ public class PathTile
     public bool falseIntersection = false;
     public bool cityFalseIntersection = false;
     public bool noUp = false;
+    public bool noDown = false;
     public PathTile(string name)
     {
         tileType = name;
