@@ -1056,19 +1056,22 @@ public class PlayerBoardMovement : NetworkBehaviour
                 }
 
                 // Down movement cases
-                if (offset == new Vector3Int(1, -2, 0) || offset == new Vector3Int(2, -2, 0) || offset == new Vector3Int(0, -2, 0) ||
+                if (!currentTile.noDown)
+                {
+                    if (offset == new Vector3Int(1, -2, 0) || offset == new Vector3Int(2, -2, 0) || offset == new Vector3Int(0, -2, 0) ||
                     offset == new Vector3Int(2, -1, 0) || offset == new Vector3Int(0, -3, 0) || offset == new Vector3Int(1, -1, 0)
                         //offset == new Vector3Int(-2, -2, 0) || offset == new Vector3Int(-1, -2, 0) 
                         )
 
-                {
-                    possibleMoves++;
-                    onlyOneMove = offset;
-                    if (downArrow == null)
                     {
-                        StartCoroutine(TryFindArrowButtonsCoroutine());
+                        possibleMoves++;
+                        onlyOneMove = offset;
+                        if (downArrow == null)
+                        {
+                            StartCoroutine(TryFindArrowButtonsCoroutine());
+                        }
+                        downArrow.gameObject.SetActive(true);
                     }
-                    downArrow.gameObject.SetActive(true);
                 }
             }
             else if (currentDirection == "y-up")
