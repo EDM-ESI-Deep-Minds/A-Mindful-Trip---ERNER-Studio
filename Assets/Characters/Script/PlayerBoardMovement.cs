@@ -1217,9 +1217,14 @@ public class PlayerBoardMovement : NetworkBehaviour
         }
     }
 
+    //private Vector3 GetWorldPosition(Vector3Int gridPos)
+    //{
+    //    return new Vector3(gridPos.x * gridSize, gridPos.y * gridSize, 0);
+    //}
+
     private Vector3 GetWorldPosition(Vector3Int gridPos)
     {
-        return new Vector3(gridPos.x * gridSize, gridPos.y * gridSize, 0);
+        return boardManager.boardTilemap.GetCellCenterWorld(gridPos);
     }
 
     private IEnumerator CheckForTileTrigger(System.Action<bool> callback)
