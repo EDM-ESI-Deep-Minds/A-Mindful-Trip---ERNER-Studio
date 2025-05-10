@@ -69,11 +69,16 @@ public class QuestionUI : MonoBehaviour
 
             spawnedButtons.Add(btn);
         }
+
+        QuestionHelp.interactable = isMyTurn;
     }
 
     private void OnAnswerClicked(string answer)
     {
         if (!interactable) return;
+
+        QuestionHelp.interactable = false;
+        RequestItem.interactable = false;
 
         QuestionManager.Instance.SubmitAnswer(answer);
         interactable = false;
@@ -144,6 +149,16 @@ public class QuestionUI : MonoBehaviour
             }
         }
 
+    }
+
+    public void OpenToAnswer()
+    {
+        interactable = true;
+        foreach (Transform child in answerButtonParent)
+        {
+            Button btn = child.GetComponent<Button>();
+            btn.interactable = true;
+        }
     }
 
     public void removeOldAnswers()

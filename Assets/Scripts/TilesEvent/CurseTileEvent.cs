@@ -66,8 +66,6 @@ public class CurseTileEvent
                 Debug.Log("error in curse choise");
                 break;
         }
-        // Curse SFX
-        AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
     }
 
     public static IEnumerator DelayReposition(float delay)

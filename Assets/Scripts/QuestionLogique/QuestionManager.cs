@@ -10,7 +10,7 @@ using System.Net;
 public class QuestionManager : NetworkBehaviour
 {
     public static QuestionManager Instance;
-   
+
 
     [SerializeField] private GameObject questionUIPrefab;
     private GameObject spawnedUI;
@@ -37,6 +37,9 @@ public class QuestionManager : NetworkBehaviour
     private int coinReward;
 
     private string introDialogue = "Ready for a challenge?";
+
+    private bool help = false;
+    private bool isQuestion = false;
 
 
     private void Awake()
@@ -82,10 +85,10 @@ public class QuestionManager : NetworkBehaviour
     {
         // if (!IsOwner) return; // Only the player who landed on the tile proceeds
         ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;
-       
-        
-        int category = DifficultySelector.GetLowestEloCategoryName(profile) +9 ;
-       // int category = QuestionLoader.Instance.GetRandomCategory();
+
+
+        int category = DifficultySelector.GetLowestEloCategoryName(profile) + 9;
+        // int category = QuestionLoader.Instance.GetRandomCategory();
 
         Debug.Log($"Category: {category}");
         string difficulty = DifficultySelector.GetQuestionDifficulty(ProfileManager.SelectedProfile.Elo);
@@ -94,10 +97,12 @@ public class QuestionManager : NetworkBehaviour
         if (difficulty == "easy")
         {
             coinReward = 50;
-        } else if (difficulty == "medium")
+        }
+        else if (difficulty == "medium")
         {
             coinReward = 75;
-        } else if (difficulty == "hard")
+        }
+        else if (difficulty == "hard")
         {
             coinReward = 100;
         }
@@ -124,7 +129,7 @@ public class QuestionManager : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void SendQuestionToServerRpc(NetworkQuestionData questionData, int category, float timer, int spriteIndex,ServerRpcParams rpcParams = default)
+    private void SendQuestionToServerRpc(NetworkQuestionData questionData, int category, float timer, int spriteIndex, ServerRpcParams rpcParams = default)
     {
         currentPlayerId = rpcParams.Receive.SenderClientId;
         BroadcastQuestionClientRpc(questionData, category, timer, currentPlayerId, spriteIndex);
@@ -136,11 +141,18 @@ public class QuestionManager : NetworkBehaviour
         currentCategory = category;
         correctAnswer = WebUtility.HtmlDecode(questionData.correctAnswer.ToString());
         hasAnswered = false;
+        isQuestion = true;
+        help = false;
         timerLeft = timer;
 
         QuestionLoader.askedQuestions.Add(questionData.questionText.ToString());
 
         bool isMyTurn = NetworkManager.Singleton.LocalClientId == answeringPlayerId;
+
+        VoiceAndChatS voice = FindFirstObjectByType<VoiceAndChatS>();
+        voice.MutePlayer();
+        voice.HideChat();
+
 
         HideGameplayUI(true);
 
@@ -214,74 +226,116 @@ public class QuestionManager : NetworkBehaviour
 
         hasAnswered = true;
 
+        if (help)
+        {
+            handleHelpSubmitServerRpc();
+        }
+
         bool isCorrect = selectedAnswer == correctAnswer;
-        ResolveAnswerServerRpc(isCorrect,new FixedString128Bytes(correctAnswer));
+        ResolveAnswerServerRpc(isCorrect, new FixedString128Bytes(correctAnswer));
+    }
+
+    [ServerRpc(RequireOwnership =false)]
+    private void handleHelpSubmitServerRpc()
+    {
+        handleHelpSubmitClientRpc();
+    }
+
+    [ClientRpc]
+    private void handleHelpSubmitClientRpc()
+    {
+        hasAnswered = true;
     }
 
     private void AnswerTimeout()
     {
         if (!RolesManager.IsMyTurn) return;
         hasAnswered = true;
-        ResolveAnswerServerRpc(false,new FixedString128Bytes(correctAnswer));
+        ResolveAnswerServerRpc(false, new FixedString128Bytes(correctAnswer));
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void ResolveAnswerServerRpc(bool isCorrect,FixedString128Bytes correctAnswer)
+    private void ResolveAnswerServerRpc(bool isCorrect, FixedString128Bytes correctAnswer, ServerRpcParams rpcParams = default)
     {
         var ui = spawnedUI.GetComponent<QuestionUI>();
-        FixedString128Bytes result = new FixedString128Bytes(ui.GetResult(isCorrect,correctAnswer.ToString()));
-        ResolveAnswerClientRpc(isCorrect,result);
+        FixedString128Bytes result = new FixedString128Bytes(ui.GetResult(isCorrect, correctAnswer.ToString()));
+        ulong ClientSenderHelp = rpcParams.Receive.SenderClientId;
+        ResolveAnswerClientRpc(isCorrect, result,ClientSenderHelp);
     }
 
     [ClientRpc]
-    private void ResolveAnswerClientRpc(bool isCorrect,FixedString128Bytes result)
+    private void ResolveAnswerClientRpc(bool isCorrect, FixedString128Bytes result,ulong AnswerClient)
     {
         if (spawnedUI == null) return;
+
+        VoiceAndChatS voice = FindFirstObjectByType<VoiceAndChatS>();
+        voice.UnMutePlayer();
+        voice.ShowChat();
 
         var ui = spawnedUI.GetComponent<QuestionUI>();
         ui.ShowResult(result.ToString());
 
         HeartUIManager heartUI = FindFirstObjectByType<HeartUIManager>();
+        ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;
 
-        if (RolesManager.IsMyTurn)
+        if (!isCorrect)
         {
-            if (!isCorrect)
+            if (RolesManager.IsMyTurn)
             {
                 if (heartUI.getApplyNegativeEffect())
                 {
-                    
                     if (heartUI != null)
                     {
                         heartUI.removeHeart();
                     }
-                }
-            } else {
-                AudioManager.instance?.PlaySFX(AudioManager.instance.correctAnswerSFX);
-                InventoryManager inventory = FindFirstObjectByType<InventoryManager>();
-                inventory.AddCoins(coinReward);
-            }
-
-            ProfileManager.PlayerProfile profile = ProfileManager.SelectedProfile;
-
-            if (isCorrect)
-            {   
-                EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
-            } else
-            {
-                if (heartUI.getApplyNegativeEffect())
-                {
                     EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
                 }
-                //do not touch the elo if applynegativeeffect was false
             }
-            //set it to ture whether he used it or not or he answer correctly or not
+        } else
+        {
+            AudioManager.instance?.PlaySFX(AudioManager.instance.correctAnswerSFX);
+            if (NetworkManager.Singleton.LocalClientId == AnswerClient)
+            {
+                InventoryManager inventory = FindFirstObjectByType<InventoryManager>();
+                inventory.AddCoins(coinReward);
+
+                EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
+            }
         }
-        Invoke(nameof(CleanupQuestionUIClientRpc), 3f);
+        help = false;
+        isQuestion = false;
+        ItemRequest.isRequestingItem = false;
+        ItemRequest.isHelpingAccepted = false;
+        Invoke(nameof(CleanupQuestionUI), 3f);
     }
+
+    // private void HideGameplayUI(bool hide)
+    // {
+    //     // Add backWardButton to the element list if included for testing and uncomment the if statement referencing it
+    //     string[] elementNames = { "RollDiceButton", "DownArrow", "UpArrow", "LeftArrow", "RightArrow", "Dice1", "Dice2", "ProgressBar", "HelpRequest" };
+
+    //     foreach (var name in elementNames)
+    //     {
+    //         var obj = GameObject.Find(name);
+    //         if (obj != null) obj.SetActive(!hide);
+    //     }
+
+    //     // Special treatment for Dice1, Dice2 and ProgressBar
+    //     if (rollDiceButton != null) rollDiceButton.SetActive(!hide);
+    //     // if (backWardButton != null) backWardButton.SetActive(!hide);
+    //     if (dice1 != null) dice1.SetActive(!hide);
+    //     if (dice2 != null) dice2.SetActive(!hide);
+    //     if (ProgressBar != null) ProgressBar.SetActive(!hide);
+    //     if (HelpRequest != null) HelpRequest.SetActive(!hide);
+    // }
 
     private void HideGameplayUI(bool hide)
     {
-        // Add backWardButton to the element list if included for testing and uncomment the if statement referencing it
+        ToggleGameplayUI(hide);
+    }
+
+    private void ToggleGameplayUI(bool hide)
+    {
         string[] elementNames = { "RollDiceButton", "DownArrow", "UpArrow", "LeftArrow", "RightArrow", "Dice1", "Dice2", "ProgressBar", "HelpRequest" };
 
         foreach (var name in elementNames)
@@ -290,19 +344,17 @@ public class QuestionManager : NetworkBehaviour
             if (obj != null) obj.SetActive(!hide);
         }
 
-        // Special treatment for Dice1, Dice2 and ProgressBar
+        // Redundant but safe
         if (rollDiceButton != null) rollDiceButton.SetActive(!hide);
-        // if (backWardButton != null) backWardButton.SetActive(!hide);
         if (dice1 != null) dice1.SetActive(!hide);
         if (dice2 != null) dice2.SetActive(!hide);
         if (ProgressBar != null) ProgressBar.SetActive(!hide);
         if (HelpRequest != null) HelpRequest.SetActive(!hide);
     }
 
-    [ClientRpc]
-    private void CleanupQuestionUIClientRpc()
+    private void CleanupQuestionUI()
     {
-        
+
 
         if (spawnedUI != null)
         {
@@ -333,8 +385,8 @@ public class QuestionManager : NetworkBehaviour
 
     private IEnumerator DelaySwitchTurn()
     {
-        yield return new WaitForSeconds(1f); 
-        RolesManager.SwitchRole(); 
+        yield return new WaitForSeconds(1f);
+        RolesManager.SwitchRole();
     }
 
     public void HighlightCorrectAnswer()
@@ -348,7 +400,7 @@ public class QuestionManager : NetworkBehaviour
         BroadCastNewQuestionServerRpc();
     }
 
-    [ServerRpc(RequireOwnership =false)]
+    [ServerRpc(RequireOwnership = false)]
     private void BroadCastNewQuestionServerRpc()
     {
         BroadCastNewQuestionClientRpc();
@@ -357,6 +409,7 @@ public class QuestionManager : NetworkBehaviour
     [ClientRpc]
     private void BroadCastNewQuestionClientRpc()
     {
+        help = false;
         introDialogue = "Here is your new question";
         //var ui = spawnedUI.GetComponent<QuestionUI>();
         //ui.removeOldAnswers();
@@ -369,9 +422,29 @@ public class QuestionManager : NetworkBehaviour
         }
     }
 
-    public bool isQuestion()
+    public bool getIsQuestion()
     {
-        return spawnedUI != null;
+        return isQuestion;
+    }
+
+    [ServerRpc(RequireOwnership =false)]
+    public void AllOpenToAnswerServerRpc()
+    {
+        AllOpenToAnswerClientRpc();
+    }
+
+    [ClientRpc]
+    public void AllOpenToAnswerClientRpc()
+    {
+        help = true;
+
+        if (RolesManager.IsMyTurn) return;
+
+        if (spawnedUI!=null)
+        {
+            var ui = spawnedUI.GetComponent<QuestionUI>();
+            ui.OpenToAnswer();
+        }
     }
 
 }

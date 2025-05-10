@@ -61,7 +61,7 @@ public class PlayerFreeMovement : NetworkBehaviour
     private void Update()
     {
         // Only for owner
-        if (!IsOwner) return;
+        if (!IsOwner || GameStateManager.IsSceneChanging) return;
 
         // Managing local inputs
         HandleInput();
@@ -104,7 +104,7 @@ public class PlayerFreeMovement : NetworkBehaviour
     private void FixedUpdate()
     {
         // Only for owner
-        if (!IsOwner) return;
+        if (!IsOwner || GameStateManager.IsSceneChanging) return;
 
         // Using synchronized input
         Vector2 currentInput = networkMovementInput.Value;

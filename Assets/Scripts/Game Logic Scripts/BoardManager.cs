@@ -142,6 +142,11 @@ public class BoardManager : MonoBehaviour
                         newTile.noUp = true;
                         newTile.tileType = "Question";
                     }
+                    else if (spriteName == "noDownQuestion_0")
+                    {
+                        newTile.noDown = true;
+                        newTile.tileType = "Question";
+                    }
 
                 }
 

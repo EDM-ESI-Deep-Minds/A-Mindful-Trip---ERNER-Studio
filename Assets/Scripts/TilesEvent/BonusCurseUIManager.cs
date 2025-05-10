@@ -8,7 +8,10 @@ public class BonusCurseUIManager : NetworkBehaviour
 {
     public static BonusCurseUIManager Instance;
     [SerializeField] private GameObject MessageUIPrefab;
+    [SerializeField] private GameObject HelpRequest;
     private GameObject spawnedUI;
+
+    public Transform canvasTransform;
 
     [System.Serializable]
     public class EffectData
@@ -239,13 +242,16 @@ public class BonusCurseUIManager : NetworkBehaviour
         if (type == 0)
         {
             source = rest;
-        } else if (type == 1)
+        }
+        else if (type == 1)
         {
             source = bonuses;
-        } else if (type == 2)
+        }
+        else if (type == 2)
         {
             source = curses;
-        } else if (type == 3)
+        }
+        else if (type == 3)
         {
             source = items;
         }
@@ -268,30 +274,31 @@ public class BonusCurseUIManager : NetworkBehaviour
     }
 
 
-    [ServerRpc(RequireOwnership =false)]
+    [ServerRpc(RequireOwnership = false)]
     public void GetMessageServerRpc(FixedString128Bytes effectKey, int type)
     {
         FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), type));
-        SetUICLientRpc(effectKey,effect, type);
-
+        SetUICLientRpc(effectKey, effect, type);
     }
 
     [ClientRpc]
-    public void SetUICLientRpc(FixedString128Bytes effectKey, FixedString128Bytes effect,int type)
+    public void SetUICLientRpc(FixedString128Bytes effectKey, FixedString128Bytes effect, int type)
     {
-        spawnedUI = Instantiate(MessageUIPrefab, GameObject.Find("Canvas").transform);
-        var ui = spawnedUI.GetComponent<CurseBonusUI>();
+        if (HelpRequest != null)
+        {
+            HelpRequest.SetActive(false);
+        }
 
-        ui.SetText(effect.ToString(), type);
+        if (type == 1)
+        {
+            AudioManager.instance?.PlaySFX(AudioManager.instance.itemEffectSFX);
 
-        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f,effectKey.ToString(),type));
-    }
+        } else if (type == 2)
+        {
+            AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
+        }
 
-    public void SetUI(FixedString128Bytes effectKey, int type)
-    {
-        FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), type));
-
-        spawnedUI = Instantiate(MessageUIPrefab, GameObject.Find("Canvas").transform);
+        spawnedUI = Instantiate(MessageUIPrefab,canvasTransform);
         var ui = spawnedUI.GetComponent<CurseBonusUI>();
 
         ui.SetText(effect.ToString(), type);
@@ -299,8 +306,27 @@ public class BonusCurseUIManager : NetworkBehaviour
         StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f, effectKey.ToString(), type));
     }
 
+    public void SetUI(FixedString128Bytes effectKey, int type)
+    {
+        if (HelpRequest != null)
+        {
+            HelpRequest.SetActive(false);
+        } else
+        {
+            Debug.Log("no helprequest attributed");
+        }
 
-    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effectKey,int type)
+        FixedString128Bytes effect = new FixedString128Bytes(GetEffect(effectKey.ToString(), type));
+
+        spawnedUI = Instantiate(MessageUIPrefab, canvasTransform);
+        var ui = spawnedUI.GetComponent<CurseBonusUI>();
+
+        ui.SetText(effect.ToString(), type);
+
+        StartCoroutine(DestroyAfterDelay(spawnedUI, 6.2f, effectKey.ToString(), type));
+    }
+
+    private IEnumerator DestroyAfterDelay(GameObject uiObject, float delay, string effectKey, int type)
     {
         yield return new WaitForSeconds(delay);
         if (uiObject != null)
@@ -311,6 +337,18 @@ public class BonusCurseUIManager : NetworkBehaviour
         if (RolesManager.IsMyTurn && effectKey != "reposition" && effectKey != "potOfGreed" && effectKey != "mouthWash" && effectKey != "allenM60")
         {
             StartCoroutine(DelaySwitchTurn());
+        }
+
+        if (HelpRequest != null)
+        {
+            QuestionManager questionManager = FindFirstObjectByType<QuestionManager>();
+            if (!questionManager.getIsQuestion())
+            {
+                HelpRequest.SetActive(true);
+            }
+        } else
+        {
+            Debug.Log("no helprequest attributed");
         }
     }
 
@@ -324,5 +362,4 @@ public class BonusCurseUIManager : NetworkBehaviour
         yield return new WaitForSeconds(1f);
         RolesManager.SwitchRole();
     }
-
 }

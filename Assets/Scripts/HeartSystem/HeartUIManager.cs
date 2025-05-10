@@ -139,6 +139,7 @@ public class HeartUIManager : MonoBehaviour
           
             StartCoroutine(SetHeartEmptyAfterAnimation(heart.GetComponent<Image>(), 0.3f));
         }
+
         if (hearts == 0)
         {
             AudioManager.instance?.PlaySFX(AudioManager.instance.soulShatterSFX);
@@ -151,8 +152,14 @@ public class HeartUIManager : MonoBehaviour
                 GameOverManager.Instance.TriggerGameOver(); //  delay
 
             }
-        }else{
-              AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
+        }else
+        {
+            AudioManager.instance?.PlaySFX(AudioManager.instance.damageTakenSFX);
+            if (hearts == 1)
+            {
+                AskForHelp askForHelp = FindFirstObjectByType<AskForHelp>();
+                askForHelp.HelpHimB.gameObject.SetActive(false);
+            }
         }
 
     }

@@ -19,6 +19,7 @@ public class ItemRequestButton : MonoBehaviour
     private void OnButtonClick()
     {
         itemRequestScript.WhenRequestItem();
+        button.interactable = false;
        
     }
 }
