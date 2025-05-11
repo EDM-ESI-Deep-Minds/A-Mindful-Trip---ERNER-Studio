@@ -127,7 +127,7 @@ public class ItemEffectManager : MonoBehaviour
         else
         {
             removeHeart();
-            //remove only one heart 2 is a lot
+            // Removing only one heart, 2 is a lot
             //removeHeart();
             Debug.Log("Too bad, you lost two hearts.");
         }

@@ -17,11 +17,6 @@ public class QuestionLoader : MonoBehaviour
             Destroy(gameObject);
     }
 
-    // private void Start()
-    // {
-    //     EventTrigger.OnQuestionTile += LoadQuestion;
-    // }
-
     public Question LoadQuestion(int category, string difficulty, string questionType)
     {
         string fileName = $"QuestionBank/category_{category}_{difficulty}_{questionType}";
@@ -64,9 +59,4 @@ public class QuestionLoader : MonoBehaviour
         int index = Random.Range(0, types.Length);
         return types[index];
     }
-    //public int GetRandomCategory()
-    //{
-    //    return UnityEngine.Random.Range(9, 33); //TODO make it personilized with the player profile
-    //}
-   
 }

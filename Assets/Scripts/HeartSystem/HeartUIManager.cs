@@ -144,10 +144,10 @@ public class HeartUIManager : MonoBehaviour
         {
             AudioManager.instance?.PlaySFX(AudioManager.instance.soulShatterSFX);
            
-            Debug.Log("No more hearts to removeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+            Debug.Log("No more hearts to remove");
             if (GameOverManager.Instance != null)
             { 
-                Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+                Debug.Log("GAMEOVER");
                 //NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
                 GameOverManager.Instance.TriggerGameOver(); //  delay
 
@@ -185,10 +185,10 @@ public class HeartUIManager : MonoBehaviour
 
         AudioManager.instance?.PlaySFX(AudioManager.instance.soulShatterSFX);
 
-        Debug.Log("No more hearts to removeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+        Debug.Log("No more hearts to remove");
         if (GameOverManager.Instance != null)
         {
-            Debug.Log("GAMEOVERrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+            Debug.Log("GAMEOVER");
             //NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
             GameOverManager.Instance.TriggerGameOver(); //  delay
 

@@ -21,7 +21,7 @@ public class AskForHelp : NetworkBehaviour
         }
         else {
 
-            //affichilo 9olo 3nsk max hert ma t9darche demandier
+            // Displaying mac hearts reached
             HelpRequestUI.Instance.ShowMaxHearts();
         }
     }
@@ -38,7 +38,7 @@ public class AskForHelp : NetworkBehaviour
     {
         ClientSenderHelp = ClientSenderId;
         if (NetworkManager.Singleton.LocalClientId == ClientSenderId) { return; }
-        // han asm chkon demenda l help
+        // Displaying name of requesting player
         Debug.Log("ClientSenderHelp: " + ClientSenderHelp);
         HelpRequestUI.Instance.ShowHelpRequest(name);
         HeartUIManager heartUI = Object.FindFirstObjectByType<HeartUIManager>();
@@ -88,11 +88,11 @@ public class AskForHelp : NetworkBehaviour
             HeartUIManager heartUI = Object.FindFirstObjectByType<HeartUIManager>();
             heartUI.addHeart();
         }
-        // StartCoroutine(AttendreEtContinuer());
+        // StartCoroutine(WaitAndContinue());
         HelpHimB.gameObject.SetActive(false);
 
     }
-    // private IEnumerator AttendreEtContinuer()
+    // private IEnumerator WaitAndContinue()
     // {
 
     //     yield return new WaitForSeconds(4f);

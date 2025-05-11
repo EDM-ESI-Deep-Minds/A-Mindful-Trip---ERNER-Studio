@@ -38,7 +38,7 @@ public class VoiceAndChatS : MonoBehaviour
     }
 
 
-    //s'est fonction s'ont pour vous. vouz pouverez les appler quand vous voulez
+    // Callable methods for a variety of purposes
     public void MutePlayer()
     {
         Mute.onClick.Invoke();

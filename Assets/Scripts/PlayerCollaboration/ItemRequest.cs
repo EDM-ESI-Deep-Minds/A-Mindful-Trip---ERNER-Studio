@@ -67,7 +67,6 @@ public class ItemRequest : NetworkBehaviour
         if (NetworkManager.Singleton.LocalClientId == senderClientId)
         {
             isHelpingAccepted = true;
-            // han lazm taficher haaj t9olo lair wache tmd oumbrd ki ky3 n9olk win nahio le ui
             HelpRequestUI.Instance.ShowChooseItemPrompt();
         }
     }

@@ -29,7 +29,7 @@ public class FinalEloTest : MonoBehaviour
             "hard" => 3,
             _ => -1, // unexpected result
         };
-        Debug.Log($" difiicultyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy: {difficulty}");
+        Debug.Log($" difficulty: {difficulty}");
         // Simulate Elo changes
         // EloCalculator.UpdateCategoryElo(testProfile, "12", true, 3);     // correct medium
         //EloCalculator.UpdateCategoryElo(testProfile, "10", false, 1); // wrong easy

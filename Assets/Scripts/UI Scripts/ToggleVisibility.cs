@@ -9,7 +9,7 @@ public class ToggleVisibility : MonoBehaviour
     void Start()
     {
         targetObject = FindInDontDestroyOnLoad("Text Chat");
-        //zid les if ta3 les scenn
+        //Scenes conditioning
         if (SceneManager.GetActiveScene().name != "MainMenu")
         {
             RectTransform rectTransform = targetObject.GetComponent<RectTransform>();

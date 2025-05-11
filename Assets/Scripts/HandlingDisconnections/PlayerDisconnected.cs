@@ -9,7 +9,7 @@ public class PlayerDisconnected : NetworkBehaviour
 
     private void OnEnable()
     {
-        // Abonnement à l'événement de déconnexion du client
+        // Subscribing to the disconnection of client event
         NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnected;
     }
 
@@ -23,7 +23,7 @@ public class PlayerDisconnected : NetworkBehaviour
 
     private void OnClientDisconnected(ulong clientId)
     {
-        // Appel du bouton de retour, réinitialisation des variables, et retour au menu principal
+        // Call of return button, reinitialization of variables and game state, and return to main menu
         leaveButtonObject.onClick.Invoke();
         spawn_mang.IndexTabAllPlayer = 0;
         spawn_mang.SpawanDone = false;

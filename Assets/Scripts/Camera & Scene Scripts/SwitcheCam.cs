@@ -13,7 +13,7 @@ public class SwitcheCam : NetworkBehaviour
     public int IndexPlayer = 0;
     public static NetworkObject CurrentPlayer;
 
-    // Variable réseau pour stocker le joueur à suivre
+    // Network Variable to store the player to track and follow
     private NetworkVariable<NetworkObjectReference> PlayerToFlow = new NetworkVariable<NetworkObjectReference>();
     private void OnEnable()
     {

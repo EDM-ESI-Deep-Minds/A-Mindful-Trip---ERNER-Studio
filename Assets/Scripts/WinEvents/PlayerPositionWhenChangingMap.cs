@@ -23,7 +23,7 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
 
     public string scene;
    
-    // CORRECTION: Rendu statique pour maintenir les attributions entre les scènes
+    // Static to maintain distribution over the entire game
     private static Dictionary<ulong, int> clientSpawnIndices = new Dictionary<ulong, int>();
 
     private NetworkVariable<Vector3> playerScale = new NetworkVariable<Vector3>(
@@ -54,10 +54,6 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
     {
         if (!IsOwner) return;
 
-        // CORRECTION: Ne pas effacer clientSpawnIndices à chaque changement de scène
-        // if (IsServer)
-        //    clientSpawnIndices.Clear(); // Cette ligne causait le problème!
-
         scene = sceneName;
         AskForMyPositionServerRpc();
     }
@@ -69,21 +65,21 @@ public class PlayerPositionWhenChangingMap : NetworkBehaviour
 
         if (!clientSpawnIndices.ContainsKey(targetClientId))
         {
-            // Chercher le prochain indice disponible (0-3)
+            // Looking for next possible spawn index (0-3)
             HashSet<int> usedIndices = new HashSet<int>();
             foreach (var index in clientSpawnIndices.Values)
             {
                 usedIndices.Add(index);
             }
            
-            // Trouver le premier indice libre entre 0 et 3
+            // Finding the first free index between 0 and 3
             int newIndex = 0;
             while (newIndex < 4 && usedIndices.Contains(newIndex))
             {
                 newIndex++;
             }
            
-            // Si tous les indices sont pris, utiliser l'approche modulo
+            // If every index is used, we use the modulo approach
             if (newIndex >= 4)
             {
                 newIndex = clientSpawnIndices.Count % 4;

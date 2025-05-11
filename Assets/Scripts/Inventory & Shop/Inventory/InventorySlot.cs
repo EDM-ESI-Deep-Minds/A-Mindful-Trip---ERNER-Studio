@@ -51,11 +51,6 @@ public class InventorySlot : MonoBehaviour
         if (!IsOccupied() || inventory.getIsLocked())
         {
             Debug.Log("Slot clicked: empty.");
-            // Overriding the normal click sound
-            // if (AudioManager.instance != null)
-            // {
-            //     AudioManager.instance.PlaySFX(AudioManager.instance.impossibleActionSFX);
-            // }
         }
         else
         {

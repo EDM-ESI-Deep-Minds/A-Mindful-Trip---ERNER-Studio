@@ -67,21 +67,6 @@ public class PlayerFreeMovement : NetworkBehaviour
         HandleInput();
     }
 
-    /* private void HandleInput()
-     {
-         // Getting the movement input
-         Vector2 input = new Vector2(
-             Input.GetAxisRaw("Horizontal"),
-             Input.GetAxisRaw("Vertical")
-         ).normalized;
-
-         // Updating the network variable
-         if (input != Vector2.zero)
-         {
-             UpdateMovementInputServerRpc(input);
-         }
-     }
-    */
     private void HandleInput()
     {
         // Getting the movement input

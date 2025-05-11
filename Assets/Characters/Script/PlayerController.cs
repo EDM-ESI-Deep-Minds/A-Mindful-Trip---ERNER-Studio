@@ -67,18 +67,6 @@ public class PlayerController : NetworkBehaviour
 
         // itemEffectManager setup
         itemEffectManager = GetComponent<ItemEffectManager>();
-
-        //if (itemEffectManager != null)
-        //{
-        //    Debug.Log("Local and Global refs are being fetched ...");
-
-        //    var questionManager = FindObjectOfType<QuestionManager>();
-        //    var rolesManager = FindObjectOfType<RolesManager>();
-        //    var heartManager = heartUIInstance.GetComponent<HeartUIManager>();
-
-        //    itemEffectManager.SetLocalRefs(heartManager, inventoryManager);
-        //    itemEffectManager.InitializeGlobalRefs(questionManager, rolesManager);
-        //}
     }
 
     void Update()
@@ -144,15 +132,6 @@ public class PlayerController : NetworkBehaviour
                 sceneButtonToDisable.SetActive(false);
         }
     }
-    // Called by Shopkeeper when banner is clicked
-    // public void ForceOpenShop()
-    // {
-    //     if (!isShopOpen && isNearShopkeeper)
-    //     {
-    //         playerUIController.ShowShopUI();
-    //         isShopOpen = true;
-    //     }
-    // }
 
     // Called by Shopkeeper trigger
     public void SetNearShopkeeper(bool value)

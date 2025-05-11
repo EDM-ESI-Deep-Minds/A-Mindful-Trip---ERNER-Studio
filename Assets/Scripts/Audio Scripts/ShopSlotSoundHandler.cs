@@ -10,7 +10,7 @@ public class ShopSlotSoundHandler : MonoBehaviour, IPointerEnterHandler, IPointe
     private void Awake()
     {
         shopSlot = GetComponent<ShopSlot>();
-        shopManager = FindObjectOfType<ShopManager>(); // Optional: set directly if needed
+        shopManager = FindObjectOfType<ShopManager>(); // Optional, direct set is possible
     }
 
     public void OnPointerEnter(PointerEventData eventData)

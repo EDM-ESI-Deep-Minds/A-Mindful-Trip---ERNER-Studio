@@ -24,6 +24,4 @@ public class CurseBonusUI : MonoBehaviour
         narrativeText.text = effect;
 
     }
-
-
 }

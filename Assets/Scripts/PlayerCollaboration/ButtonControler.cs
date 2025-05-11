@@ -31,7 +31,5 @@ public class ButtonController : MonoBehaviour
     private void OnButtonClick()
     {   
         itemRequestScript.AcceptGiveItem();
-        //hna ytnaha le ui
-
     }
 }

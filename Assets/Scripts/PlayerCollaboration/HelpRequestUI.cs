@@ -19,13 +19,7 @@ public class HelpRequestUI : MonoBehaviour
        helpRequestText.text = playerName + " seeks a Heart.";
       helpRequestText.gameObject.SetActive(true);
     }
-
-    /*public void ShowMaxHearts()
-    {
-        MaxHeartsText.text = "Your heart is full. The gift is denied.";
-        MaxHeartsText.gameObject.SetActive(true);
-    }
-    */
+    
     public void ShowMaxHearts()
     {
         MaxHeartsText.text = "Your heart is full. The gift is denied.";

@@ -16,34 +16,6 @@ public static class DifficultySelector
         else
             return "hard"; // Hard
     }
-    /*public static int GetLowestEloCategoryName(ProfileManager.PlayerProfile profile)
-    {
-
-        int[] arrayOfIndex= new int[24];
-        int lowestEloIndex = 0;
-        int lowestElo = profile.categories[9].categoryElo;
-
-        for (int i = 0; i < 24; i++)
-        {
-            for (int j = 0; j < 24; j++)
-            {
-                if (profile.categories[i].categoryElo < profile.categories[j].categoryElo)
-                {
-                    arrayOfIndex[lowestEloIndex] = i;
-                }
-            }
-        }
-
-        /*if (profile.categories[i].categoryElo < lowestElo)
-        {
-            lowestElo = profile.categories[i].categoryElo;
-            lowestEloIndex = i;
-        }
-        //string categoryName = profile.categories[lowestEloIndex].categoryName;
-        //Debug.Log($"Lowest Elo category: {categoryName} with Elo {lowestElo}");
-        return lowestEloIndex;
-    }*/
-
 
     public static int GetLowestEloCategoryName(ProfileManager.PlayerProfile profile)
     {

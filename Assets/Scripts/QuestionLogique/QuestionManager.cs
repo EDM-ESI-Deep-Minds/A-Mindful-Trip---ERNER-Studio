@@ -309,26 +309,6 @@ public class QuestionManager : NetworkBehaviour
         Invoke(nameof(CleanupQuestionUI), 3f);
     }
 
-    // private void HideGameplayUI(bool hide)
-    // {
-    //     // Add backWardButton to the element list if included for testing and uncomment the if statement referencing it
-    //     string[] elementNames = { "RollDiceButton", "DownArrow", "UpArrow", "LeftArrow", "RightArrow", "Dice1", "Dice2", "ProgressBar", "HelpRequest" };
-
-    //     foreach (var name in elementNames)
-    //     {
-    //         var obj = GameObject.Find(name);
-    //         if (obj != null) obj.SetActive(!hide);
-    //     }
-
-    //     // Special treatment for Dice1, Dice2 and ProgressBar
-    //     if (rollDiceButton != null) rollDiceButton.SetActive(!hide);
-    //     // if (backWardButton != null) backWardButton.SetActive(!hide);
-    //     if (dice1 != null) dice1.SetActive(!hide);
-    //     if (dice2 != null) dice2.SetActive(!hide);
-    //     if (ProgressBar != null) ProgressBar.SetActive(!hide);
-    //     if (HelpRequest != null) HelpRequest.SetActive(!hide);
-    // }
-
     private void HideGameplayUI(bool hide)
     {
         ToggleGameplayUI(hide);

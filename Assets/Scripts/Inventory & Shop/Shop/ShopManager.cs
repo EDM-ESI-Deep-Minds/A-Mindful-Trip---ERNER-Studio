@@ -40,29 +40,13 @@ public class ShopManager : MonoBehaviour
             else
             {
                 Debug.Log("Purchase failed: Inventory full.");
-                // AudioManager.instance?.PlaySFX(AudioManager.instance.impossibleActionSFX);
             }
         }
         else
         {
             Debug.Log("Purchase failed: Coin amount insufficient.");
-            // AudioManager.instance?.PlaySFX(AudioManager.instance.impossibleActionSFX);
         }
     }
-    
-    // public void TryBuyItem(ItemSO itemSO, int price)
-    // {
-    //     if (itemSO != null && inventoryManager.CanAfford(price))
-    //     {
-    //         inventoryManager.AddItem(itemSO);
-    //         inventoryManager.DeductCoins(price);
-    //         Debug.Log("Item purchased: " + itemSO.itemName);
-    //     }
-    //     else
-    //     {
-    //         Debug.Log("Purchase failed: Insufficient coins or inventory full.");
-    //     }
-    // }
 }
 
 [System.Serializable]

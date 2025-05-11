@@ -23,7 +23,7 @@ public class InventoryManager : MonoBehaviour
         inventoryItems = new List<int>();
         currentCoins = startingCoins;
 
-        //how to populate the inventory for testing
+        // Populating the inventory for testing
         //AddItem(itemDatabase.GetItemByID(1));
 
     }
@@ -124,35 +124,6 @@ public class InventoryManager : MonoBehaviour
             return found;
         }
     }
-
-    // public void AddItem(ItemSO itemSO)
-    // {
-    //     if (inventoryItems.Count < inventorySlots.Length)
-    //     {
-    //         inventoryItems.Add(itemSO.itemID);
-    //         UpdateInventoryUI();
-    //     }
-    //     else
-    //     {
-    //         Debug.Log("Inventory full!");
-    //     }
-    // }
-
-    // private void UpdateInventoryUI()
-    // {
-    //     for (int i = 0; i < inventorySlots.Length; i++)
-    //     {
-    //         if (i < inventoryItems.Count)
-    //         {
-    //             ItemSO item = itemDatabase.GetItemByID(inventoryItems[i]);
-    //             inventorySlots[i].SetItem(item);
-    //         }
-    //         else
-    //         {
-    //             // No need to update inventory slot
-    //         }
-    //     }
-    // }
 
     public void DeductCoins(int price)
     {
