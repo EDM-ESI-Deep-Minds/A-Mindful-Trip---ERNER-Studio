@@ -8,7 +8,7 @@
 
 ---
  
-## 🎮 Introduction
+## 🎮 Introduction 
 
 **Luminaria: A Journey Within** is a 2D online multiplayer cooperative board game developed by **ERNER Studio**.  
 Inspired by titles like *Jumanji* and narrative-rich RPGs, it blends strategy, knowledge-based challenges, and emotional storytelling in a pixel-art world. Players embody fragments of a shattered soul, working together to overcome obstacles and reunite as one.
