@@ -42,12 +42,12 @@ Inspired by titles like *Jumanji* and narrative-rich RPGs, it blends strategy, k
 ## 🌍 Environments
 
 - **Countryside** – Lush, peaceful landscapes with gentle learning curves.  
-- **Desert** – Harsh ruins and sun-scorched paths with higher risk/reward.  
+- **Desert** – Harsh ruins and sun-scorched paths with higher risk/reward .  
 - **City** – A moonlit metropolis filled with complexity and challenge.  
 - **Hub** – A central island between maps for shopping and regrouping.
 
 ---
-
+ 
 ## 🎭 Characters
 
 - **Playable Fragments**:
