@@ -21,7 +21,7 @@ public class GameOverManager : NetworkBehaviour
         {
             Instance = this;
             Debug.Log("GameOverManager instance created.");
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -145,8 +145,6 @@ public class GameOverManager : NetworkBehaviour
             if (canvasGroup != null)
             {
                 canvasGroup.alpha = 0f;
-                canvasGroup.interactable = false;
-                canvasGroup.blocksRaycasts = false;
             }
 
             if (Button != null)

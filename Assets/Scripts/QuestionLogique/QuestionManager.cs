@@ -18,10 +18,10 @@ public class QuestionManager : NetworkBehaviour
     [SerializeField] private GameObject dice2;
     [SerializeField] private GameObject rollDiceButton;
     [SerializeField] private GameObject backWardButton;
-    // [SerializeField] private GameObject UpArrow;
-    // [SerializeField] private GameObject DownArrow;
-    // [SerializeField] private GameObject RightArrow;
-    // [SerializeField] private GameObject LeftArrow;
+    [SerializeField] private GameObject UpArrow;
+    [SerializeField] private GameObject DownArrow;
+    [SerializeField] private GameObject RightArrow;
+    [SerializeField] private GameObject LeftArrow;
     [SerializeField] private GameObject ProgressBar;
     [SerializeField] private GameObject HelpRequest;
 
@@ -61,26 +61,6 @@ public class QuestionManager : NetworkBehaviour
     {
         spriteIndex = i;
     }
-
-    // private void OnQuestionTileTriggered()
-    // {
-    //     if (!IsServer) return;
-
-    //     int category = QuestionLoader.Instance.GetRandomCategory();
-    //     string difficulty = DifficultySelector.GetQuestionDifficulty(ProfileManager.SelectedProfile.Elo);
-    //     string questionType = QuestionLoader.Instance.GetRandomQuestionType();
-
-    //     SpawnQuestionClientRpc(category, difficulty, questionType, 60f);
-    // }
-
-    // public void LocalPlayerLoadQuestion()
-    // {
-    //     int category = QuestionLoader.Instance.GetRandomCategory();
-    //     string difficulty = DifficultySelector.GetQuestionDifficulty(ProfileManager.SelectedProfile.Elo);
-    //     string questionType = QuestionLoader.Instance.GetRandomQuestionType();
-
-    //     SpawnQuestionClientRpc(category, difficulty, questionType, 30f);
-    // }
     private void OnQuestionTileTriggered()
     {
         // if (!IsOwner) return; // Only the player who landed on the tile proceeds
@@ -172,29 +152,6 @@ public class QuestionManager : NetworkBehaviour
         ));
     }
 
-
-    // [ClientRpc]
-    // private void SpawnQuestionClientRpc(int category, string difficulty, string questionType, float timer)
-    // {
-    //     currentCategory = category; // Storing current category to calculate elo later
-
-    //     Question question = QuestionLoader.Instance.LoadQuestion(category, difficulty, questionType);
-    //     string[] answers = QuestionLoader.Instance.GetAnswers(question);
-    //     correctAnswer = question.correct_answer;
-
-    //     HideGameplayUI(true);
-
-    //     spawnedUI = Instantiate(questionUIPrefab, GameObject.Find("Canvas").transform);
-    //     var ui = spawnedUI.GetComponent<QuestionUI>();
-
-    //     ui.InitializeUI();
-
-    //     timerLeft = timer;
-    //     hasAnswered = false;
-
-    //     StartCoroutine(HandleQuestionSequence(ui, question.question, answers, timer, RolesManager.IsMyTurn));
-    // }
-
     private IEnumerator HandleQuestionSequence(QuestionUI ui, string questionText, string category, string difficulty, string[] answers, float timer, bool isMyTurn)
     {
         ui.ShowIntroDialogue(introDialogue);
@@ -249,8 +206,8 @@ public class QuestionManager : NetworkBehaviour
 
     private void AnswerTimeout()
     {
-        if (!RolesManager.IsMyTurn) return;
         hasAnswered = true;
+        if (!RolesManager.IsMyTurn) return;
         ResolveAnswerServerRpc(false, new FixedString128Bytes(correctAnswer));
     }
 
@@ -316,20 +273,16 @@ public class QuestionManager : NetworkBehaviour
 
     private void ToggleGameplayUI(bool hide)
     {
-        string[] elementNames = { "RollDiceButton", "DownArrow", "UpArrow", "LeftArrow", "RightArrow", "Dice1", "Dice2", "ProgressBar", "HelpRequest" };
-
-        foreach (var name in elementNames)
-        {
-            var obj = GameObject.Find(name);
-            if (obj != null) obj.SetActive(!hide);
-        }
-
         // Redundant but safe
         if (rollDiceButton != null) rollDiceButton.SetActive(!hide);
         if (dice1 != null) dice1.SetActive(!hide);
         if (dice2 != null) dice2.SetActive(!hide);
         if (ProgressBar != null) ProgressBar.SetActive(!hide);
         if (HelpRequest != null) HelpRequest.SetActive(!hide);
+        if (DownArrow != null) DownArrow.SetActive(!hide);
+        if (UpArrow != null) UpArrow.SetActive(!hide);
+        if (LeftArrow != null) LeftArrow.SetActive(!hide);
+        if (RightArrow != null) RightArrow.SetActive(!hide);
     }
 
     private void CleanupQuestionUI()

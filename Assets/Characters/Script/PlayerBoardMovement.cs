@@ -174,7 +174,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         StartCoroutine(DetermineDefaultDirection());
 
-        //   backWardButton.onClick.AddListener(() => StartCoroutine(MoveBackward(5)));
+        // backWardButton.onClick.AddListener(() => StartCoroutine(MoveBackward(5)));
 
         HideArrows();
 
@@ -272,7 +272,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         if (rightArrow != null)
         {
-            rightArrow.gameObject.SetActive(false);
+            rightArrow.interactable = false;
         }
         else
         {
@@ -281,7 +281,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         if (leftArrow != null)
         {
-            leftArrow.gameObject.SetActive(false);
+            leftArrow.interactable = false;
         }
         else
         {
@@ -290,7 +290,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         if (upArrow != null)
         {
-            upArrow.gameObject.SetActive(false);
+            upArrow.interactable = false;
         }
         else
         {
@@ -299,7 +299,7 @@ public class PlayerBoardMovement : NetworkBehaviour
 
         if (downArrow != null)
         {
-            downArrow.gameObject.SetActive(false);
+            downArrow.interactable = false;
         }
         else
         {
@@ -1039,7 +1039,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                     {
                         StartCoroutine(TryFindArrowButtonsCoroutine());
                     }
-                    rightArrow.gameObject.SetActive(true);
+                    rightArrow.interactable = true;
 
                 }
 
@@ -1066,7 +1066,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                         {
                             StartCoroutine(TryFindArrowButtonsCoroutine());
                         }
-                        upArrow.gameObject.SetActive(true);
+                        upArrow.interactable = true;
                     }
                 }
 
@@ -1085,7 +1085,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                         {
                             StartCoroutine(TryFindArrowButtonsCoroutine());
                         }
-                        downArrow.gameObject.SetActive(true);
+                        downArrow.interactable = true;
                     }
                 }
             }
@@ -1103,7 +1103,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                         {
                             StartCoroutine(TryFindArrowButtonsCoroutine());
                         }
-                        upArrow.gameObject.SetActive(true);
+                        upArrow.interactable = true;
                     }
                 }
 
@@ -1129,7 +1129,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                     {
                         StartCoroutine(TryFindArrowButtonsCoroutine());
                     }
-                    rightArrow.gameObject.SetActive(true);
+                    rightArrow.interactable = true;
                 }
 
                 //// Left movement cases
@@ -1162,7 +1162,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                         {
                             StartCoroutine(TryFindArrowButtonsCoroutine());
                         }
-                        downArrow.gameObject.SetActive(true);
+                        downArrow.interactable = true;
                     }
                 }
 
@@ -1181,7 +1181,7 @@ public class PlayerBoardMovement : NetworkBehaviour
                         StartCoroutine(TryFindArrowButtonsCoroutine());
                     }
                     StartCoroutine(TryFindArrowButtonsCoroutine());
-                    rightArrow.gameObject.SetActive(true);
+                    rightArrow.interactable = true;
                 }
 
                 //// Left movement cases
