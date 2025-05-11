@@ -17955,33 +17955,37 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "LUMINARIA: A JOURNEY WITHIN  \n\r\nAn ERNER STUDIO Production  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
+  m_text: "LUMINARIA: A JOURNEY WITHIN  \r\n\r\nAn ERNER STUDIO Production  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
     \r\n\r\nGAME DIRECTOR\n  \r\nRayan Derradji (REN)  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
     \r\n\r\nPRODUCERS & PROJECT MANAGEMENT\n  \r\nRayan Derradji  \r\nAnesabdelhak
-    Hadim  \r\nHoussem Sid  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
-    \r\n\r\nGAME DESIGN\n  \r\nRayan Derradji  \r\n\u2003\u2003Lead Game Designer\n 
-    \r\nTarek Ait Ahmed  \r\n\u2003\u2003Level Design Support\n  \r\nAnesabdelhak
-    Hadim  \r\n\u2003\u2003Event Systems & Tile Logic  \n\r\nAbdellah Zeghmar  \r\n\u2003\u2003Turn
-    Management & Tile Events  \n\r\nHoussem Sid  \r\n\u2003\u2003Core Game Systems 
-    \n\r\nRayan & Anes  \r\n\u2003\u2003Narrative Direction  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
+    Hadim  \r\nTarek Ait Ahmed  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
+    \r\n\r\nGAME DESIGN  \n\r\nRayan Derradji  \r\n\u2003\u2003Lead Game Designer 
+    \n\r\nTarek Ait Ahmed  \r\n\u2003\u2003Level Design Support  \n\r\nAnesabdelhak
+    Hadim  \r\n\u2003\u2003Event Systems & Tile Logic \n \r\nAbdellah Zeghmar  \r\n\u2003\u2003Question
+    Loading & Bonus Tile Events  \n\r\nMohammed Nazim Azzouza  \r\n\u2003\u2003Turn
+    System, Multiplayer System\n  \r\nRayan & Anes  \r\n\u2003\u2003Narrative Direction 
+    \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
     \r\n\r\nPROGRAMMING & ENGINEERING  \n\r\nRayan Derradji  \r\n\u2003\u2003Inventory,
-    Shop System, Player Movement\n  \r\nAnesabdelhak Hadim  \r\n\u2003\u2003Profile
-    System, Networking, Tile Events  \n\r\nHoussem Sid  \r\n\u2003\u2003Multiplayer
-    Logic & Event Handling  \n\r\nMohammed Nazim Azzouza  \r\n\u2003\u2003Online
-    Sync & Question Database  \n\r\nTarek Ait Ahmed  \r\n\u2003\u2003Board Movement 
-    \n\r\nAbdellah Zeghmar  \r\n\u2003\u2003Turn System & Tile Logic  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
-    \r\n\r\nART & ANIMATION  \n\r\nRayan Derradji  \r\n\u2003\u2003Art Director \u2013
-    World & Asset Design  \n\r\nTarek Ait Ahmed  \r\n\u2003\u2003Art Assistant  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
+    Shop System, Player Movement  \r\n\u2003\u2003Item Effects, Question Management 
+    \r\n\r\nAnesabdelhak Hadim  \r\n\u2003\u2003Profile System, Networking, Tile
+    Events  \r\n\u2003\u2003Item Effects, Question Help, Curse Tile Event  \r\n\r\nHoussem
+    Sid  \r\n\u2003\u2003Elo Calculation, Profile Management  \r\n\r\nMohammed Nazim
+    Azzouza  \r\n\u2003\u2003Online Sync, Question Database  \r\n\u2003\u2003Player
+    Collaboration Features, Turn Management  \r\n\r\nTarek Ait Ahmed  \r\n\u2003\u2003Board
+    Movement, Movement Management & Sync  \r\n\r\nAbdellah Zeghmar  \r\n\u2003\u2003Question
+    Loading, Bonus Tile Events, Credit Reward  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
+    \r\n\r\nART & ANIMATION  \r\nRayan Derradji  \r\n\u2003\u2003Art Director \u2013
+    World & Asset Design  \r\n\nTarek Ait Ahmed  \r\n\u2003\u2003Art Assistant  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
     \r\n\r\nAUDIO & MUSIC  \n\r\nRayan Derradji  \r\n\u2003\u2003Composer & Sound
     Designer  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
-    \r\n\r\nNARRATIVE & WRITING  \n\r\nRayan Derradji  \r\n\u2003\u2003World Lore,
+    \r\n\r\nNARRATIVE & WRITING\n  \r\nRayan Derradji  \r\n\u2003\u2003World Lore,
     Characters, Dialogue\n  \r\nAnesabdelhak Hadim  \r\n\u2003\u2003Narrative Co-Designer 
     \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
-    \r\n\r\nSUPERVISION  \n\r\nProfessor Seyfeddine Zouana\r\nProfessor Abderrahmane
+    \r\n\r\nSUPERVISION \n \r\nProfessor Seyfeddine Zouana  \r\nProfessor Abderrahmane
     Boudi  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
-    \r\n\r\nSPECIAL THANKS  \n\r\nZitoine  \r\nScelaryus  \r\nMaalek Abidi  \r\nChakib
-    Kheladi (aka A17)  \r\nAmine Kherroubi  \r\n\r\nAnd to all those who supported
-    us throughout this journey.  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
+    \r\n\r\nSPECIAL THANKS  \n\r\nZitoine  \r\nScelaryus  \r\nMaalek Abidi  \r\nSamy
+    Khelladi (aka A17)  \r\nAmine Kherroubi  \r\nMRH  \r\n\r\nAnd to all those who
+    supported us throughout this journey.  \r\n\r\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 
     \r\n\r\nTHANK YOU FOR PLAYING  \r\n\r\nThis game was created with love, struggle,
     and passion.  \r\nWe hope *Luminaria* inspires you as much as it inspired us. 
     \r\n\r\n\u2013 ERNER STUDIO\r\n"
