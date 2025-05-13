@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Unity.Collections;
+using System.Collections;
 
 public static class EventTrigger
 {
@@ -18,12 +19,13 @@ public static class EventTrigger
             return;
         }
 
+        BonusCurseUIManager UIManager = UnityEngine.Object.FindFirstObjectByType<BonusCurseUIManager>();
+
         switch (TileType)
         {
             case "Rest":
 
                 FixedString128Bytes effectKey = new FixedString128Bytes("rest");
-                BonusCurseUIManager UIManager = UnityEngine.Object.FindFirstObjectByType<BonusCurseUIManager>();
                 UIManager.GetMessageServerRpc(effectKey, 0);
 
                 Debug.Log("Rest event triggered.");
@@ -44,6 +46,7 @@ public static class EventTrigger
                 } else
                 {
                     hearts.hideNoNegative();
+                    UIManager.StartCoroutine(DelaySwitchTurn());
                 }
                 Debug.Log("Curse event triggered.");
                 break;
@@ -75,5 +78,11 @@ public static class EventTrigger
     public static void setSkipTile()
     {
         skipTile = true;
+    }
+
+    private static IEnumerator DelaySwitchTurn()
+    {
+        yield return new WaitForSeconds(1f);
+        RolesManager.SwitchRole();
     }
 }

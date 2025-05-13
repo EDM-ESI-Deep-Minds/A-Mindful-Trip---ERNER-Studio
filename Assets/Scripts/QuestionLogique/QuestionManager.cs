@@ -246,6 +246,9 @@ public class QuestionManager : NetworkBehaviour
                         heartUI.removeHeart();
                     }
                     EloCalculator.UpdateCategoryElo(profile, currentCategory.ToString(), isCorrect, 1);
+                } else
+                {
+                    heartUI.hideNoNegative();
                 }
             }
         } else
@@ -310,8 +313,6 @@ public class QuestionManager : NetworkBehaviour
 
         if (RolesManager.IsMyTurn)
         {
-            HeartUIManager heart = FindFirstObjectByType<HeartUIManager>();
-            heart.hideNoNegative();
             StartCoroutine(DelaySwitchTurn());
         }
     }
