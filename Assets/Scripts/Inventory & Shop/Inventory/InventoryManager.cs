@@ -24,9 +24,7 @@ public class InventoryManager : MonoBehaviour
         currentCoins = startingCoins;
 
         // Populating the inventory for testing
-        AddItem(itemDatabase.GetItemByID(3));
-        AddItem(itemDatabase.GetItemByID(3));
-        AddItem(itemDatabase.GetItemByID(3));
+        // AddItem(itemDatabase.GetItemByID(1));
 
     }
 
